@@ -1,0 +1,53 @@
+<Entity >
+   
+    <VerletPhysicsComponent
+    	num_points="21"
+    	stiffness="1.0"
+		velocity_dampening="0.9"
+    	resting_distance="4" 
+    	pixelate_sprite_transforms="1"
+        follow_entity_transform="0"
+    	simulate_wind="1"
+    	wind_change_speed="0.25"
+    	simulate_gravity="1" >
+    </VerletPhysicsComponent>
+
+    <VariableStorageComponent
+        name="subverlet_files"
+        value_string="data/entities/verlet_chains/vines/verlet_vine_shorter_pixelscene.xml,data/entities/verlet_chains/vines/verlet_vine_pixelscene.xml"
+    ></VariableStorageComponent>
+
+   <LuaComponent
+        script_source_file="mods/Hydroxide/files/scripts/misc/subverlets.lua"
+        execute_on_added="1"
+        execute_every_n_frame="0"
+        >
+    </LuaComponent>
+
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
+
+	<AudioComponent
+		file="data/audio/Desktop/materials.snd"
+		event_root="collision/vine" >
+	</AudioComponent>
+  
+</Entity>

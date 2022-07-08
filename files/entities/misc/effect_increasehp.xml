@@ -1,0 +1,17 @@
+<Entity>
+	<InheritTransformComponent />
+
+	<GameEffectComponent
+		effect="CUSTOM"
+		custom_effect_id="INCREASEHP"
+		frames="99999"
+		>
+	</GameEffectComponent>
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/misc/effect_increasehp.lua"
+		execute_every_n_frame="10"
+		>
+	</LuaComponent>
+	
+</Entity>

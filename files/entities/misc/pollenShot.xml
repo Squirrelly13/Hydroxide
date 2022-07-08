@@ -1,0 +1,7 @@
+<Entity >
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/misc/pollenShot.lua"
+		execute_on_added="1"
+		>
+	</LuaComponent>
+</Entity>

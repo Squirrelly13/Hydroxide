@@ -1,0 +1,12 @@
+<Entity>
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/misc/crystalExplode.lua"
+		execute_on_added="1"
+		>
+	</LuaComponent>
+	
+	<LifetimeComponent
+		lifetime="2"
+	/>
+</Entity>

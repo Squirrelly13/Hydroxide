@@ -1,0 +1,19 @@
+<Entity>
+	<InheritTransformComponent
+		_enabled="1" >
+	</InheritTransformComponent>
+
+	<GameEffectComponent
+	effect="CUSTOM"
+	custom_effect_id="EXPLODING"
+	frames="1500"
+	>
+	</GameEffectComponent>
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/misc/exploding.lua"
+		execute_every_n_frame="120"
+		>
+	</LuaComponent>
+	
+</Entity>
