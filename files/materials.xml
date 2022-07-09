@@ -20,24 +20,29 @@
 
 	--TODO heftium in sky work?
 	
-	--TODO make sure the appends are up to date
-	
-	--TODO half done: nullium destroys organics
-	
 	--TODO biome modifier "the air tastes bitter" -> acid enemies replaced with hydroxide enemies?
 	
 	--TODO make unstable metamorphine more procedural if possible
-	
-	--TODO Enchanted Concrete -> a material that can be used like concrete, but lacks most tags that are generally used in reactions
-	
+
 	--TODO more potions in the player spawn pool
 	
 	--TODO replace some piles of coal with sulphur
 	
-	--MAYBE
-		--LiquidCrystal Cloud??
+	--TODO Figure out if/why antimatter keeps spawning?
 	
-	--TODO DRAW NOITA IN CASUAL WEAR
+	
+
+	
+	
+	--EXPERIMENTS
+		--Material that affects the paths of projectiles
+		--LiquidCrystal_molten Cloud??	
+	
+	
+	--OFFTOPIC
+		--TODO DRAW NOITA IN CASUAL WEAR
+		--TODO suggest target shot to copi: projectile which homing projectiles will home on to
+		
  <CellData 
         name="hydroxide"
         ui_name="Hydroxide"
@@ -2735,8 +2740,6 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 
-
-
 
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------

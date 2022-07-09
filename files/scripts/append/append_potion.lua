@@ -167,6 +167,21 @@ table.insert(materials_magic, {
 	cost=650,
 });
 
+table.insert(materials_magic, {
+	material="antimatter_gas",
+	cost=850,
+});
+
+table.insert(materials_magic, {
+	material="antimatter_dust",
+	cost=850,
+});
+
+table.insert(materials_magic, {
+	material="antimatter_liquid",
+	cost=900,
+});
+
 local old_init = init
 init = function( entity_id )
     roll_number = Random(1,100 * 1000) / 1000
