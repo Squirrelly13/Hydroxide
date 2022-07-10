@@ -1,5 +1,5 @@
 table.insert(g_props, {
-	prob		= 0.6,
+	prob		= 0.35,
 	min_count	= 1,
 	max_count	= 1,
 	offset_y 	= 0,

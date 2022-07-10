@@ -163,23 +163,18 @@ table.insert(materials_standard, {
 });
 
 table.insert(materials_magic, {
-	material="solidCrystal_molten",
-	cost=650,
-});
-
-table.insert(materials_magic, {
 	material="antimatter_gas",
-	cost=850,
+	cost=950,
 });
 
 table.insert(materials_magic, {
 	material="antimatter_dust",
-	cost=850,
+	cost=950,
 });
 
 table.insert(materials_magic, {
 	material="antimatter_liquid",
-	cost=900,
+	cost=1000,
 });
 
 local old_init = init

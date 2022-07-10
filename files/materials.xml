@@ -1,11 +1,10 @@
 <Materials>
-
-	--TODO MAKE THE OCARINA AN APPEND IF POSSIBLE
 	
 	--probably cant make berserkium enrage wands without extreme effort
 	--probably cant make Nullium destroy submerged wands
 	--cant do lightning that ignores conductivity
 	--cant do lightning that only goes through air
+	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
 	
 	--TODO draw more pixel scenes
 	--TODO fix pixel scenes not spawning(???) (some seem good) 
@@ -15,8 +14,7 @@
 			--snowy depths: that hydroxide tank thing
 			--hiisi base:	hungry_slime, methane_room, shaft2
 			--jungle: 		N/A
-			--vault:		N/A
-
+			--vault:		Lab_3, hydroxidetank
 
 	--TODO heftium in sky work?
 	
@@ -25,10 +23,11 @@
 	--TODO make unstable metamorphine more procedural if possible
 
 	--TODO more potions in the player spawn pool
+		--replace potion_a_materials() in potion_starting.lua
 	
 	--TODO replace some piles of coal with sulphur
 	
-	--TODO Figure out if/why antimatter keeps spawning?
+	--TODO Figure out why antimatter keeps spawning, or if it still does?
 	
 	
 
@@ -41,7 +40,6 @@
 	
 	--OFFTOPIC
 		--TODO DRAW NOITA IN CASUAL WEAR
-		--TODO suggest target shot to copi: projectile which homing projectiles will home on to
 		
  <CellData 
         name="hydroxide"
@@ -3981,15 +3979,17 @@
 	---------------
 
 
-	<Reaction probability="20"
+	<Reaction probability="1"
 	input_cell1="rotten_meat_radioactive"	input_cell2="air"
 	output_cell1="rotten_meat_radioactive" 	output_cell2="methane"
+	blob_radius2="5"
 	>
 	</Reaction>
 	
-	<Reaction probability="20"
+	<Reaction probability="1"
 	input_cell1="rotten_meat"	input_cell2="air"
 	output_cell1="rotten_meat"	output_cell2="methane"
+	blob_radius2="5"
 	>
 	</Reaction>
 	
