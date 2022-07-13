@@ -237,3 +237,32 @@ table.insert(status_effects, {
 	is_harmful=true,
 });
 	
+	
+--[[ Mutagens ]]--
+
+table.insert(status_effects, {
+	id="MUTAGEN_BLINDNESS",
+	ui_name="Radiation Sickness",
+	ui_description="Can't see a thing!",
+	ui_icon="data/ui_gfx/status_indicators/polymorph_random.png",
+	effect_entity="mods/Hydroxide/files/entities/misc/effect_blindness.xml",
+	is_harmful=true,
+});
+
+table.insert(status_effects, {
+	id="MUTAGEN_PAINKILLER",
+	ui_name="Radiation Sickness",
+	ui_description="Contact with radioactive material is numbing your senses!",
+	ui_icon="data/ui_gfx/status_indicators/polymorph_random.png",
+	effect_entity="mods/Hydroxide/files/entities/effects/morphine.xml",
+	is_harmful=true,
+});
+
+table.insert(status_effects, {
+	id="MUTAGEN_LEGGY",
+	ui_name="Radiation Sickness",
+	ui_description="You've sprouted a new limb!",
+	ui_icon="data/ui_gfx/status_indicators/polymorph_random.png",
+	effect_entity="mods/Hydroxide/files/entities/effects/mutagens/mutagen_leggy.xml",
+	is_harmful=true,
+});

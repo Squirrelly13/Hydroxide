@@ -146,8 +146,3 @@ table.insert(potions, {
 	material="antimatter_gas",
 	cost=700,
 });
-
-table.insert(potions, {
-	material="antimatter_dust",
-	cost=650,
-});

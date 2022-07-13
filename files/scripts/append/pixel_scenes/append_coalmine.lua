@@ -87,3 +87,13 @@ table.insert(g_oiltank, {
 		is_unique		= 0,
 		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "radiationWaste", "sulphiricWater", "sulphiricWater" } }
 });
+
+
+--[[ lanterns ]]--
+
+table.insert(g_lamp, {
+	prob   		= 0.7,
+	min_count	= 1,
+	max_count	= 1,
+	entity 	= "mods/Hydroxide/files/entities/props/lanterns/lantern_small_methane.xml",
+});

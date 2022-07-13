@@ -6,6 +6,8 @@
 	--cant do lightning that only goes through air
 	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
 	
+	--TODO make sure hydroxide damages enemies before release
+	
 	--TODO draw more pixel scenes
 	--TODO fix pixel scenes not spawning(???) (some seem good) 
 		--Found Pixel scenes: 
@@ -25,18 +27,21 @@
 	--TODO more potions in the player spawn pool
 		--replace potion_a_materials() in potion_starting.lua
 	
-	--TODO replace some piles of coal with sulphur
+	--TODO replace some piles of coal with sulphur?
 	
-	--TODO Figure out why antimatter keeps spawning, or if it still does?
+	--Giga slicing liquid, omega slicing liquid, zenith slicing
 	
-	
+	--TODO Uranium Mutagens
+		--Leggy mutagen
+		--lukki mutagen
+		--flightless mutagen
+		--	painless mutagen (morphine effect)
+		--	blindness mutagen
+		--fragile bones mutagen (kicks hurt)
 
-	
-	
 	--EXPERIMENTS
-		--Material that affects the paths of projectiles
+		--Material that affects the paths of projectiles passively
 		--LiquidCrystal_molten Cloud??	
-	
 	
 	--OFFTOPIC
 		--TODO DRAW NOITA IN CASUAL WEAR
@@ -957,8 +962,8 @@
   <CellData 
     name="AA_MAT_HUNGRY_SLIME_GROWING"
     ui_name="Hungry slime"
-    tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
-    burnable="0"  
+    tags="[burnable],[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
+    burnable="1"  
     density="4"  
     cell_type="liquid" 
     wang_color="78E8BD5D"  
@@ -975,6 +980,7 @@
     on_fire="0"  
     requires_oxygen="0"  
     temperature_of_fire="10"
+	hp="10"
     lifetime="900"
     status_effects="SLIMY"
     audio_physics_material_event="slime"
@@ -2716,29 +2722,36 @@
 		</StatusEffects>
 	</CellData> 
 	
-	<CellData
-		name="antimatter_dust"
-		ui_name="Anti-Matter"
-		tags="[antimatter]"
-		burnable="0"
-		density="0.1"
-		cell_type="liquid"
-		wang_color="ff050a02"
-		liquid_gravity="1"
-		liquid_sand="1"
-		gfx_glow="255"
+	<CellDataChild
+		_parent="rotten_meat"
+		name="frozen_meat"
+		ui_name="frozen_meat"
+		wang_color="ffabada9"
 		>
 		<Graphics
-			texture_file="mods/Hydroxide/files/gfx/materials_gfx/antimatter.png"
+			texture_file="mods/Hydroxide/files/gfx/materials_gfx/meat_frozen.png"
+			>
+		</Graphics>
+	</CellDataChild>
+
+	<CellData
+		name="statustestpowder"
+		ui_name="status effect test"
+		wang_color="f2543648"
+		cell_type="liquid"
+		liquid_sand="1"
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/gfx/materials_gfx/antimatter1.png"
 			>
 		</Graphics>
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="ANTIMATTER" amount="1.0" />
+				<StatusEffect type="MUTAGEN_PAINKILLER" amount="0.3" />
+				<StatusEffect type="MUTAGEN_LEGGY" amount="0.3" />
 			</Ingestion>
 		</StatusEffects>
-	</CellData> 
-
+	</CellData>
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
@@ -2824,91 +2837,7 @@
 	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
 	audio_fx_volume_1="10.0"
 	>
-	</Reaction>
-
-
-
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[static]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[alchemy]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[solid]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[mossDevour]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
 	</Reaction>	
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[sand_ground]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[sand_metal]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[sand_other]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[corrodible]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[liquid]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	<Reaction probability="50"
-	input_cell1="antimatter_dust"	input_cell2="[gas]"
-	output_cell1="air"			output_cell2="air"
-	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
-	audio_fx_volume_1="10.0"
-	>
-	</Reaction>
-	
 	
 	<Reaction probability="50"
 	input_cell1="antimatter_liquid"	input_cell2="[static]"
@@ -3273,6 +3202,24 @@
 	<Reaction probability="25"
 	input_cell1="antiMagic"			input_cell2="[fungus]"
 	output_cell1="antiMagic"		output_cell2="smoke"
+	>
+	</Reaction>
+	
+	<Reaction probability="25"
+	input_cell1="antiMagic"			input_cell2="[bloom]"
+	output_cell1="antiMagic"		output_cell2="smoke"
+	>
+	</Reaction>
+	
+	<Reaction probability="25"
+	input_cell1="antiMagic"			input_cell2="AA_MAT_HUNGRY_SLIME"
+	output_cell1="antiMagic"		output_cell2="slime"
+	>
+	</Reaction>
+	
+	<Reaction probability="25"
+	input_cell1="antiMagic"			input_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
+	output_cell1="antiMagic"		output_cell2="slime"
 	>
 	</Reaction>
 	
@@ -3742,7 +3689,7 @@
   </Reaction>
   
   
-   <Reaction probability="100"
+  <Reaction probability="100"
 	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[box2d]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
@@ -3773,17 +3720,19 @@
   >
   </Reaction> --more fear ;)
   
-  <Reaction probability="35"
+  <Reaction probability="8"
   input_cell1="AA_MAT_HUNGRY_SLIME_GROWING"	input_cell2="[fire]"
-  output_cell1="slime"						output_cell2="[fire]"
-  blob_radius1="3"
+  output_cell1="[fire]"						output_cell2="AA_MAT_SOOT"
   >
-  </Reaction>
+  </Reaction> --fire kills it
+  
+  <Reaction probability="8"
+  input_cell1="AA_MAT_HUNGRY_SLIME"	input_cell2="[fire]"
+  output_cell1="[fire]"				output_cell2="smoke"
+  >
+  </Reaction> --burns
   
   
-  
- 
-	
 	-----------------------------
 	--catalyst/oil interactions--
 	-----------------------------
@@ -3883,12 +3832,6 @@
 	>
 	</Reaction> -- bloom drips
 	
-	<Reaction probability="0.1"
-  	input_cell1="AA_MAT_BLOOM_ROOF" 	input_cell2="air" 
-  	output_cell1="AA_MAT_BLOOM_ROOF"	output_cell2="AA_MAT_COMPOST" 
-	>
-	</Reaction> --EXPERIMENTAL bloomium creates compost
-	
 	<Reaction probability="80"
   	input_cell1="AA_MAT_BLOOM_ROOF_DEAD" 	input_cell2="air" 
   	output_cell1="AA_MAT_BLOOM_ROOF_DEAD"	output_cell2="AA_MAT_BLOOM_LIQUID"  
@@ -3977,19 +3920,11 @@
 	---------------
 	--methane gas--
 	---------------
-
-
-	<Reaction probability="1"
-	input_cell1="rotten_meat_radioactive"	input_cell2="air"
-	output_cell1="rotten_meat_radioactive" 	output_cell2="methane"
-	blob_radius2="5"
-	>
-	</Reaction>
 	
-	<Reaction probability="1"
-	input_cell1="rotten_meat"	input_cell2="air"
-	output_cell1="rotten_meat"	output_cell2="methane"
-	blob_radius2="5"
+	<Reaction probability="0.2"
+	input_cell1="frozen_meat"	input_cell2="air"
+	output_cell1="frozen_meat"	output_cell2="methane"
+	blob_radius2="8"
 	>
 	</Reaction>
 	
@@ -4036,21 +3971,21 @@
 	
 	<Reaction probability="23"
 	input_cell1="snow" 		input_cell2="meat"
-	output_cell1="slush"	output_cell2="rotten_meat"
+	output_cell1="slush"	output_cell2="frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="23"
 	input_cell1="snow_sticky" 	input_cell2="meat"
-	output_cell1="slush"		output_cell2="rotten_meat"
+	output_cell1="slush"		output_cell2="frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="23"
 	input_cell1="snow_static" 	input_cell2="meat"
-	output_cell1="slush"		output_cell2="rotten_meat"
+	output_cell1="slush"		output_cell2="frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
@@ -4364,7 +4299,7 @@
 	>
 	</Reaction> --lmao dont eat this shit
 	
-	<Reaction probability="2"
+	<Reaction probability="15"
 	input_cell1="plasma_fading"	input_cell2="air"
 	output_cell1="air"		output_cell2="air"
 	>

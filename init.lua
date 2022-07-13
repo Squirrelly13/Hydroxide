@@ -153,8 +153,7 @@ for elem in xml:each_child() do
 --[[	
 	elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
 		elem.attr.tags = elem.attr.tags .. ",[organic]"
-		
-		
+			
 	elseif (elem.attr.tags ~= nil) then
 		if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
 			elem.attr.tags = elem.attr.tags .. ",[organic]"
@@ -184,7 +183,27 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
     end
 end
+--[[
+local baseAcidHurt = {"base_enemy_robot", "base_enemy_robot_boss_limbs", "base_helpless_animal", "base_humanoid", "base_prop_crystal" }
 
---basebot hidden, basebot neutralizer, basebot soldier, basebot sentry, fungus giga, miner chef, roboguard big, boss wizard, ehtereal being??, necrobot, necrobot super, necromancer super, parallel alchemist, scavenger glue, thundermage big, alchemist, assassin, barfer, bat, bigbat, bigfirebug, bigzombie, bigzomebiehead, bigzombietorso, bloodcrystal physics, bloom, boss alchemist, boss three-eye minion, boss dragon, boss limbs, boss limbs minion, chest leggy, chest mimic, coward, crystal physics, deer, drone shield, drone lasership, drone physics, duck, eel, elk, enlightened alchemist, failed alchemist, failed alchemist b, firebug, firemage, firemage weak, fireskull, fireskull weak, fish, fish large, flamer, fly, frog, frog big, fungus, fungus big, gazer, ghoul, giant, goblin bomb, healerdrone physics, icer, iceskull, longleg, lukki creepy, lukki longleg, lukki tiny, maggot, miner, miner fire, miner santa, miner weak, missile crab, monk, necromancer, necromancer shop - steve - stevari, pebble physics, phantom a, phantom b, rat, roboguard, scavenger clusterbomb, scavenger grenade, scavenger heal, scavenger invis, scavenger leader, scavenger mine, scavenger poison, scavenger shield, scavenger smg, scorpion, shaman, sheep, sheep bat, sheep fly, shooterflower, shotgunner, shotgunner weak, skullfly, skullrat, skycrystal physics, skygazer, sniper, spearbot, spitmonster, tank, tank rocket, tank super, tentacler, tentacler small, thundermage, thunderskull, turret left, turret right, ultimate killer - horror monster - friend, wand ghost, wizard dark, wizard hearty, wizard neutral, wizard poly, wizard returner, wizard swapper, wizard tele, wizard twitchy, wizard weaken, wolf, worm end, worm skull, worm tiny, wraith, wraith glowing, wraith storm, zombie, zombie weak, darkghost, ghost, lasergun, spidernest, firebugnest, flynest
+local acidHurt = {"alchemist", "bigfirebug", "boss_dragon", "chest_leggy", "darkghost", "eel", "firebug", "firemage", "fireskull", "fish", "gazer", "ghost", "giant", "icemage", "icer", "iceskull", "scavenger_poison", "skygazer", "spitmonster", "thunderskull", "wizard_dark", "wizard_hearty", "wizard_homing", "wizard_neutral", "wizard_poly", "wizard_returner", "wizard_swapper", "wizard_tele", "wizard_twitchy", "wizard_weaken", "worm", "worm_big", "worm_end", "worm_skull", "worm_tiny" }
+
+OnModPostInit(
+	for i, entity in ipairs(baseAcidHurt) do
+		local path = "data/entities/" .. entity .. ".xml"
+		content = ModTextFileGetContent(path)
+		xml = nxml.parse(content)
+		
+		for elem in xml:each_child() do
+			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
+		end
+	end
+	
+	for i, entity in ipairs(acidHurt) do
+		local path = "data/entities/animals/" .. entity .. ".xml"	
+			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
+	end
+)
+]]--finish this up
 
 print("Hydroxide mod init done")

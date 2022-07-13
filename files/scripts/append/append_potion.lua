@@ -168,11 +168,6 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-	material="antimatter_dust",
-	cost=950,
-});
-
-table.insert(materials_magic, {
 	material="antimatter_liquid",
 	cost=1000,
 });

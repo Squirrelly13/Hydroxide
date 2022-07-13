@@ -96,7 +96,7 @@
 			explosion_radius="5" 
 			explosion_sprite="" 
 			explosion_sprite_lifetime="" 
-			create_cell_probability="10"
+			create_cell_probability="1"
 			create_cell_material="AA_MAT_COMPOST"
 			hole_destroy_liquid="0" 
 			physics_throw_enabled="1"

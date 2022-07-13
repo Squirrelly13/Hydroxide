@@ -39,7 +39,7 @@ table.insert(g_props, {
 });
 
 table.insert(g_props, {
-	prob		= 0.3,
+	prob		= 0.01,
 	min_count	= 1,
 	max_count 	= 1,
 	offset_y	= 0,
