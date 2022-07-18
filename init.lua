@@ -120,7 +120,9 @@ ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scri
 
 --appends
 
-
+function OnModInit()
+    dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
+end
 
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 
 -- Adds all new materials and reactions. 

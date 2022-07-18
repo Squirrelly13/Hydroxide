@@ -31,6 +31,8 @@
 	
 	--Giga slicing liquid, omega slicing liquid, zenith slicing
 	
+	--TODO Cobalt
+	
 	--TODO Uranium Mutagens
 		--Leggy mutagen
 		--lukki mutagen
@@ -41,7 +43,7 @@
 
 	--EXPERIMENTS
 		--Material that affects the paths of projectiles passively
-		--LiquidCrystal_molten Cloud??	
+		--solidCrystal_molten Cloud??	
 	
 	--OFFTOPIC
 		--TODO DRAW NOITA IN CASUAL WEAR
@@ -2537,10 +2539,11 @@
 		solid_break_to_type="diamond"
 		solid_friction="0.5"
 		solid_static_type="1"
-		hp="3000"
+		hp="30000"
 		audio_physics_material_wall="gravel"
 		audio_physics_material_solid="glass"
 		show_in_creative_mode="1"
+		durability="11"
 		>
 		<Graphics
 			texture_file="data/materials_gfx/crystal_purple.png"	
@@ -2752,9 +2755,80 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
+	
+	 <CellData
+	name="cobalt"
+	ui_name="Cobalt"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+	burnable="0"
+	density="7"
+	cell_type="liquid"
+	wang_color="ff3e32e2"
+	gfx_glow="127"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	liquid_solid="1"
+	on_fire="0"
+	requires_oxygen="1"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	solid_friction="0.7"
+	hp="7000" 
+	electrical_conductivity="1"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/cobalt.png"
+	color="ffb89e58" >
+    </Graphics>
+  </CellData>
+  
+    <CellData
+	name="cobalt_molten"
+	ui_name="Molten Cobalt"
+  	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
+	burnable="1"
+	density="3"
+	cell_type="liquid"
+	wang_color="ff4e5263"
+	generates_smoke="0"
+	liquid_gravity="1.5"
+	liquid_sand="0"
+	on_fire="1"
+	requires_oxygen="0"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	danger_fire="1"
+	gfx_glow="200"
+	show_in_creative_mode="1"
+	audio_materialaudio_type="LAVA" 
+	fire_hp="90000"
+	always_ignites_damagemodel="1"
+	status_effects="ON_FIRE"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/cobalt.png"
+	color="ffb89e58" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
+
+	-------------
+	<Reaction probability="80"
+	input_cell1="AA_GRAVLIQUID"		input_cell2="coal"
+	output_cell1="AA_GRAVLIQUID"	output_cell2="diamond"
+	blob_radius2="4"
+	>
+	</Reaction>
+	
 	--------------
 	--antimatter--
 	--------------
@@ -3407,6 +3481,24 @@
 	>
   </Reaction> --mix
   
+	<Reaction probability="56"
+	input_cell1="magic_liquid_slower_levitation"	input_cell2="slime"
+	output_cell1="magic_liquid_slower_levitation"	output_cell2="magic_liquid_slower_levitation"
+	>
+	</Reaction>
+	
+	<Reaction probability="56"
+	input_cell1="magic_liquid_slower_levitation_and_movement"	input_cell2="slime"
+	output_cell1="magic_liquid_slower_levitation_and_movement"	output_cell2="magic_liquid_slower_levitation_and_movement"
+	>
+	</Reaction>
+
+	<Reaction probability="56"
+	input_cell1="magic_liquid_movement_slower"	input_cell2="slime"
+	output_cell1="magic_liquid_movement_slower"	output_cell2="magic_liquid_movement_slower"
+	>
+	</Reaction>
+
 	------------
 	--Kindling--
 	------------
@@ -3417,9 +3509,6 @@
 		blob_radius2="3"
 	>
 	</Reaction>
-	
-	
-	
 	
 	--------------------
 	--cloning solution--
