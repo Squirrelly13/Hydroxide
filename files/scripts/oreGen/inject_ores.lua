@@ -19,7 +19,7 @@ function getDigit(num, digit)
 end
 
 	--InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_toxic.xml")
--
+
 -- mines --
 math.randomseed(seed + 11)
 rand = math.random(1,10)
