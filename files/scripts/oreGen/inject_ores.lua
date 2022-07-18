@@ -19,22 +19,8 @@ function getDigit(num, digit)
 end
 
 	--InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_toxic.xml")
---[[
+-
 -- mines --
-rand = getDigit(seed, 1)
-
-
--- coal pits --
-
-rand = getDigit(seed, 2)
-if (rand <= 1) then 
-	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_crystals.xml")
-elseif (rand <= 2 ) then
-	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_toxic.xml")
-elseif (rand <= 5 ) then
-	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_metal.xml")
-end
-]]--
 math.randomseed(seed + 11)
 rand = math.random(1,10)
 if (rand < 5) then 
@@ -55,5 +41,19 @@ if (rand < 5) then
 	InjectOre("data/biome/coalmine.xml", "mods/Hydroxide/files/oreGen/ores_metals_silver2.xml")
 	InjectOre("data/biome/coalmine_alt.xml", "mods/Hydroxide/files/oreGen/ores_metals_silver2.xml")
 end
+
+
+-- coal pits --
+
+rand = getDigit(seed, 2)
+if (rand <= 1) then 
+	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_crystals.xml")
+elseif (rand <= 2 ) then
+	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_toxic.xml")
+elseif (rand <= 5 ) then
+	InjectOre("data/biome/excavationsite.xml", "mods/Hydroxide/files/oreGen/ores_excavationsite_metal.xml")
 end
+
+
+
 
