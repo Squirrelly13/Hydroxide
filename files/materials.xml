@@ -33,6 +33,8 @@
 	
 	--TODO Cobalt
 	
+	--TODO finish fungal appends
+	
 	--TODO Uranium Mutagens
 		--Leggy mutagen
 		--lukki mutagen
@@ -235,30 +237,6 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData> -- magical liquid override, tags in init.lua
-
-    <CellData 
-  	_parent="slime_green"
-  	_inherit_reactions="0"
-	name="vomit"
-	ui_name="$mat_vomit"
-	density="4.75"
-	tags="[food]"
-	wang_color="88E8BD5B"  
-	>
-    <Graphics
-		texture_file="data/materials_gfx/vomit.png"
-		color="ffcc4c4c"
- 	>
-    </Graphics>
-	<StatusEffects>
-		<Stains>
-			<StatusEffect type="WET" />
-		</Stains>
-		<Ingestion>
-			<StatusEffect type="FOOD_POISONING" amount="0.1" />
-		</Ingestion>
-	</StatusEffects>
-  </CellData> --overriding vomit to change density a bit
 
  <CellData
 	name="hydroxide_gas"
@@ -3097,7 +3075,7 @@
 	input_cell1="solidCrystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
 	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
-    entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
+	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>
 	</Reaction>
 	

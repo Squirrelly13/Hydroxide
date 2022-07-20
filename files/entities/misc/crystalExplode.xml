@@ -6,6 +6,17 @@
 		>
 	</LuaComponent>
 	
+	<MagicConvertMaterialComponent
+		radius="10"
+		is_circle="1"
+		convert_same_material="0"
+		steps_per_frame="10"
+		from_material="solidCrystal"
+		to_material="smoke"
+		kill_when_finished="0"
+		>
+	</MagicConvertMaterialComponent>
+	
 	<LifetimeComponent
 		lifetime="2"
 	/>
