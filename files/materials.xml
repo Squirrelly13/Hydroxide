@@ -18,9 +18,6 @@
 			--jungle: 		N/A
 			--vault:		Lab_3, hydroxidetank
 
-	--TODO heftium in sky work?
-	
-	--TODO biome modifier "the air tastes bitter" -> acid enemies replaced with hydroxide enemies?
 	
 	--TODO make unstable metamorphine more procedural if possible
 
@@ -31,7 +28,7 @@
 	
 	--Giga slicing liquid, omega slicing liquid, zenith slicing
 	
-	--TODO Cobalt
+	--TODO a few metal reactions
 	
 	--TODO finish fungal appends
 	
@@ -996,7 +993,6 @@
 	durability="4"
 	>
     <Graphics
-		
 		color="ffCDC9BE" >
 		
     </Graphics>
@@ -1019,9 +1015,7 @@
 	requires_oxygen="0"
 	temperature_of_fire="60"  >
 	<Graphics
-		
 		color="ff363636" >
-		
     </Graphics>
   </CellData> --Soot?
 
@@ -2706,7 +2700,7 @@
 	<CellDataChild
 		_parent="rotten_meat"
 		name="frozen_meat"
-		ui_name="frozen_meat"
+		ui_name="Frozen Meat"
 		wang_color="ffabada9"
 		>
 		<Graphics
@@ -2734,7 +2728,7 @@
 		</StatusEffects>
 	</CellData>
 	
-	 <CellData
+	<CellData
 	name="cobalt"
 	ui_name="Cobalt"
   	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
@@ -2760,7 +2754,7 @@
 	texture_file="mods/Hydroxide/files/gfx/materials_gfx/cobalt.png"
 	color="ffb89e58" >
     </Graphics>
-  </CellData>
+	</CellData>
   
     <CellData
 	name="cobalt_molten"
@@ -2769,7 +2763,7 @@
 	burnable="1"
 	density="3"
 	cell_type="liquid"
-	wang_color="ff4e5263"
+	wang_color="ff4e6263"
 	generates_smoke="0"
 	liquid_gravity="1.5"
 	liquid_sand="0"
@@ -2795,17 +2789,184 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
+  
+  <CellData
+	name="iron"
+	ui_name="Iron"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+	burnable="0"
+	density="9"
+	cell_type="liquid"
+	wang_color="ff5e52f2"
+	gfx_glow="127"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	liquid_solid="1"
+	on_fire="0"
+	requires_oxygen="1"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	solid_friction="0.7"
+	hp="15000" 
+	electrical_conductivity="1"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/iron.png"
+	color="ffb89e58" >
+    </Graphics>
+	</CellData>
+  
+    <CellData
+	name="iron_molten"
+	ui_name="Molten Iron"
+  	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
+	burnable="1"
+	density="3"
+	cell_type="liquid"
+	wang_color="ffeab3a3"
+	generates_smoke="0"
+	liquid_gravity="1.5"
+	liquid_sand="0"
+	on_fire="1"
+	requires_oxygen="0"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	danger_fire="1"
+	gfx_glow="200"
+	show_in_creative_mode="1"
+	audio_materialaudio_type="LAVA" 
+	fire_hp="90000"
+	always_ignites_damagemodel="1"
+	status_effects="ON_FIRE"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/iron.png"
+	color="ffb89e58" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+  
+   
+  <CellData
+	name="preskite"
+	ui_name="Preskite"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+	burnable="0"
+	density="9"
+	cell_type="liquid"
+	wang_color="ffae52a2"
+	gfx_glow="127"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	liquid_solid="1"
+	on_fire="0"
+	requires_oxygen="1"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	solid_friction="0.7"
+	hp="15000" 
+	electrical_conductivity="1"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/preskite.png"
+	color="ffb89e58" >
+    </Graphics>
+	</CellData>
+  
+    <CellData
+	name="preskite_molten"
+	ui_name="Molten Preskite"
+  	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
+	burnable="1"
+	density="3"
+	cell_type="liquid"
+	wang_color="ffea33e3"
+	generates_smoke="0"
+	liquid_gravity="1.5"
+	liquid_sand="0"
+	on_fire="1"
+	requires_oxygen="0"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	danger_fire="1"
+	gfx_glow="200"
+	show_in_creative_mode="1"
+	audio_materialaudio_type="LAVA" 
+	fire_hp="90000"
+	always_ignites_damagemodel="1"
+	status_effects="ON_FIRE"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/gfx/materials_gfx/preskite.png"
+	color="ffb89e58" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+  
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
-
-	-------------
+	
+	----------
+	--metals--
+	----------
+	
+	
+	<Reaction probability="20"
+	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="iron"
+	output_cell2="magic_liquid_slower_levitation"	output_cell2="steam"
+	>
+	</Reaction>
+	
+	<Reaction probability="34"
+	input_cell1="preskite"			input_cell2="blood_worm" 
+	output_cell1="AA_MAT_SOOT"		output_cell2="AA_MAT_POTION_GAS"
+	blob_radius2="3"
+	>
+	</Reaction>
+	
+	<Reaction probability="50"
+	input_cell1="iron"		input_cell2="magic_liquid_random_polymorph"
+	output_cell1="cobalt"	output_cell2="smoke"
+	>
+	</Reaction>
+	
+	<Reaction probability="50"
+	input_cell1="cobalt"		input_cell2="magic_liquid_polymorph"
+	output_cell1="metal_sand"	output_cell2="smoke"
+	>
+	</Reaction>
+	
+	<Reaction probability="80"
+	input_cell1="uranium"			input_cell2="iron"	
+	output_cell1="AA_GRAVLIQUID"	output_cell2="smoke"
+	>
+	</Reaction>
+	
+	
+	
+	----------
+	--tweaks--
+	----------
 	<Reaction probability="80"
 	input_cell1="AA_GRAVLIQUID"		input_cell2="coal"
 	output_cell1="AA_GRAVLIQUID"	output_cell2="diamond"
 	blob_radius2="4"
 	>
 	</Reaction>
+	
 	
 	--------------
 	--antimatter--
@@ -3988,10 +4149,9 @@
 	--methane gas--
 	---------------
 	
-	<Reaction probability="0.2"
+	<Reaction probability="80"
 	input_cell1="frozen_meat"	input_cell2="air"
 	output_cell1="frozen_meat"	output_cell2="methane"
-	blob_radius2="8"
 	>
 	</Reaction>
 	

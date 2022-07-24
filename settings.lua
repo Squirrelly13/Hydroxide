@@ -36,7 +36,7 @@ mod_settings =
 		ui_name = "Arcane Alchemy Again: A sequel by Squirrelly",
 		not_setting = true,
 	},
-	{
+	--[[{
 		id = "omega_glue",
 		ui_name = "Omega Glue",
 		ui_description = "Omega Glue is broken and can be very laggy.",
@@ -44,7 +44,7 @@ mod_settings =
 		values = { {"off","DISABLED"}, {"on","ENABLED"} },
 		scope = MOD_SETTING_SCOPE_NEW_GAME,
 		change_fn = mod_setting_change_callback, -- Called when the user interact with the settings widget.
-	},
+	},]]--
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.

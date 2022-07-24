@@ -116,15 +116,15 @@ ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/sc
 ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_snowcastle.lua" ) --new structures in hiisi base
 ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
 ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_vault.lua" ) --new structures in the vault
-ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
 
+ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
 ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/scripts/append/append_fungal.lua" ) --FUngal shifts
 --appends
 
 function OnModInit()
 	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
-		GameAddFlagRun("Squirrelly_Ore_generated")
+		--GameAddFlagRun("Squirrelly_Ore_generated")
 	end
 end
 

@@ -55,7 +55,7 @@ table.insert(g_puzzleroom, {
 	prob			= 1.5,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/puzzleroom_04.png",
 	visual_file		= "mods/Hydroxide/files/pixel_scenes/excavationsite/puzzleroom_04_visual.png",
-	background_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/puzzleroom_04_background.png",
+	background_file	= "",
 	is_unique		= 0
 	});
 -----

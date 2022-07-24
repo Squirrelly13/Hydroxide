@@ -15,7 +15,7 @@ table.insert(g_pixel_scene_02, {--TODO change 0.9 to lower numebr if this works
 	});
 
 table.insert(g_props, {
-	prob		= 0.3,
+	prob		= 0.15,
 	min_count	= 1,
 	max_count	= 1,
 	offset_y 	= 0,

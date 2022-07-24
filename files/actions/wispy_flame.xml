@@ -156,10 +156,10 @@
     </ParticleEmitterComponent>
 	
 	<VariableStorageComponent
-		name="projectile_file"
-		value_string="mods/copis_things/files/entities/projectiles/silver_bullet.xml"
-		>
-	</VariableStorageComponent>
+        name="projectile_file"
+        value_string="mods/Hydroxide/files/actions/wispy_flame.xml"
+        >
+    </VariableStorageComponent>
 	
 	<AudioComponent
       file="data/audio/Desktop/misc.bank"
