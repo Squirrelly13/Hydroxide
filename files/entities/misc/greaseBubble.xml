@@ -19,8 +19,9 @@
     on_collision_die="1"
 	collide_with_entities="1"
 	collide_with_world="1"
+	die_on_liquid_collision="0"
 	damage="0"
-    lifetime="3000" 
+    lifetime="30" 
 	>
 	<config_explosion
 		never_cache="1" 

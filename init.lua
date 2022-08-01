@@ -121,23 +121,28 @@ ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scri
 ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/scripts/append/append_fungal.lua" ) --FUngal shifts
 --appends
 
+if (ModIsEnabled("copis_things")) then
+	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
+	
+	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") ) 
+
+	
+end --copis chemical curiosity compatibility combo
+
+--[[ ore generation !!! ]]-- 
 function OnModInit()
 	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
-		--GameAddFlagRun("Squirrelly_Ore_generated")
+		GameAddFlagRun("Squirrelly_Ore_generated")
 	end
 end
+
 
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 
 -- Adds all new materials and reactions. 
 -- This line is arguably the single most important line of code in the mod
 
-
-
-
--- this code adds tags to preexisting materials --
-
-	
+-- this code adds tags to preexisting materials, its good for compatibility--
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 local content = ModTextFileGetContent("data/materials.xml")
 local xml = nxml.parse(content)

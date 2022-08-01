@@ -2856,7 +2856,7 @@
   <CellData
 	name="preskite"
 	ui_name="Preskite"
-  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+  	tags="[sand_metal],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="9"
 	cell_type="liquid"
@@ -2930,7 +2930,7 @@
 	>
 	</Reaction>
 	
-	<Reaction probability="34"
+	<Reaction probability="7"
 	input_cell1="preskite"			input_cell2="blood_worm" 
 	output_cell1="AA_MAT_SOOT"		output_cell2="AA_MAT_POTION_GAS"
 	blob_radius2="3"
@@ -2955,7 +2955,23 @@
 	>
 	</Reaction>
 	
+	<Reaction probability="10"
+	input_cell2="iron_molten"	input_cell1="coal"			
+	output_cell2="steel_molten"	output_cell1="smoke"	
+	blob_radius2="2"
+	/>
 	
+	<Reaction probability="38"
+	input_cell1="steel_molten"	input_cell2="iron"
+	output_cell1="steel_molten"	output_cell2="iron_molten"
+	/>
+	
+	<Reaction probability="45"
+	input_cell1="preskite"		input_cell2="acid"
+	output_cell1="hydroxide"	output_cell2="acid"
+	blob_radius1="3"
+	/>
+
 	
 	----------
 	--tweaks--
@@ -3489,6 +3505,22 @@
 	>
 	</Reaction>
 	
+	
+	<Reaction probability="43"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder_explosive"
+	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
+	blob_radius2="2"
+	>
+	</Reaction>
+	
+	
+	<Reaction probability="43"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder"
+	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
+	blob_radius2="2"
+	>
+	</Reaction>
+	
 	----------
 	--tweaks--
 	----------
@@ -3843,7 +3875,12 @@
 	>
 	</Reaction>
 
-  
+	<Reaction probability="76"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="blood_fungi"
+	output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
+	>
+	</Reaction>
+	
 	-----------------
 	--magic plastic--
 	-----------------
@@ -4149,7 +4186,7 @@
 	--methane gas--
 	---------------
 	
-	<Reaction probability="80"
+	<Reaction probability="10"
 	input_cell1="frozen_meat"	input_cell2="air"
 	output_cell1="frozen_meat"	output_cell2="methane"
 	>
@@ -4310,7 +4347,7 @@
 	<Reaction probability="25"
 	input_cell1="blastPowder"	input_cell2="[fire]"
 	output_cell1="fire"			output_cell2="air"
-	entity="data/entities/misc/BlastShot.xml"
+	entity="mods/Hydroxide/files/entities/misc/BlastShot.xml"
 	>
 	</Reaction>
 	--------------------------------------------

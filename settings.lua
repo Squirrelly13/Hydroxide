@@ -27,23 +27,23 @@ function mod_setting_change_callback( mod_id, gui, in_main_menu, setting, old_va
 	print( tostring(new_value) )
 end
 
-local mod_id = "example" -- This should match the name of your mod's folder.
+local mod_id = "Hydroxide" -- This should match the name of your mod's folder.
 mod_settings_version = 1 -- This is a magic global that can be used to migrate settings to new mod versions. call mod_settings_get_version() before mod_settings_update() to get the old value. 
 mod_settings = 
 {
 	{
 		id = "_",
-		ui_name = "Arcane Alchemy Again: A sequel by Squirrelly",
+		ui_name = "Squirrelly's Chemical Curiosities",
+		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy",
 		not_setting = true,
 	},
 	--[[{
-		id = "omega_glue",
-		ui_name = "Omega Glue",
-		ui_description = "Omega Glue is broken and can be very laggy.",
-		value_default = "disabled",
+		id = "ore_spawn",
+		ui_name = "Spawn Ores",
+		ui_description = "(this setting doesnt affect anything yet) Spawn Various ores throughout the world!",
+		value_default = "on",
 		values = { {"off","DISABLED"}, {"on","ENABLED"} },
 		scope = MOD_SETTING_SCOPE_NEW_GAME,
-		change_fn = mod_setting_change_callback, -- Called when the user interact with the settings widget.
 	},]]--
 }
 
