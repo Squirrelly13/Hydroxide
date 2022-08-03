@@ -35,6 +35,12 @@ end
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 	local x = ProceduralRandom(0,0)
 	print( "===================================== random " .. tostring(x) )
+	
+	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
+		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
+		print("Chemical Curiosities oreGen complete")
+		GameAddFlagRun("Squirrelly_Ore_generated")
+	end
 end
 
 
@@ -130,12 +136,12 @@ if (ModIsEnabled("copis_things")) then
 end --copis chemical curiosity compatibility combo
 
 --[[ ore generation !!! ]]-- 
-function OnModInit()
-	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
-		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
-		GameAddFlagRun("Squirrelly_Ore_generated")
-	end
-end
+--function OnModInit()
+--	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
+--		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
+--		GameAddFlagRun("Squirrelly_Ore_generated")
+--	end
+--end
 
 
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 

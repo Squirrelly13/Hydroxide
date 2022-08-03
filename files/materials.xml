@@ -8,6 +8,8 @@
 	
 	--TODO make sure hydroxide damages enemies before release
 	
+	--TODO geyser tests
+	
 	--TODO draw more pixel scenes
 	--TODO fix pixel scenes not spawning(???) (some seem good) 
 		--Found Pixel scenes: 
@@ -480,6 +482,7 @@
 	liquid_sand="0"
 	liquid_sprite_stains_status_threshold="0.3"
 	liquid_stains="1"
+	liquid_sprite_stain_shaken_drop_chance="6"
 	status_effects="INGESTION_METHANE"
 	lifetime="1600"
 	generates_flames="20"
@@ -2914,6 +2917,10 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
+  
+  
+  
+  
   
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
