@@ -129,10 +129,9 @@ table.insert(status_effects, {
 table.insert(status_effects, {
 	id="INGESTION_METHANE",
 	ui_name="Methane Poisioning",
-	ui_description="You are being affected by an invisible threat",
+	ui_description="Everything is hazy.",
 	ui_icon="data/ui_gfx/status_indicators/drunk.png",
-	effect_entity="data/entities/misc/effect_methane_poisoning.xml",
-	min_threshold_normalized="0.0",
+	effect_entity="mods/Hydroxide/files/entities/effects/methane/methane.xml",
 	protects_from_fire=false,
 	is_harmful=true,
 });

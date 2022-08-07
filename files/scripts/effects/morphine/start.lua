@@ -20,3 +20,4 @@ print("start.lua: hp: " .. max_hp)
 
 
 ComponentSetValue( vsc, "value_float", max_hp)
+

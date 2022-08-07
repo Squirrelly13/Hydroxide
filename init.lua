@@ -44,6 +44,8 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 end
 
 
+
+
 --this function is used to add random recipes
 function add_random_recipe(file_to_insert, input1, input2, output1, output2, probability, blob_radius)
 	local a1, a2, a3, a4, a5, a6 = GameGetDateAndTimeUTC()
@@ -93,6 +95,7 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
+
 -- i think this is just so that the name for vials can show materials? seems to break something.
 --[[
 register_translation("item_vial_with_material", "Vial of $0")
@@ -135,13 +138,7 @@ if (ModIsEnabled("copis_things")) then
 	
 end --copis chemical curiosity compatibility combo
 
---[[ ore generation !!! ]]-- 
---function OnModInit()
---	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
---		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
---		GameAddFlagRun("Squirrelly_Ore_generated")
---	end
---end
+
 
 
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 

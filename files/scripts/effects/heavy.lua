@@ -14,8 +14,9 @@ local component = EntityGetFirstComponent(root, "CharacterDataComponent")
 local vel_x, vel_y = 0, 0
 vel_x, vel_y = ComponentGetValueVector2(component, "mVelocity")
 
-
+if(vel_y ~= nil) then
 local multiplier = 10
-local vel_y = vel_y + multiplier
+vel_y = vel_y + multiplier
 
 ComponentSetValueVector2(component, "mVelocity", vel_x, vel_y)
+end

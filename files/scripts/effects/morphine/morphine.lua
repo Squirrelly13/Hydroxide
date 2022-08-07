@@ -32,4 +32,5 @@ ComponentSetValue(damagemodel, "hp", max_hp)
 
 ComponentSetValue( vsc, "value_float", trueHP)
 
+
 --print("Morphine")

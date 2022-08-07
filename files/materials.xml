@@ -480,9 +480,8 @@
 	wang_color="2fabaca9"
 	liquid_gravity="0.5"
 	liquid_sand="0"
-	liquid_sprite_stains_status_threshold="0.3"
 	liquid_stains="1"
-	liquid_sprite_stain_shaken_drop_chance="6"
+	liquid_sprite_stain_shaken_drop_chance="3"
 	status_effects="INGESTION_METHANE"
 	lifetime="1600"
 	generates_flames="20"
@@ -2711,7 +2710,7 @@
 			>
 		</Graphics>
 	</CellDataChild>
-
+<!--
 	<CellData
 		name="statustestpowder"
 		ui_name="status effect test"
@@ -2730,7 +2729,8 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
-	
+-->
+
 	<CellData
 	name="cobalt"
 	ui_name="Cobalt"
@@ -2918,10 +2918,50 @@
 	</StatusEffects>
   </CellData>
   
-  
-  
-  
-  
+  <CellData
+	name="iron_ingredient"
+	ui_name="Ferrine"
+	tags="[liquid],[corrodible],[impure],[food]"
+	burnable="0"
+	density="5.7"
+	cell_type="liquid"
+	wang_color="8084c21A"
+	generates_smoke="0"
+	liquid_gravity="0.4"
+	liquid_sand="0"
+	liquid_stains="2"
+	on_fire="0"
+  	liquid_damping="0.7"
+	liquid_flow_speed="0.2" 
+	liquid_viscosity="0"
+	stickyness="0.7"
+	>
+	<Graphics
+		texture_file="mods/Hydroxide/files/gfx/materials_gfx/hemoglobin.png"
+		>
+	</Graphics>
+	</CellData>
+	
+	<CellData
+	name="cobalt_ingredient"
+	ui_name="Cobaline"
+	tags="[liquid],[corrodible],[impure]"
+	burnable="1"
+	density="2.1"
+	cell_type="liquid"
+	wang_color="803A7BE3"
+	liquid_gravity="1.9"
+	liquid_sand="0"
+	liquid_stains="3"
+	generates_smoke="50"
+	burnable="1"
+	on_fire_flame_material="fire_blue"
+	temperature_of_fire="95"
+	fire_hp="250"
+	autoignition_temperature="10"
+	on_fire_smoke_material="squirrellymorphine"
+	>
+	</CellData> --TODO more on this
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
@@ -2979,6 +3019,12 @@
 	blob_radius1="3"
 	/>
 
+	
+	<Reaction probability="10"
+	input_cell1="iron"				input_cell2="vomit"
+	output_cell1="iron_ingredient"	output_cell2="iron_ingredient"
+	blob_radius1="3"
+	/>
 	
 	----------
 	--tweaks--

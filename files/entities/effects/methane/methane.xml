@@ -1,0 +1,30 @@
+<Entity>
+    <InheritTransformComponent>
+    </InheritTransformComponent>    
+    
+    <GameEffectComponent 
+        effect="CUSTOM"
+		custom_effect_id="INGESTION_METHANE"
+        frames="99999"
+    ></GameEffectComponent>
+
+	<VariableStorageComponent
+		value_float="0.0"
+		>
+	</VariableStorageComponent>
+	
+    <LuaComponent
+    script_source_file="mods/Hydroxide/files/scripts/effects/methane/on.lua"
+    execute_every_n_frame="1"
+	remove_after_executed="1"
+	></LuaComponent> --adds a controller if there is none
+	
+<!-- 
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/effects/methane/off.lua"
+		execute_every_n_frame="-1"
+		execute_on_removed="1"
+		>
+	</LuaComponent> --set vision to normal
+ -->
+</Entity>
