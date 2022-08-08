@@ -130,7 +130,7 @@ table.insert(status_effects, {
 	id="INGESTION_METHANE",
 	ui_name="Methane Poisioning",
 	ui_description="Everything is hazy.",
-	ui_icon="data/ui_gfx/status_indicators/drunk.png",
+	ui_icon="mods/Hydroxide/files/gfx/ui/methane.png",
 	effect_entity="mods/Hydroxide/files/entities/effects/methane/methane.xml",
 	protects_from_fire=false,
 	is_harmful=true,

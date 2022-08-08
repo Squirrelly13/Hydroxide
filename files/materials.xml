@@ -1,9 +1,5 @@
 <Materials>
 	
-	--probably cant make berserkium enrage wands without extreme effort
-	--probably cant make Nullium destroy submerged wands
-	--cant do lightning that ignores conductivity
-	--cant do lightning that only goes through air
 	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
 	
 	--TODO make sure hydroxide damages enemies before release
@@ -2943,6 +2939,47 @@
 	</CellData>
 	
 	<CellData
+	name="rubberLiquid"
+	ui_name="Liquid Rubber"
+	tags="[liquid],[corrodible],[impure]"
+	burnable="0"
+	density="5.99"
+	cell_type="liquid"
+	wang_color="B2200020"
+	liquid_gravity="0.2"
+	liquid_sand="0"
+	liquid_stains="3"
+	on_fire="0"
+	liquid_flow_speed="0.3"
+	stickyness="0.4"
+	electrical_conductivity="0"
+	>
+	</CellData>
+	
+	<CellData
+	name="rubber"
+	ui_name="Rubber"
+	tags="[static],[corrodible],[solid]"
+	burnable="0"
+	density="13.32"
+	cell_type="liquid"
+	wang_color="ff200020"
+	liquid_gravity="1.0"
+	liquid_sand="1"
+	liquid_static="1"
+	durability="20"
+	hp="200"
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	electrical_conductivity="0"
+	>
+	</CellData>
+	
+
+	<!--
+	<CellData
 	name="cobalt_ingredient"
 	ui_name="Cobaline"
 	tags="[liquid],[corrodible],[impure]"
@@ -2953,19 +2990,39 @@
 	liquid_gravity="1.9"
 	liquid_sand="0"
 	liquid_stains="3"
-	generates_smoke="50"
+	generates_smoke="5"
 	burnable="1"
 	on_fire_flame_material="fire_blue"
 	temperature_of_fire="95"
-	fire_hp="250"
+	fire_hp="25"
 	autoignition_temperature="10"
 	on_fire_smoke_material="squirrellymorphine"
 	>
-	</CellData> --TODO more on this
+	</CellData> --TODO more on this.
+	
+	-->
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
+	----------
+	--rubber--
+	----------
 	
+
+	<Reaction probability="10"
+		input_cell1="rubberLiquid"	input_cell2="[static]"
+		output_cell1="rubber"		output_cell2="[static]"
+		blob_radius1="3"
+		req_lifetime="300"
+		>
+	</Reaction>
+	
+	<Reaction probability="20"
+		input_cell1="rubberLiquid"	input_cell2="rubber"
+		output_cell1="air"			output_cell2="rubber"
+		req_lifetime="900"
+		>
+	</Reaction>
 	----------
 	--metals--
 	----------
@@ -4244,6 +4301,7 @@
 	output_cell1="frozen_meat"	output_cell2="methane"
 	>
 	</Reaction>
+	
 	
 	<Reaction probability="1"
 	input_cell1="methane"	input_cell2="[fire]"
