@@ -46,7 +46,7 @@ metals_2 = {
 
 ore_coalmines = {
 	{	probability = 1.000, "random_metals",	},
-	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_toxic.xml",		},
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic.xml",		},
 	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_crystals.xml"	},
 }
 

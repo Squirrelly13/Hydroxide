@@ -138,7 +138,7 @@ if (ModIsEnabled("copis_things")) then
 	
 end --copis chemical curiosity compatibility combo
 
-
+ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/scripts/append/append_potion_starting.lua")
 
 
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 

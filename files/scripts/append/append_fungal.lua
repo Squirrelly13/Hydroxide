@@ -36,7 +36,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_from, {
 		probability = 0.5,
-		materials	= {	"AA_MAT_BLOOM",	"AA_MAT_BLOOM_GAS",	"AA_MAT_BLOOM_LIQUID", "AA_MAT_BLOOM_MAGIC", "AA_MAT_BLOOM_ROOF", "AA_MAT_BLOOM_ROOF_DEAD", "AA_MAT_BLOOM_ROOF_PLANT"},
+		materials	= {	"AA_MAT_BLOOM",	"AA_MAT_BLOOM_GAS", "AA_MAT_BLOOM_MAGIC", "AA_MAT_BLOOM_ROOF", "AA_MAT_BLOOM_ROOF_DEAD", "AA_MAT_BLOOM_ROOF_PLANT"},
 	});
 table.insert(materials_to, {
 		probability = 0.5,

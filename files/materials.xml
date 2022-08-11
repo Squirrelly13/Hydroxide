@@ -15,7 +15,6 @@
 			--hiisi base:	hungry_slime, methane_room, shaft2
 			--jungle: 		N/A
 			--vault:		Lab_3, hydroxidetank
-
 	
 	--TODO make unstable metamorphine more procedural if possible
 
@@ -170,42 +169,6 @@
 	</StatusEffects>
   </CellData> --sulphiric water, not too big a deal but its neat. 
 	
-
-  <CellData 
-	name="moss"  
-	ui_name="$mat_moss"
-	tags="[plant],[corrodible],[burnable],[alchemy],[impure]"
-	burnable="1"  
-	density="4.13"  
-	cell_type="liquid" 
-	wang_color="ff33b828"  
-	generates_smoke="20"  
-	liquid_gravity="0.5"  
-	liquid_sand="1"  
-	liquid_sticks_to_ceiling="80"
-	on_fire="0"  
-	requires_oxygen="1"  
-	temperature_of_fire="50" 
-	autoignition_temperature="85" 
-	platform_type="0"
-	liquid_viscosity="40"
-	hp="200" 
-	fire_hp="100"
-	audio_physics_material_event="gravel"
-	audio_physics_material_wall="gravel"
-	audio_physics_material_solid="rock"
-	show_in_creative_mode="1"
-	> 
-    <Graphics 
-	texture_file="data/materials_gfx/moss.png" 
-	color="ff33b828" >
-    </Graphics>
-	<StatusEffects>
-		<Ingestion>
-			<StatusEffect type="FARTS" amount="0.3" />
-		</Ingestion>
-	</StatusEffects>
-  </CellData> --moss override
 
   <CellData
 	name="plasma_fading"
@@ -2945,7 +2908,7 @@
 	burnable="0"
 	density="5.99"
 	cell_type="liquid"
-	wang_color="B2200020"
+	wang_color="b2300030"
 	liquid_gravity="0.2"
 	liquid_sand="0"
 	liquid_stains="3"
@@ -2959,14 +2922,16 @@
 	<CellData
 	name="rubber"
 	ui_name="Rubber"
-	tags="[static],[corrodible],[solid]"
+	tags="[alchemy],[corrodible],[solid]"
 	burnable="0"
 	density="13.32"
 	cell_type="liquid"
-	wang_color="ff200020"
+	wang_color="ff250025"
 	liquid_gravity="1.0"
+	liquid_viscosity="75"
+	liquid_sticks_to_ceiling="1"
 	liquid_sand="1"
-	liquid_static="1"
+	liquid_static="0"
 	durability="20"
 	hp="200"
 	audio_physics_material_event="sand"
@@ -2978,13 +2943,13 @@
 	</CellData>
 	
 
-	<!--
+	
 	<CellData
 	name="cobalt_ingredient"
 	ui_name="Cobaline"
 	tags="[liquid],[corrodible],[impure]"
 	burnable="1"
-	density="2.1"
+	density="0.5"
 	cell_type="liquid"
 	wang_color="803A7BE3"
 	liquid_gravity="1.9"
@@ -2996,11 +2961,13 @@
 	temperature_of_fire="95"
 	fire_hp="25"
 	autoignition_temperature="10"
-	on_fire_smoke_material="squirrellymorphine"
+	on_fire_smoke_material=""
 	>
-	</CellData> --TODO more on this.
-	
-	-->
+	<Graphics
+		texture_file="mods/Hydroxide/files/gfx/materials_gfx/cobaline.png"
+		>
+	</Graphics>
+	</CellData> 
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
@@ -3008,19 +2975,25 @@
 	--rubber--
 	----------
 	
+	<Reaction probability="20"
+		input_cell1="iron_ingredient"	input_cell2="antiMagic"
+		output_cell1="smoke"		output_cell2="rubberLiquid"
+		blob_radius2="3"
+		>
+	</Reaction>
 
 	<Reaction probability="10"
 		input_cell1="rubberLiquid"	input_cell2="[static]"
 		output_cell1="rubber"		output_cell2="[static]"
 		blob_radius1="3"
-		req_lifetime="300"
+		req_lifetime="30"
 		>
 	</Reaction>
 	
 	<Reaction probability="20"
 		input_cell1="rubberLiquid"	input_cell2="rubber"
 		output_cell1="air"			output_cell2="rubber"
-		req_lifetime="900"
+		req_lifetime="500"
 		>
 	</Reaction>
 	----------
@@ -3082,6 +3055,18 @@
 	output_cell1="iron_ingredient"	output_cell2="iron_ingredient"
 	blob_radius1="3"
 	/>
+	
+	<Reaction probability="20"
+	input_cell1="cobalt"				input_cell2="grease"
+	output_cell1="cobalt_ingredient"	output_cell2="cobalt_ingredient"
+	>
+	</Reaction>
+	
+	<Reaction probability="30"
+	input_cell1="cobalt_ingredient"		input_cell2="magic_liquid_faster_levitation"
+	output_cell1="AA_MAT_REPULTIUM"		output_cell2="AA_MAT_REPULTIUM"
+	>
+	</Reaction>
 	
 	----------
 	--tweaks--
@@ -3297,45 +3282,6 @@
 	--------------------
 	--melting Crystals--
 	--------------------
-	<!--
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="[mossDevour]"
-	output_cell1="solidCrystal"			output_cell2="[mossDevour]"
-	>
-	</Reaction>
-
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="rock_static"
-	output_cell1="solidCrystal"			output_cell2="rock_static"
-	>
-	</Reaction>
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="rock_static_wet"
-	output_cell1="solidCrystal"			output_cell2="rock_static_wet"
-	>
-	</Reaction>
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="rock_vault"
-	output_cell1="solidCrystal"			output_cell2="rock_vault"
-	>
-	</Reaction>
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="sand_static_rainforest"
-	output_cell1="solidCrystal"			output_cell2="sand_static_rainforest"
-	>
-	</Reaction>	
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="snow_sticky"
-	output_cell1="solidCrystal"			output_cell2="snow_sticky"
-	>
-	</Reaction>	
-	<Reaction probability="20"
-	input_cell1="solidCrystal_molten" 	input_cell2="rock_hard"
-	output_cell1="solidCrystal"			output_cell2="rock_hard"
-	>
-	</Reaction>	
-	
-	-->
 	
 	<Reaction probability="20"
 	input_cell1="solidCrystal_molten" 	input_cell2="[static]"
@@ -3393,6 +3339,14 @@
 	<Reaction probability="82"
 	input_cell1="grease"	input_cell2="[fire]" 	input_cell3="antiMagic"
 	output_cell1="smoke"	output_cell2="[fire]"	output_cell3="magic_liquid_slower_levitation"
+	>
+	</Reaction>
+	
+	<Reaction probability="20"
+	input_cell1="grease"	input_cell2="water"
+	output_cell1="smoke"	output_cell2="steam"
+	entity="mods/Hydroxide/files/entities/misc/greaseFire.xml"
+	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
 	
@@ -4373,7 +4327,7 @@
 	<Reaction probability="14"
 	input_cell1="glitteringLiquid"	input_cell2="[fire]"
 	output_cell1="air"				output_cell2="air"
-	entity="data/entities/misc/FireworkShot.xml"
+	entity="mods/Hydroxide/files/entities/misc/FireworkShot.xml"
 	>
 	</Reaction>
 	
@@ -4401,6 +4355,13 @@
 	
 	<Reaction probability="31"
 	input_cell1="sparkLiquid"	input_cell2="[fire]"
+	output_cell1="air"			output_cell2="air"
+	entity="data/entities/misc/SparkShot.xml" 
+	>
+	</Reaction>
+	
+	<Reaction probability="1"
+	input_cell1="sparkLiquid"	input_cell2="air"
 	output_cell1="air"			output_cell2="air"
 	entity="data/entities/misc/SparkShot.xml" 
 	>
@@ -4526,8 +4487,8 @@
 
 
  	<Reaction probability="15"
-	input_cell1="magic_liquid_berserk" 	input_cell2="blood"
-	output_cell1="magic_liquid_berserk" 	output_cell2="magic_liquid_berserk"
+	input_cell1="magic_liquid_berserk" 	input_cell2="blood"						input_cell3="AA_MAT_NEUTRAL_POTION"
+	output_cell1="magic_liquid_berserk" 	output_cell2="magic_liquid_berserk"	output_cell3="AA_MAT_NEUTRAL_POTION"
 	>
   	</Reaction> --berserkium overtakes blood
 	
@@ -4565,9 +4526,14 @@
 	</Reaction>
 	
 	<Reaction probability="100"
-	input_cell1="moss"		input_cell2="magic_liquid_berserk"	input_cell3="[magic_polymorph]"
-	output_cell1="devouringMoss" 	output_cell2="devouringMoss"		output_cell3="devouringMoss"
-	blob_radius2="4"
+	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME"
+	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
+	>
+	</Reaction> --create devouring moss
+	
+	<Reaction probability="100"
+	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
+	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
 	>
 	</Reaction> --create devouring moss
 	-------------------------------------------------------------------------
