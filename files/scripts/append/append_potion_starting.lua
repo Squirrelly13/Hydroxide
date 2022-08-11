@@ -24,7 +24,7 @@ starterpotions = {
 	{	probability = 0.005, "unstableMetamorphine"},
 	{	probability = 0.001, "increaseMaxHP"},
 	{	probability = 0.150, "squirrellymorphine"},
-	{	probability = 0.300, "rotten_meat"},	
+	{	probability = 0.300, "frozen_meat"},	
 }
 
 magicpotions = { 
