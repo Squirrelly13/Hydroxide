@@ -150,12 +150,8 @@ local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 local content = ModTextFileGetContent("data/materials.xml")
 local xml = nxml.parse(content)
 for elem in xml:each_child() do
-    if elem.attr.name == "rock_static_wet" or elem.attr.name == "snowrock_static" or elem.attr.name == "rock_static_grey" then
-        -- Use this for materials that don't have tags defined
-        elem.attr.tags = "[mossDevour]"
-		
-		
-    elseif elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
+    
+    if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
         -- Otherwise append to the previous tags
         elem.attr.tags = elem.attr.tags .. ",[mossDevour]"
 		

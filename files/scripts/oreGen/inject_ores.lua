@@ -26,34 +26,43 @@ ore_types = {
 	{	probability = 0.060, "mods/Hydroxide/files/oreGen/ores_radioactive.xml",	},
 	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic_ice.xml",		},
 	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 }
 
 metals_1 = {
-	{	probability = 0.900, "metals_cobalt1",	},
-	{	probability = 1.000, "metals_iron1",		},
-	{	probability = 0.800, "metals_preskite1",	},
-	{	probability = 0.600, "metals_silver1",	},
-	{	probability = 1.000, "metals_brass1",		},
+	{	probability = 0.900, "metals_cobalt1"	},
+	{	probability = 1.000, "metals_iron1"		},
+	{	probability = 0.800, "metals_preskite1"	},
+	{	probability = 0.600, "metals_silver1"	},
+	{	probability = 1.000, "metals_brass1"	},
+	
 }
 
 metals_2 = {
-	{	probability = 0.950, "metals_cobalt2",	},
-	{	probability = 1.000, "metals_iron2",		},
-	{	probability = 0.900, "metals_preskite2",	},
-	{	probability = 0.700, "metals_silver2",	},
-	{	probability = 1.000, "metals_brass2",	},
+	{	probability = 0.950, "metals_cobalt2"	},
+	{	probability = 1.000, "metals_iron2"		},
+	{	probability = 0.900, "metals_preskite2"	},
+	{	probability = 0.700, "metals_silver2"	},
+	{	probability = 1.000, "metals_brass2"	},
 }
 
 ore_coalmines = {
 	{	probability = 1.000, "random_metals",	},
-	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic.xml",		},
-	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_crystals.xml"	},
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic.xml",			},
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_crystals.xml"		},
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
+	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 }
 
 ore_excavationsite = {
 	{	probability = 1.000, "random_metals",	},
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_arborium.xml"	},
 	{	probability = 0.800, "mods/Hydroxide/files/oreGen/ores_toxic.xml",		},
 	{	probability = 0.800, "mods/Hydroxide/files/oreGen/ores_crystals.xml"	},
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 }
 
 metals_excavationsite = {
@@ -77,14 +86,52 @@ ore_snowcastle = {
 	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_toxic.xml"			},
 	{	probability = 0.750, "random_metals"	},
 	{ 	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
+	{	probability = 0.550, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 }
 
 ore_rainforest = {
 	{	probability = 1.000, "random_metals"	},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
 	{	probability = 0.800, "mods/Hydroxide/files/oreGen/ores_toxic.xml"			},
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
 }
 
+ore_vault = {
+	{	probability = 1.000, "random_metals",	},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_toxic.xml"			},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_crystals.xml"		},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_concrete.xml"		},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
+	{ 	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_toxic_ice.xml"		},
+	{ 	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml"		},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 
+}
+
+metals_vault_1 = { 
+	{	probability = 1.000, "metals_cobalt1"	},
+	{	probability = 1.000, "metals_iron1"		},
+	{	probability = 1.000, "metals_preskite1"	},
+	{	probability = 1.000, "metals_silver1"	},
+	{	probability = 1.000, "metals_brass1"	},
+}
+
+metals_vault_2 = {
+	{	probability = 1.000, "metals_cobalt2"	},
+	{	probability = 1.000, "metals_iron2"		},
+	{	probability = 1.000, "metals_preskite2"	},
+	{	probability = 1.000, "metals_silver2"	},
+	{	probability = 1.000, "metals_brass2"	},
+	{	probability = 1.000, "metals_gold"		},
+}
+
+ore_fungiforest = {
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
+	{ 	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+}
 
 function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 
@@ -128,10 +175,18 @@ addOresToBiome("data/biome/snowcave.xml", ore_snowcave, metals_1, metals_2)
 
 addOresToBiome("data/biome/snowcastle.xml", ore_snowcastle, metals_1, metals_2)
 
-addOresToBiome("data/biome/rainforest.xml", ore_rainforest, metals_1, metals_2)	-- give custom list
+addOresToBiome("data/biome/rainforest.xml", ore_rainforest, metals_1, metals_2)
 
 addOresToBiome("data/biome/fungicave.xml", ore_types, metals_1, metals_2) 
 
-addOresToBiome("data/biome/vault.xml", ore_types, metals_1, metals_2)
+addOresToBiome("data/biome/vault.xml", ore_vault, metals_vault_1, metals_vault_2)
 
-addOresToBiome("data/biome/crypt.xml", ore_types, metals_1, metals_2) --add a ton of potions to this
+addOresToBiome("data/biome/crypt.xml", ore_types, metals_1, metals_2) --add a ton of stuff here 
+
+
+
+
+
+addOresToBiome("data/biome/fungiforest.xml", ore_fungiforest, metals_1, metals_2)
+
+addOresToBiome("data/biome/vault_frozen.xml", ore_vault, metals_vault_1, metals_vault_2)

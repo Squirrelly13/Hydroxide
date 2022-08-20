@@ -8,11 +8,6 @@
         frames="99999"
     ></GameEffectComponent>
 
-	<VariableStorageComponent
-		value_float="0.0"
-		>
-	</VariableStorageComponent>
-	
     <LuaComponent
     script_source_file="mods/Hydroxide/files/scripts/effects/methane/spawnController.lua"
     execute_every_n_frame="1"

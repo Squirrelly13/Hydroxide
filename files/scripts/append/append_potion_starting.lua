@@ -6,6 +6,7 @@ starterpotions = {
 	{ 	probability = 1.000, "water_salt"},
 	{	probability = 1.000, "swamp"},
 	{	probability = 1.000, "snow"},
+	{	probability = 0.800, "blood"},
 	{	probability = 0.700, "grease"},
 	{	probability = 0.100, "devouringMoss"},
 	{	probability = 0.800, "sulphiricWater"},
@@ -44,10 +45,8 @@ magicpotions = {
 function potion_a_materials()
 	rnd = random_create(Random(1,100), Random(1,100))
 	local r_value = Random( 1, 100 )
-	if( r_value <= 65 ) then
+	if( r_value <= 80 ) then
 		return tostring(pick_random_from_table_weighted( rnd, starterpotions)[1])
-	elseif( r_value <= 70 ) then
-		return "blood"
 	elseif( r_value <= 99 ) then
 		r_value = Random( 0, 100 )
 		return random_from_array( magicpotions )

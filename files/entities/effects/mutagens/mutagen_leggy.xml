@@ -1,15 +1,10 @@
-<Effect>
-	<GameEffectComponent
-		effect="CUSTOM"
-		custom_effect_id="MUTAGEN_LEGGY"
-		frames="999999"
-		>
-	</GameEffectComponent>
+<Entity name="mutagenLeggy" >
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<LifetimeComponent lifetime="1500" />
 	
-	<IKLimbComponent length="40" />
+	<InheritTransformComponent />
+	
+	<IKLimbComponent length="30" />
 	<IKLimbWalkerComponent
 		affect_flying="1"
 		>
@@ -42,4 +37,4 @@
 		update_transform_rotation="0" >
 	</SpriteComponent>
 
-</Effect>
+</Entity>

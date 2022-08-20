@@ -53,6 +53,7 @@
         wang_color="ff387eff"
         gfx_glow="100"
         liquid_gravity="0.6"
+		liquid_stains="1"
         >
 	<Graphics
 		texture_file="mods/Hydroxide/files/gfx/materials_gfx/hydroxide.png"
@@ -62,6 +63,9 @@
             <Ingestion>
                 <StatusEffect type="POISONED" amount="0.3"/>
             </Ingestion>
+			<Stains>
+				<StatusEffect type="HYDROXIDE" />
+			</Stains>
         </StatusEffects>
  </CellData>   --hydroxide. the first material i made.
 
@@ -267,8 +271,8 @@
 	</ParticleEffect>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="INGESTION_DRUNK" amount="0.3" />
-			<StatusEffect type="BLINDNESS"		 amount="2"   />
+			<StatusEffect type="INGESTION_DRUNK" amount="0.05" />
+			<StatusEffect type="BLINDNESS"		 amount="0.3"   />
 		</Ingestion>
 	</StatusEffects>
   </CellData> --blindness potion
@@ -277,15 +281,12 @@
   <CellData
 	name="sparkLiquid"
 	ui_name="Sparkling Liquid"
-	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
-	density="2.31"
+	tags="[liquid],[magic_liquid],[impure],[corrodible]"
+	density="0.7"
 	cell_type="liquid"
 	wang_color="af6a6bfa"
 	gfx_glow="255"
-	burnable="1"
-	on_fire_flame_material="spark"
-	temperature_of_fire="100"
-	autoignition_temperature="5"
+	burnable="0"
 	electrical_conductivity="1"
 	liquid_stains="3"
 	audio_materialaudio_type="MAGICAL" 
@@ -1078,7 +1079,7 @@
 	ui_name="Arborium"
   	tags="[liquid],[water],[impure],[magic_liquid]"
 	burnable="0"
-	density="1"
+	density="3.9"
 	cell_type="liquid"
 	wang_color="80306ca6"
 	generates_smoke="0"
@@ -2468,7 +2469,7 @@
 		on_fire="0"
 		requires_oxygen="1"
 		temperature_of_fire="50"
-		autoignition_temperature="99"
+		autoignition_temperature="10"
 		solid_break_to_type="diamond"
 		solid_friction="0.5"
 		solid_static_type="1"
@@ -2510,8 +2511,8 @@
 	
 	<CellData
 		name="uranium"
-		ui_name="U-236"
-		tags="[static],[corrodible],[alchemy],[solid],[radioactive]"
+		ui_name="Uranium"
+		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
 		burnable="0"
 		density="14.49"
 		cell_type="liquid"
@@ -2529,6 +2530,51 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/gfx/materials_gfx/uranium.png"
+			>
+		</Graphics>
+		<ParticleEffect
+			vel.y="0"
+			vel_random.min_x="-11.71"
+			vel_random.max_x="11.71"
+			vel_random.min_y="-17.18"
+			vel_random.max_y="17.18"
+			lifetime.min="0.6"
+			lifetime.max="10.0"
+			gravity.y="0"
+			render_on_grid="1"
+			cosmetic_force_create="1"
+			draw_as_long="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="0.003"
+			count.min="0"
+			count.max="2"
+			>
+		</ParticleEffect>
+	</CellData>
+	
+	<CellData
+		name="uraniumDepleted"
+		ui_name="Depleted Uranium"
+		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
+		burnable="0"
+		density="14.49"
+		cell_type="liquid"
+		wang_color="ff2afd85"
+		liquid_gravity="1.0"
+		liquid_sand="1"
+		liquid_static="1"
+		gfx_glow="50"
+		durability="25"
+		hp="10000"
+		audio_physics_material_event="gold"
+		audio_physics_material_wall="gold"
+		audio_physics_material_solid="gold"
+		show_in_creative_mode="1"
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/gfx/materials_gfx/uraniumDepleted.png"
 			>
 		</Graphics>
 		<ParticleEffect
@@ -2669,26 +2715,9 @@
 			>
 		</Graphics>
 	</CellDataChild>
-<!--
-	<CellData
-		name="statustestpowder"
-		ui_name="status effect test"
-		wang_color="f2543648"
-		cell_type="liquid"
-		liquid_sand="1"
-		>
-		<Graphics
-			texture_file="mods/Hydroxide/files/gfx/materials_gfx/antimatter1.png"
-			>
-		</Graphics>
-		<StatusEffects>
-			<Ingestion>
-				<StatusEffect type="MUTAGEN_PAINKILLER" amount="0.3" />
-				<StatusEffect type="MUTAGEN_LEGGY" amount="0.3" />
-			</Ingestion>
-		</StatusEffects>
-	</CellData>
--->
+
+	
+
 
 	<CellData
 	name="cobalt"
@@ -2961,7 +2990,7 @@
 	temperature_of_fire="95"
 	fire_hp="25"
 	autoignition_temperature="10"
-	on_fire_smoke_material=""
+	on_fire_smoke_material="hydroxide_gas"
 	>
 	<Graphics
 		texture_file="mods/Hydroxide/files/gfx/materials_gfx/cobaline.png"
@@ -2971,6 +3000,8 @@
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
+
+
 	----------
 	--rubber--
 	----------
@@ -3027,7 +3058,7 @@
 	</Reaction>
 	
 	<Reaction probability="80"
-	input_cell1="uranium"			input_cell2="iron"	
+	input_cell1="[uranium]"			input_cell2="iron"	
 	output_cell1="AA_GRAVLIQUID"	output_cell2="smoke"
 	>
 	</Reaction>
@@ -3059,6 +3090,7 @@
 	<Reaction probability="20"
 	input_cell1="cobalt"				input_cell2="grease"
 	output_cell1="cobalt_ingredient"	output_cell2="cobalt_ingredient"
+	blob_radius1="3"
 	>
 	</Reaction>
 	
@@ -3258,12 +3290,19 @@
 	--uranium--
 	-----------
 	
-	<Reaction probability="15"
+	<Reaction probability="75"
 	input_cell1="uranium"	input_cell2="air"
 	output_cell1="uranium"	output_cell2="air"
 	entity="mods/Hydroxide/files/entities/misc/radiation.xml"
 	>
 	</Reaction>
+	
+	<Reaction probability="5"
+	input_cell1="uranium"	input_cell2="uranium"
+	output_cell1="uranium"	output_cell2="uraniumDepleted"
+	entity="mods/Hydroxide/files/entities/misc/radiation.xml"
+	>
+	</Reaction> --TODO make this go to a spent uranium material
 	
 	<Reaction probability="8"
 	input_cell1="uranium"	input_cell2="[liquid]"
@@ -3274,9 +3313,17 @@
 	
 	<Reaction probability="3"
 	input_cell1="uranium"	input_cell2="air"
-	output_cell1="air"	output_cell2="air"
+	output_cell1="uraniumDepleted"	output_cell2="air"
 	entity="mods/Hydroxide/files/entities/misc/radiation.xml"
 	>
+	</Reaction>
+	
+	<Reaction probability="70"
+	input_cell1="[lava]" 					input_cell2="radiationWaste"
+	output_cell1="uranium"			output_cell2="radioactive_gas"
+	blob_radius1="4"						blob_radius2="4"
+	blob_restrict_to_input_material1="1" 	blob_restrict_to_input_material2="1" 
+	audio_fx_volume_1="100.0" >
 	</Reaction>
 
 	--------------------
@@ -3342,9 +3389,9 @@
 	>
 	</Reaction>
 	
-	<Reaction probability="20"
-	input_cell1="grease"	input_cell2="water"
-	output_cell1="smoke"	output_cell2="steam"
+	<Reaction probability="60"
+	input_cell1="grease"	input_cell2="water"		input_cell3="[fire]"
+	output_cell1="smoke"	output_cell2="steam"	output_cell3="[fire]"
 	entity="mods/Hydroxide/files/entities/misc/greaseFire.xml"
 	audio_fx_volume_1="10.0"
 	>
@@ -3523,6 +3570,12 @@
 	</Reaction>
 	
 	<Reaction probability="25"
+	input_cell1="antiMagic"			input_cell2="wood_prop"
+	output_cell1="antiMagic"		output_cell2="smoke"
+	>
+	</Reaction>	
+	
+	<Reaction probability="25"
 	input_cell1="antiMagic"			input_cell2="wood"
 	output_cell1="antiMagic"		output_cell2="smoke"
 	>
@@ -3583,6 +3636,23 @@
 	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
 	blob_radius2="2"
 	>
+	</Reaction>
+	
+	<Reaction probability="30"
+		input_cell1="explodePlayer"	input_cell2="[meat]"
+		output_cell1="fire"			output_cell2="smoke"
+		>
+		<ExplosionConfig
+	
+			cell_explosion_power="30"
+			cell_explosion_damage_required="3000"
+			cell_explosion_radius_min="5"
+			cell_explosion_radius_max="5"
+			cell_explosion_probability="1.1"
+		
+			ray_energy="50000"
+			>
+		</ExplosionConfig>
 	</Reaction>
 	
 	----------
@@ -3985,6 +4055,14 @@
 	-------------------------
 	--arborium (wood juice)--
 	-------------------------
+	  <Reaction probability="100"
+	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[alchemy]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="2"		blob_radius2="8"
+	>
+  </Reaction>
+	<!--
   <Reaction probability="100"
 	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[static]"
 	output_cell1="smoke" 	output_cell2="wood_static"
@@ -4025,7 +4103,7 @@
 	blob_radius1="4"		blob_radius2="8"
 	>
   </Reaction>
-	
+	-->
 	----------------
 	--hungry slime--
 	----------------
@@ -4353,17 +4431,11 @@
 	--spark liquid--
 	----------------
 	
-	<Reaction probability="31"
-	input_cell1="sparkLiquid"	input_cell2="[fire]"
-	output_cell1="air"			output_cell2="air"
-	entity="data/entities/misc/SparkShot.xml" 
-	>
-	</Reaction>
 	
 	<Reaction probability="1"
 	input_cell1="sparkLiquid"	input_cell2="air"
-	output_cell1="air"			output_cell2="air"
-	entity="data/entities/misc/SparkShot.xml" 
+	output_cell1="smoke"			output_cell2="air"
+	entity="mods/Hydroxide/files/entities/misc/SparkShot.xml" 
 	>
 	</Reaction>
 	
@@ -4374,11 +4446,20 @@
 	</Reaction>
 	
 	<Reaction probability="60"
-	input_cell1="magic_liquid_berserk"	input_cell2="diamond"
+	input_cell1="cobalt_ingredient"		input_cell2="magic_liquid_berserk"
 	output_cell1="sparkLiquid"			output_cell2="smoke"
 	blob_radius1="2"
 	>
 	</Reaction>
+	
+	
+	<Reaction probability="30"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="sparkLiquid"
+	output_cell1="sparkLiquid"				output_cell2="sparkLiquid"
+	blob_radius1="2"
+	>
+	</Reaction>
+	
 	
 	------------------
 	--slicing liquid--
@@ -4518,6 +4599,27 @@
 	blob_restrict_to_input_material2="1"
 	>
 	</Reaction> --tags based 
+
+	<Reaction probability="100"
+	input_cell1="devouringMoss"	input_cell2="rock_static_grey"
+	output_cell1="devouringMoss"	output_cell2="devouringMoss"
+	blob_radius2="1"
+	blob_restrict_to_input_material2="1"
+	>
+	</Reaction> <Reaction probability="100"
+	input_cell1="devouringMoss"	input_cell2="rock_static_wet"
+	output_cell1="devouringMoss"	output_cell2="devouringMoss"
+	blob_radius2="1"
+	blob_restrict_to_input_material2="1"
+	>
+	</Reaction> <Reaction probability="100"
+	input_cell1="devouringMoss"	input_cell2="snowrock_static"
+	output_cell1="devouringMoss"	output_cell2="devouringMoss"
+	blob_radius2="1"
+	blob_restrict_to_input_material2="1"
+	>
+	</Reaction> 
+	
 	
 	<Reaction probability="97"
 	input_cell1="devouringMoss"		input_cell2="[bloom]"
@@ -4750,13 +4852,13 @@
 	
  	<Reaction probability="60"
 	input_cell1="potionBlindness" 	input_cell2="[fire]"
-	output_cell1="[fire]"			output_cell2="alcohol_gas"
+	output_cell1="[fire]"			output_cell2="methane"
 	>
 	</Reaction> --burning
 
 	<Reaction probability="60"
 	input_cell1="potionBlindness" 		input_cell2="[lava]"
-	output_cell1="[fire]"		output_cell2="alcohol_gas">
+	output_cell1="[fire]"		output_cell2="methane">
 	</Reaction> --burning
 
 

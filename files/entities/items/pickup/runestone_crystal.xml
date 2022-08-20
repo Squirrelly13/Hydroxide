@@ -19,12 +19,12 @@
 		</ItemComponent>
   
 		<UIInfoComponent
-			name="Runestone of Alignment"
+			name="Runestone of Crystals"
 			>
 		</UIInfoComponent>
   
 		<AbilityComponent
-			ui_name="Runestone of Alignment"
+			ui_name="Runestone of Crystals"
 			>
 		</AbilityComponent>
 	
