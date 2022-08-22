@@ -31,18 +31,18 @@ table.insert(materials_magic, {
 
 table.insert(materials_magic, {
     material="AA_MAT_HUNGRY_SLIME",
-    cost=500,
+    cost=600,
 });
 
 table.insert(materials_magic, {
     material="AA_MAT_REPULTIUM",
-    cost=500,
+    cost=400,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
     material="AA_CLONE",
-    cost=500,
+    cost=400,
 });
 
 table.insert(materials_magic, {
@@ -52,12 +52,12 @@ table.insert(materials_magic, {
 
 table.insert(materials_magic, {
     material="AA_ICEFIRE",
-    cost=500,
+    cost=700,
 });
 
 table.insert(materials_magic, {
     material="AA_PATH",
-    cost=500,
+    cost=1500,
 });
 
 table.insert(materials_magic, {
@@ -73,19 +73,19 @@ table.insert(materials_magic, {
 
 table.insert(materials_magic, {
     material="AA_UNSTABLE_LIQUID_SPELL",
-    cost=500,
+    cost=1500,
     percentage=0.2
 });
 
 table.insert(materials_magic, {
     material="AA_LIQUID_ROCK",
-    cost=500,
+    cost=300,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
     material="AA_MAT_STATIC_CHARGE",
-    cost=500,
+    cost=300,
 });
 
 --if(ModSettingGet(omega_glue) == "on") then
@@ -153,7 +153,7 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-	material="antiMagic",
+	material="antimagic",
 	cost=1000,
 });
 
@@ -170,6 +170,16 @@ table.insert(materials_magic, {
 table.insert(materials_magic, {
 	material="antimatter_liquid",
 	cost=1000,
+});
+
+table.insert(materials_standard, {
+	material="cobalt_ingredient",
+	cost="120",
+});
+
+table.insert(materials_standard, {
+	material="iron_ingredient",
+	cost="120",
 });
 
 local old_init = init

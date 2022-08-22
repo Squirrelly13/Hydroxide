@@ -1,6 +1,6 @@
 <Entity>
 	<ParticleEmitterComponent
-		emitted_material_name="antiMagic"
+		emitted_material_name="antimagic"
 		gravity.y="0.0"
 		lifetime_min="1.2"
 		lifetime_max="1.9"
@@ -38,5 +38,11 @@
 		script_source_file="mods/Hydroxide/files/scripts/effects/nullium.lua"
 		execute_every_n_frame="1"
 	></LuaComponent>
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/scripts/effects/DoT.lua"
+		execute_every_n_frame="30"
+		>
+	</LuaComponent>
 	
 </Entity>

@@ -118,7 +118,7 @@ table.insert(potions, {
 });
 
 table.insert(potions, {
-	material="antiMagic",
+	material="antimagic",
 	cost=600,
 });
 

@@ -6,8 +6,6 @@ dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 local entity = GetUpdatedEntityID()
 
-local x, y = EntityGetTransform(entity)
-
 local root = EntityGetParent( entity)
 
 if(root == entity)then return end

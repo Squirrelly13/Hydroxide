@@ -172,7 +172,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material	= "antiMagic",
+		material	= "antimagic",
 	});
 table.insert(materials_to, {
 		probability = 0.002,
