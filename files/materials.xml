@@ -404,7 +404,7 @@
 	burnable="1"
 	density="1"
 	cell_type="gas"
-	wang_color="2fabaca9"
+	wang_color="a53b3c5e"
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
@@ -3261,6 +3261,14 @@
 	<Reaction probability="60"
 	input_cell1="solidCrystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
+	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
+	>
+	</Reaction>
+	
+	<Reaction probability="20"
+	input_cell1="solidCrystal"		input_cell2="smoke"
+	output_cell1="air"				output_cell2="smoke"
 	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>

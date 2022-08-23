@@ -107,17 +107,4 @@
     is_emitting="1" >
   </ParticleEmitterComponent>
   
-<MagicConvertMaterialComponent
-      kill_when_finished="0"
-      from_material="air"
-      steps_per_frame="2"
-      to_material="uranium"
-      clean_stains="0"
-      is_circle="1"
-      radius="3" 
-	  reaction_audio_amount="1"
-	  convert_same_material="0"
-	  loop="1"
-	  >
-    </MagicConvertMaterialComponent>
 </Entity>
