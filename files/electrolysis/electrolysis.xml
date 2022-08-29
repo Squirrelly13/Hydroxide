@@ -1,0 +1,6 @@
+<MagicConvertMaterialComponent _enabled="1"
+    radius="3"
+    is_circle="1"
+    from_material="solidCrystal"
+    to_material="fire"
+    loop="1" />

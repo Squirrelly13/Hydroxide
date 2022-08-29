@@ -41,6 +41,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		print("Chemical Curiosities oreGen complete")
 		GameAddFlagRun("Squirrelly_Ore_generated")
 	end
+	--dofile_once("mods/Hydroxide/files/electrolysis/inject_electrolysis.lua")
 end
 
 

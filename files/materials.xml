@@ -404,7 +404,7 @@
 	burnable="1"
 	density="1"
 	cell_type="gas"
-	wang_color="a53b3c5e"
+	wang_color="a53b3c7e"
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
@@ -1404,7 +1404,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="HP_REGENERATION" amount="0.01" />
+			<StatusEffect type="HP_REGENERATION" amount="0.003" />
 		</Ingestion>
 	</StatusEffects>
   </CellData> --RICE
@@ -2421,10 +2421,12 @@
 		</Graphics>
 	</CellData>
 
-	<CellData
+	<CellDataChild
+		_parent="ice_static"
+		_inherit_reactions="0"
 		name="solidCrystal"
 		ui_name="Dormant Crystal"
-		tags="[alchemy],[solid]"
+		tags="[static],[alchemy],[solid]"
 		burnable="1"
 		density="8"
 		cell_type="liquid"
@@ -2436,23 +2438,37 @@
 		on_fire="0"
 		requires_oxygen="1"
 		temperature_of_fire="50"
-		autoignition_temperature="10"
+		autoignition_temperature="1"
 		solid_break_to_type="diamond"
 		solid_friction="0.5"
+		electrical_conductivity="1"
 		solid_static_type="1"
-		hp="30000"
+		hp="3000"
 		audio_physics_material_wall="gravel"
 		audio_physics_material_solid="glass"
+		crackability="100"
+		convert_to_box2d_material="crystal_box2d"
 		show_in_creative_mode="1"
-		durability="11"
+		durability="7"
 		>
+		<ExplosionConfig 
+			damage="0"
+			cell_explosion_power="20"
+			cell_explosion_damage_required="1"
+			cell_explosion_radius_min="2"
+			explosion_sprite="data/particles/explosion_012.xml"
+			load_this_entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+			ray_energy="10"
+        >
+		</ExplosionConfig>
 		<Graphics
 			texture_file="data/materials_gfx/crystal_purple.png"	
 			color="ff74737f"
 			>
 		</Graphics>
-	</CellData>
+	</CellDataChild>
 	
+
 	<CellData
 		name="solidCrystal_molten"
 		ui_name="Liquid Crystal"
@@ -2921,10 +2937,50 @@
 			>
 		</Graphics>
 	</CellData> 
+	
+	<CellData
+		name="crystal_box2d"
+		ui_name="Dormant Crystal"
+		tags="[box2d],[static],[corrodible],[solid],[alchemy]"
+		burnable="0"
+		density="10"
+		cell_type="solid"
+		wang_color="ee341253"
+		generates_smoke="0"
+		on_fire="0"
+		requires_oxygen="0"
+		temperature_of_fire="10"
+		solid_static_type="2"
+		solid_collide_with_self="0"
+		solid_on_sleep_convert="1"
+		solid_break_to_type="solidCrystal"
+		solid_friction="0.85"
+		crackability="40"
+		platform_type="1"
+		slippery="0"
+		hp="10000"
+		gfx_glow="255"
+		audio_physics_material_wall="glass"
+		audio_physics_material_solid="glass"
+		show_in_creative_mode="1"
+		>
+		<ExplosionConfig 
+			damage="0"
+			cell_explosion_power="20"
+			cell_explosion_damage_required="1"
+			cell_explosion_radius_min="2"
+			explosion_sprite="data/particles/explosion_012.xml"
+			load_this_entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+			ray_energy="10"
+        >
+		</ExplosionConfig>
+	</CellData>
+
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
 
+	
 	----------
 	--metals--
 	----------
@@ -3209,7 +3265,7 @@
 	output_cell1="uranium"	output_cell2="air"
 	entity="mods/Hydroxide/files/entities/misc/radiation.xml"
 	>
-	</Reaction> --TODO make this go to a spent uranium material
+	</Reaction> 
 	
 	<Reaction probability="8"
 	input_cell1="uranium"	input_cell2="[liquid]"
@@ -3257,7 +3313,14 @@
 	>
 	</Reaction>
 	
+	<Reaction probability="5"
+	input_cell1="crystal_box2d"		input_cell2="air"
+	output_cell1="crystal_box2d"	output_cell2="air"
+	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+	>
+	</Reaction>
 	
+	<!--
 	<Reaction probability="60"
 	input_cell1="solidCrystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
@@ -3273,6 +3336,7 @@
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>
 	</Reaction>
+	-->
 	
 	<Reaction probability="50"
 	input_cell1="diamond"	input_cell2="AA_MAT_NEUTRAL_POTION"
