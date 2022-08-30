@@ -404,7 +404,7 @@
 	burnable="1"
 	density="1"
 	cell_type="gas"
-	wang_color="a53b3c7e"
+	wang_color="a53b3c7f"
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
@@ -2945,7 +2945,7 @@
 		burnable="0"
 		density="10"
 		cell_type="solid"
-		wang_color="ee341253"
+		wang_color="ee351253"
 		generates_smoke="0"
 		on_fire="0"
 		requires_oxygen="0"
@@ -2975,7 +2975,32 @@
         >
 		</ExplosionConfig>
 	</CellData>
-
+	
+	<CellData
+		name="chargeGas"
+		ui_name="Charged Gas"
+		tags="[gas]"
+		burnable="0"
+		density="2.1"
+		cell_type="gas"
+		wang_color="9a2E534"
+		liquid_gravity="0.1"
+		liquid_sand="0"
+		on_fire="0"
+		requires_oxygen="0"
+		temperature_of_fire="60" 
+		gfx_glow="150" 
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/gfx/materials_gfx/zap.png"
+		>
+		</Graphics>
+		<StatusEffects>
+			<Stains>
+				<StatusEffect type="AA_STATIC_CHARGE" />
+			</Stains>
+		</StatusEffects>
+	</CellData>
 ------------------------------------------------------------------------
 -------------------------------reactions--------------------------------
 ------------------------------------------------------------------------
@@ -2987,8 +3012,8 @@
 	
 	
 	<Reaction probability="20"
-	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="iron"
-	output_cell2="magic_liquid_slower_levitation"	output_cell2="steam"
+	input_cell1="AA_MAT_NEUTRAL_POTION"				input_cell2="iron"
+	output_cell1="magic_liquid_slower_levitation"	output_cell2="steam"
 	>
 	</Reaction>
 	

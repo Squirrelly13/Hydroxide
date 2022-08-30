@@ -6,7 +6,6 @@ local rocketCount = #rockets
 local entity_id    = GetUpdatedEntityID()
 math.randomseed(entity_id)
 
-print(rocketCount)
 if (rocketCount <= 5) then
 	
 	local pos_x, pos_y = EntityGetTransform( entity_id )
