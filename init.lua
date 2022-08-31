@@ -41,9 +41,13 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		print("Chemical Curiosities oreGen complete")
 		GameAddFlagRun("Squirrelly_Ore_generated")
 	end
-	--dofile_once("mods/Hydroxide/files/electrolysis/inject_electrolysis.lua")
 end
 
+
+ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 
+ModMaterialsFileAdd( "mods/Hydroxide/files/reactions.xml" ) 
+-- Adds all new materials and reactions. 
+-- This line is arguably the single most important line of code in the mod
 
 
 
@@ -141,10 +145,6 @@ end --copis chemical curiosity compatibility combo
 
 ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/scripts/append/append_potion_starting.lua")
 
-
-ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 
--- Adds all new materials and reactions. 
--- This line is arguably the single most important line of code in the mod
 
 -- this code adds tags to preexisting materials, its good for compatibility--
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
