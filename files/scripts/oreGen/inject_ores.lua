@@ -28,6 +28,8 @@ ore_types = {
 	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
 	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
 	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
+	
+	{	probability = 0.010, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 			},
 }
 
 metals_1 = {
@@ -88,6 +90,9 @@ ore_snowcastle = {
 	{ 	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
 	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
 	{	probability = 0.550, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
+
+
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
 }
 
 ore_rainforest = {
@@ -109,6 +114,7 @@ ore_vault = {
 	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
 	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
 }
 
 metals_vault_1 = { 
@@ -131,6 +137,11 @@ metals_vault_2 = {
 ore_fungiforest = {
 	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
 	{ 	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+}
+
+ore_crypt = {
+
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
 }
 
 function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
@@ -181,7 +192,7 @@ addOresToBiome("data/biome/fungicave.xml", ore_types, metals_1, metals_2)
 
 addOresToBiome("data/biome/vault.xml", ore_vault, metals_vault_1, metals_vault_2)
 
-addOresToBiome("data/biome/crypt.xml", ore_types, metals_1, metals_2) --add a ton of stuff here 
+addOresToBiome("data/biome/crypt.xml", ore_crypt, metals_1, metals_2)
 
 
 
