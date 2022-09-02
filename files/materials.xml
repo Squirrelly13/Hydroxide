@@ -114,33 +114,6 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData> --sulphiric water, not too big a deal but its neat. 
-	
-
-  <CellData
-	name="plasma_fading"
-	ui_name="$mat_plasma_fading"
-	burnable="0"
-	density="6.9"
-	cell_type="liquid"
-	wang_color="7734bfff"
-	gfx_glow="254"
-	generates_smoke="0"
-	liquid_gravity="1.0"
-	liquid_sand="0"
-	liquid_stains="0"
-	liquid_stains_self="1"
-	audio_materialaudio_type="MAGICAL" 
-	on_fire="0"
-	requires_oxygen="0"
-	temperature_of_fire="10"  
-	lifetime="1200"
-	>
-	<StatusEffects>
-		<Ingestion>
-			<StatusEffect type="FOOD_POISONING" amount="0.3" />
-		</Ingestion>
-	</StatusEffects>
-  </CellData> -- magical liquid override, tags in init.lua
 
  <CellData
 	name="hydroxide_gas"
@@ -2951,30 +2924,4 @@
 		</ExplosionConfig>
 	</CellData>
 	
-	<CellData
-		name="chargeGas"
-		ui_name="Charged Gas"
-		tags="[gas]"
-		burnable="0"
-		density="2.1"
-		cell_type="gas"
-		wang_color="9a2E534"
-		liquid_gravity="0.1"
-		liquid_sand="0"
-		on_fire="0"
-		requires_oxygen="0"
-		temperature_of_fire="60" 
-		gfx_glow="150" 
-		>
-		<Graphics
-			texture_file="mods/Hydroxide/files/gfx/materials_gfx/zap.png"
-		>
-		</Graphics>
-		<StatusEffects>
-			<Stains>
-				<StatusEffect type="AA_STATIC_CHARGE" />
-			</Stains>
-		</StatusEffects>
-	</CellData>
-
 </Materials>

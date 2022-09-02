@@ -835,7 +835,7 @@
 	--------------------
 	
 	<Reaction probability="50"
-		input_cell1="devouringMoss"		input_cell2="plasma_fading"
+		input_cell1="devouringMoss"		input_cell2="AA_MAT_NEUTRAL_POTION"
 		output_cell1="AA_CLONE"			output_cell2="smoke"
 		blob_radius1="6"
 	>
@@ -1496,8 +1496,8 @@
 	</Reaction>
 	
 	<Reaction probability="60"
-	input_cell1="plasma_fading"		input_cell2="[sand_metal]"
-	output_cell1="sliceLiquid"			output_cell2="smoke"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="[sand_metal]"
+	output_cell1="sliceLiquid"				output_cell2="smoke"
 	blob_radius1="2"
 	>
 	</Reaction>
@@ -1742,84 +1742,45 @@
 	>
 	</Reaction> --sulphiric water evaporates to sulphur
 
-	--------------------------------------
-	--magical liquid is magical catalyst--
-	--------------------------------------
+	---------------------
+	--a few new recipes--
+	---------------------
 
 	<Reaction probability="25"
-	input_cell1="plasma_fading"			input_cell2="sand_surface"
-	output_cell1="magic_liquid_invisibility"	output_cell2="rainbow_gas"		
+	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="sand"
+	output_cell1="magic_liquid_invisibility"	output_cell2="smoke"
+	blob_radius1="3"
 	>
 	</Reaction> -- sand to invisiblium
-
-	<Reaction probability="25"
-	input_cell1="plasma_fading"			input_cell2="sand"
-	output_cell1="magic_liquid_invisibility"	output_cell2="rainbow_gas"
-	>
-	</Reaction> -- sand to invisiblium
-
-	<Reaction probability="75"
-	input_cell1="plasma_fading"			input_cell2="vomit"
-	output_cell1="magic_liquid_random_polymorph"	output_cell2="rainbow_gas"
-	blob_radius1="10"
-	>
-	</Reaction> --lmao dont eat this shit
-	
-	<Reaction probability="15"
-	input_cell1="plasma_fading"	input_cell2="air"
-	output_cell1="air"		output_cell2="air"
-	>
-	</Reaction> -- fades
-
-	<Reaction probability="16"
-	input_cell1="plasma_fading"			input_cell2="snow"
-	output_cell1="magic_liquid_teleportation"	output_cell2="rainbow_gas"
-	blob_radius1="4"
-	>
-	</Reaction> -- teleportatium from snow
-
-	<Reaction probability="14"
-	input_cell1="plasma_fading"			input_cell2="snow_sticky"
-	output_cell1="magic_liquid_teleportation"	output_cell2="rainbow_gas"
-	blob_radius1="4"
-	>
-	</Reaction> -- teleportatium from snow
-	
-	<Reaction probability="10"
-	input_cell1="plasma_fading"			input_cell2="snow_static"
-	output_cell1="magic_liquid_teleportation"	output_cell2="rainbow_gas"
-	blob_radius1="4"
-	>
-	</Reaction> -- teleportatium from snow
 
 	<Reaction probability="52"
-	input_cell1="plasma_fading"			input_cell2="bone"
-	output_cell1="material_darkness"	output_cell2="smoke"
+	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="bone"
+	output_cell1="material_darkness"			output_cell2="smoke"
 	blob_radius1="4"
 	>
 	</Reaction> -- bones to ominous liquid
 
 	<Reaction probability="52"
-	input_cell1="plasma_fading"			input_cell2="bone_box2d"
+	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="bone_box2d"
 	output_cell1="material_darkness"	output_cell2="smoke"
 	blob_radius1="4"
 	>
 	</Reaction> -- bones to ominous liquid
 	
 	<Reaction probability="24"
-	input_cell1="plasma_fading"			input_cell2="steelmoss_static"
+	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="steelmoss_static"
 	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"		
 	>
 	</Reaction> -- cloning in vault EXPERIMENTAL
 	
 	<Reaction probability="24"
-	input_cell1="plasma_fading"			input_cell2="steelpipe_static"
+	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="steelpipe_static"
 	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"	
 	>
 	</Reaction> -- cloning in vault EXPERIMENTAL
 	
 	<Reaction probability="30"
-	input_cell1="plasma_fading"			input_cell2="soil_dead"
+	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="soil_dead"
 	output_cell1="sand_herb_vapour"			output_cell2="AA_MAT_COMPOST"
 	blob_radius1="2"
 	blob_restrict_to_input_material1="1"
@@ -1827,7 +1788,7 @@
 	</Reaction> -- big plants in jungle
 	
 	<Reaction probability="3"
-	input_cell1="plasma_fading"				input_cell2="[bloom]"
+	input_cell1="AA_MAT_NEUTRAL_POTION"				input_cell2="[bloom]"
 	output_cell1="AA_MAT_BLOOM_GAS"			output_cell2="AA_MAT_COMPOST"
 	blob_radius1="5"
 	blob_restrict_to_input_material1="1"
@@ -1835,8 +1796,8 @@
 	</Reaction> --activates hella plants with bloomium
 	
 		<Reaction probability="50"
-	input_cell1="plasma_fading" 	input_cell2="magic_liquid_charm"
-	output_cell1="AA_LOVE"			output_cell2="smoke"
+	input_cell1="AA_MAT_NEUTRAL_POTION" 	input_cell2="magic_liquid_charm"
+	output_cell1="AA_LOVE"					output_cell2="smoke"
 	blob_radius1="3"
 	>
 	</Reaction> --create love from simple charm
