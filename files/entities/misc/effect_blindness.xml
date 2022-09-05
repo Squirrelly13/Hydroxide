@@ -24,31 +24,5 @@
     execute_on_removed="1"
     ></LuaComponent>--when effect wears off, set enemy aggro range back to normal
 	
-	<SpriteParticleEmitterComponent
-        sprite_file="data/particles/eye.xml"
-        lifetime="0.75"
-        randomize_lifetime.min="0.5"
-        randomize_lifetime.max="1.0"
-        emission_interval_min_frames="5"
-        emission_interval_max_frames="25"
-        count_min="1"
-        count_max="1"
-        additive="1"
-        emissive="1"
-        sprite_random_rotation="0"
-        gravity.y="-5"
-        randomize_velocity.min_y="-10" 
-        randomize_velocity.max_y="10"
-        randomize_velocity.min_x="-10"  
-        randomize_velocity.max_x="10"
-        randomize_position.min_x="-250"
-		randomize_position.max_x="250"
-		randomize_position.min_y="-250"
-		randomize_position.max_y="250"
-		velocity_slowdown="0.5"
-        randomize_animation_speed_coeff.min="0.667"  
-        randomize_animation_speed_coeff.max="1.0" 
-        >
-    </SpriteParticleEmitterComponent>
 	
 </Entity>

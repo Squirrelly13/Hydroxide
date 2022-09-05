@@ -9,7 +9,6 @@ starterpotions = {
 	{	probability = 0.800, "blood"},
 	{	probability = 0.700, "grease"},
 	{	probability = 0.100, "devouringMoss"},
-	{	probability = 0.800, "sulphiricWater"},
 	{	probability = 0.600, "sparkLiquid"},
 	{	probability = 0.600, "sliceLiquid"},
 	{	probability = 0.600, "gliterringLiquid"},

@@ -3,16 +3,6 @@ table.insert(materials_standard, {
 	cost=250,
 });
 
-table.insert(materials_standard, {
-	material="sulphiricWater",
-	cost=150,
-});
-
-table.insert(materials_standard, {
-	material="plasma_fading",
-	cost=200,
-});
-
 table.insert(materials_magic, {
     material="AA_MAT_DARKMATTER",
     cost=500,

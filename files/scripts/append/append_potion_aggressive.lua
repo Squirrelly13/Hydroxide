@@ -4,16 +4,10 @@ table.insert(potions, {
 });
 
 table.insert(potions, {
-	material="plasma_fading",
-	cost=400,
-});
-
-table.insert(potions, {
     material="AA_MAT_HITSELF",
     cost=500,
 	percentage=0.5
 });
-
 
 table.insert(potions, {
     material="AA_MAT_HUNGRY_SLIME",

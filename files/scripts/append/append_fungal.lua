@@ -50,10 +50,7 @@ table.insert(materials_from, {
 		probability = 0.4,
 		materials 	= {"AA_MAT_POTION_GAS"},
 	});
-table.insert(materials_to, {
-		probability = 0.9,	
-		material 	= "sulphiricWater",	
-	});
+
 table.insert(materials_to, {
 		probability = 0.01,
 		material 	= "antimatter_gas",
@@ -67,7 +64,7 @@ table.insert(materials_to, {
 		material = "potionBlindness",
 	});
 table.insert(materials_from, {
-		probability = 0.8,
+		probability = 0.6,
 		materials = { "potionBlindness", "magic_liquid_invisibility"},
 	});
 table.insert(materials_from, {
@@ -165,10 +162,6 @@ table.insert(materials_to, {
 table.insert(materials_to, {
 		probability = 0.4,
 		material	= "explodePlayer",
-	});
-table.insert(materials_to, {
-		probability = 0.4,
-		material	= "liquid_projectile_trail",
 	});
 table.insert(materials_to, {
 		probability = 0.5,

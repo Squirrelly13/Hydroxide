@@ -58,7 +58,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_2_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "oil", "coal", "radioactive_liquid", "grease", "plasma_fading", "plasma_fading", "sulphiricWater", "sulphiricWater", "squirrellymorphine"  } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "oil", "coal", "radioactive_liquid", "grease", "plasma_fading", "plasma_fading", "squirrellymorphine"  } }
 });
 
 table.insert(g_oiltank, {
@@ -67,7 +67,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_3_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "water", "coal", "radioactive_liquid", "magic_liquid_teleportation", "explodePlayer", "grease", "grease","sliceLiquid", "sulphiricWater", "lightningPowder" } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "water", "coal", "radioactive_liquid", "magic_liquid_teleportation", "explodePlayer", "grease", "grease","sliceLiquid", "lightningPowder" } }
 });
 
 table.insert(g_oiltank, {
@@ -76,7 +76,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_4_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "radiationWaste", "grease", "sliceLiquid", "AA_ICEFIRE", "sulphiricWater", "squirrellymorphine", "lightningPowder"} }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "radiationWaste", "grease", "sliceLiquid", "AA_ICEFIRE", "squirrellymorphine", "lightningPowder"} }
 });
 
 table.insert(g_oiltank, {
@@ -85,7 +85,7 @@ table.insert(g_oiltank, {
 		visual_file		= "",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "radiationWaste", "sulphiricWater", "sulphiricWater" } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "radiationWaste" } }
 });
 
 

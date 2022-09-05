@@ -23,13 +23,13 @@ ore_types = {
 	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_toxic.xml",			},
 	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_crystals.xml"		},
 	{	probability = 0.100, "mods/Hydroxide/files/oreGen/ores_concrete.xml",		},
-	{	probability = 0.060, "mods/Hydroxide/files/oreGen/ores_radioactive.xml",	},
 	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic_ice.xml",		},
 	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
 	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
 	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_lava.xml"			},
 	
-	{	probability = 0.010, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 			},
+	{	probability = 0.100, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 			},
 }
 
 metals_1 = {
@@ -39,6 +39,8 @@ metals_1 = {
 	{	probability = 0.600, "metals_silver1"	},
 	{	probability = 1.000, "metals_brass1"	},
 	
+	{	probability = 0.400, "metals_shock1"	},
+	
 }
 
 metals_2 = {
@@ -47,15 +49,19 @@ metals_2 = {
 	{	probability = 0.900, "metals_preskite2"	},
 	{	probability = 0.700, "metals_silver2"	},
 	{	probability = 1.000, "metals_brass2"	},
+	{	probability = 0.500, "metals_shock2"	},
+	
 }
 
 ore_coalmines = {
 	{	probability = 1.000, "random_metals",	},
-	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_toxic.xml",			},
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_toxic.xml",			},
 	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_crystals.xml"		},
-	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
-	{ 	probability = 0.100, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
+	{ 	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
 
+	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 			},
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_lava.xml"			},
 	{	probability = 0.300, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 }
 
@@ -80,9 +86,10 @@ ore_snowcave = {
 	{ 	probability = 0.700, "random_metals",	},
 	{ 	probability = 0.800, "mods/Hydroxide/files/oreGen/ores_toxic_ice.xml",		},
 	{ 	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_frozen_meat.xml",	},
+	
+	{	probability = 0.200, "mods/Hydroxide/files/oreGen/ores_lava.xml"			},
 }
 	
-
 ore_snowcastle = {
 	{	probability = 0.900, "mods/Hydroxide/files/oreGen/ores_concrete.xml" 		},
 	{	probability = 0.600, "mods/Hydroxide/files/oreGen/ores_toxic.xml"			},
@@ -91,6 +98,8 @@ ore_snowcastle = {
 	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_arborium.xml"		},
 	{	probability = 0.550, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 
+
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_lava.xml"			},
 
 	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
 }
@@ -114,6 +123,7 @@ ore_vault = {
 	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
 	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_radioactive.xml"		},
 
+	{	probability = 1.000, "mods/Hydroxide/files/oreGen/ores_lava.xml"			},
 	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
 }
 
@@ -123,6 +133,8 @@ metals_vault_1 = {
 	{	probability = 1.000, "metals_preskite1"	},
 	{	probability = 1.000, "metals_silver1"	},
 	{	probability = 1.000, "metals_brass1"	},
+	{	probability = 1.000, "metals_shock1"	},
+	
 }
 
 metals_vault_2 = {
@@ -132,6 +144,8 @@ metals_vault_2 = {
 	{	probability = 1.000, "metals_silver2"	},
 	{	probability = 1.000, "metals_brass2"	},
 	{	probability = 1.000, "metals_gold"		},
+	
+	{	probability = 1.000, "metals_shock2"	},
 }
 
 ore_fungiforest = {
@@ -140,9 +154,23 @@ ore_fungiforest = {
 }
 
 ore_crypt = {
-
-	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 		},
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_bloom.xml", 			},
+	{	probability = 0.500, "random_metals"	},	
+	{	probability = 0.400, "mods/Hydroxide/files/oreGen/ores_radioactive.xml",	},
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_crystals.xml"		},
 }
+
+ore_wizardcave = {
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_antimagic.xml"		},
+	{	probability = 0.500, "mods/Hydroxide/files/oreGen/ores_toxic.xml"			},	
+	{	probability = 0.700, "mods/Hydroxide/files/oreGen/ores_concrete.xml"		},
+	{	probability = 0.400, "random_metals"	},
+}
+
+ore_sandcave = {
+	{	probability = 1.000, "random_metals"	},
+}
+
 
 function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 
@@ -183,6 +211,8 @@ addOresToBiome("data/biome/coalmine_alt.xml", ore_coalmines, metals_1, metals_2)
 addOresToBiome("data/biome/excavationsite.xml", ore_excavationsite, metals_1, metals_excavationsite) 
 
 addOresToBiome("data/biome/snowcave.xml", ore_snowcave, metals_1, metals_2)
+addOresToBiome("data/biome/winter.xml", ore_snowcave, metals_1, metals_2)
+addOresToBiome("data/biome/winter_caves.xml", ore_snowcave, metals_1, metals_2)
 
 addOresToBiome("data/biome/snowcastle.xml", ore_snowcastle, metals_1, metals_2)
 
@@ -194,9 +224,21 @@ addOresToBiome("data/biome/vault.xml", ore_vault, metals_vault_1, metals_vault_2
 
 addOresToBiome("data/biome/crypt.xml", ore_crypt, metals_1, metals_2)
 
+addOresToBiome("data/biome/pyramid.xml", ore_crypt, metals_1, metals_2)
+addOresToBiome("data/biome/pyramid_entrance.xml", ore_crypt, metals_1, metals_2)
+addOresToBiome("data/biome/pyramid_hallway.xml", ore_crypt, metals_1, metals_2)
+addOresToBiome("data/biome/pyramid_left.xml", ore_crypt, metals_1, metals_2)
+addOresToBiome("data/biome/pyramid_right.xml", ore_crypt, metals_1, metals_2)
+addOresToBiome("data/biome/pyramid_top.xml", ore_crypt, metals_1, metals_2)
+
+addOresToBiome("data/biome/wizardcave.xml", ore_wizardcave, metals_1, metals_2)
+addOresToBiome("data/biome/wandcave.xml", ore_wizardcave, metals_1, metals_2)
 
 
+addOresToBiome("data/biome/sandcave.xml", ore_sandcave, metals_vault_1, metals_vault_2)
 
+
+addOresToBiome("data/biome/the_end.xml", ore_vault, metals_vault_1, metals_vault_2)
 
 addOresToBiome("data/biome/fungiforest.xml", ore_fungiforest, metals_1, metals_2)
 

@@ -6,7 +6,7 @@ local pos_x, pos_y = EntityGetTransform( entity_id )
 local convertcomponents = EntityGetComponent( entity_id, "MagicConvertMaterialComponent" )
 
 SetRandomSeed( pos_x + 436, pos_y - 3252 )
-local material_options = { "water", "oil", "lava", "acid", "radioactive_liquid", "slime", "sand", "alcohol", "blood", "snow", "blood_worm", "blood_fungi", "burning_powder", "honey", "fungi",   "sulphiricWater",   "rice" }
+local material_options = { "water", "oil", "lava", "acid", "radioactive_liquid", "slime", "sand", "alcohol", "blood", "snow", "blood_worm", "blood_fungi", "burning_powder", "honey", "fungi",    "rice" }
 local material_options_rare = { "acid", "magic_liquid_teleportation", "magic_liquid_polymorph", "magic_liquid_random_polymorph", "magic_liquid_berserk", "magic_liquid_charm", "magic_liquid_invisibility", "diamond", "plasma_fading", "potionBlindness", "methane", "sparkLiquid", "sliceLiquid", "glitteringLiquid", "blastPowder", "AA_MAT_ARBORIUM", "AA_LIQUID_ROCK", "AA_MAT_POTION_GAS", "fireStarter", "brass", "silver", "shock_powder" }
 local rare = false
 

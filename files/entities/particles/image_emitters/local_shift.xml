@@ -1,5 +1,5 @@
 <Entity>
-
+	
   	<ParticleEmitterComponent 
 		emitted_material_name="fungi"
 		gravity.y="0.0"
@@ -12,7 +12,7 @@
 		area_circle_radius.min="0"
 		area_circle_radius.max="0"
 		cosmetic_force_create="0"
-		airflow_force="0.251"
+		airflow_force="0.101"
 		airflow_time="1.01"
 		airflow_scale="0.05"
 		emission_interval_min_frames="1"

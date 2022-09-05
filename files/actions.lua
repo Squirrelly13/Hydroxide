@@ -42,12 +42,14 @@ table.insert( actions,
 	sprite		= "mods/Hydroxide/files/actions/local_shift.png",
 	related_projectiles = {"mods/Hydroxide/files/entities/projectiles/local_shift.xml"},
 	type 		= ACTION_TYPE_PROJECTILE,
-	spawn_level                       = "2,3,4,5,6", -- CRUMBLING_EARTH
-	spawn_probability                 = "0.6,0.6,0.6,0.6,0.6", -- CRUMBLING_EARTH
+	spawn_level                       = "2,3,4,5,6", -- LOCAL_SHIFT
+	spawn_probability                 = "0.6,0.6,0.6,0.6,0.6", -- LOCAL_SHIFT
 	price = 400,
 	mana = 260,
-	max_uses 	= 3,
+	max_uses 	= 10,
 	action		= function()
 		add_projectile("mods/Hydroxide/files/entities/projectiles/local_shift.xml")
+		c.fire_rate_wait    = c.fire_rate_wait + 0.7
+        current_reload_time = current_reload_time + 1.0
 	end,
 });

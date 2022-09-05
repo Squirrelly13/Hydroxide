@@ -14,7 +14,7 @@ local shaking = false
 
 for i, child in ipairs(children) do
 
-	local name= EntityGetName(child)
+	local name = EntityGetName(child)
 	
 	if name == "radiationEffect" then
 		count = count + 1
@@ -27,7 +27,12 @@ for i, child in ipairs(children) do
 		
 	elseif name == "mutagenAiming" then
 		aiming = true
+		
+	elseif name == "mutagenShaking" then
+		shaking = true
+		
 	end
+	
 	
 	
 end

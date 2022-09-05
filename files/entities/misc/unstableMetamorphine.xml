@@ -302,18 +302,6 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="sulphiricWater"
-      steps_per_frame="48"
-      to_material="sulphiricWater"
-      clean_stains="0"
-      is_circle="1"
-      radius="22" 
-	  loop="1"
-	  >
-    </MagicConvertMaterialComponent>
-
-<MagicConvertMaterialComponent
-      kill_when_finished="0"
       from_material="rice"
       steps_per_frame="48"
       to_material="rice"

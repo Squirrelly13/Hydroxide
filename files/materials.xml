@@ -91,29 +91,6 @@
 	</Graphics>
   </CellData> -- spreads over rock and ground aggressively. Very fun!
   
-  
-  <CellData
-	_parent="water"
-	name="sulphiricWater"
-	ui_name="Sulphiric Water"
-	tags="[liquid],[corrodible],[water],[soluble],[liquid_common]"
-	density="4.06"
-	wang_color="902F654C"
-	liquid_stains="3"
-	>
-	<Graphics
-		texture_file="mods/Hydroxide/files/gfx/materials_gfx/sulphiricWater.png"
-	>
-	</Graphics>
-	<StatusEffects>
-		<Stains>
-			<StatusEffect type="WET" />
-		</Stains>
-		<Ingestion>
-			<StatusEffect type="POISONED" amount="0.05" />
-		</Ingestion>
-	</StatusEffects>
-  </CellData> --sulphiric water, not too big a deal but its neat. 
 
  <CellData
 	name="hydroxide_gas"
@@ -2126,10 +2103,10 @@
 		
 	<CellData
 	name="alchemyPowder"
-	ui_name="Alchemy Dust"
+	ui_name="Alchemy Powder"
 	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
-	density="1.5"
+	density="4.5"
 	cell_type="liquid"
 	wang_color="ff1b5aff"
 	generates_smoke="0"
@@ -2844,7 +2821,7 @@
 		burnable="0"
 		density="5.7"
 		cell_type="liquid"
-		wang_color="8084c21A"
+		wang_color="8084221A"
 		generates_smoke="0"
 		liquid_gravity="0.4"
 		liquid_sand="0"
