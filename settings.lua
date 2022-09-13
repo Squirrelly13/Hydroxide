@@ -32,19 +32,54 @@ mod_settings_version = 1 -- This is a magic global that can be used to migrate s
 mod_settings = 
 {
 	{
-		id = "_",
+		category_id = "CC_SETTINGS",
 		ui_name = "Squirrelly's Chemical Curiosities",
 		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy",
-		not_setting = true,
-	},
-	--[[{
-		id = "ore_spawn",
-		ui_name = "Spawn Ores",
-		ui_description = "(this setting doesnt affect anything yet) Spawn Various ores throughout the world!",
-		value_default = "on",
-		values = { {"off","DISABLED"}, {"on","ENABLED"} },
-		scope = MOD_SETTING_SCOPE_NEW_GAME,
-	},]]--
+		settings = {
+			{
+				id = "cc_spells",
+				ui_name = "Load Spells",
+				ui_description = "Allow for Chemical Curiosities to add spells to the game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "cc_items",
+				ui_name = "Spawn Items",
+				ui_description = "Allow for Chemical Curiosities to add magical items to the game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "cc_flasks",
+				ui_name = "Spawn Potions",
+				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "cc_pixelscenes",
+				ui_name = "Spawn Structures",
+				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "cc_props",
+				ui_name = "Spawn Props",
+				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
+				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "cc_ores",
+				ui_name = "Spawn Ores",
+				ui_description = "Spawn Various ores throughout the world!",
+				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+		}
+	}
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.

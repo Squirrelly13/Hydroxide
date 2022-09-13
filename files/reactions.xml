@@ -67,6 +67,13 @@
 	>
 	</Reaction>
 	
+	<Reaction probability="15"
+	input_cell1="sulphur"			input_cell2="coal"
+	output_cell1="gunpowder_tnt"	output_cell2="gunpowder_tnt"
+	blob_radius1="2"				blob_radius2="2"
+	>
+	</Reaction>
+	
 	<Reaction probability="20"
 	input_cell1="cobalt"				input_cell2="grease"
 	output_cell1="cobalt_ingredient"	output_cell2="cobalt_ingredient"

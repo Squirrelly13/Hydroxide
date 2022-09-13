@@ -1,3 +1,4 @@
+if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
 table.insert(g_pixel_scene_01, {
 	prob			= 1.0,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/snowcastle/alcohol_pipe.png",
@@ -29,6 +30,8 @@ table.insert(g_pixel_scene_02, {
 	background_file	= "",
 	is_unique		= 0
 	});
+end
+if ModSettingGet("Hydroxide.cc_props") == "on" then
 	
 table.insert(g_props, {
 	prob		= 0.4,
@@ -45,3 +48,4 @@ table.insert(g_props, {
 	offset_y	= 0,
 	entity	= "mods/Hydroxide/files/entities/props/physics_bloomium_tank.xml"
 });
+end

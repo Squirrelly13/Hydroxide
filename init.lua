@@ -36,10 +36,15 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	local x = ProceduralRandom(0,0)
 	print( "===================================== random " .. tostring(x) )
 	
-	if GameHasFlagRun("Squirrelly_Ore_generated") == false then
-		dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
-		print("Chemical Curiosities oreGen complete")
-		GameAddFlagRun("Squirrelly_Ore_generated")
+	
+	if ModSettingGet("Hydroxide.cc_ores") == "on" then 
+	
+		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
+			dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
+			print("Chemical Curiosities oreGen complete")
+			GameAddFlagRun("Squirrelly_Ore_generated")
+		end
+		
 	end
 end
 
@@ -108,19 +113,28 @@ register_translation("item_vial_with_material_description", "A glass vial contai
 ]]
 
 -- This code runs when all mods' filesystems are registered
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/actions.lua" ) -- adds spells, really just sea of methane
-
+if ModSettingGet("Hydroxide.cc_spells") == "on" then 
+	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/actions.lua" ) -- adds spells, really just sea of methane
+end
 
 
 ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will override some magic numbers using the specified file
 --no idea what magic numbers are, but this does somethin to em
 
 
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells 
+--ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells ( deprecated )
+ 
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/scripts/append/append_status_list.lua" ) --new status effects
-ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/scripts/append/append_potion.lua" ) -- potions with new materials
-ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/scripts/append/append_powders.lua" ) -- powder bags spawn with new materials
-ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/scripts/append/append_potion_aggressive.lua" ) --for alchemist enemy
+
+if ModSettingGet("Hydroxide.cc_flasks") == "on" then
+	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/scripts/append/append_potion.lua" ) -- potions with new materials
+	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/scripts/append/append_powders.lua" ) -- powder bags spawn with new materials
+	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/scripts/append/append_potion_aggressive.lua" ) --for alchemist enemy
+	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/scripts/append/append_potion_starting.lua")
+end
+
+
+
 ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/scripts/append/append_gun_extra_modifiers.lua" ) --extra modifiers?
 
 ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
@@ -131,7 +145,10 @@ ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/sc
 ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
 ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_vault.lua" ) --new structures in the vault
 
-ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
+if ModSettingGet("Hydroxide.cc_items") == "on" then
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
+end
+
 ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/scripts/append/append_fungal.lua" ) --FUngal shifts
 --appends
 
@@ -142,8 +159,6 @@ if (ModIsEnabled("copis_things")) then
 
 	
 end --copis chemical curiosity compatibility combo
-
-ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/scripts/append/append_potion_starting.lua")
 
 
 -- this code adds tags to preexisting materials, its good for compatibility--
@@ -180,8 +195,10 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
     EntitySetDamageFromMaterial( player_entity, "hydroxide", 0.005 )
 	
 	  if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
-
-        EntityLoad("mods/Hydroxide/files/pixel_scenes/music_shrine.xml", 6200, 5500)  --load the musical shrine
+		if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+			EntityLoad("mods/Hydroxide/files/pixel_scenes/music_shrine.xml", 6200, 5500)  --load the musical shrine
+		end
+		
 		EntityLoad("mods/Hydroxide/files/pixel_scenes/signature.xml", -1950, 250)  --load my cute stupid lil signature :) 
 		
         GameAddFlagRun("squirrellys_music_altar_is_spawned")  --this tells the game to add this flag, the previous "if" statement won't spawn it every time you load the save now

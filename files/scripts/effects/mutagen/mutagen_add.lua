@@ -11,6 +11,7 @@ local leggy = false
 local vomit = false
 local aiming = false
 local shaking = false
+local icon = false
 
 for i, child in ipairs(children) do
 
@@ -18,6 +19,9 @@ for i, child in ipairs(children) do
 	
 	if name == "radiationEffect" then
 		count = count + 1
+		
+	elseif name == "radiationIcon" then
+		icon = true
 	
 	elseif name == "mutagenLeggy" then
 		leggy = true
@@ -30,7 +34,6 @@ for i, child in ipairs(children) do
 		
 	elseif name == "mutagenShaking" then
 		shaking = true
-		
 	end
 	
 	
@@ -39,6 +42,9 @@ end
 
 print("Radiation effect count: " .. count )
 
+if not icon then
+	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/entities/effects/mutagens/mutagen_icon.xml", x,y ))
+end
 
 if count >= 3 then
 	if not vomit then

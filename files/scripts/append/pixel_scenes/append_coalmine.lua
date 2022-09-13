@@ -1,3 +1,4 @@
+if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
 table.insert(g_pixel_scene_01, {
 	prob			= 0.9,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/coalmine/shrinekindling.png",
@@ -88,12 +89,13 @@ table.insert(g_oiltank, {
 		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "radiationWaste" } }
 });
 
-
+end
 --[[ lanterns ]]--
-
+if ModSettingGet("Hydroxide.cc_props") == "on" then
 table.insert(g_lamp, {
 	prob   		= 0.7,
 	min_count	= 1,
 	max_count	= 1,
 	entity 	= "mods/Hydroxide/files/entities/props/lanterns/lantern_small_methane.xml",
 });
+end

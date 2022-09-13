@@ -244,3 +244,21 @@ table.insert(status_effects, {
 	effect_entity="mods/Hydroxide/files/entities/effects/hydroxide.xml",
 	is_harmful=true,
 });
+
+table.insert(status_effects, {
+	id="VOMIT_SPELLS",
+	ui_name="Food Poisoning",
+	ui_description="This was a terrible snack",
+	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
+	effect_entity="mods/Hydroxide/files/entities/effects/pandoriumvomit.xml",
+	is_harmful=true,
+});
+
+table.insert(status_effects, {
+	id="VOMIT_SPELLS_UNSTABLE",
+	ui_name="Food Poisoning",
+	ui_description="This was a terrible meal",
+	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
+	effect_entity="mods/Hydroxide/files/entities/effects/unstablepandoriumvomit.xml",
+	is_harmful=true,
+});

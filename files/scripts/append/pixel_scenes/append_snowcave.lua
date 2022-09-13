@@ -1,3 +1,4 @@
+if ModSettingGet("Hydroxide.cc_props") == "on" then
 table.insert(g_props, {
 	prob 		= 0.3,
 	min_count	= 1,
@@ -28,3 +29,4 @@ table.insert(g_lamp, {
 	max_count	= 1,
 	entity 	= "mods/Hydroxide/files/entities/props/lanterns/lantern_small_methane.xml",
 });
+end
