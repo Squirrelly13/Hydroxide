@@ -6,13 +6,13 @@ local pos_x, pos_y = EntityGetTransform( entity_id )
 local convertcomponents = EntityGetComponent( entity_id, "MagicConvertMaterialComponent" )
 
 SetRandomSeed( pos_x + 436, pos_y - 3252 )
-local material_options = { "blastPowder", "fireStarter", "lightningPowder" }
+local material_options = { "blastPowder", "fireStarter", "lightningPowder", "lightningPowder", "blastPowder"}
 local material_options_rare = { "explodePlayer", "glitteringLiquid" }
 local rare = false
 
 local rnd = Random( 1, 100 )
 
-if ( rnd > 98 ) then
+if ( rnd > 66 ) then
 	rare = true
 end
 

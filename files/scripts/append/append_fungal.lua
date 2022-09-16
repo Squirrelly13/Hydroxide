@@ -211,3 +211,9 @@ table.insert(materials_from, {
 		probability = 0.3,
 		materials 	= {"AA_MAT_ASH"},
 	});
+
+table.insert(materials_to, {
+		probability = 0.65,
+		materials 	= "ferrineSkin",
+	});
+		

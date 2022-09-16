@@ -10,7 +10,7 @@ local options =
 	{ probability = 1.0000, "silver"},
 	{ probability = 1.0000, "metal_sand"},
 	{ probability = 1.0000, "steel_sand"},
-	{ probability = 0.0010, "gold"},
+	{ probability = 0.0100, "gold"},
 }
 
 local entity = GetUpdatedEntityID();

@@ -53,6 +53,7 @@ local options =
 	{ probability = 0.1000, "increaseMaxHP"},
 	{ probability = 0.3000, "AA_MAT_COMPOST"},
 	{ probability = 0.1000, "AA_MAT_BLOOM_MAGIC"},
+	{ probability = 0.8000, "ferrineSkin"},
 	
 	{ probability = 0.0600, "wand_tinker"},
 	{ probability = 0.2000, "sulphur"},

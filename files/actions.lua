@@ -55,8 +55,8 @@ table.insert( actions, {
 
 table.insert( actions,  {
         id                  = "METAL_SEASONING",
-        name                = "Metal Dust",
-        description         = "Transmute powdered metal from nothing",
+        name                = "Chunk of Metal",
+        description         = "Summon a pile of metal powder",
         sprite              = "mods/Hydroxide/files/actions/metal_seasoning.png",
         related_projectiles = { "mods/Hydroxide/files/actions/metal_seasoning.xml" },
         type                = ACTION_TYPE_MATERIAL,
@@ -173,7 +173,7 @@ table.insert( actions, {
 table.insert( actions,     {
         id                  = "URANIUMBALL",
         name                = "Chunk of Uranium",
-        description         = "Stand back kid",
+        description         = "A spherical 6.2-kilogram (14 lb) subcritical mass of uranium-235",
         sprite              = "mods/Hydroxide/files/actions/uraniumball.png",
         related_projectiles = { "mods/Hydroxide/files/actions/uraniumball.xml" },
         type                = ACTION_TYPE_MATERIAL,
@@ -281,7 +281,7 @@ table.insert( actions, {
 		id          = "POTION_TO_GAS",
 		name 		= "Potions to Gas",
 		description = "Causes nearby potions to evaporate into gas",
-		sprite 		= "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
+		sprite 		= "mods/Hydroxide/files/actions/potion_to_gas.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/actions/potion_to_gas.xml", "data/entities/particles/tinyspark_orange.xml" },
 		type 		= ACTION_TYPE_MODIFIER,
@@ -294,5 +294,45 @@ table.insert( actions, {
 			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/actions/potion_to_gas.xml,data/entities/particles/tinyspark_orange.xml,"
 			c.fire_rate_wait = c.fire_rate_wait + 45
 			draw_actions( 1, true )
+		end,
+	});
+	
+table.insert( actions, {
+		id          = "FIRE_TO_GREASE",
+		name 		= "Fire Enhancer",
+		description = "Causes nearby fires to erupt violently",
+		sprite 		= "mods/Hydroxide/files/actions/fire_to_grease.png",
+		sprite_unidentified = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
+		related_extra_entities = { "mods/Hydroxide/files/actions/fire_to_grease.xml", "data/entities/particles/tinyspark_red.xml" },
+		type 		= ACTION_TYPE_MODIFIER,
+		spawn_level                       = "2,3,4", -- FIRE_TO_GREASE
+		spawn_probability                 = "0.8,0.8,0.9", -- FIRE_TO_GREASE
+		price = 100,
+		mana = 25,
+		max_uses = 25,
+		action 		= function() 
+			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/actions/fire_to_grease.xml,data/entities/particles/tinyspark_red.xml,"
+			c.fire_rate_wait = c.fire_rate_wait + 6
+			draw_actions( 1, true )
+		end,
+	});
+	
+	
+table.insert( actions, {
+		id          = "CLOUD_GUNPOWDER",
+		name 		= "Gunpowder Cloud",
+		description = ".",
+		sprite 		= "mods/Hydroxide/files/actions/cloud_gunpowder.png",
+		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
+		related_projectiles	= {"mods/Hydroxide/files/actions/cloud_gunpowder.xml"},
+		type 		= ACTION_TYPE_STATIC_PROJECTILE,
+		spawn_level                       = "1,2,3,4,5,7", -- CLOUD_WATER
+		spawn_probability                 = "0.4,0.2,0.3,0.4,0.5,0.8", -- CLOUD_WATER
+		price = 200,
+		mana = 50,
+		max_uses = 3,
+		action 		= function()
+			add_projectile("mods/Hydroxide/files/actions/cloud_gunpowder.xml")
+			c.fire_rate_wait = c.fire_rate_wait + 15
 		end,
 	});

@@ -164,12 +164,17 @@ table.insert(materials_magic, {
 
 table.insert(materials_standard, {
 	material="cobalt_ingredient",
-	cost="120",
+	cost=120,
 });
 
 table.insert(materials_standard, {
 	material="iron_ingredient",
-	cost="120",
+	cost=120,
+});
+
+table.insert(materials_magic, {
+	material="ferrineSkin",
+	cost=350,
 });
 
 local old_init = init

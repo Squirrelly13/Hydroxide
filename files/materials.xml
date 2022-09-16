@@ -2,11 +2,6 @@
 	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
 	
 	--TODO make unstable metamorphine more procedural if possible
-		
-	--TODO Uranium Mutagens
-		--Leggy mutagen
-		--flightless mutagen
-		--	painless mutagen (morphine effect)
 	
  <CellData 
         name="hydroxide"
@@ -330,7 +325,7 @@
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
-	liquid_sprite_stain_shaken_drop_chance="3"
+	liquid_sprite_stain_shaken_drop_chance="5"
 	status_effects="INGESTION_METHANE"
 	lifetime="1600"
 	generates_flames="20"
@@ -2069,11 +2064,15 @@
 	name="explodePlayer"
 	ui_name="Agitine"
 	tags="[magic_liquid],[impure],[liquid],[corrodible]"
-	burnable="0"
+	burnable="1"
 	density="3.1"
 	wang_color="a8cf7a5c"
 	gfx_glow="2"
 	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="50"
+	autoignition_temperature="1"
+	hp="1000" 
 	cell_type="liquid"
 	liquid_gravity="2"
 	liquid_sand="0"
@@ -2081,6 +2080,16 @@
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
+	<ExplosionConfig 
+		damage="0.2"
+		cell_explosion_power="40"
+		cell_explosion_damage_required="20"
+		cell_explosion_radius_min="8"
+		explosion_sprite="data/particles/explosion_012.xml"
+		ray_energy="400000"
+		audio_event_name="explosions/gunpowder"
+		>
+	</ExplosionConfig>
 	<Graphics
 		texture_file="mods/Hydroxide/files/gfx/materials_gfx/Agitine.png"
 	>
@@ -2862,4 +2871,48 @@
 		</ExplosionConfig>
 	</CellData>
 	
+	<CellData
+		name="ferrineSkin"
+		ui_name="Persistine"
+		tags="[liquid],[magic_liquid],[impure],[water]"
+		burnable="0"
+		density="4.83"
+		cell_type="liquid"
+		wang_color="80afef08"
+		generates_smoke="0"
+		liquid_gravity="1.2"
+		liquid_sand="0"
+		gfx_glow="150"
+		on_fire="0"
+		requires_oxygen="0"
+		liquid_stains="2"
+		liquid_sprite_stain_shaken_drop_chance="10"
+		audio_materialaudio_type="MAGICAL" 
+		show_in_creative_mode="1"
+		>
+		<ParticleEffect
+			vel.y="17.14"
+			vel_random.min_y="-100"
+			vel_random.max_y="25.71"
+			lifetime.min="0"
+			gravity.y="-8.57"
+			render_on_grid="1"
+			draw_as_long="1"
+			friction="3.429"
+			probability="0.0518"
+			>
+		</ParticleEffect>
+		<Graphics
+			texture_file="mods/Hydroxide/files/gfx/materials_gfx/ironskin.png"
+			>
+		</Graphics>
+		<StatusEffects>
+			<Stains>
+				<StatusEffect type="IRONSKIN" />
+			</Stains>
+			<Ingestion>
+				<StatusEffect type="IRONSKIN" amount="0.15"/>
+			</Ingestion>
+		</StatusEffects>
+	</CellData>
 </Materials>

@@ -15,7 +15,7 @@ starterpotions = {
 	{	probability = 0.600, "methane"},
 	{	probability = 0.150, "AA_MAT_BLOOM_MAGIC"},
 	{	probability = 0.600, "AA_MAT_REPULTIUM"},
-	{	probability = 0.200, "AA_MAT_HUNGRY_SLIME"},
+	{	probability = 0.400, "AA_MAT_HUNGRY_SLIME"},
 	{	probability = 0.700, "AA_MAT_NEUTRAL_POTION"},
 	{	probability = 0.200, "AA_MAT_ARBORIUM"},
 	{	probability = 0.200, "AA_LIQUID_ROCK"},
@@ -25,6 +25,7 @@ starterpotions = {
 	{	probability = 0.050, "increaseMaxHP"},
 	{	probability = 0.300, "squirrellymorphine"},
 	{	probability = 0.500, "frozen_meat"},	
+	{	probability = 0.500, "ferrineSkin"},
 }
 
 magicpotions = { 

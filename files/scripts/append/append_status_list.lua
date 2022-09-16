@@ -262,3 +262,12 @@ table.insert(status_effects, {
 	effect_entity="mods/Hydroxide/files/entities/effects/unstablepandoriumvomit.xml",
 	is_harmful=true,
 });
+
+table.insert(status_effects, {
+	id="IRONSKIN",
+	ui_name="Resistance",
+	ui_description="You recieve less damage",
+	ui_icon="mods/Hydroxide/files/gfx/ui/ironskin.png",
+	effect_entity="mods/Hydroxide/files/entities/effects/ironskin/ironskin.xml",
+	is_harmful=false,
+});

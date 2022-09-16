@@ -103,7 +103,7 @@ table.insert(potions, {
 
 table.insert(potions, {
     material="rock_hard",
-	cost=750,
+	cost=450,
 });
 
 table.insert(potions, {

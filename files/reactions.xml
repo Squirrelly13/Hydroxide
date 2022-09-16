@@ -87,6 +87,22 @@
 	>
 	</Reaction>
 	
+	<Reaction probability="20"
+	input_cell1="iron_ingredient"	input_cell2="preskite"
+	output_cell1="ferrineSkin"		output_cell2="smoke"
+	blob_radius1="2"
+	>
+	</Reaction>
+	
+	---------------
+	---persistine--
+	---------------
+	
+	<Reaction probability="20"
+	input_cell1="[fire]" 		input_cell2="ferrineSkin" input_cell3="ferrineSkin"
+	output_cell1="[fire]" 		output_cell2="iron" output_cell3="smoke" >
+	</Reaction>
+	
 	----------
 	--tweaks--
 	----------
