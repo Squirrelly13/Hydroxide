@@ -1293,18 +1293,19 @@
 	>
 	</Reaction> -- bloom drips
 	
-	<Reaction probability="80"
-  	input_cell1="AA_MAT_BLOOM_ROOF_DEAD" 	input_cell2="air" 
-  	output_cell1="AA_MAT_BLOOM_ROOF_DEAD"	output_cell2="AA_MAT_BLOOM_LIQUID"  
-	>
-	</Reaction> -- dead bloom roof drips still
-	
 	<Reaction probability="10"
   	input_cell1="AA_MAT_BLOOM_ROOF" 	input_cell2="[solid]" 
   	output_cell1="AA_MAT_BLOOM_ROOF_PLANT" 	output_cell2="AA_MAT_BLOOM_ROOF_DEAD" 
 	blob_radius1="3"
 	>
 	</Reaction> -- bloom roof dies or somethin
+
+	<Reaction probability="100"
+	input_cell1="AA_MAT_BLOOM" 				input_cell2="air"
+	output_cell1="AA_MAT_BLOOM_ROOF_DEAD"	output_cell2="air"
+	blob_radius1="3"
+	req_lifetime="120"
+	/>
 	
    <Reaction probability="80"
   	input_cell1="AA_MAT_BLOOM" 	input_cell2="fire" 
@@ -1383,12 +1384,6 @@
 	--methane gas--
 	---------------
 	
-	<Reaction probability="10"
-	input_cell1="frozen_meat"	input_cell2="air"
-	output_cell1="frozen_meat"	output_cell2="methane"
-	>
-	</Reaction>
-	
 	
 	<Reaction probability="1"
 	input_cell1="methane"	input_cell2="[fire]"
@@ -1427,31 +1422,7 @@
 	</Reaction>
 	
 	
-	-----------------------
-	--meat rots with snow--
-	-----------------------
-	
-	<Reaction probability="23"
-	input_cell1="snow" 		input_cell2="meat"
-	output_cell1="slush"	output_cell2="frozen_meat"
-	blob_radius2="3"
-	>
-	</Reaction>
-	
-	<Reaction probability="23"
-	input_cell1="snow_sticky" 	input_cell2="meat"
-	output_cell1="slush"		output_cell2="frozen_meat"
-	blob_radius2="3"
-	>
-	</Reaction>
-	
-	<Reaction probability="23"
-	input_cell1="snow_static" 	input_cell2="meat"
-	output_cell1="slush"		output_cell2="frozen_meat"
-	blob_radius2="3"
-	>
-	</Reaction>
-	
+
 
 	---------------------
 	--glittering liquid--
@@ -1709,6 +1680,7 @@
 	blob_restrict_to_input_material2="1"
 	>
 	</Reaction> --devour certain enemies
+
 
 	-------------------------------------------------------------------------
 	--water extinguishes fires

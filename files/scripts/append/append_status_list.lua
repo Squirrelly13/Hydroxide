@@ -128,7 +128,7 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="INGESTION_METHANE",
-	ui_name="Methane Poisioning",
+	ui_name="Methane Poisoning",
 	ui_description="Everything is hazy.",
 	ui_icon="mods/Hydroxide/files/gfx/ui/methane.png",
 	effect_entity="mods/Hydroxide/files/entities/effects/methane/methane.xml",

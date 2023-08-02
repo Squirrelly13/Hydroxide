@@ -37,7 +37,7 @@ metals_1 = {
 	{	probability = 1.000, "metals_iron1"		},
 	{	probability = 0.800, "metals_preskite1"	},
 	{	probability = 0.600, "metals_silver1"	},
-	{	probability = 1.000, "metals_brass1"	},
+	{	probability = 1.000, "metals_copper1"	},
 	
 	{	probability = 0.400, "metals_shock1"	},
 	
@@ -48,7 +48,7 @@ metals_2 = {
 	{	probability = 1.000, "metals_iron2"		},
 	{	probability = 0.900, "metals_preskite2"	},
 	{	probability = 0.700, "metals_silver2"	},
-	{	probability = 1.000, "metals_brass2"	},
+	{	probability = 1.000, "metals_copper2"	},
 	{	probability = 0.500, "metals_shock2"	},
 	
 }
@@ -78,7 +78,7 @@ metals_excavationsite = {
 	{	probability = 1.000, "metals_iron2",		},
 	{	probability = 0.600, "metals_preskite2",	},
 	{	probability = 0.400, "metals_silver2",	},
-	{	probability = 0.800, "metals_brass2",		},
+	{	probability = 0.800, "metals_copper2",		},
 	{	probability = 0.100, "metals_gold",		},
 }
 
@@ -132,7 +132,7 @@ metals_vault_1 = {
 	{	probability = 1.000, "metals_iron1"		},
 	{	probability = 1.000, "metals_preskite1"	},
 	{	probability = 1.000, "metals_silver1"	},
-	{	probability = 1.000, "metals_brass1"	},
+	{	probability = 1.000, "metals_copper1"	},
 	{	probability = 1.000, "metals_shock1"	},
 	
 }
@@ -142,7 +142,7 @@ metals_vault_2 = {
 	{	probability = 1.000, "metals_iron2"		},
 	{	probability = 1.000, "metals_preskite2"	},
 	{	probability = 1.000, "metals_silver2"	},
-	{	probability = 1.000, "metals_brass2"	},
+	{	probability = 1.000, "metals_copper2"	},
 	{	probability = 1.000, "metals_gold"		},
 	
 	{	probability = 1.000, "metals_shock2"	},

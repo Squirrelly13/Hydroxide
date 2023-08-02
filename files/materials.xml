@@ -321,7 +321,7 @@
 	burnable="1"
 	density="1"
 	cell_type="gas"
-	wang_color="a53b3c7f"
+	wang_color="a54b4c8f"
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
@@ -336,6 +336,9 @@
 	autoignition_temperature="20" 
 	show_in_creative_mode="1"
 	>
+	<Graphics
+	color="c5ab4c4f"
+	></Graphics>
 	</CellData> --lol, methane gas.
 	
 	<CellDataChild
@@ -2878,7 +2881,7 @@
 		burnable="0"
 		density="4.83"
 		cell_type="liquid"
-		wang_color="80afef08"
+		wang_color="80fabd6e"
 		generates_smoke="0"
 		liquid_gravity="1.2"
 		liquid_sand="0"

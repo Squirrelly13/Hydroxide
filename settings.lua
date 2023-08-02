@@ -78,6 +78,13 @@ mod_settings =
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
+			{
+				id = "cc_meat",
+				ui_name = "Freeze Meat",
+				ui_description = "Allow meat to freeze (youll still find already existing frozen meat)",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
 		}
 	}
 }

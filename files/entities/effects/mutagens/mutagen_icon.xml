@@ -11,4 +11,6 @@
 		>
 	</UIIconComponent>
 	
+	<LifetimeComponent lifetime="1500" />
+	
 </Entity>

@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_props") == "on" then
+if ModSettingGet("Hydroxide.cc_props") then
 table.insert(g_props, {
 	prob 		= 0.3,
 	min_count	= 1,
@@ -30,3 +30,12 @@ table.insert(g_lamp, {
 	entity 	= "mods/Hydroxide/files/entities/props/lanterns/lantern_small_methane.xml",
 });
 end
+
+if ModSettingGet("Hydroxide.cc_pixelscenes") then
+	table.insert(g_pixel_scene_01, {
+		prob 			= 0.5,
+		material_file	= "mods/Hydroxide/files/pixel_scenes/snowcave/pipeline.png",
+		visual_file 	= "mods/Hydroxide/files/pixel_scenes/snowcave/pipeline_visual.png",
+		background_file	= "mods/Hydroxide/files/pixel_scenes/snowcave/pipeline_background.png",
+		is_unique		= 0
+	})

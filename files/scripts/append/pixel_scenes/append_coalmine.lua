@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+if ModSettingGet("Hydroxide.cc_pixelscenes") then
 table.insert(g_pixel_scene_01, {
 	prob			= 0.9,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/coalmine/shrinekindling.png",
@@ -91,7 +91,7 @@ table.insert(g_oiltank, {
 
 end
 --[[ lanterns ]]--
-if ModSettingGet("Hydroxide.cc_props") == "on" then
+if ModSettingGet("Hydroxide.cc_props") then
 table.insert(g_lamp, {
 	prob   		= 0.7,
 	min_count	= 1,

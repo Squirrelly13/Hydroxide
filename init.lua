@@ -32,12 +32,37 @@ end
 
 ]]--
 
+
+function create_reaction(file, prob, in1, in2, out1, out2, blob1, blob2)
+	local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua") -- path to nxml.lua
+	local content = ModTextFileGetContent(file)
+	local xml = nxml.parse(content)
+	xml:add_child(nxml.parse([[
+	<Reaction
+	probability="]]		.. tostring(prob) .. [["
+	input_cell1="]] .. in1 	.. [["
+	input_cell2="]] .. in2  .. [["
+	output_cell1="]].. out1 .. [["
+	output_cell2="]].. out2 .. [["
+	blob_radius1="]].. blob1 ..[["
+	blob_radius2="]].. blob2 ..[["
+	]]
+	..
+	[[
+	></Reaction>
+	]]))
+	ModTextFileSetContent(file, tostring(xml))
+end
+
+
+
+
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 	local x = ProceduralRandom(0,0)
 	print( "===================================== random " .. tostring(x) )
 	
-	
-	if ModSettingGet("Hydroxide.cc_ores") == "on" then 
+	--[[
+	if ModSettingGet("Hydroxide.cc_ores") then 
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
@@ -46,11 +71,23 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 		
 	end
+	]]--
 end
 
 
+
+--[[
+if ModSettingGet("Hydroxide.cc_meat") then
+	create_reaction("mods/Hydroxide/files/reactions.xml", 23, "snow", "meat", "slush", "frozen_meat", 1, 3)
+	create_reaction("mods/Hydroxide/files/reactions.xml", 23, "snow_sticky", "meat", "slush", "frozen_meat", 1, 3)
+	create_reaction("mods/Hydroxide/files/reactions.xml", 23, "snow_static", "meat", "slush", "frozen_meat", 1, 3)	
+end
+]]--
+
 ModMaterialsFileAdd( "mods/Hydroxide/files/materials.xml" ) 
 ModMaterialsFileAdd( "mods/Hydroxide/files/reactions.xml" ) 
+	
+
 -- Adds all new materials and reactions. 
 -- This line is arguably the single most important line of code in the mod
 
@@ -113,7 +150,7 @@ register_translation("item_vial_with_material_description", "A glass vial contai
 ]]
 
 -- This code runs when all mods' filesystems are registered
-if ModSettingGet("Hydroxide.cc_spells") == "on" then 
+if ModSettingGet("Hydroxide.cc_spells") then 
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/actions.lua" ) -- adds spells, really just sea of methane
 end
 
@@ -126,7 +163,7 @@ ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will overr
  
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/scripts/append/append_status_list.lua" ) --new status effects
 
-if ModSettingGet("Hydroxide.cc_flasks") == "on" then
+if ModSettingGet("Hydroxide.cc_flasks") then
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/scripts/append/append_potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/scripts/append/append_powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/scripts/append/append_potion_aggressive.lua" ) --for alchemist enemy
@@ -145,12 +182,28 @@ ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/sc
 ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
 ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_vault.lua" ) --new structures in the vault
 
-if ModSettingGet("Hydroxide.cc_items") == "on" then
+if ModSettingGet("Hydroxide.cc_items") then
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
 end
 
 ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/scripts/append/append_fungal.lua" ) --FUngal shifts
 --appends
+
+dofile_once("mods/Hydroxide/lib/shader_utilities.lua")
+postfx.append(
+"uniform vec4 grayscale;",
+"uniform vec4 brightness_contrast_gamma;",
+"data/shaders/post_final.frag"
+)
+
+postfx.append(
+[[
+color = mix(color, vec3(dot(color,vec3(.2126, .7152, .0722))), grayscale.a );
+]],
+"// various debug visualizations================================================================================",
+"data/shaders/post_final.frag"
+)
+
 
 if (ModIsEnabled("copis_things")) then
 	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
@@ -195,7 +248,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
     EntitySetDamageFromMaterial( player_entity, "hydroxide", 0.005 )
 	
 	  if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
-		if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+		if ModSettingGet("Hydroxide.cc_pixelscenes") then
 			EntityLoad("mods/Hydroxide/files/pixel_scenes/music_shrine.xml", 6200, 5500)  --load the musical shrine
 		end
 		
@@ -205,27 +258,5 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
     end
 end
---[[
-local baseAcidHurt = {"base_enemy_robot", "base_enemy_robot_boss_limbs", "base_helpless_animal", "base_humanoid", "base_prop_crystal" }
-
-local acidHurt = {"alchemist", "bigfirebug", "boss_dragon", "chest_leggy", "darkghost", "eel", "firebug", "firemage", "fireskull", "fish", "gazer", "ghost", "giant", "icemage", "icer", "iceskull", "scavenger_poison", "skygazer", "spitmonster", "thunderskull", "wizard_dark", "wizard_hearty", "wizard_homing", "wizard_neutral", "wizard_poly", "wizard_returner", "wizard_swapper", "wizard_tele", "wizard_twitchy", "wizard_weaken", "worm", "worm_big", "worm_end", "worm_skull", "worm_tiny" }
-
-OnModPostInit(
-	for i, entity in ipairs(baseAcidHurt) do
-		local path = "data/entities/" .. entity .. ".xml"
-		content = ModTextFileGetContent(path)
-		xml = nxml.parse(content)
-		
-		for elem in xml:each_child() do
-			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
-		end
-	end
-	
-	for i, entity in ipairs(acidHurt) do
-		local path = "data/entities/animals/" .. entity .. ".xml"	
-			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
-	end
-)
-]]--finish this up
 
 print("Hydroxide mod init done")
