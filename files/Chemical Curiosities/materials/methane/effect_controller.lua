@@ -8,9 +8,9 @@ local vsc = EntityGetFirstComponentIncludingDisabled( entity_id, "VariableStorag
 local strength = tonumber(ComponentGetValue(vsc, "value_float"))
 
 if (EntityGetWithName("MethaneStain") ~= 0) then
-	strength = strength + 0.002
+	strength = strength + 0.05
 else 
-	strength = strength - 0.001
+	strength = strength - 0.05
 end
 
 if (strength > 1) then strength = 1 end
