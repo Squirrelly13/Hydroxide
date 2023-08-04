@@ -336,6 +336,9 @@
 	autoignition_temperature="20" 
 	show_in_creative_mode="1"
 	>
+	<Graphics
+	color="c5ab4c4f"
+	></Graphics>
 	</CellData> --lol, methane gas.
 	
 	<CellDataChild
