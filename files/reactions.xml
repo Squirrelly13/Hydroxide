@@ -1383,12 +1383,6 @@ b<Materials>
 	--methane gas--
 	---------------
 	
-	<Reaction probability="10"
-	input_cell1="frozen_meat"	input_cell2="air"
-	output_cell1="frozen_meat"	output_cell2="methane"
-	>
-	</Reaction>
-	
 	
 	<Reaction probability="1"
 	input_cell1="methane"	input_cell2="[fire]"
