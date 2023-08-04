@@ -1,0 +1,21 @@
+<Entity>
+	<GameEffectComponent 
+		effect="CUSTOM"
+		custom_effect_id="ANTIMATTER"
+		frames="600"
+	>
+	</GameEffectComponent >	
+	
+	<InheritTransformComponent />
+	
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/materials/antimatter/effect_antimatter.lua"
+		execute_every_n_frame="2"
+		>
+	</LuaComponent>
+	
+	
+	
+
+</Entity>

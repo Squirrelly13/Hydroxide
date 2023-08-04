@@ -1,0 +1,16 @@
+<Entity>
+    <PixelSceneComponent
+		pixel_scene_background=	"mods/Hydroxide/files/pixel_scenes/signature_background.png"
+		pixel_scene_visual=		""
+		pixel_scene=			"mods/Hydroxide/files/pixel_scenes/signature.png" 
+		offset_x="0"
+		offset_y="0"
+		skip_biome_checks="1" 
+		>
+    </PixelSceneComponent>
+	<LifetimeComponent
+		lifetime="2"
+		>
+	</LifetimeComponent>
+	--this is just a neat lil thing i felt like adding for the fun of it
+</Entity>

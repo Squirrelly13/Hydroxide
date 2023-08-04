@@ -1,4 +1,4 @@
-<Materials>
+b<Materials>
 	
 	----------
 	--metals--
@@ -6,14 +6,14 @@
 	
 	
 	<Reaction probability="20"
-	input_cell1="AA_MAT_NEUTRAL_POTION"				input_cell2="iron"
+	input_cell1="AA_NEUTRAL_POTION"				input_cell2="iron"
 	output_cell1="magic_liquid_slower_levitation"	output_cell2="steam"
 	>
 	</Reaction>
 	
 	<Reaction probability="7"
 	input_cell1="preskite"			input_cell2="blood_worm" 
-	output_cell1="AA_MAT_SOOT"		output_cell2="AA_MAT_POTION_GAS"
+	output_cell1="AA_SOOT"		output_cell2="AA_POTION_GAS"
 	blob_radius2="3"
 	>
 	</Reaction>
@@ -83,7 +83,7 @@
 	
 	<Reaction probability="30"
 	input_cell1="cobalt_ingredient"		input_cell2="magic_liquid_faster_levitation"
-	output_cell1="AA_MAT_REPULTIUM"		output_cell2="AA_MAT_REPULTIUM"
+	output_cell1="AA_REPULTIUM"		output_cell2="AA_REPULTIUM"
 	>
 	</Reaction>
 	
@@ -121,7 +121,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[static]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -129,7 +129,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[alchemy]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -137,7 +137,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[solid]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -145,7 +145,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[mossDevour]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>	
@@ -153,7 +153,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[sand_ground]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -161,7 +161,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[sand_metal]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -169,7 +169,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[sand_other]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -177,7 +177,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[corrodible]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -185,7 +185,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[liquid]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -193,7 +193,7 @@
 	input_cell1="antimatter_gas"	input_cell2="[gas]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>	
@@ -202,7 +202,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[static]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -210,7 +210,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[alchemy]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -218,7 +218,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[solid]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -226,7 +226,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[mossDevour]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>	
@@ -234,7 +234,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[sand_ground]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -242,7 +242,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[sand_metal]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -250,7 +250,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[sand_other]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -258,7 +258,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[corrodible]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -266,7 +266,7 @@
 	input_cell1="antimatter_liquid"	input_cell2="[liquid]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -274,13 +274,13 @@
 	input_cell1="antimatter_liquid"	input_cell2="[gas]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
-	entity="mods/Hydroxide/files/entities/misc/flash_bright.xml"
+	entity="mods/Hydroxide/files/entities/misc/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
 	
 	<Reaction probability="87"
-		input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="rock_static_cursed"
+		input_cell1="AA_NEUTRAL_POTION"		input_cell2="rock_static_cursed"
 		output_cell1="antimatter_gas"			output_cell2="antimatter_liquid"
 		blob_radius1="5"						blob_radius2="5"
 		blob_restrict_to_input_material1="1"	blob_restrict_to_input_material2="1"
@@ -388,7 +388,7 @@
 	-->
 	
 	<Reaction probability="50"
-	input_cell1="diamond"	input_cell2="AA_MAT_NEUTRAL_POTION"
+	input_cell1="diamond"	input_cell2="AA_NEUTRAL_POTION"
 	output_cell1="water"		output_cell2="solidCrystal_molten"
 	blob_radius2="2"
 	>
@@ -478,14 +478,14 @@
 	------------------
 	
 	<Reaction probability="30"
-	input_cell1="AA_MAT_STATIC_CHARGE"		input_cell2="gunpowder_tnt"
+	input_cell1="AA_STATIC_CHARGE"		input_cell2="gunpowder_tnt"
 	output_cell1="smoke"					output_cell2="lightningPowder"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="30"
-	input_cell1="AA_MAT_STATIC_CHARGE"		input_cell2="gunpowder_explosive"
+	input_cell1="AA_STATIC_CHARGE"		input_cell2="gunpowder_explosive"
 	output_cell1="smoke"					output_cell2="lightningPowder"
 	blob_radius1="2"						blob_radius2="3"
 	>
@@ -503,8 +503,8 @@
 	-----------------
 	
 	<Reaction probability="52"
-	input_cell1="cobalt"				input_cell2="AA_MAT_NEUTRAL_POTION"
-	output_cell1="AA_MAT_STATIC_CHARGE"	output_cell2="AA_MAT_STATIC_CHARGE"
+	input_cell1="cobalt"				input_cell2="AA_NEUTRAL_POTION"
+	output_cell1="AA_STATIC_CHARGE"	output_cell2="AA_STATIC_CHARGE"
 	blob_radius1="3"
 	>
 	</Reaction>
@@ -514,7 +514,7 @@
 	---------------
 	
 	<Reaction probability="63"
-	input_cell1="AA_MAT_NEUTRAL_POTION" input_cell2="blood_cold"
+	input_cell1="AA_NEUTRAL_POTION" input_cell2="blood_cold"
 	output_cell1="AA_ICEFIRE"			output_cell2="blood_cold_vapour"
 	>
 	</Reaction>
@@ -597,13 +597,13 @@
 	</Reaction>
 	
 	<Reaction probability="25"
-	input_cell1="antimagic"			input_cell2="AA_MAT_HUNGRY_SLIME"
+	input_cell1="antimagic"			input_cell2="AA_HUNGRY_SLIME"
 	output_cell1="antimagic"		output_cell2="slime"
 	>
 	</Reaction>
 	
 	<Reaction probability="25"
-	input_cell1="antimagic"			input_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
+	input_cell1="antimagic"			input_cell2="AA_HUNGRY_SLIME_GROWING"
 	output_cell1="antimagic"		output_cell2="slime"
 	>
 	</Reaction>
@@ -661,7 +661,7 @@
 	-----------
 
 	<Reaction probability="43"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder_tnt"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="gunpowder_tnt"
 	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
 	blob_radius2="2"
 	>
@@ -669,7 +669,7 @@
 	
 	
 	<Reaction probability="43"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder_explosive"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="gunpowder_explosive"
 	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
 	blob_radius2="2"
 	>
@@ -677,7 +677,7 @@
 	
 	
 	<Reaction probability="43"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="gunpowder"
 	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
 	blob_radius2="2"
 	>
@@ -756,7 +756,7 @@
 	
 	<Reaction probability="80"
 	input_cell1="meat_cursed" 					input_cell2="alchemyPowder"
-	output_cell1="AA_MAT_HUNGRY_SLIME_GROWING"	output_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
+	output_cell1="AA_HUNGRY_SLIME_GROWING"	output_cell2="AA_HUNGRY_SLIME_GROWING"
 	blob_radius1="3"
 	blob_radius2="3"
 	>
@@ -856,7 +856,7 @@
 	------------
 	
 	<Reaction probability="89"
-		input_cell1="alcohol"			input_cell2="AA_MAT_NEUTRAL_POTION"
+		input_cell1="alcohol"			input_cell2="AA_NEUTRAL_POTION"
 		output_cell1="methane"			output_cell2="fireStarter"	
 		blob_radius2="3"
 	>
@@ -867,7 +867,7 @@
 	--------------------
 	
 	<Reaction probability="50"
-		input_cell1="devouringMoss"		input_cell2="AA_MAT_NEUTRAL_POTION"
+		input_cell1="devouringMoss"		input_cell2="AA_NEUTRAL_POTION"
 		output_cell1="AA_CLONE"			output_cell2="smoke"
 		blob_radius1="6"
 	>
@@ -878,7 +878,7 @@
 	-------------
 	
 	<Reaction probability = "50"
-        input_cell1="AA_GRAVLIQUID" input_cell2="AA_MAT_DARKMATTER" input_cell3="[antimatter]"
+        input_cell1="AA_GRAVLIQUID" input_cell2="AA_DARKMATTER" input_cell3="[antimatter]"
         output_cell1="air" output_cell2="air" output_cell3="air"
         fast_reaction="1"
     >
@@ -901,37 +901,37 @@
 	--creeping slime--
 	------------------
 	<Reaction probability="200"
-		input_cell1="AA_MAT_CREEPING_SLIME" 		input_cell2="[static]"		input_cell3="air"
-		output_cell1="AA_MAT_CREEPING_SLIME"		output_cell2="AA_MAT_CREEPING_SLIME" 	output_cell3="AA_MAT_CREEPING_SLIME"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[static]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
 		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
 		>
 	</Reaction>
 
 	<Reaction probability="200"
-		input_cell1="AA_MAT_CREEPING_SLIME" 		input_cell2="[solid]"		input_cell3="air"
-		output_cell1="AA_MAT_CREEPING_SLIME"		output_cell2="AA_MAT_CREEPING_SLIME" 		output_cell3="AA_MAT_CREEPING_SLIME"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[solid]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 		output_cell3="AA_CREEPING_SLIME"
 		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
 		>
 	</Reaction>
 
 	<Reaction probability="200"
-		input_cell1="AA_MAT_CREEPING_SLIME" 		input_cell2="[sand_ground]"		input_cell3="air"
-		output_cell1="AA_MAT_CREEPING_SLIME"		output_cell2="AA_MAT_CREEPING_SLIME" 	output_cell3="AA_MAT_CREEPING_SLIME"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_ground]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
 		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
 		>
 	</Reaction>
 
 	<Reaction probability="200"
-		input_cell1="AA_MAT_CREEPING_SLIME" 		input_cell2="[sand_metal]"		input_cell3="air"
-		output_cell1="AA_MAT_CREEPING_SLIME"		output_cell2="AA_MAT_CREEPING_SLIME" 		output_cell3="AA_MAT_CREEPING_SLIME"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_metal]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 		output_cell3="AA_CREEPING_SLIME"
 		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
 		>
 	</Reaction>
 
 	
 	<Reaction probability="200"
-		input_cell1="AA_MAT_CREEPING_SLIME" 		input_cell2="[sand_other]"		input_cell3="air"
-		output_cell1="AA_MAT_CREEPING_SLIME"		output_cell2="AA_MAT_CREEPING_SLIME" 	output_cell3="AA_MAT_CREEPING_SLIME"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_other]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
 		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
 		>
 	</Reaction>
@@ -942,7 +942,7 @@
 	-----------
 	  
 	<Reaction probability="2"
-		input_cell1="AA_MAT_COMPOST" 	input_cell2="air"
+		input_cell1="AA_COMPOST" 	input_cell2="air"
 		output_cell1="air"          	output_cell2="air"  >
 		<ExplosionConfig
 			cell_explosion_power="0.000001"
@@ -1015,14 +1015,14 @@
 	
   <Reaction probability="10"
   	input_cell1="wood_static" 	input_cell2="fire"
-  	output_cell1="AA_MAT_ASH"	output_cell2="AA_MAT_ASH" 
+  	output_cell1="AA_ASH"	output_cell2="AA_ASH" 
 	blob_radius1="1"	blob_radius2="1"
 	>
   </Reaction>
   
   <Reaction probability="10"
 	input_cell1="smoke" 	input_cell2="air"
-	output_cell1="AA_MAT_SOOT" 	output_cell2="AA_MAT_SOOT"
+	output_cell1="AA_SOOT" 	output_cell2="AA_SOOT"
 	fast_reaction="1"
 	>
   </Reaction>
@@ -1034,7 +1034,7 @@
 	
 	 <Reaction probability="100"
 	input_cell1="slime" 	input_cell2="lava"
-	output_cell1="AA_MAT_SOLID_SLIME" 	output_cell2="AA_MAT_SOLID_SLIME"
+	output_cell1="AA_SOLID_SLIME" 	output_cell2="AA_SOLID_SLIME"
 	fast_reaction="1"
 	>
   </Reaction>
@@ -1044,20 +1044,20 @@
 	------------------
 	<Reaction probability="100"
 	input_cell1="[magic_liquid]" 	input_cell2="lava"
-	output_cell1="AA_MAT_POTION_GAS" 	output_cell2="lava"
+	output_cell1="AA_POTION_GAS" 	output_cell2="lava"
 	fast_reaction="1"
 	>
 	</Reaction>
   
 	<Reaction probability="95"
-	input_cell1="AA_MAT_POTION_GAS" 	input_cell2="air"
-	output_cell1="AA_MAT_NEUTRAL_POTION" 	output_cell2="air"
+	input_cell1="AA_POTION_GAS" 	input_cell2="air"
+	output_cell1="AA_NEUTRAL_POTION" 	output_cell2="air"
 	fast_reaction="1"
 	>
 	</Reaction>
 
 	<Reaction probability="76"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="blood_fungi"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="blood_fungi"
 	output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
 	>
 	</Reaction>
@@ -1067,22 +1067,22 @@
 	-----------------
 	
 	<Reaction probability="50"
-  	input_cell1="magic_liquid_random_polymorph" 	input_cell2="AA_MAT_OIL_LIGHT"
-  	output_cell1="AA_MAT_MAGICPLASTIC"	output_cell2="AA_MAT_MAGICPLASTIC" 				
+  	input_cell1="magic_liquid_random_polymorph" 	input_cell2="AA_OIL_LIGHT"
+  	output_cell1="AA_MAGICPLASTIC"	output_cell2="AA_MAGICPLASTIC" 				
 	>
   </Reaction> --make plastic
   
    <Reaction probability="50"
-  	input_cell1="magic_liquid_polymorph" 	input_cell2="AA_MAT_OIL_LIGHT"
-  	output_cell1="AA_MAT_MAGICPLASTIC"	output_cell2="AA_MAT_MAGICPLASTIC" 				
+  	input_cell1="magic_liquid_polymorph" 	input_cell2="AA_OIL_LIGHT"
+  	output_cell1="AA_MAGICPLASTIC"	output_cell2="AA_MAGICPLASTIC" 				
 	>
   </Reaction> --make plastic
   
   
   
 	<Reaction probability="100"
-		input_cell1="AA_MAT_MAGICPLASTIC" input_cell2="item_box2d"
-		output_cell1="AA_MAT_MAGICPLASTIC" output_cell2="item_box2d"
+		input_cell1="AA_MAGICPLASTIC" input_cell2="item_box2d"
+		output_cell1="AA_MAGICPLASTIC" output_cell2="item_box2d"
 	>
 	<ExplosionConfig
 		camera_shake="0" 
@@ -1103,7 +1103,7 @@
 	--arborium (wood juice)--
 	-------------------------
 	  <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[alchemy]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[alchemy]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="2"		blob_radius2="8"
@@ -1111,7 +1111,7 @@
   </Reaction>
 	
   <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[static]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[static]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="4"		blob_radius2="8"
@@ -1119,7 +1119,7 @@
   </Reaction>
   
    <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[sand_ground]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_ground]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="4"		blob_radius2="8"
@@ -1127,7 +1127,7 @@
   </Reaction>
   
    <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[sand_metal]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_metal]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="4"		blob_radius2="8"
@@ -1135,7 +1135,7 @@
   </Reaction>
   
    <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[sand_other]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_other]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="4"		blob_radius2="8"
@@ -1144,7 +1144,7 @@
   
   
   <Reaction probability="100"
-	input_cell1="AA_MAT_ARBORIUM" 	input_cell2="[box2d]"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[box2d]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="4"		blob_radius2="8"
@@ -1156,39 +1156,39 @@
 	----------------
   <Reaction 
     probability="3"
-    input_cell1="AA_MAT_HUNGRY_SLIME" 	input_cell2="[box2d]" 
-    output_cell1="AA_MAT_HUNGRY_SLIME_GROWING"	output_cell2="AA_MAT_HUNGRY_SLIME_GROWING" 
+    input_cell1="AA_HUNGRY_SLIME" 	input_cell2="[box2d]" 
+    output_cell1="AA_HUNGRY_SLIME_GROWING"	output_cell2="AA_HUNGRY_SLIME_GROWING" 
   >
   </Reaction>
 
   <Reaction 
     probability="10"
-    input_cell1="AA_MAT_HUNGRY_SLIME_GROWING" 	input_cell2="air" 
-    output_cell1="AA_MAT_HUNGRY_SLIME_GROWING"	output_cell2="AA_MAT_HUNGRY_SLIME" 
+    input_cell1="AA_HUNGRY_SLIME_GROWING" 	input_cell2="air" 
+    output_cell1="AA_HUNGRY_SLIME_GROWING"	output_cell2="AA_HUNGRY_SLIME" 
   >
   </Reaction> --christ this is scary
   
   <Reaction probability="3"
-	input_cell1="AA_MAT_HUNGRY_SLIME"				input_cell2="rotten_meat"
-	output_cell1="AA_MAT_HUNGRY_SLIME_GROWING"		output_cell2="AA_MAT_HUNGRY_SLIME"
+	input_cell1="AA_HUNGRY_SLIME"				input_cell2="rotten_meat"
+	output_cell1="AA_HUNGRY_SLIME_GROWING"		output_cell2="AA_HUNGRY_SLIME"
   >
   </Reaction> --more fear ;)
   
   <Reaction probability="8"
-  input_cell1="AA_MAT_HUNGRY_SLIME_GROWING"	input_cell2="[fire]"
-  output_cell1="[fire]"						output_cell2="AA_MAT_SOOT"
+  input_cell1="AA_HUNGRY_SLIME_GROWING"	input_cell2="[fire]"
+  output_cell1="[fire]"						output_cell2="AA_SOOT"
   >
   </Reaction> --fire kills it
   
   <Reaction probability="8"
-  input_cell1="AA_MAT_HUNGRY_SLIME"	input_cell2="[fire]"
+  input_cell1="AA_HUNGRY_SLIME"	input_cell2="[fire]"
   output_cell1="[fire]"				output_cell2="smoke"
   >
   </Reaction> --burns
   
   <Reaction probability="70"
-  input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="[meat]"						input_cell3="radiationWaste"	
-  output_cell1="smoke"					output_cell2="AA_MAT_HUNGRY_SLIME_GROWING"	output_cell3="AA_MAT_SOOT"		
+  input_cell1="AA_NEUTRAL_POTION"	input_cell2="[meat]"						input_cell3="radiationWaste"	
+  output_cell1="smoke"					output_cell2="AA_HUNGRY_SLIME_GROWING"	output_cell3="AA_SOOT"		
   blob_radius1="3"						blob_radius2="5"							blob_radius3="3"				
   >
   </Reaction>
@@ -1199,28 +1199,28 @@
 	-----------------------------
 	<Reaction probability="75"
   	input_cell1="alcohol" 	input_cell2="acid"
-  	output_cell1="AA_MAT_CATALYST"	output_cell2="AA_MAT_CATALYST" 
+  	output_cell1="AA_CATALYST"	output_cell2="AA_CATALYST" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction>
   
   <Reaction probability="75"
-  	input_cell1="AA_MAT_CATALYST" 	input_cell2="oil"
-  	output_cell1="AA_MAT_OIL_SPLITTING"	output_cell2="AA_MAT_OIL_SPLITTING" 
+  	input_cell1="AA_CATALYST" 	input_cell2="oil"
+  	output_cell1="AA_OIL_SPLITTING"	output_cell2="AA_OIL_SPLITTING" 
 	blob_radius1="2"		blob_radius2="2"
 	>
   </Reaction>
   
   <Reaction probability="50"
-  	input_cell1="AA_MAT_OIL_SPLITTING" 	input_cell2="AA_MAT_OIL_SPLITTING"
-  	output_cell1="AA_MAT_OIL_HEAVY"	output_cell2="AA_MAT_OIL_HEAVY" 
+  	input_cell1="AA_OIL_SPLITTING" 	input_cell2="AA_OIL_SPLITTING"
+  	output_cell1="AA_OIL_HEAVY"	output_cell2="AA_OIL_HEAVY" 
 	>
   </Reaction>
   
    
   <Reaction probability="50"
-  	input_cell1="AA_MAT_OIL_SPLITTING" 	input_cell2="AA_MAT_OIL_SPLITTING"
-  	output_cell1="AA_MAT_OIL_LIGHT"	output_cell2="AA_MAT_OIL_LIGHT" 
+  	input_cell1="AA_OIL_SPLITTING" 	input_cell2="AA_OIL_SPLITTING"
+  	output_cell1="AA_OIL_LIGHT"	output_cell2="AA_OIL_LIGHT" 
 	>
   </Reaction>
 	
@@ -1230,145 +1230,144 @@
 	-------------------------
 	
 	<Reaction probability="5"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="air"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="air" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="air"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="air" 
 	>
 	</Reaction> -- bloomium juice evaporates
 
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="[solid]"
-  	output_cell1="AA_MAT_BLOOM_LIQUID"	output_cell2="AA_MAT_BLOOM" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOMIUM_LIQUID"	output_cell2="AA_BLOOM" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> -- bloom juice blooms solid
 	
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="[static]"
-  	output_cell1="AA_MAT_BLOOM_LIQUID"	output_cell2="AA_MAT_BLOOM" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOMIUM_LIQUID"	output_cell2="AA_BLOOM" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> --bloom juice blooms on static
 	
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_GAS" 	input_cell2="[solid]"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="AA_MAT_BLOOM_ROOF" 
+  	input_cell1="AA_BLOOMIUM_GAS" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="AA_BLOOM_ROOF" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> --bloom gas blooms on solid
 	
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_GAS" 	input_cell2="[static]"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="AA_MAT_BLOOM_ROOF" 
+  	input_cell1="AA_BLOOMIUM_GAS" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="AA_BLOOM_ROOF" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> --bloom gas blooms on statics
 	
 	<Reaction probability="15"
-  	input_cell1="AA_MAT_BLOOM" 	input_cell2="air" 
-  	output_cell1="AA_MAT_BLOOM"	output_cell2="AA_MAT_BLOOM_GAS" 
+  	input_cell1="AA_BLOOM" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM"	output_cell2="AA_BLOOMIUM_GAS" 
 	>
     </Reaction> --bloom emits bloom gas
 	
 	<Reaction probability="85"
-	input_cell1="AA_MAT_BLOOM_GAS"	input_cell2="[bloom]"
+	input_cell1="AA_BLOOMIUM_GAS"	input_cell2="[bloom]"
 	output_cell1="air"				output_cell2="[bloom]"
 	>
 	</Reaction> -- bloom gas fades
 	
 	<Reaction probability="4"
-	input_cell1="AA_MAT_BLOOM_GAS"	input_cell2="air"
+	input_cell1="AA_BLOOMIUM_GAS"	input_cell2="air"
 	output_cell1="air"				output_cell2="air"
 	>
 	</Reaction> --bloom gas fades
   
 	<Reaction probability="95"
-  	input_cell1="AA_MAT_BLOOM" 	input_cell2="air" 
-  	output_cell1="AA_MAT_BLOOM"	output_cell2="AA_MAT_BLOOM_LIQUID" 
+  	input_cell1="AA_BLOOM" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM"	output_cell2="AA_BLOOMIUM_LIQUID" 
 	>
 	</Reaction> -- bloom drips
 	
 	<Reaction probability="80"
-  	input_cell1="AA_MAT_BLOOM_ROOF" 	input_cell2="air" 
-  	output_cell1="AA_MAT_BLOOM_ROOF"	output_cell2="AA_MAT_BLOOM_LIQUID" 
+  	input_cell1="AA_BLOOM_ROOF" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_ROOF"	output_cell2="AA_BLOOMIUM_LIQUID" 
 	>
 	</Reaction> -- bloom drips
 	
+	<Reaction probability="80"
+  	input_cell1="AA_BLOOM_ROOF_DEAD" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_ROOF_DEAD"	output_cell2="AA_BLOOMIUM_LIQUID"  
+	>
+	</Reaction> -- dead bloom roof drips still
+	
 	<Reaction probability="10"
-  	input_cell1="AA_MAT_BLOOM_ROOF" 	input_cell2="[solid]" 
-  	output_cell1="AA_MAT_BLOOM_ROOF_PLANT" 	output_cell2="AA_MAT_BLOOM_ROOF_DEAD" 
+  	input_cell1="AA_BLOOM_ROOF" 	input_cell2="[solid]" 
+  	output_cell1="AA_BLOOM_ROOF_PLANT" 	output_cell2="AA_BLOOM_ROOF_DEAD" 
 	blob_radius1="3"
 	>
 	</Reaction> -- bloom roof dies or somethin
-
-	<Reaction probability="100"
-	input_cell1="AA_MAT_BLOOM" 				input_cell2="air"
-	output_cell1="AA_MAT_BLOOM_ROOF_DEAD"	output_cell2="air"
-	blob_radius1="3"
-	req_lifetime="120"
-	/>
 	
    <Reaction probability="80"
-  	input_cell1="AA_MAT_BLOOM" 	input_cell2="fire" 
+  	input_cell1="AA_BLOOM" 	input_cell2="fire" 
   	output_cell1="poison"	output_cell2="fire" 
 	>
 	</Reaction> -- bloom burns to poison 
 	
 	<Reaction probability="100"
-  	input_cell1="AA_MAT_NEUTRAL_POTION" input_cell2="vomit" 
-  	output_cell1="AA_MAT_BLOOM_MAGIC"	output_cell2="AA_MAT_BLOOM_MAGIC"
+  	input_cell1="AA_NEUTRAL_POTION" input_cell2="vomit" 
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
 	blob_radius1="5"		blob_radius2="5"	
 	>
 	</Reaction> --bloom potion recipe. 
 	
 	<Reaction probability="100"
 	input_cell1="alchemyPowder"				input_cell2="blood_fungi"
-	output_cell1="AA_MAT_BLOOM_MAGIC"		output_cell2="smoke"
+	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
 	>
 	</Reaction> --alchemy powder potion recipe
 	
 	<Reaction probability="100"
-	input_cell1="AA_MAT_BLOOM_MAGIC"	input_cell2="alchemyPowder"
-	output_cell1="AA_MAT_BLOOM_MAGIC"	output_cell2="AA_MAT_BLOOM_MAGIC"
+	input_cell1="AA_BLOOM_MAGIC"	input_cell2="alchemyPowder"
+	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
 	blob_radius2="2"
 	>
 	</Reaction> --part of the alchemy powder recipe
 	
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_MAGIC" 	input_cell2="[solid]"
-  	output_cell1="AA_MAT_BLOOM_MAGIC"	output_cell2="AA_MAT_BLOOM" 
+  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> --bloom potion blooms solids
 	
 	<Reaction probability="75"
-  	input_cell1="AA_MAT_BLOOM_MAGIC" 	input_cell2="[static]"
-  	output_cell1="AA_MAT_BLOOM_MAGIC"	output_cell2="AA_MAT_BLOOM" 
+  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> --Bloom potion blooms statics
 	
 	<Reaction probability="100"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="[liquid]"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="air" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="[liquid]"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="air" 
 	blob_radius1="2"		blob_radius2="2"
 	>
     </Reaction> --bloom liquid kinda destroys other liquids
 	
 	<Reaction probability="50"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="[sand_ground]"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="AA_MAT_BLOOM" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="[sand_ground]"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="AA_BLOOM" 
 	>
 	</Reaction> --Blooms on [ground_sand]
 	
 	<Reaction probability="50"
-  	input_cell1="AA_MAT_BLOOM_GAS" 	input_cell2="[sand_ground]"
-  	output_cell1="AA_MAT_BLOOM_LIQUID"	output_cell2="AA_MAT_BLOOM_ROOF" 
+  	input_cell1="AA_BLOOMIUM_GAS" 	input_cell2="[sand_ground]"
+  	output_cell1="AA_BLOOMIUM_LIQUID"	output_cell2="AA_BLOOM_ROOF" 
 	>
 	</Reaction> --gas blooms roof on ground_sand 
 	
 	<Reaction probability="100"
-  	input_cell1="AA_MAT_BLOOM_LIQUID" 	input_cell2="[sand_other]"
-  	output_cell1="AA_MAT_BLOOM_GAS"	output_cell2="air" 
+  	input_cell1="AA_BLOOMIUM_LIQUID" 	input_cell2="[sand_other]"
+  	output_cell1="AA_BLOOMIUM_GAS"	output_cell2="air" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction> -- lots of powders are immune
@@ -1383,6 +1382,12 @@
 	---------------
 	--methane gas--
 	---------------
+	
+	<Reaction probability="10"
+	input_cell1="frozen_meat"	input_cell2="air"
+	output_cell1="frozen_meat"	output_cell2="methane"
+	>
+	</Reaction>
 	
 	
 	<Reaction probability="1"
@@ -1422,7 +1427,31 @@
 	</Reaction>
 	
 	
-
+	-----------------------
+	--meat rots with snow--
+	-----------------------
+	
+	<Reaction probability="23"
+	input_cell1="snow" 		input_cell2="meat"
+	output_cell1="slush"	output_cell2="frozen_meat"
+	blob_radius2="3"
+	>
+	</Reaction>
+	
+	<Reaction probability="23"
+	input_cell1="snow_sticky" 	input_cell2="meat"
+	output_cell1="slush"		output_cell2="frozen_meat"
+	blob_radius2="3"
+	>
+	</Reaction>
+	
+	<Reaction probability="23"
+	input_cell1="snow_static" 	input_cell2="meat"
+	output_cell1="slush"		output_cell2="frozen_meat"
+	blob_radius2="3"
+	>
+	</Reaction>
+	
 
 	---------------------
 	--glittering liquid--
@@ -1480,7 +1509,7 @@
 	
 	
 	<Reaction probability="30"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="sparkLiquid"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="sparkLiquid"
 	output_cell1="sparkLiquid"				output_cell2="sparkLiquid"
 	blob_radius1="2"
 	>
@@ -1494,12 +1523,12 @@
 	<Reaction probability="31"
 	input_cell1="sliceLiquid"	input_cell2="[fire]"
 	output_cell1="air"			output_cell2="air"
-	entity="data/entities/misc/SliceShot.xml" 
+	entity="mods/Hydroxide/files/Chemical Curiosities/materials/scripts/slicingLiquidShoot.xml" 
 	>
 	</Reaction>
 	
 	<Reaction probability="60"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="[sand_metal]"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="[sand_metal]"
 	output_cell1="sliceLiquid"				output_cell2="smoke"
 	blob_radius1="2"
 	>
@@ -1526,7 +1555,7 @@
 	<Reaction probability="25"
 	input_cell1="blastPowder"	input_cell2="[fire]"
 	output_cell1="fire"			output_cell2="air"
-	entity="mods/Hydroxide/files/entities/misc/BlastShot.xml"
+	entity="mods/Hydroxide/files/entities/misc/blastingPowder.lua"
 	>
 	</Reaction>
 	--------------------------------------------
@@ -1594,8 +1623,8 @@
 
 
  	<Reaction probability="15"
-	input_cell1="magic_liquid_berserk" 	input_cell2="blood"						input_cell3="AA_MAT_NEUTRAL_POTION"
-	output_cell1="magic_liquid_berserk" 	output_cell2="magic_liquid_berserk"	output_cell3="AA_MAT_NEUTRAL_POTION"
+	input_cell1="magic_liquid_berserk" 	input_cell2="blood"						input_cell3="AA_NEUTRAL_POTION"
+	output_cell1="magic_liquid_berserk" 	output_cell2="magic_liquid_berserk"	output_cell3="AA_NEUTRAL_POTION"
 	>
   	</Reaction> --berserkium overtakes blood
 	
@@ -1654,13 +1683,13 @@
 	</Reaction>
 	
 	<Reaction probability="100"
-	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME"
+	input_cell1="iron_ingredient"	input_cell2="AA_HUNGRY_SLIME"
 	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
 	>
 	</Reaction> --create devouring moss
 	
 	<Reaction probability="100"
-	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
+	input_cell1="iron_ingredient"	input_cell2="AA_HUNGRY_SLIME_GROWING"
 	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
 	>
 	</Reaction> --create devouring moss
@@ -1680,7 +1709,6 @@
 	blob_restrict_to_input_material2="1"
 	>
 	</Reaction> --devour certain enemies
-
 
 	-------------------------------------------------------------------------
 	--water extinguishes fires
@@ -1717,7 +1745,7 @@
 	</Reaction>
 	
 	<Reaction probability="50"
-	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="concrete_collapsed"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="concrete_collapsed"
 	output_cell1="smoke"				output_cell2="AA_LIQUID_ROCK"
 	blob_radius2="6"
 	>
@@ -1751,56 +1779,56 @@
 	---------------------
 
 	<Reaction probability="25"
-	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="sand"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="sand"
 	output_cell1="magic_liquid_invisibility"	output_cell2="smoke"
 	blob_radius1="3"
 	>
 	</Reaction> -- sand to invisiblium
 
 	<Reaction probability="52"
-	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="bone"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="bone"
 	output_cell1="material_darkness"			output_cell2="smoke"
 	blob_radius1="4"
 	>
 	</Reaction> -- bones to ominous liquid
 
 	<Reaction probability="52"
-	input_cell1="AA_MAT_NEUTRAL_POTION"			input_cell2="bone_box2d"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="bone_box2d"
 	output_cell1="material_darkness"	output_cell2="smoke"
 	blob_radius1="4"
 	>
 	</Reaction> -- bones to ominous liquid
 	
 	<Reaction probability="24"
-	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="steelmoss_static"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="steelmoss_static"
 	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"		
 	>
 	</Reaction> -- cloning in vault EXPERIMENTAL
 	
 	<Reaction probability="24"
-	input_cell1="AA_MAT_NEUTRAL_POTION"	input_cell2="steelpipe_static"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="steelpipe_static"
 	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"	
 	>
 	</Reaction> -- cloning in vault EXPERIMENTAL
 	
 	<Reaction probability="30"
-	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="soil_dead"
-	output_cell1="sand_herb_vapour"			output_cell2="AA_MAT_COMPOST"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="soil_dead"
+	output_cell1="sand_herb_vapour"			output_cell2="AA_COMPOST"
 	blob_radius1="2"
 	blob_restrict_to_input_material1="1"
 	>
 	</Reaction> -- big plants in jungle
 	
 	<Reaction probability="3"
-	input_cell1="AA_MAT_NEUTRAL_POTION"				input_cell2="[bloom]"
-	output_cell1="AA_MAT_BLOOM_GAS"			output_cell2="AA_MAT_COMPOST"
+	input_cell1="AA_NEUTRAL_POTION"				input_cell2="[bloom]"
+	output_cell1="AA_BLOOMIUM_GAS"			output_cell2="AA_COMPOST"
 	blob_radius1="5"
 	blob_restrict_to_input_material1="1"
 	>
 	</Reaction> --activates hella plants with bloomium
 	
 		<Reaction probability="50"
-	input_cell1="AA_MAT_NEUTRAL_POTION" 	input_cell2="magic_liquid_charm"
+	input_cell1="AA_NEUTRAL_POTION" 	input_cell2="magic_liquid_charm"
 	output_cell1="AA_LOVE"					output_cell2="smoke"
 	blob_radius1="3"
 	>

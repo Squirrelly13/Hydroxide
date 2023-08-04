@@ -35,13 +35,6 @@ function EntityGetDamageFromMaterial(entity, material)
 	return nil
 end
 
-function AddComponent(entity_file, component)
-    local ent = ModTextFileGetContent(entity_file)
-    local comp = ModTextFileGetContent(component)
-    ent = string.gsub(ent, "(</Entity>)", comp .. "\n%1\n")
-    ModTextFileSetContent(entity_file, ent)
-end
-
 --a modified version of a function by Evaisa
 function shift_materials_in_range(radius, materials_input, output, e_id)
 	local shift_entity = EntityCreateNew("shifting_guy")

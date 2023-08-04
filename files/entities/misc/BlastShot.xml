@@ -1,8 +1,0 @@
-<Entity >
-
-	<LuaComponent
-		script_source_file="mods/Hydroxide/files/scripts/blastingPowder.lua"
-		execute_on_added="1"
-		>
-	</LuaComponent>
-</Entity>

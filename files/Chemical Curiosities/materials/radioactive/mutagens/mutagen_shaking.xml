@@ -1,0 +1,13 @@
+<Entity name="mutagenShaking" >
+
+	<LifetimeComponent lifetime="300" />
+	
+	<InheritTransformComponent />
+	
+	<LuaComponent 
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/materials/radioactive/mutagens/mutagen_teleport.lua"
+		execute_every_n_frame="5"
+		>
+	</LuaComponent>
+	
+</Entity>

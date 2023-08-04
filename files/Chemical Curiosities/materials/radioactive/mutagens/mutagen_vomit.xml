@@ -1,0 +1,12 @@
+<Entity name="mutagenVomit" >
+
+	<InheritTransformComponent />
+	<LifetimeComponent lifetime="1200" />
+	
+	<LuaComponent
+		script_source_file="mods/hydroxide/files/Chemical Curiosities/materials/radioactive/mutagens/mutagen_vomit.lua"
+		execute_every_n_frame="120"
+		>
+	</LuaComponent>
+	
+</Entity>

@@ -1,0 +1,342 @@
+<Materials>
+
+  -- bloom
+  <CellData
+	name="AA_BLOOM"
+	ui_name="Bloomium"
+	tags="[plant],[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab182"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="1"
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/healthy/root_growth.png">
+    </Graphics>
+	
+  </CellData> --bloomium (floor?)
+	
+  <CellData
+	name="AA_BLOOM_ROOF"
+	ui_name="Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab183"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/healthy/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --bloomium Ceiling
+  
+     <CellData
+	name="AA_BLOOM_ROOF_DEAD"
+	ui_name="Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab184"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/healthy/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --bloomium ceiling (probably doesnt drip??)
+  
+  <CellData
+	name="AA_BLOOM_ROOF_PLANT"
+	ui_name="Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab185"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_viscosity="101"
+	liquid_sticks_to_ceiling="100"
+  vegetation_full_lifetime_growth="700"
+	vegetation_sprite="mods/Hydroxide/files/gfx/vegetation/bloom_ceiling_$[1-7].xml" 
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="0"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="0"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/healthy/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --i think this is the roots that hang from bloomium roofs
+  
+  <CellData
+	name="AA_BLOOMIUM_LIQUID"
+	ui_name="Bloomium Liquid"
+	tags="[corrodible],[magic_liquid],[burnable],[meltable_to_lava],[alchemy]"
+	burnable="0"
+	density="1"
+	cell_type="liquid"
+	lifetime="120"
+	wang_color="804ab186"
+	generates_smoke="0"
+	liquid_gravity="0.8"
+	liquid_sand="0"
+	on_fire="0"
+	requires_oxygen="0"
+	liquid_stains="1"
+	>
+    <Graphics
+	is_grass="1"
+	color="336D693E" >
+    </Graphics>
+  </CellData> --bloomium drip
+
+	<CellData
+	name="AA_BLOOMIUM_GAS"
+	ui_name="Bloomium Gas"
+  	tags="[gas]"
+	burnable="0"
+	density="1"
+	lifetime="300"
+	cell_type="gas"
+	wang_color="7f4ab188"
+	generates_smoke="0"
+	liquid_gravity="0.5"
+	liquid_sand="0"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="60"
+	show_in_creative_mode="1"
+	>
+	 <Graphics
+	
+	color="55678828" >
+    </Graphics>
+  </CellData> --bloomium gas
+
+
+
+  -- Contaminated Bloomium
+  <CellData
+	name="AA_BLOOM_POISONED"
+	ui_name="Contaminated Bloomium"
+	tags="[plant],[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[infected_bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab189"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="1"
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/infected/root_growth.png">
+    </Graphics>
+	
+  </CellData> --bloomium (floor?)
+	
+  <CellData
+	name="AA_BLOOM_ROOF_POISONED"
+	ui_name="Contaminated Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[infected_bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab18a"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/infected/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --bloomium Ceiling
+  
+     <CellData
+	name="AA_BLOOM_ROOF_DEAD_POISONED"
+	ui_name="Contaminated Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[infected_bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab18b"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_static="1"
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="1"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="1"
+	>
+    <Graphics
+	texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/infected/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --bloomium ceiling (probably doesnt drip??)
+  
+  <CellData
+	name="AA_BLOOM_ROOF_PLANT_POISONED"
+	ui_name="Contaminated Bloomium"
+	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[infected_bloom]"
+	burnable="1"
+	density="10"
+	cell_type="liquid"
+	wang_color="ff4ab18c"
+	generates_smoke="0"
+	liquid_gravity="0"
+	liquid_sand="1" 
+	liquid_viscosity="101"
+	liquid_sticks_to_ceiling="100"
+  vegetation_full_lifetime_growth="700"
+	vegetation_sprite="mods/Hydroxide/files/Arcane Alchemy/materials/Bloomium/infected/bloom_ceiling_$[1-7].xml" 
+	temperature_of_fire="90"
+	autoignition_temperature="85"
+	on_fire="0"
+	slippery="0"
+	solid_friction="0.05"
+	requires_oxygen="0"
+	gfx_glow="1"
+	hp="30" 
+	platform_type="0"
+	>
+    <Graphics
+	texture_file="data/materials_gfx/root_growth.png"
+	is_grass="1"
+	color="ffCF1FC8" >
+    </Graphics>
+	
+  </CellData> --i think this is the roots that hang from bloomium roofs
+  
+  <CellData -- Bloomium Liquid
+	name="AA_BLOOMIUM_LIQUID_POISONED"
+	ui_name="Contaminated Bloomium Liquid"
+	tags="[corrodible],[magic_liquid],[burnable],[meltable_to_lava],[alchemy]"
+	burnable="0"
+	density="1"
+	cell_type="liquid"
+	lifetime="120"
+	wang_color="804ab18d"
+	generates_smoke="0"
+	liquid_gravity="0.8"
+	liquid_sand="0"
+	on_fire="0"
+	requires_oxygen="0"
+	liquid_stains="1"
+	>
+    <Graphics
+	is_grass="1"
+	color="33613e6d" >
+    </Graphics>
+  </CellData> --bloomium drip
+
+	<CellData -- Contaminated Bloomium Gas
+	name="AA_BLOOMIUM_GAS_POISONED"
+	ui_name="Contaminated Bloomium Gas"
+  	tags="[gas]"
+	burnable="0"
+	density="1"
+	lifetime="300"
+	cell_type="gas"
+	wang_color="7f4ab18e"
+	generates_smoke="0"
+	liquid_gravity="0.5"
+	liquid_sand="0"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="60"
+	show_in_creative_mode="1"
+	>
+	 <Graphics
+	
+	color="55562888" >
+    </Graphics>
+  </CellData> 
+
+  -- Decayed Bloomium
+</Materials>

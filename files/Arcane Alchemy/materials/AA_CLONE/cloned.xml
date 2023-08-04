@@ -1,0 +1,19 @@
+<Entity tags="hittable,teleportable_NOT" >
+
+<GameEffectComponent 
+    effect="CUSTOM"
+    custom_effect_id="CLONE"
+    frames="60">
+</GameEffectComponent> 
+
+	
+	<LuaComponent
+		_tags="enabled_in_world,enabled_in_hand"
+		script_source_file="mods/Hydroxide/files/Arcane Alchemy/materials/AA_CLONE/cloned.lua"
+		execute_every_n_frame="60"
+		>
+	</LuaComponent>
+
+	
+
+</Entity>

@@ -32,59 +32,126 @@ mod_settings_version = 1 -- This is a magic global that can be used to migrate s
 mod_settings = 
 {
 	{
-		category_id = "CC_SETTINGS",
+		id = "mod_title",
 		ui_name = "Squirrelly's Chemical Curiosities",
-		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy",
+		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy!",
+		not_setting = true,
+	},
+	{
+		id = "warning",
+		ui_name = "WARNING! SETTINGS MAY BE UNSTABLE",
+		ui_description = "a few settings may be somewhat unstable when changed from default. Disabling bloomium should be fine, but I have not finished the others yet -UserK",
+		not_setting = true,
+	},
+	{
+		category_id = "CC_SETTINGS",
+		ui_name = "Chemical Curiosities",
+		ui_description = "Settings and Options for configuring Chemical Curiosities content",
+		foldable = true,
+		_folded = true,
 		settings = {
+
 			{
-				id = "cc_spells",
-				ui_name = "Load Spells",
-				ui_description = "Allow for Chemical Curiosities to add spells to the game",
+				id = "CC_MATERIALS",
+				ui_name = "Chemical Curiosities Materials",
+				ui_description = "Adds Chemical Curiosities' Materials to your game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "cc_items",
-				ui_name = "Spawn Items",
-				ui_description = "Allow for Chemical Curiosities to add magical items to the game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_flasks",
+				id = "CC_FLASKS",
 				ui_name = "Spawn Potions",
 				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "cc_pixelscenes",
-				ui_name = "Spawn Structures",
-				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
+				id = "CC_SPELLS",
+				ui_name = "Spells",
+				ui_description = "Allow for Chemical Curiosities to add spells to your game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "cc_props",
+				id = "CC_PROPS",
 				ui_name = "Spawn Props",
 				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "cc_ores",
-				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world!",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_meat",
-				ui_name = "Freeze Meat",
-				ui_description = "Allow meat to freeze (youll still find already existing frozen meat)",
+				id = "CC_ITEMS",
+				ui_name = "Chemical Curiosities Items",
+				ui_description = "Adds Chemical Curiosities' Items to the game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
+			{
+				id = "CC_STRUCTURES",
+				ui_name = "Spawn Structures",
+				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "CC_ORES",
+				ui_name = "Spawn Ores",
+				ui_description = "Spawn Various ores throughout the world! (W.I.P)",
+				value_default = false,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}
+		}
+	},
+
+	{
+		category_id = "AA_SETTINGS",
+		ui_name = "Arcane Alchemy",
+		ui_description = "Settings and Options for configuring Chemical Curiosities content",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "AA_MATERIALS",
+				ui_name = "Arcane Alchemy Materials",
+				ui_description = "Adds Arcane Alchemy's Materials to your game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_FLASKS",
+				ui_name = "Spawn Potions",
+				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_SPELLS",
+				ui_name = "Spells",
+				ui_description = "Allow for Chemical Curiosities to add spells to your game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			-- {
+			-- 	id = "AA_PROPS",
+			-- 	ui_name = "Spawn Props",
+			-- 	ui_description = "Allow Chemical Curiosities to spawn various props in the world",
+			-- 	value_default = true,				
+			-- 	scope = MOD_SETTING_SCOPE_NEW_GAME,
+			-- }, --this is already included in structures, i dont know why i added this
+			{
+				id = "AA_ITEMS",
+				ui_name = "Chemical Curiosities Items",
+				ui_description = "Adds Chemical Curiosities' Items to the game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_BLOOMIUM_IS_ENABLED",
+				ui_name = "Bloomium",
+				value_default = true,
+				ui_description = "Yes, you can now disable Bloomium",
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}
 		}
 	}
 }

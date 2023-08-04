@@ -1,0 +1,29 @@
+<Entity tags="reaction_entity" >
+	<MagicConvertMaterialComponent
+		from_any_material="1"
+        to_material="fire"
+        steps_per_frame="6000"
+        loop="0"
+		is_circle="1"
+        radius="1000" >
+    </MagicConvertMaterialComponent>
+	
+	<MagicConvertMaterialComponent
+		from_any_material="1"
+		convert_entities="0"
+        to_material="fire"
+        steps_per_frame="7000"
+        loop="0"
+		is_circle="1"
+        radius="1000" >
+    </MagicConvertMaterialComponent>
+
+	<LuaComponent
+		_tags="enabled_in_world"
+		script_source_file="mods/Hydroxide/files/Compelling Compatibility!/INTERNAL/supernova/supernova.lua"
+        execute_on_added="1"
+        execute_times="1"
+    >
+	</LuaComponent>
+
+</Entity>

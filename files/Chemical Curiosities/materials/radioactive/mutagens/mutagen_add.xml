@@ -1,0 +1,60 @@
+<Entity
+	name="radiationEffect"
+	>
+	
+	<LifetimeComponent
+		lifetime="300"
+		>
+	</LifetimeComponent>
+	
+	<InheritTransformComponent />
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/materials/radioactive/mutagens/mutagen_add.lua"
+		execute_every_n_frame="1"
+		remove_after_executed="1"
+		>
+	</LuaComponent>
+<!--	
+	<UIIconComponent
+		name="Radiation"
+		description="Radiation poisioning"
+		icon_sprite_file="data/ui_gfx/status_indicators/polymorph_random.png"
+		is_perk="0"
+		display_above_head="0"
+		display_in_hud="1"
+		>
+	</UIIconComponent>
+	
+<ParticleEmitterComponent 
+    emitted_material_name="uranium"
+    emitter_lifetime_frames="300"
+    offset.x="0"
+    offset.y="0"
+    gravity.y="0.0"
+    x_vel_min="-10"
+    x_vel_max="10"
+    y_vel_min="-10"
+    y_vel_max="10"
+    friction="0"
+    count_min="1"
+    count_max="2"
+    lifetime_min="0.2"
+    lifetime_max="1"
+	airflow_force="5"
+	airflow_time="2"
+	airflow_scale="1"
+    emit_real_particles="0"
+	fade_based_on_lifetime="1"
+    render_on_grid="1"
+	is_trail="1"
+    trail_gap="1"
+    emit_cosmetic_particles="1"
+    emission_interval_min_frames="2"
+    emission_interval_max_frames="2"
+    is_emitting="1" >
+  </ParticleEmitterComponent>-->
+  
+	
+	
+</Entity>

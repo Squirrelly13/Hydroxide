@@ -1,0 +1,2 @@
+While I may have restructured things a bit, its still not perfect! I apologise for any inconsistencies in internal names and inconsistent structuring with folders and such
+That being said, I tried to structure this in an intuitive manner that made it easier to understand what works and how, feel free to ping me or Squirrellly (probably, havent asked them) if you have any questions!

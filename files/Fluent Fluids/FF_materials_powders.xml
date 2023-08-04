@@ -1,0 +1,547 @@
+<Materials>
+
+<!-- Sands -->
+
+  <CellData
+	name="FF_magic_powder"
+	ui_name="Magical Liquid Powder"
+  	tags="[sand_other],[corrodible],[alchemy],[potion_powder]"
+	burnable="0"
+	density="6.23"
+	cell_type="liquid"
+	wang_color="fffaf9a6"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/gate_opener_powder.png" >
+    </Graphics>
+	<StatusEffects>
+	    <Ingestion>
+            <StatusEffect type="FOOD_POISONING" amount="0.2" />
+	    </Ingestion>
+    </StatusEffects>
+  </CellData>
+
+  <CellData
+	name="material_confusion_powder"
+	ui_name="flummoxium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="2.1"
+	cell_type="liquid"
+	wang_color="81fe0205"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="data/materials_gfx/confusion.png" >
+    </Graphics>
+    <StatusEffects>
+		<Ingestion>
+			<StatusEffect type="CONFUSION" amount="0.25" />
+            <StatusEffect type="TRIP" amount="0.25" />
+            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_movement_faster_powder"
+	ui_name="acceleratium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="2.2"
+	cell_type="liquid"
+	wang_color="ff23f327"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/acceleratium_powder.png">
+    </Graphics>
+	<StatusEffects>
+	    <Ingestion>
+		    <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.3" />
+            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+	    </Ingestion>
+    </StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_faster_levitation_powder"
+	ui_name="levitatium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="2.11"
+	cell_type="liquid"
+	wang_color="fff3fbdb"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/levitatium_powder.png">
+    </Graphics>
+	<StatusEffects>
+	    <Ingestion>
+		    <StatusEffect type="FASTER_LEVITATION" amount="0.3" />
+            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+	    </Ingestion>
+    </StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_faster_levitation_and_movement_powder"
+	ui_name="hastium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="2.091"
+	cell_type="liquid"
+	wang_color="ffC8F585"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/hastium_powder.png">
+    </Graphics>
+	<StatusEffects>
+	    <Ingestion>
+		    <StatusEffect type="FASTER_LEVITATION" amount="0.35" />
+            <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.35" />
+            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+	    </Ingestion>
+    </StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_worm_attractor_powder"
+	ui_name="worm pheromone powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5.76"
+	cell_type="liquid"
+	wang_color="ff687a58"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/worm_pheromone_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="WORM_ATTRACTOR" amount="0.6" />
+            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_protection_all_powder"
+	ui_name="ambrosia powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="6.12"
+	cell_type="liquid"
+	wang_color="ffd59626"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/ambrosia_powder.png" >
+    </Graphics>
+    <StatusEffects>
+		<Ingestion>
+			<StatusEffect type="FOOD_POISONING" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_mana_regeneration_powder"
+	ui_name="very concentrated mana powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5.921"
+	cell_type="liquid"
+	wang_color="ff0bef95"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/concentrated_mana_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="MANA_REGENERATION" amount="0.3" />
+            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_unstable_teleportation_powder"
+	ui_name="unstable teleportatium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="4.43"
+	cell_type="liquid"
+	wang_color="ff0ABDE5"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="data/materials_gfx/magic_liquid_unstable_telep.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="UNSTABLE_TELEPORTATION" amount="0.15" />
+            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_teleportation_powder"
+	ui_name="teleportatium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="4.21"
+	cell_type="liquid"
+	wang_color="ff7dc56a"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/teleportatium_powder.png"
+      color="ff7dc56a" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="TELEPORTATION" amount="0.15" />
+            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_hp_regeneration_powder"
+	ui_name="healthium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="6.53"
+	cell_type="liquid"
+	wang_color="ffa1f38b"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/healthium_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="HP_REGENERATION" amount="0.15" />
+            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_polymorph_powder"
+	ui_name="polymorphine powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5.14"
+	cell_type="liquid"
+	wang_color="fff28bcb"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/polymorphine_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="POLYMORPH" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_random_polymorph_powder"
+	ui_name="chaotic polymorphine powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5.15"
+	cell_type="liquid"
+	wang_color="ffa3919f"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/chaotic_polymorphine_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="POLYMORPH_RANDOM" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_unstable_polymorph_powder"
+	ui_name="unstable polymorphine powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5.16"
+	cell_type="liquid"
+	wang_color="ffa4a60f"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="data/materials_gfx/polymorph_unstable.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="POLYMORPH_UNSTABLE" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_berserk_powder"
+	ui_name="berserkium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="3.412"
+	cell_type="liquid"
+	wang_color="fff96d68"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/berserkium_powder.png" >
+    </Graphics>
+    <StatusEffects>
+		<Ingestion>
+			<StatusEffect type="BERSERK" amount="0.45" />
+            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_charm_powder"
+	ui_name="pheromone powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="4.513"
+	cell_type="liquid"
+	wang_color="fc26a55"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/pheromone_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="CHARM" amount="0.4" />
+            <StatusEffect type="FOOD_POISONING" amount="0.35" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+  <CellData
+	name="magic_liquid_invisibility_powder"
+	ui_name="invisiblium powder"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="6.3272"
+	cell_type="liquid"
+	wang_color="ff316cd0"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="80"
+	autoignition_temperature="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	  texture_file="mods/fluid_dynamics/files/materials_gfx/invisiblium_powder.png" >
+    </Graphics>
+	<StatusEffects>
+		<Ingestion>
+            <StatusEffect type="INVISIBILITY" amount="0.3" />
+			<StatusEffect type="FOOD_POISONING" amount="0.3" />
+		</Ingestion>
+	</StatusEffects>
+  </CellData>
+
+</Materials>

@@ -39,7 +39,7 @@ table.insert( actions, {
 	name		= "Local Shift",
 	description	= "Change the world. But not everywhere...",
 	sprite		= "mods/Hydroxide/files/actions/local_shift.png",
-	related_projectiles = {"mods/Hydroxide/files/entities/projectiles/local_shift.xml"},
+	related_projectiles = {"mods/Hydroxide/files/Chemical Curiosities/spells/local_shift/local_shift.xml"},
 	type 		= ACTION_TYPE_PROJECTILE,
 	spawn_level                       = "2,3,4,5,6", -- LOCAL_SHIFT
 	spawn_probability                 = "0.6,0.6,0.6,0.6,0.6", -- LOCAL_SHIFT
@@ -47,7 +47,7 @@ table.insert( actions, {
 	mana = 260,
 	max_uses 	= 10,
 	action		= function()
-		add_projectile("mods/Hydroxide/files/entities/projectiles/local_shift.xml")
+		add_projectile("mods/Hydroxide/files/Chemical Curiosities/spells/local_shift/local_shift.xml")
 		c.fire_rate_wait    = c.fire_rate_wait + 60
         current_reload_time = current_reload_time + 60
 	end,
@@ -145,7 +145,7 @@ table.insert( actions, {
 		mana = 25,
 		--max_uses = 50,
 		action 		= function()
-			c.trail_material = c.trail_material .. "AA_MAT_REPULTIUM"
+			c.trail_material = c.trail_material .. "AA_REPULTIUM"
 			c.trail_material_amount = c.trail_material_amount + 20
 			draw_actions( 1, true )
 		end,

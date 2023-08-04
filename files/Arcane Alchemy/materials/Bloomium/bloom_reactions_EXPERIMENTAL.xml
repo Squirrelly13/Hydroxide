@@ -1,0 +1,101 @@
+<Materials>
+	-------------------------
+	--bloomium interactions--
+	-------------------------
+	
+	--- SOLID SURFACE SPREAD
+		
+	<Reaction probability="50"
+  	input_cell1="[bloom_solid]" 	input_cell2="[bloomable]"		input_cell3="air"
+  	output_cell1="[bloom_solid]"	output_cell2="[bloom_solid]"	output_cell3="air" 
+	blob_radius1="2"				blob_radius2="2"
+	>
+	</Reaction> -- Bloomium materials cause spreading while in contact with air	
+
+	<Reaction probability="50"
+  	input_cell1="[bloom_solid]" 	input_cell2="[bloomable]"		input_cell3="[bloomable_ignore]"
+  	output_cell1="[bloom_solid]"	output_cell2="[bloom_solid]"	output_cell3="[bloomable_ignore]" 
+	blob_radius1="2"				blob_radius2="2"
+	>
+	</Reaction> -- Bloomium materials cause spreading while in contact with [bloomable_ignore]
+
+
+--- GAS AND LIQUID SPREAD SOLID BLOOM
+
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[bloomable]"
+  	output_cell1="AA_BLOOM_LIQUID"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> -- BLOOM LIQUID converts [bloomable] into BLOOM FLOOR
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_GAS" 	input_cell2="[bloomable]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="AA_BLOOM_ROOF" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> -- BLOOM GAS converts [bloomable] into BLOOM ROOF
+
+--- SOLID SPAWNS GAS AND LIQUID
+	
+	<Reaction probability="15"
+  	input_cell1="[bloom_solid]" 	input_cell2="air" 
+  	output_cell1="[bloom_solid]"	output_cell2="AA_BLOOM_GAS" 
+	>
+    </Reaction> --BLOOM FLOOR EMITS BLOOM GAS
+
+	<Reaction probability="95"
+  	input_cell1="[bloom_solid]" 	input_cell2="air" 
+  	output_cell1="[bloom_solid]"	output_cell2="AA_BLOOM_LIQUID" 
+	>
+	</Reaction> -- BLOOM FLOOR DRIPS BLOOM LIQUID
+	
+--- BLOOM GAS AND BLOOM LIQUID DISSIPATE
+	
+	<Reaction probability="85"
+	input_cell1="AA_BLOOM_GAS"	input_cell2="[bloom_solid]"
+	output_cell1="air"				output_cell2="[bloom_solid]"
+	>
+	</Reaction> --BLOOM GAS VANISHES ON CONTACT WITH [bloom_solid]
+	
+	<Reaction probability="10"
+	input_cell1="AA_BLOOM_GAS"	input_cell2="air"
+	output_cell1="air"				output_cell2="air"
+	>
+	</Reaction> --BLOOM GAS VANISHES ON CONTACT WITH AIR
+  
+
+	
+
+	
+	<Reaction probability="80"
+  	input_cell1="AA_BLOOM_ROOF_DEAD" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_ROOF_DEAD"	output_cell2="AA_BLOOM_LIQUID"  
+	>
+	</Reaction> -- dead bloom roof drips still
+	
+	<Reaction probability="10"
+  	input_cell1="AA_BLOOM_ROOF" 	input_cell2="[solid]" 
+  	output_cell1="AA_BLOOM_ROOF_PLANT" 	output_cell2="AA_BLOOM_ROOF_DEAD" 
+	blob_radius1="3"
+	>
+	</Reaction> -- bloom roof dies or somethin
+	
+   <Reaction probability="80"
+  	input_cell1="AA_BLOOM_FLOOR" 	input_cell2="fire" 
+  	output_cell1="fire"	output_cell2="fire" 
+	>
+	</Reaction> -- bloom burns
+	
+
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --bloom potion blooms solids
+
+	
+
+</Materials>

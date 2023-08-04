@@ -1,0 +1,14 @@
+<Entity name="radiationIcon">
+	<InheritTransformComponent />
+	
+	<UIIconComponent
+		name="Radiation Poisoning"
+		description="Exposure to radiation is causing problems!"
+		icon_sprite_file="mods/Hydroxide/files/Chemical Curiosities/materials/radioactive/radiation.png"
+		is_perk="1"
+		display_above_head="0"
+		display_in_hud="0"
+		>
+	</UIIconComponent>
+	
+</Entity>

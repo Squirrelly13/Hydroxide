@@ -1,0 +1,25 @@
+<Entity>
+	<GameEffectComponent 
+		effect="CUSTOM"
+		custom_effect_id="SINKING"
+		frames="600"
+	>
+	</GameEffectComponent >	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Arcane Alchemy/materials/AA_HUNGRY_SLIME/sinking.lua"
+		execute_on_added="1"
+		execute_every_n_frame="1"
+		>
+	</LuaComponent>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Arcane Alchemy/materials/AA_HUNGRY_SLIME/damage_player_slime.lua"
+		execute_on_added="1"
+		execute_every_n_frame="200"
+		>
+	</LuaComponent>	
+	
+	<InheritTransformComponent>
+	</InheritTransformComponent>
+
+</Entity>

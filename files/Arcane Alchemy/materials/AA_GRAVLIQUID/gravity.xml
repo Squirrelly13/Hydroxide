@@ -1,0 +1,23 @@
+<Entity tags="hittable,teleportable_NOT" >
+
+<GameEffectComponent 
+    effect="CUSTOM"
+    custom_effect_id="GRAVITY"
+    frames="1">
+</GameEffectComponent> 
+
+	<!-- physical presence -->
+	
+	
+
+	<!-- movement and gravity -->
+	<LuaComponent
+		_tags="enabled_in_world,enabled_in_hand"
+		script_source_file="mods/Hydroxide/files/Arcane Alchemy/materials/AA_GRAVLIQUID/gravity.lua"
+		execute_every_n_frame="1"
+		>
+	</LuaComponent>
+
+	
+
+</Entity>

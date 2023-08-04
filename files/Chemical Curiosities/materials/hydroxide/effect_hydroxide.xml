@@ -1,0 +1,18 @@
+<Entity>
+	<GameEffectComponent
+		effect="CUSTOM"
+		custom_effect_id="HYDROXIDE"
+		frames="60"
+	>
+	</GameEffectComponent>
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/materials/hydroxide/hydroxide.lua"
+		execute_on_added="1"
+		execute_every_n_frame="50"
+		>
+	</LuaComponent>
+	
+	<InheritTransformComponent />
+
+</Entity>

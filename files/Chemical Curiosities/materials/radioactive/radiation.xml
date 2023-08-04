@@ -1,0 +1,7 @@
+<Entity>
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/materials/radioactive/radiation.lua"
+		execute_on_added="1"
+		>
+	</LuaComponent>
+</Entity>
