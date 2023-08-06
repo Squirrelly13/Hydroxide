@@ -33,7 +33,7 @@ end
 ]]--
 print("////////////// Commencing Hydroxide init //////////////")
 
-EntityLoad("mods/Hydroxide/files/pixel_scenes/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
+EntityLoad("mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -103,7 +103,7 @@ if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
 	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
 
 	if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
-		EntityLoad("mods/Hydroxide/files/pixel_scenes/music_shrine.xml", 6200, 5500)  --load the musical shrine
+		EntityLoad("mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
         GameAddFlagRun("squirrellys_music_altar_is_spawned")  --this tells the game to add this flag, the previous "if" statement won't spawn it every time you load the save now
 
     end

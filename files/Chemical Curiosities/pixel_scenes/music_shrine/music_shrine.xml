@@ -1,8 +1,8 @@
 <Entity>
     <PixelSceneComponent
-		pixel_scene_background=	"mods/Hydroxide/files/pixel_scenes/music_shrine_background.png"
-		pixel_scene_visual=		"mods/Hydroxide/files/pixel_scenes/music_shrine_visual.png"
-		pixel_scene=			"mods/Hydroxide/files/pixel_scenes/music_shrine.png" 
+		pixel_scene_background=	"mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/music_shrine/music_shrine_background.png"
+		pixel_scene_visual=		"mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/music_shrine/music_shrine_visual.png"
+		pixel_scene=			"mods/Hydroxide/files/Chemical Curiosities/pixel_scenes/music_shrine/music_shrine.png" 
 		offset_x="0"
 		offset_y="0"
 		skip_biome_checks="1" 
@@ -14,3 +14,4 @@
 	</LifetimeComponent>
 
 </Entity>
+

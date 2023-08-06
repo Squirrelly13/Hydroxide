@@ -44,10 +44,12 @@ if ModSettingGet("Hydroxide.CC_pixelscenes") == true then
 	
 	});
 
-	RegisterSpawnFunction( 0xffff00be, "spawn_dripping_methane")
 	
-	function spawn_dripping_methane(x,y)
-		EntityLoad( "mods/Hydroxide/files/Chemical Curiosities/props/dripping_methane_gas.xml", x, y )
+	RegisterSpawnFunction( 0xffff00be, "spawn_methane")
+	function spawn_methane(x, y)
+		if safe( x, y ) then
+			EntityLoad( "data/entities/props/dripping_methane_gas.xml", x, y )
+		end
 	end
 end
 	
