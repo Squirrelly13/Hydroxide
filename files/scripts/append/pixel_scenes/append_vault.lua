@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+if ModSettingGet("Hydroxide.cc_pixelscenes") then
 table.insert(g_pixel_scene_01, {
 	prob			= 1.0,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/vault/hydroxidetank.png",
@@ -16,7 +16,7 @@ table.insert(g_pixel_scene_02, {
 	});
 end
 
-if ModSettingGet("Hydroxide.cc_props") == "on" then
+if ModSettingGet("Hydroxide.cc_props") then
 		
 	table.insert(g_props, {
 		prob 		= 0.5,

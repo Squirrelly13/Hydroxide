@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+if ModSettingGet("Hydroxide.cc_pixelscenes") then
 table.insert(g_pixel_scene_01, {
 		prob   			= 1.2,
 		material_file 	= "data/biome_impl/liquidcave/container_01.png",

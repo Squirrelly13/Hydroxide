@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_props") == "on" then
+if ModSettingGet("Hydroxide.cc_props") then
 table.insert(g_props, {
 	prob 		= 0.3,
 	min_count	= 1,
