@@ -122,7 +122,7 @@ ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will overr
 --no idea what magic numbers are, but this does somethin to em
 
 
---ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells ( deprecated )
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- Adds nerf dart spell, from Arcane Alchemy. For Magic Plastic secret.
  
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/scripts/append/append_status_list.lua" ) --new status effects
 
