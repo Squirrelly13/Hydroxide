@@ -37,7 +37,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	print( "===================================== random " .. tostring(x) )
 	
 	
-	if ModSettingGet("Hydroxide.cc_ores") == "on" then 
+	if ModSettingGet("Hydroxide.cc_ores") then 
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
@@ -113,7 +113,7 @@ register_translation("item_vial_with_material_description", "A glass vial contai
 ]]
 
 -- This code runs when all mods' filesystems are registered
-if ModSettingGet("Hydroxide.cc_spells") == "on" then 
+if ModSettingGet("Hydroxide.cc_spells") then 
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/actions.lua" ) -- adds spells, really just sea of methane
 end
 
@@ -126,7 +126,7 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scri
  
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/scripts/append/append_status_list.lua" ) --new status effects
 
-if ModSettingGet("Hydroxide.cc_flasks") == "on" then
+if ModSettingGet("Hydroxide.cc_flasks") then
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/scripts/append/append_potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/scripts/append/append_powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/scripts/append/append_potion_aggressive.lua" ) --for alchemist enemy
@@ -145,7 +145,7 @@ ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/sc
 ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
 ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/scripts/append/pixel_scenes/append_vault.lua" ) --new structures in the vault
 
-if ModSettingGet("Hydroxide.cc_items") == "on" then
+if ModSettingGet("Hydroxide.cc_items") then
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/scripts/append/append_items.lua" ) --adds items to pedestals
 end
 
@@ -195,7 +195,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
     EntitySetDamageFromMaterial( player_entity, "hydroxide", 0.005 )
 	
 	  if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
-		if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+		if ModSettingGet("Hydroxide.cc_pixelscenes") then
 			EntityLoad("mods/Hydroxide/files/pixel_scenes/music_shrine.xml", 6200, 5500)  --load the musical shrine
 		end
 		

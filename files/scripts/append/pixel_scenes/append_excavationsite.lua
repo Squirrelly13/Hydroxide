@@ -1,4 +1,4 @@
-if ModSettingGet("Hydroxide.cc_pixelscenes") == "on" then
+if ModSettingGet("Hydroxide.cc_pixelscenes") then
 table.insert(g_pixel_scene_04, {
 	prob			= 0.8,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/excavationsite/blast_tank.png",
@@ -132,7 +132,7 @@ table.insert(g_gunpowderpool_04, {
 	});
 	
 end
-if ModSettingGet("Hydroxide.cc_props") == "on" then
+if ModSettingGet("Hydroxide.cc_props") then
 table.insert(g_props, {
 	prob 		= 0.2,
 	min_count	= 1,
