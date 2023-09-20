@@ -140,12 +140,13 @@ end
 
 
 --- Bloomium (disabled for now)
+--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml" ) 
+--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml" ) 
 
-ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" ) 
-ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_reactions.xml" ) 
-
-if ModSettingGet("Hydroxide.AA_bloomium") == true then
-
+if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
+	
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/materials.xml" ) 
+	
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" ) 
@@ -187,6 +188,11 @@ if ModSettingGet("Hydroxide.AA_bloomium") == true then
 end
 
 
+-- 		[Mystical Mixtures]
+
+if ModSettingGet("Hydroxide.MM_MATERIALS") == true then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
+end
 
 
 

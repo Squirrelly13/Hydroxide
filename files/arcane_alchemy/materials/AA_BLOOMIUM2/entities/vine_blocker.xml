@@ -1,0 +1,13 @@
+<Entity>
+    <MagicConvertMaterialComponent
+        radius="20"
+        is_circle="1"
+        steps_per_frame="20"
+        from_material="AA_BLOOM_ROOF"
+        to_material="AA_BLOOM_ROOF_INERT"
+    />
+    
+    <LifetimeComponent
+        lifetime="4"
+    />
+</Entity>

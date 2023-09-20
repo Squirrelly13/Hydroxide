@@ -1,6 +1,6 @@
 <Materials>
 
-  -- bloom
+ <!--  bloom -->
   <CellData
 	name="AA_BLOOM"
 	ui_name="Bloomium"
@@ -28,7 +28,7 @@
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/healthy/root_growth.png">
     </Graphics>
 	
-  </CellData> --bloomium (floor?)
+  </CellData><!-- bloomium (floor?) -->
 	
   <CellData
 	name="AA_BLOOM_ROOF"
@@ -58,7 +58,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium Ceiling
+  </CellData><!-- bloomium Ceiling -->
   
      <CellData
 	name="AA_BLOOM_ROOF_DEAD"
@@ -88,7 +88,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium ceiling (probably doesnt drip??)
+  </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
   
   <CellData
 	name="AA_BLOOM_ROOF_PLANT"
@@ -104,7 +104,7 @@
 	liquid_viscosity="101"
 	liquid_sticks_to_ceiling="100"
   vegetation_full_lifetime_growth="700"
-	vegetation_sprite="mods/Hydroxide/files/gfx/vegetation/bloom_ceiling_$[1-7].xml" 
+	vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ceiling_$[1-7].xml" 
 	temperature_of_fire="90"
 	autoignition_temperature="85"
 	on_fire="0"
@@ -121,7 +121,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --i think this is the roots that hang from bloomium roofs
+  </CellData><!-- i think this is the roots that hang from bloomium roofs -->
   
   <CellData
 	name="AA_BLOOMIUM_LIQUID"
@@ -143,7 +143,7 @@
 	is_grass="1"
 	color="336D693E" >
     </Graphics>
-  </CellData> --bloomium drip
+  </CellData><!-- bloomium drip -->
 
 	<CellData
 	name="AA_BLOOMIUM_GAS"
@@ -166,11 +166,11 @@
 	
 	color="55678828" >
     </Graphics>
-  </CellData> --bloomium gas
+  </CellData><!-- bloomium gas -->
 
 
 
-  -- Contaminated Bloomium
+ <!--  Contaminated Bloomium -->
   <CellData
 	name="AA_BLOOM_POISONED"
 	ui_name="Contaminated Bloomium"
@@ -198,7 +198,7 @@
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/infected/root_growth.png">
     </Graphics>
 	
-  </CellData> --bloomium (floor?)
+  </CellData><!-- bloomium (floor?) -->
 	
   <CellData
 	name="AA_BLOOM_ROOF_POISONED"
@@ -228,7 +228,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium Ceiling
+  </CellData><!-- bloomium Ceiling -->
   
      <CellData
 	name="AA_BLOOM_ROOF_DEAD_POISONED"
@@ -258,7 +258,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium ceiling (probably doesnt drip??)
+  </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
   
   <CellData
 	name="AA_BLOOM_ROOF_PLANT_POISONED"
@@ -291,9 +291,9 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --i think this is the roots that hang from bloomium roofs
+  </CellData><!-- i think this is the roots that hang from bloomium roofs -->
   
-  <CellData -- Bloomium Liquid
+  <CellData<!--  Bloomium Liquid -->
 	name="AA_BLOOMIUM_LIQUID_POISONED"
 	ui_name="Contaminated Bloomium Liquid"
 	tags="[corrodible],[magic_liquid],[burnable],[meltable_to_lava],[alchemy]"
@@ -313,9 +313,9 @@
 	is_grass="1"
 	color="33613e6d" >
     </Graphics>
-  </CellData> --bloomium drip
+  </CellData><!-- bloomium drip -->
 
-	<CellData -- Contaminated Bloomium Gas
+	<CellData<!--  Contaminated Bloomium Gas -->
 	name="AA_BLOOMIUM_GAS_POISONED"
 	ui_name="Contaminated Bloomium Gas"
   	tags="[gas]"
@@ -338,5 +338,5 @@
     </Graphics>
   </CellData> 
 
-  -- Decayed Bloomium
+ <!--  Decayed Bloomium -->
 </Materials>

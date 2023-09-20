@@ -102,7 +102,7 @@
 	liquid_viscosity="101"
 	liquid_sticks_to_ceiling="100"
   vegetation_full_lifetime_growth="700"
-	vegetation_sprite="mods/Hydroxide/files/gfx/vegetation/bloom_ceiling_$[1-7].xml" 
+	vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ceiling_$[1-7].xml" 
 	temperature_of_fire="90"
 	autoignition_temperature="85"
 	on_fire="0"

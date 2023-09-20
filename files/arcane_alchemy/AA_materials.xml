@@ -7,7 +7,7 @@
 
 
 
-  
+  <!--
   <CellData
 	name="AA_BLOOM_MAGIC"
 	ui_name="Bloomium"
@@ -35,7 +35,7 @@
 			<StatusEffect type="POISONED" amount="0.1" />
 		</Ingestion>
 	</StatusEffects>
-   </CellData> <!--  magic liquid specifically for creating a bloomery  -->
+   </CellData>--> <!--  magic liquid specifically for creating a bloomery  -->
 	
    <CellData
     name="AA_HITSELF"

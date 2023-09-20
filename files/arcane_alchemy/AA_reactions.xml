@@ -395,13 +395,6 @@
 	>
 	</Reaction><!--  big plants in jungle -->
 	
-	<Reaction probability="3"
-	input_cell1="AA_NEUTRAL_POTION"				input_cell2="[bloom]"
-	output_cell1="AA_BLOOMIUM_GAS"			output_cell2="AA_COMPOST"
-	blob_radius1="5"
-	blob_restrict_to_input_material1="1"
-	>
-	</Reaction><!-- activates hella plants with bloomium -->
 	
 		<Reaction probability="50"
 	input_cell1="AA_NEUTRAL_POTION" 	input_cell2="magic_liquid_charm"

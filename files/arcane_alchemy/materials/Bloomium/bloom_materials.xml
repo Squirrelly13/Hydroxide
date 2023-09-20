@@ -27,7 +27,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium (floor?)
+  </CellData><!-- bloomium (floor?) -->
 	
   <CellData
 	name="AA_BLOOM_ROOF"
@@ -57,7 +57,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium Ceiling
+  </CellData><!-- bloomium Ceiling -->
   
      <CellData
 	name="AA_BLOOM_ROOF_DEAD"
@@ -87,7 +87,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --bloomium ceiling (probably doesnt drip??)
+  </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
   
   <CellData
 	name="AA_BLOOM_ROOF_PLANT"
@@ -103,7 +103,7 @@
 	liquid_viscosity="101"
 	liquid_sticks_to_ceiling="100"
   vegetation_full_lifetime_growth="700"
-	vegetation_sprite="mods/Hydroxide/files/gfx/vegetation/bloom_ceiling_$[1-7].xml" 
+	vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ceiling_$[1-7].xml" 
 	temperature_of_fire="90"
 	autoignition_temperature="85"
 	on_fire="0"
@@ -120,7 +120,7 @@
 	color="ffCF1FC8" >
     </Graphics>
 	
-  </CellData> --i think this is the roots that hang from bloomium roofs
+  </CellData><!-- i think this is the roots that hang from bloomium roofs -->
   
   <CellData
 	name="AA_BLOOM_LIQUID"
@@ -142,7 +142,7 @@
 	is_grass="1"
 	color="336D693E" >
     </Graphics>
-  </CellData> --bloomium drip
+  </CellData><!-- bloomium drip -->
 
 	<CellData
 	name="AA_BLOOM_GAS"
@@ -165,5 +165,5 @@
 	
 	color="55678828" >
     </Graphics>
-  </CellData> --bloomium gas
+  </CellData><!-- bloomium gas -->
 </Materials>

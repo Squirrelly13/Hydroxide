@@ -34,11 +34,13 @@ if ModSettingGet("Hydroxide.cc_props") == true then
 		entity	= "mods/Hydroxide/files/chemical_curiosities/props/physics_methane_tank.xml"
 	});
 	
-	table.insert(g_props, {
-		prob		= 0.05,
-		min_count	= 1,
-		max_count 	= 1,
-		offset_y	= 0,
-		entity	= "mods/Hydroxide/files/arcane_alchemy/props/physics_bloomium_tank.xml"
-	});
+	if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
+		table.insert(g_props, {
+			prob		= 0.05,
+			min_count	= 1,
+			max_count 	= 1,
+			offset_y	= 0,
+			entity	= "mods/Hydroxide/files/arcane_alchemy/props/physics_bloomium_tank.xml"
+		});
+	end
 end
