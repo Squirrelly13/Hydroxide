@@ -96,8 +96,8 @@ mod_settings =
 			{
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world! (W.I.P)",
-				value_default = false,				
+				ui_description = "Spawn Various ores throughout the world!",
+				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
@@ -149,7 +149,14 @@ mod_settings =
 				id = "AA_BLOOMIUM",
 				ui_name = "Bloomium",
 				value_default = true,
-				ui_description = "Yes, you can now disable Bloomium",
+				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive as it once was.",
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_BLOOMIUM_VEINS",
+				ui_name = "Bloomium World Gen",
+				value_default = true,
+				ui_description = "Bloomium can spawn in the world",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
