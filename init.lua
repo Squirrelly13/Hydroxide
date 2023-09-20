@@ -44,7 +44,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	if ModSettingGet("Hydroxide.CC_ORES") then 
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
-			--dofile_once("mods/Hydroxide/files/scripts/oreGen/inject_ores.lua")
+			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
 			print("Chemical Curiosities oreGen complete")
 			GameAddFlagRun("Squirrelly_Ore_generated")
 		end
@@ -139,7 +139,7 @@ end
 
 
 
---- Bloomium (disabled for now)
+--- bloomium
 --ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml" ) 
 --ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml" ) 
 
@@ -289,7 +289,7 @@ register_translation("item_vial_with_material_description", "A glass vial contai
 
 
 
-ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will override some magic numbers using the specified file
+--ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will override some magic numbers using the specified file
 --no idea what magic numbers are, but this does somethin to em
 
 
@@ -332,11 +332,7 @@ for elem in xml:each_child() do
 end
 
 
---ModTextFileSetContent("data/materials.xml", tostring(xml))
--- ^commenting this since it seems to flood the init a bunch, also it might add more time to the init loadtime or smth idk -UserK
-
-
-
+ModTextFileSetContent("data/materials.xml", tostring(xml))
 
 
 
