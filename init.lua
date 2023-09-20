@@ -365,4 +365,12 @@ OnModPostInit(
 )
 ]]--finish this up
 
-print("////////////// Hydroxide mod init done! //////////////")
+print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee
+
+--More Musical Magic implementation, coded by Y🍵
+if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
+	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
+	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua",data)
+end
+ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
+ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
