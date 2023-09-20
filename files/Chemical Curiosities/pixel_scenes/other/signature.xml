@@ -12,5 +12,5 @@
 		lifetime="2"
 		>
 	</LifetimeComponent>
-	--this is just a neat lil thing i felt like adding for the fun of it
+	<!--this is just a neat lil thing i felt like adding for the fun of it-->
 </Entity>

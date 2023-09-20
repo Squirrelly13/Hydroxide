@@ -1,7 +1,7 @@
 <Materials>
-	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
+<!-- making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now -->
 	
-	--TODO make unstable metamorphine more procedural if possible
+<!-- TODO make unstable metamorphine more procedural if possible -->
 	
 
 
@@ -35,7 +35,7 @@
 			<StatusEffect type="POISONED" amount="0.1" />
 		</Ingestion>
 	</StatusEffects>
-   </CellData>  -- magic liquid specifically for creating a bloomery 
+   </CellData> <!--  magic liquid specifically for creating a bloomery  -->
 	
    <CellData
     name="AA_HITSELF"
@@ -68,7 +68,7 @@
 			<StatusEffect type="FOOD_POISONING" amount="0.1" />
 			</Ingestion>
     </StatusEffects>
-  </CellData>  -- Why are you hitting yourself? 
+  </CellData> <!--  Why are you hitting yourself?  -->
   
     <CellData
     name="AA_DARKMATTER"
@@ -117,7 +117,7 @@
 		  <StatusEffect type="TRIP" amount="0.2"  />
       </Ingestion>
     </StatusEffects>
-  </CellData> -- COLLAPSE
+  </CellData><!--  COLLAPSE -->
   
   <CellData
     name="AA_STATIC_CHARGE"
@@ -164,7 +164,7 @@
             <StatusEffect type="AA_STATIC_CHARGE" amount="0.1"/>
         </Ingestion>
     </StatusEffects>
-  </CellData> -- makes you shocking
+  </CellData><!--  makes you shocking -->
 
   
   <CellData 
@@ -201,7 +201,7 @@
             <StatusEffect type="AA_REPULSION" />
         </Stains>
     </StatusEffects>    
-  </CellData> --Things bounce off this.
+  </CellData><!-- Things bounce off this. -->
   
   <CellData 
     name="AA_HUNGRY_SLIME"
@@ -240,7 +240,7 @@
             <StatusEffect type="AA_HUNGRY_VOMIT" amount="0.15"/>
         </Ingestion>
     </StatusEffects> 
-  </CellData> --slowly growing slime of some kind. not sure how this goes
+  </CellData><!-- slowly growing slime of some kind. not sure how this goes -->
   
    <CellData 
     name="AA_CREEPING_SLIME"
@@ -272,7 +272,7 @@
 		color="A06134eb"
 		>
 	</Graphics>
-  </CellData> --this one spreads over ground, pretty aggressively
+  </CellData><!-- this one spreads over ground, pretty aggressively -->
 
   <CellData 
     name="AA_HUNGRY_SLIME_GROWING"
@@ -307,7 +307,7 @@
       texture_file="mods/Hydroxide/files/Arcane Alchemy/materials/AA_HUNGRY_SLIME/hungry2.png" 
       color="FF7C5100">
     </Graphics>
-  </CellData> --Growing Slime
+  </CellData><!-- Growing Slime -->
 
   
     <CellData
@@ -334,7 +334,7 @@
 		color="ffCDC9BE" >
 		
     </Graphics>
-  </CellData> --ASH
+  </CellData><!-- ASH -->
   
   <CellData
 	name="AA_SOOT"
@@ -355,7 +355,7 @@
 	<Graphics
 		color="ff363636" >
     </Graphics>
-  </CellData> --Soot?
+  </CellData><!-- Soot? -->
 
    
   <CellData
@@ -380,7 +380,7 @@
 		color="A0F0FFE4" >
 		
     </Graphics>
-  </CellData> --Potion Gas, a catalyst for making other potions.
+  </CellData><!-- Potion Gas, a catalyst for making other potions. -->
 
   
   <CellData
@@ -407,7 +407,7 @@
 		color="98b8376d"
 		>
     </Graphics>
-  </CellData> --Solidified slime. unsure the use case but its neat
+  </CellData><!-- Solidified slime. unsure the use case but its neat -->
 	
  <CellData
 	name="AA_NEUTRAL_POTION"
@@ -448,7 +448,7 @@
 		>
     </Graphics>
 	
-  </CellData> --Neutral potion, used in reactions probably
+  </CellData><!-- Neutral potion, used in reactions probably -->
   
   <CellData
 	name="AA_ARBORIUM"
@@ -516,7 +516,7 @@
 			<StatusEffect type="INGESTION_DRUNK" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> --Catalyst
+  </CellData><!-- Catalyst -->
   
    <CellData
 	name="AA_OIL_SPLITTING"
@@ -552,7 +552,7 @@
 	<Graphics
 	color="e63D3728" >
     </Graphics>
-  </CellData>  --seperating oil material
+  </CellData> <!-- seperating oil material -->
 
   
     <CellData
@@ -589,7 +589,7 @@
 	<Graphics
 	color="e6685D45" >
     </Graphics>
-  </CellData> --LIGHT OIL
+  </CellData><!-- LIGHT OIL -->
 
   
     <CellData
@@ -626,7 +626,7 @@
 	<Graphics
 	color="e628241B" >
     </Graphics>
-  </CellData> --HEAVY OIL
+  </CellData><!-- HEAVY OIL -->
 
    <CellData 
 	name="AA_MAGICPLASTIC"
@@ -658,7 +658,7 @@
 		color="FF7A0B03"
 		>
     </Graphics>
-  </CellData> --idk makes a nerf gun with something but idk what. kinda broken, gonna leave it in
+  </CellData><!-- idk makes a nerf gun with something but idk what. kinda broken, gonna leave it in -->
   
     <CellData 
 	name="AA_LOVE"
@@ -714,7 +714,7 @@
 			<StatusEffect type="LOVE_POTION" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --love heart potion, kinda cool
+  </CellData><!-- love heart potion, kinda cool -->
 
   
   <CellData 
@@ -767,8 +767,8 @@
 			<StatusEffect type="PATH" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --A meager offering
-  --TODO reactions maybe gold and something?
+  </CellData><!-- A meager offering -->
+ <!-- TODO reactions maybe gold and something? -->
   
      <CellData
 	name="rice"
@@ -816,7 +816,7 @@
 			<StatusEffect type="HP_REGENERATION" amount="0.003" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> --RICE
+  </CellData><!-- RICE -->
   
   <CellData 
 	name="AA_ICEFIRE"
@@ -868,7 +868,7 @@
 			<StatusEffect type="ICEFIRE" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --Icy Inferno turns fire to freezing vapor in vicinity of player
+  </CellData><!-- Icy Inferno turns fire to freezing vapor in vicinity of player -->
 
   
   <CellData 
@@ -914,7 +914,7 @@
 			<StatusEffect type="VOMIT_SPELLS" amount="0.10" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --Pandorium
+  </CellData><!-- Pandorium -->
 
   
    <CellData 
@@ -961,7 +961,7 @@
 			</Ingestion>
     </StatusEffects>
 	
-  </CellData> --Unstable Pandorium
+  </CellData><!-- Unstable Pandorium -->
   
    <CellData 
 	name="AA_LIQUID_ROCK"
@@ -1002,7 +1002,7 @@
 		>
     </Graphics>
 	
-  </CellData> --POP ROCKS!!!!
+  </CellData><!-- POP ROCKS!!!! -->
 
     <CellData 
 	name="AA_GRAVLIQUID"
@@ -1054,7 +1054,7 @@
 			<StatusEffect type="GRAVITY" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --Condensed Gravity
+  </CellData><!-- Condensed Gravity -->
   
   <CellData 
 	name="AA_CLONE"
@@ -1108,10 +1108,9 @@
 			<StatusEffect type="CLONE" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --Cloning Solution
+  </CellData><!-- Cloning Solution -->
 
  
---[[ ]] 
     <!-- <CellData 
 	name="AA_GLUE"
 	ui_name="Omega glue"
@@ -1148,9 +1147,9 @@
 			<StatusEffect type="GLUED" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData> --> --Omega Glue 
-  --TODO fix
-	--POssibly using a hitbox to detect which enemies to add anchors to
+  </CellData>--><!--Omega Glue  -->
+ <!-- TODO fi -->
+<!-- POssibly using a hitbox to detect which enemies to add anchors t -->
 
   
   <CellData
@@ -1179,7 +1178,7 @@
 	  texture_file="data/materials_gfx/moss.png"
 	  color="ff80C850" >
     </Graphics>
-  </CellData> --Compost, grows big plants its pretty cool
+  </CellData><!-- Compost, grows big plants its pretty coo -->
   
       <CellData
 	name="AA_GROWTH"
@@ -1207,8 +1206,8 @@
 
 		>
 	</ExplosionConfig>
-  </CellData> --Growth? not sure what this is, it just explodes
-  --TODO figure out what this is even for
+  </CellData><!-- Growth? not sure what this is, it just explode -->
+ <!-- TODO figure out what this is even fo -->
   
   
 <CellData
@@ -1252,6 +1251,6 @@
         sparks_count_min="5" 
         >
     </ExplosionConfig>
-  </CellData> --Strange Matter?
-  --TODO figure out what this is for
+  </CellData><!-- Strange Matter -->
+ <!-- TODO figure out what this is fo -->
 </Materials>

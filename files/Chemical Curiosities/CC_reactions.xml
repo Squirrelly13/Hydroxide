@@ -1,8 +1,6 @@
 <Materials>
 	
-	----------
-	--metals--
-	----------
+	<!-- metals -->
 	
 	<Reaction probability="50"
 	input_cell1="iron"		input_cell2="magic_liquid_random_polymorph"
@@ -68,23 +66,17 @@
 	>
 	</Reaction>
 	
-	---------------
-	---persistine--
-	---------------
+	<!-- -persistine -->
 	
 	<Reaction probability="20"
 	input_cell1="[fire]" 		input_cell2="ferrineSkin" input_cell3="ferrineSkin"
 	output_cell1="[fire]" 		output_cell2="iron" output_cell3="smoke" >
 	</Reaction>
 	
-	----------
-	--tweaks--
-	----------
+	<!-- tweaks -->
 	
 	
-	--------------
-	--antimatter--
-	--------------
+	<!-- antimatter -->
 	<Reaction probability="90"
 	input_cell1="antimatter_gas"	input_cell2="[static]"
 	output_cell1="air"			output_cell2="air"
@@ -247,9 +239,7 @@
 	>
 	</Reaction>
 	
-	------------
-	--morphine--
-	------------
+	<!-- morphine -->
 	
 	<Reaction probability="68"
 	input_cell1="magic_liquid_protection_all"	input_cell2="material_confusion"
@@ -258,9 +248,7 @@
 	</Reaction>
 	
 	
-	-----------
-	--uranium--
-	-----------
+	<!-- uranium -->
 	
 	<Reaction probability="75"
 	input_cell1="uranium"	input_cell2="air"
@@ -298,9 +286,7 @@
 	audio_fx_volume_1="100.0" >
 	</Reaction>
 
-	--------------------
-	--melting Crystals--
-	--------------------
+	<!-- melting Crystals -->
 	
 	<Reaction probability="20"
 	input_cell1="solidCrystal_molten" 	input_cell2="[static]"
@@ -345,11 +331,8 @@
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>
 	</Reaction>
-	-->
 	
-	----------
-	--Grease--
-	----------
+	<!-- Grease -->
 	
 	<Reaction probability="40"
 	input_cell1="oil"		input_cell2="slime"
@@ -378,9 +361,7 @@
 	>
 	</Reaction>
 	
-	---------------
-	--Hiisi wires--
-	---------------
+	<!-- Hiisi wires -->
 	
 	<Reaction probability="0.4"
 	input_cell1="water"					input_cell2="metal_wire_nohit"
@@ -415,9 +396,7 @@
 	>
 	</Reaction>
 
-	----------------
-	--health tonic--
-	----------------
+	<!-- health tonic -->
 	
 	<Reaction probability="68"
 	input_cell1="pea_soup"			input_cell2="honey"
@@ -426,9 +405,7 @@
 	>
 	</Reaction>
 	
-	------------------
-	--thunder powder--
-	------------------
+	<!-- thunder powder -->
 	
 	<Reaction probability="35"
 	input_cell1="lightningPowder"	input_cell2="[fire]"
@@ -437,17 +414,11 @@
 	>
 	</Reaction>
 
-	-----------------
-	--static charge--
-	-----------------
+	<!-- static charge -->
 	
-	---------------
-	--Icy Inferno--
-	---------------
+	<!-- Icy Inferno -->
 	
-	-------------------
-	--Liberum Magicas--
-	-------------------
+	<!-- Liberum Magicas -->
 	
 	<Reaction probability="2"
 	input_cell1="wand_tinker"	input_cell2="air"
@@ -456,9 +427,7 @@
 	>
 	</Reaction>
 	
-	-----------
-	--Nullium--
-	-----------
+	<!-- Nullium -->
 	
 	<Reaction probability="80"
 	input_cell1="magic_liquid_mana_regeneration"	input_cell2="antimagic"
@@ -546,9 +515,7 @@
 	>
 	</Reaction>
 	
-	-----------------
-	--metastasizium--
-	-----------------
+	<!-- metastasizium -->
 	
 	<Reaction probability="100"
 	input_cell1="liquid_projectile_trail"	input_cell2="acid"
@@ -564,9 +531,7 @@
 	>
 	</Reaction>
 	
-	-----------
-	--agitine--
-	-----------
+	<!-- agitine -->
 	
 	<Reaction probability="30"
 		input_cell1="explodePlayer"	input_cell2="[meat]"
@@ -585,9 +550,7 @@
 		</ExplosionConfig>
 	</Reaction>
 	
-	----------
-	--tweaks--
-	----------
+	<!-- tweaks -->
 
 
 	<Reaction probability="23"
@@ -597,9 +560,7 @@
 	>
 	</Reaction>
 	
-	------------------
-	--alchemy powder--
-	------------------
+	<!-- alchemy powder -->
 	
 	
 	<Reaction probability="85"
@@ -618,9 +579,7 @@
 	</Reaction>
 	
 	
-	----------------
-	--Metamorphine--
-	----------------
+	<!-- Metamorphine -->
 	<Reaction probability="100"
 	input_cell1="metamorphine"		input_cell2="[liquid]"
 	output_cell1="air"				output_cell2="[liquid]"
@@ -663,9 +622,7 @@
 	>
 	</Reaction>
 	
-	----------------------------
-	--unspeed potion reactions--
-	----------------------------
+	<!-- unspeed potion reactions -->
    <Reaction probability="50"
 	input_cell1="[magic_slower]" 		input_cell2="[magic_faster]"
 	output_cell1="fire_blue" 			output_cell2="steam"  >
@@ -680,13 +637,13 @@
 		ray_energy="50000"
 		>
 	</ExplosionConfig>
-  </Reaction> --detonates with fasters
+  </Reaction><!-- detonates with fasters -->
   
    <Reaction probability="15"
 	input_cell1="magic_liquid_slower_levitation" 	input_cell2="magic_liquid_movement_slower"
 	output_cell1="magic_liquid_slower_levitation_and_movement" 	output_cell2="magic_liquid_slower_levitation_and_movement"
 	>
-  </Reaction> --mix
+  </Reaction><!-- mix -->
   
 	<Reaction probability="56"
 	input_cell1="magic_liquid_slower_levitation"	input_cell2="slime"
@@ -706,25 +663,15 @@
 	>
 	</Reaction>
 
-	------------
-	--Kindling--
-	------------
+	<!-- Kindling -->
 	
-	--------------------
-	--cloning solution--
-	--------------------
+	<!-- cloning solution -->
 	
-	-------------
-	--supernova--
-	-------------
+	<!-- supernova -->
 	
-	------------------
-	--creeping slime--
-	------------------
+	<!-- creeping slime -->
 
-	---------------
-	--methane gas--
-	---------------
+	<!-- methane gas -->
 	
 	<Reaction probability="10"
 	input_cell1="frozen_meat"	input_cell2="air"
@@ -770,9 +717,7 @@
 	</Reaction>
 	
 	
-	-----------------------
-	--meat rots with snow--
-	-----------------------
+	<!-- meat rots with snow -->
 	
 	<Reaction probability="23"
 	input_cell1="snow" 		input_cell2="meat"
@@ -796,9 +741,7 @@
 	</Reaction>
 	
 
-	---------------------
-	--glittering liquid--
-	---------------------
+	<!-- glittering liquid -->
 	
 	<Reaction probability="14"
 	input_cell1="glitteringLiquid"	input_cell2="[fire]"
@@ -825,9 +768,7 @@
 	>
 	</Reaction>
 	
-	----------------
-	--spark liquid--
-	----------------
+	<!-- spark liquid -->
 	
 	
 	<Reaction probability="1"
@@ -851,9 +792,7 @@
 	</Reaction>
 	
 	
-	------------------
-	--slicing liquid--
-	------------------
+	<!-- slicing liquid -->
 
 	<Reaction probability="31"
 	input_cell1="sliceLiquid"	input_cell2="[fire]"
@@ -862,9 +801,7 @@
 	>
 	</Reaction>
 	
-	-------------------
-	--blasting powder--
-	-------------------
+	<!-- blasting powder -->
 	
 	<Reaction probability="30"
 	input_cell1="magic_liquid_mana_regeneration"		input_cell2="gunpowder_tnt"
@@ -886,9 +823,7 @@
 	entity="mods/Hydroxide/files/Chemical Curiosities/materials/blastPowder/blastingPowder.xml"
 	>
 	</Reaction>
-	--------------------------------------------
-	--acid and hydroxide
-	--------------------------------------------
+	<!-- acid and hydroxide -->
 	<Reaction probability="100"
 	input_cell1="hydroxide"		input_cell2="acid"
 	output_cell1="acidWater" 	output_cell2="acidWater"
@@ -896,20 +831,20 @@
 	blob_radius1="3"
 	blob_radius2="3"
 	>
-	</Reaction> -- hydroxide and acid form acid water
+	</Reaction><!--  hydroxide and acid form acid water -->
 
 
 	<Reaction probability="15"
 	input_cell1="acid"		input_cell2="acidWater"
 	output_cell1="salt" 		output_cell2="acidWater"
 	>
-	</Reaction> -- acid water purifies acid
+	</Reaction><!--  acid water purifies acid -->
 	
 	<Reaction probability="15"
 	input_cell1="hydroxide"		input_cell2="acidWater"
 	output_cell1="salt" 		output_cell2="acidWater"
 	>
-	</Reaction> -- acid water purifies hydroxide
+	</Reaction><!--  acid water purifies hydroxide -->
 
 	<Reaction probability="100"
 	input_cell1="acidWater" 	input_cell2="acidWater"
@@ -917,7 +852,7 @@
 	req_lifetime="240"
 	blob_radius1="3"
 	>
-	</Reaction> acid water turns into normal water
+	</Reaction> <!-- acid water turns into normal water -->
 	
 	
   	
@@ -929,7 +864,7 @@
 	blob_radius2="2"
 	audio_fx_volume_1="10.0" 
 	>
-  </Reaction> --hydroxide acts like acid
+  </Reaction><!-- hydroxide acts like acid -->
 
 
   <Reaction probability="10"
@@ -938,7 +873,7 @@
 	fast_reaction="1"
 	audio_fx_volume_1="1.0" 
 	>
-  </Reaction> --hydroxide acts like acid
+  </Reaction><!-- hydroxide acts like acid -->
   
  
   <Reaction probability="12"
@@ -947,20 +882,18 @@
 	fast_reaction="1"
 	audio_fx_volume_1="1.0" 
 	>
-  </Reaction> --hydroxide acts like acid
+  </Reaction><!-- hydroxide acts like acid -->
 
 
 	
-	-------------------------------------------------------------------------
-	--devouring moss interactions
-	-------------------------------------------------------------------------
+	<!-- devouring moss interactions -->
 	<Reaction probability="100"
 	input_cell1="devouringMoss"   	input_cell2="rock_static"
 	output_cell1="devouringMoss"	output_cell2="devouringMoss"
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> --rock
+	</Reaction><!-- rock -->
 	
 	<Reaction probability="100"
 	input_cell1="devouringMoss"   	input_cell2="sand_static"
@@ -968,7 +901,7 @@
 	blob_radius2="2"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> --ground
+	</Reaction><!-- ground -->
 
 	<Reaction probability="100"
 	input_cell1="devouringMoss"	input_cell2="[mossDevour]"
@@ -976,7 +909,7 @@
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> --tags based 
+	</Reaction><!-- tags based  -->
 
 	<Reaction probability="100"
 	input_cell1="devouringMoss"	input_cell2="rock_static_grey"
@@ -1004,7 +937,7 @@
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> --devour gate boss
+	</Reaction><!-- devour gate boss -->
 
 	<Reaction probability="100"
 	input_cell1="devouringMoss"   	input_cell2="rock_box2d_nohit"
@@ -1012,7 +945,7 @@
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> --devour certain enemies
+	</Reaction><!-- devour certain enemies -->
 
 	-------------------------------------------------------------------------
 	--water extinguishes fires
@@ -1023,15 +956,11 @@
 	input_cell1="water" 		input_cell2="[fire]"
 	output_cell1="steam"		output_cell2="smoke"
 	>
-	</Reaction> --water kinda puts out fires
+	</Reaction><!-- water kinda puts out fires -->
 	
-	-------------
-	--Pop Rocks--
-	-------------
+	<!-- Pop Rocks -->
 	
-	-------------------------
-	-- poly overtakes meat --
-	-------------------------
+	<!--  poly overtakes meat  -->
 	
 	<Reaction probability="10"
 	input_cell1="[meat]"	input_cell2="magic_liquid_unstable_polymorph"
@@ -1052,13 +981,9 @@
 	</Reaction>
 	
 
-	---------------------
-	--a few new recipes--
-	---------------------
+	<!-- a few new recipes -->
 	
-	----------------------------------
-	-- poly and fungus interactions --
-	----------------------------------
+	<!--  poly and fungus interactions  -->
 	<Reaction probability="40"
 	input_cell1="fungi"	input_cell2="magic_liquid_polymorph"
 	output_cell1="fungi"	output_cell2="fungi"
@@ -1072,9 +997,7 @@
 	</Reaction>
 
 	
-	---------------------
-	--veilium reactions--
-	---------------------
+	<!-- veilium reactions -->
 	<Reaction probability="8"
 	input_cell1="CC_potionBlindness"	input_cell2="alcohol"
 	output_cell1="CC_potionBlindness"	output_cell2="CC_potionBlindness"
@@ -1092,18 +1015,16 @@
 	input_cell1="CC_potionBlindness" 	input_cell2="[fire]"
 	output_cell1="[fire]"			output_cell2="methane"
 	>
-	</Reaction> --burning
+	</Reaction><!-- burning -->
 
 	<Reaction probability="60"
 	input_cell1="CC_potionBlindness" 		input_cell2="[lava]"
 	output_cell1="[fire]"		output_cell2="methane">
-	</Reaction> --burning
+	</Reaction><!-- burning -->
 
 
 
-	------------------------------------
-	--moss grows a tiny bit more often--
-	------------------------------------
+	<!-- moss grows a tiny bit more often -->
 	<Reaction probability="2" 
 	input_cell1="rock_static" 		input_cell2="air" 	
 	output_cell1="rock_static" 		output_cell2="moss"  

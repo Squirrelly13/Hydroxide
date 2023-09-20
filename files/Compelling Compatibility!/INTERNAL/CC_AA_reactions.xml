@@ -1,8 +1,6 @@
 <Materials>
 	
-	----------
-	--metals--
-	----------
+	<!--metals-->
 	
 	
 	<Reaction probability="20"
@@ -51,15 +49,11 @@
 	
 
 	
-	---------------
-	---persistine--
-	---------------
+	<!-- -persistine -->
 	
 
 	
-	----------
-	--tweaks--
-	----------
+	<!-- tweaks -->
 
 	
 	
@@ -105,9 +99,7 @@
 	>
 	</Reaction>
 
-	-----------------
-	--static charge--
-	-----------------
+	<!-- static charge -->
 	
 
 	
@@ -131,15 +123,11 @@
 	
 
 
-	-----------------
-	--metastasizium--
-	-----------------
+	<!-- metastasizium -->
 	
 
 	
-	-----------
-	--agitine--
-	-----------
+	<!-- agitine -->
 
 	<Reaction probability="43"
 	input_cell1="AA_MAT_NEUTRAL_POTION"		input_cell2="gunpowder_tnt"
@@ -183,9 +171,7 @@
 	
 
 	
-	------------------
-	--alchemy powder--
-	------------------
+	<!-- alchemy powder -->
 	
 	
 
@@ -226,9 +212,7 @@
 	
 
 
-	------------
-	--Kindling--
-	------------
+	<!-- Kindling -->
 	
 	<Reaction probability="89"
 		input_cell1="alcohol"			input_cell2="AA_MAT_NEUTRAL_POTION"
@@ -237,9 +221,7 @@
 	>
 	</Reaction>
 	
-	--------------------
-	--cloning solution--
-	--------------------
+	<!-- cloning solution -->
 	
 	<Reaction probability="50"
 		input_cell1="devouringMoss"		input_cell2="AA_MAT_NEUTRAL_POTION"
@@ -248,9 +230,7 @@
 	>
 	</Reaction>
 	
-	-------------
-	--supernova--
-	-------------
+	<!-- supernova -->
 	
 	<Reaction probability = "50"
         input_cell1="AA_GRAVLIQUID" input_cell2="AA_MAT_DARKMATTER" input_cell3="[antimatter]"
@@ -270,7 +250,7 @@
 		ray_energy="1"
 		>
 	</ExplosionConfig>
-	</Reaction> --grav liquid and darkmatter explode
+	</Reaction><!-- grav liquid and darkmatter explode -->
 	
 
 
@@ -298,14 +278,14 @@
 	input_cell1="alchemyPowder"				input_cell2="blood_fungi"
 	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
 	>
-	</Reaction> --alchemy powder potion recipe
+	</Reaction><!-- alchemy powder potion recipe -->
 	
 	<Reaction probability="100"
 	input_cell1="AA_BLOOM_MAGIC"	input_cell2="alchemyPowder"
 	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
 	blob_radius2="2"
 	>
-	</Reaction> --part of the alchemy powder recipe
+	</Reaction><!-- part of the alchemy powder recipe -->
 	
 
 
@@ -315,7 +295,7 @@
 	output_cell1="air"	output_cell2="material_darkness"
 	blob_radius1="2"
 	>
-	</Reaction> -- methane and bloomium make ominous liquid
+	</Reaction><!--  methane and bloomium make ominous liquid -->
 
 	
 
@@ -353,11 +333,11 @@
 	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME"
 	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
 	>
-	</Reaction> --create devouring moss
+	</Reaction><!-- create devouring moss -->
 	
 	<Reaction probability="100"
 	input_cell1="iron_ingredient"	input_cell2="AA_MAT_HUNGRY_SLIME_GROWING"
 	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
 	>
-	</Reaction> --create devouring moss
+	</Reaction><!-- create devouring moss -->
 </Materials>
