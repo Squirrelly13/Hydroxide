@@ -62,7 +62,11 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 
 	end
+
+
 end
+
+dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 
 --   	[Chemical Curiosities]
 

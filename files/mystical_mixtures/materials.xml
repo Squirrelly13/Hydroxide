@@ -63,7 +63,7 @@
   <CellData
 	name="catfood_container"
 	ui_name="Catfood Container"
-  	tags="[box2d],[rust_box2d],[alchemy],[meltable_metal],[solid],[earth]"
+  	tags="[box2d],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="8"
 	cell_type="solid"
