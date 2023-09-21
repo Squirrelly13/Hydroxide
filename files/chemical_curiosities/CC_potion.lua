@@ -98,6 +98,8 @@ table.insert(materials_magic, {
 
 local old_init = init
 init = function( entity_id )
+    local x, y = EntityGetTransform( entity_id )
+    SetRandomSeed( x, y )
     roll_number = Random(1,100 * 1000) / 1000
     possible_rolls = {}
     for k, v in pairs(materials_magic)do
