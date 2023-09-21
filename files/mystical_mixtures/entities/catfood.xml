@@ -18,8 +18,8 @@
   <PhysicsImageShapeComponent 
     body_id="1"
     centered="1"
-    image_file="mods/Hydroxide/files/arcane_alchemy/items/vials/vial_normals.png"
-    material="potion_glass_box2d"
+    image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/catfood.png"
+    material="catfood_container"
   ></PhysicsImageShapeComponent>
   
   <PhysicsThrowableComponent
@@ -55,6 +55,7 @@
     _tags="enabled_in_hand,enabled_in_world"
     spray_velocity_coeff="75"
     spray_velocity_normalized_min="0.75"
+    never_color="1"
   ></PotionComponent>
 
   <MaterialSuckerComponent 
@@ -118,16 +119,11 @@
       sparks_count_min="10" 
       sparks_count_max="20" 
       sparks_enabled="1" 
-	  spark_material="glass"
+	  spark_material="catfood_container"
       stains_enabled="1" 
       stains_radius="0" >
     </config_explosion>
   </ExplodeOnDamageComponent>
-
-  <PhysicsBodyCollisionDamageComponent 
-    _tags="enabled_in_world" 
-    speed_threshold="80.0"
-  ></PhysicsBodyCollisionDamageComponent>
 
   <!-- item -->
 
@@ -136,22 +132,22 @@
     _enabled="0"
     offset_x="3.5"
     offset_y="2"
-    image_file="mods/Hydroxide/files/arcane_alchemy/items/vials/vial.png"
+    image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/catfood.png"
   ></SpriteComponent>
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Vial"
+    item_name="Can"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
-    ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/vials/vial_hand.png"
-    ui_description="$item_vial_with_material_description"
+    ui_sprite="mods/Hydroxide/files/mystical_mixtures/gfx/entities/catfood_item.png"
+    ui_description="$item_can_with_material_description"
     preferred_inventory="QUICK"
   ></ItemComponent>
 
   <AbilityComponent
-    ui_name="$item_vial_with_material"
+    ui_name="$item_can_with_material"
     throw_as_item="1"
   ><gun_config
     deck_capacity="0"
@@ -167,7 +163,7 @@
 		sprite_file="data/particles/ray.xml" 
 		delay="0"
 		lifetime="1.5"
-		color.r="1" color.g="0.423" color.b="0" color.a="1.0"
+		color.r="1" color.g="0.5" color.b="1" color.a="1.0"
 		color_change.r="0" color_change.g="0" color_change.b="0" color_change.a="-3.5"
 		velocity.x="0" velocity.y="0"
 		gravity.x="0" gravity.y="0"
@@ -203,8 +199,13 @@
   <AudioComponent
     _tags="enabled_in_world"
     file="data/audio/Desktop/materials.bank"
-    event_root="collision/glass_potion"
+    event_root="collision/metalhollow"
     set_latest_event_position="1" >
   </AudioComponent>
+
+  <VariableStorageComponent
+    name="potion_material"
+    value_string="bingus_wetfood"
+  />
 
 </Entity>

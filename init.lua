@@ -33,6 +33,7 @@ end
 ]]--
 print("////////////// Commencing Hydroxide init //////////////")
 
+dofile("mods/Hydroxide/lib/add_translation.lua")
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -49,7 +50,18 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 		
 	end
+	if ModSettingGet("Hydroxide.AA_ITEMS") then
+		print("Adding arcane alchemy items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/AA_items.lua" ) --adds items to pedestals
+		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
+		end
+	end
+	if ModSettingGet("Hydroxide.MM_ITEMS") then
+		print("Adding mystical mixtures items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 
+	end
 end
 
 --   	[Chemical Curiosities]
@@ -68,6 +80,10 @@ end
 if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_reactions.xml" ) --reactions
+
+	if(ModSettingGet("Hydroxide.CC_METHANE_GENERATION"))then
+		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_methane_reactions.xml" ) --methane generation
+	end
 
 	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/CC_effects.lua" ) --effects
 	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/CC_gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
@@ -98,6 +114,12 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 
+	-- debugging stuffs from eba
+	--[[
+	local player_x, player_y = EntityGetTransform( player_entity )
+	EntityLoad("mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml", player_x, player_y)
+	]]
+	
 end
 --  Items
 
@@ -288,12 +310,15 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
+-- why this no work??
+register_translation("item_can_with_material", "Can of $0")
+register_translation("item_can_with_material_description", "A Can containing $0")
 
--- i think this is just so that the name for vials can show materials? seems to break something.
---[[
 register_translation("item_vial_with_material", "Vial of $0")
 register_translation("item_vial_with_material_description", "A glass vial containing $0")
-]]
+
+
+
 
 
 

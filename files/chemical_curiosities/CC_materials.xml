@@ -1,7 +1,7 @@
 <Materials>
-	--making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now
+<!-- making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now -->
 	
-	--TODO make unstable metamorphine more procedural if possible
+<!-- TODO make unstable metamorphine more procedural if possible -->
 	
  <CellData 
         name="hydroxide"
@@ -26,7 +26,7 @@
 				<StatusEffect type="HYDROXIDE" />
 			</Stains>
         </StatusEffects>
- </CellData>   --hydroxide. the first material i made.
+ </CellData>  <!-- hydroxide. the first material i made. -->
 
  <CellData
 	name="acidWater"
@@ -61,7 +61,7 @@
 			<StatusEffect type="WET" />
 		</Stains>
 	</StatusEffects>
-  </CellData> -- acidic water, used exclusively for the hydroxide acid interactions
+  </CellData><!--  acidic water, used exclusively for the hydroxide acid interactions -->
   
   <CellData
 	name="devouringMoss"
@@ -81,7 +81,7 @@
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/devouringMoss/devouringMoss.png"
 	>
 	</Graphics>
-  </CellData> -- spreads over rock and ground aggressively. Very fun!
+  </CellData><!--  spreads over rock and ground aggressively. Very fun! -->
   
 
  <CellData
@@ -107,7 +107,7 @@
 		color="ae7f93c2"
 	>
     </Graphics>
- </CellData> -- basically acid's flammable gas, but blue
+ </CellData><!--  basically acid's flammable gas, but blue -->
 
  <CellData
 	name="CC_potionBlindness"
@@ -159,7 +159,7 @@
 			<StatusEffect type="BLINDNESS"		 amount="0.3"   />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> --blindness potion
+  </CellData><!-- blindness potion -->
 
 
   <CellData
@@ -196,7 +196,7 @@
 			<StatusEffect type="POISONED" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> -- Liquid Spark bolts
+  </CellData><!--  Liquid Spark bolts -->
   
   <CellData
 	name="sliceLiquid"
@@ -230,7 +230,7 @@
 		probability="0.0518"
 	>
 	</ParticleEffect>
-  </CellData> --liquid discs
+  </CellData><!-- liquid discs -->
   
   <CellData
 	name="glitteringLiquid"
@@ -269,7 +269,7 @@
 			<StatusEffect type="EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> -- firework liquid
+  </CellData><!--  firework liquid -->
 	
   <CellData
 	name="blastPowder"
@@ -327,7 +327,7 @@
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="5"
 	status_effects="INGESTION_METHANE"
-	lifetime="1600"
+	lifetime="600"
 	generates_flames="20"
 	generates_smoke="1"
 	on_fire="0"
@@ -339,8 +339,30 @@
 	<Graphics
 	color="c5ab4c4f"
 	></Graphics>
-	</CellData> --lol, methane gas.
+	</CellData><!-- lol, methane gas. -->
 	
+	<CellData
+		name="carbon_dioxide"
+		ui_name="Carbon dioxide"
+		tags="[gas]"
+		burnable="0"
+		density="1"
+		lifetime="350"
+		cell_type="gas"
+		wang_color="7fabeea2"
+		generates_smoke="0"
+		liquid_gravity="0.5"
+		liquid_sand="0"
+		on_fire="0"
+		requires_oxygen="0"
+		temperature_of_fire="60"
+		show_in_creative_mode="1"
+		>
+	<Graphics
+		color="b3665e55" >
+    </Graphics>
+	</CellData>
+
 	<CellDataChild
 	_parent="liquid_fire"
 	name="methaneRain"
@@ -349,7 +371,7 @@
 	wang_color="af3a3a3e"
 	lifetime="80"
 	>
-	</CellDataChild> --sometimes drips from methane gas, pretty fun
+	</CellDataChild><!-- sometimes drips from methane gas, pretty fun -->
 	
 	  <CellData
 	name="twitchyJuice"
@@ -385,7 +407,7 @@
 				<StatusEffect type="TWITCHY" amount="0.2" />
 			</Ingestion>
 		</StatusEffects>
-  </CellData> --twitchy mage blood
+  </CellData><!-- twitchy mage blood -->
   
   <CellData
 	name="fireStarter"
@@ -431,7 +453,7 @@
 		particle_effect="0"
 		>
 	</ExplosionConfig>
-  </CellData> --Kindling, if it burns, everything burns
+  </CellData><!-- Kindling, if it burns, everything burns -->
 	
   <CellData	
 	name="magic_liquid_movement_slower"
@@ -470,7 +492,7 @@
 			<StatusEffect type="MOVEMENT_SLOWER_2X" amount="0.2" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData>  --Deceleratium
+  </CellData> <!-- Deceleratium -->
   
   <CellData
 	name="magic_liquid_slower_levitation"
@@ -509,7 +531,7 @@
 			<StatusEffect type="LEVITATION_SLOWER" amount="0.2" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> --Heftium
+  </CellData><!-- Heftium -->
 	
 	
 
@@ -554,7 +576,7 @@
 			<StatusEffect type="MOVEMENT_SLOWER_2X" amount="0.1" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> --Stillium
+  </CellData><!-- Stillium -->
   
   <CellData
 	name="metamorphine"
@@ -795,7 +817,7 @@
 		count.max="4"
 	>
 	</ParticleEffect>
-	</CellData>  --TODO find out what the hell is calling "antimagic" with lowercase M and throwing a hell of a lotta errors
+	</CellData> <!-- TODO find out what the hell is calling "antimagic" with lowercase M and throwing a hell of a lotta errors -->
 	
 	<CellData
 		name="wand_tinker"
@@ -1518,6 +1540,6 @@
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/deezium/deezium.png"
 			>
 		</Graphics>
-	</CellData> --this is a funny material but also ill probs use it for testing stuff -UserK
+	</CellData><!-- this is a funny material but also ill probs use it for testing stuff -UserK -->
 
 </Materials>

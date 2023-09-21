@@ -673,17 +673,10 @@
 
 	<!-- methane gas -->
 	
-	<Reaction probability="10"
-	input_cell1="frozen_meat"	input_cell2="air"
-	output_cell1="frozen_meat"	output_cell2="methane"
-	>
-	</Reaction>
-	
-	
 	<Reaction probability="1"
 	input_cell1="methane"	input_cell2="[fire]"
-	output_cell1="fire"		output_cell2="air"
-	>
+	output_cell1="water"		output_cell2="carbon_dioxide"
+	><!--Methane burns into water and Co2-->
 	<ExplosionConfig 
 
 		cell_explosion_power="30"
@@ -698,11 +691,19 @@
 	</Reaction>
 	
 	<Reaction probability="10"
-	input_cell1="[fire]" 		input_cell2="methane"
-	output_cell1="methane"	output_cell2="methane"
-	>
-  </Reaction>
-	
+		input_cell1="[fire]" 		input_cell2="methane"
+		output_cell1="water"	output_cell2="carbon_dioxide"
+	><!--Methane burns into water and Co2-->
+	</Reaction>
+		
+	<Reaction probability="10"
+		input_cell1="steam" 		input_cell2="methane"
+		output_cell1="water"	output_cell2="carbon_dioxide"
+	><!--This should actually create Hydrogen and carbon monoxide but lazy-->
+	</Reaction>
+
+		
+	<!--
     <Reaction probability="3"
 	input_cell1="methane"	input_cell2="[fire]"
 	output_cell1="methaneRain"		output_cell2="[fire]"
@@ -715,7 +716,7 @@
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>
-	
+	-->
 	
 	<!-- meat rots with snow -->
 	
