@@ -1,0 +1,155 @@
+<Materials>
+  	-------------------------
+	--bloomium interactions--
+	-------------------------
+	
+	<Reaction probability="5"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="air"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="air" 
+	>
+	</Reaction> -- bloomium juice evaporates
+
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOM_LIQUID"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> -- bloom juice blooms solid
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOM_LIQUID"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --bloom juice blooms on static
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_GAS" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="AA_BLOOM_ROOF" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --bloom gas blooms on solid
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_GAS" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="AA_BLOOM_ROOF" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --bloom gas blooms on statics
+	
+	<Reaction probability="15"
+  	input_cell1="AA_BLOOM_FLOOR" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_FLOOR"	output_cell2="AA_BLOOM_GAS" 
+	>
+    </Reaction> --bloom emits bloom gas
+	
+	<Reaction probability="85"
+	input_cell1="AA_BLOOM_GAS"	input_cell2="[bloom]"
+	output_cell1="air"				output_cell2="[bloom]"
+	>
+	</Reaction> -- bloom gas fades
+	
+	<Reaction probability="4"
+	input_cell1="AA_BLOOM_GAS"	input_cell2="air"
+	output_cell1="air"				output_cell2="air"
+	>
+	</Reaction> --bloom gas fades
+  
+	<Reaction probability="95"
+  	input_cell1="AA_BLOOM_FLOOR" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_FLOOR"	output_cell2="AA_BLOOM_LIQUID" 
+	>
+	</Reaction> -- bloom drips
+	
+	<Reaction probability="80"
+  	input_cell1="AA_BLOOM_ROOF" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_ROOF"	output_cell2="AA_BLOOM_LIQUID" 
+	>
+	</Reaction> -- bloom drips
+	
+	<Reaction probability="80"
+  	input_cell1="AA_BLOOM_ROOF_DEAD" 	input_cell2="air" 
+  	output_cell1="AA_BLOOM_ROOF_DEAD"	output_cell2="AA_BLOOM_LIQUID"  
+	>
+	</Reaction> -- dead bloom roof drips still
+	
+	<Reaction probability="10"
+  	input_cell1="AA_BLOOM_ROOF" 	input_cell2="[solid]" 
+  	output_cell1="AA_BLOOM_ROOF_PLANT" 	output_cell2="AA_BLOOM_ROOF_DEAD" 
+	blob_radius1="3"
+	>
+	</Reaction> -- bloom roof dies or somethin
+	
+   <Reaction probability="80"
+  	input_cell1="AA_BLOOM_FLOOR" 	input_cell2="fire" 
+  	output_cell1="poison"	output_cell2="fire" 
+	>
+	</Reaction> -- bloom burns to poison 
+	
+	<Reaction probability="100"
+  	input_cell1="AA_NEUTRAL_POTION" input_cell2="vomit" 
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
+	blob_radius1="5"		blob_radius2="5"	
+	>
+	</Reaction> --bloom potion recipe. 
+	
+	<Reaction probability="100"
+	input_cell1="alchemyPowder"				input_cell2="blood_fungi"
+	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
+	>
+	</Reaction> --alchemy powder potion recipe
+	
+	<Reaction probability="100"
+	input_cell1="AA_BLOOM_MAGIC"	input_cell2="alchemyPowder"
+	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
+	blob_radius2="2"
+	>
+	</Reaction> --part of the alchemy powder recipe
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[solid]"
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --bloom potion blooms solids
+	
+	<Reaction probability="75"
+  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[static]"
+  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_FLOOR" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> --Bloom potion blooms statics
+	
+	<Reaction probability="100"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[liquid]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="air" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+    </Reaction> --bloom liquid kinda destroys other liquids
+	
+	<Reaction probability="50"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[sand_ground]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="AA_BLOOM_FLOOR" 
+	>
+	</Reaction> --Blooms on [ground_sand]
+	
+	<Reaction probability="50"
+  	input_cell1="AA_BLOOM_GAS" 	input_cell2="[sand_ground]"
+  	output_cell1="AA_BLOOM_LIQUID"	output_cell2="AA_BLOOM_ROOF" 
+	>
+	</Reaction> --gas blooms roof on ground_sand 
+	
+	<Reaction probability="100"
+  	input_cell1="AA_BLOOM_LIQUID" 	input_cell2="[sand_other]"
+  	output_cell1="AA_BLOOM_GAS"	output_cell2="air" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction> -- lots of powders are immune
+	
+	<Reaction probability="40"
+	input_cell1="methane"				input_cell2="[bloom]"
+	output_cell1="air"	output_cell2="[bloom]_POISONED_DECAYED"
+	blob_radius1="2"
+	>
+	</Reaction>
+</Materials>
