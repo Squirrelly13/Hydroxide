@@ -7,7 +7,7 @@ alchemical_materials = {
         color = "FF72BFD8", -- visual color
         texture = nil, -- texture path
         type = "liquid",
-        tags = "",
+        tags = "[alchemical]",
     },
     {
         id = "alchemical_base",
@@ -17,7 +17,7 @@ alchemical_materials = {
         color = "c87e6996",
         texture = nil, -- texture path
         type = "liquid",
-        tags = "",       
+        tags = "[alchemical]",       
     },
     {
         id = "ephemeral_ether",
@@ -27,7 +27,8 @@ alchemical_materials = {
         color = "C60AFFD2",
         texture = nil, -- texture path
         type = "liquid",
-        tags = "",
+        tags = "[alchemical]",
+        density = 1.1,
     },
     {
         id = "ephemeral_ether_gas",
@@ -40,7 +41,30 @@ alchemical_materials = {
         lifetime = 200,
         burnable = true,
         glow = 20,
-    }
+    },
+    {
+        id = "gold_solution",
+        name = "Gold Solution",
+        description = "Gold Solution is a solution of gold in an alchemical solvent.\nIt can be used in a variety of recipes.",
+        generate_notes = true,
+        color = "FFFFDF86",
+        texture = "data/materials_gfx/gold.png", -- texture path
+        type = "liquid",
+        tags = "[alchemical]",
+        density = 3.7,
+        glow = 200,
+    },
+    {
+        id = "replicating_agent",
+        name = "Replicating Agent",
+        description = "A substance which through mystical means appears to clone other liquid substances.",
+        generate_notes = true,
+        color = "8AEF5FE6",
+        texture = nil, -- texture path
+        type = "liquid",
+        glow = 150,
+        density = 4.6,
+    },
 }
 
 alchemical_recipes = {
@@ -59,24 +83,43 @@ alchemical_recipes = {
     },
     {
         id = "gold_solution",
-        name = "Solution of Gold",
+        name = "A Solution of Gold",
         description = "Gold can be dissolved in an alchemical solvent to be more usable in future recipes.",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
             "[gold]",
+            "[gold]",
             "alchemical_solvent",
-            "[fire]",
         },
         outputs = {
-            "air",
             "gold_solution",
+            "gold_solution",
+            "ephemeral_ether",
         },
-        blob_radius1 = nil,
-        blob_radius2 = nil,
-        blob_radius3 = nil,
-        func = function(x, y)
-            
-        end
-    }
+    },
+    {
+        id = "replicating_agent_1",
+        probability = 100,
+        inputs = {
+            "replicating_agent",
+            "[liquid]",
+        },
+        outputs = {
+            "[liquid]",
+            "[liquid]",
+        },
+    },
+    {
+        id = "replicating_agent_2",
+        probability = 100,
+        inputs = {
+            "replicating_agent",
+            "[magic_liquid]",
+        },
+        outputs = {
+            "[magic_liquid]",
+            "[magic_liquid]",
+        },
+    }, 
 }

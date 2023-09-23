@@ -11,7 +11,7 @@ for k, v in ipairs(alchemical_materials)do
         ui_name="]]..v.name..[["
         tags="]]..(v.tags ~= nil and (v.tags .. ",[liquid]") or "[liquid]")..[["
         burnable="]]..(v.burnable and "1" or "0")..[["
-        density="2.9"
+        density="]]..(v.density ~= nil and v.density or 3)..[["
         cell_type="liquid"
         wang_color="]]..v.color..[["
         gfx_glow="]]..(v.glow ~= nil and v.glow or 0)..[["
@@ -21,7 +21,7 @@ for k, v in ipairs(alchemical_materials)do
         >
         <Graphics
             color="]]..v.color..[["
-            ]]..((v.texture ~= nil) and ("texture_file="..v.texture) or "") ..[[
+            ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
         >
         </Graphics>
     </CellData>
@@ -33,7 +33,7 @@ for k, v in ipairs(alchemical_materials)do
             ui_name="]]..v.name..[["
             tags="]]..(v.tags ~= nil and (v.tags .. ",[sand_other],[corrodible]") or "[sand_other],[corrodible]")..[["
             burnable="]]..(v.burnable and "1" or "0")..[["
-            density="4.5"
+            density="]]..(v.density ~= nil and v.density or 15)..[["
             cell_type="liquid"
             wang_color="]]..v.color..[["
             generates_smoke="0"
@@ -50,7 +50,7 @@ for k, v in ipairs(alchemical_materials)do
             >
             <Graphics
                 color="]]..v.color..[["
-                ]]..((v.texture ~= nil) and ("texture_file="..v.texture) or "") ..[[
+                ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
         </CellData>     
@@ -62,7 +62,7 @@ for k, v in ipairs(alchemical_materials)do
             ui_name="]]..v.name..[["
             tags="]]..(v.tags ~= nil and (v.tags .. ",[gas]") or "[gas]")..[["
             burnable="]]..(v.burnable and "1" or "0")..[["
-            density="1"
+            density="]]..(v.density ~= nil and v.density or 1)..[["
             lifetime="]]..(v.lifetime ~= nil and v.lifetime or -1)..[["
             cell_type="gas"
             wang_color="]]..v.color..[["
@@ -75,7 +75,7 @@ for k, v in ipairs(alchemical_materials)do
             >
             <Graphics
                 color="]]..v.color..[["
-                ]]..((v.texture ~= nil) and ("texture_file="..v.texture) or "") ..[[
+                ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
         </CellData> 
@@ -138,7 +138,7 @@ for k, v in ipairs(alchemical_recipes)do
     <Reaction probability="]]..tostring(v.probability or 100)..[["
         input_cell1="]]..input1..[["	input_cell2="]]..input2..[["	input_cell3="]]..(input3 or "")..[["
         output_cell1="]]..output1..[["	output_cell2="]]..output2..[["	output_cell3="]]..(output3 or "")..[["
-        blob_radius1="]]..(v.blob_radius1 or "")..[[" blob_radius2="]]..(v.blob_radius2 or "")..[[" blob_radius3="]]..(v.blob_radius3 or "")..[["
+        blob_radius1="]]..(v.blob_radius1 or "1")..[[" blob_radius2="]]..(v.blob_radius2 or "1")..[[" blob_radius3="]]..(v.blob_radius3 or "1")..[["
     ]]
 
     if(v.func ~= nil)then 
