@@ -101,7 +101,7 @@ alchemical_recipes = {
     {
         id = "wand_capacity",
         name = "On the subject of wand capacity",
-        description = "Wands are a the best friend of wizards and witches alike.\nHowever they can only hold a certain amount of spells.\nIt is known that a solution of gold together with an achemical base can adjust the capacity of a wand, but it may not always turn out properly.",
+        description = "Wands are a the best friend of wizards and witches alike.\nHowever they can only hold a limited amount of spells.\nIt is known that a solution of gold together with an achemical base can adjust the capacity of a wand, but it may not always turn out as expected.",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
