@@ -1,0 +1,25 @@
+<MaterialComponent _enabled="1"
+    is_rare="1"
+    limit_max_y="2048"
+    limit_min_y="100"
+    limit_y="0"
+    material_index="1"
+    material_max="1.4"
+    material_min="0.5"
+    material_name="brass"
+    rare_polka_is_boxed="1"
+    rare_polka_probability="0.25"
+    rare_polka_radius_high="0.921"
+    rare_polka_radius_low="0.325"
+    rare_required_max="10"
+    rare_required_min="0.5"
+    rare_scale_x="0.03"
+    rare_scale_y="0.03"
+    rare_use_perlin="1"
+    rare_use_polka="1"
+    
+    rare_offset_by_seed="1"
+    rare_offset_x="5685" 
+    rare_offset_y="325">
+</MaterialComponent>
+

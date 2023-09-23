@@ -1,6 +1,6 @@
 <Mod
 	name="Chemical Curiosities"
-	description="A vast expansion of Noita's alchemy"
+	description=""
 	tags="gameplay, alchemy"
->
+>	<!--I removed the description because i am pretty sure it would overwrite the workshop one.-->
 </Mod>
