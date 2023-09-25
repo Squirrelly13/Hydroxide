@@ -136,7 +136,7 @@
     _enabled="0"
     offset_x="3.5"
     offset_y="2"
-    image_file="mods/arcane_alchemy/files/arcane_alchemy/items/vials/vial.png"
+    image_file="mods/Hydroxide/files/arcane_alchemy/items/vials/vial.png"
   ></SpriteComponent>
 
   <ItemComponent
@@ -145,7 +145,7 @@
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"
-    ui_sprite="mods/arcane_alchemy/files/arcane_alchemy/items/vials/vial_hand.png"
+    ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/vials/vial_hand.png"
     ui_description="$item_vial_with_material_description"
     preferred_inventory="QUICK"
   ></ItemComponent>
@@ -208,5 +208,3 @@
   </AudioComponent>
 
 </Entity>
-ty>
-ty>

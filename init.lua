@@ -33,6 +33,7 @@ end
 ]]--
 print("////////////// Commencing Hydroxide init //////////////")
 
+dofile("mods/Hydroxide/lib/add_translation.lua")
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -49,8 +50,23 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 		
 	end
+	if ModSettingGet("Hydroxide.AA_ITEMS") then
+		print("Adding arcane alchemy items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
+		end
+	end
+	if ModSettingGet("Hydroxide.MM_ITEMS") then
+		print("Adding mystical mixtures items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+
+	end
+
 
 end
+
+dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 
 --   	[Chemical Curiosities]
 
@@ -66,18 +82,22 @@ end
 --  Materials
 
 if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_materials.xml" ) --materials
-	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_reactions.xml" ) --reactions
+	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
+	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/CC_effects.lua" ) --effects
-	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/CC_gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
+	if(ModSettingGet("Hydroxide.CC_METHANE_GENERATION"))then
+		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
+	end
+
+	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
+	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
 	
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/CC_fungal.lua" ) --FUngal shifts
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --FUngal shifts
 
-	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion.lua" ) -- potions with new materials
-	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/CC_powders.lua" ) -- powder bags spawn with new materials
-	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion_aggressive.lua" ) --for alchemist enemy
-	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion_starting.lua") --starting potions
+	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
+	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
+	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
+	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
 
 
 end
@@ -98,11 +118,17 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 
+	-- debugging stuffs from eba
+	--[[
+	local player_x, player_y = EntityGetTransform( player_entity )
+	EntityLoad("mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml", player_x, player_y)
+	]]
+	
 end
 --  Items
 
 if ModSettingGet("Hydroxide.CC_ITEMS") == true then
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/CC_items.lua" ) --adds items to pedestals
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 end
 
 --  Structures/Pixel Scenes
@@ -120,7 +146,7 @@ end
 
 --	Spells
 
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/CC_spells.lua" )
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
 
 
 
@@ -132,18 +158,18 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chem
 --  Materials
 
 if ModSettingGet("Hydroxide.AA_MATERIALS") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/AA_materials.xml" ) --materials
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/AA_reactions.xml" ) --reactions
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
 
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/AA_effects.lua" ) --effects
+	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
 
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/AA_fungal.lua" ) --fungal
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
 end
 
 --	Spells
 
 if ModSettingGet("Hydroxide.AA_SPELLS") == true then
-	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/AA_spells.lua" )
+	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
 end
 
 
@@ -154,7 +180,10 @@ end
 
 if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
 	
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/materials.xml" ) 
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml" ) 
+	
+
+	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
 	
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[
@@ -220,7 +249,7 @@ end
 if ModIsEnabled("raksa") then
 	ModLuaFileAppend(
 	  "mods/raksa/files/scripts/lists/material_categories.lua",
-	  "mods/Hydroxide/files/compatibility/conjurer/CC_MATERIALS.lua"
+	  "mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
 	)
   end --adds compatibility with Conjurer
 
@@ -288,12 +317,15 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
+-- why this no work??
+register_translation("item_can_with_material", "Can of $0")
+register_translation("item_can_with_material_description", "A Can containing $0")
 
--- i think this is just so that the name for vials can show materials? seems to break something.
---[[
 register_translation("item_vial_with_material", "Vial of $0")
 register_translation("item_vial_with_material_description", "A glass vial containing $0")
-]]
+
+
+
 
 
 

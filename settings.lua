@@ -99,7 +99,25 @@ mod_settings =
 				ui_description = "Spawn Various ores throughout the world!",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			}
+			},
+			{
+				id = "CC_METHANE_GENERATION",
+				ui_name = "Frozen Meat Methane Decay",
+				ui_description = "Frozen meat decay into methane gas over time.",
+				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "CC_METHANE_EFFECT_MULTIPLIER",
+				ui_name = "Methane Effect Multiplier",
+				ui_description = "Change how much methane poisoning affects visuals.",
+				value_default = 100,
+				value_min = 1,
+				value_max = 100,
+				value_display_multiplier = 1,
+				value_display_formatting = " $0%",
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
 		}
 	},
 
@@ -172,6 +190,13 @@ mod_settings =
 				id = "MM_MATERIALS",
 				ui_name = "Mystical Mixtures Materials",
 				ui_description = "Adds Mystical Mixtures' Materials to your game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "MM_ITEMS",
+				ui_name = "Mystical Mixtures Items",
+				ui_description = "Adds Mystical Mixtures' Items to the game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},

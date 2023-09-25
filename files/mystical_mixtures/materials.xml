@@ -6,11 +6,12 @@
             density="2.9"
             cell_type="liquid"
             wang_color="ffeba311"
-            gfx_glow="100"
+            gfx_glow="0"
             liquid_gravity="0.6"
             liquid_stains="1"
             >
         <Graphics
+            color="fffcb3ae"
             texture_file="mods/Hydroxide/files/mystical_mixtures/gfx/materials/bingus.png"
         >
         </Graphics>
@@ -23,14 +24,20 @@
             density="6"
             cell_type="liquid"
             wang_color="ffebe32a"
-            gfx_glow="100"
+            gfx_glow="0"
             liquid_gravity="0.6"
             liquid_stains="1"
             >
         <Graphics
+            color="ff633c28"
             texture_file="mods/Hydroxide/files/mystical_mixtures/gfx/materials/wetfood.png"
         >
         </Graphics>
+        <StatusEffects>
+			<Ingestion>
+				<StatusEffect type="FOOD_POISONING" amount="0.3" />
+			</Ingestion>
+		</StatusEffects>
     </CellData>
 
     <Reaction probability="1"
@@ -52,6 +59,49 @@
 	show_in_creative_mode="1"
 	>
   </CellDataChild>    
+
+  <CellData
+	name="catfood_container"
+	ui_name="Catfood Container"
+  	tags="[box2d],[alchemy],[solid],[earth]"
+	burnable="0"
+	density="8"
+	cell_type="solid"
+	wang_color="ff3b5d4b"
+	generates_smoke="0"
+	on_fire="0"
+	requires_oxygen="1"
+	platform_type="1"
+	temperature_of_fire="50"
+	autoignition_temperature="99"
+	solid_static_type="0"
+	solid_break_to_type="steel_sand"
+	solid_friction="0.8"
+	hp="1000"
+	electrical_conductivity="1"
+	audio_physics_material_wall="metalwall"
+	audio_physics_material_solid="metalhollow"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="data/materials_gfx/steel.png"
+	color="ff73737f"
+	pixel_all_around="ff73737f"
+	
+	pixel_lonely="ff4f5eab"
+	pixel_top_right="ff4f5eab"
+	pixel_bottom_left="ff4f5eab"
+	
+	pixel_left="ffc1c8be"
+	pixel_top_left="ffc1c8be"
+	pixel_top="ffc1c8be"
+	
+	pixel_right="ff25333b"
+	pixel_bottom_right="ff25333b"
+	pixel_bottom="ff25333b"
+        >
+    </Graphics>
+  </CellData>  
 
     <!--bingus reacts with liquids to make more bingusus-->
     <Reaction probability="1"

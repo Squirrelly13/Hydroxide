@@ -9,9 +9,9 @@ table.insert(g_pixel_scene_01, {
 	
 table.insert(g_pixel_scene_02, {--TODO change 0.9 to lower numebr if this works
 	prob			= 0.9,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/mossPit.png",
-	visual_file		= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/mossPit_visual.png",
-	background_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/mossPit_background.png",
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/moss_pit.png",
+	visual_file		= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/moss_pit_visual.png",
+	background_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/moss_pit_background.png",
 	is_unique		= 0
 	});
 

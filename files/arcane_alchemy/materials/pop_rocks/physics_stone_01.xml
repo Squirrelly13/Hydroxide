@@ -1,0 +1,9 @@
+<Entity name="unknown" >
+  <Base file="data/entities/base_item_physics2.xml" >
+    <PhysicsImageShapeComponent 
+      image_file="mods/Hydroxide/files/arcane_alchemy/materials/pop_rocks/stone.png"
+      material="rock_box2d"
+      >
+    </PhysicsImageShapeComponent>
+  </Base>
+</Entity>
