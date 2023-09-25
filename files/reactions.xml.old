@@ -351,7 +351,7 @@ b<Materials>
 	<Reaction probability="5"
 	input_cell1="crystal_box2d"		input_cell2="air"
 	output_cell1="crystal_box2d"	output_cell2="air"
-	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+	entity="mods/Hydroxide/files/entities/misc/crystal_explode.xml"
 	>
 	</Reaction>
 	
@@ -359,7 +359,7 @@ b<Materials>
 	<Reaction probability="60"
 	input_cell1="solidCrystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
-	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+	entity="mods/Hydroxide/files/entities/misc/crystal_explode.xml"
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>
 	</Reaction>
@@ -367,7 +367,7 @@ b<Materials>
 	<Reaction probability="20"
 	input_cell1="solidCrystal"		input_cell2="smoke"
 	output_cell1="air"				output_cell2="smoke"
-	entity="mods/Hydroxide/files/entities/misc/crystalExplode.xml"
+	entity="mods/Hydroxide/files/entities/misc/crystal_explode.xml"
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml" 
 	>
 	</Reaction>
@@ -404,7 +404,7 @@ b<Materials>
 	<Reaction probability="60"
 	input_cell1="grease"	input_cell2="water"		input_cell3="[fire]"
 	output_cell1="smoke"	output_cell2="steam"	output_cell3="[fire]"
-	entity="mods/Hydroxide/files/entities/misc/greaseFire.xml"
+	entity="mods/Hydroxide/files/entities/misc/grease_fire.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
@@ -516,7 +516,7 @@ b<Materials>
 		cell_explosion_radius_min="15"
 		cell_explosion_radius_max="15"
 		cell_explosion_probability="1.1"
-		load_this_entity="mods/Hydroxide/files/entities/misc/sparkStarter.xml"
+		load_this_entity="mods/Hydroxide/files/entities/misc/spark_starter.xml"
 		ray_energy="50000"
 		>
 	</ExplosionConfig>
@@ -737,7 +737,7 @@ b<Materials>
 	<Reaction probability="100"
 	input_cell1="unstableMetamorphine"	input_cell2="[liquid]"
 	output_cell1="air"					output_cell2="[liquid]"
-	entity="mods/Hydroxide/files/entities/misc/unstableMetamorphine.xml"
+	entity="mods/Hydroxide/files/entities/misc/unstable_metamorphine.xml"
 	blob_radius1="4"
 	>
 	</Reaction>
@@ -1378,7 +1378,7 @@ b<Materials>
 	<Reaction probability="14"
 	input_cell1="glitteringLiquid"	input_cell2="[fire]"
 	output_cell1="air"				output_cell2="air"
-	entity="mods/Hydroxide/files/entities/misc/FireworkShot.xml"
+	entity="mods/Hydroxide/files/entities/misc/firework_shot.xml"
 	>
 	</Reaction>
 	
@@ -1406,7 +1406,7 @@ b<Materials>
 	<Reaction probability="1"
 	input_cell1="sparkLiquid"	input_cell2="air"
 	output_cell1="smoke"			output_cell2="air"
-	entity="mods/Hydroxide/files/entities/misc/SparkShot.xml" 
+	entity="mods/Hydroxide/files/entities/misc/spark_shot.xml" 
 	>
 	</Reaction>
 	
@@ -1467,7 +1467,7 @@ b<Materials>
 	<Reaction probability="25"
 	input_cell1="blastPowder"	input_cell2="[fire]"
 	output_cell1="fire"			output_cell2="air"
-	entity="mods/Hydroxide/files/entities/misc/blastingPowder.lua"
+	entity="mods/Hydroxide/files/entities/misc/blasting_powder.lua"
 	>
 	</Reaction>
 	<!-- acid and hydroxide -->

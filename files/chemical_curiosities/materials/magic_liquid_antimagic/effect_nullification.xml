@@ -40,7 +40,7 @@
 	></LuaComponent>
 	
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/effect_DoT.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/effect_dot.lua"
 		execute_every_n_frame="30"
 		>
 	</LuaComponent>

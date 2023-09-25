@@ -82,22 +82,22 @@ dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 --  Materials
 
 if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_materials.xml" ) --materials
-	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_reactions.xml" ) --reactions
+	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
+	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
 	if(ModSettingGet("Hydroxide.CC_METHANE_GENERATION"))then
-		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/CC_methane_reactions.xml" ) --methane generation
+		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
 	end
 
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/CC_effects.lua" ) --effects
-	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/CC_gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
+	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
+	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
 	
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/CC_fungal.lua" ) --FUngal shifts
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --FUngal shifts
 
-	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion.lua" ) -- potions with new materials
-	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/CC_powders.lua" ) -- powder bags spawn with new materials
-	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion_aggressive.lua" ) --for alchemist enemy
-	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/CC_potion_starting.lua") --starting potions
+	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
+	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
+	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
+	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
 
 
 end
@@ -128,7 +128,7 @@ end
 --  Items
 
 if ModSettingGet("Hydroxide.CC_ITEMS") == true then
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/CC_items.lua" ) --adds items to pedestals
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 end
 
 --  Structures/Pixel Scenes
@@ -146,7 +146,7 @@ end
 
 --	Spells
 
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/CC_spells.lua" )
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actionss.lua" )
 
 
 
@@ -249,7 +249,7 @@ end
 if ModIsEnabled("raksa") then
 	ModLuaFileAppend(
 	  "mods/raksa/files/scripts/lists/material_categories.lua",
-	  "mods/Hydroxide/files/compatibility/conjurer/CC_MATERIALS.lua"
+	  "mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
 	)
   end --adds compatibility with Conjurer
 

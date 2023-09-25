@@ -1,5 +1,5 @@
 dofile_once("data/scripts/lib/utilities.lua")
-dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
+dofile_once("mods/Hydroxide/lib/squirreltilities.lua")
 
 
 
