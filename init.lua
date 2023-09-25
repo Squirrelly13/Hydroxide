@@ -52,7 +52,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	end
 	if ModSettingGet("Hydroxide.AA_ITEMS") then
 		print("Adding arcane alchemy items!")
-		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/AA_items.lua" ) --adds items to pedestals
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
 		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
 			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
 		end
@@ -158,18 +158,18 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chem
 --  Materials
 
 if ModSettingGet("Hydroxide.AA_MATERIALS") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/AA_materials.xml" ) --materials
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/AA_reactions.xml" ) --reactions
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
 
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/AA_effects.lua" ) --effects
+	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
 
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/AA_fungal.lua" ) --fungal
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
 end
 
 --	Spells
 
 if ModSettingGet("Hydroxide.AA_SPELLS") == true then
-	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/AA_spells.lua" )
+	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
 end
 
 
@@ -180,7 +180,10 @@ end
 
 if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
 	
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/materials.xml" ) 
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml" ) 
+	
+
+	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
 	
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[

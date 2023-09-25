@@ -1,5 +1,5 @@
 <Sprite
- filename="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ground_09.png"
+ filename="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/healthy/bloom_ground_09.png"
  offset_x="16"
  offset_y="33" 
  default_animation="vegetation_growth" >

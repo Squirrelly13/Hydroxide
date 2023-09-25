@@ -2,7 +2,7 @@
     
     <HitEffectComponent 
         effect_hit="LOAD_UNIQUE_CHILD_ENTITY"
-        value_string="mods/Hydroxide/files/arcane_alchemy/materials/AA_HUNGRY_SLIME/vomitslime.xml" >
+        value_string="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/vomitslime.xml" >
 	</HitEffectComponent >
 
 </Entity>
