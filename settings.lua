@@ -96,8 +96,8 @@ mod_settings =
 			{
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world! (W.I.P)",
-				value_default = false,				
+				ui_description = "Spawn Various ores throughout the world!",
+				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
@@ -106,7 +106,7 @@ mod_settings =
 	{
 		category_id = "AA_SETTINGS",
 		ui_name = "Arcane Alchemy",
-		ui_description = "Settings and Options for configuring Chemical Curiosities content",
+		ui_description = "Settings and Options for configuring Arcane Alchemy content",
 		foldable = true,
 		_folded = true,
 		settings = {
@@ -120,14 +120,14 @@ mod_settings =
 			{
 				id = "AA_FLASKS",
 				ui_name = "Spawn Potions",
-				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
+				ui_description = "Allow for Arcane Alchemy to add new materials in flasks",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
 				id = "AA_SPELLS",
 				ui_name = "Spells",
-				ui_description = "Allow for Chemical Curiosities to add spells to your game",
+				ui_description = "Allow for Arcane Alchemy to add spells to your game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
@@ -140,18 +140,41 @@ mod_settings =
 			-- }, --this is already included in structures, i dont know why i added this
 			{
 				id = "AA_ITEMS",
-				ui_name = "Chemical Curiosities Items",
-				ui_description = "Adds Chemical Curiosities' Items to the game",
+				ui_name = "Arcane Alchemy Items",
+				ui_description = "Adds Arcane Alchemy's Items to the game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "AA_BLOOMIUM_IS_ENABLED",
+				id = "AA_BLOOMIUM",
 				ui_name = "Bloomium",
 				value_default = true,
-				ui_description = "Yes, you can now disable Bloomium",
+				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive as it once was.",
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_BLOOMIUM_VEINS",
+				ui_name = "Bloomium World Gen",
+				value_default = true,
+				ui_description = "Bloomium can spawn in the world",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
+		}
+	},
+	{
+		category_id = "MM_SETTINGS",
+		ui_name = "Mystical Mixtures",
+		ui_description = "Settings and Options for configuring Mystical Mixtures content",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "MM_MATERIALS",
+				ui_name = "Mystical Mixtures Materials",
+				ui_description = "Adds Mystical Mixtures' Materials to your game",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
 		}
 	}
 }
