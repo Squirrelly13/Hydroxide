@@ -1,0 +1,457 @@
+<Materials>
+	
+
+	
+	
+
+	
+	-----------------------
+	--Universal Reactions--
+	-----------------------
+
+	<Reaction probability="10"
+	input_cell1="water" 	input_cell2="[slimy]"
+	output_cell1="water"	output_cell2="cloud_slime"
+	>
+	</Reaction>
+
+
+
+	
+	---------------
+	--Icy Inferno--
+	---------------
+	
+	<Reaction probability="63"
+	input_cell1="AA_NEUTRAL_POTION" input_cell2="blood_cold"
+	output_cell1="AA_ICEFIRE"		output_cell2="blood_cold_vapour"
+	>
+	</Reaction>
+	
+	
+
+
+
+	
+	------------------
+	--creeping slime--
+	------------------
+	<Reaction probability="200"
+		input_cell1="AA_CREEPING_SLIME" 	input_cell2="[static]"				input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"	output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
+		blob_radius1="8"					blob_radius2="8" 					blob_radius3="8"
+		>
+	</Reaction> --creeping slime absorbs [static] materials while in contact with air
+
+	<Reaction probability="200"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[solid]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 		output_cell3="AA_CREEPING_SLIME"
+		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
+		>
+	</Reaction> --creeping slime absorbs [solid] materials while in contact with air
+
+	<Reaction probability="200"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_ground]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
+		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
+		>
+	</Reaction> --creeping slime absorbs [sand_ground] materials while in contact with air
+
+	<Reaction probability="200"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_metal]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 		output_cell3="AA_CREEPING_SLIME"
+		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
+		>
+	</Reaction> --creeping slime absorbs [sand_metal] materials while in contact with air
+
+	
+	<Reaction probability="200"
+		input_cell1="AA_CREEPING_SLIME" 		input_cell2="[sand_other]"		input_cell3="air"
+		output_cell1="AA_CREEPING_SLIME"		output_cell2="AA_CREEPING_SLIME" 	output_cell3="AA_CREEPING_SLIME"
+		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
+		>
+	</Reaction> --creeping slime absorbs [sand_other] materials while in contact with air
+
+	
+	-----------
+	--Compost--
+	-----------
+	  
+	<Reaction probability="2"
+		input_cell1="AA_COMPOST" 	input_cell2="air"
+		output_cell1="air"          	output_cell2="air"  >
+		<ExplosionConfig
+			cell_explosion_power="0.000001"
+			cell_explosion_damage_required="0"
+			cell_explosion_radius_min="0.00001"
+			cell_explosion_radius_max="0.00001"
+			cell_explosion_probability="1.1"
+			camera_shake="0" 
+			damage="0"
+			explosion_sprite=""
+			load_this_entity="mods/Hydroxide/files/Arcane Alchemy/materials/AA_COMPOST/grow_plant.xml" 
+			spark_material="spark" 
+			sparks_count_max="0" 
+			sparks_count_min="0" 
+			sparks_enabled="0" 
+  			stains_enabled="0" 
+			hole_enabled="0"  
+			ray_energy="50000"
+			>
+		</ExplosionConfig>
+	</Reaction>	--compost grows plants!!
+	
+	------------
+	--Pandoria--
+	------------
+	
+	<Reaction probability = "0.9"
+		input_cell1="AA_UNSTABLE_LIQUID_SPELL" input_cell2="air"
+		output_cell1="air" output_cell2="air"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/Arcane Alchemy/materials/AA_LIQUID_SPELL/random_spell_chaotic.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction>	--unstable pandorium casts spells
+
+	<Reaction probability = "2"
+		input_cell1="AA_LIQUID_SPELL" input_cell2="air"
+		output_cell1="air" output_cell2="air"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/Arcane Alchemy/materials/AA_LIQUID_SPELL/random_spell.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction>	--Pandorium casts spells
+	
+	
+	
+	----------------
+	--ash and soot--
+	----------------
+	
+  <Reaction probability="10"
+  	input_cell1="wood_static" 	input_cell2="fire"
+  	output_cell1="AA_ASH"	output_cell2="AA_ASH" 
+	blob_radius1="1"	blob_radius2="1"
+	>
+  </Reaction>
+  
+  <Reaction probability="10"
+	input_cell1="smoke" 	input_cell2="air"
+	output_cell1="AA_SOOT" 	output_cell2="AA_SOOT"
+	fast_reaction="1"
+	>
+  </Reaction>
+	
+	
+
+	------------------
+	--neutral potion--
+	------------------
+	<Reaction probability="100"
+	input_cell1="[magic_liquid]" 	input_cell2="lava"
+	output_cell1="AA_POTION_GAS" 	output_cell2="lava"
+	fast_reaction="1"
+	>
+	</Reaction>
+  
+	<Reaction probability="95"
+	input_cell1="AA_POTION_GAS" 	input_cell2="air"
+	output_cell1="AA_NEUTRAL_POTION" 	output_cell2="air"
+	fast_reaction="1"
+	>
+	</Reaction>
+
+	<Reaction probability="76"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="blood_fungi"
+	output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
+	>
+	</Reaction>
+	
+	-----------------
+	--magic plastic--
+	-----------------
+	
+	<Reaction probability="50"
+  	input_cell1="magic_liquid_random_polymorph" 	input_cell2="AA_OIL_LIGHT"
+  	output_cell1="AA_MAGICPLASTIC"	output_cell2="AA_MAGICPLASTIC" 				
+	>
+  </Reaction> --make plastic
+  
+   <Reaction probability="50"
+  	input_cell1="magic_liquid_polymorph" 	input_cell2="AA_OIL_LIGHT"
+  	output_cell1="AA_MAGICPLASTIC"	output_cell2="AA_MAGICPLASTIC" 				
+	>
+  </Reaction> --make plastic
+  
+  
+  
+	<Reaction probability="100"
+		input_cell1="AA_MAGICPLASTIC" input_cell2="item_box2d"
+		output_cell1="AA_MAGICPLASTIC" output_cell2="item_box2d"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="100"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/entities/misc/create_nerf_gun.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction> --make a nerf gun???--
+	
+	-------------------------
+	--arborium (wood juice)--
+	-------------------------
+	  <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[alchemy]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="2"		blob_radius2="8"
+	>
+  </Reaction>
+	
+  <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[static]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="4"		blob_radius2="8"
+	>
+  </Reaction>
+  
+   <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_ground]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="4"		blob_radius2="8"
+	>
+  </Reaction>
+  
+   <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_metal]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="4"		blob_radius2="8"
+	>
+  </Reaction>
+  
+   <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[sand_other]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="4"		blob_radius2="8"
+	>
+  </Reaction>
+  
+  
+  <Reaction probability="100"
+	input_cell1="AA_ARBORIUM" 	input_cell2="[box2d]"
+	output_cell1="smoke" 	output_cell2="wood_static"
+	fast_reaction="1"
+	blob_radius1="4"		blob_radius2="8"
+	>
+  </Reaction>
+	-->
+	----------------
+	--hungry slime--
+	----------------
+  <Reaction 
+    probability="3"
+    input_cell1="AA_HUNGRY_SLIME" 	input_cell2="[box2d]" 
+    output_cell1="AA_HUNGRY_SLIME_GROWING"	output_cell2="AA_HUNGRY_SLIME_GROWING" 
+  >
+  </Reaction>
+
+  <Reaction 
+    probability="10"
+    input_cell1="AA_HUNGRY_SLIME_GROWING" 	input_cell2="air" 
+    output_cell1="AA_HUNGRY_SLIME_GROWING"	output_cell2="AA_HUNGRY_SLIME" 
+  >
+  </Reaction> --christ this is scary
+  
+  <Reaction probability="3"
+	input_cell1="AA_HUNGRY_SLIME"				input_cell2="rotten_meat"
+	output_cell1="AA_HUNGRY_SLIME_GROWING"		output_cell2="AA_HUNGRY_SLIME"
+  >
+  </Reaction> --more fear ;)
+  
+  <Reaction probability="8"
+  input_cell1="AA_HUNGRY_SLIME_GROWING"	input_cell2="[fire]"
+  output_cell1="[fire]"						output_cell2="AA_SOOT"
+  >
+  </Reaction> --fire kills it
+  
+  <Reaction probability="8"
+  input_cell1="AA_HUNGRY_SLIME"	input_cell2="[fire]"
+  output_cell1="[fire]"				output_cell2="smoke"
+  >
+  </Reaction> --burns
+  
+  
+	-----------------------------
+	--catalyst/oil interactions--
+	-----------------------------
+	<Reaction probability="75"
+  	input_cell1="alcohol" 	input_cell2="acid"
+  	output_cell1="AA_CATALYST"	output_cell2="AA_CATALYST" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+	</Reaction>
+  
+  <Reaction probability="75"
+  	input_cell1="AA_CATALYST" 	input_cell2="oil"
+  	output_cell1="AA_OIL_SPLITTING"	output_cell2="AA_OIL_SPLITTING" 
+	blob_radius1="2"		blob_radius2="2"
+	>
+  </Reaction>
+  
+  <Reaction probability="50"
+  	input_cell1="AA_OIL_SPLITTING" 	input_cell2="AA_OIL_SPLITTING"
+  	output_cell1="AA_OIL_HEAVY"	output_cell2="AA_OIL_HEAVY" 
+	>
+  </Reaction>
+  
+   
+  <Reaction probability="50"
+  	input_cell1="AA_OIL_SPLITTING" 	input_cell2="AA_OIL_SPLITTING"
+  	output_cell1="AA_OIL_LIGHT"	output_cell2="AA_OIL_LIGHT" 
+	>
+  </Reaction>
+	
+	
+
+
+
+	-------------
+	--Pop Rocks--
+	-------------
+	<Reaction probability = "4"
+		input_cell1="AA_LIQUID_ROCK" input_cell2="air"
+		output_cell1="air" output_cell2="air"
+		req_lifetime="120"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/Arcane Alchemy/materials/AA_LIQUID_ROCK/physics_stone_01.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction>
+	
+	<Reaction probability="50"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="concrete_collapsed"
+	output_cell1="smoke"				output_cell2="AA_LIQUID_ROCK"
+	blob_radius2="6"
+	>
+	</Reaction>
+	
+	---------------------
+	--a few new recipes--
+	---------------------
+
+	<Reaction probability="25"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="sand"
+	output_cell1="magic_liquid_invisibility"	output_cell2="smoke"
+	blob_radius1="3"
+	>
+	</Reaction> -- sand to invisiblium
+
+	<Reaction probability="52"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="bone"
+	output_cell1="material_darkness"			output_cell2="smoke"
+	blob_radius1="4"
+	>
+	</Reaction> -- bones to ominous liquid
+
+	<Reaction probability="52"
+	input_cell1="AA_NEUTRAL_POTION"			input_cell2="bone_box2d"
+	output_cell1="material_darkness"	output_cell2="smoke"
+	blob_radius1="4"
+	>
+	</Reaction> -- bones to ominous liquid
+	
+	<Reaction probability="24"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="steelmoss_static"
+	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"		
+	>
+	</Reaction> -- cloning in vault EXPERIMENTAL
+	
+	<Reaction probability="24"
+	input_cell1="AA_NEUTRAL_POTION"	input_cell2="steelpipe_static"
+	output_cell1="rainbow_gas" 			output_cell2="AA_CLONE"	
+	>
+	</Reaction> -- cloning in vault EXPERIMENTAL
+	
+	<Reaction probability="30"
+	input_cell1="AA_NEUTRAL_POTION"		input_cell2="soil_dead"
+	output_cell1="sand_herb_vapour"			output_cell2="AA_COMPOST"
+	blob_radius1="2"
+	blob_restrict_to_input_material1="1"
+	>
+	</Reaction> -- big plants in jungle
+	
+	<Reaction probability="3"
+	input_cell1="AA_NEUTRAL_POTION"				input_cell2="[bloom]"
+	output_cell1="AA_BLOOMIUM_GAS"			output_cell2="AA_COMPOST"
+	blob_radius1="5"
+	blob_restrict_to_input_material1="1"
+	>
+	</Reaction> --activates hella plants with bloomium
+	
+		<Reaction probability="50"
+	input_cell1="AA_NEUTRAL_POTION" 	input_cell2="magic_liquid_charm"
+	output_cell1="AA_LOVE"					output_cell2="smoke"
+	blob_radius1="3"
+	>
+	</Reaction> --create love from simple charm
+	
+	----------------------------------
+	-- poly and fungus interactions --
+	----------------------------------
+	<Reaction probability="40"
+	input_cell1="fungi"	input_cell2="magic_liquid_polymorph"
+	output_cell1="fungi"	output_cell2="fungi"
+	>
+	</Reaction>
+	
+	<Reaction probability="50"
+	input_cell1="magic_liquid_random_polymorph"		input_cell2="fungi"
+	output_cell1="magic_liquid_random_polymorph"	output_cell2="magic_liquid_random_polymorph"
+	>
+	</Reaction>
+
+	
+
+</Materials>

@@ -1,0 +1,15 @@
+<Entity>
+	<LuaComponent 
+		_enabled="1" 
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/spells/projectile_modifiers/radiation2.lua" 
+		execute_every_n_frame="3">
+   </LuaComponent>
+   
+   <LuaComponent 
+		_enabled="1" 
+		script_source_file="mods/Hydroxide/files/Chemical Curiosities/spells/projectile_modifiers/radiation2.lua" 
+		execute_every_n_frame="5"
+		>
+   </LuaComponent>
+</Entity>
+
