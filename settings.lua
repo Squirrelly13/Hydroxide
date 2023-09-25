@@ -44,139 +44,98 @@ mod_settings =
 		not_setting = true,
 	},
 	{
-		category_id = "CC_SETTINGS",
-		ui_name = "Chemical Curiosities",
+		category_id = "GENERAL_SETTINGS",
+		ui_name = "Common Settings",
+		ui_description = "More common/useful Settings",
+		foldable = true,
+		_folded = false,
+		settings = {
+			{ 
+				id = "BLOOMIUM_ENABLED",
+				ui_name = "Enable Bloomium",
+				ui_description = "Decides whether or not Bloomium is enabled", --No matter how much we love it, this material is undeniably unoptimised, and can cause immense lag in some situations. Please feel free to disable it if you are encountering such issues
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "ORESPAWNING_ENABLED",
+				ui_name = "Spawn Ores",
+				ui_description = "Spawn Various ores throughout the world! (extremely experimental)",
+				value_default = false,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}
+		}
+	},
+	{
+		category_id = "ADVANCED_SETTINGS",
+		ui_name = "Advanced Settings",
 		ui_description = "Settings and Options for configuring Chemical Curiosities content",
 		foldable = true,
 		_folded = true,
 		settings = {
 
 			{
-				id = "CC_MATERIALS",
+				id = "MATERIALS_ENABLED",
 				ui_name = "Chemical Curiosities Materials",
 				ui_description = "Adds Chemical Curiosities' Materials to your game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "CC_FLASKS",
+				id = "FLASKS_ENABLED",
 				ui_name = "Spawn Potions",
 				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "CC_SPELLS",
+				id = "SPELLS_ENABLED",
 				ui_name = "Spells",
 				ui_description = "Allow for Chemical Curiosities to add spells to your game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "CC_PROPS",
+				id = "PROPS_ENABLED",
 				ui_name = "Spawn Props",
 				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "CC_ITEMS",
+				id = "ITEMS_ENABLED",
 				ui_name = "Chemical Curiosities Items",
 				ui_description = "Adds Chemical Curiosities' Items to the game",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "CC_STRUCTURES",
+				id = "STRUCTURES_ENABLED",
 				ui_name = "Spawn Structures",
 				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_ORES",
-				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world!",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
-		}
-	},
-
-	{
-		category_id = "AA_SETTINGS",
-		ui_name = "Arcane Alchemy",
-		ui_description = "Settings and Options for configuring Arcane Alchemy content",
-		foldable = true,
-		_folded = true,
-		settings = {
-			{
-				id = "AA_MATERIALS",
-				ui_name = "Arcane Alchemy Materials",
-				ui_description = "Adds Arcane Alchemy's Materials to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_FLASKS",
-				ui_name = "Spawn Potions",
-				ui_description = "Allow for Arcane Alchemy to add new materials in flasks",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_SPELLS",
-				ui_name = "Spells",
-				ui_description = "Allow for Arcane Alchemy to add spells to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			-- {
-			-- 	id = "AA_PROPS",
-			-- 	ui_name = "Spawn Props",
-			-- 	ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-			-- 	value_default = true,				
-			-- 	scope = MOD_SETTING_SCOPE_NEW_GAME,
-			-- }, --this is already included in structures, i dont know why i added this
-			{
-				id = "AA_ITEMS",
-				ui_name = "Arcane Alchemy Items",
-				ui_description = "Adds Arcane Alchemy's Items to the game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_BLOOMIUM",
-				ui_name = "Bloomium",
-				value_default = true,
-				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive as it once was.",
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_BLOOMIUM_VEINS",
-				ui_name = "Bloomium World Gen",
-				value_default = true,
-				ui_description = "Bloomium can spawn in the world",
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			}
-		}
-	},
-	{
-		category_id = "MM_SETTINGS",
-		ui_name = "Mystical Mixtures",
-		ui_description = "Settings and Options for configuring Mystical Mixtures content",
-		foldable = true,
-		_folded = true,
-		settings = {
-			{
-				id = "MM_MATERIALS",
-				ui_name = "Mystical Mixtures Materials",
-				ui_description = "Adds Mystical Mixtures' Materials to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
 		}
 	}
+
+	
+	-- {
+	-- 	category_id = "MM_SETTINGS",
+	-- 	ui_name = "Mystical Mixtures",
+	-- 	ui_description = "Settings and Options for configuring Mystical Mixtures content",
+	-- 	foldable = true,
+	-- 	_folded = true,
+	-- 	settings = {
+	-- 		{
+	-- 			id = "MM_MATERIALS",
+	-- 			ui_name = "Mystical Mixtures Materials",
+	-- 			ui_description = "Adds Mystical Mixtures' Materials to your game",
+	-- 			value_default = true,
+	-- 			scope = MOD_SETTING_SCOPE_NEW_GAME,
+	-- 		},
+	-- 	}
+	-- }
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.
