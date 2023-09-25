@@ -45,7 +45,7 @@ alchemical_materials = {
     {
         id = "gold_solution",
         name = "Gold Solution",
-        description = "Gold Solution is a solution of gold in an alchemical solvent.\nIt can be used in a variety of recipes.",
+        description = "A solution of gold in an alchemical solvent.\nIt can be used in a variety of recipes, notably modifying wand capacity.",
         generate_notes = true,
         color = "FFFFDF86",
         texture = "data/materials_gfx/gold.png", -- texture path
