@@ -1,6 +1,6 @@
 <Materials>
     <CellData 
-            name="MM_bingus"
+            name="mm_bingus"
             ui_name="Bingus"
             tags="[liquid],[impure]"
             density="2.9"
@@ -18,7 +18,7 @@
     </CellData>
 
     <CellData 
-            name="MM_bingus_wetfood"
+            name="mm_bingus_wetfood"
             ui_name="Wetfood"
             tags="[liquid],[impure]"
             density="6"
@@ -41,18 +41,18 @@
     </CellData>
 
     <Reaction probability="1"
-        input_cell1="MM_bingus"	input_cell2="air"
-        output_cell1="MM_bingus"			output_cell2="air"
+        input_cell1="mm_bingus"	input_cell2="air"
+        output_cell1="mm_bingus"			output_cell2="air"
         entity="mods/Hydroxide/files/mystical_mixtures/entities/bingus_splat.xml"
 	/>
 
   <CellDataChild
   	_parent="meat"
-	name="MM_meat_bingus"
+	name="mm_meat_bingus"
 	ui_name="Bingus"
 	wang_color="ffbbc1ba"
-	solid_on_collision_material="MM_bingus"
-	solid_break_to_type="MM_bingus"
+	solid_on_collision_material="mm_bingus"
+	solid_break_to_type="mm_bingus"
 	audio_physics_material_wall="meat"
 	audio_physics_material_solid="meat"
 	audio_is_soft="1"
@@ -61,7 +61,7 @@
   </CellDataChild>    
 
   <CellData
-	name="MM_catfood_container"
+	name="mm_catfood_container"
 	ui_name="Catfood Container"
   	tags="[box2d],[alchemy],[solid],[earth]"
 	burnable="0"
@@ -105,30 +105,30 @@
 
     <!--bingus reacts with liquids to make more bingusus-->
     <Reaction probability="1"
-        input_cell1="MM_bingus"	input_cell2="[liquid]"
-        output_cell1="MM_bingus"			output_cell2="MM_bingus"
+        input_cell1="mm_bingus"	input_cell2="[liquid]"
+        output_cell1="mm_bingus"			output_cell2="mm_bingus"
         entity="mods/Hydroxide/files/mystical_mixtures/entities/bingus_splat.xml"
     />
 
     <Reaction probability="100"
-        input_cell1="MM_meat_bingus"	input_cell2="[liquid]"
-        output_cell1="MM_meat_bingus"			output_cell2="MM_bingus"
+        input_cell1="mm_meat_bingus"	input_cell2="[liquid]"
+        output_cell1="mm_meat_bingus"			output_cell2="mm_bingus"
         entity="mods/Hydroxide/files/mystical_mixtures/entities/bingus_splat.xml"
     />
 
     <Reaction probability="1"
-        input_cell1="MM_bingus"	input_cell2="MM_bingus_wetfood"
+        input_cell1="mm_bingus"	input_cell2="mm_bingus_wetfood"
         output_cell1="air"			output_cell2="air"
         entity="mods/Hydroxide/files/mystical_mixtures/entities/bingus_loader.xml"
     />
 
     <!--bingus reacts with fire for destruction-->
     <Reaction probability="1"
-        input_cell1="MM_bingus"	input_cell2="fire"
+        input_cell1="mm_bingus"	input_cell2="fire"
         output_cell1="air"			output_cell2="air"
     />
     <Reaction probability="1"
-        input_cell1="MM_bingus"	input_cell2="[fire]"
+        input_cell1="mm_bingus"	input_cell2="[fire]"
         output_cell1="air"			output_cell2="air"
     />
 </Materials>

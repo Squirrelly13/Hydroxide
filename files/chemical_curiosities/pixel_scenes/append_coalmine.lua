@@ -32,7 +32,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_1_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "CC_grease", "CC_slicing_liquid", "CC_kindling", "CC_kindling","CC_kindling", "CC_slicing_liquid", "plasma_fading","CC_morphine", "CC_devouring_moss"} }
+		color_material = { ["fff0bbee"] = { "cc_grease", "cc_slicing_liquid", "cc_kindling", "cc_kindling","cc_kindling", "cc_slicing_liquid", "plasma_fading","cc_morphine", "cc_devouring_moss"} }
 }); -- common materials
 
 table.insert(g_oiltank, {
@@ -41,7 +41,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_1_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "CC_veilium", "CC_kindling", "CC_dormant_crystal_molten", "CC_heftium", "sulphur", "CC_morphine" } }
+		color_material = { ["fff0bbee"] = { "cc_veilium", "cc_kindling", "cc_dormant_crystal_molten", "cc_heftium", "sulphur", "cc_morphine" } }
 }); --magic materials
 
 table.insert(g_oiltank, {
@@ -50,7 +50,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_2_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "CC_kindling", "CC_sparkling_liquid", "CC_slicing_liquid", "CC_dormant_crystal_molten", "AA_icy_inferno", "CC_devouring_moss"} }
+		color_material = { ["fff0bbee"] = { "cc_kindling", "cc_sparkling_liquid", "cc_slicing_liquid", "cc_dormant_crystal_molten", "aa_icy_inferno", "cc_devouring_moss"} }
 });
 
 table.insert(g_oiltank, {
@@ -59,7 +59,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_2_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "oil", "coal", "radioactive_liquid", "CC_grease", "plasma_fading", "plasma_fading", "CC_morphine"  } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "oil", "coal", "radioactive_liquid", "cc_grease", "plasma_fading", "plasma_fading", "cc_morphine"  } }
 });
 
 table.insert(g_oiltank, {
@@ -68,7 +68,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_3_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "water", "coal", "radioactive_liquid", "magic_liquid_teleportation", "CC_agitine", "CC_grease", "CC_grease","CC_slicing_liquid", "CC_thunder_powder" } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "water", "coal", "radioactive_liquid", "magic_liquid_teleportation", "cc_agitine", "cc_grease", "cc_grease","cc_slicing_liquid", "cc_thunder_powder" } }
 });
 
 table.insert(g_oiltank, {
@@ -77,7 +77,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_4_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "CC_radioactive_waste", "CC_grease", "CC_slicing_liquid", "AA_icy_inferno", "CC_morphine", "CC_thunder_powder"} }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "cc_radioactive_waste", "cc_grease", "cc_slicing_liquid", "aa_icy_inferno", "cc_morphine", "cc_thunder_powder"} }
 });
 
 table.insert(g_oiltank, {
@@ -86,7 +86,7 @@ table.insert(g_oiltank, {
 		visual_file		= "",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "CC_radioactive_waste" } }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "radioactive_liquid", "coal", "radioactive_liquid", "cc_radioactive_waste" } }
 });
 
 end

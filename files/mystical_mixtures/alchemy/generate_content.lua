@@ -148,7 +148,7 @@ for k, v in ipairs(alchemical_recipes)do
     ]]
     
     local entity_xml = [[
-    <Entity name="MM_alchemy_handler">
+    <Entity name="mm_alchemy_handler">
         <LifetimeComponent
             lifetime="2"
         />

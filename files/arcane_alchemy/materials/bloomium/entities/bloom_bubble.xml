@@ -1,6 +1,6 @@
 <Entity>
   	<ParticleEmitterComponent 
-		emitted_material_name="AA_bloomium_gas"
+		emitted_material_name="aa_bloomium_gas"
 		create_real_particles="1"
 		gravity.y="0.0"
 		lifetime_min="8"

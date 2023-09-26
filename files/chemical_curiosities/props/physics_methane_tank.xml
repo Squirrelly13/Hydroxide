@@ -20,13 +20,13 @@
 		kill_when_empty="1"
 		>
 		<count_per_material_type>
-			<Material material="CC_methane" count="300"  />
+			<Material material="cc_methane" count="300"  />
 		</count_per_material_type>
 	</MaterialInventoryComponent>
 
 	<DamageModelComponent 
 		air_needed="0" 
-		blood_material="CC_methane" 
+		blood_material="cc_methane" 
 		drop_items_on_death="0" 
 		falling_damage_damage_max="1.2" 
 		falling_damage_damage_min="0.1" 
@@ -58,7 +58,7 @@
 			explosion_sprite="data/particles/explosion_032.xml" 
 			explosion_sprite_lifetime="10" 
 			create_cell_probability="40"
-			create_cell_material="CC_methane"
+			create_cell_material="cc_methane"
 			hole_destroy_liquid="0" 
 			load_this_entity="data/entities/particles/particle_explosion/main.xml"
 			hole_enabled="1" 

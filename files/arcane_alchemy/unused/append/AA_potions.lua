@@ -1,77 +1,77 @@
 
 
 table.insert(materials_magic, {
-    material="AA_darkmatter",
+    material="aa_darkmatter",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_hitself",
+    material="aa_hitself",
     cost=500,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_arborium",
+    material="aa_arborium",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_hungry_slime",
+    material="aa_hungry_slime",
     cost=600,
 });
 
 table.insert(materials_magic, {
-    material="AA_repultium",
+    material="aa_repultium",
     cost=400,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_cloning_solution",
+    material="aa_cloning_solution",
     cost=400,
 });
 
 table.insert(materials_magic, {
-    material="AA_condensed_gravity",
+    material="aa_condensed_gravity",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_icy_inferno",
+    material="aa_icy_inferno",
     cost=700,
 });
 
 table.insert(materials_magic, {
-    material="AA_meager_offering",
+    material="aa_meager_offering",
     cost=1500,
 });
 
 table.insert(materials_magic, {
-    material="AA_love",
+    material="aa_love",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_pandorium",
+    material="aa_pandorium",
     cost=500,
     percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_unstable_pandorium",
+    material="aa_unstable_pandorium",
     cost=1500,
     percentage=0.2
 });
 
 table.insert(materials_magic, {
-    material="AA_pop_rocks",
+    material="aa_pop_rocks",
     cost=300,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_static_charge",
+    material="aa_static_charge",
     cost=300,
 });
 
@@ -93,7 +93,7 @@ init = function( entity_id )
         potion_material = potion_material.material
 
 		-- debug
-		--potion_material = "AA_unstable_pandorium"
+		--potion_material = "aa_unstable_pandorium"
 
         local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
     
@@ -123,7 +123,7 @@ init = function( entity_id )
             EntityAddTag( entity_id, "extra_potion_capacity" )
         end
 
-		if(potion_material == "AA_pandorium" or potion_material == "AA_unstable_pandorium")then
+		if(potion_material == "aa_pandorium" or potion_material == "aa_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
 					
 			if ( comp1 ~= nil ) then

@@ -3,7 +3,7 @@
       kill_when_finished="0"
       from_material_tag="[magic_liquid]"
       steps_per_frame="32"
-      to_material="AA_potion_gas"
+      to_material="aa_potion_gas"
       clean_stains="0"
       is_circle="1"
       radius="32" 

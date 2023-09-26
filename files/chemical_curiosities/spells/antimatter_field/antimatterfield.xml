@@ -21,7 +21,7 @@
       kill_when_finished="0"
       from_any_material="1"
       steps_per_frame="25"
-      to_material="CC_antimatter_gas"
+      to_material="cc_antimatter_gas"
       is_circle="1"
       radius="25"
 	  convert_same_material="0"

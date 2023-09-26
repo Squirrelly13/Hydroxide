@@ -21,13 +21,13 @@
 		>
 		<count_per_material_type>
 			<Material material="AA_BLOOM_MAGIC" count="300"  />
-			<Material material="AA_compost" count="150"  />
+			<Material material="aa_compost" count="150"  />
 		</count_per_material_type>
 	</MaterialInventoryComponent>
 
 	<DamageModelComponent 
 		air_needed="0" 
-		blood_material="AA_bloomium_gas" 
+		blood_material="aa_bloomium_gas" 
 		drop_items_on_death="0" 
 		falling_damage_damage_max="1.2" 
 		falling_damage_damage_min="0.1" 
@@ -97,7 +97,7 @@
 			explosion_sprite="" 
 			explosion_sprite_lifetime="" 
 			create_cell_probability="1"
-			create_cell_material="AA_compost"
+			create_cell_material="aa_compost"
 			hole_destroy_liquid="0" 
 			physics_throw_enabled="1"
 			sparks_count_min="15" 

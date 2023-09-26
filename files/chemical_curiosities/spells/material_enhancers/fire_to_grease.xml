@@ -3,7 +3,7 @@
       kill_when_finished="0"
       from_material_tag="[fire]"
       steps_per_frame="32"
-      to_material="CC_grease"
+      to_material="cc_grease"
       clean_stains="0"
       is_circle="1"
       radius="32" 

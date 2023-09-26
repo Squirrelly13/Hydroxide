@@ -4,7 +4,7 @@
 <!-- TODO make unstable metamorphine more procedural if possible -->
 	
  <CellData 
-        name="CC_hydroxide"
+        name="cc_hydroxide"
         ui_name="Hydroxide"
         tags="[liquid],[hydroxide],[impure],[liquid_common]"
         density="2.9"
@@ -29,7 +29,7 @@
  </CellData>  <!-- hydroxide. the first material i made. -->
 
  <CellData
-	name="CC_acidic_water"
+	name="cc_acidic_water"
 	ui_name="Acidic Water"
 	tags="[liquid],[freezable],[water],[liquid_common]"
 	burnable="0"
@@ -64,7 +64,7 @@
   </CellData><!--  acidic water, used exclusively for the hydroxide acid interactions -->
   
   <CellData
-	name="CC_devouring_moss"
+	name="cc_devouring_moss"
 	ui_name="Devouring Moss"
 	tags="[static],[corrodible],[plant],[alchemy]"
 	cell_type="liquid"
@@ -85,7 +85,7 @@
   
 
  <CellData
-	name="CC_hydroxide_gas"
+	name="cc_hydroxide_gas"
 	ui_name="Flammable Gas"
   	tags="[gas],[burnable_fast]"
 	burnable="1"
@@ -110,7 +110,7 @@
  </CellData><!--  basically acid's flammable gas, but blue -->
 
  <CellData
-	name="CC_veilium"
+	name="cc_veilium"
 	ui_name="Veilium"
 	tags="[liquid],[water],[magic_liquid],[impure],[corrodible]"
 	density="4.21"
@@ -163,7 +163,7 @@
 
 
   <CellData
-	name="CC_sparkling_liquid"
+	name="cc_sparkling_liquid"
 	ui_name="Sparkling Liquid"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
 	density="0.7"
@@ -199,7 +199,7 @@
   </CellData><!--  Liquid Spark bolts -->
   
   <CellData
-	name="CC_slicing_liquid"
+	name="cc_slicing_liquid"
 	ui_name="Slicing Liquid"
 	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
 	density="2.31"
@@ -233,7 +233,7 @@
   </CellData><!-- liquid discs -->
   
   <CellData
-	name="CC_glittering_liquid"
+	name="cc_glittering_liquid"
 	ui_name="Glittering Liquid"
 	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
 	density="1.1415"
@@ -272,7 +272,7 @@
   </CellData><!--  firework liquid -->
 	
   <CellData
-	name="CC_blasting_powder"
+	name="cc_blasting_powder"
 	ui_name="Blasting Powder"
 	tags="[sand_ground],[burnable],[corrodible],[alchemy]"
 	burnable="1"
@@ -315,7 +315,7 @@
   </CellData> 
   
   <CellData
-	name="CC_methane"
+	name="cc_methane"
 	ui_name="Methane Gas"
 	tags="[gas],[burnable]"
 	burnable="1"
@@ -374,7 +374,7 @@
 	</CellDataChild><!-- sometimes drips from methane gas, pretty fun -->
 	
 	  <CellData
-	name="CC_jitterium"
+	name="cc_jitterium"
 	ui_name="Jitterium"
 	tags="[magic_liquid],[corrodible],[liquid],[impure]"
 	burnable="0"
@@ -410,7 +410,7 @@
   </CellData><!-- twitchy mage blood -->
   
   <CellData
-	name="CC_kindling"
+	name="cc_kindling"
 	ui_name="Kindling"
 	tags="[sand_other],[corrodible],[burnable],[alchemy]"
 	burnable="1"
@@ -456,7 +456,7 @@
   </CellData><!-- Kindling, if it burns, everything burns -->
 	
   <CellData	
-	name="CC_deceleratium"
+	name="cc_deceleratium"
 	ui_name="Deceleratium"
 	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
@@ -495,7 +495,7 @@
   </CellData> <!-- Deceleratium -->
   
   <CellData
-	name="CC_heftium"
+	name="cc_heftium"
 	ui_name="Heftium"
   	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
@@ -536,7 +536,7 @@
 	
 
   <CellData
-	name="CC_stillium"
+	name="cc_stillium"
 	ui_name="Stillium"
   	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
@@ -579,7 +579,7 @@
   </CellData><!-- Stillium -->
   
   <CellData
-	name="CC_metamorphine"
+	name="cc_metamorphine"
 	ui_name="Metamorphine"
 	tags="[magic_liquid],[metamorphine],[impure]"
 	burnable="0"
@@ -625,7 +625,7 @@
   </CellData>
   
   <CellData
-	name="CC_unstable_metamorphine"
+	name="cc_unstable_metamorphine"
 	ui_name="Unstable Metamorphine"
 	tags="[magic_liquid],[metamorphine],[impure]"
 	burnable="0"
@@ -671,7 +671,7 @@
   </CellData>
   
   <CellData
-	name="CC_agitine"
+	name="cc_agitine"
 	ui_name="Agitine"
 	tags="[magic_liquid],[impure],[liquid],[corrodible]"
 	burnable="1"
@@ -727,7 +727,7 @@
 	</CellData> 
 		
 	<CellData
-	name="CC_alchemy_powder"
+	name="cc_alchemy_powder"
 	ui_name="Alchemy Powder"
 	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -752,7 +752,7 @@
 	</CellData>
 	 
 	<CellData
-	name="CC_metastasizium"
+	name="cc_metastasizium"
 	ui_name="Metastasizium"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
 	density="1.9"
@@ -784,7 +784,7 @@
    
    
    <CellData
-	name="CC_nullium"
+	name="cc_nullium"
 	ui_name="Nullium"
 	tags="[liquid],[impure],[corrodible]"
 	density="4.63"
@@ -817,10 +817,10 @@
 		count.max="4"
 	>
 	</ParticleEffect>
-	</CellData> <!-- TODO find out what the hell is calling "CC_nullium" with lowercase M and throwing a hell of a lotta errors -->
+	</CellData> <!-- TODO find out what the hell is calling "cc_nullium" with lowercase M and throwing a hell of a lotta errors -->
 	
 	<CellData
-		name="CC_liberum_magicas"
+		name="cc_liberum_magicas"
 		ui_name="Liberum Magicas"
 		tags="[sand_other],[corrodible],[alchemy]"
 		burnable="0"
@@ -870,8 +870,8 @@
 
 
 	<CellDataChild
-		_parent="CC_blasting_powder" 
-		name="CC_thunder_powder"
+		_parent="cc_blasting_powder" 
+		name="cc_thunder_powder"
 		ui_name="Thunder Powder"
 		tags="[sand_ground],[corrodible],[alchemy]"
 		wang_color="ff83b354"
@@ -891,7 +891,7 @@
 	</CellDataChild>
 	
 	<CellData
-		name="CC_health_tonic"
+		name="cc_health_tonic"
 		ui_name="Health Tonic"
 		tags="[liquid],[magic_liquid],[impure],[corrodible]"
 		density="2.33"
@@ -917,7 +917,7 @@
 	</CellData> 
 
 	<CellData
-		name="CC_grease"
+		name="cc_grease"
 		ui_name="Grease"
 		tags="[liquid],[impure],[liquid_common]"
 		burnable="1"
@@ -974,7 +974,7 @@
 	<CellDataChild
 		_parent="ice_static"
 		_inherit_reactions="0"
-		name="CC_dormant_crystal"
+		name="cc_dormant_crystal"
 		ui_name="Dormant Crystal"
 		tags="[static],[alchemy],[solid]"
 		burnable="1"
@@ -1020,7 +1020,7 @@
 	
 
 	<CellData
-		name="CC_dormant_crystal_molten"
+		name="cc_dormant_crystal_molten"
 		ui_name="Liquid Crystal"
 		tags="[liquid],[corrodible],[molten],[alchemy],[liquid_common]"
 		burnable="0"
@@ -1043,7 +1043,7 @@
 	</CellData>
 	
 	<CellData
-		name="CC_uranium"
+		name="cc_uranium"
 		ui_name="Uranium"
 		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
 		burnable="0"
@@ -1089,7 +1089,7 @@
 	
 	<CellDataChild
 		_parent="radioactive_liquid"
-		name="CC_radioactive_waste"
+		name="cc_radioactive_waste"
 		ui_name="Radioactive Waste"
 		tags="[liquid],[corrodible],[radioactive],[impure],[liquid_common]"
 		wang_color="ff1afd84"
@@ -1111,7 +1111,7 @@
 	</CellDataChild>
 
 	<CellData
-		name="CC_morphine"
+		name="cc_morphine"
 		ui_name="Morphine"
 		tags="[sand_other],[corrodible],[alchemy]"
 		burnable="0"
@@ -1139,7 +1139,7 @@
 	</CellData>
 
 	<CellData
-		name="CC_antimatter_gas"
+		name="cc_antimatter_gas"
 		ui_name="Anti-Matter"
 		tags="[antimatter]"
 		burnable="0"
@@ -1166,7 +1166,7 @@
 	</CellData> 
 	
 	<CellData
-		name="CC_antimatter_liquid"
+		name="cc_antimatter_liquid"
 		ui_name="Anti-Matter"
 		tags="[antimatter]"
 		burnable="0"
@@ -1218,7 +1218,7 @@
 	
 	<CellDataChild
 		_parent="rotten_meat"
-		name="CC_frozen_meat"
+		name="cc_frozen_meat"
 		ui_name="Frozen Meat"
 		wang_color="ffabada9"
 		>
@@ -1232,7 +1232,7 @@
 
 
 	<CellData
-	name="CC_cobalt"
+	name="cc_cobalt"
 	ui_name="Cobalt"
   	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
@@ -1260,7 +1260,7 @@
 	</CellData>
   
     <CellData
-	name="CC_cobalt_molten"
+	name="cc_cobalt_molten"
 	ui_name="Molten Cobalt"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
@@ -1294,7 +1294,7 @@
   </CellData>
   
   <CellData
-	name="CC_iron"
+	name="cc_iron"
 	ui_name="Iron"
   	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
@@ -1322,7 +1322,7 @@
 	</CellData>
   
     <CellData
-	name="CC_iron_molten"
+	name="cc_iron_molten"
 	ui_name="Molten Iron"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
@@ -1357,7 +1357,7 @@
   
    
   <CellData
-	name="CC_preskite"
+	name="cc_preskite"
 	ui_name="Preskite"
   	tags="[sand_metal],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
@@ -1385,7 +1385,7 @@
 	</CellData>
   
     <CellData
-	name="CC_preskite_molten"
+	name="cc_preskite_molten"
 	ui_name="Molten Preskite"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
@@ -1419,7 +1419,7 @@
   </CellData>
   
 	<CellData
-		name="CC_ferrine"
+		name="cc_ferrine"
 		ui_name="Ferrine"
 		tags="[liquid],[corrodible],[impure],[food]"
 		burnable="0"
@@ -1443,7 +1443,7 @@
 	</CellData>
 	
 	<CellData
-		name="CC_cobaline"
+		name="cc_cobaline"
 		ui_name="Cobaline"
 		tags="[liquid],[corrodible],[impure]"
 		burnable="1"
@@ -1459,7 +1459,7 @@
 		temperature_of_fire="95"
 		fire_hp="25"
 		autoignition_temperature="10"
-		on_fire_smoke_material="CC_hydroxide_gas"
+		on_fire_smoke_material="cc_hydroxide_gas"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/cobaline.png"
@@ -1482,7 +1482,7 @@
 		solid_static_type="2"
 		solid_collide_with_self="0"
 		solid_on_sleep_convert="1"
-		solid_break_to_type="CC_dormant_crystal"
+		solid_break_to_type="cc_dormant_crystal"
 		solid_friction="0.85"
 		crackability="40"
 		platform_type="1"
@@ -1506,7 +1506,7 @@
 	</CellData>
 	
 	<CellData
-		name="CC_persistine"
+		name="cc_persistine"
 		ui_name="Persistine"
 		tags="[liquid],[magic_liquid],[impure],[water]"
 		burnable="0"
@@ -1552,7 +1552,7 @@
 	
 
 	<CellData
-		name="CC_deezium"
+		name="cc_deezium"
 		ui_name="Deez..."
 		tags="[liquid]"
 		density="0.69"
@@ -1568,7 +1568,7 @@
 
 	<CellDataChild
 		_parent="wood_static"
-		name="CC_lichtenberg_wood"
+		name="cc_lichtenberg_wood"
 		ui_name="Lichtenberg Wood"
 		wang_color="afdae872"
 		electrical_conductivity="1"
@@ -1578,7 +1578,7 @@
 
 	<CellDataChild
 		_parent="coal_static"
-		name="CC_lichtenberg_coal"
+		name="cc_lichtenberg_coal"
 		ui_name="Burnt Wood"
 		wang_color="afd6e241"
 		electrical_conductivity="1"

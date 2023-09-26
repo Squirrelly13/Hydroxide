@@ -7,7 +7,7 @@
 	    offset.y="158"
 	    speed="10"
 	    noise_threshold="0.0"
-	    material="CC_methane" >
+	    material="cc_methane" >
 	</MaterialSeaSpawnerComponent>
 
 	<LifetimeComponent
@@ -15,7 +15,7 @@
 	</LifetimeComponent>
 	
 	<ParticleEmitterComponent 
-		emitted_material_name="CC_methane"
+		emitted_material_name="cc_methane"
 		gravity.y="0.0"
 		lifetime_min="6"
 		lifetime_max="8"
