@@ -1,6 +1,6 @@
 <Entity >
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/sparkling_liquid/sparkingLiquid.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/sparkling_liquid/sparking_liquid.lua"
 		execute_on_added="1"
 		>
 	</LuaComponent>

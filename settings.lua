@@ -118,9 +118,9 @@ mod_settings =
 				value_display_formatting = " $0%",
 				scope = MOD_SETTING_SCOPE_RUNTIME,
 			},
+
 		}
 	},
-
 	{
 		category_id = "AA_SETTINGS",
 		ui_name = "Arcane Alchemy",
@@ -201,7 +201,18 @@ mod_settings =
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 		}
-	}
+	},
+	{
+		category_id = "ALCHEMIST_POTIONS",
+		ui_name = "Alchemist Potions",
+		ui_description = "Configure what potions can be thrown by alchemists.",
+		foldable = true,
+		_folded = true,
+		initialized = false,
+		settings = {
+
+		}
+	},
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.
@@ -227,6 +238,36 @@ end
 
 -- This function is called to display the settings UI for this mod. Your mod's settings wont be visible in the mod settings menu if this function isn't defined correctly.
 function ModSettingsGui( gui, in_main_menu )
+	for k, v in ipairs(mod_settings)do
+		if(v.category_id == "ALCHEMIST_POTIONS")then
+			if(in_main_menu)then
+
+				v.settings = {
+					{
+						id = "alchemist_potions_main_menu",
+						ui_name = "Due to Noita limitations, these settings are only available in-game.",
+						ui_description = "Please start a new game to configure this.",
+						not_setting = true,
+					},
+				}
+			else
+				if(not v.initialized)then
+					dofile("mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua")
+					for _, potion in ipairs(cc_alchemist_potions)do
+						table.insert(v.settings, {
+							id = "alchemist_potions_" .. potion.material,
+							ui_name = potion.name,
+							ui_description = "Allow alchemists to throw " .. GameTextGetTranslatedOrNot(potion.name) .. " potions.",
+							value_default = potion.default_disabled ~= true,
+							scope = MOD_SETTING_SCOPE_NEW_GAME,
+						})
+					end
+					v.initialized = true
+				end
+			end
+		end
+	end
+
 	mod_settings_gui( mod_id, mod_settings, gui, in_main_menu )
 
 	--example usage:
