@@ -1,84 +1,84 @@
 
 table.insert(materials_from, {
 		probability = 0.5,
-		materials	= {	"AA_BLOOM_ROOF",	"AA_BLOOMIUM_GAS", "AA_BLOOM_MAGIC"},
+		materials	= {	"AA_bloom_roof",	"AA_bloomium_gas", "AA_BLOOM_MAGIC"},
 	});
 table.insert(materials_from, {
 		probability = 0.5,
-		materials	= {	"AA_BLOOM_ROOF", "AA_BLOOM_ROOF_DEAD", "AA_BLOOM_ROOF_PLANT", "AA_BLOOMIUM_LIQUID"},
+		materials	= {	"AA_bloom_roof", "AA_bloom_roof_dead", "AA_bloom_roof_plant", "AA_bloomium"},
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material 	= "AA_POTION_GAS",	
+		material 	= "AA_potion_gas",	
 	});
 table.insert(materials_from, {
 		probability = 0.4,
-		materials 	= {"AA_POTION_GAS"},
+		materials 	= {"AA_potion_gas"},
 	});
 
 table.insert(materials_to, {
 		probability = 0.6,
-		material	= "AA_NEUTRAL_POTION",
+		material	= "AA_base_potion",
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material	= "AA_HITSELF",
+		material	= "AA_hitself",
 	});
 table.insert(materials_to, {
 		probability = 0.3,
-		material	= "AA_DARKMATTER",
+		material	= "AA_darkmatter",
 	});
 table.insert(materials_to, {
 		probability = 0.6,
-		material	= "AA_STATIC_CHARGE",
+		material	= "AA_static_charge",
 	});
 table.insert(materials_to, {
 		probability = 0.8,
-		material	= "AA_REPULTIUM",
+		material	= "AA_repultium",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material	= "AA_HUNGRY_SLIME",
+		material	= "AA_hungry_slime",
 	});
 table.insert(materials_to, {
 		probability = 0.05,
-		material	= "AA_CREEPING_SLIME",
+		material	= "AA_creeping_slime",
 	});
 table.insert(materials_to, {
 		probability = 0.3,
-		material	= "AA_ARBORIUM",
+		material	= "AA_arborium",
 	});
 table.insert(materials_to, {
 		probability = 0.6,
-		material	= "AA_LOVE",
+		material	= "AA_love",
 	});
 table.insert(materials_to, {
 		probability = 0.07,
-		material	= "AA_PATH",
+		material	= "AA_meager_offering",
 	});
 table.insert(materials_to, {
 		probability = 0.1,
-		material	= "rice",
+		material	= "AA_rice",
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material	= "AA_ICEFIRE",
+		material	= "AA_icy_inferno",
 	});
 table.insert(materials_to, {
 		probability = 0.01,
-		material	= "AA_LIQUID_ROCK",
+		material	= "AA_pop_rocks",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material	= "AA_GRAVLIQUID",
+		material	= "AA_condensed_gravity",
 	});
 table.insert(materials_to, {
 		probability = 0.3,
-		material	= "AA_CLONE",
+		material	= "AA_cloning_solution",
 	});
 table.insert(materials_from, {
 		probability = 0.3,
-		materials 	= {"AA_ASH"},
+		materials 	= {"AA_ash"},
 	});
 
 

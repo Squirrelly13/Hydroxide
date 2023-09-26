@@ -36,7 +36,7 @@
 		<ParticleEmitterComponent
 			_tags="activate"
 			_enabled="0"
-			emitted_material_name="solidCrystal"
+			emitted_material_name="CC_dormant_crystal"
 			gravity.y="0.0"
 			lifetime_min="10.01"
 			lifetime_max="10.1"

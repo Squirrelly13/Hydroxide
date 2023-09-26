@@ -1,14 +1,14 @@
 <Materials>
 	<Reaction probability="10"
-	input_cell1="frozen_meat"	input_cell2="air"
-	output_cell1="frozen_meat"	output_cell2="methane"
+	input_cell1="CC_frozen_meat"	input_cell2="air"
+	output_cell1="CC_frozen_meat"	output_cell2="CC_methane"
 	>
 	</Reaction>
 
     <!--Extra reaction to tune down the methane decay-->
     <Reaction probability="10"
-	input_cell1="frozen_meat"	input_cell2="air"
-	output_cell1="frozen_meat"	output_cell2="air"
+	input_cell1="CC_frozen_meat"	input_cell2="air"
+	output_cell1="CC_frozen_meat"	output_cell2="air"
 	>
 	</Reaction>
 </Materials>

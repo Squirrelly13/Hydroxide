@@ -4,32 +4,32 @@ table.insert(materials_standard, {
 });
 
 table.insert(materials_magic, {
-	material="devouringMoss",
+	material="CC_devouring_moss",
 	cost=2200,
 });
 
 table.insert(materials_magic, {
-	material="blastPowder",
+	material="CC_blasting_powder",
 	cost=750,
 });
 
 table.insert(materials_magic, {
-	material="fireStarter",
+	material="CC_kindling",
 	cost=700,
 });
 
 table.insert(materials_magic, {
-	materials="alchemyPowder",
+	materials="CC_alchemy_powder",
 	cost=3500,
 });
 
 table.insert(materials_magic, {
-	materials="lightningPowder",
+	materials="CC_thunder_powder",
 	cost=800,
 });
 
 table.insert(materials_magic, {
-	materials="squirrellymorphine",
+	materials="CC_morphine",
 	cost=800,
 });
 

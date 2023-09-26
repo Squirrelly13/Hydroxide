@@ -1,68 +1,68 @@
 table.insert(materials_from, {
 		probability = 1.0,
-		materials = { "hydroxide" },
+		materials = { "CC_hydroxide" },
 	});
 table.insert(materials_to, {
 		probability = 1.00,
-		material = "hydroxide",
+		material = "CC_hydroxide",
 	}); 
 table.insert(materials_from, {
 		probability = 0.5,
-		materials = { "sparkLiquid", "sliceLiquid", "glitteringLiquid" },
+		materials = { "CC_sparkling_liquid", "CC_slicing_liquid", "CC_glittering_liquid" },
 	});
 table.insert(materials_to, {
 		probability = 	0.01,
-		material 	= 	"sparkLiquid",
+		material 	= 	"CC_sparkling_liquid",
 	});
 table.insert(materials_to, {
 		probability = 	0.01,
-		material 	= 	"sliceLiquid",
+		material 	= 	"CC_slicing_liquid",
 	});
 table.insert(materials_to, {
 		probability = 	0.01,	
-		material 	= 	"glitteringLiquid",
+		material 	= 	"CC_glittering_liquid",
 	});
 table.insert(materials_to, {
 		probability = 	0.005,
-		material 	= 	"devouringMoss",
+		material 	= 	"CC_devouring_moss",
 	});
 table.insert(materials_from, {
 		probability = 	0.004,	
-		materials 	= 	{"devouringMoss"},
+		materials 	= 	{"CC_devouring_moss"},
 	});
 table.insert(materials_to, {
 		probability = 	1.5,	
-		material 	= 	"methane",	
+		material 	= 	"CC_methane",	
 	});
 
 
 table.insert(materials_to, {
 		probability = 0.01,
-		material 	= "antimatter_gas",
+		material 	= "CC_antimatter_gas",
 	});
 table.insert(materials_from, {
 		probability = 0.01,
-		materials 	= {"antimatter_gas", "antimatter_liquid" },
+		materials 	= {"CC_antimatter_gas", "CC_antimatter_liquid" },
 	});
 table.insert(materials_to, {
 		probability = 0.8,
-		material = "CC_potionBlindness",
+		material = "CC_veilium",
 	});
 table.insert(materials_from, {
 		probability = 0.6,
-		materials = { "CC_potionBlindness", "magic_liquid_invisibility"},
+		materials = { "CC_veilium", "magic_liquid_invisibility"},
 	});
 table.insert(materials_from, {
 		probability = 0.9,
-		materials = {"methane", "acid_gas", "hydroxide_gas", "poison_gas"},
+		materials = {"CC_methane", "acid_gas", "CC_hydroxide_gas", "poison_gas"},
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material 	= "fireStarter",
+		material 	= "CC_kindling",
 	});
 table.insert(materials_to, {
 		probability = 0.1,
-		material 	= "blastPowder",
+		material 	= "CC_blasting_powder",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
@@ -71,72 +71,72 @@ table.insert(materials_to, {
 
 table.insert(materials_from, {
 		probability = 0.7,
-		materials 	= {"magic_liquid_movement_slower", "magic_liquid_slower_levitation", "magic_liquid_slower_levitation_and_movement" },
+		materials 	= {"CC_deceleratium", "CC_heftium", "CC_stillium" },
 	});
 
 table.insert(materials_to, {
 		probability = 0.6,
-		material	= "twitchyJuice",
+		material	= "CC_jitterium",
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material	= "metamorphine",
+		material	= "CC_metamorphine",
 	});
 table.insert(materials_to, {
 		probability = 0.01,
-		material	= "unstableMetamorphine",
+		material	= "CC_unstable_metamorphine",
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material	= "explodePlayer",
+		material	= "CC_agitine",
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material	= "antimagic",
+		material	= "CC_nullium",
 	});
 table.insert(materials_to, {
 		probability = 0.002,
-		material	= "wand_tinker",
+		material	= "CC_liberum_magicas",
 	});
 table.insert(materials_to, {
 		probability = 0.004,
-		material	= "alchemyPowder",
+		material	= "CC_alchemy_powder",
 	});
 table.insert(materials_to, {
 		probability = 0.8,
-		material	= "lightningPowder",
+		material	= "CC_thunder_powder",
 	});
 table.insert(materials_to, {
 		probability = 0.001,
-		material	= "increaseMaxHP",
+		material	= "CC_health_tonic",
 	});
 table.insert(materials_to, {
 		probability = 0.9,
-		material	= "grease",
+		material	= "CC_grease",
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material	= "solidCrystal",
+		material	= "CC_dormant_crystal",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material	= "solidCrystal_molten",
+		material	= "CC_dormant_crystal_molten",
 	});
 table.insert(materials_to, {
 		probability = 0.5,
-		material	= "uranium",
+		material	= "CC_uranium",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material	= "cobalt",
+		material	= "CC_cobalt",
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material	= "squirrellymorphine"
+		material	= "CC_morphine"
 	});
 
 table.insert(materials_to, {
 		probability = 0.65,
-		materials 	= "ferrineSkin",
+		materials 	= "CC_persistine",
 	});
 		

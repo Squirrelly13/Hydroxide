@@ -1,6 +1,6 @@
 alchemical_materials = {
     {
-        id = "alchemical_solvent", -- id of the material
+        id = "MM_alchemical_solvent", -- id of the material
         name = "Alchemical Solvent", -- name of the material
         description = "Alchemical solvent is a material which is used to create mystical solutions.",
         generate_notes = true,
@@ -10,7 +10,7 @@ alchemical_materials = {
         tags = "[alchemical]",
     },
     {
-        id = "alchemical_base",
+        id = "MM_alchemical_base",
         name = "Alchemical Base",
         description = "The base of all proper alchemy.",
         generate_notes = true,
@@ -20,7 +20,7 @@ alchemical_materials = {
         tags = "[alchemical]",       
     },
     {
-        id = "ephemeral_ether",
+        id = "MM_ephemeral_ether",
         name = "Ephemeral Ether",
         description = "A voletile substance which evaporates quickly.\nA side product of many alchemical processes.\nUses are yet unknown.",
         generate_notes = true,
@@ -31,7 +31,7 @@ alchemical_materials = {
         density = 1.1,
     },
     {
-        id = "ephemeral_ether_gas",
+        id = "MM_ephemeral_ether_gas",
         name = "Ephemeral Ether Gas",
         description = "The evaporated form of Ephemeral Ether.",
         color = "410AFFD2",
@@ -43,7 +43,7 @@ alchemical_materials = {
         glow = 20,
     },
     {
-        id = "gold_solution",
+        id = "MM_gold_solution",
         name = "Gold Solution",
         description = "A solution of gold in an alchemical solvent.\nIt can be used in a variety of recipes, notably modifying wand capacity.",
         generate_notes = true,
@@ -55,7 +55,7 @@ alchemical_materials = {
         glow = 200,
     },
     {
-        id = "replicating_agent",
+        id = "MM_replicating_agent",
         name = "Replicating Agent",
         description = "A substance which through mystical means appears to clone other liquid substances.",
         generate_notes = true,
@@ -72,11 +72,11 @@ alchemical_recipes = {
         id = "ether_evaporation",
         probability = 3, 
         inputs = {
-            "ephemeral_ether",
+            "MM_ephemeral_ether",
             "air",
         },
         outputs = {
-            "ephemeral_ether_gas",
+            "MM_ephemeral_ether_gas",
             "air",
         },
         func = nil
@@ -90,12 +90,12 @@ alchemical_recipes = {
         inputs = { -- three ingredients is the limit
             "[gold]",
             "[gold]",
-            "alchemical_solvent",
+            "MM_alchemical_solvent",
         },
         outputs = {
-            "gold_solution",
-            "gold_solution",
-            "ephemeral_ether",
+            "MM_gold_solution",
+            "MM_gold_solution",
+            "MM_ephemeral_ether",
         },
     },
     {
@@ -105,12 +105,12 @@ alchemical_recipes = {
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
-            "gold_solution",
-            "alchemical_base",
+            "MM_gold_solution",
+            "MM_alchemical_base",
         },
         outputs = {
             "air",
-            "ephemeral_ether",
+            "MM_ephemeral_ether",
         },
         func = function(x, y)
             SetRandomSeed( x + 32523, y + 5325 + GameGetFrameNum() )
@@ -169,7 +169,7 @@ alchemical_recipes = {
         id = "replicating_agent_1",
         probability = 100,
         inputs = {
-            "replicating_agent",
+            "MM_replicating_agent",
             "[liquid]",
         },
         outputs = {
@@ -181,7 +181,7 @@ alchemical_recipes = {
         id = "replicating_agent_2",
         probability = 100,
         inputs = {
-            "replicating_agent",
+            "MM_replicating_agent",
             "[magic_liquid]",
         },
         outputs = {

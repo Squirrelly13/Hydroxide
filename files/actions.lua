@@ -145,7 +145,7 @@ table.insert( actions, {
 		mana = 25,
 		--max_uses = 50,
 		action 		= function()
-			c.trail_material = c.trail_material .. "AA_REPULTIUM"
+			c.trail_material = c.trail_material .. "AA_repultium"
 			c.trail_material_amount = c.trail_material_amount + 20
 			draw_actions( 1, true )
 		end,
@@ -261,7 +261,7 @@ table.insert( actions, {
 			local pos_x, pos_y = EntityGetTransform( entity_id )
 			
 			SetRandomSeed( pos_x + 436, pos_y - 3252 )
-			local material_options = { "blastPowder", "fireStarter", "lightningPowder" }
+			local material_options = { "CC_blasting_powder", "CC_kindling", "CC_thunder_powder" }
 			local rare = false
 			local rnd = 1
 			local material = "gunpowder"

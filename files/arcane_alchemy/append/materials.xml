@@ -38,7 +38,7 @@
    </CellData>--> <!--  magic liquid specifically for creating a bloomery  -->
 	
    <CellData
-    name="AA_HITSELF"
+    name="AA_hitself"
     ui_name="Stop Hitting Yourself"
     tags="[liquid],[magic_liquid],[corrodible],[freezable],[water],[impure]"
     burnable="0"
@@ -71,7 +71,7 @@
   </CellData> <!--  Why are you hitting yourself?  -->
   
     <CellData
-    name="AA_DARKMATTER"
+    name="AA_darkmatter"
     ui_name="Dark Matter"
     tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
     burnable="0"
@@ -120,7 +120,7 @@
   </CellData><!--  COLLAPSE -->
   
   <CellData
-    name="AA_STATIC_CHARGE"
+    name="AA_static_charge"
     ui_name="Static Charge"
       tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
     burnable="0"
@@ -137,7 +137,7 @@
     danger_water="1"
     liquid_stains="1"
 	  gfx_glow="200"
-	  status_effects="AA_STATIC_CHARGE"
+	  status_effects="AA_static_charge"
     liquid_sprite_stain_ignited_drop_chance="10"
     liquid_sprite_stains_check_offset="-1" 
     show_in_creative_mode="1"
@@ -161,14 +161,14 @@
 	</ParticleEffect>
     <StatusEffects>
         <Ingestion>
-            <StatusEffect type="AA_STATIC_CHARGE" amount="0.1"/>
+            <StatusEffect type="AA_static_charge" amount="0.1"/>
         </Ingestion>
     </StatusEffects>
   </CellData><!--  makes you shocking -->
 
   
   <CellData 
-    name="AA_REPULTIUM"
+    name="AA_repultium"
     ui_name="Repultium"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid]"
     burnable="0"  
@@ -204,7 +204,7 @@
   </CellData><!-- Things bounce off this. -->
   
   <CellData 
-    name="AA_HUNGRY_SLIME"
+    name="AA_hungry_slime"
     ui_name="Hungry Slime"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
     burnable="0"  
@@ -243,7 +243,7 @@
   </CellData><!-- slowly growing slime of some kind. not sure how this goes -->
   
    <CellData 
-    name="AA_CREEPING_SLIME"
+    name="AA_creeping_slime"
     ui_name="Creeping Slime"
     tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid]"
     burnable="0"  
@@ -275,7 +275,7 @@
   </CellData><!-- this one spreads over ground, pretty aggressively -->
 
   <CellData 
-    name="AA_HUNGRY_SLIME_GROWING"
+    name="AA_hungry_slime_growing"
     ui_name="Hungry Slime"
     tags="[burnable],[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
     burnable="1"  
@@ -311,7 +311,7 @@
 
   
     <CellData
-	name="AA_ASH"
+	name="AA_ash"
 	ui_name="Ash"
   	tags="[sand_ground],[corrodible],[meltable_to_lava],[alchemy]"
 	burnable="0"
@@ -337,7 +337,7 @@
   </CellData><!-- ASH -->
   
   <CellData
-	name="AA_SOOT"
+	name="AA_soot"
 	ui_name="Soot"
   	tags="[gas]"
 	burnable="0"
@@ -359,7 +359,7 @@
 
    
   <CellData
-	name="AA_POTION_GAS"
+	name="AA_potion_gas"
 	ui_name="Potion gas"
   	tags="[gas]"
 	burnable="0"
@@ -384,7 +384,7 @@
 
   
   <CellData
-	name="AA_SOLID_SLIME"
+	name="AA_solidified_slime"
 	ui_name="solidified slime"
 	tags="[static],[corrodible],[alchemy],[solid]"
 	burnable="0"
@@ -410,7 +410,7 @@
   </CellData><!-- Solidified slime. unsure the use case but its neat -->
 	
  <CellData
-	name="AA_NEUTRAL_POTION"
+	name="AA_base_potion"
 	ui_name="Base potion"
   	tags="[liquid],[magic_liquid],[water],[impure],"
 	burnable="0"
@@ -451,7 +451,7 @@
   </CellData><!-- Neutral potion, used in reactions probably -->
   
   <CellData
-	name="AA_ARBORIUM"
+	name="AA_arborium"
 	ui_name="Arborium"
   	tags="[liquid],[water],[impure],[magic_liquid]"
 	burnable="0"
@@ -491,7 +491,7 @@
   </CellData> 
 
 	 <CellData
-	name="AA_CATALYST"
+	name="AA_catalyst"
 	ui_name="Catalyst"
   	tags="[liquid],[magic_liquid],[water],[impure]"
 	density="1.5"
@@ -519,7 +519,7 @@
   </CellData><!-- Catalyst -->
   
    <CellData
-	name="AA_OIL_SPLITTING"
+	name="AA_oil_splitting"
 	ui_name="$oil"
   	tags="[liquid],[magic_liquid],[burnable],[impure]"
 	burnable="1"
@@ -556,7 +556,7 @@
 
   
     <CellData
-	name="AA_OIL_LIGHT"
+	name="AA_light_oil"
 	ui_name="Light Oil"
   	tags="[liquid],[burnable],[impure]"
 	burnable="1"
@@ -593,7 +593,7 @@
 
   
     <CellData
-	name="AA_OIL_HEAVY"
+	name="AA_heavy_oil"
 	ui_name="Heavy Oil"
   	tags="[liquid],[burnable],[impure]"
 	burnable="1"
@@ -629,7 +629,7 @@
   </CellData><!-- HEAVY OIL -->
 
    <CellData 
-	name="AA_MAGICPLASTIC"
+	name="AA_magic_plastic"
 	ui_name="Magical plastic"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[slime]"
 	burnable="0"  
@@ -661,7 +661,7 @@
   </CellData><!-- idk makes a nerf gun with something but idk what. kinda broken, gonna leave it in -->
   
     <CellData 
-	name="AA_LOVE"
+	name="AA_love"
 	ui_name="Love"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[burnable],[magic_liquid],[impure]"
 	burnable="1"  
@@ -718,7 +718,7 @@
 
   
   <CellData 
-	name="AA_PATH"
+	name="AA_meager_offering"
 	ui_name="A Meager Offering"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
@@ -771,7 +771,7 @@
  <!-- TODO reactions maybe gold and something? -->
   
      <CellData
-	name="rice"
+	name="AA_rice"
 	ui_name="Rice"
   	tags="[sand_ground],[corrodible],[meltable_to_lava_fast],[alchemy],[food]"
 	burnable="0"
@@ -819,7 +819,7 @@
   </CellData><!-- RICE -->
   
   <CellData 
-	name="AA_ICEFIRE"
+	name="AA_icy_inferno"
 	ui_name="Icy inferno"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
@@ -872,7 +872,7 @@
 
   
   <CellData 
-	name="AA_LIQUID_SPELL"
+	name="AA_pandorium"
 	ui_name="Pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure],"
 	burnable="0"
@@ -918,7 +918,7 @@
 
   
    <CellData 
-	name="AA_UNSTABLE_LIQUID_SPELL"
+	name="AA_unstable_pandorium"
 	ui_name="Unstable Pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure],"
 	burnable="0"
@@ -964,7 +964,7 @@
   </CellData><!-- Unstable Pandorium -->
   
    <CellData 
-	name="AA_LIQUID_ROCK"
+	name="AA_pop_rocks"
 	ui_name="Pop Rocks"
   	tags="[liquid],[magic_liquid],[water],[impure],"
 	burnable="0"
@@ -1005,7 +1005,7 @@
   </CellData><!-- POP ROCKS!!!! -->
 
     <CellData 
-	name="AA_GRAVLIQUID"
+	name="AA_condensed_gravity"
 	ui_name="Condensed Gravity"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
@@ -1057,7 +1057,7 @@
   </CellData><!-- Condensed Gravity -->
   
   <CellData 
-	name="AA_CLONE"
+	name="AA_cloning_solution"
 	ui_name="Cloning Solution"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
@@ -1153,7 +1153,7 @@
 
   
   <CellData
-	name="AA_COMPOST"
+	name="AA_compost"
 	ui_name="Compost"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid]"
 	burnable="0"
@@ -1180,38 +1180,9 @@
     </Graphics>
   </CellData><!-- Compost, grows big plants its pretty coo -->
   
-      <CellData
-	name="AA_GROWTH"
-	ui_name="Growth"
-  	tags="[alchemy]"
-	burnable="1"
-	density="1"
-	cell_type="gas"
-    wang_color="7fbbab20"
-	lifetime="450"
-	generates_smoke="0"
-	liquid_gravity="0.5"
-	liquid_sand="0"
-	on_fire="1"
-	fire_hp="100000"
-	requires_oxygen="1"
-	temperature_of_fire="140"
-	autoignition_temperature="1"
-    gfx_glow="200" >
-    <ExplosionConfig 
-
-		cell_explosion_power="0.001"
-		cell_explosion_damage_required="0"
-		cell_explosion_radius_min="0.001"
-
-		>
-	</ExplosionConfig>
-  </CellData><!-- Growth? not sure what this is, it just explode -->
- <!-- TODO figure out what this is even fo -->
-  
   
 <CellData
-    name="AA_MATTER_EATER"
+    name="AA_strange_matter"
     ui_name="Strange matter"
       tags="[magic_liquid],[alchemy],[liquid]"
     burnable="1"
@@ -1252,5 +1223,5 @@
         >
     </ExplosionConfig>
   </CellData><!-- Strange Matter -->
- <!-- TODO figure out what this is fo -->
+  
 </Materials>

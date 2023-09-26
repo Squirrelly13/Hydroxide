@@ -57,7 +57,7 @@
       kill_when_finished="0"
       from_material_tag="[liquid]"
       steps_per_frame="5"
-      to_material="rice"
+      to_material="AA_rice"
       is_circle="1"
       radius="120" >
     </MagicConvertMaterialComponent>
@@ -66,7 +66,7 @@
       kill_when_finished="0"
       from_material_tag="[gas]"
       steps_per_frame="5"
-      to_material="rice"
+      to_material="AA_rice"
       is_circle="1"
       radius="120" >
     </MagicConvertMaterialComponent>
@@ -75,7 +75,7 @@
       kill_when_finished="0"
       from_material_tag="[box2d]"
       steps_per_frame="5"
-      to_material="rice"
+      to_material="AA_rice"
       is_circle="1"
       radius="120" >
     </MagicConvertMaterialComponent>
@@ -84,7 +84,7 @@
       kill_when_finished="0"
       from_material="fire"
       steps_per_frame="5"
-      to_material="rice"
+      to_material="AA_rice"
       is_circle="1"
       radius="120" >
     </MagicConvertMaterialComponent>

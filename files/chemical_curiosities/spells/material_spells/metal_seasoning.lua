@@ -2,9 +2,9 @@
 dofile_once("data/scripts/lib/utilities.lua") 
 local options =
 {
-	{ probability = 1.0000, "preskite"},
-	{ probability = 1.0000, "cobalt"},
-	{ probability = 1.0000, "iron"},
+	{ probability = 1.0000, "CC_preskite"},
+	{ probability = 1.0000, "CC_cobalt"},
+	{ probability = 1.0000, "CC_iron"},
 	{ probability = 1.0000, "brass"},
 	{ probability = 1.0000, "copper"},
 	{ probability = 1.0000, "silver"},

@@ -1,5 +1,5 @@
 table.insert(materials_standard, {
-	material="hydroxide",
+	material="CC_hydroxide",
 	cost=250,
 });
 
@@ -7,92 +7,92 @@ table.insert(materials_standard, {
 
 
 table.insert(materials_magic, {
-    material="sliceLiquid",
+    material="CC_slicing_liquid",
 	cost=750,
 });
 
 table.insert(materials_magic, {
-    material="sparkLiquid",
+    material="CC_sparkling_liquid",
 	cost=750,
 });
 
 table.insert(materials_magic, {
-    material="glitteringLiquid",
+    material="CC_glittering_liquid",
 	cost=750,
 });
 
 table.insert(materials_magic, {
-    material="twitchyJuice",
+    material="CC_jitterium",
 	cost=500,
 });
 
 table.insert(materials_magic, {
-    material="magic_liquid_movement_slower",
+    material="CC_deceleratium",
 	cost=200,
 });
 
 table.insert(materials_magic, {
-    material="magic_liquid_slower_levitation",
+    material="CC_heftium",
 	cost=200,
 });
 
 table.insert(materials_magic, {
-    material="magic_liquid_slower_levitation_and_movement",
+    material="CC_stillium",
 	cost=250,
 });
 
 table.insert(materials_magic, {
-    material="metamorphine",
+    material="CC_metamorphine",
 	cost=700,
 });
 
 table.insert(materials_magic, {
-    material="unstableMetamorphine",
+    material="CC_unstable_metamorphine",
 	cost=900,
 }); 
 
 table.insert(materials_magic, {
-    material="explodePlayer",
+    material="CC_agitine",
 	cost=350,
 });
 
 table.insert(materials_magic, {
-    material="liquid_projectile_trail",
+    material="CC_metastasizium",
 	cost=600,
 });
 
 table.insert(materials_magic, {
-	material="antimagic",
+	material="CC_nullium",
 	cost=1000,
 });
 
 table.insert(materials_standard, {
-	material="grease",
+	material="CC_grease",
 	cost=100,
 });
 
 table.insert(materials_magic, {
-	material="antimatter_gas",
+	material="CC_antimatter_gas",
 	cost=950,
 });
 
 table.insert(materials_magic, {
-	material="antimatter_liquid",
+	material="CC_antimatter_liquid",
 	cost=1000,
 });
 
 table.insert(materials_standard, {
-	material="cobalt_ingredient",
+	material="CC_cobaline",
 	cost=120,
 });
 
 table.insert(materials_standard, {
-	material="iron_ingredient",
+	material="CC_ferrine",
 	cost=120,
 });
 
 table.insert(materials_magic, {
-	material="ferrineSkin",
+	material="CC_persistine",
 	cost=350,
 });
 
@@ -116,7 +116,7 @@ init = function( entity_id )
         potion_material = potion_material.material
 
 		-- debug
-		--potion_material = "AA_UNSTABLE_LIQUID_SPELL"
+		--potion_material = "AA_unstable_pandorium"
 
         local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
     
@@ -146,7 +146,7 @@ init = function( entity_id )
             EntityAddTag( entity_id, "extra_potion_capacity" )
         end
 
-		if(potion_material == "AA_LIQUID_SPELL" or potion_material == "AA_UNSTABLE_LIQUID_SPELL")then
+		if(potion_material == "AA_pandorium" or potion_material == "AA_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
 					
 			if ( comp1 ~= nil ) then

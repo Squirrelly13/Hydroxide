@@ -19,7 +19,7 @@
     audio_collision_size_modifier_amount="0.8"
     >
     <count_per_material_type>
-      <Material material="grease" count="300"  />
+      <Material material="CC_grease" count="300"  />
 	  </count_per_material_type>
   </MaterialInventoryComponent>
 
