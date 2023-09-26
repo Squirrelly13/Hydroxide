@@ -1,9 +1,15 @@
 <Entity>
     <LifetimeComponent
-        lifetime="2"
+        lifetime="1"
     />
     <ElectricityReceiverComponent/>
     <LuaComponent
-        script_electricity_receiver_electrified=
+        script_electricity_receiver_switched="mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_handler.lua"
+    />
+    <SpriteComponent
+        image_file="mods/Hydroxide/files/chemical_curiosities/electrolysis/debug_marker.png"
+        offset_x="0.5"
+        offset_y="0.5"
+        emissive="1"
     />
 </Entity>

@@ -1,9 +1,9 @@
 table.insert(materials, {
-    material="FF_bingus",
+    material="MM_bingus",
     weight=0.6,
 })
 
 table.insert(materials, {
-    material="FF_bingus_wetfood",
+    material="MM_bingus_wetfood",
     weight=0.6,
 })
