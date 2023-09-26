@@ -34,7 +34,7 @@
   </CellData>
 
   <CellData
-	name="material_confusion_powder"
+	name="FF_flummoxium_powder"
 	ui_name="flummoxium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -67,7 +67,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_movement_faster_powder"
+	name="FF_acceleratium_powder"
 	ui_name="acceleratium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -99,7 +99,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_faster_levitation_powder"
+	name="FF_levitatium_powder"
 	ui_name="levitatium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -131,7 +131,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_faster_levitation_and_movement_powder"
+	name="FF_hastium_powder"
 	ui_name="hastium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -164,7 +164,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_worm_attractor_powder"
+	name="FF_worm_pheromone_powder"
 	ui_name="worm pheromone powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -196,7 +196,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_protection_all_powder"
+	name="FF_ambrosia_powder"
 	ui_name="ambrosia powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -227,7 +227,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_mana_regeneration_powder"
+	name="ff_very_concentrated_mana_powder"
 	ui_name="very concentrated mana powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -259,7 +259,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_unstable_teleportation_powder"
+	name="FF_unstable_teleportatium_powder"
 	ui_name="unstable teleportatium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -291,7 +291,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_teleportation_powder"
+	name="FF_teleportatium_powder"
 	ui_name="teleportatium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -324,7 +324,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_hp_regeneration_powder"
+	name="FF_healthium_powder"
 	ui_name="healthium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -356,7 +356,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_polymorph_powder"
+	name="FF_polymorphine_powder"
 	ui_name="polymorphine powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -387,7 +387,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_random_polymorph_powder"
+	name="FF_chaotic_polymorphine_powder"
 	ui_name="chaotic polymorphine powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -418,7 +418,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_unstable_polymorph_powder"
+	name="FF_unstable_polymorphine_powder"
 	ui_name="unstable polymorphine powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -449,7 +449,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_berserk_powder"
+	name="FF_berserkium_powder"
 	ui_name="berserkium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -481,7 +481,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_charm_powder"
+	name="FF_pheromone_powder"
 	ui_name="pheromone powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
@@ -513,7 +513,7 @@
   </CellData>
 
   <CellData
-	name="magic_liquid_invisibility_powder"
+	name="FF_invisibilium_powder"
 	ui_name="invisiblium powder"
   	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
