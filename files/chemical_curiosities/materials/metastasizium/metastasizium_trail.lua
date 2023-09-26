@@ -1,7 +1,7 @@
 function shot(projectile_id)
     EntityAddComponent2(projectile_id, "ParticleEmitterComponent", 
         { 
-            emitted_material_name = "liquid_projectile_trail",
+            emitted_material_name = "CC_metastasizium",
             render_on_grid = true,
             create_real_particles = true,
             x_pos_offset_min=-5,

@@ -92,13 +92,13 @@
 	</Reaction><!-- bloom potion recipe.  -->
 	
 	<Reaction probability="100"
-	input_cell1="alchemyPowder"				input_cell2="blood_fungi"
+	input_cell1="CC_alchemy_powder"				input_cell2="blood_fungi"
 	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
 	>
 	</Reaction><!-- alchemy powder potion recipe -->
 	
 	<Reaction probability="100"
-	input_cell1="AA_BLOOM_MAGIC"	input_cell2="alchemyPowder"
+	input_cell1="AA_BLOOM_MAGIC"	input_cell2="CC_alchemy_powder"
 	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
 	blob_radius2="2"
 	>
@@ -145,7 +145,7 @@
 	</Reaction><!--  lots of powders are immune -->
 	
 	<Reaction probability="40"
-	input_cell1="methane"				input_cell2="[bloom]"
+	input_cell1="CC_methane"				input_cell2="[bloom]"
 	output_cell1="air"	output_cell2="[bloom]_POISONED_DECAYED"
 	blob_radius1="2"
 	>

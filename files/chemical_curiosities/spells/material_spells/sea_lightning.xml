@@ -7,7 +7,7 @@
 	    offset.y="158"
 	    speed="10"
 	    noise_threshold="0.0"
-	    material="lightningPowder" >
+	    material="CC_thunder_powder" >
 	</MaterialSeaSpawnerComponent>
 
 	<LifetimeComponent
@@ -15,7 +15,7 @@
 	</LifetimeComponent>
 	
 	<ParticleEmitterComponent 
-		emitted_material_name="lightningPowder"
+		emitted_material_name="CC_thunder_powder"
 		gravity.y="0.0"
 		lifetime_min="6"
 		lifetime_max="8"

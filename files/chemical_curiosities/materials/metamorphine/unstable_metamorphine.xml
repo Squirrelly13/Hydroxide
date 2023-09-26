@@ -289,9 +289,9 @@
 	
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_potionBlindness"
+      from_material="CC_veilium"
       steps_per_frame="48"
-      to_material="CC_potionBlindness"
+      to_material="CC_veilium"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -315,9 +315,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="sparkLiquid"
+      from_material="CC_sparkling_liquid"
       steps_per_frame="48"
-      to_material="sparkLiquid"
+      to_material="CC_sparkling_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -327,9 +327,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="sliceLiquid"
+      from_material="CC_slicing_liquid"
       steps_per_frame="48"
-      to_material="sliceLiquid"
+      to_material="CC_slicing_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -339,9 +339,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="glitteringLiquid"
+      from_material="CC_glittering_liquid"
       steps_per_frame="48"
-      to_material="glitteringLiquid"
+      to_material="CC_glittering_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -351,9 +351,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="blastPowder"
+      from_material="CC_blasting_powder"
       steps_per_frame="48"
-      to_material="blastPowder"
+      to_material="CC_blasting_powder"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -387,9 +387,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="fireStarter"
+      from_material="CC_kindling"
       steps_per_frame="48"
-      to_material="fireStarter"
+      to_material="CC_kindling"
       clean_stains="0"
       is_circle="1"
       radius="22" 

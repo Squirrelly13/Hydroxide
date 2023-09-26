@@ -55,7 +55,7 @@
 
   <!-- cloud -->
   <ParticleEmitterComponent 
-    emitted_material_name="cobalt_ingredient"
+    emitted_material_name="CC_cobaline"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"
@@ -79,7 +79,7 @@
 
   <!-- trail -->
   <ParticleEmitterComponent 
-    emitted_material_name="cobalt_ingredient"
+    emitted_material_name="CC_cobaline"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"

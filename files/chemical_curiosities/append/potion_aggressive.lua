@@ -1,64 +1,64 @@
 cc_alchemist_potions = {
 	{
 		name = "Hydroxide",
-		material = "hydroxide",
+		material = "CC_hydroxide",
 		cost = 250,
 	},
 	{
 		name = "Slicing Liquid",
-		material = "sliceLiquid",
+		material = "CC_slicing_liquid",
 		cost = 850,
 	},
 	{
 		name = "Sparkling Liquid",
-		material = "sparkLiquid",
+		material = "CC_sparkling_liquid",
 		cost = 850,
 	},
 	{
 		name = "Glittering Liquid",
-		material = "glitteringLiquid",
+		material = "CC_glittering_liquid",
 		cost = 850,
 	},
 	{
 		name = "Jitterium",
-		material = "twitchyJuice",
+		material = "CC_jitterium",
 		cost = 600,
 	},
 	{
 		name = "Kindling",
-		material = "fireStarter",
+		material = "CC_kindling",
 		cost = 500,
 	},
 	{
 		name = "Deceleratium",
-		material = "magic_liquid_movement_slower",
+		material = "CC_deceleratium",
 		cost = 200,
 	},
 	{
 		name = "Heftium",
-		material = "magic_liquid_slower_levitation",
+		material = "CC_heftium",
 		cost = 200,
 	},
 	{
 		name = "Stillium",
-		material = "magic_liquid_slower_levitation_and_movement",
+		material = "CC_stillium",
 		cost = 250,
 	},
 	{
 		name = "Metamorphine",
-		material = "metamorphine",
+		material = "CC_metamorphine",
 		cost = 800,
 		default_disabled = true,
 	},
 	{
 		name = "Unstable Metamorphine",
-		material = "unstableMetamorphine",
+		material = "CC_unstable_metamorphine",
 		cost = 1500,
 		default_disabled = true,
 	},
 	{
 		name = "Agitine",
-		material = "explodePlayer",
+		material = "CC_agitine",
 		cost = 700,
 	},
 	{
@@ -68,17 +68,17 @@ cc_alchemist_potions = {
 	},
 	{
 		name = "Metastasizium",
-		material = "liquid_projectile_trail",
+		material = "CC_metastasizium",
 		cost = 600,
 	},
 	{
 		name = "Nullium",
-		material = "antimagic",
+		material = "CC_nullium",
 		cost = 600,
 	},
 	{
 		name = "Grease",
-		material = "grease",
+		material = "CC_grease",
 		cost = 150,
 	},
 	{
@@ -88,17 +88,17 @@ cc_alchemist_potions = {
 	},
 	{
 		name = "Radioactive Waste",
-		material = "radiationWaste",
+		material = "CC_radioactive_waste",
 		cost = 950,
 	},
 	{
 		name = "Morphine",
-		material = "squirrellymorphine",
+		material = "CC_morphine",
 		cost = 300,
 	},
 	{
 		name = "Anti-Matter",
-		material = "antimatter_gas",
+		material = "CC_antimatter_gas",
 		cost = 700,
 		default_disabled = true,
 	},

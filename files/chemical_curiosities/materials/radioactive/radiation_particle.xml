@@ -55,7 +55,7 @@
 
   <!-- cloud -->
   <ParticleEmitterComponent 
-    emitted_material_name="uranium"
+    emitted_material_name="CC_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"
@@ -79,7 +79,7 @@
 
   <!-- trail -->
   <ParticleEmitterComponent 
-    emitted_material_name="uranium"
+    emitted_material_name="CC_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"
@@ -111,7 +111,7 @@
       kill_when_finished="0"
       from_material_tag="[liquid]"
       steps_per_frame="2"
-      to_material="radiationWaste"
+      to_material="CC_radioactive_waste"
       clean_stains="0"
       is_circle="1"
       radius="3" 

@@ -27,7 +27,7 @@
 	</UIIconComponent>
 	
 <ParticleEmitterComponent 
-    emitted_material_name="uranium"
+    emitted_material_name="CC_uranium"
     emitter_lifetime_frames="300"
     offset.x="0"
     offset.y="0"

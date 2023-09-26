@@ -4,13 +4,13 @@
 	
 	
 	<Reaction probability="20"
-	input_cell1="AA_base_potion"				input_cell2="iron"
-	output_cell1="magic_liquid_slower_levitation"	output_cell2="steam"
+	input_cell1="AA_base_potion"				input_cell2="CC_iron"
+	output_cell1="CC_heftium"	output_cell2="steam"
 	>
 	</Reaction>
 	
 	<Reaction probability="7"
-	input_cell1="preskite"			input_cell2="blood_worm" 
+	input_cell1="CC_preskite"			input_cell2="blood_worm" 
 	output_cell1="AA_soot"		output_cell2="AA_potion_gas"
 	blob_radius2="3"
 	>
@@ -21,7 +21,7 @@
 
 	
 	<Reaction probability="80"
-	input_cell1="[uranium]"			input_cell2="iron"	
+	input_cell1="[uranium]"			input_cell2="CC_iron"	
 	output_cell1="AA_condensed_gravity"	output_cell2="smoke"
 	>
 	</Reaction>
@@ -42,7 +42,7 @@
 
 	
 	<Reaction probability="30"
-	input_cell1="cobalt_ingredient"		input_cell2="magic_liquid_faster_levitation"
+	input_cell1="CC_cobaline"		input_cell2="magic_liquid_faster_levitation"
 	output_cell1="AA_repultium"		output_cell2="AA_repultium"
 	>
 	</Reaction>
@@ -61,7 +61,7 @@
 	
 	<Reaction probability="87"
 		input_cell1="AA_base_potion"		input_cell2="rock_static_cursed"
-		output_cell1="antimatter_gas"			output_cell2="antimatter_liquid"
+		output_cell1="CC_antimatter_gas"			output_cell2="CC_antimatter_liquid"
 		blob_radius1="5"						blob_radius2="5"
 		blob_restrict_to_input_material1="1"	blob_restrict_to_input_material2="1"
 		>
@@ -75,7 +75,7 @@
 	
 	<Reaction probability="50"
 	input_cell1="diamond"	input_cell2="AA_base_potion"
-	output_cell1="water"		output_cell2="solidCrystal_molten"
+	output_cell1="water"		output_cell2="CC_dormant_crystal_molten"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -87,14 +87,14 @@
 	
 	<Reaction probability="30"
 	input_cell1="AA_static_charge"		input_cell2="gunpowder_tnt"
-	output_cell1="smoke"					output_cell2="lightningPowder"
+	output_cell1="smoke"					output_cell2="CC_thunder_powder"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="30"
 	input_cell1="AA_static_charge"		input_cell2="gunpowder_explosive"
-	output_cell1="smoke"					output_cell2="lightningPowder"
+	output_cell1="smoke"					output_cell2="CC_thunder_powder"
 	blob_radius1="2"						blob_radius2="3"
 	>
 	</Reaction>
@@ -104,20 +104,20 @@
 
 	
 	<Reaction probability="25"
-	input_cell1="antimagic"			input_cell2="[bloom]"
-	output_cell1="antimagic"		output_cell2="smoke"
+	input_cell1="CC_nullium"			input_cell2="[bloom]"
+	output_cell1="CC_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
 	
 	<Reaction probability="25"
-	input_cell1="antimagic"			input_cell2="AA_hungry_slime"
-	output_cell1="antimagic"		output_cell2="slime"
+	input_cell1="CC_nullium"			input_cell2="AA_hungry_slime"
+	output_cell1="CC_nullium"		output_cell2="slime"
 	>
 	</Reaction>
 	
 	<Reaction probability="25"
-	input_cell1="antimagic"			input_cell2="AA_hungry_slime_growing"
-	output_cell1="antimagic"		output_cell2="slime"
+	input_cell1="CC_nullium"			input_cell2="AA_hungry_slime_growing"
+	output_cell1="CC_nullium"		output_cell2="slime"
 	>
 	</Reaction>
 	
@@ -131,7 +131,7 @@
 
 	<Reaction probability="43"
 	input_cell1="AA_base_potion"		input_cell2="gunpowder_tnt"
-	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
+	output_cell1="sand_herb_vapour"			output_cell2="CC_agitine"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -139,7 +139,7 @@
 	
 	<Reaction probability="43"
 	input_cell1="AA_base_potion"		input_cell2="gunpowder_explosive"
-	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
+	output_cell1="sand_herb_vapour"			output_cell2="CC_agitine"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -147,13 +147,13 @@
 	
 	<Reaction probability="43"
 	input_cell1="AA_base_potion"		input_cell2="gunpowder"
-	output_cell1="sand_herb_vapour"			output_cell2="explodePlayer"
+	output_cell1="sand_herb_vapour"			output_cell2="CC_agitine"
 	blob_radius2="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="30"
-		input_cell1="explodePlayer"	input_cell2="[meat]"
+		input_cell1="CC_agitine"	input_cell2="[meat]"
 		output_cell1="fire"			output_cell2="smoke"
 		>
 		<ExplosionConfig
@@ -177,29 +177,29 @@
 
 	
 	<Reaction probability="90"
-	input_cell1="alchemyPowder"		input_cell2="magic_crystal"
-	output_cell1="AA_unstable_pandorium"	output_cell2="hydroxide_gas"
+	input_cell1="CC_alchemy_powder"		input_cell2="magic_crystal"
+	output_cell1="AA_unstable_pandorium"	output_cell2="CC_hydroxide_gas"
 	blob_radius1="6"
 	blob_radius2="4"
 	>
 	</Reaction>
 	<Reaction probability="90"
-	input_cell1="alchemyPowder"		input_cell2="magic_crystal_green"
-	output_cell1="AA_unstable_pandorium"	output_cell2="hydroxide_gas"
+	input_cell1="CC_alchemy_powder"		input_cell2="magic_crystal_green"
+	output_cell1="AA_unstable_pandorium"	output_cell2="CC_hydroxide_gas"
 	blob_radius1="6"
 	blob_radius2="4"
 	>
 	</Reaction>
 	
 	<Reaction probability="95"
-	input_cell1="AA_unstable_pandorium"	input_cell2="alchemyPowder"
+	input_cell1="AA_unstable_pandorium"	input_cell2="CC_alchemy_powder"
 	output_cell1="AA_unstable_pandorium"	output_cell2="AA_unstable_pandorium"
 	blob_radius2="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="80"
-	input_cell1="meat_cursed" 					input_cell2="alchemyPowder"
+	input_cell1="meat_cursed" 					input_cell2="CC_alchemy_powder"
 	output_cell1="AA_hungry_slime_growing"	output_cell2="AA_hungry_slime_growing"
 	blob_radius1="3"
 	blob_radius2="3"
@@ -216,7 +216,7 @@
 	
 	<Reaction probability="89"
 		input_cell1="alcohol"			input_cell2="AA_base_potion"
-		output_cell1="methane"			output_cell2="fireStarter"	
+		output_cell1="CC_methane"			output_cell2="CC_kindling"	
 		blob_radius2="3"
 	>
 	</Reaction>
@@ -224,7 +224,7 @@
 	<!-- cloning solution -->
 	
 	<Reaction probability="50"
-		input_cell1="devouringMoss"		input_cell2="AA_base_potion"
+		input_cell1="CC_devouring_moss"		input_cell2="AA_base_potion"
 		output_cell1="AA_cloning_solution"			output_cell2="smoke"
 		blob_radius1="6"
 	>
@@ -264,7 +264,7 @@
 
 
   <Reaction probability="70"
-  input_cell1="AA_base_potion"	input_cell2="[meat]"						input_cell3="radiationWaste"	
+  input_cell1="AA_base_potion"	input_cell2="[meat]"						input_cell3="CC_radioactive_waste"	
   output_cell1="smoke"					output_cell2="AA_hungry_slime_growing"	output_cell3="AA_soot"		
   blob_radius1="3"						blob_radius2="5"							blob_radius3="3"				
   >
@@ -275,13 +275,13 @@
 
 	
 	<Reaction probability="100"
-	input_cell1="alchemyPowder"				input_cell2="blood_fungi"
+	input_cell1="CC_alchemy_powder"				input_cell2="blood_fungi"
 	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
 	>
 	</Reaction><!-- alchemy powder potion recipe -->
 	
 	<Reaction probability="100"
-	input_cell1="AA_BLOOM_MAGIC"	input_cell2="alchemyPowder"
+	input_cell1="AA_BLOOM_MAGIC"	input_cell2="CC_alchemy_powder"
 	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
 	blob_radius2="2"
 	>
@@ -291,7 +291,7 @@
 
 	
 	<Reaction probability="40"
-	input_cell1="methane"				input_cell2="[bloom]"
+	input_cell1="CC_methane"				input_cell2="[bloom]"
 	output_cell1="air"	output_cell2="material_darkness"
 	blob_radius1="2"
 	>
@@ -302,8 +302,8 @@
 	
 	
 	<Reaction probability="30"
-	input_cell1="AA_base_potion"		input_cell2="sparkLiquid"
-	output_cell1="sparkLiquid"				output_cell2="sparkLiquid"
+	input_cell1="AA_base_potion"		input_cell2="CC_sparkling_liquid"
+	output_cell1="CC_sparkling_liquid"				output_cell2="CC_sparkling_liquid"
 	blob_radius1="2"
 	>
 	</Reaction>
@@ -312,7 +312,7 @@
 	
 	<Reaction probability="60"
 	input_cell1="AA_base_potion"		input_cell2="[sand_metal]"
-	output_cell1="sliceLiquid"				output_cell2="smoke"
+	output_cell1="CC_slicing_liquid"				output_cell2="smoke"
 	blob_radius1="2"
 	>
 	</Reaction>
@@ -324,20 +324,20 @@
 
 	
 	<Reaction probability="97"
-	input_cell1="devouringMoss"		input_cell2="[bloom]"
-	output_cell1="devouringMoss"	output_cell2="devouringMoss"
+	input_cell1="CC_devouring_moss"		input_cell2="[bloom]"
+	output_cell1="CC_devouring_moss"	output_cell2="CC_devouring_moss"
 	>
 	</Reaction>
 	
 	<Reaction probability="100"
-	input_cell1="iron_ingredient"	input_cell2="AA_hungry_slime"
-	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
+	input_cell1="CC_ferrine"	input_cell2="AA_hungry_slime"
+	output_cell1="CC_devouring_moss" 	output_cell2="CC_devouring_moss"
 	>
 	</Reaction><!-- create devouring moss -->
 	
 	<Reaction probability="100"
-	input_cell1="iron_ingredient"	input_cell2="AA_hungry_slime_growing"
-	output_cell1="devouringMoss" 	output_cell2="devouringMoss"
+	input_cell1="CC_ferrine"	input_cell2="AA_hungry_slime_growing"
+	output_cell1="CC_devouring_moss" 	output_cell2="CC_devouring_moss"
 	>
 	</Reaction><!-- create devouring moss -->
 </Materials>

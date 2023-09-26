@@ -261,7 +261,7 @@ table.insert( actions, {
 			local pos_x, pos_y = EntityGetTransform( entity_id )
 			
 			SetRandomSeed( pos_x + 436, pos_y - 3252 )
-			local material_options = { "blastPowder", "fireStarter", "lightningPowder" }
+			local material_options = { "CC_blasting_powder", "CC_kindling", "CC_thunder_powder" }
 			local rare = false
 			local rnd = 1
 			local material = "gunpowder"
