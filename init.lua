@@ -41,6 +41,9 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	print( "===================================== random " .. tostring(x) )
 	
 	
+	-- init methane shader
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
+
 	if ModSettingGet("Hydroxide.CC_ORES") then 
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
