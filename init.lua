@@ -39,8 +39,7 @@ dofile("mods/Hydroxide/lib/add_translation.lua")
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 	local x = ProceduralRandom(0,0)
 	print( "===================================== random " .. tostring(x) )
-	
-	
+
 	if ModSettingGet("Hydroxide.CC_ORES") then 
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
@@ -88,6 +87,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	if(ModSettingGet("Hydroxide.CC_METHANE_GENERATION"))then
 		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
 	end
+
+	-- init methane shader
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
 
 	-- init electrolysis system
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
