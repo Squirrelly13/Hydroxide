@@ -58,7 +58,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_to, {
 		probability = 0.1,
-		material	= "rice",
+		material	= "AA_rice",
 	});
 table.insert(materials_to, {
 		probability = 0.5,

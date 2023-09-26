@@ -304,9 +304,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="rice"
+      from_material="AA_rice"
       steps_per_frame="48"
-      to_material="rice"
+      to_material="AA_rice"
       clean_stains="0"
       is_circle="1"
       radius="22" 
