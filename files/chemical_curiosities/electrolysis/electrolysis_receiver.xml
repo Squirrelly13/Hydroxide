@@ -1,0 +1,9 @@
+<Entity>
+    <LifetimeComponent
+        lifetime="2"
+    />
+    <ElectricityReceiverComponent/>
+    <LuaComponent
+        script_electricity_receiver_electrified=
+    />
+</Entity>
