@@ -1007,7 +1007,7 @@
 			cell_explosion_damage_required="1"
 			cell_explosion_radius_min="2"
 			explosion_sprite="data/particles/explosion_012.xml"
-			load_this_entity="mods/Hydroxide/files/Chemical Cursiosities/materials/volatile_crystal/crystal_explode.xml"
+			load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 			ray_energy="10"
         >
 		</ExplosionConfig>
@@ -1475,7 +1475,7 @@
 			cell_explosion_damage_required="1"
 			cell_explosion_radius_min="2"
 			explosion_sprite="data/particles/explosion_012.xml"
-			load_this_entity="mods/Hydroxide/files/Chemical Cursiosities/materials/volatile_crystal/crystal_explode.xml"
+			load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 			ray_energy="10"
         >
 		</ExplosionConfig>
@@ -1541,5 +1541,25 @@
 			>
 		</Graphics>
 	</CellData><!-- this is a funny material but also ill probs use it for testing stuff -UserK -->
+
+	<CellDataChild
+		_parent="wood_static"
+		name="CC_lichtenberg_wood"
+		ui_name="Lichtenberg Wood"
+		wang_color="afdae872"
+		electrical_conductivity="1"
+		burnable="0"
+	>
+	</CellDataChild>
+
+	<CellDataChild
+		_parent="coal_static"
+		name="CC_lichtenberg_coal"
+		ui_name="Burnt Wood"
+		wang_color="afd6e241"
+		electrical_conductivity="1"
+		burnable="0"
+	>
+	</CellDataChild>
 
 </Materials>

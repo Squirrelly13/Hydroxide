@@ -1,11 +1,9 @@
 <Entity>
-    <LifetimeComponent
-        lifetime="10"
-    />
     <ElectricityReceiverComponent/>
     <LuaComponent
         script_electricity_receiver_switched="mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_handler.lua"
     />
+    <!--Remove after debugging is done!!-->
     <SpriteComponent
         image_file="mods/Hydroxide/files/chemical_curiosities/electrolysis/debug_marker.png"
         offset_x="0.5"
