@@ -1,6 +1,6 @@
 <Entity>
     <LifetimeComponent
-        lifetime="1"
+        lifetime="10"
     />
     <ElectricityReceiverComponent/>
     <LuaComponent

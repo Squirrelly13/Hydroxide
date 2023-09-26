@@ -27,14 +27,14 @@ function electricity_receiver_switched( is_electrified )
                         radius=3,
                         is_circle=true,
                         from_material_tag=from_material,
-                        to_material=to_material,
+                        to_material=CellFactory_GetType(to_material),
                         loop=true
                     })
                 else
                     EntityAddComponent2(converter, "MagicConvertMaterialComponent", {
                         radius=3,
-                        from_material=from_material,
-                        to_material=to_material,
+                        from_material=CellFactory_GetType(from_material),
+                        to_material=CellFactory_GetType(to_material),
                         is_circle=true,
                         loop=true
                     })
