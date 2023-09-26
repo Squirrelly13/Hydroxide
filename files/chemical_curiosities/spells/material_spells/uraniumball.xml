@@ -27,7 +27,7 @@
 		damage="0"
 		explosion_sprite_lifetime="0" 
 		create_cell_probability="100" 
-		create_cell_material="CC_uranium"
+		create_cell_material="cc_uranium"
 		hole_destroy_liquid="1" 
 		hole_enabled="1" 
 		particle_effect="0" 

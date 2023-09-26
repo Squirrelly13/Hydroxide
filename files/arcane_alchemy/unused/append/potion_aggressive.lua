@@ -1,44 +1,44 @@
 
 
 table.insert(potions, {
-    material="AA_hitself",
+    material="aa_hitself",
     cost=500,
 	percentage=0.5
 });
 
 table.insert(potions, {
-    material="AA_hungry_slime",
+    material="aa_hungry_slime",
     cost=1200,
 });
 
 table.insert(potions, {
-    material="AA_repultium",
+    material="aa_repultium",
     cost=750,
 	percentage=0.5
 });
 
 table.insert(potions, {
-    material="AA_cloning_solution",
+    material="aa_cloning_solution",
     cost=800,
 });
 
 table.insert(potions, {
-    material="AA_condensed_gravity",
+    material="aa_condensed_gravity",
     cost=1000,
 });
 
 table.insert(potions, {
-    material="AA_love",
+    material="aa_love",
     cost=900,
 });
 
 table.insert(potions, {
-    material="AA_pop_rocks",
+    material="aa_pop_rocks",
     cost=900,
 	percentage=0.5
 });
 
 table.insert(potions, {
-    material="AA_static_charge",
+    material="aa_static_charge",
     cost=950,
 });

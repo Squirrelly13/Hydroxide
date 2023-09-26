@@ -50,7 +50,7 @@
     bounces_left="0"
 	muzzle_flash_file=""
 	shoot_light_flash_radius="1"
-	go_through_this_material="CC_uranium"
+	go_through_this_material="cc_uranium"
 	die_on_low_velocity="1"
     die_on_low_velocity_limit="30"
 	physics_impulse_coeff="0"
@@ -75,7 +75,7 @@
 
   <!-- cloud -->
   <ParticleEmitterComponent 
-    emitted_material_name="CC_uranium"
+    emitted_material_name="cc_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"
@@ -99,7 +99,7 @@
 
   <!-- trail -->
   <ParticleEmitterComponent 
-    emitted_material_name="CC_uranium"
+    emitted_material_name="cc_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
     offset.y="0"
@@ -131,7 +131,7 @@
       kill_when_finished="0"
       from_material_tag="[liquid]"
       steps_per_frame="2"
-      to_material="CC_radioactive_waste"
+      to_material="cc_radioactive_waste"
       clean_stains="0"
       is_circle="1"
       radius="3" 

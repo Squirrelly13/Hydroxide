@@ -1,6 +1,6 @@
 <Entity>
 	<ParticleEmitterComponent
-		emitted_material_name="CC_nullium"
+		emitted_material_name="cc_nullium"
 		gravity.y="0.0"
 		lifetime_min="1.2"
 		lifetime_max="1.9"

@@ -3,7 +3,7 @@
         radius="400"
         is_circle="1"
         steps_per_frame="100"
-        from_material="MM_bingus"
+        from_material="mm_bingus"
         to_material="air"
     />
 
@@ -11,7 +11,7 @@
         radius="400"
         is_circle="1"
         steps_per_frame="100"
-        from_material="MM_bingus_wetfood"
+        from_material="mm_bingus_wetfood"
         to_material="air"
     />
 	<LoadEntitiesComponent

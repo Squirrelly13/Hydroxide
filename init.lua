@@ -109,7 +109,7 @@ end
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
-		EntitySetDamageFromMaterial( player_entity, "CC_hydroxide", 0.005 )
+		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 
 	end
 	if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then

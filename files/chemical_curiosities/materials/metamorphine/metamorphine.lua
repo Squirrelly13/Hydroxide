@@ -22,7 +22,7 @@ local material_options = {
 	"burning_powder", 
 	"honey", 
 	"fungi",    
-	"AA_rice" }
+	"aa_rice" }
 local material_options_rare = { 
 	"acid", 
 	"magic_liquid_teleportation", 
@@ -33,12 +33,12 @@ local material_options_rare = {
 	"magic_liquid_invisibility", 
 	"diamond", 
 	"plasma_fading", 
-	"CC_veilium", 
-	"CC_methane", 
-	"CC_sparkling_liquid", 
-	"CC_slicing_liquid", 
-	"CC_glittering_liquid", 
-	"CC_blasting_powder", "AA_arborium", "AA_pop_rocks", "AA_potion_gas", "CC_kindling", "brass", "silver", "shock_powder" }
+	"cc_veilium", 
+	"cc_methane", 
+	"cc_sparkling_liquid", 
+	"cc_slicing_liquid", 
+	"cc_glittering_liquid", 
+	"cc_blasting_powder", "aa_arborium", "aa_pop_rocks", "aa_potion_gas", "cc_kindling", "brass", "silver", "shock_powder" }
 local rare = false
 
 local rnd = Random( 1, 100 )

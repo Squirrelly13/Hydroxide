@@ -35,6 +35,6 @@ if gdc ~= nil then
 			
 		]]--
 
-		EntitySetDamageFromMaterial(root, "CC_nullium", 0.004)
+		EntitySetDamageFromMaterial(root, "cc_nullium", 0.004)
 	end	
 end	
