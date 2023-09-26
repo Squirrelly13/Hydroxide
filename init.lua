@@ -89,8 +89,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
 	end
 
-	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/electrolysis_reactions.xml" ) --ore materials
-
+	-- init electrolysis system
+	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
+	
 	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
 	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
 	

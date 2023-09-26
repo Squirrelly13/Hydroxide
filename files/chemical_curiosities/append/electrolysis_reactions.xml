@@ -1,8 +1,0 @@
-<Materials>
-	<Reaction probability="100"
-		input_cell1="CC_dormant_crystal"	input_cell2="air"
-		output_cell1="CC_dormant_crystal"	output_cell2="air"
-		entity="mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_receiver.xml"
-	>
-	</Reaction>
-</Materials>
