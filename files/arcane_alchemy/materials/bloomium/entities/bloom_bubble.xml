@@ -18,7 +18,7 @@
 		emission_interval_min_frames="1"
 		emission_interval_max_frames="1"
 		emit_cosmetic_particles="0"
-		image_animation_file="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/entities/circle_16.png"
+		image_animation_file="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/entities/circle_16.png"
 		image_animation_speed="1"
 		image_animation_loop="0"
 		image_animation_raytrace_from_center="1"

@@ -1,5 +1,5 @@
 <Sprite
- filename="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/healthy/bloom_ceiling_04.png"
+ filename="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/healthy/bloom_ceiling_04.png"
  offset_x="1.5"
  offset_y="1" 
  default_animation="vegetation_growth" >

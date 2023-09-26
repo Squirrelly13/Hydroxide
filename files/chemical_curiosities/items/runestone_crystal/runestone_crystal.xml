@@ -1,5 +1,5 @@
 <Entity>
-	<Base file="data/entities/items/Chemical Curiosities/items/runestone_crystal/runestone_base.xml">
+	<Base file="data/entities/items/pickup/runestones/runestone_base.xml">
 		<PhysicsImageShapeComponent 
 			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
 			>

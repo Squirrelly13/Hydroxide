@@ -133,7 +133,7 @@
         liquid_viscosity="101"
         liquid_sticks_to_ceiling="100"
     vegetation_full_lifetime_growth="700"
-        vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/healthy/bloom_ceiling_$[1-7].xml" 
+        vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/healthy/bloom_ceiling_$[1-7].xml" 
         temperature_of_fire="90"
         autoignition_temperature="85"
         on_fire="0"
@@ -166,7 +166,7 @@
         liquid_viscosity="101"
         liquid_sticks_to_ceiling="100"
     vegetation_full_lifetime_growth="700"
-        vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/perished/bloom_ceiling_$[1-7].xml" 
+        vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/perished/bloom_ceiling_$[1-7].xml" 
         temperature_of_fire="90"
         autoignition_temperature="85"
         on_fire="0"
@@ -275,7 +275,7 @@
     <Reaction probability="100"
         input_cell1="[bloom]" 	input_cell2="[liquid]" 
         output_cell1="[bloom]"	output_cell2="AA_BLOOMIUM_GAS" 
-        entity="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/entities/bloom_bubble.xml"
+        entity="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/entities/bloom_bubble.xml"
 	>
     </Reaction><!-- bloom emits bloom gas when touching liquid -->
 
@@ -289,7 +289,7 @@
         input_cell1="AA_BLOOM_ROOF" 	input_cell2="[solid]" 
         output_cell1="AA_BLOOM_ROOF_PLANT" 	output_cell2="AA_BLOOM_ROOF_INERT" 
         blob_radius1="3"
-        entity="mods/Hydroxide/files/arcane_alchemy/materials/AA_BLOOMIUM2/entities/vine_blocker.xml"
+        entity="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/entities/vine_blocker.xml"
 	>
 	</Reaction><!-- Grow vines and cap off so it doesn't eat the world. -->
 
