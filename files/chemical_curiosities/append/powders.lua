@@ -33,6 +33,10 @@ table.insert(materials_magic, {
 	cost=800,
 });
 
+table.insert(materials_magic, {
+	material="CC_antimatter_powder",
+	cost=600,
+});
 
 function init( entity_id )
 	local x,y = EntityGetTransform( entity_id )

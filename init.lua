@@ -99,6 +99,7 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
 	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
 
+	dofile_once("files/chemical_curiosities/electrolysis/electrolysis.xml") --electrolysis my beloved (allows us to control electricity entities)
 
 end
 

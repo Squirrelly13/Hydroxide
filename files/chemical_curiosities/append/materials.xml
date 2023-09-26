@@ -1192,6 +1192,30 @@
 		</StatusEffects>
 	</CellData> 
 	
+	<CellData
+		name="CC_antimatter_powder"
+		ui_name="Dormant Anti-Matter"
+		tags="[antimatter],[sand_other],[corrodible],[burnable],[alchemy]"
+		burnable="1"
+		requires_oxygen="0"
+		temperature_of_fire="180"
+		autoignition_temperature="70"
+		hp="100"
+		fire_hp="20"
+		on_fire_convert_to_material="CC_antimatter_liquid"
+		electrical_conductivity="1"
+		density="10"
+		cell_type="liquid"
+		wang_color="ff03020c"
+		liquid_gravity="1"
+		liquid_sand="1"
+		gfx_glow="80"
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
+			>
+	</CellData> 
+	
 	<CellDataChild
 		_parent="rotten_meat"
 		name="CC_frozen_meat"
