@@ -6,8 +6,8 @@ local pos_x, pos_y = EntityGetTransform( entity_id )
 local convertcomponents = EntityGetComponent( entity_id, "MagicConvertMaterialComponent" )
 
 SetRandomSeed( pos_x + 436, pos_y - 3252 )
-local material_options = { "CC_blasting_powder", "CC_kindling", "CC_thunder_powder", "CC_thunder_powder", "CC_blasting_powder"}
-local material_options_rare = { "CC_agitine", "CC_glittering_liquid" }
+local material_options = { "cc_blasting_powder", "cc_kindling", "cc_thunder_powder", "cc_thunder_powder", "cc_blasting_powder"}
+local material_options_rare = { "cc_agitine", "cc_glittering_liquid" }
 local rare = false
 
 local rnd = Random( 1, 100 )

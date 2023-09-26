@@ -18,7 +18,7 @@ table.insert(status_effects, {
 });
 
 table.insert(status_effects, {
-	id="AA_static_charge",
+	id="aa_static_charge",
 	ui_name="Static charge",
 	ui_description="You are electrically charged",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/static_charge/effect_charged.png",

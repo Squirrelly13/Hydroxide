@@ -2,7 +2,7 @@
 
  <!--  bloom -->
   <CellData
-	name="AA_bloom_solid"
+	name="aa_bloom_solid"
 	ui_name="Bloomium"
 	tags="[plant],[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
 	burnable="1"
@@ -31,7 +31,7 @@
   </CellData><!-- bloomium (floor?) -->
 	
   <CellData
-	name="AA_bloom_roof"
+	name="aa_bloom_roof"
 	ui_name="Bloomium"
 	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
 	burnable="1"
@@ -61,7 +61,7 @@
   </CellData><!-- bloomium Ceiling -->
   
      <CellData
-	name="AA_bloom_roof_dead"
+	name="aa_bloom_roof_dead"
 	ui_name="Bloomium"
 	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
 	burnable="1"
@@ -91,7 +91,7 @@
   </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
   
   <CellData
-	name="AA_bloom_roof_plant"
+	name="aa_bloom_roof_plant"
 	ui_name="Bloomium"
 	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
 	burnable="1"
@@ -124,7 +124,7 @@
   </CellData><!-- i think this is the roots that hang from bloomium roofs -->
   
   <CellData
-	name="AA_bloomium"
+	name="aa_bloomium"
 	ui_name="Bloomium Liquid"
 	tags="[corrodible],[magic_liquid],[burnable],[meltable_to_lava],[alchemy]"
 	burnable="0"
@@ -146,7 +146,7 @@
   </CellData><!-- bloomium drip -->
 
 	<CellData
-	name="AA_bloomium_gas"
+	name="aa_bloomium_gas"
 	ui_name="Bloomium Gas"
   	tags="[gas]"
 	burnable="0"

@@ -28,7 +28,7 @@
 		<InheritTransformComponent only_position="1" />
 		
 		<ParticleEmitterComponent 
-			emitted_material_name="CC_sparkling_liquid"
+			emitted_material_name="cc_sparkling_liquid"
 			offset.x="0"
 			offset.y="3"
 			x_pos_offset_min="0"
@@ -107,7 +107,7 @@
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent 
-			emitted_material_name="CC_sparkling_liquid"
+			emitted_material_name="cc_sparkling_liquid"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="0"
@@ -138,7 +138,7 @@
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent 
-			emitted_material_name="CC_sparkling_liquid"
+			emitted_material_name="cc_sparkling_liquid"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="0"

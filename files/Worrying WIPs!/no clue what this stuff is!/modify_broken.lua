@@ -25,7 +25,7 @@ if(possible_wands ~= nil)then
                         local area_checker = EntityAddComponent(entity, "MaterialAreaCheckerComponent", {
                             update_every_x_frame="20",
                             look_for_failure="0",  
-                            material="AA_magic_plastic",
+                            material="aa_magic_plastic",
                             material2="item_box2d",
                             kill_after_message="0",
                         })

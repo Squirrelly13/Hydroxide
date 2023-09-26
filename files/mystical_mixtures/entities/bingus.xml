@@ -20,7 +20,7 @@
 		body_id="1"
 		centered="1"
 		image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
-		material="MM_meat_bingus"
+		material="mm_meat_bingus"
 	></PhysicsImageShapeComponent>
 	
 	<PhysicsThrowableComponent

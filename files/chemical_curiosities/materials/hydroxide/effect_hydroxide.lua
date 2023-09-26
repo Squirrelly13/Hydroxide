@@ -10,11 +10,12 @@ local root = EntityGetParent( entity)
 
 if(root == entity)then return end
 
-if(EntityGetDamageFromMaterial(root, "CC_hydroxide") ~= nil) then EntityKill(GetUpdatedEntityID()) end
+if(EntityGetDamageFromMaterial(root, "cc_hydroxide") ~= nil) then EntityKill(GetUpdatedEntityID()) end
 
 local acidstrength = 0.000
 
-acidstrength = EntityGetDamageFromMaterial(root, "acid")
+local acidstrength = EntityGetDamageFromMaterial(root, "acid")
 if (acidstrength ~= nil) then
-EntitySetDamageFromMaterial(root, "CC_hydroxide", acidstrength)
+    EntitySetDamageFromMaterial(root, "cc_hydroxide", acidstrength)
+    GamePrint("Hydroxide: " .. tostring(acidstrength))
 end

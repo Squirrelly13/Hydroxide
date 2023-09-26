@@ -40,13 +40,13 @@
     leak_on_damage_percent="0.999" 
     >
     <count_per_material_type>
-      <Material material="CC_methane" count="4"  />
+      <Material material="cc_methane" count="4"  />
 	  </count_per_material_type>
   </MaterialInventoryComponent>
 
   <DamageModelComponent 
     air_needed="0" 
-    blood_material="CC_methane" 
+    blood_material="cc_methane" 
     drop_items_on_death="0" 
     falling_damage_damage_max="1.2" 
     falling_damage_damage_min="0.1" 

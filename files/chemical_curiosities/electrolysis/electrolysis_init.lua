@@ -1,8 +1,8 @@
 --[[
     <Materials>
         <Reaction probability="1000"
-            input_cell1="CC_dormant_crystal"	input_cell2="CC_dormant_crystal"
-            output_cell1="CC_dormant_crystal"	output_cell2="CC_dormant_crystal"
+            input_cell1="cc_dormant_crystal"	input_cell2="cc_dormant_crystal"
+            output_cell1="cc_dormant_crystal"	output_cell2="cc_dormant_crystal"
             entity="mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_receiver.xml"
         >
         </Reaction>
@@ -21,7 +21,7 @@ local materials_content = [[
 --[[
 reactions = {
     {
-        input = "CC_dormant_crystal",
+        input = "cc_dormant_crystal",
         output = "fire",
         probability = 100,
     }

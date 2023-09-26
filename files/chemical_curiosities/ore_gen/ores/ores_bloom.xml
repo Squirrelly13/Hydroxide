@@ -6,7 +6,7 @@
     material_index="1"
     material_max="1.4"
     material_min="0.5"
-    material_name="AA_bloom_solid"
+    material_name="aa_bloom_solid"
     rare_polka_is_boxed="1"
     rare_polka_probability="0.25"
     rare_polka_radius_high="1.421"

@@ -289,9 +289,9 @@
 	
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_veilium"
+      from_material="cc_veilium"
       steps_per_frame="48"
-      to_material="CC_veilium"
+      to_material="cc_veilium"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -304,9 +304,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_rice"
+      from_material="aa_rice"
       steps_per_frame="48"
-      to_material="AA_rice"
+      to_material="aa_rice"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -317,9 +317,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_sparkling_liquid"
+      from_material="cc_sparkling_liquid"
       steps_per_frame="48"
-      to_material="CC_sparkling_liquid"
+      to_material="cc_sparkling_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -329,9 +329,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_slicing_liquid"
+      from_material="cc_slicing_liquid"
       steps_per_frame="48"
-      to_material="CC_slicing_liquid"
+      to_material="cc_slicing_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -341,9 +341,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_glittering_liquid"
+      from_material="cc_glittering_liquid"
       steps_per_frame="48"
-      to_material="CC_glittering_liquid"
+      to_material="cc_glittering_liquid"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -353,9 +353,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_blasting_powder"
+      from_material="cc_blasting_powder"
       steps_per_frame="48"
-      to_material="CC_blasting_powder"
+      to_material="cc_blasting_powder"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -365,9 +365,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_arborium"
+      from_material="aa_arborium"
       steps_per_frame="48"
-      to_material="AA_arborium"
+      to_material="aa_arborium"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -377,9 +377,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_pop_rocks"
+      from_material="aa_pop_rocks"
       steps_per_frame="48"
-      to_material="AA_pop_rocks"
+      to_material="aa_pop_rocks"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -389,9 +389,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="CC_kindling"
+      from_material="cc_kindling"
       steps_per_frame="48"
-      to_material="CC_kindling"
+      to_material="cc_kindling"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -401,9 +401,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_base_potion"
+      from_material="aa_base_potion"
       steps_per_frame="48"
-      to_material="AA_base_potion"
+      to_material="aa_base_potion"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -522,9 +522,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_creeping_slime"
+      from_material="aa_creeping_slime"
       steps_per_frame="48"
-      to_material="AA_creeping_slime"
+      to_material="aa_creeping_slime"
       clean_stains="0"
       is_circle="1"
       radius="22" 
