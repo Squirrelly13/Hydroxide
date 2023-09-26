@@ -116,7 +116,7 @@ init = function( entity_id )
         potion_material = potion_material.material
 
 		-- debug
-		--potion_material = "AA_UNSTABLE_LIQUID_SPELL"
+		--potion_material = "AA_unstable_pandorium"
 
         local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
     
@@ -146,7 +146,7 @@ init = function( entity_id )
             EntityAddTag( entity_id, "extra_potion_capacity" )
         end
 
-		if(potion_material == "AA_LIQUID_SPELL" or potion_material == "AA_UNSTABLE_LIQUID_SPELL")then
+		if(potion_material == "AA_pandorium" or potion_material == "AA_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
 					
 			if ( comp1 ~= nil ) then

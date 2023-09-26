@@ -1,77 +1,77 @@
 
 
 table.insert(materials_magic, {
-    material="AA_DARKMATTER",
+    material="AA_darkmatter",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_HITSELF",
+    material="AA_hitself",
     cost=500,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_ARBORIUM",
+    material="AA_arborium",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_HUNGRY_SLIME",
+    material="AA_hungry_slime",
     cost=600,
 });
 
 table.insert(materials_magic, {
-    material="AA_REPULTIUM",
+    material="AA_repultium",
     cost=400,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_CLONE",
+    material="AA_cloning_solution",
     cost=400,
 });
 
 table.insert(materials_magic, {
-    material="AA_GRAVLIQUID",
+    material="AA_condensed_gravity",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_ICEFIRE",
+    material="AA_icy_inferno",
     cost=700,
 });
 
 table.insert(materials_magic, {
-    material="AA_PATH",
+    material="AA_meager_offering",
     cost=1500,
 });
 
 table.insert(materials_magic, {
-    material="AA_LOVE",
+    material="AA_love",
     cost=500,
 });
 
 table.insert(materials_magic, {
-    material="AA_LIQUID_SPELL",
+    material="AA_pandorium",
     cost=500,
     percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_UNSTABLE_LIQUID_SPELL",
+    material="AA_unstable_pandorium",
     cost=1500,
     percentage=0.2
 });
 
 table.insert(materials_magic, {
-    material="AA_LIQUID_ROCK",
+    material="AA_pop_rocks",
     cost=300,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="AA_STATIC_CHARGE",
+    material="AA_static_charge",
     cost=300,
 });
 
@@ -93,7 +93,7 @@ init = function( entity_id )
         potion_material = potion_material.material
 
 		-- debug
-		--potion_material = "AA_UNSTABLE_LIQUID_SPELL"
+		--potion_material = "AA_unstable_pandorium"
 
         local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
     
@@ -123,7 +123,7 @@ init = function( entity_id )
             EntityAddTag( entity_id, "extra_potion_capacity" )
         end
 
-		if(potion_material == "AA_LIQUID_SPELL" or potion_material == "AA_UNSTABLE_LIQUID_SPELL")then
+		if(potion_material == "AA_pandorium" or potion_material == "AA_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
 					
 			if ( comp1 ~= nil ) then

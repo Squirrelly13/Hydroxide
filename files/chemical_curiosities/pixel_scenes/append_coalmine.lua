@@ -50,7 +50,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_2_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "fireStarter", "sparkLiquid", "sliceLiquid", "solidCrystal_molten", "AA_ICEFIRE", "devouringMoss"} }
+		color_material = { ["fff0bbee"] = { "fireStarter", "sparkLiquid", "sliceLiquid", "solidCrystal_molten", "AA_icy_inferno", "devouringMoss"} }
 });
 
 table.insert(g_oiltank, {
@@ -77,7 +77,7 @@ table.insert(g_oiltank, {
 		visual_file		= "data/biome_impl/coalmine/oiltank_4_visual.png",
 		background_file	= "",
 		is_unique		= 0,
-		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "radiationWaste", "grease", "sliceLiquid", "AA_ICEFIRE", "squirrellymorphine", "lightningPowder"} }
+		color_material = { ["fff0bbee"] = { "water", "oil", "water", "oil", "alcohol", "sand", "coal", "radioactive_liquid", "magic_liquid_polymorph", "radiationWaste", "grease", "sliceLiquid", "AA_icy_inferno", "squirrellymorphine", "lightningPowder"} }
 });
 
 table.insert(g_oiltank, {

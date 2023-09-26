@@ -363,9 +363,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_ARBORIUM"
+      from_material="AA_arborium"
       steps_per_frame="48"
-      to_material="AA_ARBORIUM"
+      to_material="AA_arborium"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -375,9 +375,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_LIQUID_ROCK"
+      from_material="AA_pop_rocks"
       steps_per_frame="48"
-      to_material="AA_LIQUID_ROCK"
+      to_material="AA_pop_rocks"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -399,9 +399,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_NEUTRAL_POTION"
+      from_material="AA_base_potion"
       steps_per_frame="48"
-      to_material="AA_NEUTRAL_POTION"
+      to_material="AA_base_potion"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -520,9 +520,9 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_CREEPING_SLIME"
+      from_material="AA_creeping_slime"
       steps_per_frame="48"
-      to_material="AA_CREEPING_SLIME"
+      to_material="AA_creeping_slime"
       clean_stains="0"
       is_circle="1"
       radius="22" 
@@ -640,7 +640,7 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_LOVE"
+      from_material="AA_love"
       steps_per_frame="48"
       to_material="water"
       clean_stains="0"
@@ -652,7 +652,7 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_PATH"
+      from_material="AA_meager_offering"
       steps_per_frame="48"
       to_material="water"
       clean_stains="0"
@@ -665,7 +665,7 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_HUNGRY_SLIME"
+      from_material="AA_hungry_slime"
       steps_per_frame="48"
       to_material="water"
       clean_stains="0"
@@ -677,7 +677,7 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="AA_HUNGRY_SLIME_GROWING"
+      from_material="AA_hungry_slime_growing"
       steps_per_frame="48"
       to_material="water"
       clean_stains="0"

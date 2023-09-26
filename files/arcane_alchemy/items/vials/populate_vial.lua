@@ -1,18 +1,18 @@
 materials = {
     {
-        material="AA_NEUTRAL_POTION",
+        material="AA_base_potion",
         weight=1,
     },
     {
-        material="AA_ARBORIUM",
+        material="AA_arborium",
         weight=1,
     },
     {
-        material="AA_CATALYST",
+        material="AA_catalyst",
         weight=1,
     },
     {
-        material="AA_HUNGRY_SLIME",
+        material="AA_hungry_slime",
         weight=1,
     }
 }
