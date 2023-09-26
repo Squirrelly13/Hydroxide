@@ -15,7 +15,7 @@
 	</LuaComponent>
 	
 	<SpriteParticleEmitterComponent
-        sprite_file="mods/Hydroxide/Chemical Curiosities/materials/increase_max_hp/max_hp.xml"
+        sprite_file="mods/Hydroxide/files/chemical_curiosities/materials/increase_max_hp/max_hp.xml"
         lifetime="0.75"
         randomize_lifetime.min="0.5"
         randomize_lifetime.max="1.0"
