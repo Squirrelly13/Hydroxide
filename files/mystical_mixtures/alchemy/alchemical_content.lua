@@ -346,7 +346,7 @@ alchemical_recipes = {
     {
         id = "flux_welding",
         name = "Flux Welding",
-        description = "Arcane Flux can be used to weld spells together, this however is a very volatile process and can result in a variety of outcomes.",
+        description = "Arcane Flux can be used to weld spells together, this however is a very volatile process and results are variable.\nAlso note that the spell will be more expensive to cast based on what you weld to it.",
         generate_notes = true,
         probability = 100, 
         func_probability = 100,
@@ -360,7 +360,7 @@ alchemical_recipes = {
         },
         func = function(x, y)
             SetRandomSeed( x + 32523, y + 5325 + GameGetFrameNum() )
-            local spells = EntityGetInRadiusWithTag(x, y, 100, "card_action") or {}
+            local spells = EntityGetInRadiusWithTag(x, y, 50, "card_action") or {}
             local valid_spells = {}
 
             for i = 1, #spells do
@@ -378,10 +378,24 @@ alchemical_recipes = {
             if(#valid_spells == 0)then
                 return
             end
+
+
+            -- we only want to allow a maximum of 3 spells to be welded together
+            if(#valid_spells > 3)then
+                local new_valid_spells = {}
+                for i = 1, 3 do
+                    table.insert(new_valid_spells, valid_spells[i])
+                end
+                valid_spells = new_valid_spells
+            end
             
             local root_spell = valid_spells[Random(1, #valid_spells)]
 
+            local root_x, root_y = EntityGetTransform(root_spell)
+
+            root_y = root_y - 16
             
+            EntityLoad("mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/weld_effect.xml", root_x, root_y)
             
             -- reverse iterate
             for i = #valid_spells, 1, -1 do

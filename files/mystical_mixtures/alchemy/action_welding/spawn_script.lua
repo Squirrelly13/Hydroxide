@@ -1,5 +1,4 @@
 dofile( "data/scripts/lib/utilities.lua" )
-local pretty = dofile_once("mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/pretty.lua")
 local projectile = GetUpdatedEntityID()
 
 local x, y = EntityGetTransform(projectile)

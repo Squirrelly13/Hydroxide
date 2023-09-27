@@ -274,6 +274,9 @@ handler.hook = function(action, recursion_level, iteration)
 
 	local is_blackhole = false
 
+	local additional_mana = 0
+	local weld_count = 0
+
 	for k, elem in pairs(weld_map or {})do
         local count = elem[1]
         local action = elem[2]
@@ -286,10 +289,14 @@ handler.hook = function(action, recursion_level, iteration)
 
         for i = 1, count do
 			--GamePrint(action.id)
+			weld_count = weld_count + 1
+			additional_mana = additional_mana + (action.mana or 0)
             action.action(recursion_level, iteration, nil, nil, nil, nil, nil, nil, nil, true)
         end
 		--func(recursion_level, iteration, nil, nil, nil, true)
 	end
+
+	captured_data.extra_mana = additional_mana / weld_count
 
 	add_projectile = enhancement_old_add_projectile
 

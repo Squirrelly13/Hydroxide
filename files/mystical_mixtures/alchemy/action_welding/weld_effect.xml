@@ -1,0 +1,59 @@
+<Entity>
+
+	<LifetimeComponent
+		lifetime="260" >
+	</LifetimeComponent>
+
+    <AudioComponent
+      file="data/audio/Desktop/event_cues.bank"
+      event_root="event_cues/chest"
+      play_only_if_visible="1" >
+    </AudioComponent>
+	
+	<ParticleEmitterComponent 
+		emitted_material_name="spark_purple"
+		gravity.y="0.0"
+		lifetime_min="8"
+		lifetime_max="15"
+		count_min="15"
+		count_max="15"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		area_circle_radius.min="0"
+		area_circle_radius.max="0"
+		cosmetic_force_create="0"
+		airflow_force="1.551"
+		airflow_time="1.01"
+		airflow_scale="0.05"
+		emission_interval_min_frames="1"
+		emission_interval_max_frames="1"
+		emit_cosmetic_particles="1"
+		image_animation_file="mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/weld_circle.png"
+		image_animation_speed="8"
+		image_animation_loop="0"
+		is_emitting="1" >
+	</ParticleEmitterComponent>
+
+	<ParticleEmitterComponent
+		emitted_material_name="spark_purple"
+		gravity.y="0.0"
+		lifetime_min="0.3"
+		lifetime_max="1"
+		count_min="300"
+		count_max="360"
+		render_on_grid="1"
+		fade_based_on_lifetime="1"
+		area_circle_radius.min="50"
+		area_circle_radius.max="50"
+		cosmetic_force_create="0"
+		airflow_force="2.8"
+		airflow_time="0.03"
+		airflow_scale="0.8"
+		emission_interval_min_frames="0"
+		emission_interval_max_frames="0"
+		emit_cosmetic_particles="1"
+		is_emitting="0" >
+	</ParticleEmitterComponent>
+
+</Entity>
+
