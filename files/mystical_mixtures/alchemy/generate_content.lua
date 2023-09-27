@@ -194,6 +194,8 @@ end
 
 materials_xml = materials_xml .. "</Materials>"
 
+print(materials_xml)
+
 ModTextFileSetContent("data/mystical_mixtures/alchemy_materials.xml", materials_xml)
 
 ModMaterialsFileAdd("data/mystical_mixtures/alchemy_materials.xml")

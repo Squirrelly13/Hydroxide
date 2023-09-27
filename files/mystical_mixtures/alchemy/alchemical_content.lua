@@ -69,7 +69,7 @@ alchemical_materials = {
     {
         id = "mm_diluted_mana",
         name = "Diluted Mana",
-        description = "Mana diluted in an alchemical solvent.\nIt can be used in a variety of recipes, notably modifying wand mana capacity.",
+        description = "Mana diluted in an alchemical base.\nCan be used for modifying wand mana capacity.",
         generate_notes = true,
         color = "A27ACDE0",
         type = "liquid",
@@ -112,6 +112,19 @@ alchemical_materials = {
         burnable = true,
         fire_hp = 100,
         glow = 250,
+    },
+    {
+        id = "mm_mystic_alloy",
+        name = "Mystic Alloy",
+        description = "An alloy made from the remnants of a broken wand.\nIt is not very useful by itself however it is used in the creation of Arcane Flux",
+        generate_notes = true,
+        color = "FF916179",
+        type = "powder",
+        tags = "[alchemical]",
+        density = 6,
+        burnable = false,
+        glow = 50,
+        texture="mods/Hydroxide/files/mystical_mixtures/gfx/materials/arcane_metal.png"
     },
 }
 
@@ -162,13 +175,13 @@ alchemical_recipes = {
     {
         id = "mana_dilution",
         name = "The Dilution of Mana",
-        description = "Concentrated Mana can be diluted in an Alchemical Solvent to be in a more usable form for future recipes.",
+        description = "Concentrated Mana can be diluted in an Alchemical Base to be in a more usable form for future recipes.",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
             "magic_liquid_mana_regeneration",
             "magic_liquid_mana_regeneration",
-            "mm_alchemical_solvent",
+            "mm_alchemical_base",
         },
         outputs = {
             "mm_diluted_mana",
@@ -193,6 +206,65 @@ alchemical_recipes = {
             "mm_ephemeral_ether",
         },
     },    
+    {
+        id = "mystic_alloy",
+        name = "Refining a Mystic Alloy",
+        description = "Wands are made of a special alloy, by taking a Broken Wand and melting it down with Alchemical Solvent it can be reduced to Mystic Alloy.",
+        generate_notes = true,
+        probability = 100,
+        inputs = {
+            "item_box2d",
+            "mm_alchemical_solvent",
+        },
+        outputs = {
+            "mm_ephemeral_ether",
+            "mm_ephemeral_ether",
+        },
+        func = function(x, y)
+            local wands = EntityGetInRadius( x, y, 10 )
+            for k, wand in pairs(wands)do
+                local components = EntityGetAllComponents( wand )
+                for k, component in pairs(components)do
+                    local component_type = ComponentGetTypeName( component )
+                    if(component_type == "SpriteComponent")then
+                        local sprite = ComponentGetValue2(component, "image_file")
+                        if(sprite == "data/items_gfx/broken_wand.png")then
+                            local converter = EntityCreateNew("mystical_alloy_creation")
+                            EntitySetTransform(converter, x, y)
+                            EntityAddComponent2(converter, "LifetimeComponent", {
+                                lifetime=2
+                            })
+                    
+                            EntityAddComponent2(converter, "MagicConvertMaterialComponent", {
+                                radius=20,
+                                from_material=CellFactory_GetType("item_box2d"),
+                                to_material=CellFactory_GetType("mm_mystic_alloy"),
+                                is_circle=true,
+                                loop=true
+                            })
+                        end
+                    end
+                end
+            end
+        end
+    },
+    {
+        id = "arcane_flux_creation",
+        name = "The Creation of Arcane Flux",
+        description = "Arcane Flux is a substance which can be used to weld spells together.\nA mixture of Refined Mana and Mystic Alloy when left in open air will eventually form Arcane Flux.",
+        generate_notes = true,
+        probability = 3,
+        inputs = {
+            "mm_refined_mana",
+            "mm_mystic_alloy",
+            "air",
+        },
+        outputs = {
+            "mm_arcane_flux",
+            "mm_arcane_flux",
+            "mm_ephemeral_ether",
+        },
+    },
     {
         id = "wand_capacity",
         name = "On the subject of wand capacity",
