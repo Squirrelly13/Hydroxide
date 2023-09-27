@@ -11,6 +11,11 @@ for k, v in ipairs(alchemical_materials)do
         ui_name="]]..v.name..[["
         tags="]]..(v.tags ~= nil and (v.tags .. ",[liquid]") or "[liquid]")..[["
         burnable="]]..(v.burnable and "1" or "0")..[["
+        fire_hp="]]..(v.fire_hp ~= nil and v.fire_hp or 300)..[["
+        on_fire_convert_to_material="]]..(v.on_fire_convert_to_material ~= nil and v.on_fire_convert_to_material or "")..[["
+        on_fire="]]..(v.on_fire and "1" or "0")..[["
+        temperature_of_fire="]]..(v.temperature_of_fire ~= nil and v.temperature_of_fire or 95)..[["
+        autoignition_temperature="10"
         density="]]..(v.density ~= nil and v.density or 3)..[["
         cell_type="liquid"
         wang_color="]]..v.color..[["
@@ -167,10 +172,13 @@ for k, v in ipairs(alchemical_recipes)do
         dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/alchemical_content.lua")
         local entity_id = GetUpdatedEntityID()
         local x, y = EntityGetTransform(entity_id)
+        SetRandomSeed( x + 32523, y + 5325 + GameGetFrameNum() )
         local recipe_id = "]]..v.id..[["
         for k, v in ipairs(alchemical_recipes)do
             if(v.id == recipe_id)then
-                v.func(x, y)
+                if(Random(0, 100) <= (v.func_probability or 100))then
+                    v.func(x, y)
+                end
             end
         end
     ]]
@@ -188,8 +196,8 @@ materials_xml = materials_xml .. "</Materials>"
 
 ModTextFileSetContent("data/mystical_mixtures/alchemy_materials.xml", materials_xml)
 
-print(materials_xml)
-
 ModMaterialsFileAdd("data/mystical_mixtures/alchemy_materials.xml")
+
+ModLuaFileAppend("data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/actions.lua")
 
 print("Generated Mystical Mixtures alchemy content.")
