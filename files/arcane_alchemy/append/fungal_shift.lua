@@ -1,7 +1,7 @@
 
 table.insert(materials_from, {
 		probability = 0.5,
-		materials	= {	"aa_bloom_roof",	"aa_bloomium_gas", "AA_BLOOM_MAGIC"},
+		materials	= {	"aa_bloom_roof",	"aa_bloomium_gas", "aa_bloomium"},
 	});
 table.insert(materials_from, {
 		probability = 0.5,

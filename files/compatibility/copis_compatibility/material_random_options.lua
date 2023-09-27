@@ -52,7 +52,7 @@ local options =
 	{ probability = 0.8000, "aa_base_potion"},
 	{ probability = 0.1000, "cc_health_tonic"},
 	{ probability = 0.3000, "aa_compost"},
-	--{ probability = 0.1000, "AA_BLOOM_MAGIC"},
+	--{ probability = 0.1000, "aa_bloomium"},
 	{ probability = 0.8000, "cc_persistine"},
 	
 	{ probability = 0.0600, "cc_liberum_magicas"},

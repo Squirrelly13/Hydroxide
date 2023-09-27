@@ -276,13 +276,13 @@
 	
 	<Reaction probability="100"
 	input_cell1="cc_alchemy_powder"				input_cell2="blood_fungi"
-	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
+	output_cell1="aa_bloomium"		output_cell2="smoke"
 	>
 	</Reaction><!-- alchemy powder potion recipe -->
 	
 	<Reaction probability="100"
-	input_cell1="AA_BLOOM_MAGIC"	input_cell2="cc_alchemy_powder"
-	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
+	input_cell1="aa_bloomium"	input_cell2="cc_alchemy_powder"
+	output_cell1="aa_bloomium"	output_cell2="aa_bloomium"
 	blob_radius2="2"
 	>
 	</Reaction><!-- part of the alchemy powder recipe -->

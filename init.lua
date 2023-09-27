@@ -66,6 +66,8 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 end
 
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
+
 
 --   	[Chemical Curiosities]
 
