@@ -93,6 +93,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	-- init methane shader
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
 
+	-- init warp shader
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua")
+
 	-- init electrolysis system
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
 	

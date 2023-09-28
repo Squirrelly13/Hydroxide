@@ -16,6 +16,7 @@
 {8340afee-1bfb-481c-8b65-a1721703356c} bus:/reverb
 {40bdfd79-5dfd-4303-8a71-0792c637c380} bus:/ui
 {c7d655d8-ec85-4d25-bc91-cf2cca64fbb7} event:/bingus/loop
+{970a9266-d416-4182-b380-c87c7388e4d1} event:/warp/warp_sound
 {2f99f806-4b51-4b0a-a879-566644591f29} parameter:/Migration Name Conflict (3)/lowpass
 {6864bf18-2f50-4b34-aecc-63c1bdf7fdf4} parameter:/Migration Name Conflict (4)/Distance
 {ddf75d16-bdbe-4460-908b-0a29bd483835} parameter:/lowpass

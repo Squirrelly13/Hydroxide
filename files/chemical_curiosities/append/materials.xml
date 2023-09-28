@@ -1562,4 +1562,52 @@
 	>
 	</CellDataChild>
 
+	<CellData
+		name="cc_warp_powder"
+		ui_name="Warp Powder"
+		tags="[sand_ground],[burnable],[corrodible],[alchemy]"
+		burnable="1"
+		density="7.15"
+		cell_type="liquid"
+		wang_color="ff832354"
+		gfx_glow="150"
+		generates_smoke="0"
+		liquid_gravity="2"
+		liquid_sand="1"
+		on_fire="0"
+		requires_oxygen="0"
+		temperature_of_fire="60"
+		autoignition_temperature="10"
+		>
+		<Graphics
+			color="8cebaeba"
+			>
+		</Graphics><!-- Unfinished material that will warp people to a parallel world -eba -->
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="WARP" amount="0.15"/>
+			</Ingestion>
+		</StatusEffects>
+	</CellData>
+
+	<CellData
+		name="cc_warp_sickness"
+		ui_name="Warp Sickness"
+		tags="[liquid]"
+		density="0.69"
+		cell_type="liquid"
+		wang_color="803A7BE4"
+		liquid_gravity="1.9"
+		>
+		<Graphics
+			color="8cebaeba"
+			>
+		</Graphics> <!-- This material should not be found in game, i use it to give the player warp sickness -->
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="WARP_SICKNESS" amount="30"/>
+			</Ingestion>
+		</StatusEffects>
+	</CellData>
+
 </Materials>

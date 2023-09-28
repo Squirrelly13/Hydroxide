@@ -129,3 +129,21 @@ table.insert(status_effects, {
 	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/metals/effect_ironskin.xml",
 	is_harmful=false,
 });
+
+table.insert(status_effects, {
+	id="WARP",
+	ui_name="Warp",
+	ui_description="You feel something pulling you in every direction.",
+	ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/warp/effect_warp.png",
+	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/warp/warp.xml",
+	is_harmful=false,
+});
+
+table.insert(status_effects, {
+	id="WARP_SICKNESS",
+	ui_name="Warp Sickness",
+	ui_description="You feel as if your body was just turned inside out.",
+	ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/warp/effect_warp_sickness.png",
+	effect_entity="data/entities/misc/effect_drunk.xml",
+	is_harmful=true,
+});
