@@ -54,7 +54,6 @@ warp = warp or 0
 
 if(percentage > 20)then
     if(not is_warped)then
-        GamePrint("Warping")
 
         SetRandomSeed(root_x + 2346, root_y + GameGetFrameNum())
         is_warped = true
@@ -98,12 +97,10 @@ if(is_warped)then
             GameSetPostFxParameter("warp_multiplier", warp, 0 ,0 ,0)
         end
         if(done)then
+            GamePrint("You feel as if you are no longer in the same place..")
             EntityRemoveIngestionStatusEffect( root, "WARP" )
             EntityIngestMaterial( root, CellFactory_GetType("cc_warp_sickness"), 1)
+            EntityKill(entity_id)
         end
     end
-end
-
-if(percentage <= 0)then
-    EntityKill(entity_id)
 end
