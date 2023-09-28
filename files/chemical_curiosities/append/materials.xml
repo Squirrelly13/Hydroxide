@@ -1592,7 +1592,7 @@
 
 	<CellData
 		name="cc_warp_sickness"
-		ui_name="Warp Sickness"
+		ui_name="Warp Powder"
 		tags="[liquid]"
 		density="0.69"
 		cell_type="liquid"
