@@ -5,23 +5,38 @@ local pos_x, pos_y = EntityGetTransform( entity_id )
 
 local convertcomponents = EntityGetComponent( entity_id, "MagicConvertMaterialComponent" )
 
-SetRandomSeed( pos_x + 436, pos_y - 3252 )
+SetRandomSeed( pos_x + 436, pos_y - 3252 + GameGetFrameNum() )
 
+local material_options = {}
 
 if( Random( 0, 100 ) <= 50 ) then
-		material_options = CellFactory_GetAllLiquids( false )
-	else
-		material_options = CellFactory_GetAllSands( false )
+	material_options = CellFactory_GetAllLiquids( false )
+else
+	material_options = CellFactory_GetAllSands( false )
+end
+
+-- backwards loop through material options
+for i = #material_options, 1, -1 do
+	local material = material_options[i]
+	
+	local id = CellFactory_GetType( material )
+	local tags = CellFactory_GetTags( id ) or {}
+	for k, v in ipairs(tags)do
+		if(v == "[catastrophic]")then
+			GamePrint("material ignored!!")
+			table.remove(material_options, i)
+			goto continue
+		end
 	end
-
-
+	::continue::
+end
 
 
 local material_string = "water"
 
 
-	rnd = Random( 1, #material_options )
-	material = material_options[rnd]
+rnd = Random( 1, #material_options )
+material = material_options[rnd]
 
 	
 material = CellFactory_GetType( material )

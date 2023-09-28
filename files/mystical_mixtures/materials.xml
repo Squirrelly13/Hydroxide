@@ -67,7 +67,7 @@
 	burnable="0"
 	density="8"
 	cell_type="solid"
-	wang_color="ff3b5d4b"
+	wang_color="ba3b63eb"
 	generates_smoke="0"
 	on_fire="0"
 	requires_oxygen="1"

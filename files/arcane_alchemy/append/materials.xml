@@ -1,15 +1,8 @@
 <Materials>
-<!-- making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now -->
-	
-<!-- TODO make unstable metamorphine more procedural if possible -->
-	
-
-
-
 
   <!--
   <CellData
-	name="AA_BLOOM_MAGIC"
+	name="aa_bloomium"
 	ui_name="Bloomium"
 	tags="[corrodible],[burnable],[meltable_to_lava],[alchemy]"
 	burnable="0"
@@ -874,7 +867,7 @@
   <CellData 
 	name="aa_pandorium"
 	ui_name="Pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+  	tags="[liquid],[magic_liquid],[water],[impure]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -920,7 +913,7 @@
    <CellData 
 	name="aa_unstable_pandorium"
 	ui_name="Unstable Pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -966,7 +959,7 @@
    <CellData 
 	name="aa_pop_rocks"
 	ui_name="Pop Rocks"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+  	tags="[liquid],[magic_liquid],[water],[impure]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"

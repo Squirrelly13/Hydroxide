@@ -66,6 +66,8 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 end
 
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
+
 
 --   	[Chemical Curiosities]
 
@@ -90,6 +92,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 
 	-- init methane shader
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
+
+	-- init warp shader
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua")
 
 	-- init electrolysis system
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
@@ -323,7 +328,7 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
--- why this no work??
+-- this do work now :)
 register_translation("item_can_with_material", "Can of $0")
 register_translation("item_can_with_material_description", "A Can containing $0")
 
@@ -333,11 +338,9 @@ register_translation("item_vial_with_material_description", "A glass vial contai
 
 
 
+-- Magic numbers, using this to increase the max materials the game can handle.
+ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" )
 
-
-
---ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will override some magic numbers using the specified file
---no idea what magic numbers are, but this does somethin to em
 
 
 --ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells ( deprecated )
