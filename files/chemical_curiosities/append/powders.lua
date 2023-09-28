@@ -34,7 +34,7 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-	material="CC_antimatter_powder",
+	material="cc_antimatter_powder",
 	cost=600,
 });
 

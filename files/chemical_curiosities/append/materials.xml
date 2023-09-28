@@ -997,7 +997,7 @@
 		audio_physics_material_wall="gravel"
 		audio_physics_material_solid="glass"
 		crackability="100"
-		convert_to_box2d_material="CC_crystal_box2d"
+		convert_to_box2d_material="cc_crystal_box2d"
 		show_in_creative_mode="1"
 		durability="7"
 		>
@@ -1193,7 +1193,7 @@
 	</CellData> 
 	
 	<CellData
-		name="CC_antimatter_powder"
+		name="cc_antimatter_powder"
 		ui_name="Dormant Anti-Matter"
 		tags="[antimatter],[sand_other],[corrodible],[burnable],[alchemy]"
 		burnable="1"
@@ -1202,7 +1202,7 @@
 		autoignition_temperature="70"
 		hp="100"
 		fire_hp="20"
-		on_fire_convert_to_material="CC_antimatter_liquid"
+		on_fire_convert_to_material="cc_antimatter_liquid"
 		electrical_conductivity="1"
 		density="10"
 		cell_type="liquid"
@@ -1214,6 +1214,7 @@
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
 			>
+			</Graphics>
 	</CellData> 
 	
 	<CellDataChild
@@ -1468,7 +1469,7 @@
 	</CellData> 
 	
 	<CellData
-		name="CC_crystal_box2d"
+		name="cc_crystal_box2d"
 		ui_name="Dormant Crystal"
 		tags="[box2d],[static],[corrodible],[solid],[alchemy]"
 		burnable="0"
