@@ -33,7 +33,7 @@ end
 ]]--
 print("////////////// Commencing Hydroxide init //////////////")
 
-dofile("mods/Hydroxide/lib/add_translation.lua")
+dofile("mods/Hydroxide/lib/translations.lua")
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -328,11 +328,15 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 end 
 
 -- this do work now :)
+--[[
 register_translation("item_can_with_material", "Can of $0")
 register_translation("item_can_with_material_description", "A Can containing $0")
 
 register_translation("item_vial_with_material", "Vial of $0")
 register_translation("item_vial_with_material_description", "A glass vial containing $0")
+]]
+
+register_localizations("mods/Hydroxide/translations.csv", 2)
 
 
 
