@@ -5,7 +5,7 @@
 
 	<GameEffectComponent
 	effect="CUSTOM"
-	custom_effect_id="EXPLODING"
+	custom_effect_id="CC_EXPLODING"
 	frames="1500"
 	>
 	</GameEffectComponent>

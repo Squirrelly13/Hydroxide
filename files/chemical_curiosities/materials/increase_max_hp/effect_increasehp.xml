@@ -3,7 +3,7 @@
 
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="INCREASEHP"
+		custom_effect_id="CC_INCREASEHP"
 		frames="99999"
 		>
 	</GameEffectComponent>

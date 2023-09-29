@@ -3,7 +3,7 @@
 	
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="WARP"
+		custom_effect_id="CC_WARP"
 		frames="99999"
 		>
 	</GameEffectComponent>

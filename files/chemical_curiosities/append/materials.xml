@@ -5,7 +5,7 @@
 	
  <CellData 
         name="cc_hydroxide"
-        ui_name="Hydroxide"
+        ui_name="$mat_cc_hydroxide"
         tags="[liquid],[hydroxide],[impure],[liquid_common]"
         density="2.9"
         cell_type="liquid"
@@ -23,14 +23,14 @@
                 <StatusEffect type="POISONED" amount="0.3"/>
             </Ingestion>
 			<Stains>
-				<StatusEffect type="HYDROXIDE" />
+				<StatusEffect type="CC_HYDROXIDE" />
 			</Stains>
         </StatusEffects>
  </CellData>  <!-- hydroxide. the first material i made. -->
 
  <CellData
 	name="cc_acidic_water"
-	ui_name="Acidic Water"
+	ui_name="$mat_cc_acidic_water"
 	tags="[liquid],[freezable],[water],[liquid_common]"
 	burnable="0"
 	density="4"
@@ -65,7 +65,7 @@
   
   <CellData
 	name="cc_devouring_moss"
-	ui_name="Devouring Moss"
+	ui_name="$mat_cc_devouring_moss"
 	tags="[static],[corrodible],[plant],[alchemy]"
 	cell_type="liquid"
 	wang_color="ffe4c6a0"
@@ -86,7 +86,7 @@
 
  <CellData
 	name="cc_hydroxide_gas"
-	ui_name="Flammable Gas"
+	ui_name="$mat_cc_hydroxide_gas"
   	tags="[gas],[burnable_fast]"
 	burnable="1"
 	density="2"
@@ -111,7 +111,7 @@
 
  <CellData
 	name="cc_veilium"
-	ui_name="Veilium"
+	ui_name="$mat_cc_veilium"
 	tags="[liquid],[water],[magic_liquid],[impure],[corrodible]"
 	density="4.21"
 	cell_type="liquid"
@@ -124,7 +124,7 @@
 	requires_oxygen="0"
 	liquid_stains="2"
 	liquid_sprite_stain_shaken_drop_chance="8"
-	status_effects="BLINDNESS"
+	status_effects="CC_BLINDNESS"
 	audio_materialaudio_type="MAGICAL" 
 	show_in_creative_mode="1"
 	on_fire_smoke_material="alcohol_gas"
@@ -156,7 +156,7 @@
 	<StatusEffects>
 		<Ingestion>
 			<StatusEffect type="INGESTION_DRUNK" amount="0.05" />
-			<StatusEffect type="BLINDNESS"		 amount="0.3"   />
+			<StatusEffect type="CC_BLINDNESS"		 amount="0.3"   />
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- blindness potion -->
@@ -164,7 +164,7 @@
 
   <CellData
 	name="cc_sparkling_liquid"
-	ui_name="Sparkling Liquid"
+	ui_name="$mat_cc_sparkling_liquid"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
 	density="0.7"
 	cell_type="liquid"
@@ -200,7 +200,7 @@
   
   <CellData
 	name="cc_slicing_liquid"
-	ui_name="Slicing Liquid"
+	ui_name="$mat_cc_slicing_liquid"
 	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
 	density="2.31"
 	cell_type="liquid"
@@ -234,7 +234,7 @@
   
   <CellData
 	name="cc_glittering_liquid"
-	ui_name="Glittering Liquid"
+	ui_name="$mat_cc_glittering_liquid"
 	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
 	density="1.1415"
 	cell_type="liquid"
@@ -266,14 +266,14 @@
 	</ParticleEffect>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="EXPLODING" amount="0.3" />
+			<StatusEffect type="CC_EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
   </CellData><!--  firework liquid -->
 	
   <CellData
 	name="cc_blasting_powder"
-	ui_name="Blasting Powder"
+	ui_name="$mat_cc_blasting_powder"
 	tags="[sand_ground],[burnable],[corrodible],[alchemy]"
 	burnable="1"
 	density="7.15"
@@ -309,14 +309,14 @@
 		</ParticleEffect>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="EXPLODING" amount="0.3" />
+			<StatusEffect type="CC_EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
   </CellData> 
   
   <CellData
 	name="cc_methane"
-	ui_name="Methane Gas"
+	ui_name="$mat_cc_methane"
 	tags="[gas],[burnable]"
 	burnable="1"
 	density="1"
@@ -326,7 +326,7 @@
 	liquid_sand="0"
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="5"
-	status_effects="INGESTION_METHANE"
+	status_effects="CC_INGESTION_METHANE"
 	lifetime="600"
 	generates_flames="20"
 	generates_smoke="1"
@@ -342,8 +342,8 @@
 	</CellData><!-- lol, methane gas. -->
 	
 	<CellData
-		name="carbon_dioxide"
-		ui_name="Carbon dioxide"
+		name="cc_carbon_dioxide"
+		ui_name="$mat_cc_carbon_dioxide"
 		tags="[gas]"
 		burnable="0"
 		density="1"
@@ -365,8 +365,8 @@
 
 	<CellDataChild
 	_parent="liquid_fire"
-	name="methaneRain"
-	ui_name="Fire"
+	name="cc_methane_rain"
+	ui_name="$mat_fire"
 	liquid_stains="0"
 	wang_color="af3a3a3e"
 	lifetime="80"
@@ -375,7 +375,7 @@
 	
 	  <CellData
 	name="cc_jitterium"
-	ui_name="Jitterium"
+	ui_name="$mat_cc_jitterium"
 	tags="[magic_liquid],[corrodible],[liquid],[impure]"
 	burnable="0"
 	density="5.13"
@@ -401,17 +401,17 @@
 	</Graphics>
 		<StatusEffects>
 			<Stains>
-				<StatusEffect type="TWITCHY" />
+				<StatusEffect type="CC_TWITCHY" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="TWITCHY" amount="0.2" />
+				<StatusEffect type="CC_TWITCHY" amount="0.2" />
 			</Ingestion>
 		</StatusEffects>
   </CellData><!-- twitchy mage blood -->
   
   <CellData
 	name="cc_kindling"
-	ui_name="Kindling"
+	ui_name="$mat_cc_kindling"
 	tags="[sand_other],[corrodible],[burnable],[alchemy]"
 	burnable="1"
 	density="6"
@@ -457,7 +457,7 @@
 	
   <CellData	
 	name="cc_deceleratium"
-	ui_name="Deceleratium"
+	ui_name="$mat_cc_deceleratium"
 	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
 	density="4.1"
@@ -471,7 +471,7 @@
 	requires_oxygen="0"
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="1"
-	status_effects="MOVEMENT_SLOWER_2X"
+	status_effects="CC_MOVEMENT_SLOWER_2X"
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
@@ -489,14 +489,14 @@
 	</ParticleEffect>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="MOVEMENT_SLOWER_2X" amount="0.2" />
+			<StatusEffect type="CC_MOVEMENT_SLOWER_2X" amount="0.2" />
 		</Ingestion>
 	</StatusEffects>
   </CellData> <!-- Deceleratium -->
   
   <CellData
 	name="cc_heftium"
-	ui_name="Heftium"
+	ui_name="$mat_cc_heftium"
   	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
 	density="4.92"
@@ -510,7 +510,7 @@
 	requires_oxygen="0"
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="1"
-	status_effects="LEVITATION_SLOWER"
+	status_effects="CC_LEVITATION_SLOWER"
 	audio_materialaudio_type="MAGICAL" 
 	show_in_creative_mode="1"
 	>
@@ -528,7 +528,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="LEVITATION_SLOWER" amount="0.2" />
+			<StatusEffect type="CC_LEVITATION_SLOWER" amount="0.2" />
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Heftium -->
@@ -537,7 +537,7 @@
 
   <CellData
 	name="cc_stillium"
-	ui_name="Stillium"
+	ui_name="$mat_cc_stillium"
   	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
 	burnable="0"
 	density="3.091"
@@ -568,19 +568,19 @@
 	</ParticleEffect>
   	<StatusEffects>
 		<Stains>
-			<StatusEffect type="LEVITATION_SLOWER" />
-			<StatusEffect type="MOVEMENT_SLOWER_2X" />
+			<StatusEffect type="CC_LEVITATION_SLOWER" />
+			<StatusEffect type="CC_MOVEMENT_SLOWER_2X" />
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="LEVITATION_SLOWER" amount="0.1" />
-			<StatusEffect type="MOVEMENT_SLOWER_2X" amount="0.1" />
+			<StatusEffect type="CC_LEVITATION_SLOWER" amount="0.1" />
+			<StatusEffect type="CC_MOVEMENT_SLOWER_2X" amount="0.1" />
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Stillium -->
   
   <CellData
 	name="cc_metamorphine"
-	ui_name="Metamorphine"
+	ui_name="$mat_cc_metamorphine"
 	tags="[magic_liquid],[metamorphine],[impure]"
 	burnable="0"
 	density="2.45"
@@ -626,7 +626,7 @@
   
   <CellData
 	name="cc_unstable_metamorphine"
-	ui_name="Unstable Metamorphine"
+	ui_name="$mat_cc_unstable_metamorphine"
 	tags="[magic_liquid],[metamorphine],[impure]"
 	burnable="0"
 	density="2.56"
@@ -672,7 +672,7 @@
   
   <CellData
 	name="cc_agitine"
-	ui_name="Agitine"
+	ui_name="$mat_cc_agitine"
 	tags="[magic_liquid],[impure],[liquid],[corrodible]"
 	burnable="1"
 	density="3.1"
@@ -718,17 +718,17 @@
 	</ParticleEffect>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="EXPLODING" />
+			<StatusEffect type="CC_EXPLODING" />
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="EXPLODING" amount="0.3" />
+			<StatusEffect type="CC_EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
 	</CellData> 
 		
 	<CellData
 	name="cc_alchemy_powder"
-	ui_name="Alchemy Powder"
+	ui_name="$mat_cc_alchemy_powder"
 	tags="[sand_other],[corrodible],[alchemy]"
 	burnable="0"
 	density="4.5"
@@ -753,7 +753,7 @@
 	 
 	<CellData
 	name="cc_metastasizium"
-	ui_name="Metastasizium"
+	ui_name="$mat_cc_metastasizium"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
 	density="1.9"
 	cell_type="liquid"
@@ -774,10 +774,10 @@
 	</Graphics>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="METASTASIZIUM" />
+			<StatusEffect type="CC_METASTASIZIUM" />
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="METASTASIZIUM" amount="0.5" />
+			<StatusEffect type="CC_METASTASIZIUM" amount="0.5" />
 		</Ingestion>
 	</StatusEffects>
    </CellData> 
@@ -785,7 +785,7 @@
    
    <CellData
 	name="cc_nullium"
-	ui_name="Nullium"
+	ui_name="$mat_cc_nullium"
 	tags="[liquid],[impure],[corrodible]"
 	density="4.63"
 	cell_type="liquid"
@@ -799,10 +799,10 @@
 	>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="NULLIUM" />
+			<StatusEffect type="CC_NULLIUM" />
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="NULLIUM" amount="0.4" />
+			<StatusEffect type="CC_NULLIUM" amount="0.4" />
 		</Ingestion>
 	</StatusEffects>
 	<ParticleEffect
@@ -821,7 +821,7 @@
 	
 	<CellData
 		name="cc_liberum_magicas"
-		ui_name="Liberum Magicas"
+		ui_name="$mat_cc_liberum_magicas"
 		tags="[sand_other],[corrodible],[alchemy]"
 		burnable="0"
 		density="6.5"
@@ -863,7 +863,7 @@
 		</ParticleEffect>
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="EDIT_WANDS_EVERYWHERE" amount="0.1" />
+				<StatusEffect type="CC_EDIT_WANDS_EVERYWHERE" amount="0.1" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
@@ -872,7 +872,7 @@
 	<CellDataChild
 		_parent="cc_blasting_powder" 
 		name="cc_thunder_powder"
-		ui_name="Thunder Powder"
+		ui_name="$mat_cc_thunder_powder"
 		tags="[sand_ground],[corrodible],[alchemy]"
 		wang_color="ff83b354"
 		density="3.999"
@@ -892,7 +892,7 @@
 	
 	<CellData
 		name="cc_health_tonic"
-		ui_name="Health Tonic"
+		ui_name="$mat_cc_health_tonic"
 		tags="[liquid],[magic_liquid],[impure],[corrodible]"
 		density="2.33"
 		cell_type="liquid"
@@ -911,14 +911,14 @@
 		</Graphics>
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="INCREASEHP" amount="0.01" />
+				<StatusEffect type="CC_INCREASEHP" amount="0.01" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 
 
 	<CellData
 		name="cc_grease"
-		ui_name="Grease"
+		ui_name="$mat_cc_grease"
 		tags="[liquid],[impure],[liquid_common]"
 		burnable="1"
 		density="0.8"
@@ -975,7 +975,7 @@
 		_parent="ice_static"
 		_inherit_reactions="0"
 		name="cc_dormant_crystal"
-		ui_name="Dormant Crystal"
+		ui_name="$mat_cc_dormant_crystal"
 		tags="[static],[alchemy],[solid]"
 		burnable="1"
 		density="8"
@@ -1021,7 +1021,7 @@
 
 	<CellData
 		name="cc_dormant_crystal_molten"
-		ui_name="Liquid Crystal"
+		ui_name="$mat_cc_dormant_crystal_molten"
 		tags="[liquid],[corrodible],[molten],[alchemy],[liquid_common]"
 		burnable="0"
 		density="4.78"
@@ -1044,7 +1044,7 @@
 	
 	<CellData
 		name="cc_uranium"
-		ui_name="Uranium"
+		ui_name="$mat_cc_uranium"
 		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
 		burnable="0"
 		density="14.49"
@@ -1090,7 +1090,7 @@
 	<CellDataChild
 		_parent="radioactive_liquid"
 		name="cc_radioactive_waste"
-		ui_name="Radioactive Waste"
+		ui_name="$mat_cc_radioactive_waste"
 		tags="[liquid],[corrodible],[radioactive],[impure],[liquid_common]"
 		wang_color="ff1afd84"
 		density="6.7"
@@ -1112,7 +1112,7 @@
 
 	<CellData
 		name="cc_morphine"
-		ui_name="Morphine"
+		ui_name="$mat_cc_morphine"
 		tags="[sand_other],[corrodible],[alchemy]"
 		burnable="0"
 		density="5.6"
@@ -1133,14 +1133,14 @@
 		</Graphics>
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="MORPHINE" amount="0.4" />
+				<StatusEffect type="CC_MORPHINE" amount="0.4" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
 
 	<CellData
 		name="cc_antimatter_gas"
-		ui_name="Anti-Matter"
+		ui_name="$mat_cc_antimatter_gas"
 		tags="[antimatter]"
 		burnable="0"
 		density="0.1"
@@ -1157,17 +1157,17 @@
 		</Graphics>
 		<StatusEffects>
 			<Stains>
-				<StatusEffect type="ANTIMATTER" />
+				<StatusEffect type="CC_ANTIMATTER" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="ANTIMATTER" amount="1.0" />
+				<StatusEffect type="CC_ANTIMATTER" amount="1.0" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 
 	
 	<CellData
 		name="cc_antimatter_liquid"
-		ui_name="Anti-Matter"
+		ui_name="$mat_cc_antimatter_liquid"
 		tags="[antimatter]"
 		burnable="0"
 		density="0.1"
@@ -1184,17 +1184,17 @@
 		</Graphics>
 		<StatusEffects>
 			<Stains>
-				<StatusEffect type="ANTIMATTER" />
+				<StatusEffect type="CC_ANTIMATTER" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="ANTIMATTER" amount="1.0" />
+				<StatusEffect type="CC_ANTIMATTER" amount="1.0" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 
 	
 	<CellData
 		name="cc_antimatter_powder"
-		ui_name="Dormant Anti-Matter"
+		ui_name="$mat_cc_antimatter_powder"
 		tags="[antimatter],[sand_other],[corrodible],[burnable],[alchemy]"
 		burnable="1"
 		requires_oxygen="0"
@@ -1220,7 +1220,7 @@
 	<CellDataChild
 		_parent="rotten_meat"
 		name="cc_frozen_meat"
-		ui_name="Frozen Meat"
+		ui_name="$mat_cc_frozen_meat"
 		wang_color="ffabada9"
 		>
 		<Graphics
@@ -1234,7 +1234,7 @@
 
 	<CellData
 	name="cc_cobalt"
-	ui_name="Cobalt"
+	ui_name="$mat_cc_cobalt"
   	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="7"
@@ -1262,7 +1262,7 @@
   
     <CellData
 	name="cc_cobalt_molten"
-	ui_name="Molten Cobalt"
+	ui_name="$mat_cc_cobalt_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
 	density="3"
@@ -1296,7 +1296,7 @@
   
   <CellData
 	name="cc_iron"
-	ui_name="Iron"
+	ui_name="$mat_cc_iron"
   	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="9"
@@ -1324,7 +1324,7 @@
   
     <CellData
 	name="cc_iron_molten"
-	ui_name="Molten Iron"
+	ui_name="$mat_cc_iron_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
 	density="3"
@@ -1359,7 +1359,7 @@
    
   <CellData
 	name="cc_preskite"
-	ui_name="Preskite"
+	ui_name="$mat_cc_preskite"
   	tags="[sand_metal],[meltable_metal],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="9"
@@ -1387,7 +1387,7 @@
   
     <CellData
 	name="cc_preskite_molten"
-	ui_name="Molten Preskite"
+	ui_name="$mat_cc_preskite_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
 	burnable="1"
 	density="3"
@@ -1421,7 +1421,7 @@
   
 	<CellData
 		name="cc_ferrine"
-		ui_name="Ferrine"
+		ui_name="$mat_cc_ferrine"
 		tags="[liquid],[corrodible],[impure],[food]"
 		burnable="0"
 		density="5.7"
@@ -1445,7 +1445,7 @@
 	
 	<CellData
 		name="cc_cobaline"
-		ui_name="Cobaline"
+		ui_name="$mat_cc_cobaline"
 		tags="[liquid],[corrodible],[impure]"
 		burnable="1"
 		density="0.5"
@@ -1470,7 +1470,7 @@
 	
 	<CellData
 		name="cc_crystal_box2d"
-		ui_name="Dormant Crystal"
+		ui_name="$mat_cc_crystal_box2d"
 		tags="[box2d],[static],[corrodible],[solid],[alchemy]"
 		burnable="0"
 		density="10"
@@ -1508,7 +1508,7 @@
 	
 	<CellData
 		name="cc_persistine"
-		ui_name="Persistine"
+		ui_name="$mat_cc_persistine"
 		tags="[liquid],[magic_liquid],[impure],[water]"
 		burnable="0"
 		density="4.83"
@@ -1543,10 +1543,10 @@
 		</Graphics>
 		<StatusEffects>
 			<Stains>
-				<StatusEffect type="IRONSKIN" />
+				<StatusEffect type="CC_IRONSKIN" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="IRONSKIN" amount="0.15"/>
+				<StatusEffect type="CC_IRONSKIN" amount="0.15"/>
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
@@ -1570,7 +1570,7 @@
 	<CellDataChild
 		_parent="wood_static"
 		name="cc_lichtenberg_wood"
-		ui_name="Lichtenberg Wood"
+		ui_name="$mat_cc_lichtenberg_wood"
 		wang_color="afdae872"
 		electrical_conductivity="1"
 		burnable="0"
@@ -1580,7 +1580,7 @@
 	<CellDataChild
 		_parent="coal_static"
 		name="cc_lichtenberg_coal"
-		ui_name="Burnt Wood"
+		ui_name="$mat_cc_lichtenberg_coal"
 		wang_color="afd6e241"
 		electrical_conductivity="1"
 		burnable="0"
@@ -1589,7 +1589,7 @@
 
 	<CellData
 		name="cc_warp_powder"
-		ui_name="Warp Powder"
+		ui_name="$mat_cc_warp_powder"
 		tags="[sand_ground],[burnable],[corrodible],[alchemy]"
 		burnable="1"
 		density="7.15"
@@ -1610,14 +1610,14 @@
 		</Graphics><!-- Unfinished material that will warp people to a parallel world -eba -->
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="WARP" amount="0.15"/>
+				<StatusEffect type="CC_WARP" amount="0.15"/>
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
 
 	<CellData
 		name="cc_warp_sickness"
-		ui_name="Warp Powder"
+		ui_name="$mat_cc_warp_sickness"
 		tags="[liquid]"
 		density="0.69"
 		cell_type="liquid"
@@ -1630,7 +1630,7 @@
 		</Graphics> <!-- This material should not be found in game, i use it to give the player warp sickness -->
 		<StatusEffects>
 			<Ingestion>
-				<StatusEffect type="WARP_SICKNESS" amount="30"/>
+				<StatusEffect type="CC_WARP_SICKNESS" amount="30"/>
 			</Ingestion>
 		</StatusEffects>
 	</CellData>

@@ -5,7 +5,7 @@
     
     <GameEffectComponent 
     	effect="CUSTOM"
-	custom_effect_id="METASTASIZIUM"
+	custom_effect_id="CC_METASTASIZIUM"
     	frames="600"
     >
 	</GameEffectComponent >

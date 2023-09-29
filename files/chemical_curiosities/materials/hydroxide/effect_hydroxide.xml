@@ -1,7 +1,7 @@
 <Entity>
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="HYDROXIDE"
+		custom_effect_id="CC_HYDROXIDE"
 		frames="60"
 	>
 	</GameEffectComponent>

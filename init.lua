@@ -131,7 +131,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	--[[
 	local player_x, player_y = EntityGetTransform( player_entity )
 	EntityLoad("mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml", player_x, player_y)
-	]]
+	]]=
 	
 end
 --  Items

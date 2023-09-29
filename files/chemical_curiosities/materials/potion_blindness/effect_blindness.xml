@@ -3,7 +3,7 @@
     </InheritTransformComponent>    
     
     <GameEffectComponent 
-        effect="BLINDNESS"
+        effect="CC_BLINDNESS"
         frames="99999"
     ></GameEffectComponent>
 

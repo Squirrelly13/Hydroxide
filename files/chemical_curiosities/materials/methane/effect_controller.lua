@@ -4,7 +4,11 @@ dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
 
-local count = GetStainPercentage(owner, "INGESTION_METHANE")
+if(not EntityHasTag(owner, "player_unit"))then
+	return
+end
+
+local count = GetStainPercentage(owner, "CC_INGESTION_METHANE")
 
 local multiplier = (ModSettingGet("Hydroxide.CC_METHANE_EFFECT_MULTIPLIER") or 100) / 100
 

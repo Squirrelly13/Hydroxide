@@ -1,9 +1,9 @@
 dofile_once("data/scripts/lib/utilities.lua")
 
 table.insert( actions, {
-		id          = "REPULTIUM_TRAIL",
-		name 		= "Repultium Trail",
-		description = "Gives a projectile a trail of repultium",
+		id          = "AA_REPULTIUM_TRAIL",
+		name 		= "$action_repultium_trail",
+		description = "$action_desc_aa_repultium_trail",
 		sprite 		= "mods/Hydroxide/files/arcane_alchemy/spells/projectile_modifiers/repultium_trail.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/oil_trail_unidentified.png",
 		type 		= ACTION_TYPE_MODIFIER,
@@ -21,9 +21,9 @@ table.insert( actions, {
 
 table.insert( actions,
 {
-	id          = "ALCHEMY_NERF_DARTS",
-	name 		= "Nerf Darts",
-	description = "A collection of nerf darts for shooting purposes.",
+	id          = "AA_ALCHEMY_NERF_DARTS",
+	name 		= "$action_aa_alchemy_nerf_darts",
+	description = "$action_desc_aa_alchemy_nerf_darts",
 	sprite 		= "mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/darts.png",
 	type 		= ACTION_TYPE_PROJECTILE,
 	spawn_level                       = "0,1,2,3,4,5,6,7", 
@@ -40,9 +40,9 @@ table.insert( actions,
 });
 
 table.insert( actions,	{
-		id          = "HUNGRYSLIME_SHOT",
-		name 		= "Hungering Shot",
-		description = "Makes enemies vomit up something nasty",
+		id          = "AA_HUNGRYSLIME_SHOT",
+		name 		= "$action_aa_hungryslime_shot",
+		description = "$action_desc_aa_hungryslime_shot",
 		sprite 		= "mods/Hydroxide/files/arcane_alchemy/spells/enemy_modifiers/hungering_shot.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/electric_charge_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/arcane_alchemy/spells/enemy_modifiers/hitfx_vomitslime.xml" },
@@ -59,9 +59,9 @@ table.insert( actions,	{
 });
 
 table.insert( actions, {
-		id          = "POTION_TO_GAS",
-		name 		= "Potions to Gas",
-		description = "Causes nearby potions to evaporate into gas",
+		id          = "AA_POTION_TO_GAS",
+		name 		= "$action_aa_potion_to_gas",
+		description = "$action_desc_aa_potion_to_gas",
 		sprite 		= "mods/Hydroxide/files/arcane_alchemy/spells/material_enhancers/potion_to_gas.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/arcane_alchemy/spells/material_enhancers/potion_to_gas.xml", "data/entities/particles/tinyspark_orange.xml" },

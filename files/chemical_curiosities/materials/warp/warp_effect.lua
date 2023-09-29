@@ -43,7 +43,7 @@ end
 
 local is_player = EntityHasTag(root, "player_unit")
 
-local percentage = GetIngestionPercentage(root, "WARP")
+local percentage = GetIngestionPercentage(root, "CC_WARP")
 is_warped = is_warped or false
 ticks = ticks or 0
 
@@ -98,7 +98,7 @@ if(is_warped)then
         end
         if(done)then
             GamePrint("You feel as if you are no longer in the same place..")
-            EntityRemoveIngestionStatusEffect( root, "WARP" )
+            EntityRemoveIngestionStatusEffect( root, "CC_WARP" )
             EntityIngestMaterial( root, CellFactory_GetType("cc_warp_sickness"), 1)
             EntityKill(entity_id)
         end

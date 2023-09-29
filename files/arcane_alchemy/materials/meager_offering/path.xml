@@ -2,7 +2,7 @@
 
 <GameEffectComponent 
     effect="CUSTOM"
-    custom_effect_id="PATH"
+    custom_effect_id="AA_PATH"
     frames="120">
 </GameEffectComponent> 
 

@@ -1337,13 +1337,13 @@ b<Materials>
 	
     <Reaction probability="3"
 	input_cell1="cc_methane"	input_cell2="[fire]"
-	output_cell1="methaneRain"		output_cell2="[fire]"
+	output_cell1="cc_methane_rain"		output_cell2="[fire]"
 	blob_radius1="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="100" 
-	input_cell1="methaneRain"	input_cell2="[static]"
+	input_cell1="cc_methane_rain"	input_cell2="[static]"
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>
