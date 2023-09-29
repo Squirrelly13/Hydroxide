@@ -80,7 +80,7 @@
 
 
 	<Reaction probability="200"
-	input_cell1="CC_antimatter_liquid"	input_cell2="cc_antimatter_powder"
+	input_cell1="CC_antimatter_liquid"			input_cell2="cc_antimatter_powder"
 	output_cell1="CC_antimatter_liquid"			output_cell2="CC_antimatter_liquid"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
@@ -88,7 +88,7 @@
 	>
 	</Reaction>
 	<Reaction probability="200"
-	input_cell1="CC_antimatter_gas"	input_cell2="cc_antimatter_powder"
+	input_cell1="CC_antimatter_gas"				input_cell2="cc_antimatter_powder"
 	output_cell1="CC_antimatter_gas"			output_cell2="CC_antimatter_gas"
 	blob_radius2="6"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
@@ -100,24 +100,24 @@
 
 
 	<Reaction probability="90"
-	input_cell1="cc_antimatter_gas"	input_cell2="[static]"
-	output_cell1="air"			output_cell2="air"
+	input_cell1="cc_antimatter_gas"				input_cell2="[static]"
+	output_cell1="air"							output_cell2="air"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
 	<Reaction probability="90"
-	input_cell1="cc_antimatter_gas"	input_cell2="[alchemy]"
-	output_cell1="air"			output_cell2="air"
+	input_cell1="cc_antimatter_gas"				input_cell2="[alchemy]"
+	output_cell1="air"							output_cell2="air"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
 	<Reaction probability="90"
-	input_cell1="cc_antimatter_gas"	input_cell2="[solid]"
-	output_cell1="air"			output_cell2="air"
+	input_cell1="cc_antimatter_gas"				input_cell2="[solid]"
+	output_cell1="air"							output_cell2="air"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
