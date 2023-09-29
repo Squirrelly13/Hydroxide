@@ -71,16 +71,6 @@ table.insert(materials_standard, {
 	cost=100,
 });
 
-table.insert(materials_magic, {
-	material="cc_antimatter_gas",
-	cost=950,
-});
-
-table.insert(materials_magic, {
-	material="cc_antimatter_liquid",
-	cost=1000,
-});
-
 table.insert(materials_standard, {
 	material="cc_cobaline",
 	cost=120,
