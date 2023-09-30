@@ -1,7 +1,7 @@
 <Materials>
     <CellData 
             name="mm_bingus"
-            ui_name="Bingus"
+            ui_name="$mat_mm_bingus"
             tags="[liquid],[impure]"
             density="2.9"
             cell_type="liquid"
@@ -19,7 +19,7 @@
 
     <CellData 
             name="mm_bingus_wetfood"
-            ui_name="Wetfood"
+            ui_name="$mat_mm_bingus_wetfood"
             tags="[liquid],[impure]"
             density="6"
             cell_type="liquid"
@@ -49,7 +49,7 @@
   <CellDataChild
   	_parent="meat"
 	name="mm_meat_bingus"
-	ui_name="Bingus"
+	ui_name="$mat_mm_meat_bingus"
 	wang_color="ffbbc1ba"
 	solid_on_collision_material="mm_bingus"
 	solid_break_to_type="mm_bingus"
@@ -62,7 +62,7 @@
 
   <CellData
 	name="mm_catfood_container"
-	ui_name="Catfood Container"
+	ui_name="$mat_mm_catfood_container"
   	tags="[box2d],[alchemy],[solid],[earth]"
 	burnable="0"
 	density="8"

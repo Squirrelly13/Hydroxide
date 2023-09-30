@@ -2,7 +2,7 @@
 
 <GameEffectComponent 
     effect="CUSTOM"
-    custom_effect_id="ICEFIRE"
+    custom_effect_id="AA_ICEFIRE"
     frames="50">
 </GameEffectComponent> 
 

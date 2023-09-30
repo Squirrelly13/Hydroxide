@@ -66,7 +66,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_to, {
 		probability = 0.2,
-		material 	= "methaneRain",
+		material 	= "cc_methane_rain",
 	});
 
 table.insert(materials_from, {

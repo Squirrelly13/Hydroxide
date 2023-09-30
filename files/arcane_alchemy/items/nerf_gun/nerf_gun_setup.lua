@@ -35,9 +35,9 @@ wand.mana_max = {100,100}
 --AddGunAction( entity_id, "DIGGER" )
 --AddGunAction( entity_id, "DIGGER" )
 
-AddGunAction( entity_id, "ALCHEMY_NERF_DARTS" )
-AddGunAction( entity_id, "ALCHEMY_NERF_DARTS" )
-AddGunAction( entity_id, "ALCHEMY_NERF_DARTS" )
+AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
+AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
+AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
 	
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )

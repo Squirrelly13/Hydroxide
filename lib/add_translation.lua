@@ -15,10 +15,7 @@ function register_translation(key, en, ru, ptbr, eses, de, frfr, it, pl, zhch, j
         jp = jp or ""
         ko = ko or ""
         if translations ~= nil then
-            while translations:find("\r\n\r\n") do
-                translations = translations:gsub("\r\n\r\n","\r\n");
-            end
-            local new_translations = key..","..en..","..ru..","..ptbr..","..eses..","..de..","..frfr..","..it..","..pl..","..zhch..","..jp..","..ko..",,";
+            local new_translations = key..","..en..","..ru..","..ptbr..","..eses..","..de..","..frfr..","..it..","..pl..","..zhch..","..jp..","..ko..",,\n";
             translations = translations .. new_translations;
             print("Registered translation key: "..key)
             ModTextFileSetContent( translation_file, translations );

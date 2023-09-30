@@ -8,7 +8,7 @@
 	<InheritTransformComponent />	
     
     <GameEffectComponent 
-        effect="EDIT_WANDS_EVERYWHERE"
+        effect="CC_EDIT_WANDS_EVERYWHERE"
         frames="1200"
         exclusivity_group="2003"
     >

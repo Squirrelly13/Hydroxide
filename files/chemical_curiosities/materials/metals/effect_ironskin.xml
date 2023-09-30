@@ -2,7 +2,7 @@
 	
 	<GameEffectComponent 
 		effect="CUSTOM"
-		custom_effect_id="IRONSKIN"
+		custom_effect_id="CC_IRONSKIN"
 		frames="1200"
 	>
 	</GameEffectComponent >	

@@ -2,8 +2,8 @@ local welding = dofile_once("mods/Hydroxide/files/mystical_mixtures/alchemy/acti
 alchemical_materials = {
     {
         id = "mm_alchemical_solvent", -- id of the material
-        name = "Alchemical Solvent", -- name of the material
-        description = "Alchemical solvent is a material which is used to create mystical solutions.",
+        name = "$mat_mm_alchemical_solvent", -- name of the material
+        description = "$desc_mm_alchemical_solvent",
         generate_notes = true,
         color = "FF72BFD8", -- visual color
         texture = nil, -- texture path
@@ -12,8 +12,8 @@ alchemical_materials = {
     },
     {
         id = "mm_alchemical_base",
-        name = "Alchemical Base",
-        description = "The base of all proper alchemy.",
+        name = "$mat_mm_alchemical_base",
+        description = "$desc_mm_alchemical_base",
         generate_notes = true,
         color = "c87e6996",
         texture = nil, -- texture path
@@ -22,8 +22,8 @@ alchemical_materials = {
     },
     {
         id = "mm_ephemeral_ether",
-        name = "Ephemeral Ether",
-        description = "A voletile substance which evaporates quickly.\nA side product of many alchemical processes.\nUses are yet unknown.",
+        name = "$mat_mm_ephemeral_ether",
+        description = "$desc_mm_ephemeral_ether",
         generate_notes = true,
         color = "C60AFFD2",
         texture = nil, -- texture path
@@ -33,8 +33,8 @@ alchemical_materials = {
     },
     {
         id = "mm_ephemeral_ether_gas",
-        name = "Ephemeral Ether Gas",
-        description = "The evaporated form of Ephemeral Ether.",
+        name = "$mat_mm_ephemeral_ether_gas",
+        description = "$desc_mm_ephemeral_ether_gas",
         color = "410AFFD2",
         texture = nil, -- texture path
         type = "gas",
@@ -45,8 +45,8 @@ alchemical_materials = {
     },
     {
         id = "mm_gold_solution",
-        name = "Gold Solution",
-        description = "A solution of gold in an alchemical solvent.\nIt can be used in a variety of recipes, notably modifying wand capacity.",
+        name = "$mat_mm_gold_solution",
+        description = "$desc_mm_gold_solution",
         generate_notes = true,
         color = "FFFFDF86",
         texture = "data/materials_gfx/gold.png", -- texture path
@@ -57,8 +57,8 @@ alchemical_materials = {
     },
     {
         id = "mm_replicating_agent",
-        name = "Replicating Agent",
-        description = "A substance which through mystical means appears to clone other liquid substances.",
+        name = "$mat_mm_replicating_agent",
+        description = "$desc_mm_replicating_agent",
         generate_notes = true,
         color = "8AEF5FE6",
         texture = nil, -- texture path
@@ -68,8 +68,8 @@ alchemical_materials = {
     },
     {
         id = "mm_diluted_mana",
-        name = "Diluted Mana",
-        description = "Mana diluted in an alchemical base.\nCan be used for modifying wand mana capacity.",
+        name = "$mat_mm_diluted_mana",
+        description = "$desc_mm_diluted_mana",
         generate_notes = true,
         color = "A27ACDE0",
         type = "liquid",
@@ -79,8 +79,8 @@ alchemical_materials = {
     },
     {
         id = "mm_refined_mana",
-        name = "Refined Mana",
-        description = "Mana refined with Hydroxide.\nIt can be used in a variety of recipes, notably improving the speed at which wands gain mana.",
+        name = "$mat_mm_refined_mana",
+        description = "$desc_mm_refined_mana",
         generate_notes = true,
         color = "E500A9AC",
         type = "liquid",
@@ -90,8 +90,8 @@ alchemical_materials = {
     },
     {
         id = "mm_refined_mana_gas",
-        name = "Evaporated Mana",
-        description = "The evaporated form of Refined Mana.",
+        name = "$mat_mm_refined_mana_gas",
+        description = "$desc_mm_refined_mana_gas",
         color = "493DACB8",
         texture = nil, -- texture path
         type = "gas",
@@ -102,8 +102,8 @@ alchemical_materials = {
     },
     {
         id = "mm_arcane_flux",
-        name = "Arcane Flux",
-        description = "This substance is used to weld various spells together, to variable success.",
+        name = "$mat_mm_arcane_flux",
+        description = "$desc_mm_arcane_flux",
         generate_notes = true,
         color = "A1FF0084",
         type = "liquid",
@@ -115,8 +115,8 @@ alchemical_materials = {
     },
     {
         id = "mm_mystic_alloy",
-        name = "Mystic Alloy",
-        description = "An alloy made from the remnants of a broken wand.\nIt is not very useful by itself however it is used in the creation of Arcane Flux",
+        name = "$mat_mm_mystic_alloy",
+        description = "$desc_mm_mystic_alloy",
         generate_notes = true,
         color = "FF916179",
         type = "powder",
@@ -157,8 +157,8 @@ alchemical_recipes = {
     },
     {
         id = "gold_solution",
-        name = "A Solution of Gold",
-        description = "Gold can be dissolved in an Alchemical Solvent to be in a more usable form for future recipes.",
+        name = "$reac_gold_solution",
+        description = "$reac_desc_gold_solution",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
@@ -174,8 +174,8 @@ alchemical_recipes = {
     },
     {
         id = "mana_dilution",
-        name = "The Dilution of Mana",
-        description = "Concentrated Mana can be diluted in an Alchemical Base to be in a more usable form for future recipes.",
+        name = "$reac_mana_dilution",
+        description = "$reac_desc_mana_dilution",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
@@ -191,8 +191,8 @@ alchemical_recipes = {
     },
     {
         id = "mana_refining",
-        name = "The Refining of Mana",
-        description = "Diluted Mana can be refined by mixing with Hydroxide, refined mana has limited usecases but it can be useful.",
+        name = "$reac_mana_refining",
+        description = "$reac_desc_mana_refining",
         generate_notes = true,
         probability = 100, 
         inputs = { -- three ingredients is the limit
@@ -208,8 +208,8 @@ alchemical_recipes = {
     },    
     {
         id = "mystic_alloy",
-        name = "Refining a Mystic Alloy",
-        description = "Wands are made of a special alloy, by taking a Broken Wand and melting it down with Alchemical Solvent it can be reduced to Mystic Alloy.",
+        name = "$reac_mystic_alloy",
+        description = "$reac_desc_mystic_alloy",
         generate_notes = true,
         probability = 100,
         inputs = {
@@ -250,8 +250,8 @@ alchemical_recipes = {
     },
     {
         id = "arcane_flux_creation",
-        name = "The Creation of Arcane Flux",
-        description = "Arcane Flux is a substance which can be used to weld spells together.\nA mixture of Refined Mana and Mystic Alloy when left in open air will eventually form Arcane Flux.",
+        name = "$reac_arcane_flux_creation",
+        description = "$reac_desc_arcane_flux_creation",
         generate_notes = true,
         probability = 3,
         inputs = {
@@ -267,8 +267,8 @@ alchemical_recipes = {
     },
     {
         id = "wand_capacity",
-        name = "On the subject of wand capacity",
-        description = "Wands are a the best friend of wizards and witches alike.\nHowever they can only hold a limited amount of spells.\nIt is known that A Solution of Gold together with an Alchemical Base can adjust the capacity of a wand, but it may not always turn out as expected.",
+        name = "$reac_wand_capacity",
+        description = "$reac_desc_wand_capacity",
         generate_notes = true,
         probability = 100, 
         func_probability = 1,
@@ -335,8 +335,8 @@ alchemical_recipes = {
     },    
     {
         id = "mana_capacity",
-        name = "On the subject of mana capacity",
-        description = "Wands can only hold a limited pool of mana at a time, this can be frustrating for the more advanced magic users among us.\nHowever one way to increase this pool is to infuse the wand with mana.\nConcentrated Mana is too strong to be used directly, but when diluted it can be used to increase the mana capacity of a wand.",
+        name = "$reac_mana_capacity",
+        description = "$reac_desc_mana_capacity",
         generate_notes = true,
         probability = 100, 
         func_probability = 1,
@@ -376,8 +376,8 @@ alchemical_recipes = {
     },
     {
         id = "mana_charge",
-        name = "On the subject of mana regeneration",
-        description = "Wands refill their mana pool over time by absorbing mana from the surrounding environment.\nA wand can be made more efficient at this by infusing it with Refined Mana.",
+        name = "$reac_mana_charge",
+        description = "$reac_desc_mana_charge",
         generate_notes = true,
         probability = 100, 
         func_probability = 1,
@@ -417,8 +417,8 @@ alchemical_recipes = {
     },
     {
         id = "flux_welding",
-        name = "Flux Welding",
-        description = "Arcane Flux can be used to weld spells together, this however is a very volatile process and results are variable.\nAlso note that the spell will be more expensive to cast based on what you weld to it.",
+        name = "$reac_flux_welding",
+        description = "$reac_desc_flux_welding",
         generate_notes = true,
         probability = 100, 
         func_probability = 100,

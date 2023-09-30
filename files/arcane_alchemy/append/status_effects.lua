@@ -1,7 +1,7 @@
 table.insert(status_effects, {
 	id="AA_HIT_SELF",
-	ui_name="Angry Limb",
-	ui_description="Stop hitting yourself",
+	ui_name="$status_aa_hit_self",
+	ui_description="$status_desc_aa_hit_self",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/hit_self/effect_hit_self.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/hit_self/hit_self.xml",
@@ -9,8 +9,8 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="AA_COLLAPSE",
-	ui_name="Collapsing",
-	ui_description="You are collapsing in on yourself",
+	ui_name="$status_aa_collapse",
+	ui_description="$status_desc_aa_collapse",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/dark_matter/effect_dark_matter.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/dark_matter/dark_matter.xml",
@@ -19,8 +19,8 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="aa_static_charge",
-	ui_name="Static charge",
-	ui_description="You are electrically charged",
+	ui_name="$status_aa_static_charge",
+	ui_description="$status_desc_aa_static_charge",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/static_charge/effect_charged.png",
 	protects_from_fire=false,
 	effect_entity="data/entities/misc/electricity.xml",
@@ -28,8 +28,8 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="AA_SINKING",
-	ui_name="Sinking",
-	ui_description="You are being grabbed",
+	ui_name="$status_aa_sinking",
+	ui_description="$status_desc_aa_sinking",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/hunger.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/sinking.xml",
@@ -37,8 +37,8 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="AA_REPULSION",
-	ui_name="Repulsion",
-	ui_description="A mysterious force struggling to be rid of you",
+	ui_name="$status_aa_repulsion",
+	ui_description="$status_desc_aa_repulsion",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/repultium/repulsive.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/repultium/repulsion.xml",
@@ -57,52 +57,52 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="AA_HUNGRY_VOMIT",
-	ui_name="Slime vomit",
-	ui_description="You feel it crawling back up",
+	ui_name="$status_aa_hungry_vomit",
+	ui_description="$status_desc_aa_hungry_vomit",
 	ui_icon="mods/Hydroxide/files/gfx/ui/crawl.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/vomitslime.xml",
 });
 table.insert(status_effects, {
-	id="LOVE_POTION",
-	ui_name="LOVE ME",
-	ui_description="PLEASE DONT GO",
+	id="AA_LOVE_POTION",
+	ui_name="$status_aa_love_potion",
+	ui_description="$status_desc_aa_love_potion",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/love/effect_LOVE.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/love/love.xml",
 });
 
 table.insert(status_effects, {
-	id="PATH",
-	ui_name="infinite wealth?",
-	ui_description="Nearby liquids,gasses,and other objects become rice",
+	id="AA_PATH",
+	ui_name="$status_aa_path",
+	ui_description="$status_desc_aa_path",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/meager_offering/effect_rice.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/meager_offering/path.xml",
 });
 
 table.insert(status_effects, {
-	id="ICEFIRE",
-	ui_name="Frozen inferno",
-	ui_description="Nearby fire burns into frozen vapour",
+	id="AA_ICEFIRE",
+	ui_name="$status_aa_icefire",
+	ui_description="$status_desc_aa_icefire",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/icy_inferno/effect_icefire.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/icy_inferno/icefire.xml",
 });
 
 table.insert(status_effects, {
-	id="GRAVITY",
-	ui_name="Gravitational anomaly",
-	ui_description="Nearby objects fly towards you",
+	id="AA_GRAVITY",
+	ui_name="$status_aa_gravity",
+	ui_description="$status_desc_aa_gravity",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/condensed_gravity/effect_gravity.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/condensed_gravity/gravity.xml",
 });
 
 table.insert(status_effects, {
-	id="CLONE",
-	ui_name="cloned",
-	ui_description="you are being cloned!",
+	id="AA_CLONE",
+	ui_name="$status_aa_clone",
+	ui_description="$status_desc_aa_clone",
 	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/cloned.xml",
@@ -133,18 +133,18 @@ table.insert(status_effects, {
 
 
 table.insert(status_effects, {
-	id="VOMIT_SPELLS",
-	ui_name="Food Poisoning",
-	ui_description="This was a terrible snack",
+	id="AA_VOMIT_SPELLS",
+	ui_name="$status_aa_vomit_spells",
+	ui_description="$status_desc_aa_vomit_spells",
 	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandoriumvomit.xml",
 	is_harmful=true,
 });
 
 table.insert(status_effects, {
-	id="VOMIT_SPELLS_UNSTABLE",
-	ui_name="Food Poisoning",
-	ui_description="This was a terrible meal",
+	id="AA_VOMIT_SPELLS_UNSTABLE",
+	ui_name="$status_aa_vomit_spells_unstable",
+	ui_description="$status_desc_aa_vomit_spells_unstable",
 	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstablepandoriumvomit.xml",
 	is_harmful=true,

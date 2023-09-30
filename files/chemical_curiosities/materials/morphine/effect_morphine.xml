@@ -3,7 +3,7 @@
 	
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="MORPHINE"
+		custom_effect_id="CC_MORPHINE"
 		frames="99999"
 		>
 	</GameEffectComponent>
@@ -64,6 +64,6 @@
     script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_end.lua"
 	execute_every_n_frame="-1"
     execute_on_removed="1"
-    ></LuaComponent><!--hp = trueHealth-=>
+    ></LuaComponent><!--hp = trueHealth-->
 	
 </Entity>
