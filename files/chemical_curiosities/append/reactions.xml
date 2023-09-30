@@ -718,10 +718,10 @@
 	><!--Methane burns into water and Co2-->
 	</Reaction>
 		
-	<Reaction probability="10"
+	<Reaction probability="5"
 		input_cell1="steam" 		input_cell2="cc_methane"
 		output_cell1="water"	output_cell2="carbon_dioxide"
-	><!--This should actually create Hydrogen and carbon monoxide but lazy-->
+	><!--This should actually create Hydrogen and carbon monoxide but lazy--> <!--Wouldn't carbon monoxide function basically like methane but more deadly? -UserK -->
 	</Reaction>
 
 		
@@ -759,6 +759,20 @@
 	<Reaction probability="23"
 	input_cell1="snow_static" 	input_cell2="meat"
 	output_cell1="slush"		output_cell2="cc_frozen_meat"
+	blob_radius2="3"
+	>
+	</Reaction>
+
+	<Reaction probability="23"
+	input_cell1="cc_frozen_meat" 	input_cell2="meat"
+	output_cell1="cc_frozen_meat"		output_cell2="cc_frozen_meat"
+	blob_radius2="3"
+	>
+	</Reaction>
+
+	<Reaction probability="23"
+	input_cell1="cc_frozen_meat" 	input_cell2="rotten_meat"
+	output_cell1="cc_frozen_meat"		output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
