@@ -5,7 +5,7 @@ local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
 
 if(not EntityHasTag(owner, "player_unit"))then
-	return
+    return
 end
 
 local count = GetStainPercentage(owner, "CC_INGESTION_METHANE")
@@ -17,5 +17,5 @@ count = count * multiplier
 GameSetPostFxParameter("grayscale", 0, 0, 0, count)
 
 if (count <= 0) then
-	EntityKill(entity_id)
+    EntityKill(entity_id)
 end
