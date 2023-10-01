@@ -1,9 +1,9 @@
 dofile_once("data/scripts/lib/utilities.lua")
 
 table.insert( actions,{
-	id          = "SEA_OF_METHANE",
-	name 		= "Sea of Methane",
-	description = "Summons a large body of methane gas",
+	id          = "CC_SEA_OF_METHANE",
+	name 		= "$action_cc_sea_of_methane",
+	description = "$action_desc_cc_sea_of_methane",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_methane.png",
 	type 		= ACTION_TYPE_MATERIAL,
 	spawn_level                       = "0,4,5,6", 
@@ -18,9 +18,9 @@ table.insert( actions,{
 } );
 
 table.insert( actions,{
-	id			= "WISPY_FLAME",
-	name		= "Wispy Flame",
-	description	= "Call forth tongues of flame",
+	id			= "CC_WISPY_FLAME",
+	name		= "$action_cc_wispy_flame",
+	description	= "$action_desc_cc_wispy_flame",
 	sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/projectiles/wispy_flame.png",
 	related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/projectiles/wispy_flame.xml"},
 	type		= ACTION_TYPE_PROJECTILE,
@@ -35,9 +35,9 @@ table.insert( actions,{
 });
 
 table.insert( actions, {
-	id			= "LOCAL_SHIFT",
-	name		= "Local Shift",
-	description	= "Change the world. But not everywhere...",
+	id			= "CC_LOCAL_SHIFT",
+	name		= "$action_cc_local_shift",
+	description	= "$action_desc_cc_local_shift",
 	sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.png",
 	related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.xml"},
 	type 		= ACTION_TYPE_PROJECTILE,
@@ -54,9 +54,9 @@ table.insert( actions, {
 });
 
 table.insert( actions,  {
-        id                  = "METAL_SEASONING",
-        name                = "Chunk of Metal",
-        description         = "Summon a pile of metal powder",
+        id                  = "CC_METAL_SEASONING",
+        name                = "$action_cc_metal_seasoning",
+        description         = "$action_desc_cc_metal_seasoning",
         sprite              = "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.png",
         related_projectiles = { "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.xml" },
         type                = ACTION_TYPE_MATERIAL,
@@ -73,9 +73,9 @@ table.insert( actions,  {
 });
 
 table.insert( actions, {
-		id          = "CLOUD_CRYSTAL",
-		name 		= "Crystal Cloud",
-		description = "Creates a rain of liquid crystals",
+		id          = "CC_CLOUD_CRYSTAL",
+		name 		= "$action_cc_cloud_crystal",
+		description = "$action_desc_cc_cloud_crystal",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_crystal.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
 		related_projectiles	= {"mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_crystal.xml"},
@@ -92,9 +92,9 @@ table.insert( actions, {
 });
 
 table.insert( actions, {
-		id          = "CLOUD_SPARKLING",
-		name 		= "Sparkling Cloud",
-		description = "Rain hell on all of them.",
+		id          = "CC_CLOUD_SPARKLING",
+		name 		= "$action_cc_cloud_sparkling",
+		description = "$action_desc_cc_cloud_sparkling",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_sparkling.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
 		related_projectiles	= {"mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_sparkling.xml"},
@@ -111,9 +111,9 @@ table.insert( actions, {
 });
 
 table.insert( actions, {
-		id          = "GREASE_BLAST",
-		name 		= "Explosion of Grease",
-		description = "A greasy explosion!",
+		id          = "CC_GREASE_BLAST",
+		name 		= "$action_cc_grease_blast",
+		description = "$action_desc_cc_grease_blast",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/poison_blast_unidentified.png",
 		related_projectiles	= {"mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.xml"},
@@ -135,7 +135,7 @@ table.insert( actions, {
 
 
 table.insert( actions, {
-		id          = "RADIOACTIVE_SHOT",
+		id          = "CC_RADIOACTIVE_SHOT",
 		name 		= "Radioactive shot",
 		description = "Makes a projectile emit radioactive sparks",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/projectile_modifiers/radioactive_shot.png",
@@ -154,9 +154,9 @@ table.insert( actions, {
 });
 
 table.insert( actions,     {
-        id                  = "URANIUMBALL",
-        name                = "Chunk of Uranium",
-        description         = "A spherical 6.2-kilogram (14 lb) subcritical mass of uranium-235",
+        id                  = "CC_URANIUMBALL",
+        name                = "$action_cc_radioactive_shot",
+        description         = "$action_desc_cc_radioactive_shot",
         sprite              = "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/uraniumball.png",
         related_projectiles = { "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/uraniumball.xml" },
         type                = ACTION_TYPE_MATERIAL,
@@ -170,9 +170,9 @@ table.insert( actions,     {
 });
 
 table.insert( actions,	{
-		id          = "ANTIMATTER_FIELD_ENEMY",
-		name 		= "Personal Antimatter Field",
-		description = "Causes enemies to tear the world apart around them",
+		id          = "CC_ANTIMATTER_FIELD_ENEMY",
+		name 		= "$action_cc_antimatter_field_enemy",
+		description = "$action_desc_cc_antimatter_field_enemy",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/antimatter_field/antimatter_field_enemy.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/electric_charge_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/chemical_curiosities/spells/antimatter_field/hitfx_antimatterfield.xml" },
@@ -191,9 +191,9 @@ table.insert( actions,	{
 
 
 table.insert( actions,{
-	id          = "SEA_OF_LIGHTNING",
-	name 		= "Sea of Lightning Powder",
-	description = "Summons a large body of highly conductive powder",
+	id          = "CC_SEA_OF_LIGHTNING",
+	name 		= "$action_cc_sea_of_lightning",
+	description = "$action_desc_cc_sea_of_lightning",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_lightning.png",
 	type 		= ACTION_TYPE_MATERIAL,
 	spawn_level                       = "0,4,5,6", 
@@ -208,9 +208,9 @@ table.insert( actions,{
 });
 
 table.insert( actions, {
-	id			= "GUNPOWDER_BUFF",
-	name		= "Gunpowder Enhancer",
-	description	= "Makes nearby gunpowder more dangerous",
+	id			= "CC_GUNPOWDER_BUFF",
+	name		= "$action_cc_gunpowder_buff",
+	description	= "$action_desc_cc_gunpowder_buff",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_buff.png",
 	related_extra_entities = { "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_buff.xml", "data/entities/particles/tinyspark_red.xml" },
 	type		= ACTION_TYPE_MODIFIER,
@@ -245,9 +245,9 @@ table.insert( actions, {
 
 
 table.insert( actions, {
-		id          = "FIRE_TO_GREASE",
-		name 		= "Fire Enhancer",
-		description = "Causes nearby fires to erupt violently",
+		id          = "CC_FIRE_TO_GREASE",
+		name 		= "$action_cc_fire_to_grease",
+		description = "$action_desc_cc_fire_to_grease",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/fire_to_grease.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/fire_to_grease.xml", "data/entities/particles/tinyspark_red.xml" },
@@ -266,9 +266,9 @@ table.insert( actions, {
 	
 	
 table.insert( actions, {
-		id          = "CLOUD_GUNPOWDER",
-		name 		= "Gunpowder Cloud",
-		description = ".",
+		id          = "CC_CLOUD_GUNPOWDER",
+		name 		= "$action_cc_gunpowder_cloud",
+		description = "$action_desc_cc_gunpowder_cloud",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_gunpowder.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
 		related_projectiles	= {"mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_gunpowder.xml"},

@@ -1,15 +1,8 @@
 <Materials>
-<!-- making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now -->
-	
-<!-- TODO make unstable metamorphine more procedural if possible -->
-	
-
-
-
 
   <!--
   <CellData
-	name="AA_BLOOM_MAGIC"
+	name="aa_bloomium"
 	ui_name="Bloomium"
 	tags="[corrodible],[burnable],[meltable_to_lava],[alchemy]"
 	burnable="0"
@@ -39,7 +32,7 @@
 	
    <CellData
     name="aa_hitself"
-    ui_name="Stop Hitting Yourself"
+    ui_name="$mat_aa_hitself"
     tags="[liquid],[magic_liquid],[corrodible],[freezable],[water],[impure]"
     burnable="0"
     density="4"
@@ -72,7 +65,7 @@
   
     <CellData
     name="aa_darkmatter"
-    ui_name="Dark Matter"
+    ui_name="$mat_aa_darkmatter"
     tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
     burnable="0"
     density="4"
@@ -121,7 +114,7 @@
   
   <CellData
     name="aa_static_charge"
-    ui_name="Static Charge"
+    ui_name="$mat_aa_static_charge"
       tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
     burnable="0"
     density="4"
@@ -169,7 +162,7 @@
   
   <CellData 
     name="aa_repultium"
-    ui_name="Repultium"
+    ui_name="$mat_aa_repultium"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid]"
     burnable="0"  
     density="5"  
@@ -205,7 +198,7 @@
   
   <CellData 
     name="aa_hungry_slime"
-    ui_name="Hungry Slime"
+    ui_name="$mat_aa_hungry_slime"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
     burnable="0"  
     density="5"  
@@ -244,7 +237,7 @@
   
    <CellData 
     name="aa_creeping_slime"
-    ui_name="Creeping Slime"
+    ui_name="$mat_aa_creeping_slime"
     tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid]"
     burnable="0"  
     density="5"  
@@ -276,7 +269,7 @@
 
   <CellData 
     name="aa_hungry_slime_growing"
-    ui_name="Hungry Slime"
+    ui_name="$mat_aa_hungry_slime_growing"
     tags="[burnable],[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
     burnable="1"  
     density="4"  
@@ -312,7 +305,7 @@
   
     <CellData
 	name="aa_ash"
-	ui_name="Ash"
+	ui_name="$mat_aa_ash"
   	tags="[sand_ground],[corrodible],[meltable_to_lava],[alchemy]"
 	burnable="0"
 	density="6"
@@ -338,7 +331,7 @@
   
   <CellData
 	name="aa_soot"
-	ui_name="Soot"
+	ui_name="$mat_aa_soot"
   	tags="[gas]"
 	burnable="0"
 	density="1"
@@ -360,7 +353,7 @@
    
   <CellData
 	name="aa_potion_gas"
-	ui_name="Potion gas"
+	ui_name="$mat_aa_potion_gas"
   	tags="[gas]"
 	burnable="0"
 	density="1"
@@ -385,7 +378,7 @@
   
   <CellData
 	name="aa_solidified_slime"
-	ui_name="solidified slime"
+	ui_name="$mat_aa_solidified_slime"
 	tags="[static],[corrodible],[alchemy],[solid]"
 	burnable="0"
 	density="10"
@@ -411,7 +404,7 @@
 	
  <CellData
 	name="aa_base_potion"
-	ui_name="Base potion"
+	ui_name="$mat_aa_base_potion"
   	tags="[liquid],[magic_liquid],[water],[impure],"
 	burnable="0"
 	density="1"
@@ -452,7 +445,7 @@
   
   <CellData
 	name="aa_arborium"
-	ui_name="Arborium"
+	ui_name="$mat_aa_arborium"
   	tags="[liquid],[water],[impure],[magic_liquid]"
 	burnable="0"
 	density="3.9"
@@ -492,7 +485,7 @@
 
 	 <CellData
 	name="aa_catalyst"
-	ui_name="Catalyst"
+	ui_name="$mat_aa_catalyst"
   	tags="[liquid],[magic_liquid],[water],[impure]"
 	density="1.5"
 	cell_type="liquid"
@@ -557,7 +550,7 @@
   
     <CellData
 	name="aa_light_oil"
-	ui_name="Light Oil"
+	ui_name="$mat_aa_light_oil"
   	tags="[liquid],[burnable],[impure]"
 	burnable="1"
 	density="0.1"
@@ -594,7 +587,7 @@
   
     <CellData
 	name="aa_heavy_oil"
-	ui_name="Heavy Oil"
+	ui_name="$mat_aa_heavy_oil"
   	tags="[liquid],[burnable],[impure]"
 	burnable="1"
 	density="2"
@@ -630,7 +623,7 @@
 
    <CellData 
 	name="aa_magic_plastic"
-	ui_name="Magical plastic"
+	ui_name="$mat_aa_magic_plastic"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[slime]"
 	burnable="0"  
 	density="5"  
@@ -662,7 +655,7 @@
   
     <CellData 
 	name="aa_love"
-	ui_name="Love"
+	ui_name="$mat_aa_love"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[burnable],[magic_liquid],[impure]"
 	burnable="1"  
 	density="5"  
@@ -680,7 +673,7 @@
 	solid_friction="0.1"
 	on_fire="0"  
 	gfx_glow="65"
-	status_effects="LOVE_POTION"
+	status_effects="AA_LOVE_POTION"
 	requires_oxygen="1"  
 	temperature_of_fire="10" 
 	audio_physics_material_event="slime"
@@ -711,7 +704,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="LOVE_POTION" amount="0.15" />
+			<StatusEffect type="AA_LOVE_POTION" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- love heart potion, kinda cool -->
@@ -719,7 +712,7 @@
   
   <CellData 
 	name="aa_meager_offering"
-	ui_name="A Meager Offering"
+	ui_name="$mat_aa_meager_offering"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
 	density="5"  
@@ -733,7 +726,7 @@
 	solid_friction="1.0"
 	on_fire="0"  
 	gfx_glow="120"
-	status_effects="PATH"
+	status_effects="AA_PATH"
 	requires_oxygen="0"  
 	temperature_of_fire="10" 
 	audio_physics_material_event="slime"
@@ -764,7 +757,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="PATH" amount="0.15" />
+			<StatusEffect type="AA_PATH" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- A meager offering -->
@@ -772,7 +765,7 @@
   
      <CellData
 	name="aa_rice"
-	ui_name="Rice"
+	ui_name="$mat_aa_rice"
   	tags="[sand_ground],[corrodible],[meltable_to_lava_fast],[alchemy],[food]"
 	burnable="0"
 	density="6"
@@ -820,7 +813,7 @@
   
   <CellData 
 	name="aa_icy_inferno"
-	ui_name="Icy inferno"
+	ui_name="$mat_aa_icy_inferno"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
 	density="5"  
@@ -835,7 +828,7 @@
 	solid_friction="1.0"
 	on_fire="0"  
 	gfx_glow="200"
-	status_effects="ICEFIRE"
+	status_effects="AA_ICEFIRE"
 	requires_oxygen="0"  
 	temperature_of_fire="10" 
 	audio_physics_material_event="slime"
@@ -865,7 +858,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="ICEFIRE" amount="0.15" />
+			<StatusEffect type="AA_ICEFIRE" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Icy Inferno turns fire to freezing vapor in vicinity of player -->
@@ -873,8 +866,8 @@
   
   <CellData 
 	name="aa_pandorium"
-	ui_name="Pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+	ui_name="$mat_aa_pandorium"
+  	tags="[liquid],[magic_liquid],[water],[impure]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -911,7 +904,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="VOMIT_SPELLS" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Pandorium -->
@@ -919,8 +912,8 @@
   
    <CellData 
 	name="aa_unstable_pandorium"
-	ui_name="Unstable Pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+	ui_name="$mat_aa_unstable_pandorium"
+  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -957,7 +950,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="VOMIT_SPELLS_UNSTABLE" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS_UNSTABLE" amount="0.10" />
 			</Ingestion>
     </StatusEffects>
 	
@@ -965,8 +958,8 @@
   
    <CellData 
 	name="aa_pop_rocks"
-	ui_name="Pop Rocks"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+	ui_name="$mat_aa_pop_rocks"
+  	tags="[liquid],[magic_liquid],[water],[impure]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -1006,7 +999,7 @@
 
     <CellData 
 	name="aa_condensed_gravity"
-	ui_name="Condensed Gravity"
+	ui_name="$mat_aa_condensed_gravity"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
 	density="5"  
@@ -1021,7 +1014,7 @@
 	solid_friction="1.0"
 	on_fire="0"  
 	gfx_glow="200"
-	status_effects="GRAVITY"
+	status_effects="AA_GRAVITY"
 	requires_oxygen="0"  
 	temperature_of_fire="10" 
 	audio_physics_material_event="slime"
@@ -1051,14 +1044,14 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="GRAVITY" amount="0.15" />
+			<StatusEffect type="AA_GRAVITY" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Condensed Gravity -->
   
   <CellData 
 	name="aa_cloning_solution"
-	ui_name="Cloning Solution"
+	ui_name="$mat_aa_cloning_solution"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
 	density="0.01"  
@@ -1074,7 +1067,7 @@
 	on_fire="0"  
 	gfx_glow="200"
 	liquid_sprite_stain_shaken_drop_chance="35"
-	status_effects="CLONE"
+	status_effects="AA_CLONE"
 	requires_oxygen="0"  
 	temperature_of_fire="10" 
 	audio_physics_material_event="slime"
@@ -1105,7 +1098,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="CLONE" amount="0.15" />
+			<StatusEffect type="AA_CLONE" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Cloning Solution -->
@@ -1154,7 +1147,7 @@
   
   <CellData
 	name="aa_compost"
-	ui_name="Compost"
+	ui_name="$mat_aa_compost"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid]"
 	burnable="0"
 	density="1.1"
@@ -1183,7 +1176,7 @@
   
 <CellData
     name="aa_strange_matter"
-    ui_name="Strange matter"
+    ui_name="$mat_aa_strange_matter"
       tags="[magic_liquid],[alchemy],[liquid]"
     burnable="1"
     density="1"

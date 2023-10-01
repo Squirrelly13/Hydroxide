@@ -35,7 +35,7 @@ function item_pickup( entity_item, entity_who_picked, name )
 								if(action_component ~= nil)then
 									local action_id = ComponentGetValue2(action_component, "action_id")
 								  --  print(action_id)
-									if(action_id == "ALCHEMY_NERF_DARTS")then
+									if(action_id == "AA_ALCHEMY_NERF_DARTS")then
 										local item_component = EntityGetComponentIncludingDisabled( v, "ItemComponent")[1];
 										
 										if(item_component ~= nil)then

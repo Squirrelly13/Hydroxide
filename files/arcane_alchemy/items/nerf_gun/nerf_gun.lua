@@ -27,20 +27,6 @@ if(nerf_secret_value > 30)then
                 end
             end
         end
-        --[[
-        sprites = EntityGetFirstComponentIncludingDisabled(wand, "SpriteComponent")
-        if(sprites ~= nil)then
-            for k, sprite in pairs(sprites)do
-                --GamePrint("eeeee")
-                sprite = ComponentGetValue2(sprite, "image_file")
-                if(sprite == "data/items_gfx/broken_wand.png")then
-                    EntityKill(wand)
-                    EntityLoad("mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_gun.xml", x, y)
-                    GlobalsSetValue("nerf_gun_secret", tostring(0))
-                end
-            end
-        end
-        ]]
     end
     EntityKill(entity_id)
 end

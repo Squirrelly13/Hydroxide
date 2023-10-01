@@ -1,5 +1,6 @@
+<!-- CELLFACTORY_CELLDATA_MAX_COUNT is the limit of Materials that can be registered. We want to increase it so prevent crashes. -->
 <MagicNumbers 
-  VIRTUAL_RESOLUTION_X="427" 
-  VIRTUAL_RESOLUTION_Y="242" 
+  _DEBUG_DONT_SAVE_MAGIC_NUMBERS="1"
+  CELLFACTORY_CELLDATA_MAX_COUNT = "4096"
   > <!-- some magic number defaults could be overridden here -->
 </MagicNumbers>

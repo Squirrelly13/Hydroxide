@@ -29,7 +29,7 @@
 	
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="NULLIUM"
+		custom_effect_id="CC_NULLIUM"
 		frames="150"
 	>
 	</GameEffectComponent>

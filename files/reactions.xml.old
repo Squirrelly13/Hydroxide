@@ -1244,34 +1244,34 @@ b<Materials>
 	
 	<Reaction probability="100"
   	input_cell1="aa_base_potion" input_cell2="vomit" 
-  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
+  	output_cell1="aa_bloomium"	output_cell2="aa_bloomium"
 	blob_radius1="5"		blob_radius2="5"	
 	>
 	</Reaction><!-- bloom potion recipe.  -->
 	
 	<Reaction probability="100"
 	input_cell1="cc_alchemy_powder"				input_cell2="blood_fungi"
-	output_cell1="AA_BLOOM_MAGIC"		output_cell2="smoke"
+	output_cell1="aa_bloomium"		output_cell2="smoke"
 	>
 	</Reaction><!-- alchemy powder potion recipe -->
 	
 	<Reaction probability="100"
-	input_cell1="AA_BLOOM_MAGIC"	input_cell2="cc_alchemy_powder"
-	output_cell1="AA_BLOOM_MAGIC"	output_cell2="AA_BLOOM_MAGIC"
+	input_cell1="aa_bloomium"	input_cell2="cc_alchemy_powder"
+	output_cell1="aa_bloomium"	output_cell2="aa_bloomium"
 	blob_radius2="2"
 	>
 	</Reaction><!-- part of the alchemy powder recipe -->
 	
 	<Reaction probability="75"
-  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[solid]"
-  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="aa_bloom_solid" 
+  	input_cell1="aa_bloomium" 	input_cell2="[solid]"
+  	output_cell1="aa_bloomium"	output_cell2="aa_bloom_solid" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction><!-- bloom potion blooms solids -->
 	
 	<Reaction probability="75"
-  	input_cell1="AA_BLOOM_MAGIC" 	input_cell2="[static]"
-  	output_cell1="AA_BLOOM_MAGIC"	output_cell2="aa_bloom_solid" 
+  	input_cell1="aa_bloomium" 	input_cell2="[static]"
+  	output_cell1="aa_bloomium"	output_cell2="aa_bloom_solid" 
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction><!-- Bloom potion blooms statics -->
@@ -1337,13 +1337,13 @@ b<Materials>
 	
     <Reaction probability="3"
 	input_cell1="cc_methane"	input_cell2="[fire]"
-	output_cell1="methaneRain"		output_cell2="[fire]"
+	output_cell1="cc_methane_rain"		output_cell2="[fire]"
 	blob_radius1="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="100" 
-	input_cell1="methaneRain"	input_cell2="[static]"
+	input_cell1="cc_methane_rain"	input_cell2="[static]"
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>

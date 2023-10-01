@@ -1,7 +1,7 @@
 <Materials>
     <CellData
         name="aa_bloom_solid"
-        ui_name="Bloomium Growth"
+        ui_name="$mat_aa_bloom_solid"
         tags="[plant],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -31,7 +31,7 @@
 
     <CellData
         name="aa_bloom_roof"
-        ui_name="Bloomium Growth"
+        ui_name="$mat_aa_bloom_roof"
         tags="[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -61,7 +61,7 @@
     
     <CellData
         name="aa_bloom_roof_inert"
-        ui_name="Bloomium Growth"
+        ui_name="$mat_aa_bloom_roof_inert"
         tags="[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -91,7 +91,7 @@
 
     <CellData
         name="aa_bloom_roof_dead"
-        ui_name="Bloomium Growth"
+        ui_name="$mat_aa_bloom_roof_dead"
         tags="[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -121,7 +121,7 @@
     
     <CellData
         name="aa_bloom_roof_plant"
-        ui_name="Bloomium Vine"
+        ui_name="$mat_aa_bloom_roof_plant"
         tags="[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -154,7 +154,7 @@
     
     <CellData
         name="aa_bloom_roof_plant_dead"
-        ui_name="Bloomium Vine (Dead)"
+        ui_name="$mat_aa_bloom_roof_plant_dead"
         tags="[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom]"
         burnable="1"
         density="10"
@@ -187,7 +187,7 @@
 
     <CellData
         name="aa_bloomium"
-        ui_name="Bloomium"
+        ui_name="$mat_aa_bloomium"
         tags="[corrodible],[magic_liquid],[burnable],[meltable_to_lava],[alchemy]"
         burnable="0"
         density="1"
@@ -209,7 +209,7 @@
 
         <CellData
         name="aa_bloomium_gas"
-        ui_name="Bloomium Spores"
+        ui_name="$mat_aa_bloomium_gas"
         tags="[gas]"
         burnable="0"
         density="1"

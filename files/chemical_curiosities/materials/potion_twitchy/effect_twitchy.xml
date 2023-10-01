@@ -4,7 +4,7 @@
     </InheritTransformComponent>	
 
       <GameEffectComponent 
-        effect="TWITCHY"
+        effect="CC_TWITCHY"
         frames="12000"
     >
 	</GameEffectComponent>

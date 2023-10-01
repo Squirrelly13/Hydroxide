@@ -697,7 +697,7 @@
 	
 	<Reaction probability="1"
 	input_cell1="cc_methane"	input_cell2="[fire]"
-	output_cell1="water"		output_cell2="carbon_dioxide"
+	output_cell1="water"		output_cell2="cc_carbon_dioxide"
 	><!--Methane burns into water and Co2-->
 	<ExplosionConfig 
 
@@ -714,13 +714,13 @@
 	
 	<Reaction probability="10"
 		input_cell1="[fire]" 		input_cell2="cc_methane"
-		output_cell1="water"	output_cell2="carbon_dioxide"
+		output_cell1="water"	output_cell2="cc_carbon_dioxide"
 	><!--Methane burns into water and Co2-->
 	</Reaction>
 		
 	<Reaction probability="5"
 		input_cell1="steam" 		input_cell2="cc_methane"
-		output_cell1="water"	output_cell2="carbon_dioxide"
+		output_cell1="water"	output_cell2="cc_carbon_dioxide"
 	><!--This should actually create Hydrogen and carbon monoxide but lazy--> <!--Wouldn't carbon monoxide function basically like methane but more deadly? (and go down) -UserK -->
 	</Reaction>
 		
@@ -734,13 +734,13 @@
 	<!--
     <Reaction probability="3"
 	input_cell1="cc_methane"	input_cell2="[fire]"
-	output_cell1="methaneRain"		output_cell2="[fire]"
+	output_cell1="cc_methane_rain"		output_cell2="[fire]"
 	blob_radius1="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="100" 
-	input_cell1="methaneRain"	input_cell2="[static]"
+	input_cell1="cc_methane_rain"	input_cell2="[static]"
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>

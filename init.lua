@@ -33,7 +33,7 @@ end
 ]]--
 print("////////////// Commencing Hydroxide init //////////////")
 
-dofile("mods/Hydroxide/lib/add_translation.lua")
+dofile("mods/Hydroxide/lib/translations.lua")
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -66,6 +66,8 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 end
 
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
+
 
 --   	[Chemical Curiosities]
 
@@ -91,6 +93,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	-- init methane shader
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
 
+	-- init warp shader
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua")
+
 	-- init electrolysis system
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
 	
@@ -103,8 +108,6 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
 	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
-
-	dofile_once("files/chemical_curiosities/electrolysis/electrolysis.xml") --electrolysis my beloved (allows us to control electricity entities)
 
 end
 
@@ -128,7 +131,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	--[[
 	local player_x, player_y = EntityGetTransform( player_entity )
 	EntityLoad("mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml", player_x, player_y)
-	]]
+	]]=
 	
 end
 --  Items
@@ -324,21 +327,23 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
--- why this no work??
+-- this do work now :)
+--[[
 register_translation("item_can_with_material", "Can of $0")
 register_translation("item_can_with_material_description", "A Can containing $0")
 
 register_translation("item_vial_with_material", "Vial of $0")
 register_translation("item_vial_with_material_description", "A glass vial containing $0")
+]]
+
+register_localizations("mods/Hydroxide/translations.csv", 2)
 
 
 
 
+-- Magic numbers, using this to increase the max materials the game can handle.
+ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" )
 
-
-
---ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" ) -- Will override some magic numbers using the specified file
---no idea what magic numbers are, but this does somethin to em
 
 
 --ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells ( deprecated )
