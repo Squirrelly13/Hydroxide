@@ -51,12 +51,6 @@ cc_alchemist_potions = {
 		default_disabled = true,
 	},
 	{
-		name = "Unstable Metamorphine",
-		material = "cc_unstable_metamorphine",
-		cost = 1500,
-		default_disabled = true,
-	},
-	{
 		name = "Agitine",
 		material = "cc_agitine",
 		cost = 700,
@@ -67,13 +61,8 @@ cc_alchemist_potions = {
 		cost = 450,
 	},
 	{
-		name = "Metastasizium",
+		name = "$mat_cc_metastasizium",
 		material = "cc_metastasizium",
-		cost = 600,
-	},
-	{
-		name = "Nullium",
-		material = "cc_nullium",
 		cost = 600,
 	},
 	{
@@ -85,16 +74,6 @@ cc_alchemist_potions = {
 		name = "Molten Solid Crystal",
 		material = "Liquid Crystal",
 		cost = 400,
-	},
-	{
-		name = "Radioactive Waste",
-		material = "cc_radioactive_waste",
-		cost = 950,
-	},
-	{
-		name = "Morphine",
-		material = "cc_morphine",
-		cost = 300,
 	},
 	{
 		name = "Anti-Matter",
