@@ -128,11 +128,15 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 
 	-- debugging stuffs from eba
-	--[[
 	local player_x, player_y = EntityGetTransform( player_entity )
-	EntityLoad("mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml", player_x, player_y)
-	]]=
-	
+	EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
+
+	EntityAddComponent2(player_entity, "LuaComponent", {
+		script_source_file = "mods/Hydroxide/files/mystical_mixtures/journal/player_journal.lua",
+		execute_every_n_frame = 1,
+		execute_on_added = true,
+	})
+
 end
 --  Items
 
