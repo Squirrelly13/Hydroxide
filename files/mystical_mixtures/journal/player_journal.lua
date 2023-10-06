@@ -12,7 +12,7 @@ SetRandomSeed(x, y + GameGetFrameNum())
 last_chunk_id = last_chunk_id or 0
 local chunk_id = chunk_x + chunk_y * 10000
 
-local discovery_chance = 100
+local discovery_chance = 8
 
 local is_entry_unlocked = function(entry)
     local has_custom_flag = entry.custom_unlock_flag ~= nil
