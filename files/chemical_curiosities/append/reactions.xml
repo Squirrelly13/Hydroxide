@@ -80,16 +80,16 @@
 
 
 	<Reaction probability="200"
-	input_cell1="CC_antimatter_liquid"			input_cell2="cc_antimatter_powder"
-	output_cell1="CC_antimatter_liquid"			output_cell2="CC_antimatter_liquid"
+	input_cell1="cc_antimatter_liquid"			input_cell2="cc_antimatter_powder"
+	output_cell1="cc_antimatter_liquid"			output_cell2="cc_antimatter_liquid"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
 	<Reaction probability="200"
-	input_cell1="CC_antimatter_gas"				input_cell2="cc_antimatter_powder"
-	output_cell1="CC_antimatter_gas"			output_cell2="CC_antimatter_gas"
+	input_cell1="cc_antimatter_gas"				input_cell2="cc_antimatter_powder"
+	output_cell1="cc_antimatter_gas"			output_cell2="cc_antimatter_gas"
 	blob_radius2="6"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
@@ -331,8 +331,8 @@
 	</Reaction>
 	
 	<Reaction probability="5"
-	input_cell1="CC_crystal_box2d"		input_cell2="air"
-	output_cell1="CC_crystal_box2d"	output_cell2="air"
+	input_cell1="cc_crystal_box2d"		input_cell2="air"
+	output_cell1="cc_crystal_box2d"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 	>
 	</Reaction>

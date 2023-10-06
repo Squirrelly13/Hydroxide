@@ -111,6 +111,9 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 
 end
 
+
+ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
+
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
@@ -130,6 +133,8 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	-- debugging stuffs from eba
 	local player_x, player_y = EntityGetTransform( player_entity )
 	EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
+	-- debugging stuff end
+
 
 	EntityAddComponent2(player_entity, "LuaComponent", {
 		script_source_file = "mods/Hydroxide/files/mystical_mixtures/journal/player_journal.lua",
