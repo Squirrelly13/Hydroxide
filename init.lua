@@ -132,7 +132,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 	-- debugging stuffs from eba
 	local player_x, player_y = EntityGetTransform( player_entity )
-	EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
+	--EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
 	-- debugging stuff end
 
 
