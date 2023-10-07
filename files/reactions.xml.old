@@ -349,8 +349,8 @@ b<Materials>
 	</Reaction>
 	
 	<Reaction probability="5"
-	input_cell1="CC_crystal_box2d"		input_cell2="air"
-	output_cell1="CC_crystal_box2d"	output_cell2="air"
+	input_cell1="cc_crystal_box2d"		input_cell2="air"
+	output_cell1="cc_crystal_box2d"	output_cell2="air"
 	entity="mods/Hydroxide/files/entities/misc/crystal_explode.xml"
 	>
 	</Reaction>

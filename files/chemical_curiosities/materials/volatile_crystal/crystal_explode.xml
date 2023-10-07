@@ -22,7 +22,7 @@
 		is_circle="1"
 		convert_same_material="0"
 		steps_per_frame="20"
-		from_material="CC_crystal_box2d"
+		from_material="cc_crystal_box2d"
 		to_material="cc_dormant_crystal_molten"
 		kill_when_finished="0"
 		>
