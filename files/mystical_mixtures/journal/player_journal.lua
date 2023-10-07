@@ -1,6 +1,12 @@
 dofile("mods/Hydroxide/files/mystical_mixtures/journal/entries.lua")
 
-local player = GetUpdatedEntityID()
+local journal = GetUpdatedEntityID()
+
+local player = EntityGetRootEntity(journal)
+
+if(player == journal)then
+    return
+end
 
 local x, y = EntityGetTransform(player)
 
@@ -51,7 +57,7 @@ if(chunk_id ~= last_chunk_id)then
     local has_visited_chunk = GameHasFlagRun("mm_visited_chunk_" .. chunk_id)
 
     if(not has_visited_chunk)then
-        GamePrint("New chunk entered: " .. chunk_x .. ", " .. chunk_y)
+        --GamePrint("New chunk entered: " .. chunk_x .. ", " .. chunk_y)
         GameAddFlagRun("mm_visited_chunk_" .. chunk_id)
 
         if(Random(0, 100) <= discovery_chance)then

@@ -6,6 +6,7 @@ RegisterSpawnFunction( 0xff4d69d6, "spawn_table")
 RegisterSpawnFunction( 0xffcd94dd, "spawn_desk")
 RegisterSpawnFunction( 0xff8b2ea4, "spawn_bedroom")
 RegisterSpawnFunction( 0xff33338a, "spawn_warderobe")
+RegisterSpawnFunction( 0xff9875bf, "spawn_potion")
 
 local old_init = init
 
@@ -53,4 +54,12 @@ end
 
 function spawn_warderobe ( x, y )
     EntityLoad( "data/entities/props/furniture_wardrobe.xml", x - 5, y )
+end
+
+function spawn_potion ( x, y )
+    if(Random(0, 100) < 30)then
+        EntityLoad( "mods/Hydroxide/files/arcane_alchemy/items/vials/vial.xml", x, y - 3 )
+    else
+        EntityLoad( "data/entities/items/pickup/potion.xml", x + 3, y - 3 )
+    end
 end

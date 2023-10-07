@@ -94,6 +94,13 @@
         execute_every_n_frame="1"
     ></LuaComponent>
 
+	<LuaComponent
+		_tags="enabled_in_hand,enabled_in_inventory"
+		script_source_file="mods/Hydroxide/files/mystical_mixtures/journal/player_journal.lua"
+		execute_every_n_frame="1"
+		execute_on_added="1"
+	></LuaComponent>
+
 	<ParticleEmitterComponent
 		_tags="enabled_in_world"
 		emitted_material_name="spark_purple"
