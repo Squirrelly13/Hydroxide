@@ -1,0 +1,72 @@
+<Entity tags="tablet">
+	<BookComponent>
+	</BookComponent>
+
+	<UIInfoComponent
+		name="Placeholder"
+	></UIInfoComponent>
+
+	<VelocityComponent
+		_tags="enabled_in_world"
+	></VelocityComponent>
+	
+	<ItemComponent
+		_tags="enabled_in_world"
+		max_child_items="0"
+		is_pickable="1"
+		is_equipable_forced="0"
+		ui_sprite="data/items_gfx/scroll.png"
+		preferred_inventory="FULL"
+        stats_count_as_item_pick_up="0"
+		max_child_items="0"
+		item_name="Placeholder"
+		ui_description="Bottom Text"
+	></ItemComponent>
+  
+	<SpriteComponent
+		_enabled="1"
+        _tags="enabled_in_world"
+		offset_x="8"
+		offset_y="8"
+		image_file="data/items_gfx/scroll.png"
+	></SpriteComponent>
+
+	<HitboxComponent 
+		_tags="enabled_in_world"
+		aabb_min_x="-3" 
+		aabb_max_x="3" 
+		aabb_min_y="-5" 
+		aabb_max_y="0" >
+	</HitboxComponent>
+
+	<LightComponent 
+		_tags="enabled_in_world"
+		_enabled="1" 
+		r="255"
+		g="255"
+		b="255"
+		radius="64"
+		fade_out_time="0.75" >
+	</LightComponent>
+	
+	<AbilityComponent
+		ui_name="Placeholder"
+		throw_as_item="1"
+		><gun_config
+			deck_capacity="0"
+		></gun_config>
+	</AbilityComponent>
+
+	<VariableStorageComponent
+		_tags="enabled_in_world"
+		name="entry_id"
+		value_string="" >
+	</VariableStorageComponent>
+
+	<LuaComponent
+		_tags="enabled_in_world"
+		script_item_picked_up="mods/Hydroxide/files/mystical_mixtures/journal/lab_note_pick.lua" >
+	</LuaComponent>
+	
+
+</Entity>

@@ -1,3 +1,4 @@
 - Crafting system involving liquids and items
 - for example upgrading wands by throwing them on the ground and mixing liquids on top of them
 - this might get quite complex, I'll add a procedural system for it.
+- Journal system where people obtain information about alchemy through labnotes
