@@ -77,13 +77,13 @@ end
 
 if(is_warped)then
     ticks = ticks + 1
-    if(ticks < 30)then
+    if(ticks < 45)then
 
         warp = warp + 1
         if(is_player)then
-            GameSetPostFxParameter("warp_multiplier", warp, 0 ,0 ,0)
+            GameSetPostFxParameter("cc_warp_multiplier", warp, 0 ,0 ,0)
         end
-        if(ticks > 28)then
+        if(ticks > 43)then
             EntityApplyTransform(root, target_x, target_y)
         end
     else
@@ -91,10 +91,11 @@ if(is_warped)then
         warp = warp - 2
         if(warp <= 0)then
             warp = 0
+            ticks = 0
             done = true
         end
         if(is_player)then
-            GameSetPostFxParameter("warp_multiplier", warp, 0 ,0 ,0)
+            GameSetPostFxParameter("cc_warp_multiplier", warp, 0 ,0 ,0)
         end
         if(done)then
             GamePrint("You feel as if you are no longer in the same place..")

@@ -124,7 +124,7 @@
 	>
 	</Reaction>
 	<Reaction probability="90"
-	input_cell1="cc_antimatter_gas"	input_cell2="[mossDevour]"
+	input_cell1="cc_antimatter_gas"	input_cell2="[moss_devour]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
@@ -205,7 +205,7 @@
 	>
 	</Reaction>
 	<Reaction probability="50"
-	input_cell1="cc_antimatter_liquid"	input_cell2="[mossDevour]"
+	input_cell1="cc_antimatter_liquid"	input_cell2="[moss_devour]"
 	output_cell1="air"			output_cell2="air"
 	blob_radius2="3"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
@@ -947,7 +947,7 @@
 	</Reaction><!-- ground -->
 
 	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"	input_cell2="[mossDevour]"
+	input_cell1="cc_devouring_moss"	input_cell2="[moss_devour]"
 	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
