@@ -10,6 +10,11 @@ for k, action in ipairs(actions)do
 		end
 		local data = handler.hook(action.id, recursion_level, iteration)
 
+		if(data == nil)then
+			old_action(recursion_level, iteration)
+			return
+		end
+
 		if(data.extra_mana > 0)then
 			if(mana - data.extra_mana < 0)then
 				OnNotEnoughManaForAction()
