@@ -42,7 +42,7 @@ postfx.prepend([[
     color = mix( color, cc_warp_offset_texture_1_bg.rgb, min(0.5, cc_warp_effect_multiplier) );
     color = mix( color, cc_warp_offset_texture_2_bg.rgb, min(0.5, cc_warp_effect_multiplier) );
     
-]], [[	vec3 color_orig    = color;]])
+]], [[vec3 color_orig    = color;]])
 
 postfx.append([[
 	// oversaturate the screen based on warp_effect_multiplier
@@ -52,4 +52,4 @@ postfx.append([[
 	float cc_warp_luminance_ = dot(gl_FragColor.rgb, cc_warp_weights_);
 	gl_FragColor = mix(vec4(cc_warp_luminance_), gl_FragColor, vec4((cc_warp_effect_multiplier / 10.0) + 1.0));
     //gl_FragColor.rgb = gl_FragColor.rgb * max(cc_warp_effect_multiplier * 5.0, 1.0);
-]], [[	gl_FragColor.rgb  = color;]])
+]], [[gl_FragColor.rgb  = color;]])
