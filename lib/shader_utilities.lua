@@ -15,7 +15,7 @@ local postfx = {
 
         local index = string.find(post_final, insert_after_string)
         if index == nil then
-            error("could not find insert_after_string")
+            error("could not find \"" .. insert_after_string .. "\"")
         end
         
         local new_content = string.sub(post_final, 1, index + #insert_after_string) .. "\n" .. code .. "\n" .. string.sub(post_final, index + #insert_after_string + 1)
