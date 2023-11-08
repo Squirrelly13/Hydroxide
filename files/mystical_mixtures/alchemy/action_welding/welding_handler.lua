@@ -92,6 +92,7 @@ end
 handler.getWeldMap = function(entity_id)
 	local existing_enchantments = EntityGetVariable(entity_id, "welds", "string") or ""
 	
+	--print("Existing enchantments: " .. existing_enchantments)
 	
 	local list = Split(existing_enchantments, literalize(","))
 
@@ -159,6 +160,45 @@ local GetWand = function (shooter)
     return nil
 end
 
+local GetActiveCard = function (wand)
+    local wand_actions = EntityGetAllChildren(wand) or {}
+    for j = 1, #wand_actions do
+        local itemcomp = EntityGetFirstComponentIncludingDisabled(wand_actions[j], "ItemComponent")
+        if itemcomp then
+            if ComponentGetValue2(itemcomp, "mItemUid") == current_action.inventoryitem_id then
+                return wand_actions[j]
+            end
+        end
+    end
+    return nil
+end
+
+
+function table.dump(tbl, indentLevel)
+	if not indentLevel then indentLevel = 0 end
+	local toprint = "{\n"
+	indentLevel = indentLevel + 2 
+	for key, value in pairs(tbl) do
+	  toprint = toprint .. string.rep(" ", indentLevel)
+	  if (type(key) == "number") then
+		-- Do nothing, we don't want to print out the numeric key
+	  elseif (type(key) == "string") then
+		toprint = toprint  .. key .. " = "   
+	  end
+	  if (type(value) == "number") then
+		toprint = toprint .. value .. ",\n"
+	  elseif (type(value) == "string") then
+		toprint = toprint .. "\"" .. value .. "\",\n"
+	  elseif (type(value) == "table") then
+		toprint = toprint .. table.dump(value, indentLevel) .. ",\n" -- Use table.dump instead of tprint
+	  else
+		toprint = toprint .. "\"" .. tostring(value) .. "\",\n"
+	  end
+	end
+	toprint = toprint .. string.rep(" ", indentLevel-2) .. "}"
+	return toprint
+end
+
 handler.hook = function(action, recursion_level, iteration)
 
     local shooter_entity = GetUpdatedEntityID()
@@ -169,35 +209,23 @@ handler.hook = function(action, recursion_level, iteration)
         return
     end
 
-    local id = current_action.deck_index + 1
+    local card = GetActiveCard(wand_entity)
 
-    local wand_children = EntityGetAllChildren( wand_entity ) or {}
-    local spells = {}
+	--print("Welding: " .. tostring(card))
 
-    for _, child in ipairs(wand_children) do
-        if(EntityHasTag(child, "card_action"))then
-            local item_comp = EntityGetFirstComponentIncludingDisabled(child, "ItemComponent")
-            if(item_comp ~= nil and ComponentGetValue2(item_comp, "permanently_attached") == false)then
-                table.insert(spells, child)
-            end
-        end
-    end
-
-    if(#spells == 0)then
-        return
-    end
-
-    local card = spells[id]
-
-    if(card == nil)then
-        return
-    end
+	if(card == nil)then
+		return
+	end
 
     local weld_map = handler.getWeldMap(card)
 
-	if(#weld_map <= 0){
-		return
-	}
+	--print(table.dump(weld_map))
+
+	local map_empty = true
+	for k, v in pairs(weld_map)do
+		map_empty = false
+		break
+	end
 
 	local enhancement_old_add_projectile = add_projectile
 			
