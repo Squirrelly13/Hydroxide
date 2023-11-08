@@ -195,6 +195,10 @@ handler.hook = function(action, recursion_level, iteration)
 
     local weld_map = handler.getWeldMap(card)
 
+	if(#weld_map <= 0){
+		return
+	}
+
 	local enhancement_old_add_projectile = add_projectile
 			
 	local enhancement_old_add_projectile_trigger_timer = add_projectile_trigger_timer
