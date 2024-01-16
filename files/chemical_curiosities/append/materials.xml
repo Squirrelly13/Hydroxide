@@ -1607,7 +1607,7 @@
 		<Graphics
 			color="8cebaeba"
 			>
-		</Graphics><!-- Unfinished material that will warp people to a parallel world -eba -->
+		</Graphics><!-- ~~Un~~  -> finished!!! material that will warp people to a parallel world -eba -->
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP" amount="0.15"/>
@@ -1635,12 +1635,12 @@
 		</StatusEffects>
 	</CellData>
 
-	<CellData
+	<CellDataChild
 		_parent="vomit"
 		name="cc_vomit_fading"
 		wang_color="88E8BD5C"
 		lifetime="2000"
 		>
-	</CellData>
+	</CellDataChild>
 
 </Materials>
