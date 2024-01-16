@@ -553,6 +553,20 @@
 	>
 	</Reaction>
 	
+	<Reaction probability="1"
+	input_cell1="cc_metastasizium"	input_cell2="air"
+	output_cell1="air"				output_cell2="air"
+	>
+	</Reaction>
+	
+	<Reaction probability=".5"
+	input_cell1="cc_metastasizium"	input_cell2="air"
+	output_cell1="vomit"			output_cell2="air"
+	>
+	</Reaction>
+
+
+	
 	<!-- agitine -->
 	
 	<Reaction probability="30"

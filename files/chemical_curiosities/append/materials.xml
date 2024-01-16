@@ -755,7 +755,7 @@
 	name="cc_metastasizium"
 	ui_name="$mat_cc_metastasizium"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
-	density="1.9"
+	density="0.3"
 	cell_type="liquid"
 	wang_color="8a0a7a3f"
 	liquid_gravity="0.5"
@@ -1633,6 +1633,14 @@
 				<StatusEffect type="CC_WARP_SICKNESS" amount="30"/>
 			</Ingestion>
 		</StatusEffects>
+	</CellData>
+
+	<CellData
+		_parent="vomit"
+		name="cc_vomit_fading"
+		wang_color="88E8BD5C"
+		lifetime="2000"
+		>
 	</CellData>
 
 </Materials>
