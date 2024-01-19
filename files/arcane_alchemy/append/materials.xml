@@ -868,7 +868,7 @@
 	name="aa_pandorium"
 	ui_name="$mat_aa_pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure]"
-	burnable="0"
+	burnable="1"
 	density="1"
 	cell_type="liquid"
 	wang_color="8b342ca3"
@@ -878,6 +878,9 @@
 	gfx_glow="150"
 	on_fire="0"
 	requires_oxygen="0"
+	temperature_of_fire="95"
+	autoignition_temperature="10"
+	fire_hp="500"
 	liquid_stains="1"
 	
 	>

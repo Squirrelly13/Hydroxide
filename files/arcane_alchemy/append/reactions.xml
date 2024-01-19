@@ -95,9 +95,9 @@
 	
 	<!-- Pandoria -->
 	
-	<Reaction probability = "0.9"
-		input_cell1="aa_unstable_pandorium" input_cell2="air"
-		output_cell1="air" output_cell2="air"
+	<Reaction probability = "75"
+		input_cell1="aa_unstable_pandorium" input_cell2="[fire]"
+		output_cell1="fire" output_cell2="[fire]"
 	>
 	<ExplosionConfig
 		camera_shake="0" 
@@ -112,11 +112,11 @@
 		ray_energy="1"
 		>
 	</ExplosionConfig>
-	</Reaction><!-- unstable pandorium casts spells -->
+	</Reaction><!-- unstable pandorium casts spells    |   no it dont -UserK -->
 
-	<Reaction probability = "2"
-		input_cell1="aa_pandorium" input_cell2="air"
-		output_cell1="air" output_cell2="air"
+	<Reaction probability = "75"
+		input_cell1="aa_pandorium" input_cell2="[fire]"
+		output_cell1="fire" output_cell2="air"
 	>
 	<ExplosionConfig
 		camera_shake="0" 
