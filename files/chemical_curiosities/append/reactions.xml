@@ -577,7 +577,7 @@
 	<!-- agitine -->
 	
 	<Reaction probability="30"
-		input_cell1="cc_agitine"	input_cell2="[meat]"
+		input_cell1="cc_explodePlayer"	input_cell2="[meat]"
 		output_cell1="fire"			output_cell2="smoke"
 		>
 		<ExplosionConfig

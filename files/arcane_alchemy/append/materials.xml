@@ -1177,6 +1177,9 @@
   </CellData><!-- Compost, grows big plants its pretty coo -->
   
   
+<!-- todo: invent a material called "Growth" so I don't look like an idiot in the materials spreadsheet-->
+
+  
 <CellData
     name="aa_strange_matter"
     ui_name="$mat_aa_strange_matter"

@@ -671,8 +671,8 @@
   </CellData>
   
   <CellData
-	name="cc_agitine"
-	ui_name="$mat_cc_agitine"
+	name="cc_explodePlayer"
+	ui_name="$mat_cc_explodePlayer"
 	tags="[magic_liquid],[impure],[liquid],[corrodible]"
 	burnable="1"
 	density="3.1"

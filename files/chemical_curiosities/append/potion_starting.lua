@@ -36,7 +36,7 @@ magicpotions = {
 "cc_deceleratium",
 "cc_heftium",
 "cc_veilium",
-"cc_agitine",
+"cc_explodePlayer",
 }
 
 

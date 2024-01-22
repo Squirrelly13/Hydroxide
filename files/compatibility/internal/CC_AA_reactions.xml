@@ -131,7 +131,7 @@
 
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder_tnt"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -139,7 +139,7 @@
 	
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder_explosive"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -147,13 +147,13 @@
 	
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="30"
-		input_cell1="cc_agitine"	input_cell2="[meat]"
+		input_cell1="cc_explodePlayer"	input_cell2="[meat]"
 		output_cell1="fire"			output_cell2="smoke"
 		>
 		<ExplosionConfig

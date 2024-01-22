@@ -88,7 +88,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material	= "cc_agitine",
+		material	= "cc_explodePlayer",
 	});
 table.insert(materials_to, {
 		probability = 0.5,

@@ -52,7 +52,7 @@ cc_alchemist_potions = {
 	},
 	{
 		name = "Agitine",
-		material = "cc_agitine",
+		material = "cc_explodePlayer",
 		cost = 700,
 	},
 	{
