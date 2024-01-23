@@ -761,7 +761,7 @@
 	</Reaction>
 	
 	<Reaction probability="100" 
-	input_cell1="cc_methane_rain"	input_cell2="[static]"
+	input_cell1="cc_methane_rain"	input_cell2="[static]" B2:E107 =$B2="AA"
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>
