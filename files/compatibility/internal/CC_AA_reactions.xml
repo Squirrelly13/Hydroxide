@@ -229,9 +229,23 @@
 		blob_radius1="6"
 	>
 	</Reaction>
+
+	<Reaction probability="20"
+		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
+		output_cell1="aa_cloning_solution"			output_cell2="smoke"
+	>
+	</Reaction>
+	<Reaction probability="10"
+		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
+		output_cell1="aa_cloning_solution"			output_cell2="aa_cloning_solution"
+	>
+	</Reaction>
+	
+
+
 	
 	<!-- supernova -->
-	
+	<!-- 
 	<Reaction probability = "50"
         input_cell1="aa_condensed_gravity" input_cell2="aa_darkmatter" input_cell3="[antimatter]"
         output_cell1="air" output_cell2="air" output_cell3="air"
@@ -250,7 +264,8 @@
 		ray_energy="1"
 		>
 	</ExplosionConfig>
-	</Reaction><!-- grav liquid and darkmatter explode -->
+	</Reaction> --> <!-- lets just shelve this one for now until we have a way to prevent it from destroying long-runs... -->
+	<!-- grav liquid and darkmatter explode -->
 	
 
 

@@ -202,16 +202,44 @@ mod_settings =
 			},
 		}
 	},
-	{
-		category_id = "ALCHEMIST_POTIONS",
-		ui_name = "Alchemist Potions",
-		ui_description = "Configure what potions can be thrown by alchemists.",
+	{	
+		category_id = "COMPATIBILITY_SETTINGS",
+		ui_name = "Compelling Compatibility",
+		ui_description = "Settings and Options for configuring compatibility both internally and externally",
 		foldable = true,
 		_folded = true,
-		initialized = false,
 		settings = {
+			
+			{
+				category_id = "COMPATIBILITY_INTERNAL",
+				ui_name = "Internal",
+				ui_description = "Settings for Internal Compatibility (compatibility between CC, AA and MM)",
+				foldable = true,
+				_folded = true,
+				settings = {
 
-		}
+					{
+						id = "CC_AA_SUPERNOVA",
+						ui_name = "Supernova Reaction",
+						ui_description = "Enables a very rare reaction between CC and AA that triggers a Supernova \n(will require materials from both CC & AA enabled)",
+						value_default = true,
+						scope = MOD_SETTING_SCOPE_NEW_GAME,
+					},
+				}
+			},
+
+			{
+				category_id = "ALCHEMIST_POTIONS",
+				ui_name = "Alchemist Potions",
+				ui_description = "Configure what potions can be thrown by alchemists.",
+				foldable = true,
+				_folded = true,
+				initialized = false,
+				settings = {
+
+				}
+			},
+		},
 	},
 }
 

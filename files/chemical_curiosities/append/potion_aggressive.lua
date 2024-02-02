@@ -56,12 +56,12 @@ cc_alchemist_potions = {
 		cost = 700,
 	},
 	{
-		name = "$mat_rock_hard",
+		name = "Dense Rock", --[[ lmao ]]
 		material = "rock_hard",
 		cost = 450,
 	},
 	{
-		name = "$mat_cc_metastasizium",
+		name = "Metastasizium",
 		material = "cc_metastasizium",
 		cost = 600,
 	},
@@ -76,7 +76,7 @@ cc_alchemist_potions = {
 		cost = 400,
 	},
 	{
-		name = "Anti-Matter",
+		name = "Anti-Matter Gas",
 		material = "cc_antimatter_gas",
 		cost = 700,
 		default_disabled = true,
