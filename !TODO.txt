@@ -1,7 +1,20 @@
-Fluent Fluids Expansion
+New Features:
+-Base Potion interactions
+-Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
+-Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
+
+
+Fixes/Reworks:
+
+-Uranium Reimplementation
+-Ores Finalisation
+-Finish getting the settings menu finished and fully functional
+
+
+scrapped:
+
+Fluent Fluids Expansion (gonna make it its own mod, -UserK)
 -Liquid Gases
 -More Explosive Canisters for different liquids
--Base Potion interactions
--Invisibilum interactions
 -Void overtakes Love
 -Powder Liquids? (i think this could be cool)
