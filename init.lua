@@ -65,6 +65,9 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 
 end
 
+
+
+
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
@@ -195,7 +198,8 @@ if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
 	
 
 	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
-	
+	-- noooo bloomium ignore-infect tags my beloved :devastated: (might reuse these for a bloomium revamp standalone or smth) -UserK
+
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" ) 
@@ -256,7 +260,7 @@ end
 --  Arcane Alchemy x Chemical Curiosities, Materials
 
 if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.AA_materials") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" ) 
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" )
 end
 
 
@@ -373,6 +377,16 @@ nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 content = ModTextFileGetContent("data/materials.xml")
 xml = nxml.parse(content)
 
+
+local catastrophicMaterials = {creepy_liquid = true,monster_powder_test = true}
+
+for elem in xml:each_child() do
+
+	if catastrophicMaterials[elem.attr.name] then
+		elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
+		print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+	end
+end
 
 for elem in xml:each_child() do
     

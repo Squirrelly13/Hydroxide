@@ -2,10 +2,11 @@ New Features:
 -Base Potion interactions
 -Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
 -Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
+-Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
 
 
 Fixes/Reworks:
-
+-Fix Veilium effect being too snappy
 -Uranium Reimplementation
 -Ores Finalisation
 -Finish getting the settings menu finished and fully functional

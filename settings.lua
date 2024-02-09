@@ -149,13 +149,13 @@ mod_settings =
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
-			-- {
-			-- 	id = "AA_PROPS",
-			-- 	ui_name = "Spawn Props",
-			-- 	ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-			-- 	value_default = true,				
-			-- 	scope = MOD_SETTING_SCOPE_NEW_GAME,
-			-- }, --this is already included in structures, i dont know why i added this
+			--[[ {
+				id = "AA_PROPS",
+				ui_name = "Spawn Props",
+				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
+				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}, --this is already included in structures, i dont know why i added this ]]
 			{
 				id = "AA_ITEMS",
 				ui_name = "Arcane Alchemy Items",
@@ -167,14 +167,14 @@ mod_settings =
 				id = "AA_BLOOMIUM",
 				ui_name = "Bloomium",
 				value_default = true,
-				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive as it once was.",
+				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive or performance heavy as it once was.",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
 				id = "AA_BLOOMIUM_VEINS",
 				ui_name = "Bloomium World Gen",
 				value_default = true,
-				ui_description = "Bloomium can spawn in the world",
+				ui_description = "Bloomium can spawn in the world using Oregen",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
