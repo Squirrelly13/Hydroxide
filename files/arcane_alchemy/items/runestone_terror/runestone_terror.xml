@@ -1,7 +1,7 @@
 <Entity>
 	<Base file="data/entities/items/pickup/runestones/runestone_base.xml">
 		<PhysicsImageShapeComponent 
-			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
+			image_file="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.png"
 			>
 		</PhysicsImageShapeComponent>
 
@@ -12,31 +12,31 @@
 		</LuaComponent>
   
 		<ItemComponent
-			item_name="Runestone of Crystals"
-			ui_sprite="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
+			item_name="Runestone of Terror"
+			ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.png"
 			ui_description="$itemdesc_runestone" 
 			>
 		</ItemComponent>
   
 		<UIInfoComponent
-			name="Runestone of Crystals"
+			name="Runestone of Terror"
 			>
 		</UIInfoComponent>
   
 		<AbilityComponent
-			ui_name="Runestone of Crystals"
+			ui_name="Runestone of Terror"
 			>
 		</AbilityComponent>
 	
 		<SpriteComponent
-			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_hand.png" 
+			image_file="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror_hand.png" 
 			>
 		</SpriteComponent>
   
 		<ParticleEmitterComponent
 			_tags="activate"
 			_enabled="0"
-			emitted_material_name="cc_dormant_crystal"
+			emitted_material_name="aa_unstable_pandorium"
 			gravity.y="0.0"
 			lifetime_min="10.01"
 			lifetime_max="10.1"
@@ -60,7 +60,7 @@
 	
 		<LuaComponent
 			_tags="activate"
-			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_emitter.lua"   
+			script_source_file="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror_emitter.lua"   
 			execute_every_n_frame="40"
 			_enabled="0"
 			>

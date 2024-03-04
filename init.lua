@@ -380,6 +380,13 @@ xml = nxml.parse(content)
 
 local catastrophicMaterials = {creepy_liquid = true,monster_powder_test = true}
 
+if (ModIsEnabled("grahamsthings")) --ok idk what the internal id is ill find it later
+
+	table.insert(creepy_polymorphine = true)
+
+end
+
+
 for elem in xml:each_child() do
 
 	if catastrophicMaterials[elem.attr.name] then
