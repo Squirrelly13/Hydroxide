@@ -254,15 +254,16 @@ end
 --  	[Compelling Compatibility]       --
 
 
-
-
-
 --  Arcane Alchemy x Chemical Curiosities, Materials
-
+local CC_AA_reactions = false
 if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.AA_materials") == true then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" )
+	CC_AA_reactions = true
 end
 
+if ModSettingGet("CC_AA_SUPERNOVA") == true and CC_AA_reactions == true then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/supernova/reaction_supernova.xml" )
+end
 
 --  Conjurer
 
@@ -380,11 +381,11 @@ xml = nxml.parse(content)
 
 local catastrophicMaterials = {creepy_liquid = true,monster_powder_test = true}
 
-if (ModIsEnabled("grahamsthings")) --ok idk what the internal id is ill find it later
+--[[ if (ModIsEnabled("grahamsperks"))
 
-	table.insert(creepy_polymorphine = true)
+	table.insert(graham_creepypoly = true, graham_creepypoly_frozen = true, )
 
-end
+end ]] --ok i was doing compat stuff and then realised it makes more sense for graham and other mod devs to just put the catastrophic tag on their materials themselves, soooo imma leave this for now
 
 
 for elem in xml:each_child() do

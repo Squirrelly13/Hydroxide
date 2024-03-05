@@ -959,6 +959,56 @@
 	
   </CellData><!-- Unstable Pandorium -->
   
+  <CellData 
+	name="aa_chaotic_pandorium"
+	ui_name="$mat_aa_chaotic_pandorium"
+  	tags="[liquid],[magic_liquid],[water],[impure]"
+	burnable="1"
+	density="1"
+	cell_type="liquid"
+	wang_color="8b3428a3"
+	generates_smoke="0"
+	liquid_gravity="0.8"
+	liquid_sand="0"
+	gfx_glow="150"
+	on_fire="0"
+	requires_oxygen="0"
+	temperature_of_fire="95"
+	autoignition_temperature="10"
+	fire_hp="500"
+	liquid_stains="1"
+	
+	>
+	<ParticleEffect
+		vel.y="-30"
+		vel_random.min_y="-30.21"
+		vel_random.max_y="-4.861"
+		vel_random.min_x="-8.667"
+		vel_random.max_x="8.667"
+		lifetime.min="0.3238"
+		lifetime.max="9.3238"
+		gravity.y="-100"
+		render_on_grid="1"
+		airflow_force="10"
+		airflow_scale="6.857"
+		draw_as_long="0"
+		friction="1.352"
+		probability="0.0543"
+	>
+	</ParticleEffect>
+	<Graphics 
+		color="44FF93EB"
+		>
+    </Graphics>
+	<StatusEffects>
+			<Ingestion>
+			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" />
+			</Ingestion>
+    </StatusEffects>
+  </CellData><!-- Pandorium -->
+
+
+
    <CellData 
 	name="aa_pop_rocks"
 	ui_name="$mat_aa_pop_rocks"

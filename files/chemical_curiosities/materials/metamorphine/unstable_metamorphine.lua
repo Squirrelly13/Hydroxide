@@ -23,7 +23,7 @@ for i = #material_options, 1, -1 do
 	local tags = CellFactory_GetTags( id ) or {}
 	for k, v in ipairs(tags)do
 		if(v == "[catastrophic]")then
-			GamePrint("cc_unst_metamorphine: material ignored!!")
+			GamePrint("cc_unst_metamorphine: material " + material + " ignored!!")
 			table.remove(material_options, i)
 			goto continue
 		end

@@ -217,12 +217,11 @@ mod_settings =
 				foldable = true,
 				_folded = true,
 				settings = {
-
 					{
 						id = "CC_AA_SUPERNOVA",
 						ui_name = "Supernova Reaction",
-						ui_description = "Enables a very rare reaction between CC and AA that triggers a Supernova \n(will require materials from both CC & AA enabled)",
-						value_default = true,
+						ui_description = "Enables a very rare reaction between Chemical Curiosities and Arcane Alchemy that triggers a Supernova \nThe Materials involved are Condensed Gravity, Dark Matter and Anti-Matter (none of which should normally spawn remotely close to each other anymore)\n(will require materials from both CC & AA enabled)",
+						value_default = false,
 						scope = MOD_SETTING_SCOPE_NEW_GAME,
 					},
 				}
@@ -235,12 +234,20 @@ mod_settings =
 				foldable = true,
 				_folded = true,
 				initialized = false,
-				settings = {
-
-				}
+				settings = {}
 			},
 		},
 	},
+	{
+		id = "TERROR_MODE",
+		ui_name = "Terror Mode",
+		ui_description = "Adds some \"Fun\" things to the game..."
+	},
+	{
+		id = "TERROR_MODE_WARNING",
+		ui_name = "Warning! Terror Mode is Terrifying!!",
+		ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis mode exists for people who think Unstable Pandorium is the greatest thing ever added (aka, me)\n -UserK",
+	}
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.

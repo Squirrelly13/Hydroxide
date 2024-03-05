@@ -75,23 +75,23 @@ cc_alchemist_potions = {
 		material = "Liquid Crystal",
 		cost = 400,
 	},
-	{
+	--[[ {
 		name = "Anti-Matter Gas",
 		material = "cc_antimatter_gas",
 		cost = 700,
 		default_disabled = true,
-	},
+	}, ]] --tempting, but maybe best not, at least for now
 }
 
 if(potions == nil)then
 	potions = {}
 end
 
-for i, v in ipairs(cc_alchemist_potions)do
+--[[ for i, v in ipairs(cc_alchemist_potions)do
 	local setting = ModSettingGet("alchemist_potions_"..v.material)
 	local enabled = (setting ~= nil and setting) or (v.default_disabled and false) or true
 
-	--[[
+	
 		local setting = ModSettingGet("alchemist_potions_"..v.material)
 		local enabled = true
 		if(setting ~= nil)then
@@ -101,9 +101,9 @@ for i, v in ipairs(cc_alchemist_potions)do
 				enabled = false
 			end
 		end
-	]]
+	
 
 	if(enabled)then
 		table.insert(potions, v)
 	end
-end
+end ]] --disabled for now since it doesnt work, idk how its supposed to work and i feel its better as a small standalone customisation mod

@@ -150,7 +150,8 @@ metals_vault_2 = {
 
 ore_fungiforest = {
 	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{ 	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
+	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},	
+	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
 }
 
 ore_crypt = {
@@ -158,11 +159,12 @@ ore_crypt = {
 	{	probability = 0.500, "random_metals"	},	
 	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml",	},
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
+	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
 }
 
 ore_wizardcave = {
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},	
+	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},	
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml"		},
 	{	probability = 0.400, "random_metals"	},
 }

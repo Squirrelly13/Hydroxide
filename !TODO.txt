@@ -1,9 +1,11 @@
 New Features:
--Base Potion interactions
--Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
 -Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
 -Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
-
+-Finish Chaotic Pandorium
+-Think of things for Terror Mode
+-Add Runestone of Spells (converts things to Chaotic Pandorium)
+-Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
+-Void overtakes Love
 
 Fixes/Reworks:
 -Fix Veilium effect being too snappy
@@ -11,11 +13,15 @@ Fixes/Reworks:
 -Ores Finalisation
 -Finish getting the settings menu finished and fully functional
 
+Under Consideration:
+Alchemist Settings controls
+-Base Potion interactions
+-Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
+
 
 scrapped:
 
 Fluent Fluids Expansion (gonna make it its own mod, -UserK)
 -Liquid Gases
 -More Explosive Canisters for different liquids
--Void overtakes Love
 -Powder Liquids? (i think this could be cool)
