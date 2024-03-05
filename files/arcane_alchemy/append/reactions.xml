@@ -108,12 +108,13 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml" 
 		ray_energy="1"
 		>
 	</ExplosionConfig>
 	</Reaction><!-- Pandorium casts spells -->
 	
+
 	<Reaction probability = "75"
 		input_cell1="aa_unstable_pandorium" input_cell2="[fire]"
 		output_cell1="fire" output_cell2="[fire]"
@@ -133,8 +134,9 @@
 	</ExplosionConfig>
 	</Reaction><!-- unstable pandorium casts spells -->
 
+
 	<Reaction probability = "75"
-		input_cell1="aa_unstable_pandorium" input_cell2="[fire]"
+		input_cell1="aa_chaotic_pandorium" input_cell2="[fire]"
 		output_cell1="fire" output_cell2="[fire]"
 	>
 	<ExplosionConfig
