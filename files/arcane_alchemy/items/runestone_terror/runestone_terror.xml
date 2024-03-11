@@ -12,19 +12,19 @@
 		</LuaComponent>
   
 		<ItemComponent
-			item_name="Runestone of Terror"
+			item_name="$item_runestone_terror"
 			ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.png"
-			ui_description="$itemdesc_runestone" 
+			ui_description="$itemdesc_runestone_terror" 
 			>
 		</ItemComponent>
   
 		<UIInfoComponent
-			name="Runestone of Terror"
+			name="$item_runestone_terror"
 			>
 		</UIInfoComponent>
   
 		<AbilityComponent
-			ui_name="Runestone of Terror"
+			ui_name="$item_runestone_terror"
 			>
 		</AbilityComponent>
 	
