@@ -5,18 +5,31 @@ New Features:
 -Think of things for Terror Mode
 -Add Runestone of Spells (converts things to Chaotic Pandorium)
 -Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
--Void overtakes Love
+-Local Failshift perk, triggers a local shift when near dangerous materials
+-Add interactions or something to some materials to make them less useless (like the slowdown potions)
 
 Fixes/Reworks:
 -Fix Veilium effect being too snappy
 -Uranium Reimplementation
--Ores Finalisation
+-Ores Rework
 -Finish getting the settings menu finished and fully functional
 
 Under Consideration:
-Alchemist Settings controls
+-Alchemist Settings controls
 -Base Potion interactions
 -Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
+-Void overtakes Love
+-Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles)
+
+Terror Mode:
+-Terrorportium, chooses 5 destinations to teleport the player and then chooses the most dangerous one based on nearby materials and/or enemies
+-Terrifying Pandorium, Unstable Pandorium Spells with Chaotic Pandorium Modifiers
+-Terrifying Water, picks a random material based on the seed to convert to when the player is near (component on player that converts twater in a small circle around them, about the size of a Touch Of spell, maybe smaller)
+-All material-spawned projectiles home in on the player?
+
+Compatibility:
+-Finish Anvil of Destiny compatibility
+-Finish Conjurer compatibility
 
 
 scrapped:

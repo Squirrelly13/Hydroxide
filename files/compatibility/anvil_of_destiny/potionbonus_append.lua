@@ -4,7 +4,7 @@ append_effect("cc_hydroxide", function(wand)
 
 
   register_physics_item({
-    physics_image_file = "mods/hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png",
+    physics_image_file = "mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png",
     type = "tablet", -- Will count this item as a tablet
   })
 
