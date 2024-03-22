@@ -238,7 +238,7 @@
    <CellData 
     name="aa_creeping_slime"
     ui_name="$mat_aa_creeping_slime"
-    tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid]"
+    tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid],[catastrophic]"
     burnable="0"  
     density="5"  
     cell_type="liquid" 

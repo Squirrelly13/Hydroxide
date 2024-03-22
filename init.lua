@@ -268,10 +268,28 @@ end
 --  Conjurer
 
 if ModIsEnabled("raksa") then
+	-- Materials Append
+	  ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_aa.lua"
+	  )
+
 	ModLuaFileAppend(
-	  "mods/raksa/files/scripts/lists/material_categories.lua",
-	  "mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
-	)
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
+	  )
+
+	  ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_mm.lua"
+	  )
+
+
+	-- Entities Append
+	ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/entity_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/entities.lua"
+	  )
   end --adds compatibility with Conjurer
 
 
@@ -283,10 +301,15 @@ if (ModIsEnabled("copis_things")) then
 	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compatibility/copis_compatibility/material_random_options.lua") ) 
 
 	
-end --copis chemical curiosity compatibility combo
+end --copi's chemical curiosity compatibility combo
 
 
+if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can add custom materials to anvil
 
+	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/Compatibility/anvil_of_destiny/potionbonus_append.lua")
+
+	
+end
 
 
 

@@ -460,7 +460,7 @@
 	
 	<Reaction probability="80"
 	input_cell1="magic_liquid_mana_regeneration"	input_cell2="cc_nullium"
-	output_cell1="cc_hydroxide_gas"					output_cell2="acid_gas"
+	output_cell1="acid_gas"							output_cell2="cc_hydroxide_gas"
 	blob_radius1="2"								blob_radius2="2"
 	>
 	<ExplosionConfig
