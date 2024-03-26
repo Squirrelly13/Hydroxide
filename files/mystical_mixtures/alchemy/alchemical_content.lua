@@ -8,7 +8,7 @@ alchemical_materials = {
         color = "FF72BFD8", -- visual color
         texture = nil, -- texture path
         type = "liquid",
-        tags = "[alchemical]",
+        tags = "[alchemical],[ingredient]",
     },
     {
         id = "mm_alchemical_base",
@@ -18,7 +18,7 @@ alchemical_materials = {
         color = "c77e6996",
         texture = nil, -- texture path
         type = "liquid",
-        tags = "[alchemical]",       
+        tags = "[alchemical],[ingredient]",       
     },
     {
         id = "mm_ephemeral_ether",
@@ -28,7 +28,7 @@ alchemical_materials = {
         color = "C60AFFD2",
         texture = nil, -- texture path
         type = "liquid",
-        tags = "[alchemical]",
+        tags = "[alchemical],[ingredient]",
         density = 1.1,
     },
     {
@@ -51,7 +51,7 @@ alchemical_materials = {
         color = "FFFFDF86",
         texture = "data/materials_gfx/gold.png", -- texture path
         type = "liquid",
-        tags = "[alchemical]",
+        tags = "[alchemical],[ingredient]",
         density = 3.7,
         glow = 200,
     },
@@ -107,7 +107,7 @@ alchemical_materials = {
         generate_notes = true,
         color = "A1FF0084",
         type = "liquid",
-        tags = "[alchemical]",
+        tags = "[alchemical],[ingredient]",
         density = 1.1,
         burnable = true,
         fire_hp = 100,
@@ -511,4 +511,33 @@ alchemical_recipes = {
             "[magic_liquid]",
         },
     }, 
+    {
+        id = "replicating_agent_3",
+        probability = 100,
+        inputs = {
+            "mm_replicating_agent",
+            "[ingredient]",
+        },
+        outputs = {
+            "[ingredient]",
+            "[ingredient]",
+        },
+    }, 
+    {
+        id = "replicating_agent_creation",
+        name = "$reac_replicating_agent",
+        description = "$reac_desc_replicating_agent",
+        generate_notes = true,
+        probability = 100,
+        inputs = {
+            "mm_alchemical_solvent",
+            "mm_alchemical_base",
+            "mm_ephemeral_ether",
+        },
+        outputs = {
+            "mm_replicating_agent",
+            "mm_ephemeral_ether",
+            "mm_ephemeral_ether",
+        },
+    }
 }

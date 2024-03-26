@@ -21,6 +21,9 @@ local chunk_id = chunk_x + chunk_y * 10000
 local discovery_chance = 8
 
 local is_entry_unlocked = function(entry)
+    if(GameHasFlagRun("mm_unlock_all_notes"))then
+        return true
+    end
     local has_custom_flag = entry.custom_unlock_flag ~= nil
     local is_unlocked = has_custom_flag and HasFlagPersistent(entry.custom_unlock_flag) or HasFlagPersistent("journal_entry_unlocked_"..entry.id)
     if(entry.unlocked_default)then
