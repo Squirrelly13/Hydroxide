@@ -149,13 +149,13 @@ mod_settings =
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
-			-- {
-			-- 	id = "AA_PROPS",
-			-- 	ui_name = "Spawn Props",
-			-- 	ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-			-- 	value_default = true,				
-			-- 	scope = MOD_SETTING_SCOPE_NEW_GAME,
-			-- }, --this is already included in structures, i dont know why i added this
+			--[[ {
+				id = "AA_PROPS",
+				ui_name = "Spawn Props",
+				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
+				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}, --this is already included in structures, i dont know why i added this ]]
 			{
 				id = "AA_ITEMS",
 				ui_name = "Arcane Alchemy Items",
@@ -167,14 +167,14 @@ mod_settings =
 				id = "AA_BLOOMIUM",
 				ui_name = "Bloomium",
 				value_default = true,
-				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive as it once was.",
+				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive or performance heavy as it once was.",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
 				id = "AA_BLOOMIUM_VEINS",
 				ui_name = "Bloomium World Gen",
 				value_default = true,
-				ui_description = "Bloomium can spawn in the world",
+				ui_description = "Bloomium can spawn in the world using Oregen",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
@@ -202,17 +202,52 @@ mod_settings =
 			},
 		}
 	},
-	{
-		category_id = "ALCHEMIST_POTIONS",
-		ui_name = "Alchemist Potions",
-		ui_description = "Configure what potions can be thrown by alchemists.",
+	{	
+		category_id = "COMPATIBILITY_SETTINGS",
+		ui_name = "Compelling Compatibility",
+		ui_description = "Settings and Options for configuring compatibility both internally and externally",
 		foldable = true,
 		_folded = true,
-		initialized = false,
 		settings = {
+			
+			{
+				category_id = "COMPATIBILITY_INTERNAL",
+				ui_name = "Internal",
+				ui_description = "Settings for Internal Compatibility (compatibility between CC, AA and MM)",
+				foldable = true,
+				_folded = true,
+				settings = {
+					{
+						id = "CC_AA_SUPERNOVA",
+						ui_name = "Supernova Reaction",
+						ui_description = "Enables a very rare reaction between Chemical Curiosities and Arcane Alchemy that triggers a Supernova \nThe Materials involved are Condensed Gravity, Dark Matter and Anti-Matter (none of which should normally spawn remotely close to each other anymore)\n(will require materials from both CC & AA enabled)",
+						value_default = false,
+						scope = MOD_SETTING_SCOPE_NEW_GAME,
+					},
+				}
+			},
 
-		}
+			{
+				category_id = "ALCHEMIST_POTIONS",
+				ui_name = "Alchemist Potions",
+				ui_description = "Configure what potions can be thrown by alchemists.",
+				foldable = true,
+				_folded = true,
+				initialized = false,
+				settings = {}
+			},
+		},
 	},
+	{
+		id = "TERROR_MODE",
+		ui_name = "Terror Mode",
+		ui_description = "Adds some \"Fun\" things to the game..."
+	},
+	{
+		id = "TERROR_MODE_WARNING",
+		ui_name = "Warning! Terror Mode is Terrifying!!",
+		ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis mode exists for people who think Unstable Pandorium is the greatest thing ever added (aka, me)\n -UserK",
+	}
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.

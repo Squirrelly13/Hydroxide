@@ -37,11 +37,11 @@ table.insert(materials_to, {
 
 
 table.insert(materials_to, {
-		probability = 0.01,
-		material 	= "cc_antimatter_gas",
+		probability = 0.03,
+		material 	= "cc_antimatter",
 	});
 table.insert(materials_from, {
-		probability = 0.01,
+		probability = 0.03,
 		materials 	= {"cc_antimatter_gas", "cc_antimatter_liquid" },
 	});
 table.insert(materials_to, {
@@ -88,7 +88,7 @@ table.insert(materials_to, {
 	});
 table.insert(materials_to, {
 		probability = 0.4,
-		material	= "cc_agitine",
+		material	= "cc_explodePlayer",
 	});
 table.insert(materials_to, {
 		probability = 0.5,

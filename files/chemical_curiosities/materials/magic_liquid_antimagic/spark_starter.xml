@@ -1,7 +1,7 @@
 <Entity >
    
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/spark_starter_line.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/spark_starter_line.lua"
 		execute_every_n_frame="1"
 		>
 	</LuaComponent>

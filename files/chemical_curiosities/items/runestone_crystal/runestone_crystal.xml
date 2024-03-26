@@ -60,7 +60,7 @@
 	
 		<LuaComponent
 			_tags="activate"
-			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.lua"  
+			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_emitter.lua"   
 			execute_every_n_frame="40"
 			_enabled="0"
 			>

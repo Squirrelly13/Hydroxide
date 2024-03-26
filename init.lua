@@ -65,6 +65,9 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 
 end
 
+
+
+
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
@@ -195,7 +198,8 @@ if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
 	
 
 	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
-	
+	-- noooo bloomium ignore-infect tags my beloved :devastated: (might reuse these for a bloomium revamp standalone or smth) -UserK
+
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" ) 
@@ -245,23 +249,47 @@ end
 
 
 
---  	[Compelling Compatibility]
+
+
+--  	[Compelling Compatibility]       --
 
 
 --  Arcane Alchemy x Chemical Curiosities, Materials
-
+local CC_AA_reactions = false
 if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.AA_materials") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" ) 
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" )
+	CC_AA_reactions = true
 end
 
+if ModSettingGet("CC_AA_SUPERNOVA") == true and CC_AA_reactions == true then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/supernova/reaction_supernova.xml" )
+end
 
 --  Conjurer
 
 if ModIsEnabled("raksa") then
+	-- Materials Append
+	  ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_aa.lua"
+	  )
+
 	ModLuaFileAppend(
-	  "mods/raksa/files/scripts/lists/material_categories.lua",
-	  "mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
-	)
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
+	  )
+
+	  ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/material_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/materials_mm.lua"
+	  )
+
+
+	-- Entities Append
+	ModLuaFileAppend(
+		"mods/raksa/files/scripts/lists/entity_categories.lua",
+		"mods/Hydroxide/files/compatibility/conjurer/entities.lua"
+	  )
   end --adds compatibility with Conjurer
 
 
@@ -273,10 +301,15 @@ if (ModIsEnabled("copis_things")) then
 	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compatibility/copis_compatibility/material_random_options.lua") ) 
 
 	
-end --copis chemical curiosity compatibility combo
+end --copi's chemical curiosity compatibility combo
 
 
+if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can add custom materials to anvil
 
+	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/Compatibility/anvil_of_destiny/potionbonus_append.lua")
+
+	
+end
 
 
 
@@ -368,6 +401,23 @@ nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 content = ModTextFileGetContent("data/materials.xml")
 xml = nxml.parse(content)
 
+
+local catastrophicMaterials = {creepy_liquid = true,monster_powder_test = true}
+
+--[[ if (ModIsEnabled("grahamsperks"))
+
+	table.insert(graham_creepypoly = true, graham_creepypoly_frozen = true, )
+
+end ]] --ok i was doing compat stuff and then realised it makes more sense for graham and other mod devs to just put the catastrophic tag on their materials themselves, soooo imma leave this for now
+
+
+for elem in xml:each_child() do
+
+	if catastrophicMaterials[elem.attr.name] then
+		elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
+		print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+	end
+end
 
 for elem in xml:each_child() do
     

@@ -33,6 +33,13 @@ local items = {
     },
 }
 
+if ModSettingGet("Hydroxide.TERROR_MODE") == true and ModSettingGet("Hydroxide.AA_ITEMS") == true and ModSettingGet("Hydroxide.AA_MATERIALS") == true then  
+
+    table.insert(items, {weight = 1000000, entity = "mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.xml", offset = 0})
+    
+end
+
+
 for i, v in ipairs(items) do
     --print("Registering item: " .. v.entity)
     register_item("potion_spawnlist", v.weight, v.entity, v.offset)

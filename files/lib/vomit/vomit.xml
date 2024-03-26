@@ -13,7 +13,7 @@
 	></LifetimeComponent>
 
 	<ParticleEmitterComponent 
-		emitted_material_name="vomit"
+		emitted_material_name="cc_vomit_fading"
 		gravity.y="150.0"
 		lifetime_min="10"
 		lifetime_max="20"

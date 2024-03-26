@@ -137,7 +137,7 @@ table.insert(status_effects, {
 	ui_name="$status_aa_vomit_spells",
 	ui_description="$status_desc_aa_vomit_spells",
 	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandoriumvomit.xml",
+	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/pandoriumvomit.xml",
 	is_harmful=true,
 });
 
@@ -146,7 +146,7 @@ table.insert(status_effects, {
 	ui_name="$status_aa_vomit_spells_unstable",
 	ui_description="$status_desc_aa_vomit_spells_unstable",
 	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstablepandoriumvomit.xml",
+	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/unstablepandoriumvomit.xml",
 	is_harmful=true,
 });
 

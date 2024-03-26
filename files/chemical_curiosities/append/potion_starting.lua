@@ -13,7 +13,6 @@ starterpotions = {
 	{	probability = 0.600, "cc_slicing_liquid"},
 	{	probability = 0.600, "cc_glittering_liquid"},
 	{	probability = 0.600, "cc_methane"},
-	{	probability = 0.150, "aa_bloomium"},
 	{	probability = 0.600, "aa_repultium"},
 	{	probability = 0.400, "aa_hungry_slime"},
 	{	probability = 0.700, "aa_base_potion"},
@@ -23,7 +22,6 @@ starterpotions = {
 	{	probability = 0.100, "cc_metamorphine"},
 	{	probability = 0.050, "cc_unstable_metamorphine"},
 	{	probability = 0.050, "cc_health_tonic"},
-	{	probability = 0.300, "cc_morphine"},
 	{	probability = 0.500, "cc_frozen_meat"},	
 	{	probability = 0.500, "cc_persistine"},
 }
@@ -38,7 +36,7 @@ magicpotions = {
 "cc_deceleratium",
 "cc_heftium",
 "cc_veilium",
-"cc_agitine",
+"cc_explodePlayer",
 }
 
 

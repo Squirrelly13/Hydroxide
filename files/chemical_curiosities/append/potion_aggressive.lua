@@ -51,29 +51,18 @@ cc_alchemist_potions = {
 		default_disabled = true,
 	},
 	{
-		name = "Unstable Metamorphine",
-		material = "cc_unstable_metamorphine",
-		cost = 1500,
-		default_disabled = true,
-	},
-	{
 		name = "Agitine",
-		material = "cc_agitine",
+		material = "cc_explodePlayer",
 		cost = 700,
 	},
 	{
-		name = "$mat_rock_hard",
+		name = "Dense Rock", --[[ lmao ]]
 		material = "rock_hard",
 		cost = 450,
 	},
 	{
 		name = "Metastasizium",
 		material = "cc_metastasizium",
-		cost = 600,
-	},
-	{
-		name = "Nullium",
-		material = "cc_nullium",
 		cost = 600,
 	},
 	{
@@ -86,33 +75,23 @@ cc_alchemist_potions = {
 		material = "Liquid Crystal",
 		cost = 400,
 	},
-	{
-		name = "Radioactive Waste",
-		material = "cc_radioactive_waste",
-		cost = 950,
-	},
-	{
-		name = "Morphine",
-		material = "cc_morphine",
-		cost = 300,
-	},
-	{
-		name = "Anti-Matter",
+	--[[ {
+		name = "Anti-Matter Gas",
 		material = "cc_antimatter_gas",
 		cost = 700,
 		default_disabled = true,
-	},
+	}, ]] --tempting, but maybe best not, at least for now
 }
 
 if(potions == nil)then
 	potions = {}
 end
 
-for i, v in ipairs(cc_alchemist_potions)do
+--[[ for i, v in ipairs(cc_alchemist_potions)do
 	local setting = ModSettingGet("alchemist_potions_"..v.material)
 	local enabled = (setting ~= nil and setting) or (v.default_disabled and false) or true
 
-	--[[
+	
 		local setting = ModSettingGet("alchemist_potions_"..v.material)
 		local enabled = true
 		if(setting ~= nil)then
@@ -122,9 +101,9 @@ for i, v in ipairs(cc_alchemist_potions)do
 				enabled = false
 			end
 		end
-	]]
+	
 
 	if(enabled)then
 		table.insert(potions, v)
 	end
-end
+end ]] --disabled for now since it doesnt work, idk how its supposed to work and i feel its better as a small standalone customisation mod

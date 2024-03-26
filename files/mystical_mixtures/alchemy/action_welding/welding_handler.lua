@@ -301,7 +301,7 @@ handler.hook = function(action, recursion_level, iteration)
 		black_hole_death_trigger = true,
 		black_hole_big = true,
 		black_hole_giga = true,
-		copis_things_vacuum_claw = true
+		copith_vacuum_claw = true
 	}
 
 	local is_blackhole = false

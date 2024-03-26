@@ -52,7 +52,7 @@ table.insert(materials_magic, {
 }); 
 
 table.insert(materials_magic, {
-    material="cc_agitine",
+    material="cc_explodePlayer",
 	cost=350,
 });
 

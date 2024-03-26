@@ -131,7 +131,7 @@
 
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder_tnt"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -139,7 +139,7 @@
 	
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder_explosive"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
@@ -147,13 +147,13 @@
 	
 	<Reaction probability="43"
 	input_cell1="aa_base_potion"		input_cell2="gunpowder"
-	output_cell1="sand_herb_vapour"			output_cell2="cc_agitine"
+	output_cell1="sand_herb_vapour"			output_cell2="cc_explodePlayer"
 	blob_radius2="2"
 	>
 	</Reaction>
 	
 	<Reaction probability="30"
-		input_cell1="cc_agitine"	input_cell2="[meat]"
+		input_cell1="cc_explodePlayer"	input_cell2="[meat]"
 		output_cell1="fire"			output_cell2="smoke"
 		>
 		<ExplosionConfig
@@ -229,29 +229,19 @@
 		blob_radius1="6"
 	>
 	</Reaction>
+
+	<Reaction probability="20"
+		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
+		output_cell1="aa_cloning_solution"			output_cell2="smoke"
+	>
+	</Reaction>
+	<Reaction probability="10"
+		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
+		output_cell1="aa_cloning_solution"			output_cell2="aa_cloning_solution"
+	>
+	</Reaction>
 	
-	<!-- supernova -->
-	
-	<Reaction probability = "50"
-        input_cell1="aa_condensed_gravity" input_cell2="aa_darkmatter" input_cell3="[antimatter]"
-        output_cell1="air" output_cell2="air" output_cell3="air"
-        fast_reaction="1"
-    >
-	<ExplosionConfig
-		camera_shake="0" 
-		damage="0"
-		cell_explosion_power="5"
-		cell_explosion_damage_required="3000"
-		cell_explosion_radius_min="1"
-		cell_explosion_radius_max="1"
-		cell_explosion_probability="2"
-		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/compatibility/INTERNAL/supernova/load_supernova.xml" 
-		ray_energy="1"
-		>
-	</ExplosionConfig>
-	</Reaction><!-- grav liquid and darkmatter explode -->
-	
+
 
 
 

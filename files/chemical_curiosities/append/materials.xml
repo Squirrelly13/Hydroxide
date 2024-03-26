@@ -671,8 +671,8 @@
   </CellData>
   
   <CellData
-	name="cc_agitine"
-	ui_name="$mat_cc_agitine"
+	name="cc_explodePlayer"
+	ui_name="$mat_cc_explodePlayer"
 	tags="[magic_liquid],[impure],[liquid],[corrodible]"
 	burnable="1"
 	density="3.1"
@@ -755,7 +755,7 @@
 	name="cc_metastasizium"
 	ui_name="$mat_cc_metastasizium"
 	tags="[liquid],[magic_liquid],[impure],[corrodible]"
-	density="1.9"
+	density="0.3"
 	cell_type="liquid"
 	wang_color="8a0a7a3f"
 	liquid_gravity="0.5"
@@ -1607,7 +1607,7 @@
 		<Graphics
 			color="8cebaeba"
 			>
-		</Graphics><!-- Unfinished material that will warp people to a parallel world -eba -->
+		</Graphics><!-- Un [finished]!!! material that will warp people to a parallel world -eba -->
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP" amount="0.15"/>
@@ -1634,5 +1634,13 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
+
+	<CellDataChild
+		_parent="vomit"
+		name="cc_vomit_fading"
+		wang_color="88E8BD5C"
+		lifetime="2000"
+		>
+	</CellDataChild>
 
 </Materials>
