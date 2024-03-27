@@ -59,7 +59,7 @@ table.insert(status_effects, {
 	id="AA_HUNGRY_VOMIT",
 	ui_name="$status_aa_hungry_vomit",
 	ui_description="$status_desc_aa_hungry_vomit",
-	ui_icon="mods/Hydroxide/files/gfx/ui/crawl.png",
+	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/slime_vomit.png",
 	protects_from_fire=false,
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/vomitslime.xml",
 });
