@@ -67,7 +67,7 @@
   ></ItemComponent>
 
   	<LuaComponent 
-		script_item_picked_up="mods/arcane_alchemy/files/entities/nerf_gun/dart_pickup.lua" >
+		script_item_picked_up="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/dart_pickup.lua" >
 	</LuaComponent>
 
    <AudioComponent

@@ -513,10 +513,10 @@
   
    <CellData
 	name="aa_oil_splitting"
-	ui_name="$oil"
+	ui_name="$mat_oil"
   	tags="[liquid],[magic_liquid],[burnable],[impure]"
 	burnable="1"
-	density="1"
+	density=".05"
 	cell_type="liquid"
 	wang_color="ff5a9914"
 	generates_smoke="0"

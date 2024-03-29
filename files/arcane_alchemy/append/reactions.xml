@@ -329,14 +329,28 @@
   
   <Reaction probability="50"
   	input_cell1="aa_oil_splitting" 	input_cell2="aa_oil_splitting"
-  	output_cell1="aa_heavy_oil"	output_cell2="aa_heavy_oil" 
+  	output_cell1="aa_heavy_oil"	output_cell2="aa_light_oil" 
 	>
   </Reaction>
   
    
   <Reaction probability="50"
   	input_cell1="aa_oil_splitting" 	input_cell2="aa_oil_splitting"
-  	output_cell1="aa_light_oil"	output_cell2="aa_light_oil" 
+  	output_cell1="aa_light_oil"	output_cell2="aa_heavy_oil" 
+	>
+  </Reaction>
+  
+	<!-- TEMPORARY UNTIL SELF-REACTIONS ARE FIXED -->
+  <Reaction probability="50" 
+  	input_cell1="aa_oil_splitting" 	input_cell2="air"
+  	output_cell1="aa_heavy_oil"	output_cell2="air" 
+	>
+  </Reaction>
+  
+   
+  <Reaction probability="50"
+  	input_cell1="aa_oil_splitting" 	input_cell2="air"
+  	output_cell1="aa_light_oil"	output_cell2="air" 
 	>
   </Reaction>
 	
