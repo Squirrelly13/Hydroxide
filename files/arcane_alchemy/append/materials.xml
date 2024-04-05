@@ -516,7 +516,7 @@
 	ui_name="$mat_oil"
   	tags="[liquid],[magic_liquid],[burnable],[impure]"
 	burnable="1"
-	density=".05"
+	density="1"
 	cell_type="liquid"
 	wang_color="ff5a9914"
 	generates_smoke="0"
