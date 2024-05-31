@@ -5,14 +5,12 @@ for k, action in ipairs(actions)do
 	action.action = function(recursion_level, iteration, a, b, c, d, e, f, g, called_from_weld)
 
 		if(reflecting or called_from_weld or (recursion_level ~= nil and recursion_level > -1))then
-			old_action(recursion_level, iteration)
-			return
+			return old_action(recursion_level, iteration)
 		end
 		local data = handler.hook(action.id, recursion_level, iteration)
 
 		if(data == nil)then
-			old_action(recursion_level, iteration)
-			return
+			return old_action(recursion_level, iteration)
 		end
 
 		if(data.extra_mana > 0)then
@@ -99,11 +97,13 @@ for k, action in ipairs(actions)do
 			end
 		end
 
-		old_action(recursion_level, iteration)	
+		local return_value = old_action(recursion_level, iteration)	
 
 		add_projectile = enhancement_old_add_projectile
 		add_projectile_trigger_timer = enhancement_old_add_projectile_trigger_timer
 		add_projectile_trigger_hit_world = enhancement_old_add_projectile_trigger_hit_world
 		add_projectile_trigger_death = enhancement_old_add_projectile_trigger_death
+
+		return return_value
 	end
 end
