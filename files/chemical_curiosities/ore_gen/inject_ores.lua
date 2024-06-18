@@ -57,12 +57,10 @@ ore_coalmines = {
 	{	probability = 1.000, "random_metals",	},
 	{	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml",			},
 	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-	{ 	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
+	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
 
-	--{	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 			},
 	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
-	--{	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
+	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
 }
 
 ore_excavationsite = {
