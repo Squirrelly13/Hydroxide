@@ -222,7 +222,7 @@ mod_settings =
 						ui_name = "Supernova Reaction",
 						ui_description = "Enables a very rare reaction between Chemical Curiosities and Arcane Alchemy that triggers a Supernova \nThe Materials involved are Condensed Gravity, Dark Matter and Anti-Matter (none of which should normally spawn remotely close to each other anymore)\n(will require materials from both CC & AA enabled)",
 						value_default = false,
-						scope = MOD_SETTING_SCOPE_NEW_GAME,
+						scope = MOD_SETTING_SCOPE_RUNTIME_RESTART,
 					},
 				}
 			},

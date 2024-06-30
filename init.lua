@@ -261,11 +261,12 @@ if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.
 	CC_AA_reactions = true
 end
 
-if ModSettingGet("Hydroxide.CC_AA_SUPERNOVA") ~= false and CC_AA_reactions == true then
-	print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions))
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/supernova/reaction_supernova.xml" )
+if ModSettingGet("Hydroxide.CC_AA_SUPERNOVA") ~= true and CC_AA_reactions == true then
+	print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 else
-	print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions))
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/supernova/reaction_supernova.xml" )
+
+	print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 end
 
 --  Conjurer
