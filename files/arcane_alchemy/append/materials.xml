@@ -868,7 +868,7 @@
 	name="aa_pandorium"
 	ui_name="$mat_aa_pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure]"
-	burnable="1"
+	burnable="0"
 	density="1"
 	cell_type="liquid"
 	wang_color="8b342ca3"
@@ -962,8 +962,8 @@
   <CellData 
 	name="aa_chaotic_pandorium"
 	ui_name="$mat_aa_chaotic_pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure]"
-	burnable="1"
+  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
+	burnable="0"
 	density="1"
 	cell_type="liquid"
 	wang_color="8b3428a3"
@@ -1002,10 +1002,10 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" /> <!-- TODO: add chaotic meal status effect -->
 			</Ingestion>
     </StatusEffects>
-  </CellData><!-- Pandorium -->
+  </CellData><!-- Chaotic Pandorium -->
 
 
 
