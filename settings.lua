@@ -39,8 +39,8 @@ mod_settings =
 	},
 	{
 		id = "warning",
-		ui_name = "WARNING! SETTINGS MAY BE UNSTABLE",
-		ui_description = "a few settings may be somewhat unstable when changed from default. Disabling bloomium should be fine, but I have not finished the others yet -UserK",
+		ui_name = "WARNING! SETTINGS/MOD MAY BE UNSTABLE",
+		ui_description = "Mod can be unstable and there are bugs around, and Workshop updates can admittedly be far and few between. If you Experience issues with settings or the mod in general, please @me on discord @userk",
 		not_setting = true,
 	},
 	{
@@ -96,7 +96,7 @@ mod_settings =
 			{
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world!",
+				ui_description = "Spawn Various ores throughout the world! (this setting is currently being reworked on GitHub Branch)",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},

@@ -19,13 +19,13 @@ Under Consideration:
 -Base Potion interactions
 -Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
 -Void overtakes Love
--Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles)
+-Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles from Slicing Liquid)
 
 Terror Mode:
 -Terrorportium, chooses 5 destinations to teleport the player and then chooses the most dangerous one based on nearby materials and/or enemies
 -Terrifying Pandorium, Unstable Pandorium Spells with Chaotic Pandorium Modifiers
 -Terrifying Water, picks a random material based on the seed to convert to when the player is near (component on player that converts twater in a small circle around them, about the size of a Touch Of spell, maybe smaller)
--All material-spawned projectiles home in on the player?
+-Material-born projectiles home in on the player?
 
 Compatibility:
 -Finish Anvil of Destiny compatibility

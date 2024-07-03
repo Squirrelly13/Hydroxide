@@ -1607,7 +1607,7 @@
 		<Graphics
 			color="8cebaeba"
 			>
-		</Graphics><!-- Un [finished]!!! material that will warp people to a parallel world -eba -->
+		</Graphics><!-- [Finished!!!] material that will warp people to a parallel world -eba -->
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP" amount="0.15"/>
