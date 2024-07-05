@@ -47,11 +47,11 @@ table.insert(status_effects, {
 
 table.insert(status_effects, {
 	id="AA_SHRINK",
-	ui_name="Shrunken",
-	ui_description="You have been shrunken",
-	ui_icon="mods/Hydroxide/files/gfx/ui/shrink.png",
+	ui_name="$status_aa_shrunken",
+	ui_description="$status_desc_aa_shrunken",
+	ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/shrink.png",
 	protects_from_fire=false,
-	effect_entity="mods/Hydroxide/files/entities/effects/shrink.xml",
+	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/shrink.xml",
 }); -- old AA effect that is being restored thanks to Archaeopteryx so generously allowing us to steal his code from New Enemies -UserK
 
 table.insert(status_effects, {
