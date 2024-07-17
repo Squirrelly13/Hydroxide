@@ -1,9 +1,13 @@
 -- all functions below are optional and can be left out
 
+local catastrophicMaterials = {creepy_liquid = true, monster_powder_test = true, totallyBogusMaterial = true} --Create Catastrophic Materials list
+
+
+
 --[[
 
 function OnModPreInit()
-	print("Mod - OnModPreInit()") -- First this is called for all mods
+	print("Mod - OnModInit()") -- After that this is called for all mods
 end
 
 function OnModInit()
@@ -34,36 +38,12 @@ end
 print("////////////// Commencing Hydroxide init //////////////")
 
 dofile("mods/Hydroxide/lib/translations.lua")
+local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 
 
-function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
-	local x = ProceduralRandom(0,0)
-	print( "===================================== random " .. tostring(x) )
-
-	if ModSettingGet("Hydroxide.CC_ORES") then 
-	
-		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
-			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
-			print("Chemical Curiosities oreGen complete")
-			GameAddFlagRun("Squirrelly_Ore_generated")
-		end
-		
-	end
-	if ModSettingGet("Hydroxide.AA_ITEMS") then
-		print("Adding arcane alchemy items!")
-		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
-		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
-			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
-		end
-	end
-	if ModSettingGet("Hydroxide.MM_ITEMS") then
-		print("Adding mystical mixtures items!")
-		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
-
-	end
 
 
-end
+
 
 
 
@@ -84,6 +64,10 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 --  Materials
+
+ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/Overwhelming Overrides/potion_random.lua") --override random potion selection
+
+
 
 if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
@@ -119,7 +103,7 @@ ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydrox
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
-		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
+		--EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 
 	end
 	if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
@@ -257,14 +241,14 @@ end
 --  Arcane Alchemy x Chemical Curiosities, Materials
 local CC_AA_reactions = false
 if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.AA_materials") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/CC_AA_reactions.xml" )
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/CC_AA_reactions.xml" )
 	CC_AA_reactions = true
 end
 
 if ModSettingGet("Hydroxide.CC_AA_SUPERNOVA") ~= true and CC_AA_reactions == true then
 	print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 else
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compatibility/internal/supernova/reaction_supernova.xml" )
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/supernova/reaction_supernova.xml" )
 
 	print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 end
@@ -272,27 +256,32 @@ end
 --  Conjurer
 
 if ModIsEnabled("raksa") then
+
+		print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
+	-- Adds Construction Paste to the Catastrophic materials list
+	catastrophicMaterials.construction_paste = true
+
 	-- Materials Append
 	  ModLuaFileAppend(
 		"mods/raksa/files/scripts/lists/material_categories.lua",
-		"mods/Hydroxide/files/compatibility/conjurer/materials_aa.lua"
+		"mods/Hydroxide/files/compelling_compatibility/conjurer/materials_aa.lua"
 	  )
 
 	ModLuaFileAppend(
 		"mods/raksa/files/scripts/lists/material_categories.lua",
-		"mods/Hydroxide/files/compatibility/conjurer/materials_cc.lua"
+		"mods/Hydroxide/files/compelling_compatibility/conjurer/materials_cc.lua"
 	  )
 
 	  ModLuaFileAppend(
 		"mods/raksa/files/scripts/lists/material_categories.lua",
-		"mods/Hydroxide/files/compatibility/conjurer/materials_mm.lua"
+		"mods/Hydroxide/files/compelling_compatibility/conjurer/materials_mm.lua"
 	  )
 
 
 	-- Entities Append
 	ModLuaFileAppend(
 		"mods/raksa/files/scripts/lists/entity_categories.lua",
-		"mods/Hydroxide/files/compatibility/conjurer/entities.lua"
+		"mods/Hydroxide/files/compelling_compatibility/conjurer/entities.lua"
 	  )
   end --adds compatibility with Conjurer
 
@@ -302,7 +291,7 @@ if ModIsEnabled("raksa") then
 if (ModIsEnabled("copis_things")) then
 	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
 	
-	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compatibility/copis_compatibility/material_random_options.lua") ) 
+	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compelling_compatibility/copis_compatibility/material_random_options.lua") ) 
 
 	
 end --copi's chemical curiosity compatibility combo
@@ -310,9 +299,15 @@ end --copi's chemical curiosity compatibility combo
 
 if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can add custom materials to anvil
 
-	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/Compatibility/anvil_of_destiny/potionbonus_append.lua")
+	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
+	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
 
-	
+	local xml = nxml.parse(ModTextFileGetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml"))
+	for elem in xml:each_child() do
+		elem.attr.to_material = "aa_divine_magma"
+	end
+	ModTextFileSetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml", tostring(xml))
+
 end
 
 
@@ -400,48 +395,9 @@ ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" )
 
 
 
--- this code adds tags to preexisting materials, its good for compatibility--
-nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
-content = ModTextFileGetContent("data/materials.xml")
-xml = nxml.parse(content)
 
 
-local catastrophicMaterials = {creepy_liquid = true,monster_powder_test = true}
 
---[[ if (ModIsEnabled("grahamsperks"))
-
-	table.insert(graham_creepypoly = true, graham_creepypoly_frozen = true, )
-
-end ]] --ok i was doing compat stuff and then realised it makes more sense for graham and other mod devs to just put the catastrophic tag on their materials themselves, soooo imma leave this for now
-
-
-for elem in xml:each_child() do
-
-	if catastrophicMaterials[elem.attr.name] then
-		elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
-		print("CC: Added tag [catastrophic] to " .. elem.attr.name)
-	end
-end
-
-for elem in xml:each_child() do
-    
-    if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
-       
-        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"	
---[[	
-	elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
-		elem.attr.tags = elem.attr.tags .. ",[organic]"
-			
-	elseif (elem.attr.tags ~= nil) then
-		if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
-			elem.attr.tags = elem.attr.tags .. ",[organic]"
-			
-			]]--fuck this. Too annoying
-    end
-end
-
-
-ModTextFileSetContent("data/materials.xml", tostring(xml))
 
 
 
@@ -470,12 +426,102 @@ OnModPostInit(
 )
 ]]--finish this up
 
-print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee
-
 --More Musical Magic implementation, coded by Y🍵
 if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
-	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
+	local data = ModTextFileGetContent("data/moremusicalmagic/compelling_compatibility/musicmagic.lua")
 	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua",data)
 end
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
+
+
+
+function OnModPostInit()
+	print("Chemical Curiosities - OnModPostInit()") -- First this is called for all mods
+
+
+	
+
+
+end
+
+
+function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
+
+
+
+	print(tostring(catastrophicMaterials.construction_paste))
+
+	-- this code adds tags to preexisting materials, its good for compatibility--
+	local xml = nxml.parse(ModTextFileGetContent("data/materials.xml"))
+
+	local files = ModMaterialFilesGet()
+	for _, file in ipairs(files) do --add modded materials
+		if file ~= "data/materials.xml" then
+			for _, comp in ipairs(nxml.parse(ModTextFileGetContent(file)).children) do
+				xml.children[#xml.children+1] = comp
+			end
+		end
+	end
+
+	for elem in xml:each_child() do
+		--print(("CC: Checking " .. elem.attr.name) or "")
+		if catastrophicMaterials[elem.attr.name] then
+			elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
+			print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+		end
+	end
+
+	for elem in xml:each_child() do
+	
+	    if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
+		
+	        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"	
+	--[[	
+		elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
+			elem.attr.tags = elem.attr.tags .. ",[organic]"
+
+		elseif (elem.attr.tags ~= nil) then
+			if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
+				elem.attr.tags = elem.attr.tags .. ",[organic]"
+
+				]]--fuck this. Too annoying
+	    end
+	end
+
+	ModTextFileSetContent("data/materials.xml", tostring(xml))
+
+
+
+
+
+	local x = ProceduralRandom(0,0)
+	print( "===================================== random " .. tostring(x) )
+
+	if ModSettingGet("Hydroxide.CC_ORES") then 
+	
+		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
+			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
+			print("Chemical Curiosities oreGen complete")
+			GameAddFlagRun("Squirrelly_Ore_generated")
+		end
+		
+	end
+	if ModSettingGet("Hydroxide.AA_ITEMS") then
+		print("Adding arcane alchemy items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
+		end
+	end
+	if ModSettingGet("Hydroxide.MM_ITEMS") then
+		print("Adding mystical mixtures items!")
+		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+
+	end
+
+
+end
+
+
+print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee

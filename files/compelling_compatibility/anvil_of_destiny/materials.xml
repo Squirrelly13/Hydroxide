@@ -1,0 +1,86 @@
+<Materials>
+
+  <CellData
+    name = "aa_divine_slime"
+    ui_name="$mat_aa_divine_slime"
+    tags="[alchemy],[liquid]"
+    burnable="0"  
+    density="8.79"  
+    cell_type="liquid" 
+    wang_color="88c3b1e6" 
+    liquid_gravity="0.1"
+    liquid_sticks_to_ceiling="100"
+    liquid_damping="0.9"
+    liquid_flow_speed="0.01"
+    liquid_slime="1"
+    liquid_stains="2"
+    liquid_sprite_stain_shaken_drop_chance="40"
+    stickyness="1.0"
+    solid_friction="1.0"
+	  status_effects="CC_EDIT_WANDS_EVERYWHERE"
+    audio_physics_material_event="slime"
+    audio_physics_material_wall="slime"
+    audio_physics_material_solid="slime" 
+  >
+	<ParticleEffect
+		vel.y="17.14"
+		vel_random.min_y="-100"
+		vel_random.max_y="25.71"
+		lifetime.min="0"
+		gravity.y="-8.57"
+		render_on_grid="1"
+		draw_as_long="1"
+		friction="-3.429"
+		probability="0.0518"
+    color="F4FFFFFF"
+	/>
+  </CellData><!-- divine slime created from Hungry Slime feasting on the Anvil of Destiny -->
+
+    <Reaction probability="1000"
+        input_cell1="[hungry_slime]"        input_cell2="anvilofdestinium"
+        output_cell1="[hungry_slime]"       output_cell2="aa_divine_slime"
+    >
+    </Reaction>
+
+    <Reaction probability="5"
+        input_cell1="aa_divine_slime"        input_cell2="anvilofdestinium"
+        output_cell1="aa_divine_slime"       output_cell2="aa_divine_slime"
+    >
+    </Reaction>
+
+
+
+  <CellDataChild
+    name = "aa_divine_magma"
+    _parent="lava"
+    wang_color="88cc316" 
+    ui_name="$mat_aa_divine_magma"
+    status_effects="CC_HYDROXIDE"
+  >
+	<ParticleEffect
+		vel.y="-80"
+		vel_random.min_y="-11"
+		vel_random.max_y="34"
+		vel_random.min_x="53"
+		vel_random.max_x="-53"
+		lifetime.min="0.185"
+		lifetime.max="0.28243"
+		gravity.y="130"
+		render_on_grid="1"
+		cosmetic_force_create="1"
+		draw_as_long="1"
+		friction=".24"
+		count.min="0"
+		probability="0.23"
+    color="fffa8f2c"
+	/>
+  </CellDataChild>
+
+    <Reaction probability="10"
+        input_cell1="lava"      input_cell2="aa_divine_magma"
+        output_cell1="lava"     output_cell2="lava"
+    >
+    </Reaction>
+
+
+</Materials>

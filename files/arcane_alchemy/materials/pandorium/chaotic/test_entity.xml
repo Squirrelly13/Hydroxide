@@ -3,19 +3,11 @@
     tags="teleportable_NOT" >
 
     <SpriteAnimatorComponent/>
+
     
-    <LifetimeComponent lifetime = 45/>
-
-	<GenomeDataComponent herd_id = "mage_swapper"/>
+    <LifetimeComponent lifetime = -1/>
 
 
-	<LuaComponent
-		_tags="enabled_in_world"
-		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.lua"
-        execute_on_added="1"
-        execute_times="1"
-    >
-	</LuaComponent>
 
     <CharacterDataComponent
         buoyancy_check_offset_y="-6"
@@ -159,11 +151,11 @@
                 mReloadFramesLeft="27"
                 mReloadNextFrameUsable="0"
                 mana="1000"
-                mana_charge_speed="0"
+                mana_charge_speed="1000"
                 mana_max="1000"
                 max_amount_in_inventory="1"
                 max_charged_actions="0"
-                never_reload="-1"
+                never_reload="0"
                 reload_time_frames="27"
                 rotate_hand_amount="0"
                 rotate_in_hand="1"
@@ -244,7 +236,7 @@
                     screenshake="0"
                     sound_loop_tag=""
                     speed_multiplier="1"
-                    spread_degrees="360"
+                    spread_degrees="0"
                     sprite=""
                     state_cards_drawn="0"
                     state_destroyed_action="0"
@@ -256,6 +248,115 @@
 
             <ManaReloaderComponent
                 _tags="enabled_in_world,enabled_in_hand,enabled_in_inventory" />
+
+            <Entity
+                tags="card_action" >
+
+                <ItemActionComponent
+                    _enabled="0"
+                    _tags="enabled_in_world"
+                    action_id="FUNKY_SPELL" />
+
+                <ItemComponent
+                    _enabled="0"
+                    _tags="enabled_in_world"
+                    always_use_item_name_in_ui="0"
+                    auto_pickup="0"
+                    camera_max_distance="50"
+                    camera_smooth_speed_multiplier="1"
+                    collect_nondefault_actions="0"
+                    custom_pickup_string=""
+                    drinkable="1"
+                    enable_orb_hacks="0"
+                    has_been_picked_by_player="0"
+                    inventory_slot.x="2"
+                    inventory_slot.y="0"
+                    is_all_spells_book="0"
+                    is_consumable="0"
+                    is_equipable_forced="0"
+                    is_frozen="0"
+                    is_hittable_always="0"
+                    is_identified="0"
+                    is_pickable="1"
+                    is_stackable="0"
+                    item_name=""
+                    item_pickup_radius="14.10000038147"
+                    mFramePickedUp="0"
+                    max_child_items="0"
+                    next_frame_pickable="1260"
+                    npc_next_frame_pickable="0"
+                    permanently_attached="0"
+                    play_hover_animation="0"
+                    play_pick_sound="1"
+                    play_spinning_animation="0"
+                    preferred_inventory="FULL"
+                    remove_default_child_actions_on_death="0"
+                    remove_on_death="0"
+                    remove_on_death_if_empty="0"
+                    spawn_pos.x="0"
+                    spawn_pos.y="0"
+                    stats_count_as_item_pick_up="1"
+                    ui_description=""
+                    ui_display_description_on_pick_up_hint="0"
+                    ui_sprite=""
+                    uses_remaining="-1" />
+
+
+            </Entity>
+
+            <Entity
+                tags="card_action" >
+
+                <ItemActionComponent
+                    _enabled="0"
+                    _tags="enabled_in_world"
+                    action_id="LIGHT_BULLET" />
+
+                <ItemComponent
+                    _enabled="0"
+                    _tags="enabled_in_world"
+                    always_use_item_name_in_ui="0"
+                    auto_pickup="0"
+                    camera_max_distance="50"
+                    camera_smooth_speed_multiplier="1"
+                    collect_nondefault_actions="0"
+                    custom_pickup_string=""
+                    drinkable="1"
+                    enable_orb_hacks="0"
+                    has_been_picked_by_player="0"
+                    inventory_slot.x="1"
+                    inventory_slot.y="0"
+                    is_all_spells_book="0"
+                    is_consumable="0"
+                    is_equipable_forced="0"
+                    is_frozen="0"
+                    is_hittable_always="0"
+                    is_identified="0"
+                    is_pickable="1"
+                    is_stackable="0"
+                    item_name=""
+                    item_pickup_radius="14.10000038147"
+                    mFramePickedUp="0"
+                    max_child_items="0"
+                    next_frame_pickable="1260"
+                    npc_next_frame_pickable="0"
+                    permanently_attached="0"
+                    play_hover_animation="0"
+                    play_pick_sound="1"
+                    play_spinning_animation="0"
+                    preferred_inventory="FULL"
+                    remove_default_child_actions_on_death="0"
+                    remove_on_death="0"
+                    remove_on_death_if_empty="0"
+                    spawn_pos.x="0"
+                    spawn_pos.y="0"
+                    stats_count_as_item_pick_up="1"
+                    ui_description=""
+                    ui_display_description_on_pick_up_hint="0"
+                    ui_sprite=""
+                    uses_remaining="-1" />
+
+            </Entity>
         </Entity>
     </Entity>
 </Entity>

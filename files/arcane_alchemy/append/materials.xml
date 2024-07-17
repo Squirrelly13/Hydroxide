@@ -1002,7 +1002,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" /> <!-- TODO: add chaotic meal status effect -->
+			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10" /> 
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Chaotic Pandorium -->
