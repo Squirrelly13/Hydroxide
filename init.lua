@@ -129,6 +129,20 @@ if ModSettingGet("Hydroxide.CC_ITEMS") == true then
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 end
 
+if ModSettingGet("Hydroxide.AA_ITEMS") then
+	print("Adding arcane alchemy items!")
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+	if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
+	end
+end
+
+if ModSettingGet("Hydroxide.MM_ITEMS") then
+	print("Adding mystical mixtures items!")
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+
+end
+
 --  Structures/Pixel Scenes
 
 if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
@@ -506,18 +520,6 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 			GameAddFlagRun("Squirrelly_Ore_generated")
 		end
 		
-	end
-	if ModSettingGet("Hydroxide.AA_ITEMS") then
-		print("Adding arcane alchemy items!")
-		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
-		if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
-			ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
-		end
-	end
-	if ModSettingGet("Hydroxide.MM_ITEMS") then
-		print("Adding mystical mixtures items!")
-		ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
-
 	end
 
 
