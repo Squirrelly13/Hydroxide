@@ -109,6 +109,8 @@ end
 
 add_spell(0, 15, 1)
 
+
+--[[comments
 --gun:AddSpells(GetRandomActionWithType(seed_x, seed_y, spell_levels[Random(1,#spell_levels)], ACTION_TYPE_PROJECTILE))
 
 
@@ -178,7 +180,7 @@ function wand:GetSpells()
 				table.insert(spells, { action_id = action_id, entity_id = spell, inventory_x = inventory_x, inventory_y = inventory_y })
 			end
 		end
-  end ]]
+  end 
 
 
   --EntityAddComponent( entity_id:int, component_type_name:string, table_of_component_values:{string} = nil )
@@ -192,7 +194,7 @@ function wand:GetSpells()
 --ACTION_TYPE_MODIFIER * 4-8
 --ACTION_TYPE_PROJECTILE * 1
 
-
+]]
 ---- set mana to combined spells mana cost * 1.5 ----
 
 -- function action_get_by_id(action_id)

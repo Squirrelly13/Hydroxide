@@ -47,7 +47,6 @@ local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 
 
 
-
 dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
@@ -94,7 +93,7 @@ if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
-	ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
+	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
 
 end
 
@@ -103,7 +102,7 @@ ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydrox
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
-		--EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
+		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 
 	end
 	if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
