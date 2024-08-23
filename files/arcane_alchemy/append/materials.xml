@@ -63,6 +63,49 @@
     </StatusEffects>
   </CellData> <!--  Why are you hitting yourself?  -->
   
+  <CellData
+    name="aa_shrinkium"
+    ui_name="$mat_aa_shrinkium"
+    tags="[liquid],[corrodible],[freezable],[water]"
+    burnable="0"
+    density="4"
+    cell_type="liquid"
+    wang_color="902F554"
+    generates_smoke="0"
+    liquid_gravity="1.5"
+    liquid_sand="0"
+    liquid_stains_self="0"
+    on_fire="0"
+    requires_oxygen="1"
+    temperature_of_fire="10" 
+    danger_water="1"
+    liquid_stains="1"
+	status_effects="AA_SHRINK"
+    liquid_sprite_stain_shaken_drop_chance="0"
+    liquid_sprite_stains_check_offset="-1" 
+    show_in_creative_mode="1"
+  >
+    <Graphics
+      texture_file="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/test.png"
+      color="ffffade1" >
+      <Edge>
+        <EdgeGraphics 
+          overwrite="0" 
+          percent="0.8" 
+          require_same_material="0" 
+          require_same_material_type="1" 
+          type="EVERYWHERE" 
+          z="1" >
+        </EdgeGraphics>
+      </Edge>
+    </Graphics>    
+    <StatusEffects>
+      <Ingestion>
+          <StatusEffect type="AA_SHRINK" amount="0.3"/>
+      </Ingestion>
+    </StatusEffects>
+  </CellData>  
+
     <CellData
     name="aa_darkmatter"
     ui_name="$mat_aa_darkmatter"

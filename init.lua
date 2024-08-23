@@ -134,6 +134,9 @@ if ModSettingGet("Hydroxide.AA_ITEMS") then
 	if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
 		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
 	end
+	if(ModSettingGet("Hydroxide.CC_MATERIALS"))then
+		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua")
+	end
 end
 
 if ModSettingGet("Hydroxide.MM_ITEMS") then
@@ -442,7 +445,7 @@ OnModPostInit(
 --More Musical Magic implementation, coded by Y🍵
 if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
 	local data = ModTextFileGetContent("data/moremusicalmagic/compelling_compatibility/musicmagic.lua")
-	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua",data)
+	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua", data)
 end
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
