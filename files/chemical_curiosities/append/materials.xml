@@ -1554,18 +1554,18 @@
 
 	<CellData
 		name="cc_deezium"
-		ui_name="Deez..."
+		ui_name=""
 		tags="[liquid]"
 		density="0.69"
 		cell_type="liquid"
-		wang_color="803A7BE4"
+		wang_color="00000000"
 		liquid_gravity="1.9"
 		>
 		<Graphics
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/deezium/deezium.png"
+			texture_file="mods/Hydroxide/files/dont_push_to_git/materials/deezium/deezium.png"
 			>
 		</Graphics>
-	</CellData><!-- this is a funny material but also ill probs use it for testing stuff -UserK -->
+	</CellData> <!--803A7BE4-->
 
 	<CellDataChild
 		_parent="wood_static"
@@ -1594,7 +1594,7 @@
 		burnable="1"
 		density="7.15"
 		cell_type="liquid"
-		wang_color="ff832354"
+		wang_color="ff832355"
 		gfx_glow="150"
 		generates_smoke="0"
 		liquid_gravity="2"
@@ -1638,7 +1638,7 @@
 	<CellDataChild
 		_parent="vomit"
 		name="cc_vomit_fading"
-		wang_color="88E8BD5C"
+		wang_color="88E8BD5D"
 		lifetime="2000"
 		>
 	</CellDataChild>

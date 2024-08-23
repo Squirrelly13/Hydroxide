@@ -148,7 +148,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/chaotic/random_spell_chaotic.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml" 
 		ray_energy="1"
 		>
 	</ExplosionConfig>
@@ -227,7 +227,7 @@
 		ray_energy="1"
 		>
 	</ExplosionConfig>
-	</Reaction><!-- make a nerf gun???-->
+	</Reaction><!-- make a nerf gun???--> <!--i mean, its either that, or nothing-->
 	
 	<!-- arborium (wood juice) -->
 	  <Reaction probability="100"

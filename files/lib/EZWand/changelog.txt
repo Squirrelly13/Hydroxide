@@ -1,0 +1,88 @@
+v2.0.0:
+- Add wand:SetName() and wand:GetName()
+- Include name and always_use_item_name_in_ui in the serialized string
+
+v1.7.2:
+- inventory_x of spells only gets set once the inventory is opened after the wand has been
+  added to the players inventory, to work around that, spells returned from GetSpells() will
+  now auto-calculate the inventory_x slots.
+- FIX some bug that I don't even know what kinda issues it would cause
+
+v1.7.1:
+- FIX wand tooltip spell rendering again after borking it in the last update
+
+v1.7.0:
+- Add wand:RenderTooltip(x, y, gui) as a shortcut for rendering an existing wand
+- Wand tooltip will now correctly show empty slots and spells in the correct slots
+- Microchanges to wand tooltip spell slot positioning and sizing to better match the original
+- Forgot to mention that since 1.6.0 the output of EZWand.Deserialize() was changed slightly,
+  the spells table now contains empty slots as empty strings.
+
+v1.6.0:
+- Make serializing/deserializing keep the positions of spells on the wand
+
+v1.5.1:
+- Add error message when trying to access property that doesn't exist
+
+v1.5.0:
+- FIX EZWand.lua:257: table index is nil
+- Add EZWand.IsWand(entity_id) function
+- Add EZWand.GetHeldWand() function
+- Add wand.currentCastDelay property
+- Add wand.currentRechargeTime property
+
+v1.4.1:
+- FIX Spells not updating when wand is being held
+
+v1.4.0:
+- Added GetFreeSlotsCount()
+
+v1.3.2:
+- FIX Tooltip rendering with a lot of always cast spells, make it extend beyond the tooltip borders just like the original
+- FIX The always cast spells table can now be omitted when rendering tooltip
+
+v1.3.1:
+- Add optional gui parameter to EZWand.RenderTooltip(), to use that gui instead of creating its own
+
+v1.3.0:
+- Add EZWand.RenderTooltip()
+- FIX GetSpells() returned incorrect always cast spells order
+
+v1.2.4:
+- FIX EZWand.Deserialize(): When no spells were present, would return table with 1 element being an empty string
+
+v1.2.3:
+- Change requirement of capacity being > 0 to >= 0
+- Remove requirement for manaRechargeSpeed to be bigger than 0
+
+v1.2.2:
+- GetSprite() now returns SpriteComponent:image_file if AbilityComponent:sprite_file is an empty string
+
+v1.2.1:
+- FIX Overwriting of init_total_prob caused by dofiling data/scripts/gun/procedural/gun_procedural.lua
+
+v1.2.0:
+- Added serialize function and add overload for constructor which takes a serialized string to build a wand out of it
+- Added EZWand.Deserialize(serialized_string) which returns a table with the deserialized values without creating a new wand
+- Change logic what constitutes a wand from having a ManaReloaderComponent to having an AbilityComponent with use_gun_script="1"
+
+v1.1.3:
+- FIX Wands thrown that were added to the inventory using PutInPlayersInventory() were not thrown correctly
+
+v1.1.2:
+- FIX reducing capacity not removing spells correctly
+
+v1.1.1:
+- FIX UpdateSprite throwing an error
+
+v1.1.0:
+- AddSpells() now places the spells at the next free position on the wand and sets their position correctly
+- GetSpells() now returns the spells in the order the appear on the wand (if the order has been set)
+- Added SetSprite() and GetSprite()
+- Added RemoveSpellAtIndex()
+- Added new syntax to AddSpells() for adding multiple spells.
+- CHANGE: wand.shuffle needs to be boolean now instead of 0 or 1
+- CHANGE: RemoveSpells now only removes one instance of a spell, if you want to remove all instances, pass in -1 as the amount
+- FIX: PutInPlayersInventory not disabling/enabling the components correctly (wand keeps spinning in hand etc)
+- FIX: Detaching spells increases capacity
+- FIX: Constructor doesn't work when specifying entity_id number as string, e.g: EZWand("22")
