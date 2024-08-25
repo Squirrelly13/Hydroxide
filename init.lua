@@ -18,10 +18,6 @@ function OnModPostInit()
 	print("Mod - OnModPostInit()") -- Then this is called for all mods
 end
 
-function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	GamePrint( "OnPlayerSpawned() - Player entity id: " .. tostring(player_entity) )
-end
-
 function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
 	GamePrint( "OnWorldInitialized() " .. tostring(GameGetFrameNum()) )
 end
@@ -35,15 +31,33 @@ function OnWorldPostUpdate() -- This is called every time the game has finished 
 end
 
 ]]--
+
+
+
+
+
+
+
+
 print("////////////// Commencing Hydroxide init //////////////")
+local start_time = GameGetRealWorldTimeSinceStarted()
+local total_time = 0
+
+
 
 dofile("mods/Hydroxide/lib/translations.lua")
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 
 
-
-
-
+local function make_timed(fn, name)
+	return function(...)
+	  local s = GameGetRealWorldTimeSinceStarted() -- whatever this called
+	  local res = {fn(...)}
+	  total_time = total_time + GameGetRealWorldTimeSinceStarted() - s
+	  print(name, "took", GameGetRealWorldTimeSinceStarted() - s .. ". Total: " .. total_time)
+	  return unpack(res)
+	end
+  end
 
 
 
@@ -117,9 +131,10 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 
 	-- debugging stuffs from eba
-	local player_x, player_y = EntityGetTransform( player_entity )
+	--local player_x, player_y = EntityGetTransform( player_entity )
 	--EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
 	-- debugging stuff end
+	print("CC init took " .. total_time .. "seconds")
 
 end
 --  Items
@@ -326,6 +341,14 @@ if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can a
 
 end
 
+--	Glimmers Expanded
+
+if (ModIsEnabled("GlimmersExpanded")) then
+	ModLuaFileAppend("mods/GlimmersExpanded/files/addGlimmers.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
+end
+
+
+
 
 
 --this function is used to add random recipes
@@ -452,6 +475,8 @@ ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/
 
 
 
+
+
 function OnModPostInit()
 	print("Chemical Curiosities - OnModPostInit()") -- First this is called for all mods
 
@@ -527,5 +552,10 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 
 end
 
+OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
+
+total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time
+
+print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time)
 
 print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee

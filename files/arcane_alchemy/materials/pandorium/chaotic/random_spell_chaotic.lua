@@ -110,91 +110,10 @@ end
 add_spell(0, 15, 1)
 
 
---[[comments
 --gun:AddSpells(GetRandomActionWithType(seed_x, seed_y, spell_levels[Random(1,#spell_levels)], ACTION_TYPE_PROJECTILE))
 
 
 
-
---[[ 
-
--- Check if capacity is sufficient
-local count = 0
-for i, v in ipairs(spells) do
-  count = count + v[2]
-end
-local spells_on_wand = self:GetSpells()
-local positions = {}
-for i, v in ipairs(spells_on_wand) do
-  positions[v.inventory_x] = true
-end
-
-if not attach and #spells_on_wand + count > self.capacity then
-  error(string.format("Wand capacity (%d/%d) cannot fit %d more spells. ", #spells_on_wand, self.capacity, count), 3)
-end
-local current_position = 0
-for i,spell in ipairs(spells) do
-  for i2=1, spell[2] do
-    if not attach then
-      local action_entity_id = CreateItemActionEntity(spell[1])
-      EntityAddChild(self.entity_id, action_entity_id)
-      EntitySetComponentsWithTagEnabled(action_entity_id, "enabled_in_world", false)
-      local item_component = EntityGetFirstComponentIncludingDisabled(action_entity_id, "ItemComponent")
-      while positions[current_position] do
-        current_position = current_position + 1
-      end
-      positions[current_position] = true
-      ComponentSetValue2(item_component, "inventory_slot", current_position, 0)
-    else
-      AddGunActionPermanent(self.entity_id, spell[1])
-    end
-  end
-end
-refresh_wand_if_in_inventory(self.entity_id)
-
-
-function wand:GetSpells()
-	local spells = {}
-	local always_cast_spells = {}
-	local children = EntityGetAllChildren(self.entity_id)
-  if children == nil then
-    return spells, always_cast_spells
-  end
-	for _, spell in ipairs(children) do
-		local action_id = nil
-		local permanent = false
-    local item_action_component = EntityGetFirstComponentIncludingDisabled(spell, "ItemActionComponent")
-    if item_action_component then
-      action_id = ComponentGetValue2(item_action_component, "action_id")
-    end
-    local inventory_x, inventory_y = -1, -1
-    local item_component = EntityGetFirstComponentIncludingDisabled(spell, "ItemComponent")
-    if item_component then
-      permanent = ComponentGetValue2(item_component, "permanently_attached")
-      inventory_x, inventory_y = ComponentGetValue2(item_component, "inventory_slot")
-    end
-    if action_id then
-			if permanent == true then
-				table.insert(always_cast_spells, { action_id = action_id, entity_id = spell, inventory_x = inventory_x, inventory_y = inventory_y })
-			else
-				table.insert(spells, { action_id = action_id, entity_id = spell, inventory_x = inventory_x, inventory_y = inventory_y })
-			end
-		end
-  end 
-
-
-  --EntityAddComponent( entity_id:int, component_type_name:string, table_of_component_values:{string} = nil )
-
-  --EntityAddComponent2( entity_id:int, component_type_name, table_of_component_values:{string-multiple_types} = nil )
-
-
-
-
-
---ACTION_TYPE_MODIFIER * 4-8
---ACTION_TYPE_PROJECTILE * 1
-
-]]
 ---- set mana to combined spells mana cost * 1.5 ----
 
 -- function action_get_by_id(action_id)
@@ -203,12 +122,12 @@ function wand:GetSpells()
 -- 			return action
 -- 		end
 -- 	end
--- end
+-- end --gave up on this fn
 
 ---- cast ----
 
 
-print("\n PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
+--print("\n PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
 ComponentSetValue2(inventory2, "mForceRefresh", true)

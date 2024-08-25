@@ -21,7 +21,7 @@ function ApplyMaterialDamager(target, newMaterial, template)
     local acidstrength = EntityGetDamageFromMaterial(target, template)
     if (acidstrength ~= nil) then
         EntitySetDamageFromMaterial(target, newMaterial, acidstrength)
-        GamePrint("Material ".. tostring(newMaterial) .. " now dealing " .. tostring(acidstrength) .. " damage to " .. EntityGetName(target) .. ", mimicking " .. template)
+        --GamePrint("Material ".. tostring(newMaterial) .. " now dealing " .. tostring(acidstrength) .. " damage to " .. EntityGetName(target) .. ", mimicking " .. template)
     end  
 end
 

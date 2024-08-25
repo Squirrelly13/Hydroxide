@@ -194,7 +194,7 @@ end
 
 materials_xml = materials_xml .. "</Materials>"
 
-print(materials_xml)
+--print(materials_xml)
 
 ModTextFileSetContent("data/mystical_mixtures/alchemy_materials.xml", materials_xml)
 

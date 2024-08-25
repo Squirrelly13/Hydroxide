@@ -184,7 +184,7 @@ function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 
 	local rnd = random_create(Random(1,10), Random(1,10) )
 	local oreType = tostring(pick_random_from_table_weighted( rnd, ore_list)[1])
-	print ("oretype: " .. oreType)
+	--print ("oretype: " .. oreType)
 	
 	local ores = ""
 	
@@ -194,14 +194,14 @@ function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 		local metal2 = tostring(pick_random_from_table_weighted(rnd, metal_list_2)[1])
 		
 		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal1 .. ".xml"
-		print("adding " .. ores .. " to " .. biome)
+		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)
 		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal2 .. ".xml"
-		print("adding " .. ores .. " to " .. biome)
+		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)
 	else 
 		ores = oreType
-		print("adding " .. ores .. " to " .. biome)
+		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)
 	end
 end

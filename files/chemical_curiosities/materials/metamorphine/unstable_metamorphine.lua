@@ -50,12 +50,12 @@ while (true) do --pick material
 	local tags = CellFactory_GetTags( id ) or {}
 	for k, v in ipairs(tags) do
 		if(v == "[catastrophic]")then
-			print("cc_unst_metamorphine: material " .. material .. " ignored!!")
+			--print("cc_unst_metamorphine: material " .. material .. " ignored!!")
 			table.remove(material_options, material_id) -- remove material from list to avoid rolling it again
 			return
 		end
 	end
-	print("chosen material " .. material .. " found!!")
+	--print("chosen material " .. material .. " found!!")
 	goto escape -- if catastrophic, break free
 	--code basically checking if material is catastrophic ^^^^^
 

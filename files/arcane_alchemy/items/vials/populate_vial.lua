@@ -5,11 +5,11 @@ materials = {
     },
     {
         material="aa_arborium",
-        weight=1,
+        weight=.7,
     },
     {
         material="aa_catalyst",
-        weight=1,
+        weight=.5,
     },
     {
         material="aa_hungry_slime",
@@ -18,6 +18,10 @@ materials = {
     {
         material="aa_creeping_slime",
         weight=.4,
+    },
+    {
+        material="aa_pandorium",
+        weight=.8,
     },
     {
         material="aa_unstable_pandorium",
@@ -29,7 +33,7 @@ materials = {
     },
     {
         material="aa_cloning_solution",
-        weight=1,
+        weight=.6,
     },
 }
 
@@ -40,16 +44,19 @@ materials = {
         weight=1,
         
         material="aa_arborium",
-        weight=1,
-
+        weight=.7,
+        
         material="aa_catalyst",
-        weight=1,
-
+        weight=.5,
+        
         material="aa_hungry_slime",
         weight=1,
-
+        
         material="aa_creeping_slime",
         weight=.4,
+        
+        material="aa_pandorium",
+        weight=.8,
         
         material="aa_unstable_pandorium",
         weight=.3,
@@ -58,7 +65,8 @@ materials = {
         weight=.5,
         
         material="aa_cloning_solution",
-        weight=1,
+        weight=.6,
+
 
     CC:
         material="cc_unstable_metamorphine",
@@ -79,6 +87,7 @@ materials = {
         material="cc_antimatter_liquid",
         weight=.2,
     
+        
     MM:
         material="mm_bingus",
         weight=0.6,
@@ -91,9 +100,6 @@ materials = {
     
         material="mm_alchemical_base",
         weight=1,
-
-
-
 
 ]]
 
