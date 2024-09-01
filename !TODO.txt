@@ -1,7 +1,7 @@
 New Features:
 -Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
 -Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
--Finish Chaotic Pandorium
+-Finalise Chaotic Pandorium
 -Think of things for Terror Mode
 -Add Runestone of Spells (converts things to Chaotic Pandorium)
 -Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
@@ -20,6 +20,7 @@ Under Consideration:
 -Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
 -Void overtakes Love
 -Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles from Slicing Liquid)
+-Item that opens a one-way portal to a neighbouring PW (if you are coming from Main World, you get warped back shortly and the portal closes)
 
 Terror Mode:
 -Terrorportium, chooses 5 destinations to teleport the player and then chooses the most dangerous one based on nearby materials and/or enemies
@@ -29,12 +30,14 @@ Terror Mode:
 
 Compatibility:
 -Finish Anvil of Destiny compatibility
--Finish Conjurer compatibility
+ -Potentially switch to working on an Anvil of Destiny Overwrite
+-Finish Conjurer Compatibility
 
 
-scrapped:
-
-Fluent Fluids Expansion (gonna make it its own mod, -UserK)
--Liquid Gases
--More Explosive Canisters for different liquids
--Powder Liquids? (i think this could be cool)
+Fluent Fluids Expansion
+-Gas Variants
+-More Explosive Canisters for different liquids/gases
+-Powder Variants
+ -Dry Water.
+-Candy Variants
+ -Powder Rainbow is "Failed Product" and Candy Rainbow is "Blessed Pebbles"

@@ -141,20 +141,20 @@ table.insert(status_effects, {
 });
 
 table.insert(status_effects, {
-	id="AA_VOMIT_SPELLS_UNSTABLE",
-	ui_name="$status_aa_vomit_spells_unstable",
-	ui_description="$status_desc_aa_vomit_spells_unstable",
-	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/unstablepandoriumvomit.xml",
-	is_harmful=true,
-});
-
-table.insert(status_effects, {
 	id="AA_VOMIT_SPELLS_CHAOTIC",
 	ui_name="$status_aa_vomit_spells_chaotic",
 	ui_description="$status_desc_aa_vomit_spells_chaotic",
 	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
 	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/chaoticpandoriumvomit.xml",
+	is_harmful=true,
+});
+
+table.insert(status_effects, {
+	id="AA_VOMIT_SPELLS_UNSTABLE",
+	ui_name="$status_aa_vomit_spells_unstable",
+	ui_description="$status_desc_aa_vomit_spells_unstable",
+	ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
+	effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/unstablepandoriumvomit.xml",
 	is_harmful=true,
 });
 

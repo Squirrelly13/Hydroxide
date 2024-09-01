@@ -1,0 +1,32 @@
+<Materials>
+
+  <CellData
+	name="sugar"
+	ui_name="$ff_mat_sugar"
+  	tags="[sand_other],[corrodible],[alchemy]"
+	burnable="0"
+	density="5"
+	cell_type="liquid"
+	wang_color="ffe1e1e7"
+	generates_smoke="0"
+	liquid_gravity="2"
+	liquid_sand="1"
+	on_fire="0"
+	requires_oxygen="1"
+	temperature_of_fire="10"
+	solid_friction="1"
+	hp="1000" 
+	audio_physics_material_event="sand"
+	audio_physics_material_wall="sand"
+	audio_physics_material_solid="sand"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="data/materials_gfx/salt.png"
+	color="ffb89e57" >
+    </Graphics>
+  </CellData>
+
+
+
+</Materials>

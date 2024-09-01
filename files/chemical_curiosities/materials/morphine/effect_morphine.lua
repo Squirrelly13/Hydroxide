@@ -8,7 +8,7 @@ local root = EntityGetParent( entity)
 
 local vsc = EntityGetFirstComponentIncludingDisabled( entity, "VariableStorageComponent" )
 
-local trueHP = tonumber(ComponentGetValue( vsc, "value_float" ))
+local trueHP = tonumber(ComponentGetValue2( vsc, "value_float" ))
 
 --print("morphine.lua: trueHP before math: " .. trueHP)
 local damagemodel = EntityGetFirstComponentIncludingDisabled( root, "DamageModelComponent" )
@@ -28,9 +28,11 @@ trueHP = trueHP - diff
 if (trueHP <= 0) then
 	EntityInflictDamage( root, 5 * max_hp, "DAMAGE_OVEREATING", "Careful with those painkillers.", "PLAYER_RAGDOLL_CAMERA", -500, 0)
 end
-ComponentSetValue(damagemodel, "hp", max_hp)
+ComponentSetValue2(damagemodel, "hp", max_hp)
 
-ComponentSetValue( vsc, "value_float", trueHP)
+ComponentSetValue2( vsc, "value_float", trueHP)
 
+
+--print("maxhp: " .. max_hp .. " hp: " .. hp .. " trueHP: " .. trueHP .. " diff: " .. diff)
 
 --print("Morphine")

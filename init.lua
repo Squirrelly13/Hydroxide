@@ -46,7 +46,7 @@ local total_time = 0
 
 
 dofile("mods/Hydroxide/lib/translations.lua")
-local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
+local nxml = dofile_once("mods/Hydroxide/files/lib/luanxml/nxml.lua")
 
 
 local function make_timed(fn, name)
@@ -263,6 +263,11 @@ if ModSettingGet("Hydroxide.MM_MATERIALS") == true then
 end
 
 
+--		[Fluent Fluids]
+
+if ModSettingGet("Hydroxide.FF") == true then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
+end
 
 
 

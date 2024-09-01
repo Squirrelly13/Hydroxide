@@ -652,7 +652,7 @@
 
 <MagicConvertMaterialComponent
       kill_when_finished="0"
-      from_material="aa_meager_offering"
+      from_material="aa_meagre_offering"
       steps_per_frame="48"
       to_material="water"
       clean_stains="0"

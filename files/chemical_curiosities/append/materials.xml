@@ -339,6 +339,11 @@
 	<Graphics
 	color="a53b3c9f"
 	></Graphics>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="CC_INGESTION_METHANE" amount="0.2" />
+		</Ingestion>
+	</StatusEffects>
 	</CellData><!-- lol, methane gas. -->
 	
 	<CellData
@@ -457,8 +462,18 @@
 
 	<CellDataChild
 		_parent="cc_kindling"
-		name="cc_kindling_soaked"
+		_inherit_reactions="1"
+		name="cc_kindling_static"
 		wang_color="ff232225"
+		liquid_static="1"
+		>
+	</CellDataChild>
+
+	<CellDataChild
+		_parent="cc_kindling_static"
+		_inherit_reactions="1"
+		name="cc_kindling_static_soaked"
+		wang_color="ff232226"
 		>
 	</CellDataChild>
 
@@ -901,7 +916,7 @@
 	<CellData
 		name="cc_health_tonic"
 		ui_name="$mat_cc_health_tonic"
-		tags="[liquid],[magic_liquid],[impure],[corrodible]"
+		tags="[liquid],[impure],[corrodible]"
 		density="2.33"
 		cell_type="liquid"
 		wang_color="80ff2211"

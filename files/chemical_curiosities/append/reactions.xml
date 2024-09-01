@@ -616,25 +616,25 @@
 	
 	<Reaction probability="25"
 	input_cell1="cc_explodePlayer"	input_cell2="wood_static"
-	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling"
+	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling_static"
 	>
 	</Reaction>
 	
 	<Reaction probability="10"
-	input_cell1="cc_explodePlayer"	input_cell2="cc_kindling"
-	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling_soaked"
-	>
-	</Reaction>
-	
-	<Reaction probability="5"
-	input_cell1="cc_kindling_soaked"	input_cell2="cc_kindling"
-	output_cell1="cc_kindling"	output_cell2="cc_kindling_soaked"
+	input_cell1="cc_explodePlayer"	input_cell2="cc_kindling_static"
+	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling_static_soaked"
 	>
 	</Reaction>
 	
 	<Reaction probability="10"
-	input_cell1="cc_kindling_soaked"	input_cell2="wood_static"
-	output_cell1="cc_kindling"			output_cell2="cc_kindling"
+	input_cell1="cc_kindling_static_soaked"	input_cell2="cc_kindling_static"
+	output_cell1="cc_kindling_static"		output_cell2="cc_kindling_static_soaked"
+	>
+	</Reaction>
+	
+	<Reaction probability="30"
+	input_cell1="cc_kindling_static_soaked"	input_cell2="wood_static"
+	output_cell1="cc_kindling_static"		output_cell2="cc_kindling_static"
 	>
 	</Reaction>
 	

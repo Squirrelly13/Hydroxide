@@ -3,6 +3,13 @@
 		_enabled="1" >
 	</InheritTransformComponent>
 
+	<VariableStorageComponent
+		name="Combustion Counter"
+    	value_int="0"
+		value_float="0"
+		value_bool="false"
+	/>
+
 	<GameEffectComponent
 	effect="CUSTOM"
 	custom_effect_id="CC_EXPLODING"
@@ -12,7 +19,7 @@
 	
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/agitine/effect_exploding.lua"
-		execute_every_n_frame="120"
+		execute_every_n_frame="60"
 		>
 	</LuaComponent>
 	

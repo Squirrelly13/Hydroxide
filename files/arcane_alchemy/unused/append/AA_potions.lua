@@ -43,7 +43,7 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-    material="aa_meager_offering",
+    material="aa_meagre_offering",
     cost=1500,
 });
 

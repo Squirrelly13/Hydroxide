@@ -101,8 +101,8 @@ table.insert(ALL_MATERIALS, {
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/aa_mat_icons/meager_offering.png",  -- This should be a 16*16px icon
-        name="A Meager Offering",
-        id="aa_meager_offering"  -- The material ID. Must match exactly materials.xml
+        name="A Meagre Offering",
+        id="aa_meagre_offering"  -- The material ID. Must match exactly materials.xml
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/aa_mat_icons/rice.png",  -- This should be a 16*16px icon

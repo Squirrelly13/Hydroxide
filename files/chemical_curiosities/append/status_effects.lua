@@ -53,7 +53,7 @@ table.insert(status_effects, {
 	ui_description="$status_desc_cc_exploding",
 	ui_icon="data/ui_gfx/status_indicators/explosive_shots.png",
 	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/agitine/effect_explosion.xml",
-	is_harmful=true,
+	is_harmful=false, --it *is* harmful but disabling it entirely is cringe :(, I'm instead going to put a check in the mat itself and make it apply Explosion Immunity or smth instead
 }); -- I know this is used by other materials, but it fits best here, and it's what I assume the effect was originally intended for -UserK
 
 table.insert(status_effects, {

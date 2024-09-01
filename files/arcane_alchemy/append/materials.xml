@@ -66,7 +66,7 @@
   <CellData
     name="aa_shrinkium"
     ui_name="$mat_aa_shrinkium"
-    tags="[liquid],[corrodible],[freezable],[water]"
+    tags="[liquid],[corrodible],[freezable],[water],[magic_liquid]"
     burnable="0"
     density="4"
     cell_type="liquid"
@@ -754,8 +754,8 @@
 
   
   <CellData 
-	name="aa_meager_offering"
-	ui_name="$mat_aa_meager_offering"
+	name="aa_meagre_offering"
+	ui_name="$mat_aa_meagre_offering"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
 	burnable="0"  
 	density="5"  
@@ -803,7 +803,7 @@
 			<StatusEffect type="AA_PATH" amount="0.15" />
 			</Ingestion>
     </StatusEffects>
-  </CellData><!-- A meager offering -->
+  </CellData><!-- A meagre offering -->
  <!-- TODO reactions maybe gold and something? -->
   
      <CellData
