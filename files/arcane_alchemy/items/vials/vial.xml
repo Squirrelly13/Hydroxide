@@ -11,7 +11,7 @@
     is_bullet="1" 
     linear_damping="0"
     auto_clean="0"
-    on_death_leave_physics_body="1"
+    on_death_leave_physics_body="0"
     hax_fix_going_through_ground="1"
   ></PhysicsBodyComponent>
   
@@ -50,6 +50,10 @@
 		remove_after_executed="1"
 		script_item_picked_up="data/scripts/items/potion_effect.lua"
 	></LuaComponent>
+
+  <LuaComponent 
+    script_death="data/scripts/items/potion_glass_break.lua" 
+  ></LuaComponent>
 
   <PotionComponent
     _tags="enabled_in_hand,enabled_in_world"
