@@ -110,7 +110,7 @@ EntityAddComponent( entity_id, "AudioComponent", {
 
 local rnd = random_create(9123,58925+frame )
 local from = pick_random_from_table_weighted( rnd, materials_from )
-local to = pick_random_from_table_weighted( rnd, materials_to )
+local to = pick_random_from_table_weighted( rnd, materials_to ) ---@diagnostic disable-line: undefined-global
 
 local toname = ""
 toname = CellFactory_GetUIName(CellFactory_GetType(to.material))

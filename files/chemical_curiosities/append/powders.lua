@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 table.insert(materials_standard, {
 	material="sulphur",
 	cost=175,

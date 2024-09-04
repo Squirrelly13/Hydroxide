@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 -- addGlimmer("Hydroxide", "Gives a projectile a caustic sparkly trail", {"cc_hydroxide"}, nil, 15, "2,3,4,5,6", 4.1)
 -- addGlimmer("Slicing Liquid", "Gives a projectile a sickeningly sparkly trail", {"cc_slicing_liquid"}, nil, nil, nil, 4.21)
 -- addGlimmer("Glittering Liquid", "Gives a projectile a sickeningly sparkly trail", {"cc_glittering_liquid"}, nil, nil, nil, 4.21)

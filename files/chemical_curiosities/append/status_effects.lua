@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 
 
 table.insert(status_effects, {

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 if ModSettingGet("Hydroxide.cc_pixelscenes") == true then
 	table.insert(g_pixel_scene_01, {
 		prob			= 1.0,

@@ -4,7 +4,7 @@ init = function( entity_id )
     SetRandomSeed( x, y )
     roll_number = Random(1,100 * 1000) / 1000
     possible_rolls = {}
-    for k, v in pairs(materials_magic)do
+    for k, v in pairs(materials_magic)do ---@diagnostic disable-line: undefined-global
         if(v.percentage ~= nil)then
             if(roll_number < v.percentage)then
                 table.insert(possible_rolls, v)
