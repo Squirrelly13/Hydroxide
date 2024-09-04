@@ -47,7 +47,7 @@ local total_time = 0
 
 dofile("mods/Hydroxide/lib/translations.lua")
 local nxml = dofile_once("mods/Hydroxide/files/lib/luanxml/nxml.lua")
-
+nxml.error_handler = function() end
 
 local function make_timed(fn, name)
 	return function(...)
@@ -477,7 +477,7 @@ OnModPostInit(
 
 --More Musical Magic implementation, coded by Y🍵
 if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
-	local data = ModTextFileGetContent("data/moremusicalmagic/compelling_compatibility/musicmagic.lua")
+	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
 	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua", data)
 end
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
