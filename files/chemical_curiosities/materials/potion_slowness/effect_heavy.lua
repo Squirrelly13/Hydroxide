@@ -10,13 +10,10 @@ if(root == entity)then return end
 
 
 local component = EntityGetFirstComponent(root, "CharacterDataComponent")
+if not component then return end
+vel_x, vel_y = ComponentGetValue2(component, "mVelocity") or 0, 0
 
-local vel_x, vel_y = 0, 0
-vel_x, vel_y = ComponentGetValueVector2(component, "mVelocity")
-
-if(vel_y ~= nil) then
 local multiplier = 10
 vel_y = vel_y + multiplier
 
-ComponentSetValueVector2(component, "mVelocity", vel_x, vel_y)
-end
+ComponentSetValue2(component, "mVelocity", vel_x, vel_y)
