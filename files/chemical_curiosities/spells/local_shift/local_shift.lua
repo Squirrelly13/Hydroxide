@@ -102,7 +102,7 @@ local frame = GameGetFrameNum()
 
 SetRandomSeed( 89346, 42345+frame )
 
-EntityAddComponent( entity_id, "AudioComponent", {
+EntityAddComponent2( entity_id, "AudioComponent", {
 	file="data/audio/Desktop/projectiles.bank",
 	event_root="player_projectiles/meteor",
 	set_latest_event_position="1"

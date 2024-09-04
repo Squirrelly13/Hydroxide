@@ -23,7 +23,7 @@ if (enemyCount <= 200) then
 		animalPath = "data/entities/animals/failed_alchemist.xml"
 	else
 		local spriteComponent = EntityGetFirstComponent( entity_id, "SpriteComponent")
-		local spritePath = ComponentGetValue( spriteComponent, "image_file" )
+		local spritePath = ComponentGetValue2( spriteComponent, "image_file" )
 		animalPath = string.gsub(spritePath, "data/enemies_gfx/", "data/entities/animals/")
 	end
 

@@ -13,7 +13,7 @@ if ( player_id ~= NULL_ENTITY ) and ( entity_id ~= player_id ) then
 	
 	if ( comp ~= nil ) and ( comps ~= nil ) then
 		for a,b in ipairs( resists ) do
-			local r = tostring(ComponentObjectGetValue( comp, "damage_multipliers", b ))
+			local r = tostring(ComponentObjectGetValue2( comp, "damage_multipliers", b ))
 			
 			result = result .. r
 			
@@ -21,7 +21,7 @@ if ( player_id ~= NULL_ENTITY ) and ( entity_id ~= player_id ) then
 				result = result .. " "
 			end
 			
-			ComponentObjectSetValue( comp, "damage_multipliers", b, "0.75" )
+			ComponentObjectSetValue2( comp, "damage_multipliers", b, 0.75)
 		end
 	
 		if ( #result > 0 ) then

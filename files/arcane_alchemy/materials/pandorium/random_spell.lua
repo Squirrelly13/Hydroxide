@@ -20,7 +20,7 @@ function bullet_circle( which, count, speed, animal_ )
 		local bid = shoot_projectile( entity_id, name, pos_x + math.cos( rotation ) * 12, pos_y - math.sin( rotation ) * 12, vel_x, vel_y )
 		
 		if animal then
-			EntityAddComponent( bid, "VariableStorageComponent", 
+			EntityAddComponent2( bid, "VariableStorageComponent", 
             { 
                 _tags="no_gold_drop",
             } )

@@ -55,7 +55,7 @@ local bonuses = {
     local spells = merge_spells("urine", {})
     -- Make wand piss constantly
     local new_entity = EntityCreateNew()
-    EntityAddComponent(new_entity, "InheritTransformComponent", {
+    EntityAddComponent2(new_entity, "InheritTransformComponent", {
       _tags="enabled_in_world,enabled_in_hand",
       parent_hotspot_tag="shoot_pos"
     })
@@ -248,11 +248,11 @@ end,
   magic_liquid_hp_regeneration = function(wand)
     local spells = merge_spells("magic_liquid_hp_regeneration", { "HEAL_BULLET", "REGENERATION_FIELD" })
     -- on pickup, spawn 4 hiisi healers
-    EntityAddComponent(wand.entity_id, "VariableStorageComponent", {
+    EntityAddComponent2(wand.entity_id, "VariableStorageComponent", {
       name="material",
       value_string="magic_liquid_hp_regeneration",
     })
-    EntityAddComponent(wand.entity_id, "LuaComponent", {
+    EntityAddComponent2(wand.entity_id, "LuaComponent", {
       script_item_picked_up="mods/anvil_of_destiny/files/entities/anvil/wand_pickup_custom_effect.lua",
       execute_every_n_frame="-1",
       remove_after_executed="1"
@@ -325,7 +325,7 @@ end,
   magic_liquid_worm_attractor = function(wand)
     local spells = merge_spells("magic_liquid_worm_attractor", { "SUMMON_EGG", "SUMMON_HOLLOW_EGG", "HOMING", "HOMING_SHOOTER" })
     -- While wand is held spawn worms randomly and apply worm attractor game effect to the player
-    local comp = EntityAddComponent(wand.entity_id, "LuaComponent", {
+    local comp = EntityAddComponent2(wand.entity_id, "LuaComponent", {
       _tags="enabled_in_hand",
       script_source_file="mods/anvil_of_destiny/files/scripts/worm_spawner_and_attractor.lua",
       execute_every_n_frame="60",

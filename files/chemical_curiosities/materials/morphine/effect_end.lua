@@ -7,9 +7,9 @@ local root = EntityGetParent( entity)
 
 local vsc = EntityGetFirstComponentIncludingDisabled( entity, "VariableStorageComponent" )
 
-local trueHP = tonumber(ComponentGetValue( vsc, "value_float" ))
+local trueHP = tonumber(ComponentGetValue2( vsc, "value_float" ))
 
 local damagemodel = EntityGetFirstComponentIncludingDisabled( root, "DamageModelComponent" )
 
 
-ComponentSetValue(damagemodel, "hp", trueHP)
+ComponentSetValue2(damagemodel, "hp", trueHP)

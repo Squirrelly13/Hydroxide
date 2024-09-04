@@ -14,7 +14,7 @@ function item_pickup( entity_item, entity_who_picked, item_name )
 
 	if ( components ~= nil ) then
 		for key,comp_id in pairs(components) do 
-			local var_name = ComponentGetValue( comp_id, "name" )
+			local var_name = ComponentGetValue2( comp_id, "name" )
 			if( var_name == "entry_id") then
 				entry = ComponentGetValue2( comp_id, "value_string" )
 			end

@@ -63,7 +63,7 @@ end
 local function GetHotspotComponent(entity_id)
   local comps = EntityGetAllComponents(entity_id)
   for i,v in ipairs(comps) do
-    if ComponentGetValue(v, "transform_with_scale") ~= "" then
+    if ComponentGetValue2(v, "transform_with_scale") ~= "" then
       return v
     end
   end

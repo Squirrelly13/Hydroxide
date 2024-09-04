@@ -25,13 +25,12 @@ if ( player_id ~= NULL_ENTITY ) and ( entity_id ~= player_id ) then
 			local data = {}
 			
 			for r in string.gmatch( result, "%S+" ) do
-				table.insert( data, r )
+				table.insert( data, tonumber(r) )
 			end
 			
 			for a,b in ipairs( resists ) do
-				local r = tostring( data[a] ) or "1.0"
-				
-				ComponentObjectSetValue( comp, "damage_multipliers", b, r )
+				local r = data[a] or 1
+				ComponentObjectSetValue2( comp, "damage_multipliers", b, r )
 			end
 		end
 	end

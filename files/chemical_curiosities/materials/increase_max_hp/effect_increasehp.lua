@@ -12,9 +12,9 @@ local damagemodels = EntityGetComponent( root, "DamageModelComponent" )
 if( damagemodels ~= nil ) then
 	for i,damagemodel in ipairs(damagemodels) do
 	
-		max_hp = tonumber( ComponentGetValue( damagemodel, "max_hp" ) )
+		max_hp = tonumber( ComponentGetValue2( damagemodel, "max_hp" ) )
 		max_hp = max_hp + 0.1
 		
-		ComponentSetValue( damagemodel, "max_hp", max_hp)
+		ComponentSetValue2( damagemodel, "max_hp", max_hp)
 	end
 end

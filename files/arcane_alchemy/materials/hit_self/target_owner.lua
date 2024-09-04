@@ -8,4 +8,4 @@ local root = EntityGetClosestWithTag(x, y, "mortal")
 
 local component = EntityGetFirstComponent(entity, "IKLimbAttackerComponent")
 
-ComponentSetValue(component, "mTargetEntity", root)
+ComponentSetValue2(component, "mTargetEntity", root)

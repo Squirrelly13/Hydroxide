@@ -20,6 +20,7 @@ local x, y = EntityGetTransform( entity_id )
 SetRandomSeed( x, y )
 
 local ability_comp = EntityGetFirstComponent( entity_id, "AbilityComponent" )
+if not ability_comp then return end
 
 local wand = { }
 wand.name = {"Nerf Gun"}
@@ -43,20 +44,20 @@ AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
 
-ComponentSetValue( ability_comp, "ui_name", get_random_from( wand.name ) )
+ComponentSetValue2( ability_comp, "ui_name", get_random_from( wand.name ) )
 
-ComponentObjectSetValue( ability_comp, "gun_config", "reload_time", get_random_between_range( wand.reload_time ) )
-ComponentObjectSetValue( ability_comp, "gunaction_config", "fire_rate_wait", get_random_between_range( wand.fire_rate_wait ) )
-ComponentSetValue( ability_comp, "mana_charge_speed", get_random_between_range( wand.mana_charge_speed ) )
+ComponentObjectSetValue2( ability_comp, "gun_config", "reload_time", get_random_between_range( wand.reload_time ) )
+ComponentObjectSetValue2( ability_comp, "gunaction_config", "fire_rate_wait", get_random_between_range( wand.fire_rate_wait ) )
+ComponentSetValue2( ability_comp, "mana_charge_speed", get_random_between_range( wand.mana_charge_speed ) )
 
-ComponentObjectSetValue( ability_comp, "gun_config", "actions_per_round", wand.actions_per_round )
-ComponentObjectSetValue( ability_comp, "gun_config", "deck_capacity", deck_capacity )
-ComponentObjectSetValue( ability_comp, "gun_config", "shuffle_deck_when_empty", wand.shuffle_deck_when_empty )
-ComponentObjectSetValue( ability_comp, "gunaction_config", "spread_degrees", get_random_between_range( wand.spread_degrees ) )
-ComponentObjectSetValue( ability_comp, "gunaction_config", "speed_multiplier", wand.speed_multiplier )
+ComponentObjectSetValue2( ability_comp, "gun_config", "actions_per_round", wand.actions_per_round )
+ComponentObjectSetValue2( ability_comp, "gun_config", "deck_capacity", deck_capacity )
+ComponentObjectSetValue2( ability_comp, "gun_config", "shuffle_deck_when_empty", wand.shuffle_deck_when_empty )
+ComponentObjectSetValue2( ability_comp, "gunaction_config", "spread_degrees", get_random_between_range( wand.spread_degrees ) )
+ComponentObjectSetValue2( ability_comp, "gunaction_config", "speed_multiplier", wand.speed_multiplier )
 
-ComponentSetValue( ability_comp, "mana_max", mana_max )
-ComponentSetValue( ability_comp, "mana", mana_max )
+ComponentSetValue2( ability_comp, "mana_max", mana_max )
+ComponentSetValue2( ability_comp, "mana", mana_max )
 
 local action_count = 1
 local modifier_count = math.min( deck_capacity - action_count, Random( 1) )

@@ -39,7 +39,7 @@ function SongEntityLoad( sInstrument, sFlag, sFTimeWait, sEnt, sEntX, sEntY, sFT
     if( sEnt ~= 0 ) then
       local SongEntity = EntityLoad( sEnt, sEntX, sEntY )
       if ( 0 < sFTimeKill ) then
-        EntityAddComponent( SongEntity, "LifetimeComponent", {
+        EntityAddComponent2( SongEntity, "LifetimeComponent", {
           lifetime=tostring( sFTimeKill )
         } )
       end
@@ -68,17 +68,17 @@ function SongNotePlayed()
   local variables = EntityGetComponent( entity_id, "VariableStorageComponent" )
   if ( variables ~= nil ) then
     for i,comp in ipairs(variables) do
-      if ( ComponentGetValue( comp, "name" ) == "ocarina_note" ) then
+      if ( ComponentGetValue2( comp, "name" ) == "ocarina_note" ) then
         song = "ocarina_song"
         instrument_songs = ocarina_songs
         instrument_funcs = ocarina_funcs
-        note = ComponentGetValue( comp, "value_string" )
+        note = ComponentGetValue2( comp, "value_string" )
       end
-      if ( ComponentGetValue( comp, "name" ) == "kantele_note" ) then
+      if ( ComponentGetValue2( comp, "name" ) == "kantele_note" ) then
         song = "kantele_song"
         instrument_songs = kantele_songs
         instrument_funcs = kantele_funcs
-        note = ComponentGetValue( comp, "value_string" )
+        note = ComponentGetValue2( comp, "value_string" )
       end
     end
   end
@@ -95,8 +95,8 @@ function SongNotePlayed()
     variables = EntityGetComponent( player_id, "VariableStorageComponent" )
     if ( variables ~= nil ) then
       for i,comp in ipairs(variables) do
-        if ( ComponentGetValue( comp, "name" ) == song ) then
-          local notesstr = ComponentGetValue( comp, "value_string" ) -- player oca storage string
+        if ( ComponentGetValue2( comp, "name" ) == song ) then
+          local notesstr = ComponentGetValue2( comp, "value_string" ) -- player oca storage string
           local matches = {}
           if ( notesstr ~= "" ) then -- string to table if not empty
             for match in string.gmatch( notesstr, "[^,]+" ) do
@@ -115,7 +115,7 @@ function SongNotePlayed()
               for i=0,notec do --check notes in reverse
                 if (b[#b-i] == matches[#matches-i]) then
                   if (i == notec) then
-                    ComponentSetValue( comp, "value_string", "" )
+                    ComponentSetValue2( comp, "value_string", "" )
                     -- GamePrint( "Song: "..song)
                     instrument_funcs[song]()
                     return
@@ -133,7 +133,7 @@ function SongNotePlayed()
             end
           end
           notesstr = table.concat(matches,",")
-          ComponentSetValue( comp, "value_string", notesstr )
+          ComponentSetValue2( comp, "value_string", notesstr )
         end
       end
     end

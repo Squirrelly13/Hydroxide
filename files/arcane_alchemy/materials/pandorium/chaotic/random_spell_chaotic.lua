@@ -88,11 +88,11 @@ function add_spell(spellType, position, tier)
 
     --EntityAddTag(spell, "card_action")
 
-    EntityAddComponent(spell, "ItemActionComponent", {
+    EntityAddComponent2(spell, "ItemActionComponent", {
         action_id = spell_id
     })
 
-    local item_comp = EntityAddComponent(spell, "ItemComponent")
+    local item_comp = EntityAddComponent2(spell, "ItemComponent")
     ComponentSetValue2(item_comp, "inventory_slot", position, 1)
 
     --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
