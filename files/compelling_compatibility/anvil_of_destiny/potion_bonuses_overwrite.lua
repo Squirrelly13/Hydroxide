@@ -254,8 +254,8 @@ end,
     })
     EntityAddComponent2(wand.entity_id, "LuaComponent", {
       script_item_picked_up="mods/anvil_of_destiny/files/entities/anvil/wand_pickup_custom_effect.lua",
-      execute_every_n_frame="-1",
-      remove_after_executed="1"
+      execute_every_n_frame=-1,
+      remove_after_executed=true
     })
     wand.manaChargeSpeed = wand.manaChargeSpeed + Random(50, 70)
     add_spells_to_wand(wand, spells, math.min(Random(3, 5), math.floor(wand.capacity / 2)), true)
@@ -328,8 +328,7 @@ end,
     local comp = EntityAddComponent2(wand.entity_id, "LuaComponent", {
       _tags="enabled_in_hand",
       script_source_file="mods/anvil_of_destiny/files/scripts/worm_spawner_and_attractor.lua",
-      execute_every_n_frame="60",
-      execute_on_added="0",
+      execute_every_n_frame=60,
     })
     EntitySetComponentIsEnabled(wand.entity_id, comp, false)
     add_spells_to_wand(wand, spells, math.min(Random(3, 5), math.floor(wand.capacity / 2)))
