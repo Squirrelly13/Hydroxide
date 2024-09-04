@@ -1,6 +1,33 @@
 Potion + Wand = Potion Bonus
 Potion + Tablet + Wand = Potion Ability/Primary? (can only have 1)
 
+Do this by Potion + Wand running [material] function and Potion + Tablet + Wand running enhanced_[material]
+This way it can check for each the same way, will require a check for tablet consumption in the case that the given material does not have an enhanced_ script ver
+(this can likely be done by checking if the script enhanced_[material] exists, and disabling the tablet input if so.)
+
+
+
+Pouring Hungry Slime on the anvil causes it to consume it and turn into Divine Slime (anvil will still break when enough is consumed)
+(this was mostly added since its impossible to have hungry slime not eat the anvil, so we might as well have it be special in some way)
+no idea what function this will serve
+
+
+The material the anvil transmutes into when it breaks is now Divine Magma instead of Lava (Divine Magma will be overtaken/diluted by Lava the same way Invisibilium is by Water)
+no idea what function this will serve
+
+
+
+Pouring Nullium on the anvil will slightly corrode it, but generally won't be enough to break it unless you have several flasks
+(this is to partially hint at and continue the theme that Nullium damages the anvil, as seen later)
+
+
+Using Nullium potion on the anvil kills it (all entities relating to it (converter, damage checker, anything script-related) are removed leaving only the physical anvil itself)
+This allows the player to make Divine Slime without half the anvil turning into Divine "data/materials_gfx/magic_gate.png"
+
+Do this via potion bonus with special field "potion must come first" or whatever (to prevent wands from being encased within the anvil forever)
+Alternatively, Wand can be gotten back, but will have 0 Max Mana and 0 Mana Charge Speed
+
+
 
 
 
