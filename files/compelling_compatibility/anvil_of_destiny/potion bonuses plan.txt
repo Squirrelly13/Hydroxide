@@ -1,0 +1,6 @@
+Potion + Wand = Potion Bonus
+Potion + Tablet + Wand = Potion Ability/Primary? (can only have 1)
+
+
+
+

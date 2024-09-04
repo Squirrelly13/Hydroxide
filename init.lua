@@ -338,11 +338,16 @@ if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can a
 	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
 
-	local xml = nxml.parse(ModTextFileGetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml"))
-	for elem in xml:each_child() do
-		elem.attr.to_material = "aa_divine_magma"
-	end
-	ModTextFileSetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml", tostring(xml))
+	local anvil_converter = "mods/anvil_of_destiny/files/entities/anvil/converter.xml"
+	local xml = ModDoesFileExist(anvil_converter) and nxml.parse(ModTextFileGetContent(anvil_converter))
+	if xml then
+	
+		for elem in xml:each_child() do
+			elem.attr.to_material = "aa_divine_magma"
+		end
+		ModTextFileSetContent(anvil_converter, tostring(xml))
+		
+	else	print("AoD Anvil Converter not found at expected location: \"" .. anvil_converter .. "\". Please contact/inform @UserK")	end
 
 end
 
