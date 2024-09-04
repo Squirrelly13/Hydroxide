@@ -46,7 +46,7 @@ function item_pickup( entity_item, entity_who_picked, name )
 												ComponentSetValue2(item_component, "uses_remaining", uses_remaining)
 												local inventory2_comp = EntityGetFirstComponent( entity_who_picked, "Inventory2Component" )
 												if( inventory2_comp ) then
-													ComponentSetValue( inventory2_comp, "mActualActiveItem", "0" )
+													ComponentSetValue2( inventory2_comp, "mActualActiveItem", "0" )
 												end
 												break
 											end
