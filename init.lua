@@ -354,7 +354,7 @@ end
 --	Glimmers Expanded
 
 if (ModIsEnabled("GlimmersExpanded")) then
-	ModLuaFileAppend("mods/GlimmersExpanded/files/addGlimmers.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
+	ModLuaFileAppend("mods/GlimmersExpanded/files/lib/glimmer_data.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
 end
 
 
