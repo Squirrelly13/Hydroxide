@@ -486,6 +486,7 @@ end,
   AA_MAT_SHRINKIUM = function(wand)
     -- Shrink the wand sprite and hotspots, reduce capacity, increase firing rate and recharge speed
     local sprite_component = EntityGetFirstComponentIncludingDisabled(wand.entity_id, "SpriteComponent")
+    if not sprite_component then return end
     ComponentSetValue2(sprite_component, "has_special_scale", true)
     ComponentSetValue2(sprite_component, "special_scale_x", 0.5)
     ComponentSetValue2(sprite_component, "special_scale_y", 0.5)
@@ -498,6 +499,7 @@ end,
       end
     end
     local hotspot_component = EntityGetFirstComponentIncludingDisabled(wand.entity_id, "HotspotComponent", "shoot_pos")
+    if not hotspot_component then return end
     local offset_x, offset_y = ComponentGetValue2(hotspot_component, "offset")
     if not var_store_offset then
       ComponentSetValue2(hotspot_component, "offset", math.floor(offset_x * 0.5), math.floor(offset_y * 0.5))
@@ -550,6 +552,7 @@ end,
     for i, spell in ipairs(spells) do
       local item_entity = CreateItemActionEntity(spell.action_id, x, y - 3)
       local velocity_component = EntityGetFirstComponentIncludingDisabled(item_entity, "VelocityComponent")
+      if not velocity_component then return end
       ComponentSetValue2(velocity_component, "mVelocity", Random(-80, 80), Random(-160, -200))
     end
     wand:RemoveSpells()

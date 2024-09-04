@@ -9,7 +9,7 @@ SetRandomSeed(x,y)
 local root = EntityGetClosestWithTag(x, y, "mortal")
 
 local component = EntityGetFirstComponent(root, "CharacterDataComponent")
-
+if not component then return end
 local vel_x, vel_y = ComponentGetValue2(component, "mVelocity")
 
 if(Random(0,100) > 50)then

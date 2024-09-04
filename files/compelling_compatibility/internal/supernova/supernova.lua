@@ -2,10 +2,10 @@ dofile_once("data/scripts/lib/utilities.lua")
 
 
 local entity_id    = GetUpdatedEntityID()
-local pos_x, pos_y, rot = EntityGetTransform( entity_id )
-SetRandomSeed( GameGetFrameNum(), pos_x + pos_y + entity_id )
+local x, y, rot = EntityGetTransform( entity_id )
+SetRandomSeed( GameGetFrameNum(), x + y + entity_id )
 
-print("SUMMONING SUPERNOVA AT " .. pos_x .. " " .. pos_y .. "!!!!!!!!!!!!!!!!!")
+print("SUMMONING SUPERNOVA AT " .. x .. " " .. y .. "!!!!!!!!!!!!!!!!!")
 
 	
 EntityLoad( "data/entities/particles/supernova.xml", x, y )

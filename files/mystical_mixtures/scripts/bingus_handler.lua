@@ -1,7 +1,7 @@
 local entity = GetUpdatedEntityID()
 
-local var_storage_comps = EntityGetComponentIncludingDisabled( entity, "VariableStorageComponent" ) or {}
-
+local var_storage_comps = EntityGetComponentIncludingDisabled( entity, "VariableStorageComponent" )
+if not var_storage_comps then return end
 local volume_var = nil
 for i,comp in ipairs( var_storage_comps ) do
     local var_name = ComponentGetValue2( comp, "name" )
@@ -10,7 +10,7 @@ for i,comp in ipairs( var_storage_comps ) do
         break
     end
 end
-
+if not volume_var then return end
 local volume = ComponentGetValue2( volume_var, "value_float" )
 
 function interacting( entity_who_interacted, entity_interacted, interactable_name )
@@ -26,5 +26,5 @@ function interacting( entity_who_interacted, entity_interacted, interactable_nam
 end
 
 local audio_loop = EntityGetFirstComponentIncludingDisabled( entity, "AudioLoopComponent" )
-
+if not audio_loop then return end
 ComponentSetValue2( audio_loop, "m_volume", volume )

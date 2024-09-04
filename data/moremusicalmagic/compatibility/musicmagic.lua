@@ -18,7 +18,7 @@ function SongEntityLoad( sInstrument, sFlag, sFTimeWait, sEnt, sEntX, sEntY, sFT
   local newgame_gFlag = "LAST_NG_PLUS_"..gFlag
   local newgame_plus_c = tonumber( SessionNumbersGetValue("NEW_GAME_PLUS_COUNT") )
   local newgame_plus_c_last = tonumber( GlobalsGetValue(newgame_gFlag) )
-  local lastFlagFrameNum = tonumber( GlobalsGetValue( gFlag, 0 ) ) -- 0 = first time used in run
+  local lastFlagFrameNum = tonumber( GlobalsGetValue( gFlag, "0" ) ) -- 0 = first time used in run
   local newgame = false
   if( newgame_plus_c_last ~= nil ) and ( newgame_plus_c ~= nil ) and ( newgame_plus_c_last ~= newgame_plus_c ) then
     newgame = true -- bypasses for when going to NG+
@@ -61,9 +61,8 @@ end
 
 function SongNotePlayed()
   local song = nil
-  local instrument = nil
-  local instrument_songs = nil
-  local instrument_funcs = nil
+  local instrument_songs = {}
+  local instrument_funcs = {}
   local note = nil
   local variables = EntityGetComponent( entity_id, "VariableStorageComponent" )
   if ( variables ~= nil ) then

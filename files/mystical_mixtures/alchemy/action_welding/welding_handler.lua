@@ -49,12 +49,12 @@ local function Split (inputstr, sep)
 	return t
 end
 
-if(actions == nil)then
+if(actions == nil)then 
     dofile("data/scripts/gun/gun_actions.lua")
 end
 
 local function GetActionWithID(id)
-    for k, action in ipairs(actions)do
+    for k, action in ipairs(actions --[[@as table]])do
         if(action.id == id)then
             return action
         end
@@ -125,7 +125,7 @@ handler.appendEnchantmentString = function(entity_id)
 			end
 			
 			reading_name = true
-			for k, a in ipairs(actions)do
+			for k, a in ipairs(actions --[[@as table]])do
 				if(a.id == action_id)then
 					
 					ComponentSetValue2( item_comp, "always_use_item_name_in_ui", true )

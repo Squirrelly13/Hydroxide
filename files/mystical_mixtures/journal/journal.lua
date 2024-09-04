@@ -3,7 +3,7 @@ local root = EntityGetRootEntity( entity )
 
 
 local interactable_component = EntityGetFirstComponentIncludingDisabled(entity, "InteractableComponent")
-
+if not interactable_component then return end
 if(root == entity)then
     journal_open = false
     if(gui ~= nil)then

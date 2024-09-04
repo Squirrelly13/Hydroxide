@@ -130,11 +130,13 @@ add_spell(0, 15, 1)
 --print("\n PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
+if not inventory2 then return end
 ComponentSetValue2(inventory2, "mForceRefresh", true)
 ComponentSetValue2(inventory2, "mActualActiveItem", 0)
 
 
 local platformShooterPlayer = EntityGetFirstComponentIncludingDisabled(entity_id, "PlatformShooterPlayerComponent")
+if not platformShooterPlayer then return end
 ComponentSetValue2(platformShooterPlayer, "mForceFireOnNextUpdate", true)
 
 

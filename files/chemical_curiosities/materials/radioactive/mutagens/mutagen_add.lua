@@ -4,7 +4,7 @@ local owner = EntityGetRootEntity(entity_id)
 
 local x,y = EntityGetTransform(owner)
 
-local children = EntityGetAllChildren(owner)
+local children = EntityGetAllChildren(owner) or {}
 
 local count = 0
 local leggy = false

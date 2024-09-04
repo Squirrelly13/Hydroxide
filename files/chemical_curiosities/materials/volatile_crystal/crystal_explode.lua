@@ -4,7 +4,7 @@ local rockets = EntityGetWithTag("rocket")
 local rocketCount = #rockets
 
 local entity_id    = GetUpdatedEntityID()
-math.randomseed(entity_id)
+math.randomseed(entity_id --[[@as number]])
 
 if (rocketCount <= 5) then
 	

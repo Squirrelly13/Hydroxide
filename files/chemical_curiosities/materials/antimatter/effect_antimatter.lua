@@ -7,7 +7,7 @@ local root = EntityGetRootEntity( entity )
 local x, y = EntityGetTransform(root)
 local max_hp = 0	
 local damagemodel = EntityGetFirstComponentIncludingDisabled( root, "DamageModelComponent" )
-
+if not damagemodel then return end
 max_hp = ComponentGetValue2( damagemodel, "max_hp" )
 
 EntityInflictDamage( root, max_hp / 33 , "DAMAGE_SLICE", "Annihilation", "PLAYER_RAGDOLL_CAMERA", 0, 0)
