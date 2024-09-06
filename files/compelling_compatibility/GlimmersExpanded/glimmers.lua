@@ -11,7 +11,7 @@
 -- addGlimmer("Cloning Solution", "Gives a projectile a sickeningly sparkly trail", {"aa_cloning_solution"}, nil, nil, nil, 4.21)
 -- addGlimmer("Bingus", "Gives a projectile a sickeningly sparkly trail", {"mm_bingus"}, nil, nil, nil, 4.21)
 
-cc_glimmers = {
+local cc_glimmers = {
     {
         name = "Hydroxide",
         desc = "Gives a projectile a corrosive sparkly trail",
@@ -91,6 +91,15 @@ cc_glimmers = {
         mod_prefix = "CC"
     },
 }
+
+local aa_glimmers = {
+
+}
+
+local mm_glimmers = {
+
+}
+
 
 
 for _,entry in ipairs(cc_glimmers) do

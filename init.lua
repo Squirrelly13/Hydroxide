@@ -333,7 +333,7 @@ if (ModIsEnabled("copis_things")) then
 end --copi's chemical curiosity compatibility combo
 
 
-if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can add custom materials to anvil
+if ModIsEnabled("anvil_of_destiny") then --[[implement this properly when we can add custom materials to anvil]]
 
 	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
@@ -341,13 +341,35 @@ if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can a
 	local anvil_converter = "mods/anvil_of_destiny/files/entities/anvil/converter.xml"
 	local xml = ModDoesFileExist(anvil_converter) and nxml.parse(ModTextFileGetContent(anvil_converter))
 	if xml then
-	
 		for elem in xml:each_child() do
 			elem.attr.to_material = "aa_divine_magma"
 		end
 		ModTextFileSetContent(anvil_converter, tostring(xml))
-		
-	else	print("AoD Anvil Converter not found at expected location: \"" .. anvil_converter .. "\". Please contact/inform @UserK")	end
+	else
+		print("AoD Anvil Converter not found at expected location: \"" .. anvil_converter .. "\". Please contact/inform @UserK")
+	end
+
+
+ 	--[[local anvil_script = "mods/anvil_of_destiny/files/entities/anvil/anvil.lua"
+	if ModDoesFileExist(anvil_script) then
+		ModTextFileSetContent(anvil_script, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/anvil_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. anvil_script .. "\". Please contact/inform @UserK")
+	end
+
+	local potion_bonuses = "mods/anvil_of_destiny/files/entities/anvil/potion_bonuses.lua"
+	if ModDoesFileExist(potion_bonuses) then
+		ModTextFileSetContent(potion_bonuses, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_bonuses_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. potion_bonuses .. "\". Please contact/inform @UserK")
+	end
+
+	local potion_insert = "mods/anvil_of_destiny/files/entities/anvil/potion_insert.lua"
+	if ModDoesFileExist(potion_insert) then
+		ModTextFileSetContent(potion_insert, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_insert_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. potion_insert .. "\". Please contact/inform @UserK")
+	end ]] --hacky method to rewrite parts of AoD before sharpy said i should just ask horscht to implement stuff directly into the base mod lmao
 
 end
 
