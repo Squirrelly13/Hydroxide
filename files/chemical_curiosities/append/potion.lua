@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 table.insert(materials_standard, {
 	material="cc_hydroxide",
 	cost=250,

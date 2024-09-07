@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local oldmax = spawnlists.potion_spawnlist.rnd_max
 local oldmax2 = spawnlists.potion_spawnlist_liquidcave.rnd_max
 

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 if ModSettingGet("Hydroxide.cc_props") == true then
 	table.insert(g_props, {
 		prob 		= 0.3,

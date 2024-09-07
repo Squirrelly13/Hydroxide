@@ -52,9 +52,9 @@ ocarina_funcs["alchemy"] = function()
       --copy starts here
       if ( variablestorages ~= nil ) then
         for j,storage_id in ipairs(variablestorages) do
-          local var_name = ComponentGetValue( storage_id, "name" )
+          local var_name = ComponentGetValue2( storage_id, "name" )
           if ( var_name == "status" ) then
-            local status = ComponentGetValue( storage_id, "value_int" )
+            local status = ComponentGetValue2( storage_id, "value_int" )
             
             status = status + 1
             
@@ -103,9 +103,9 @@ kantele_funcs["alchemy"] = function()
       --copy starts here
       if ( variablestorages ~= nil ) then
         for j,storage_id in ipairs(variablestorages) do
-          local var_name = ComponentGetValue( storage_id, "name" )
+          local var_name = ComponentGetValue2( storage_id, "name" )
           if ( var_name == "status" ) then
-            local status = ComponentGetValue( storage_id, "value_int" )
+            local status = ComponentGetValue2( storage_id, "value_int" )
             
             status = status + 1
             

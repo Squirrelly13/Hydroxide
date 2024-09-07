@@ -80,7 +80,7 @@
         input_cell1="lava"      input_cell2="aa_divine_magma"
         output_cell1="lava"     output_cell2="lava"
     >
-    </Reaction>
+    </Reaction> <!--dilute Divine Magma with Regular-Ass Magma:tm:-->
 
 
 </Materials>

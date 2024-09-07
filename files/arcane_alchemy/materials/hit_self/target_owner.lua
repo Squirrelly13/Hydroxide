@@ -7,5 +7,5 @@ local x, y = EntityGetTransform(entity)
 local root = EntityGetClosestWithTag(x, y, "mortal")
 
 local component = EntityGetFirstComponent(entity, "IKLimbAttackerComponent")
-
-ComponentSetValue(component, "mTargetEntity", root)
+if not component then return end
+ComponentSetValue2(component, "mTargetEntity", root)

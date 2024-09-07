@@ -102,16 +102,17 @@ local frame = GameGetFrameNum()
 
 SetRandomSeed( 89346, 42345+frame )
 
-EntityAddComponent( entity_id, "AudioComponent", {
+EntityAddComponent2( entity_id, "AudioComponent", {
 	file="data/audio/Desktop/projectiles.bank",
 	event_root="player_projectiles/meteor",
-	set_latest_event_position="1"
+	set_latest_event_position=true
 });
 
 local rnd = random_create(9123,58925+frame )
 local from = pick_random_from_table_weighted( rnd, materials_from )
-local to = pick_random_from_table_weighted( rnd, materials_to )
-
+local to = pick_random_from_table_weighted( rnd, materials_to )	---@diagnostic disable-line: undefined-global
+if not to then return end
+if not from then return end
 local toname = ""
 toname = CellFactory_GetUIName(CellFactory_GetType(to.material))
 if string.sub(toname, 1, 1) == "$" then
@@ -119,5 +120,5 @@ if string.sub(toname, 1, 1) == "$" then
 end
 
 GamePrint("shifted " .. from.name .. " to " .. toname)
-shift_materials_in_range(200, from.materials, to.material, entity_id)
+shift_materials_in_range(200, from.materials, to.material, entity_id)	---@diagnostic disable-line: undefined-global
 

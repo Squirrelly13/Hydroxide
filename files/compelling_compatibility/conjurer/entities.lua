@@ -34,6 +34,12 @@ table.insert(ALL_ENTITIES, {
       image="mods/Hydroxide/files/compelling_compatibility/conjurer/entities/runestone_crystal.png",  -- This should be a 16*16px icon
       path="mods/hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml",
     },
+    {
+      name="Supernova",
+      desc="Supernova test entity",
+      image="mods/Hydroxide/files/compelling_compatibility/conjurer/entities/runestone_crystal.png",  -- This should be a 16*16px icon
+      path="mods/hydroxide/files/compelling_compatibility/internal/supernova/load_supernova.xml",
+    },
     -- ... and so on
   },
 })

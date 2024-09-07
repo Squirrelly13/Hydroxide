@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 dofile("data/scripts/status_effects/status_list.lua")
 
 local unique_status_effects = {}

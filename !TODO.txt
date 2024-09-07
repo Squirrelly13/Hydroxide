@@ -3,10 +3,11 @@ New Features:
 -Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
 -Finalise Chaotic Pandorium
 -Think of things for Terror Mode
--Add Runestone of Spells (converts things to Chaotic Pandorium)
+-Add Runestone of Spells (converts things to ~~Chaotic~~ Pandorium (chaotic would be too much, might even scrap the idea in general))
 -Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
 -Local Failshift perk, triggers a local shift when near dangerous materials
 -Add interactions or something to some materials to make them less useless (like the slowdown potions)
+-Subway Surpher.
 
 Fixes/Reworks:
 -Fix Veilium effect being too snappy

@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 table.insert(materials_standard, {
 	material="sulphur",
 	cost=175,
@@ -57,7 +58,7 @@ function init( entity_id )
 		local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
 			
 		if ( comp ~= nil ) then
-			ComponentSetValue( comp, "barrel_size", total_capacity )
+			ComponentSetValue2( comp, "barrel_size", total_capacity )
 		end
 		
 		EntityAddTag( entity_id, "extra_potion_capacity" )

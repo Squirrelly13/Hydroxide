@@ -88,11 +88,11 @@ function add_spell(spellType, position, tier)
 
     --EntityAddTag(spell, "card_action")
 
-    EntityAddComponent(spell, "ItemActionComponent", {
+    EntityAddComponent2(spell, "ItemActionComponent", {
         action_id = spell_id
     })
 
-    local item_comp = EntityAddComponent(spell, "ItemComponent")
+    local item_comp = EntityAddComponent2(spell, "ItemComponent")
     ComponentSetValue2(item_comp, "inventory_slot", position, 1)
 
     --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
@@ -130,11 +130,13 @@ add_spell(0, 15, 1)
 --print("\n PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
+if not inventory2 then return end
 ComponentSetValue2(inventory2, "mForceRefresh", true)
 ComponentSetValue2(inventory2, "mActualActiveItem", 0)
 
 
 local platformShooterPlayer = EntityGetFirstComponentIncludingDisabled(entity_id, "PlatformShooterPlayerComponent")
+if not platformShooterPlayer then return end
 ComponentSetValue2(platformShooterPlayer, "mForceFireOnNextUpdate", true)
 
 

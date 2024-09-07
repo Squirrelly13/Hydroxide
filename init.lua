@@ -47,7 +47,7 @@ local total_time = 0
 
 dofile("mods/Hydroxide/lib/translations.lua")
 local nxml = dofile_once("mods/Hydroxide/files/lib/luanxml/nxml.lua")
-
+nxml.error_handler = function() end
 
 local function make_timed(fn, name)
 	return function(...)
@@ -333,23 +333,50 @@ if (ModIsEnabled("copis_things")) then
 end --copi's chemical curiosity compatibility combo
 
 
-if ModIsEnabled("anvil_of_destiny") then --implement this properly when we can add custom materials to anvil
+if ModIsEnabled("anvil_of_destiny") then --[[implement this properly when we can add custom materials to anvil]]
 
 	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
 
-	local xml = nxml.parse(ModTextFileGetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml"))
-	for elem in xml:each_child() do
-		elem.attr.to_material = "aa_divine_magma"
+	local anvil_converter = "mods/anvil_of_destiny/files/entities/anvil/converter.xml"
+	local xml = ModDoesFileExist(anvil_converter) and nxml.parse(ModTextFileGetContent(anvil_converter))
+	if xml then
+		for elem in xml:each_child() do
+			elem.attr.to_material = "aa_divine_magma"
+		end
+		ModTextFileSetContent(anvil_converter, tostring(xml))
+	else
+		print("AoD Anvil Converter not found at expected location: \"" .. anvil_converter .. "\". Please contact/inform @UserK")
 	end
-	ModTextFileSetContent("mods/anvil_of_destiny/files/entities/anvil/converter.xml", tostring(xml))
+
+
+ 	--[[local anvil_script = "mods/anvil_of_destiny/files/entities/anvil/anvil.lua"
+	if ModDoesFileExist(anvil_script) then
+		ModTextFileSetContent(anvil_script, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/anvil_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. anvil_script .. "\". Please contact/inform @UserK")
+	end
+
+	local potion_bonuses = "mods/anvil_of_destiny/files/entities/anvil/potion_bonuses.lua"
+	if ModDoesFileExist(potion_bonuses) then
+		ModTextFileSetContent(potion_bonuses, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_bonuses_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. potion_bonuses .. "\". Please contact/inform @UserK")
+	end
+
+	local potion_insert = "mods/anvil_of_destiny/files/entities/anvil/potion_insert.lua"
+	if ModDoesFileExist(potion_insert) then
+		ModTextFileSetContent(potion_insert, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_insert_overwrite.lua"))
+	else	
+		print("AoD Anvil Converter not found at expected location: \"" .. potion_insert .. "\". Please contact/inform @UserK")
+	end ]] --hacky method to rewrite parts of AoD before sharpy said i should just ask horscht to implement stuff directly into the base mod lmao
 
 end
 
 --	Glimmers Expanded
 
 if (ModIsEnabled("GlimmersExpanded")) then
-	ModLuaFileAppend("mods/GlimmersExpanded/files/addGlimmers.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
+	ModLuaFileAppend("mods/GlimmersExpanded/files/lib/glimmer_data.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
 end
 
 
@@ -472,7 +499,7 @@ OnModPostInit(
 
 --More Musical Magic implementation, coded by Y🍵
 if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
-	local data = ModTextFileGetContent("data/moremusicalmagic/compelling_compatibility/musicmagic.lua")
+	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
 	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua", data)
 end
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")

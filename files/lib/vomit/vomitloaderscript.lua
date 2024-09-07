@@ -10,7 +10,9 @@ local root_x, root_y = EntityGetTransform(root)
 
 local variable_storage = EntityGetComponent(entity, "VariableStorageComponent")
 
-local root_children = EntityGetAllChildren(root)
+if not variable_storage then return end
+
+local root_children = EntityGetAllChildren(root) or {}
 
 local has_vomit = false
 
@@ -43,7 +45,7 @@ if(has_vomit ~= true)then
                 EntityAddChild(root, vomit)
 
                 local particle_emitter = EntityGetFirstComponent(vomit, "ParticleEmitterComponent")
-
+                if not particle_emitter then return end
                 ComponentSetValue2(particle_emitter, "emitted_material_name", material)
             end
         end

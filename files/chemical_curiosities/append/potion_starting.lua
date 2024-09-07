@@ -1,5 +1,6 @@
 -- put weighted table here 
-SetRandomSeed( StatsGetValue("world_seed"), StatsGetValue("world_seed") )
+local world_seed = tonumber(StatsGetValue("world_seed")) or 1
+SetRandomSeed( world_seed, world_seed )
 local starterpotions = {
 	{	probability = 1.500, "water"},
 	{	probability = 1.000, "water_swamp"},

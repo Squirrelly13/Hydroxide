@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 table.insert(status_effects, {
 	id="AA_HIT_SELF",
 	ui_name="$status_aa_hit_self",

@@ -42,7 +42,7 @@ for k, v in ipairs(projectile_component)do
 	local mWhoShot = ComponentGetValue2(v, "mWhoShot")
 	local mEntityThatShot = ComponentGetValue2(v, "mEntityThatShot")
 
-		local componentProperties = ComponentGetMembers(v)
+		local componentProperties = ComponentGetMembers(v) or {}
 
 		projectile_component_data.count = projectile_component_data.count + 1
 
@@ -68,7 +68,7 @@ for k, v in ipairs(projectile_component)do
 		end
 
 		for objectName, _ in pairs(projectile_component_data.objects)do
-			local objectProperties = ComponentObjectGetMembers(v, objectName)
+			local objectProperties = ComponentObjectGetMembers(v, objectName) or {}
 
 			for a, b in pairs(objectProperties)do
 				if(tonumber(b) ~= nil)then
@@ -111,10 +111,10 @@ local velocity_component_properties = {
 	count = -1,
 }
 
-local velocity_component = EntityGetComponent(projectile, "VelocityComponent")
+local velocity_component = EntityGetComponent(projectile, "VelocityComponent") or {}
 for k, v in ipairs(velocity_component)do
 
-		local componentProperties = ComponentGetMembers(v)
+		local componentProperties = ComponentGetMembers(v) or {}
 
 		velocity_component_properties.count = velocity_component_properties.count + 1
 

@@ -4,7 +4,7 @@ init = function( entity_id )
     SetRandomSeed( x, y )
     roll_number = Random(1,100 * 1000) / 1000
     possible_rolls = {}
-    for k, v in pairs(materials_magic)do
+    for k, v in pairs(materials_magic)do ---@diagnostic disable-line: undefined-global
         if(v.percentage ~= nil)then
             if(roll_number < v.percentage)then
                 table.insert(possible_rolls, v)
@@ -24,9 +24,9 @@ init = function( entity_id )
     
         if( components ~= nil ) then
             for key,comp_id in pairs(components) do 
-                local var_name = ComponentGetValue( comp_id, "name" )
+                local var_name = ComponentGetValue2( comp_id, "name" )
                 if( var_name == "potion_material") then
-                    potion_material = ComponentGetValue( comp_id, "value_string" )
+                    potion_material = ComponentGetValue2( comp_id, "value_string" )
                 end
             end
         end
@@ -42,7 +42,7 @@ init = function( entity_id )
             local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
                 
             if ( comp ~= nil ) then
-                ComponentSetValue( comp, "barrel_size", total_capacity )
+                ComponentSetValue2( comp, "barrel_size", total_capacity )
             end
             
             EntityAddTag( entity_id, "extra_potion_capacity" )

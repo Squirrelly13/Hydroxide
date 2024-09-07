@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local function register_item(listname, weight, entity, offset) -- use this to register an item in spawn table
     if ( type( listname ) == "string" ) then
         local newmin = spawnlists[listname].rnd_max + 1

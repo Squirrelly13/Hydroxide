@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 
 
 table.insert(materials_magic, {
@@ -99,9 +100,9 @@ init = function( entity_id )
     
         if( components ~= nil ) then
             for key,comp_id in pairs(components) do 
-                local var_name = ComponentGetValue( comp_id, "name" )
+                local var_name = ComponentGetValue2( comp_id, "name" )
                 if( var_name == "potion_material") then
-                    potion_material = ComponentGetValue( comp_id, "value_string" )
+                    potion_material = ComponentGetValue2( comp_id, "value_string" )
                 end
             end
         end
@@ -117,7 +118,7 @@ init = function( entity_id )
             local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
                 
             if ( comp ~= nil ) then
-                ComponentSetValue( comp, "barrel_size", total_capacity )
+                ComponentSetValue2( comp, "barrel_size", total_capacity )
             end
             
             EntityAddTag( entity_id, "extra_potion_capacity" )

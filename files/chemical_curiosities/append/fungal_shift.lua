@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 table.insert(materials_from, {
 		probability = 1.0,
 		materials = { "cc_hydroxide" },

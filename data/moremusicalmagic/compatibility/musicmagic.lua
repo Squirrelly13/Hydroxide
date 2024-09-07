@@ -18,7 +18,7 @@ function SongEntityLoad( sInstrument, sFlag, sFTimeWait, sEnt, sEntX, sEntY, sFT
   local newgame_gFlag = "LAST_NG_PLUS_"..gFlag
   local newgame_plus_c = tonumber( SessionNumbersGetValue("NEW_GAME_PLUS_COUNT") )
   local newgame_plus_c_last = tonumber( GlobalsGetValue(newgame_gFlag) )
-  local lastFlagFrameNum = tonumber( GlobalsGetValue( gFlag, 0 ) ) -- 0 = first time used in run
+  local lastFlagFrameNum = tonumber( GlobalsGetValue( gFlag, "0" ) ) -- 0 = first time used in run
   local newgame = false
   if( newgame_plus_c_last ~= nil ) and ( newgame_plus_c ~= nil ) and ( newgame_plus_c_last ~= newgame_plus_c ) then
     newgame = true -- bypasses for when going to NG+
@@ -39,7 +39,7 @@ function SongEntityLoad( sInstrument, sFlag, sFTimeWait, sEnt, sEntX, sEntY, sFT
     if( sEnt ~= 0 ) then
       local SongEntity = EntityLoad( sEnt, sEntX, sEntY )
       if ( 0 < sFTimeKill ) then
-        EntityAddComponent( SongEntity, "LifetimeComponent", {
+        EntityAddComponent2( SongEntity, "LifetimeComponent", {
           lifetime=tostring( sFTimeKill )
         } )
       end
@@ -61,24 +61,23 @@ end
 
 function SongNotePlayed()
   local song = nil
-  local instrument = nil
-  local instrument_songs = nil
-  local instrument_funcs = nil
+  local instrument_songs = {}
+  local instrument_funcs = {}
   local note = nil
   local variables = EntityGetComponent( entity_id, "VariableStorageComponent" )
   if ( variables ~= nil ) then
     for i,comp in ipairs(variables) do
-      if ( ComponentGetValue( comp, "name" ) == "ocarina_note" ) then
+      if ( ComponentGetValue2( comp, "name" ) == "ocarina_note" ) then
         song = "ocarina_song"
         instrument_songs = ocarina_songs
         instrument_funcs = ocarina_funcs
-        note = ComponentGetValue( comp, "value_string" )
+        note = ComponentGetValue2( comp, "value_string" )
       end
-      if ( ComponentGetValue( comp, "name" ) == "kantele_note" ) then
+      if ( ComponentGetValue2( comp, "name" ) == "kantele_note" ) then
         song = "kantele_song"
         instrument_songs = kantele_songs
         instrument_funcs = kantele_funcs
-        note = ComponentGetValue( comp, "value_string" )
+        note = ComponentGetValue2( comp, "value_string" )
       end
     end
   end
@@ -95,8 +94,8 @@ function SongNotePlayed()
     variables = EntityGetComponent( player_id, "VariableStorageComponent" )
     if ( variables ~= nil ) then
       for i,comp in ipairs(variables) do
-        if ( ComponentGetValue( comp, "name" ) == song ) then
-          local notesstr = ComponentGetValue( comp, "value_string" ) -- player oca storage string
+        if ( ComponentGetValue2( comp, "name" ) == song ) then
+          local notesstr = ComponentGetValue2( comp, "value_string" ) -- player oca storage string
           local matches = {}
           if ( notesstr ~= "" ) then -- string to table if not empty
             for match in string.gmatch( notesstr, "[^,]+" ) do
@@ -115,7 +114,7 @@ function SongNotePlayed()
               for i=0,notec do --check notes in reverse
                 if (b[#b-i] == matches[#matches-i]) then
                   if (i == notec) then
-                    ComponentSetValue( comp, "value_string", "" )
+                    ComponentSetValue2( comp, "value_string", "" )
                     -- GamePrint( "Song: "..song)
                     instrument_funcs[song]()
                     return
@@ -133,7 +132,7 @@ function SongNotePlayed()
             end
           end
           notesstr = table.concat(matches,",")
-          ComponentSetValue( comp, "value_string", notesstr )
+          ComponentSetValue2( comp, "value_string", notesstr )
         end
       end
     end
