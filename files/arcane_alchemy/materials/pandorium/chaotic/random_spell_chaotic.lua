@@ -108,6 +108,7 @@ for i=1, Random(5, 10) do
     add_spell("MODIFIERS", i, spell_levels[Random(1,#spell_levels)])
 end
 
+if Random() > .5 then add_spell("UTILITY", 20) end
 add_spell("PROJECTILES", 15, 1)
 
 
