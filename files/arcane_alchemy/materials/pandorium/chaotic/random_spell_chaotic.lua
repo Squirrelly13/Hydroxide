@@ -1,13 +1,13 @@
 dofile_once("data/scripts/lib/utilities.lua") --holy shit i dont need utilities lesgoooo
-dofile_once("data/scripts/gun/gun_actions.lua") --i dont need this either oh my god (uncommented these tho since apparently they are only ever really run once and never again, even for duplicate entities)
-
+--dofile_once("data/scripts/gun/gun_actions.lua") --i dont need this either oh my god (uncommented these tho since apparently they are only ever really run once and never again, even for duplicate entities)
 
 -- this is mostly a mish-mash of code i built and copied using Anvil of Destiny, as well as looking at Copi's Things Turret Spell to get an initial idea on how this stuff works
 -- once this works, it will be thanks to the work of Copi and Horscht, and the multiple people who are helping me on the noitacord while i stumble my way through LUA for the first time
 
 
+local spell_table = dofile_once("mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/spells_table_compiler.lua")
 
-
+--print(spell_table.PROJECTILES[Random(1,#spell_table.PROJECTILES)])
 
 
 local entity_id = GetUpdatedEntityID()
@@ -81,7 +81,8 @@ local spell_formula = ""
 
 function add_spell(spellType, position, tier)
 
-    local spell_id = GetRandomActionWithType(seed_x + position, seed_y, tier, spellType)
+    local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
+    --print(spell_id)
     local spell = EntityCreateNew(spell_id)
     EntityAddChild(gun, spell)
 
@@ -96,7 +97,7 @@ function add_spell(spellType, position, tier)
     ComponentSetValue2(item_comp, "inventory_slot", position, 1)
 
     --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
-    spell_formula = spell_formula .. "," .. spell_id
+    --spell_formula = spell_formula .. spell_id .. ","
     
 end
 
@@ -104,10 +105,10 @@ end
 
 
 for i=1, Random(5, 10) do
-    add_spell(2, i, spell_levels[Random(1,#spell_levels)])
+    add_spell("MODIFIERS", i, spell_levels[Random(1,#spell_levels)])
 end
 
-add_spell(0, 15, 1)
+add_spell("PROJECTILES", 15, 1)
 
 
 --gun:AddSpells(GetRandomActionWithType(seed_x, seed_y, spell_levels[Random(1,#spell_levels)], ACTION_TYPE_PROJECTILE))
