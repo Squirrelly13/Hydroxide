@@ -1,6 +1,3 @@
 [submodule "files/lib/luanxml"]
 	path = files/lib/luanxml
 	url = https://github.com/NathanSnail/luanxml
-[submodule "files/lib/files/lib/luanxml"]
-	path = files/lib/files/lib/luanxml
-	url = https://github.com/NathanSnail/luanxml
