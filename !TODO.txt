@@ -10,6 +10,7 @@ New Features:
 -Subway Surpher.
 
 Fixes/Reworks:
+-Fix translations being broken with other mods and idk the end of the world or smth? idk nathan seemed pretty upset over \n\n
 -Fix Veilium effect being too snappy
 -Uranium Reimplementation
 -Ores Rework

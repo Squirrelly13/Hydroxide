@@ -3,6 +3,8 @@ dofile_once("data/scripts/lib/utilities.lua")
 table.insert( actions,{
 	id          = "CC_SEA_OF_METHANE",
 	name 		= "$action_cc_sea_of_methane",
+	author		= "$name_squirrelly",
+	mod 		= "$name_mod_cc",
 	description = "$action_desc_cc_sea_of_methane",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_methane.png",
 	type 		= ACTION_TYPE_MATERIAL,
@@ -20,6 +22,8 @@ table.insert( actions,{
 table.insert( actions,{
 	id			= "CC_WISPY_FLAME",
 	name		= "$action_cc_wispy_flame",
+	author		= "$name_squirrelly",
+	mod 		= "$name_mod_cc",
 	description	= "$action_desc_cc_wispy_flame",
 	sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/projectiles/wispy_flame.png",
 	related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/projectiles/wispy_flame.xml"},
@@ -37,6 +41,8 @@ table.insert( actions,{
 table.insert( actions, {
 	id			= "CC_LOCAL_SHIFT",
 	name		= "$action_cc_local_shift",
+	author		= "$name_squirrelly",
+	mod 		= "$name_mod_cc",
 	description	= "$action_desc_cc_local_shift",
 	sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.png",
 	related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.xml"},
@@ -56,6 +62,8 @@ table.insert( actions, {
 table.insert( actions,  {
         id                  = "CC_METAL_SEASONING",
         name                = "$action_cc_metal_seasoning",
+		author				= "$name_squirrelly",
+		mod 				= "$name_mod_cc",
         description         = "$action_desc_cc_metal_seasoning",
         sprite              = "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.png",
         related_projectiles = { "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.xml" },
@@ -75,6 +83,8 @@ table.insert( actions,  {
 table.insert( actions, {
 		id          = "CC_CLOUD_CRYSTAL",
 		name 		= "$action_cc_cloud_crystal",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_cloud_crystal",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_crystal.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
@@ -94,6 +104,8 @@ table.insert( actions, {
 table.insert( actions, {
 		id          = "CC_CLOUD_SPARKLING",
 		name 		= "$action_cc_cloud_sparkling",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_cloud_sparkling",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_sparkling.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
@@ -113,6 +125,8 @@ table.insert( actions, {
 table.insert( actions, {
 		id          = "CC_GREASE_BLAST",
 		name 		= "$action_cc_grease_blast",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_grease_blast",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/poison_blast_unidentified.png",
@@ -137,6 +151,8 @@ table.insert( actions, {
 table.insert( actions, {
 		id          = "CC_RADIOACTIVE_SHOT",
 		name 		= "Radioactive shot",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "Makes a projectile emit radioactive sparks",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/projectile_modifiers/radioactive_shot.png",
 		sprite_unidentified = "mods/Hydroxide/files/chemical_curiosities/spells/projectile_modifiers/radioactive_shot.png",
@@ -156,6 +172,8 @@ table.insert( actions, {
 table.insert( actions,     {
         id                  = "CC_URANIUMBALL",
         name                = "$action_cc_radioactive_shot",
+		author				= "$name_squirrelly",
+		mod 				= "$name_mod_cc",
         description         = "$action_desc_cc_radioactive_shot",
         sprite              = "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/uraniumball.png",
         related_projectiles = { "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/uraniumball.xml" },
@@ -172,6 +190,8 @@ table.insert( actions,     {
 table.insert( actions,	{
 		id          = "CC_ANTIMATTER_FIELD_ENEMY",
 		name 		= "$action_cc_antimatter_field_enemy",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_antimatter_field_enemy",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/antimatter_field/antimatter_field_enemy.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/electric_charge_unidentified.png",
@@ -193,6 +213,8 @@ table.insert( actions,	{
 table.insert( actions,{
 	id          = "CC_SEA_OF_LIGHTNING",
 	name 		= "$action_cc_sea_of_lightning",
+	author		= "$name_squirrelly",
+	mod 		= "$name_mod_cc",
 	description = "$action_desc_cc_sea_of_lightning",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_lightning.png",
 	type 		= ACTION_TYPE_MATERIAL,
@@ -210,6 +232,8 @@ table.insert( actions,{
 table.insert( actions, {
 	id			= "CC_GUNPOWDER_BUFF",
 	name		= "$action_cc_gunpowder_buff",
+	author		= "$name_squirrelly",
+	mod 		= "$name_mod_cc",
 	description	= "$action_desc_cc_gunpowder_buff",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_buff.png",
 	related_extra_entities = { "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_buff.xml", "data/entities/particles/tinyspark_red.xml" },
@@ -247,6 +271,8 @@ table.insert( actions, {
 table.insert( actions, {
 		id          = "CC_FIRE_TO_GREASE",
 		name 		= "$action_cc_fire_to_grease",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_fire_to_grease",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/fire_to_grease.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
@@ -268,6 +294,8 @@ table.insert( actions, {
 table.insert( actions, {
 		id          = "CC_CLOUD_GUNPOWDER",
 		name 		= "$action_cc_gunpowder_cloud",
+		author		= "$name_squirrelly",
+		mod 		= "$name_mod_cc",
 		description = "$action_desc_cc_gunpowder_cloud",
 		sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_gunpowder.png",
 		sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
