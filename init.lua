@@ -78,7 +78,7 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 --  Materials
 
-ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/Overwhelming Overrides/potion_random.lua") --override random potion selection
+ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
 
 
 

@@ -102,13 +102,17 @@ function add_spell(spellType, position, tier)
 end
 
 
-for i=1, Random(5, 10) do
-    add_spell("MODIFIERS", i, spell_levels[Random(1,#spell_levels)])
+for i=1, Random(5, 10) do --positions 1-5
+    add_spell("MODIFIERS", i)
 end
 
-if Random() > .7 then add_spell("UTILITY", 14) end
+if Random() < (spell_table.month == 6 and .2 or .2) then add_spell("GLIMMERS", 13) end
 add_spell("PROJECTILES", 15, 1)
 
+for i=1, 10 do --positions 16-20
+    add_spell("MODIFIERS", i + 15)
+end
+add_spell("STATIC_PROJECTILES", 21)
 
 --gun:AddSpells(GetRandomActionWithType(seed_x, seed_y, spell_levels[Random(1,#spell_levels)], ACTION_TYPE_PROJECTILE))
 
@@ -127,7 +131,7 @@ add_spell("PROJECTILES", 15, 1)
 ---- cast ----
 
 
---print("\n PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
+--print("\n======= PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
 if not inventory2 then return end
