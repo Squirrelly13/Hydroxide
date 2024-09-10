@@ -1,15 +1,4 @@
 ---@diagnostic disable: undefined-global
--- addGlimmer("Hydroxide", "Gives a projectile a caustic sparkly trail", {"cc_hydroxide"}, nil, 15, "2,3,4,5,6", 4.1)
--- addGlimmer("Slicing Liquid", "Gives a projectile a sickeningly sparkly trail", {"cc_slicing_liquid"}, nil, nil, nil, 4.21)
--- addGlimmer("Glittering Liquid", "Gives a projectile a sickeningly sparkly trail", {"cc_glittering_liquid"}, nil, nil, nil, 4.21)
--- addGlimmer("Agitine", "Gives a projectile a sickeningly sparkly trail", {"cc_explodePlayer"}, nil, nil, nil, 4.21)
--- addGlimmer("Nullium", "Gives a projectile a sickeningly sparkly trail", {"cc_nullium"}, nil, nil, nil, 4.21)
--- addGlimmer("Dormant Crystal", "Gives a projectile a sickeningly sparkly trail", {"cc_dormant_crystal"}, nil, nil, nil, 4.21)
--- addGlimmer("Uranium", "Gives a projectile a sickeningly sparkly trail", {"cc_uranium"}, nil, nil, nil, 4.21)
--- addGlimmer("Anti-Matter", "Gives a projectile a sickeningly sparkly trail", {"cc_antimatter_powder"}, nil, nil, nil, 4.21)
--- addGlimmer("Condensed Gravity", "Gives a projectile a sickeningly sparkly trail", {"aa_condensed_gravity"}, nil, nil, nil, 4.21)
--- addGlimmer("Cloning Solution", "Gives a projectile a sickeningly sparkly trail", {"aa_cloning_solution"}, nil, nil, nil, 4.21)
--- addGlimmer("Bingus", "Gives a projectile a sickeningly sparkly trail", {"mm_bingus"}, nil, nil, nil, 4.21)
 
 local cc_glimmers = {
     {

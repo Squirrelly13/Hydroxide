@@ -46,7 +46,7 @@ local total_time = 0
 
 
 dofile("mods/Hydroxide/lib/translations.lua")
-local nxml = dofile_once("mods/Hydroxide/files/lib/luanxml/nxml.lua")
+local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 nxml.error_handler = function() end
 
 local function make_timed(fn, name)

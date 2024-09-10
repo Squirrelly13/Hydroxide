@@ -220,7 +220,7 @@ CreatePowder(water,)
 
 -- Automation stuff:
 
-local nxml = dofile_once("mods/Hydroxide/files/lib/luanxml/nxml.lua")
+local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 
 local gases = nxml.parse(ModTextFileGetContent("mods/Hydroxide/files/fluent_fluids/materials/materials_gases.xml"))
 local powders = nxml.parse(ModTextFileGetContent("mods/Hydroxide/files/fluent_fluids/materials/materials_powders.xml"))
