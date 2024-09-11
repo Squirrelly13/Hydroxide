@@ -1,0 +1,17 @@
+<Entity name="$projectile_default" tags="projectile_player" >
+	<LoadEntitiesComponent
+        count.min="1"
+        count.max="1"
+        kill_entity="0"
+        entity_file="mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/magic_circle_emitter.xml" >
+    </LoadEntitiesComponent>
+
+	
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/magic_circle.lua"
+		execute_every_n_frame="50"
+		remove_after_executed="1"
+		>
+	</LuaComponent>
+</Entity>
+
