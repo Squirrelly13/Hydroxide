@@ -25,7 +25,7 @@
 
   	<ParticleEmitterComponent 
 		emitted_material_name="fungi"
-		delay_frames="90"
+		delay_frames="100"
         lifetime_min="4.256"
     	lifetime_max="4.256"
 		gravity.y="0.0"
