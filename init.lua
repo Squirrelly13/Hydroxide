@@ -70,7 +70,16 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 -----//// TESTING!!!
 
---nothing to test lmao
+
+---- print entire function:
+--local test_values = {GameGetDateAndTimeLocal()}
+--for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
+
+ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
+
+
+
+
 
 -----////
 

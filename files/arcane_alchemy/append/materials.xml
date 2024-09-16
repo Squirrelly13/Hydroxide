@@ -1,5 +1,6 @@
 <Materials>
 
+
   <!--
   <CellData
 	name="aa_bloomium"
@@ -9,7 +10,7 @@
 	density="1"
 	cell_type="liquid"
 	lifetime="1200"
-	wang_color="804ab18c"
+	wang_color="804ab18c" there are 16,776,960 possible hex values excluding grey-tone values. That is the number of unique materials that can be added to the game
 	generates_smoke="0"
 	liquid_gravity="0.8"
 	liquid_sand="0"
@@ -1316,4 +1317,25 @@
     </ExplosionConfig>
   </CellData><!-- Strange Matter -->
   
+
+  <CellData 
+	name="aa_petrified_moss"  
+	ui_name="$mat_aa_petrified_moss"
+	tags="[corrodible]"
+	density="7"
+	cell_type="liquid"
+	wang_color="ffbfe2c5"
+	liquid_sand="1"
+	liquid_static="1"
+	solid_static_type="1"
+	hp="800" 
+	platform_type="1"
+	audio_physics_material_event="gravel"
+	audio_physics_material_wall="gravel"
+	audio_physics_material_solid="rock"
+	> 
+  </CellData>
+
+
+
 </Materials>

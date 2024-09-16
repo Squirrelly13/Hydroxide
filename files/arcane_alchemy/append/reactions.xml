@@ -170,6 +170,7 @@
 	fast_reaction="1"
 	>
   </Reaction>
+
 	
 	
 
@@ -193,6 +194,31 @@
 	output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
 	>
 	</Reaction>
+
+  <Reaction probability="15"
+	input_cell1="aa_soot" 	input_cell2="aa_potion_gas"
+	output_cell1="air" 	output_cell2="aa_potion_gas"
+	>
+  </Reaction>
+
+  <Reaction probability="30"
+	input_cell1="moss" 	input_cell2="aa_potion_gas"
+	output_cell1="aa_petrified_moss" 	output_cell2="aa_potion_gas"
+	>
+  </Reaction>
+
+  <Reaction probability="60"
+	input_cell1="moss" 	input_cell2="aa_base_potion"
+	output_cell1="aa_petrified_moss" 	output_cell2="aa_base_potion"
+	>
+  </Reaction>
+
+	<Reaction probability="3"
+	input_cell1="aa_base_potion"		input_cell2="[magic_liquid]"
+	output_cell1="[magic_liquid]"	output_cell2="[magic_liquid]"
+	>
+	</Reaction>
+
 	
 	<!-- magic plastic -->
 	

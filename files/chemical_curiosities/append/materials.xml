@@ -1581,7 +1581,7 @@
 		tags="[liquid]"
 		density="0.69"
 		cell_type="liquid"
-		wang_color="00000000"
+		wang_color="00000001"
 		liquid_gravity="1.9"
 		>
 		<Graphics
