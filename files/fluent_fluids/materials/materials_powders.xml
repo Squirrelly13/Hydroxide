@@ -3,18 +3,14 @@
 <!-- Sands -->
 
   <CellData
-	name="ff_magic_powder"
+	name="ff_magic_liquid_powder"
 	ui_name="Magical Liquid Powder"
-  	tags="[sand_other],[corrodible],[alchemy],[potion_powder]"
-	burnable="0"
+  	tags="[sand_other],[corrodible],[alchemy],[ff_magic_powder],[magic_powder],[ff_powder]"
 	density="6.23"
 	cell_type="liquid"
 	wang_color="fffaf9a6"
-	generates_smoke="0"
 	liquid_gravity="2"
 	liquid_sand="1"
-	on_fire="0"
-	requires_oxygen="0"
 	temperature_of_fire="80"
 	autoignition_temperature="1"
 	hp="1000" 
@@ -24,7 +20,7 @@
 	show_in_creative_mode="1"
 	>
     <Graphics
-	  texture_file="mods/fluid_dynamics/files/materials_gfx/gate_opener_powder.png" >
+	  texture_file="mods/Hydroxide/files/fluent_fluids/materials/powder_gfx/magic_liquid_powder.png" >
     </Graphics>
 	<StatusEffects>
 	    <Ingestion>
@@ -32,6 +28,29 @@
 	    </Ingestion>
     </StatusEffects>
   </CellData>
+
+<CellDataChild
+	_parent="ff_magic_powder"
+	name="ff_magic_liquid_powder_damp"
+>
+</CellDataChild>
+
+
+<CellDataChild
+	name="ff_"
+>
+</CellDataChild>
+
+
+
+
+
+
+
+
+
+
+
 
   <CellData
 	name="ff_flummoxium_powder"

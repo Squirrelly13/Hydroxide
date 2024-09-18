@@ -11,10 +11,12 @@ Mystical Mixtures: This is a branch where Evaisa (or Eba/Eva) toys around with a
 
 Fluent Fluids: This is a WIP branch that is intended to be the successor to Philadelphus' Fluid Dynamics mod, primarily worked on by UserK
 
-Terror: ... :D (WIP)
+Terror: This branch is different from the others, in that it is less of an additional mod, and more of an expansion or DLC that adds "Terrifying" variants of materials from both the base game and other branches, primarily worked on by UserK (very lacking atm, its on low-priority atm)
+
+GDBD: [data expunged] (WIP²)
 
 
-Compelling Compatibility: The first non-content "branch" of the mod, as the Amazingly Alliterative title may suggest, it handles compatibility- but not just with other mods, but it also manages internal compatibility between the branches when necessary
+Compelling Compatibility: The first non-content "branch" of the mod. as the Amazingly Alliterative title may suggest, it handles compatibility- but not just with other mods, but it also manages internal compatibility between the branches when necessary
 
 Overwhelming Overrides: This is a branch I may merge into Compelling Compatibility as they sorta overlap a bunch, but its fine fn, basically just stuff that overrides vanilla behaviour regardless of the other branches.
 
