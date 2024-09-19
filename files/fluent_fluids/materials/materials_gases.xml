@@ -4,7 +4,7 @@
     <CellData
         name="ff_magic_gas"
 	    ui_name="$mat_ff_magic_gas"
-  	    tags="[gas],[evaporable],[ff_magic_gas]"
+  	    tags="[gas],[vapour],[ff_magic_gas]"
 	    density="4.23"
 	    cell_type="gas"
 	    liquid_stains="1"
@@ -40,7 +40,7 @@
         _parent="ff_magic_gas"
         name="ff_acceleratium_gas"
         ui_name="$$mat_ff_acceleratium_gas"
-        tags="[gas],[evaporable],[ff_magic_gas],[magic_faster]"
+        tags="[gas],[vapour],[ff_magic_gas],[magic_faster]"
 	    wang_color="80c1dda5"
         denstity="0.55"
 	> <ParticleEffect
