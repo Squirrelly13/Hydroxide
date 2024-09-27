@@ -52,8 +52,8 @@ GetIngestionPercentage = function( entity_id, effect_id )
   return 0
 end
 
-GetCombinedPercentage = function( entity_id, effect_id, stain_multiplier,  ingestion_multiplier)
-  if stain_multiplier == nil then stain_multiplier = 1 end
+GetStatusCombined = function( entity_id, effect_id, ingestion_multiplier)
+  --if stain_multiplier == nil then stain_multiplier = 1 end
   if ingestion_multiplier == nil then ingestion_multiplier = 1 end
-  return GetStainPercentage(entity_id, effect_id) + GetIngestionPercentage( entity_id, effect_id ) / 100
+  return GetStainPercentage(entity_id, effect_id) + GetIngestionSeconds( entity_id, effect_id ) * ingestion_multiplier
 end

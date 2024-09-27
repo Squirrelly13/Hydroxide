@@ -1,3 +1,5 @@
+if GameGetFrameNum() % 2 == 0 then return end --makes the script run every 2 frames
+
 local entity_id = GetUpdatedEntityID()
 
 local owner = EntityGetRootEntity(entity_id)
@@ -6,6 +8,33 @@ local x,y = EntityGetTransform(owner)
 
 local children = EntityGetAllChildren(owner) or {}
 
+
+
+local radiation_controller
+
+for i, child in ipairs(children) do
+	if EntityGetName(child) == "radiation_controller" then
+		radiation_controller = child
+		break
+	end
+end
+
+if radiation_controller == nil then
+	radiation_controller = EntityAddChild(owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation_controller.xml"))
+end
+
+local var_comps = EntityGetComponent(owner, "VariableStorageComponent")
+if var_comps == nil then print("no var_comps? :megamind:") return end
+
+for index, varcomp in ipairs(var_comps) do
+	if ComponentGetValue2(varcomp, "name") == "radcount" then
+		ComponentSetValue2(varcomp, "value_int", ComponentGetValue2(varcomp, "name") + 5)
+	end
+end
+
+
+
+--[[ 
 local count = 0
 local leggy = false
 local vomit = false
@@ -13,32 +42,6 @@ local aiming = false
 local shaking = false
 local icon = false
 
-for i, child in ipairs(children) do
-
-	local name = EntityGetName(child)
-	
-	if name == "radiationEffect" then
-		count = count + 1
-		
-	elseif name == "radiationIcon" then
-		icon = true
-	
-	elseif name == "mutagenLeggy" then
-		leggy = true
-		
-	elseif name == "mutagenVomit" then
-		vomit = true
-		
-	elseif name == "mutagenAiming" then
-		aiming = true
-		
-	elseif name == "mutagenShaking" then
-		shaking = true
-	end
-	
-	
-	
-end
 
 print("Radiation effect count: " .. count )
 
@@ -71,3 +74,4 @@ if count >= 7 then
 end
 
 
+ ]]

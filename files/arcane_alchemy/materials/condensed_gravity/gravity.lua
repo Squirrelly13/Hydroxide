@@ -10,7 +10,7 @@ local entity_id = GetUpdatedEntityID()
 local x, y, rot = EntityGetTransform( entity_id )
 
 
-local stainPercent = math.min(10, GetStainPercentage(EntityGetParent(entity_id), "AA_GRAVITY") * 3 + (GetIngestionPercentage(EntityGetParent(entity_id), "AA_GRAVITY") * .05))
+local stainPercent = math.min(10, GetStainPercentage(EntityGetParent(entity_id), "AA_GRAVITY") * 3 + (GetIngestionSeconds(EntityGetParent(entity_id), "AA_GRAVITY") * .05))
 -- stainPercent = (Stain% * 5 + IngestionSeconds * .05) < 1.5
 
 function calculate_force_at(body_x, body_y)

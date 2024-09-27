@@ -20,7 +20,7 @@ local do_explosion = ComponentGetValue2(vscomp, "value_bool") --grab the current
 --get the Stain% and Ingestion Amount and derive a General Multiplier from it
 
 local a = GetStainPercentage(owner, "CC_EXPLODING") --Get Stain% as value from 0 to 1
-local b = GetIngestionPercentage(owner, "CC_EXPLODING") --Get Ingestion Seconds (1:1 in terms of seconds, 10% of flask = 30 seconds)
+local b = GetIngestionSeconds(owner, "CC_EXPLODING") --Get Ingestion Seconds (1:1 in terms of seconds, 10% of flask = 30 seconds)
 local multiplier = ((a + .3)^2.7 * 2) + (b^1.2 * .01) --Combine them using some fun mildly-exponential math stuff (healvily decrease Ingestion to avoid it completely throwing off the Stain%)
 
 
@@ -51,7 +51,7 @@ local explosion = EntityLoad( "data/entities/projectiles/explosion.xml", pos_x, 
 local comp = EntityGetFirstComponent(explosion, "ProjectileComponent") --grab its Projectile comp (since we wanna overwrite all the important stuff)
 if not comp then return end
 
---print(GetStainPercentage("Agitine Stats:\n".. owner, "CC_EXPLODING") .. "\n" .. GetIngestionPercentage(owner, "CC_EXPLODING").."\nPost Calc:\n".. a .. "\n" .. b .. "\n" .. multiplier)
+--print(GetStainPercentage("Agitine Stats:\n".. owner, "CC_EXPLODING") .. "\n" .. GetIngestionSeconds(owner, "CC_EXPLODING").."\nPost Calc:\n".. a .. "\n" .. b .. "\n" .. multiplier)
 
 --Apply the multiplier in various ways to the explosion stats (i spent like an entire day tweaking these and im still not full satisfied :devastatated:)
 ComponentObjectSetValue2(comp, "config_explosion", "camera_shake", 13 * math.min(20, multiplier)) --how much the camera shakes

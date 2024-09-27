@@ -8,7 +8,7 @@ if(not EntityHasTag(owner, "player_unit"))then
     return
 end
 
-local count = GetStainPercentage(owner, "CC_INGESTION_METHANE") + GetIngestionPercentage(owner, "CC_INGESTION_METHANE")*.1
+local count = GetStatusCombined(owner, "CC_INGESTION_METHANE")
 
 local multiplier = (ModSettingGet("Hydroxide.CC_METHANE_EFFECT_MULTIPLIER") or 100) / 100
 

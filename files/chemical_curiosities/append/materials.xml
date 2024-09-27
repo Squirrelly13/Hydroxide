@@ -325,7 +325,7 @@
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
-	liquid_sprite_stain_shaken_drop_chance="5"
+	liquid_sprite_stain_shaken_drop_chance="2"
 	status_effects="CC_INGESTION_METHANE"
 	lifetime="600"
 	generates_flames="20"

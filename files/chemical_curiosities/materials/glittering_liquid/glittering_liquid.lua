@@ -23,7 +23,7 @@ local fireworks = EntityGetWithTag("rocket")
 local fireworkCount = #fireworks
 
 
-if (fireworkCount <= 12) then
+if (fireworkCount <= ModSettingGet("Hydroxide.CC_MAX_MATERIAL_PROJECTILES") * .2 or 12) then
 	local value = Random(1,4)
 	if (value == 1) then
 		shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_blue.xml", pos_x, pos_y, vel_x, vel_y)
