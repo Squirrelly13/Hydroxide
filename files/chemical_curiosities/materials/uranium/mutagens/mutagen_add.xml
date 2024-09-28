@@ -10,7 +10,7 @@
 	<InheritTransformComponent />
 	
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_add.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_add.lua"
 		execute_every_n_frame="1"
 		remove_after_executed="1"
 		>

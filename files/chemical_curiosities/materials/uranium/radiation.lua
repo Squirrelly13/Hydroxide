@@ -20,8 +20,10 @@ local particles = EntityGetWithTag("radiation")
 local radiationCount = #particles
 
 
-if (radiationCount <= ModSettingGet("Hydroxide.CC_MAX_MATERIAL_PROJECTILES") * 3 or 200) then
-	shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y )
+local max_projectiles = ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") and ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") * 3 or 200
+
+if (radiationCount <= max_projectiles) then
+	shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y )
 end
 
 EntityKill(GetUpdatedEntityID())

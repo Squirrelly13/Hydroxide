@@ -21,7 +21,7 @@
 
 	
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/flow.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/flow.lua"
 		execute_every_n_frame="2"
 		>
 	</LuaComponent>
@@ -61,7 +61,7 @@
 
     <HitEffectComponent 
         effect_hit="LOAD_CHILD_ENTITY"
-        value_string="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_add.xml" >
+        value_string="mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_add.xml" >
     </HitEffectComponent>
 
 

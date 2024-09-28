@@ -34,9 +34,9 @@ local items = {
     },
 }
 
-if ModSettingGet("Hydroxide.TERROR_MODE") == true and ModSettingGet("Hydroxide.AA_ITEMS") == true and ModSettingGet("Hydroxide.AA_MATERIALS") == true then  
+if ModSettingGet("Hydroxide.TERROR_ENABLED") == true and ModSettingGet("Hydroxide.AA_ENABLED") ~= false then  
 
-    table.insert(items, {weight = 1000000, entity = "mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.xml", offset = 0})
+    --table.insert(items, {weight = 1000000, entity = "mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror.xml", offset = 0})
     
 end
 

@@ -4,6 +4,7 @@ local cc_glimmers = {
     {
         name = "Hydroxide",
         desc = "Gives a projectile a corrosive sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_hydroxide.png",
         materials = {"cc_hydroxide"},
         cast_delay = 15,
         spawn_tiers = "2,3,4,5,6",
@@ -16,6 +17,7 @@ local cc_glimmers = {
     {
         name = "Slicing Liquid",
         desc = "Gives a projectile a silvery sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_slicing_liquid.png",
         materials = {"cc_slicing_liquid"},
         cast_delay = 15,
         spawn_tiers = "3,4,5,6",
@@ -25,6 +27,7 @@ local cc_glimmers = {
     {
         name = "Glittering Liquid",
         desc = "Gives a projectile a glittering sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_glittering_liquid2.png",
         materials = {"cc_glittering_liquid"},
         cast_delay = 15,
         spawn_tiers = "4,5,6",
@@ -34,6 +37,7 @@ local cc_glimmers = {
     {
         name = "Agitine",
         desc = "Gives a projectile a volatile sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_agitine.png",
         materials = {"cc_explodePlayer"},
         cast_delay = 15,
         spawn_tiers = "3,4,5,6",
@@ -43,6 +47,7 @@ local cc_glimmers = {
     {
         name = "Nullium",
         desc = "Gives a projectile a regenerative sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_nullium.png",
         materials = {"cc_nullium"},
         cast_delay = 15,
         spawn_tiers = "4,5,6,10",
@@ -53,6 +58,7 @@ local cc_glimmers = {
     {
         name = "Dormant Crystal",
         desc = "Gives a projectile a regenerative sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_dormant_crystal1.png",
         materials = {"cc_dormant_crystal"},
         cast_delay = 15,
         spawn_tiers = "3,4,5,6",
@@ -62,6 +68,7 @@ local cc_glimmers = {
     {
         name = "Uranium",
         desc = "Gives a projectile a regenerative sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_uranium.png",
         materials = {"cc_uranium"},
         cast_delay = 8,
         spawn_tiers = "4,5,6,10",
@@ -72,6 +79,7 @@ local cc_glimmers = {
     {
         name = "Anti-Matter",
         desc = "Gives a projectile a regenerative sparkly trail",
+        image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_anti-matter.png",
         materials = {"cc_antimatter_liquid"},
         cast_delay = 9,
         spawn_tiers = "4,5,6",

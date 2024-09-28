@@ -91,13 +91,14 @@ ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhel
 
 
 
-if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
+if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
+	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
-	if(ModSettingGet("Hydroxide.CC_METHANE_GENERATION"))then
-		ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
-	end
+	
+	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
+	
 
 	-- init methane shader
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
@@ -124,17 +125,16 @@ end
 ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	if ModSettingGet("Hydroxide.CC_MATERIALS") == true then
+	if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 
 	end
-	if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
+	if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 
 		if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
 			GameAddFlagRun("squirrellys_music_altar_is_spawned")  --this tells the game to add this flag, the previous "if" statement won't spawn it every time you load the save now
-	
-		end
+		end															--ngl Squirrelly, p sure theres probs a much better way to do that, but this is honestly kinda funny so W lmao -UserK
 	end
 
 	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
@@ -148,22 +148,22 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 end
 --  Items
 
-if ModSettingGet("Hydroxide.CC_ITEMS") == true then
+if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 end
 
-if ModSettingGet("Hydroxide.AA_ITEMS") then
+if ModSettingGet("Hydroxide.AA_ENABLED") then
 	print("Adding arcane alchemy items!")
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
-	if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+	if(ModSettingGet("Hydroxide.MM_ENABLED"))then
 		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
 	end
-	if(ModSettingGet("Hydroxide.CC_MATERIALS"))then
+	if(ModSettingGet("Hydroxide.CC_ENABLED"))then
 		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua")
 	end
 end
 
-if ModSettingGet("Hydroxide.MM_ITEMS") then
+if ModSettingGet("Hydroxide.MM_ENABLED") then
 	print("Adding mystical mixtures items!")
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 
@@ -171,7 +171,7 @@ end
 
 --  Structures/Pixel Scenes
 
-if ModSettingGet("Hydroxide.CC_STRUCTURES") == true then
+if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
 	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
 	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
@@ -195,7 +195,7 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chem
 
 --  Materials
 
-if ModSettingGet("Hydroxide.AA_MATERIALS") == true then
+if ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
 
@@ -206,7 +206,7 @@ end
 
 --	Spells
 
-if ModSettingGet("Hydroxide.AA_SPELLS") == true then
+if ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
 end
 
@@ -267,14 +267,14 @@ end
 
 -- 		[Mystical Mixtures]
 
-if ModSettingGet("Hydroxide.MM_MATERIALS") == true then
+if ModSettingGet("Hydroxide.MM_ENABLED") ~= false then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
 end
 
 
 --		[Fluent Fluids]
 
-if ModSettingGet("Hydroxide.FF") == true then
+if ModSettingGet("Hydroxide.FF_ENABLED") == true then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
 end
 
@@ -285,7 +285,7 @@ end
 
 --  Arcane Alchemy x Chemical Curiosities, Materials
 local CC_AA_reactions = false
-if ModSettingGet("Hydroxide.CC_materials") == true and ModSettingGet("Hydroxide.AA_materials") == true then
+if ModSettingGet("Hydroxide.CC_ENABLED") ~= false and ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/CC_AA_reactions.xml" )
 	CC_AA_reactions = true
 end

@@ -38,10 +38,23 @@ mod_settings =
 		not_setting = true,
 	},
 	{
-		id = "warning",
-		ui_name = "WARNING! SETTINGS/MOD MAY BE UNSTABLE",
-		ui_description = "Mod can be unstable and there are bugs around, and Workshop updates can admittedly be far and few between. If you Experience issues with settings or the mod in general, please @me on discord @userk",
-		not_setting = true,
+		category_id = "GLOBAL_SETTINGS",
+		ui_name = "General",
+		ui_description = "Settings and Options for configuring the mod in general",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "MAX_MATERIAL_PROJECTILES",
+				ui_name = "Max Material Projectiles",
+				ui_description = "Decides the maximum material projectiles for a few materials (acts more like a multiplier in some cases, rate is 1:1 for Blast Powder)\nThis does not apply to the Pandoriums. It applies mainly to Glittering Liquid, Blast Powder, and Uranium.",
+				value_default = 60,
+				value_min = 0,
+				value_max = 200,
+				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
+		},
 	},
 	{
 		category_id = "CC_SETTINGS",
@@ -52,44 +65,9 @@ mod_settings =
 		settings = {
 
 			{
-				id = "CC_MATERIALS",
-				ui_name = "Chemical Curiosities Materials",
-				ui_description = "Adds Chemical Curiosities' Materials to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_FLASKS",
-				ui_name = "Spawn Potions",
-				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_SPELLS",
-				ui_name = "Spells",
-				ui_description = "Allow for Chemical Curiosities to add spells to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_PROPS",
-				ui_name = "Spawn Props",
-				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_ITEMS",
-				ui_name = "Chemical Curiosities Items",
-				ui_description = "Adds Chemical Curiosities' Items to the game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_STRUCTURES",
-				ui_name = "Spawn Structures",
-				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
+				id = "CC_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Chemical Curiosities branch of this mod\n\"Why would you turn this off!\"",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
@@ -97,13 +75,6 @@ mod_settings =
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
 				ui_description = "Spawn Various ores throughout the world! (this setting is currently being reworked on GitHub Branch)",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "CC_METHANE_GENERATION",
-				ui_name = "Frozen Meat Methane Decay",
-				ui_description = "Frozen meat decay into methane gas over time.",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
@@ -129,37 +100,9 @@ mod_settings =
 		_folded = true,
 		settings = {
 			{
-				id = "AA_MATERIALS",
-				ui_name = "Arcane Alchemy Materials",
-				ui_description = "Adds Arcane Alchemy's Materials to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_FLASKS",
-				ui_name = "Spawn Potions",
-				ui_description = "Allow for Arcane Alchemy to add new materials in flasks",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_SPELLS",
-				ui_name = "Spells",
-				ui_description = "Allow for Arcane Alchemy to add spells to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			--[[ {
-				id = "AA_PROPS",
-				ui_name = "Spawn Props",
-				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			}, --this is already included in structures, i dont know why i added this ]]
-			{
-				id = "AA_ITEMS",
-				ui_name = "Arcane Alchemy Items",
-				ui_description = "Adds Arcane Alchemy's Items to the game",
+				id = "AA_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Arcane Alchemy branch of this mod\n\"Where it all started...\"",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
@@ -168,13 +111,6 @@ mod_settings =
 				ui_name = "Bloomium",
 				value_default = true,
 				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive or performance heavy as it once was.",
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "AA_BLOOMIUM_VEINS",
-				ui_name = "Bloomium World Gen",
-				value_default = true,
-				ui_description = "Bloomium can spawn in the world using Oregen",
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			}
 		}
@@ -187,20 +123,35 @@ mod_settings =
 		_folded = true,
 		settings = {
 			{
-				id = "MM_MATERIALS",
-				ui_name = "Mystical Mixtures Materials",
-				ui_description = "Adds Mystical Mixtures' Materials to your game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "MM_ITEMS",
-				ui_name = "Mystical Mixtures Items",
-				ui_description = "Adds Mystical Mixtures' Items to the game",
+				id = "MM_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Mystical Mixtures branch of this mod\n\"It's at least partially-implemented!\"",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 		}
+	},
+	{
+		category_id = "TERROR_SETTINGS",
+		ui_name = "Terror.",
+		ui_description = "Settings and Options for configuring Terror content!",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "TERROR_ENABLED",
+				ui_name = "Terror Mode (WIP!)",
+				ui_description = "Adds some \"Fun\" things to the game...",
+				value_default = false,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "TERROR_MODE_WARNING",
+				ui_name = "Warning! Terror Mode is Terrifying!!",
+				ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis branch is for those who truly understand the philosophy behind this mod.",
+				not_setting = true,
+			},
+		},
 	},
 	{	
 		category_id = "COMPATIBILITY_SETTINGS",
@@ -238,16 +189,6 @@ mod_settings =
 			},
 		},
 	},
-	{
-		id = "TERROR_MODE",
-		ui_name = "Terror Mode",
-		ui_description = "Adds some \"Fun\" things to the game..."
-	},
-	{
-		id = "TERROR_MODE_WARNING",
-		ui_name = "Warning! Terror Mode is Terrifying!!",
-		ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis mode exists for people who think Unstable Pandorium is the greatest thing ever added (aka, me)\n -UserK",
-	}
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.

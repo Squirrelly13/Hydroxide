@@ -21,6 +21,6 @@ local radiationCount = #particles
 
 
 if (radiationCount <= 200) then
-	shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y )
+	shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y )
 end
 

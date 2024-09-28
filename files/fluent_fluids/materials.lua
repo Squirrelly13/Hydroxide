@@ -326,15 +326,15 @@ ModMaterialsFileAdd("data/mystical_mixtures/alchemy_materials.xml")
 
 
 
-if (ModSettingGet("Hydroxide.CC_MATERIALS")) == true then
+if (ModSettingGet("Hydroxide.CC_ENABLED")) == true then
     
 end
 
-if (ModSettingGet("Hydroxide.AA_MATERIALS")) == true then
+if (ModSettingGet("Hydroxide.AA_ENABLED")) == true then
     
 end
 
-if (ModSettingGet("Hydroxide.MM_MATERIALS")) == true then
+if (ModSettingGet("Hydroxide.MM_ENABLED")) == true then
     
 end
 

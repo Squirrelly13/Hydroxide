@@ -75,11 +75,11 @@ function potion_a_materials()
 
 	if true then return "terror_teleportatium" end --function for forcing mat in case of testing
 
-	if (ModSettingGet("Hydroxide.CC_MATERIALS")) then
+	if (ModSettingGet("Hydroxide.CC_ENABLED")) then
 		starterpotions = combine_table(starterpotions, cc_starterpotions)
 		magicpotions = combine_table(magicpotions, cc_magicpotions)
 	end
-	if (ModSettingGet("Hydroxide.AA_MATERIALS")) then
+	if (ModSettingGet("Hydroxide.AA_ENABLED")) then
 		starterpotions = combine_table(starterpotions, aa_starterpotions)
 		magicpotions = combine_table(magicpotions, aa_magicpotions)
 	end
@@ -90,9 +90,9 @@ function potion_a_materials()
 	rnd = random_create(Random(1,100), Random(1,100))
 	local r_value = Random( 1, 100 )
 
-	if (date_time.month == 4 and date_time.day == 1 and ModSettingGet("Hydroxide.AA_MATERIALS") and r_value >= 10) then
+	if (date_time.month == 4 and date_time.day == 1 and ModSettingGet("Hydroxide.AA_ENABLED") and r_value >= 10) then
 		return "aa_hitself" -- 10% chance on April Fools for joke material
-	elseif (date_time.month == 7 and date_time.day == 4 and ModSettingGet("Hydroxide.CC_MATERIALS") and r_value >= 20) then
+	elseif (date_time.month == 7 and date_time.day == 4 and ModSettingGet("Hydroxide.CC_ENABLED") and r_value >= 20) then
 		return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
 	elseif( r_value <= 80 ) then
 		return tostring(pick_random_from_table_weighted( rnd, starterpotions)[1])

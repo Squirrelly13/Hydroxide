@@ -20,7 +20,7 @@ for i, child in ipairs(children) do
 end
 
 if radiation_controller == nil then
-	radiation_controller = EntityAddChild(owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation_controller.xml"))
+	radiation_controller = EntityAddChild(owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.xml"))
 end
 
 local var_comps = EntityGetComponent(owner, "VariableStorageComponent")
@@ -46,30 +46,30 @@ local icon = false
 print("Radiation effect count: " .. count )
 
 if not icon then
-	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_icon.xml", x,y ))
+	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_icon.xml", x,y ))
 end
 
 if count >= 3 then
 	if not vomit then
-		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_vomit.xml", x,y ))
+		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_vomit.xml", x,y ))
 	end
 end
 
 if count >= 4 then
 	if not leggy then
-		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_leggy.xml", x, y ))
+		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y ))
 	end
 end
 
 if count >= 6 then
 	if not shaking then
-		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_shaking.xml", x, y ))
+		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_shaking.xml", x, y ))
 	end
 end
 
 if count >= 7 then
 	if not aiming then
-		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/radioactive/mutagens/mutagen_aiming.xml", x, y ))
+		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_aiming.xml", x, y ))
 	end
 end
 

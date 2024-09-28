@@ -12,7 +12,7 @@ SetRandomSeed( GameGetFrameNum() + GetUpdatedComponentID(), pos_x + pos_y + enti
 local rockets = EntityGetWithTag("rocket") --NOTE should replace the tag check with something else.
 local rocketCount = #rockets
 
-if (rocketCount <= ModSettingGet("Hydroxide.CC_MAX_MATERIAL_PROJECTILES") or 60) then
+if (rocketCount <= ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") or 60) then
 	local angle = math.rad(Random(45,135))
 	local length = Random(30,60)
 	

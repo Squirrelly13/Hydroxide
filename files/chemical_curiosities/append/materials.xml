@@ -1085,7 +1085,7 @@
 		show_in_creative_mode="1"
 		>
 		<Graphics
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/uranium.png"
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium.png"
 			>
 		</Graphics>
 		<ParticleEffect
@@ -1128,7 +1128,7 @@
 			</Ingestion>
 		</StatusEffects>
 		<Graphics
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radioactive_waste.png"
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radioactive_waste.png"
 			>
 		</Graphics>
 	</CellDataChild>
