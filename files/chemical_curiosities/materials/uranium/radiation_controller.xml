@@ -3,7 +3,6 @@
 	
 	<UIIconComponent
 		name="Radiation Poisoning"
-        stage="1"
 		description="Exposure to radiation is causing problems!"
 		icon_sprite_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.png"
 		is_perk="1"
@@ -12,6 +11,21 @@
 		>
 	</UIIconComponent>
 
-	
+	<VariableStorageComponent
+		name = "radcount"
+		value_int = "0"
+	></VariableStorageComponent>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"   
+		execute_every_n_frame="2"
+		>
+	</LuaComponent>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_decrease.lua"   
+		execute_every_n_frame="30"
+		>
+	</LuaComponent>
 	
 </Entity>

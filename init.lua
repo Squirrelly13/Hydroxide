@@ -32,7 +32,11 @@ end
 
 ]]--
 
-
+local CC = false
+local AA = false
+local MM = false
+local FF = false
+local Terror = false
 
 
 
@@ -85,14 +89,18 @@ ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
 
 
 
---  Materials
+
 
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
 
 
 
 if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
-	print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+
+	CC = true
+
+	---- MATERIALS
+	
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
@@ -112,12 +120,33 @@ if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
 	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
 	
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --FUngal shifts
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --Fungal shifts
 
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
 	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
+
+	
+
+	---- Structures/Pixel Scenes
+	
+	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
+	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
+	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
+	ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_liquidcave.lua" ) --new structures in the alchemy lab
+	ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcastle.lua" ) --new structures in hiisi base
+	ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
+	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
+
+	---- Spells
+	
+	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
+
+
+	---- Items
+
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 
 end
 
@@ -146,11 +175,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	print("CC init took " .. total_time .. "seconds")
 
 end
---  Items
 
-if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
-end
 
 if ModSettingGet("Hydroxide.AA_ENABLED") then
 	print("Adding arcane alchemy items!")
@@ -172,19 +197,11 @@ end
 --  Structures/Pixel Scenes
 
 if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
-	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
-	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
-	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
-	ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_liquidcave.lua" ) --new structures in the alchemy lab
-	ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcastle.lua" ) --new structures in hiisi base
-	ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
-	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
 
 end
 
 --	Spells
 
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
 
 
 
@@ -198,17 +215,23 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chem
 if ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
+	
+	if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
+		ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml") 
+	end
 
 	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
 
 	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
-end
 
---	Spells
 
-if ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
+	--	Spells
+	
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
+		
+	
 end
+
 
 
 
@@ -216,10 +239,6 @@ end
 --ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml" ) 
 --ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml" ) 
 
-if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
-	
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml" ) 
-	
 
 	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
 	-- noooo bloomium ignore-infect tags my beloved :devastated: (might reuse these for a bloomium revamp standalone or smth) -UserK
@@ -262,7 +281,6 @@ if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
 	end
 ]]            --experimental bloomium stuff
 
-end
 
 
 -- 		[Mystical Mixtures]
@@ -597,6 +615,6 @@ OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedIni
 
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time
 
-print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time)
+print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time .. " with the following branches: CC_" .. CC .. ", AA"  .. AA .. ", MM"  .. MM .. ", FF"  .. FF .. ", Terror_" .. Terror )
 
 print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee

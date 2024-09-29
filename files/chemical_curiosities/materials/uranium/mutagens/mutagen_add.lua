@@ -21,14 +21,15 @@ end
 
 if radiation_controller == nil then
 	radiation_controller = EntityAddChild(owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.xml"))
+	if radiation_controller == nil then return end
 end
 
-local var_comps = EntityGetComponent(owner, "VariableStorageComponent")
+local var_comps = EntityGetComponent(radiation_controller, "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end
 
 for index, varcomp in ipairs(var_comps) do
 	if ComponentGetValue2(varcomp, "name") == "radcount" then
-		ComponentSetValue2(varcomp, "value_int", ComponentGetValue2(varcomp, "name") + 5)
+		ComponentSetValue2(varcomp, "value_int", ComponentGetValue2(varcomp, "value_int") + 10)
 	end
 end
 
