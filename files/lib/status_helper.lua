@@ -31,7 +31,7 @@ GetStainPercentage = function( entity_id, effect_id )
   return 0
 end
 
-GetIngestionPercentage = function( entity_id, effect_id )
+GetIngestionSeconds = function( entity_id, effect_id )
   local status_effect_data_component = EntityGetFirstComponentIncludingDisabled( entity_id, "StatusEffectDataComponent" )
   if(status_effect_data_component == nil)then
     return 0

@@ -1,5 +1,8 @@
 dofile("mods/Hydroxide/files/lib/status_helper.lua")
 
+dofile_once("mods/Hydroxide/lib/polytools/polytools_init.lua").init("mods/Hydroxide/lib/polytools")
+local polytools = dofile_once("mods/Hydroxide/lib/polytools/polytools.lua")
+
 
 local filter_materials = function( mats )
 	for i=#mats,1,-1 do
@@ -16,10 +19,40 @@ local filter_materials = function( mats )
 	return mats
 end
 
-
 local entity_id = GetUpdatedEntityID()
 local root = EntityGetRootEntity(entity_id)
 local root_x, root_y = EntityGetTransform(root)
+
+local function DuplicateEntity(entity_id)
+	EntityAddTag(entity_id, "paradox_clone")
+	local comp = EntityAddComponent2(entity_id, "LuaComponent",
+	{
+		script_source_file = "mods/Hydroxide/files/chemical_curiosities/materials/paradox/evil_clone.lua",
+		execute_every_n_frame = 2,
+		execute_times = 1,
+	})
+	ComponentAddTag(comp, "paradox_clone")
+	local x, y = EntityGetTransform(entity_id)
+	local serialized = polytools.save(entity_id)
+
+	return polytools.spawn(x, y, serialized):id()
+end
+
+
+local function EvilClone()
+	DuplicateEntity(root)
+end
+
+local clone_comps = EntityGetComponent(root, "LuaComponent", "paradox_clone")
+if(clone_comps)then
+	for _,comp in ipairs(clone_comps)do
+		EntityRemoveComponent(root, comp)
+	end
+end
+
+EntityRemoveTag(root, "paradox_clone")
+
+
 
 if(root == entity_id)then
     return
@@ -98,6 +131,7 @@ if(GameHasFlagRun("is_warped"))then
 			EntityKill(entity_id)
 			GameSetPostFxParameter("cc_warp_multiplier", 0, 0 ,0 ,0)
 			GameRemoveFlagRun("is_warped")
+			--EvilClone()
         end
     end
 
