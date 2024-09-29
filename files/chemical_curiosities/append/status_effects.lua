@@ -148,3 +148,12 @@ table.insert(status_effects, {
 	effect_entity="data/entities/misc/effect_drunk.xml",
 	is_harmful=true,
 });
+
+table.insert(status_effects, {
+	id="CC_PARADOX",
+	ui_name="$status_cc_paradox",
+	ui_description="$status_desc_cc_paradox",
+	ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/paradox/effect_paradox.png",
+	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/paradox/paradox.xml",
+	is_harmful=false,
+});
