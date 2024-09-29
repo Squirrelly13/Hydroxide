@@ -36,7 +36,7 @@ local cc_glimmers = {
     },
     {
         name = "Agitine",
-        desc = "Gives a projectile a volatile sparkly trail",
+        desc = "Gives a projectile a combustive sparkly trail",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_agitine.png",
         materials = {"cc_explodePlayer"},
         cast_delay = 15,
@@ -46,7 +46,7 @@ local cc_glimmers = {
     },
     {
         name = "Nullium",
-        desc = "Gives a projectile a regenerative sparkly trail",
+        desc = "Gives a projectile a degenerative sparkly trail",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_nullium.png",
         materials = {"cc_nullium"},
         cast_delay = 15,
@@ -57,7 +57,7 @@ local cc_glimmers = {
     },
     {
         name = "Dormant Crystal",
-        desc = "Gives a projectile a regenerative sparkly trail",
+        desc = "Gives a projectile a volatile sparkly trail",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_dormant_crystal1.png",
         materials = {"cc_dormant_crystal"},
         cast_delay = 15,
@@ -67,7 +67,7 @@ local cc_glimmers = {
     },
     {
         name = "Uranium",
-        desc = "Gives a projectile a regenerative sparkly trail",
+        desc = "Gives a projectile a radioactive sparkly trail",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_uranium.png",
         materials = {"cc_uranium"},
         cast_delay = 8,
@@ -78,7 +78,7 @@ local cc_glimmers = {
     },
     {
         name = "Anti-Matter",
-        desc = "Gives a projectile a regenerative sparkly trail",
+        desc = "Gives a projectile a annihilative sparkly trail",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_anti-matter.png",
         materials = {"cc_antimatter_liquid"},
         cast_delay = 9,
