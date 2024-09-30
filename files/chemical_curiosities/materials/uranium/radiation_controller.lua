@@ -8,10 +8,9 @@ if var_comps == nil then print("no var_comps? :megamind:") return end
 --vars and trackers
 local radcountcomp
 local radstagecomp
-
+local owner_children = EntityGetAllChildren(owner)
 
 local vomit = false
-local vomit_ = false
 
 local leggyamount = 0
 local leggytracker
@@ -48,9 +47,6 @@ local radcount = ComponentGetValue2(radcountcomp, "value_int")
 local stage = ComponentGetValue2(radstagecomp, "value_int")
 
 
-if EntityGetName(ComponentGetValue2(leggytracker, "value_int")) == "mutagenLeggy" then
-	leggyentity = ComponentGetValue2(leggytracker, "value_int")
-end
 
 
 --#region stage checks
@@ -60,10 +56,21 @@ if radcount >= stage1 then
 	vomit = true
 end
 
+local immunities = {}
 if radcount >= stage2 then
 	stage = 2
 	
+	if owner_children ~= nil then
+		for k,v in ipairs(owner_children) do
+			if EntityHasTag(v, "effect_protection") then 
+				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
+				--print("adding " .. key .. " to immunities table")
+				immunities[key] = (immunities[key] or 0) + 1
+			end
+		end
+	end
 end
+
 
 if radcount >= stage3 then
 	stage = 3
@@ -123,26 +130,54 @@ end
 --#endregion
 
 
-if vomit == true and vomit_ == nil then
-end
-
-
-
-
-if leggyamount ~= 0 and leggyentity == nil then --if needs leggy but no leggy, create leggy
-	leggyentity = EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y ))
-	ComponentSetValue2(leggytracker, "value_int", leggyentity)
-end
-
-if leggyentity then --if there is a leggy
-	local leggypermanent = ComponentGetValue2(leggytracker, "value_bool") or false --check if leggy is permanent
-	leggyentity = ComponentGetValue2(leggytracker, "value_int")
-	if radcount < stage5 and leggypermanent == false then
-		EntityKill(leggyentity)
-	else 
-		local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")[1] or nil
-		
+local _vomit
+if owner_children ~= nil then
+	for k,v in ipairs(owner_children) do
+		if EntityGetName(v) == "mutagenVomit" then _vomit = v end
 	end
 end
 
-print(radcount)
+if vomit == true and _vomit == nil then
+	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_vomit.xml", x, y ))
+end
+
+
+
+
+if immunities ~= nil then
+	for k,v in pairs(immunities) do
+		print(k .. " = " .. v)
+	end
+end
+
+
+
+
+leggyentity = ComponentGetValue2(leggytracker, "value_int")
+
+if leggyentity ~= nil and EntityGetName(leggyentity) ~= "mutagenLeggy" then leggyentity = nil end --make sure the leggyentity is not only un-nil'd, but also the correct thing we're looking for
+
+if leggyamount ~= 0 and leggyentity == nil then --if needs leggy but no leggy, create leggy
+	print("creating new leggy mutagen")
+	leggyentity = EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y )
+	EntityAddChild( owner, leggyentity)
+	if leggyentity ~= nil then ComponentSetValue2(leggytracker, "value_int", tonumber(leggyentity)) else print("failed to save leggyentity") end
+end
+
+local leggypermanent
+if leggyentity then --if there is a leggy
+
+	local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
+	if leggyvarcomps ~= nil then leggypermanent = ComponentGetValue2(leggyvarcomps[1], "value_bool") end 
+	leggypermanent = leggypermanent or false
+
+	leggyentity = ComponentGetValue2(leggytracker, "value_int")
+	if radcount < stage5 and leggypermanent == false then --if radcount is below stage5 and leggy is not permanent, no more leggy :(
+		EntityKill(leggyentity)
+	else  --else, do the logic managing leggy
+		local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
+		if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount*10) end
+	end
+end
+
+if GameGetFrameNum() % 5 == 0 then print(radcount) end
