@@ -13,14 +13,14 @@ local radstagecomp
 local vomit = false
 local vomit_ = false
 
-local leggy = 0
+local leggyamount = 0
 local leggytracker
 local leggyentity
 
 
 
 
-local stage1 = 15
+local stage1 = 0
 local stage2 = 100
 local stage3 = 200
 local stage4 = 300
@@ -44,10 +44,16 @@ for index, varcomp in ipairs(var_comps) do
 	end
 end
 
-
-
 local radcount = ComponentGetValue2(radcountcomp, "value_int")
 local stage = ComponentGetValue2(radstagecomp, "value_int")
+
+
+if EntityGetName(ComponentGetValue2(leggytracker, "value_int")) == "mutagenLeggy" then
+	leggyentity = ComponentGetValue2(leggytracker, "value_int")
+end
+
+
+--#region stage checks
 
 if radcount >= stage1 then
 	stage = 1
@@ -71,7 +77,7 @@ end
 
 if radcount >= stage5 then
 	stage = 5
-	leggy = math.ceil((radcount - stage5) * .01)
+	leggyamount = math.ceil((radcount - stage5) * .01)
 end
 
 if radcount >= stage6 then
@@ -114,22 +120,28 @@ if radcount >= stage13 then
 	
 end
 
+--#endregion
+
 
 if vomit == true and vomit_ == nil then
 end
 
-if leggy ~= 0 and not ComponentGetValue2(leggytracker, "value_int") > 0 then
+
+
+
+if leggyamount ~= 0 and leggyentity == nil then --if needs leggy but no leggy, create leggy
 	leggyentity = EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y ))
 	ComponentSetValue2(leggytracker, "value_int", leggyentity)
 end
 
-if ComponentGetValue2(leggytracker, "value_int") > 0 then
+if leggyentity then --if there is a leggy
+	local leggypermanent = ComponentGetValue2(leggytracker, "value_bool") or false --check if leggy is permanent
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
-	if radcount < stage5 then
+	if radcount < stage5 and leggypermanent == false then
 		EntityKill(leggyentity)
 	else 
-		local leggylimbcomps = EntityGetComponent(leggyentity, "IKLimbComponent")
-		local leggylimbwalkercomps = EntityGetComponent(leggyentity, "IKLimbWalkerComponent")
+		local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")[1] or nil
+		
 	end
 end
 
