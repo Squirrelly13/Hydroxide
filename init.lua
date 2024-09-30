@@ -425,7 +425,6 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 
 	parser:parse(materials)
 
-	local bla = {}
 
 	
 

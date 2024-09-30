@@ -8,7 +8,9 @@ for index, varcomp in ipairs(var_comps) do
 	if ComponentGetValue2(varcomp, "name") == "radcount" then
         if ComponentGetValue2(varcomp, "value_int") >= 0 then
             ComponentSetValue2(varcomp, "value_int", ComponentGetValue2(varcomp, "value_int") - 1)
-        else if ComponentGetValue2(varcomp, "value_int") == -1 then EntityKill(entity_id) end
+
+        else if ComponentGetValue2(varcomp, "value_int") == -1 then EntityKill(entity_id) end --remove the component entirely if radiation reaches 0
+
         end
 	end
 end

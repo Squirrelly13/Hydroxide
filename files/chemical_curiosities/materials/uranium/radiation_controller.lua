@@ -1,11 +1,24 @@
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
+local x,y = EntityGetTransform(owner)
 
 local var_comps = EntityGetComponent(entity_id, "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end
 
-local radcount
-local radstage
+--vars and trackers
+local radcountcomp
+local radstagecomp
+
+
+local vomit = false
+local vomit_ = false
+
+local leggy = 0
+local leggytracker
+local leggyentity
+
+
+
 
 local stage1 = 15
 local stage2 = 100
@@ -22,87 +35,102 @@ local stage12 = 1100
 local stage13 = 1200
 
 
-local vomit = false
-local vomit = false
-
 
 
 for index, varcomp in ipairs(var_comps) do
-	if ComponentGetValue2(varcomp, "name") == "radcount" then radcount = varcomp
-    --elseif ComponentGetValue2(varcomp, "name") == "radstage" then radstage = varcomp
+	if ComponentGetValue2(varcomp, "name") == "radcount" then radcountcomp = varcomp
+    elseif ComponentGetValue2(varcomp, "name") == "radstage" then radstagecomp = varcomp
+    elseif ComponentGetValue2(varcomp, "name") == "leggytracker" then leggytracker = varcomp
 	end
 end
 
-local stage = ComponentGetValue2(radstage, "value_int")
 
-if ComponentGetValue2(radcount, "value_int") >= stage1 then
+
+local radcount = ComponentGetValue2(radcountcomp, "value_int")
+local stage = ComponentGetValue2(radstagecomp, "value_int")
+
+if radcount >= stage1 then
 	stage = 1
 	vomit = true
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage2 then
+if radcount >= stage2 then
 	stage = 2
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage3 then
+if radcount >= stage3 then
 	stage = 3
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage4 then
+if radcount >= stage4 then
 	stage = 4
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage5 then
+if radcount >= stage5 then
 	stage = 5
-	
+	leggy = math.ceil((radcount - stage5) * .01)
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage6 then
+if radcount >= stage6 then
 	stage = 6
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage7 then
+if radcount >= stage7 then
 	stage = 7
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage8 then
+if radcount >= stage8 then
 	stage = 8
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage9 then
+if radcount >= stage9 then
 	stage = 9
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage10 then
+if radcount >= stage10 then
 	stage = 10
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage11 then
+if radcount >= stage11 then
 	stage = 11
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage12 then
+if radcount >= stage12 then
 	stage = 12
 	
 end
 
-if ComponentGetValue2(radcount, "value_int") >= stage13 then
+if radcount >= stage13 then
 	stage = 13
 	
 end
 
 
+if vomit == true and vomit_ == nil then
+end
 
+if leggy ~= 0 and not ComponentGetValue2(leggytracker, "value_int") > 0 then
+	leggyentity = EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y ))
+	ComponentSetValue2(leggytracker, "value_int", leggyentity)
+end
 
+if ComponentGetValue2(leggytracker, "value_int") > 0 then
+	leggyentity = ComponentGetValue2(leggytracker, "value_int")
+	if radcount < stage5 then
+		EntityKill(leggyentity)
+	else 
+		local leggylimbcomps = EntityGetComponent(leggyentity, "IKLimbComponent")
+		local leggylimbwalkercomps = EntityGetComponent(leggyentity, "IKLimbWalkerComponent")
+	end
+end
 
-
-print(ComponentGetValue2(radcount, "value_int"))
+print(radcount)

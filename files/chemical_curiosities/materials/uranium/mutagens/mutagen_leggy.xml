@@ -1,12 +1,11 @@
 <Entity name="mutagenLeggy" >
 
-	<LifetimeComponent lifetime="1500" />
 	
 	<InheritTransformComponent />
 	
 	<IKLimbComponent length="30" />
 	<IKLimbWalkerComponent
-		affect_flying="1"
+		affect_flying="0"
 		>
 	</IKLimbWalkerComponent>
 	

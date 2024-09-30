@@ -13,8 +13,19 @@
 
 	<VariableStorageComponent
 		name = "radcount"
+		value_int = "10"
+	></VariableStorageComponent>
+
+	<VariableStorageComponent
+		name = "radstage"
 		value_int = "0"
 	></VariableStorageComponent>
+
+	<VariableStorageComponent
+		name = "leggytracker"
+		value_int = "-1"
+	></VariableStorageComponent>
+
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"   
@@ -24,7 +35,7 @@
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_decrease.lua"   
-		execute_every_n_frame="30"
+		execute_every_n_frame="60"
 		>
 	</LuaComponent>
 	
