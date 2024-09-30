@@ -272,7 +272,7 @@
 	
 	<!-- uranium -->
 	
-	<Reaction probability="110"
+	<Reaction probability="60"
 	input_cell1="cc_uranium"	input_cell2="air"
 	output_cell1="cc_uranium"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
@@ -300,16 +300,23 @@
 	>
 	</Reaction>
 	
-	<Reaction probability="50"
+	<Reaction probability="20"
 	input_cell1="cc_uranium"	input_cell2="air"
-	output_cell1="air"	output_cell2="air"
+	output_cell1="air"			output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+	
+	<Reaction probability="7"
+	input_cell1="cc_uranium"			input_cell2="air"
+	output_cell1="cc_radioactive_waste"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
 	<Reaction probability="70"
 	input_cell1="[lava]" 					input_cell2="cc_radioactive_waste"
-	output_cell1="cc_uranium"			output_cell2="radioactive_gas"
+	output_cell1="cc_uranium"				output_cell2="radioactive_gas"
 	blob_radius1="4"						blob_radius2="4"
 	blob_restrict_to_input_material1="1" 	blob_restrict_to_input_material2="1" 
 	audio_fx_volume_1="100.0" >

@@ -10,11 +10,7 @@ local radcountcomp
 local radstagecomp
 local owner_children = EntityGetAllChildren(owner)
 
-local vomit = false
 
-local leggyamount = 0
-local leggytracker
-local leggyentity
 
 
 
@@ -51,13 +47,14 @@ local stage = ComponentGetValue2(radstagecomp, "value_int")
 
 --#region stage checks
 
-if radcount >= stage1 then
+local vomit = false
+if radcount >= stage1 then --vomit
 	stage = 1
 	vomit = true
 end
 
 local immunities = {}
-if radcount >= stage2 then
+if radcount >= stage2 then --immunities
 	stage = 2
 	
 	if owner_children ~= nil then
@@ -72,57 +69,60 @@ if radcount >= stage2 then
 end
 
 
-if radcount >= stage3 then
+if radcount >= stage3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
 	
 end
 
-if radcount >= stage4 then
+if radcount >= stage4 then --damage that scales with radcount
 	stage = 4
 	
 end
 
-if radcount >= stage5 then
+local leggyamount = 0
+local leggytracker
+local leggyentity
+if radcount >= stage5 then --leggy temp
 	stage = 5
 	leggyamount = math.ceil((radcount - stage5) * .01)
 end
 
-if radcount >= stage6 then
+if radcount >= stage6 then --gain random perk
 	stage = 6
 	
 end
 
-if radcount >= stage7 then
+if radcount >= stage7 then --layers extra damage that scales with HP and radcount, + sounds
 	stage = 7
 	
 end
 
-if radcount >= stage8 then
+if radcount >= stage8 then --leggy becomes permanent
 	stage = 8
 	
 end
 
-if radcount >= stage9 then
+if radcount >= stage9 then --Static Damage starts being dealt faster
 	stage = 9
 	
 end
 
-if radcount >= stage10 then
+if radcount >= stage10 then --start gaining goofy bootleg perks
 	stage = 10
 	
 end
 
-if radcount >= stage11 then
+if radcount >= stage11 then --warning from the gods, shaders and sounds are intense
 	stage = 11
 	
 end
 
-if radcount >= stage12 then
+if radcount >= stage12 then --both damages gets ridiculously high
 	stage = 12
 	
 end
 
-if radcount >= stage13 then
+if radcount >= stage13 then --custom ascend script
 	stage = 13
 	
 end
