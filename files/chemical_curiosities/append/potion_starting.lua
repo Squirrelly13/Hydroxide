@@ -73,7 +73,7 @@ function TableConcat(t1,t2)
 
 function potion_a_materials()
 
-	if true then return "terror_teleportatium" end --function for forcing mat in case of testing
+	--if true then return "terror_teleportatium" end --function for forcing mat in case of testing
 
 	if (ModSettingGet("Hydroxide.CC_ENABLED")) then
 		starterpotions = combine_table(starterpotions, cc_starterpotions)

@@ -32,13 +32,11 @@ end
 
 ]]--
 
-local CC = false
-local AA = false
-local MM = false
-local FF = false
-local Terror = false
-
-
+local CC = ModSettingGet("Hydroxide.CC_ENABLED")
+local AA = ModSettingGet("Hydroxide.AA_ENABLED")
+local MM = ModSettingGet("Hydroxide.MM_ENABLED")
+local FF = ModSettingGet("Hydroxide.FF_ENABLED")
+local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 
 
@@ -93,39 +91,39 @@ ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
 
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
 
+--		[Chemical Curiosities]
 
+if CC then
 
-if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
-
-	CC = true
-
-	---- MATERIALS
+	---- 	[Materials]
 	
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
-	
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
+
 	
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua") -- init methane shader
 
-	-- init methane shader
-	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua")
-
-	-- init warp shader
-	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua")
-
-	-- init electrolysis system
-	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua")
+	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua") -- init warp shader
+	
+	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua") -- init electrolysis system
 	
 	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
-	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
-	
+
 	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --Fungal shifts
 
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
-	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions
+	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions --NOTE: verify these potion appends later
+
+
+	----	[Spells]
+
+	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
+	
+
 
 	
 
@@ -151,14 +149,61 @@ if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 end
 
 
+--		[Arcane Alchemy]
+
+if AA then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
+	
+	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
+
+	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
+
+
+	--		[Bloomium]
+
+	if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml")  end
+
+
+	--		[Spells]
+	
+	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
+		
+
+	--		[Items]
+
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+	if CC then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua") end
+	if MM then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua") end
+	
+
+
+	
+end
+
+
+-- 		[Mystical Mixtures]
+
+if MM then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+end
+
+
+--		[Fluent Fluids]
+
+if FF == true then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
+end
+
+
+
+
 ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
+	if CC then
 		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
-
-	end
-	if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
 
 		if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
@@ -172,65 +217,15 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 	--local player_x, player_y = EntityGetTransform( player_entity )
 	--EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
 	-- debugging stuff end
+
+
+
+	
 	print("CC init took " .. total_time .. "seconds")
 
 end
 
 
-if ModSettingGet("Hydroxide.AA_ENABLED") then
-	print("Adding arcane alchemy items!")
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
-	if(ModSettingGet("Hydroxide.MM_ENABLED"))then
-		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua")
-	end
-	if(ModSettingGet("Hydroxide.CC_ENABLED"))then
-		ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua")
-	end
-end
-
-if ModSettingGet("Hydroxide.MM_ENABLED") then
-	print("Adding mystical mixtures items!")
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
-
-end
-
---  Structures/Pixel Scenes
-
-if ModSettingGet("Hydroxide.CC_ENABLED") ~= false then
-
-end
-
---	Spells
-
-
-
-
-
-
---  	[Arcane Alchemy]
-
-
---  Materials
-
-if ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
-	
-	if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then
-		ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml") 
-	end
-
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
-
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
-
-
-	--	Spells
-	
-	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
-		
-	
-end
 
 
 
@@ -283,38 +278,26 @@ end
 
 
 
--- 		[Mystical Mixtures]
-
-if ModSettingGet("Hydroxide.MM_ENABLED") ~= false then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
-end
-
-
---		[Fluent Fluids]
-
-if ModSettingGet("Hydroxide.FF_ENABLED") == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
-end
-
 
 
 --  	[Compelling Compatibility]       --
 
 
---  Arcane Alchemy x Chemical Curiosities, Materials
-local CC_AA_reactions = false
-if ModSettingGet("Hydroxide.CC_ENABLED") ~= false and ModSettingGet("Hydroxide.AA_ENABLED") ~= false then
+--  [Arcane Alchemy] x [Chemical Curiosities]
+
+if CC and AA then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/CC_AA_reactions.xml" )
-	CC_AA_reactions = true
+
+	if ModSettingGet("Hydroxide.CC_AA_SUPERNOVA") ~= true then
+		print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC and AA) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
+	else
+		ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/supernova/reaction_supernova.xml" )
+	
+		print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC and AA) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
+	end
 end
 
-if ModSettingGet("Hydroxide.CC_AA_SUPERNOVA") ~= true and CC_AA_reactions == true then
-	print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
-else
-	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/supernova/reaction_supernova.xml" )
 
-	print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC_AA_reactions) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
-end
 
 --  Conjurer
 
@@ -360,7 +343,7 @@ if (ModIsEnabled("copis_things")) then
 end --copi's chemical curiosity compatibility combo
 
 
-if ModIsEnabled("anvil_of_destiny") then --[[implement this properly when we can add custom materials to anvil]]
+if ModIsEnabled("anvil_of_destiny") and AA then --[[implement this properly when we can add custom materials to anvil]]
 
 	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
@@ -481,20 +464,7 @@ ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" )
   --new status effects
 
 
-
-
-
-
-
-
 --appends
-
-
-
-
-
-
-
 
 
 
@@ -547,6 +517,7 @@ end
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 
+	if CC then ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste")) end --no uranium :(
 
 
 	print(tostring(catastrophicMaterials.construction_paste))
@@ -611,7 +582,6 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 end
 
 OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
-
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time
 
 print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time .. " with the following branches: CC_" .. CC .. ", AA"  .. AA .. ", MM"  .. MM .. ", FF"  .. FF .. ", Terror_" .. Terror )

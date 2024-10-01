@@ -1,14 +1,13 @@
+dofile_once("data/scripts/perks/perk.lua")
+
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
 local x,y = EntityGetTransform(owner)
+local currentframe = GameGetFrameNum()
 
 local var_comps = EntityGetComponent(entity_id, "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end
 
---vars and trackers
-local radcountcomp
-local radstagecomp
-local owner_children = EntityGetAllChildren(owner)
 
 
 
@@ -31,11 +30,19 @@ local stage13 = 1200
 
 
 
+--vars and trackers
+local radcountcomp
+local radstagecomp
+local perktracker
+local leggytracker
+local owner_children = EntityGetAllChildren(owner)
 
 for index, varcomp in ipairs(var_comps) do
 	if ComponentGetValue2(varcomp, "name") == "radcount" then radcountcomp = varcomp
     elseif ComponentGetValue2(varcomp, "name") == "radstage" then radstagecomp = varcomp
     elseif ComponentGetValue2(varcomp, "name") == "leggytracker" then leggytracker = varcomp
+    elseif ComponentGetValue2(varcomp, "name") == "leggytracker" then leggytracker = varcomp
+    elseif ComponentGetValue2(varcomp, "name") == "perktracker" then perktracker = varcomp
 	end
 end
 
@@ -74,13 +81,13 @@ if radcount >= stage3 then --radiation positioning + shader + maybe mana fluctua
 	
 end
 
+local deal_static = 0
 if radcount >= stage4 then --damage that scales with radcount
 	stage = 4
-	
+	deal_static = (radcount - stage4) * .002 -- divide by 20 so +5 damage every 100 rad, divide by a further 25 cuz of damage conversion
 end
 
 local leggyamount = 0
-local leggytracker
 local leggyentity
 if radcount >= stage5 then --leggy temp
 	stage = 5
@@ -88,9 +95,25 @@ if radcount >= stage5 then --leggy temp
 end
 
 if radcount >= stage6 then --gain random perk
-	stage = 6
-	
+	stage = 6 --check if the countdown thingamabob
+	if perktracker ~= nil and ComponentGetValue2(perktracker, "int_value") < currentframe then
+		AddPerk()
+		ComponentSetValue2(perktracker, "int_value", currentframe + 36000)
+	end
 end
+
+function AddPerk(isMutant, count)
+	isMutant = isMutant or false
+	count = count or 1
+
+	local perklist
+	if isMutant then perklist = {} else perklist = {} end
+	
+	for i = 1, count, 1 do
+		
+	end
+end
+
 
 if radcount >= stage7 then --layers extra damage that scales with HP and radcount, + sounds
 	stage = 7

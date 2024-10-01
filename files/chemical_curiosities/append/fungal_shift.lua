@@ -138,6 +138,6 @@ table.insert(materials_to, {
 
 table.insert(materials_to, {
 		probability = 0.65,
-		materials 	= "cc_persistine",
+		material 	= "cc_persistine",
 	});
 		
