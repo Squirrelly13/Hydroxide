@@ -5,7 +5,7 @@
 	
 	<IKLimbComponent length="30" />
 	<IKLimbWalkerComponent
-		affect_flying="0"
+		affect_flying="1"
 		>
 	</IKLimbWalkerComponent>
 	

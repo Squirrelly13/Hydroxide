@@ -1109,7 +1109,40 @@
 			>
 		</ParticleEffect>
 	</CellData>
-	
+
+	<CellDataChild
+		_parent="cc_uranium"
+		name="cc_uranium_excited"
+		ui_name="$mat_cc_uranium_excited"
+		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
+		wang_color="ff1cff8B"
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium_depleting.png"
+			>
+		</Graphics>
+		<ParticleEffect
+			vel.y="0"
+			vel_random.min_x="-23.42"
+			vel_random.max_x="23.42"
+			vel_random.min_y="-34.36"
+			vel_random.max_y="34.36"
+			lifetime.min="0.6"
+			lifetime.max="10.0"
+			gravity.y="0"
+			render_on_grid="1"
+			cosmetic_force_create="1"
+			draw_as_long="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="0.003"
+			count.min="1"
+			count.max="5"
+			>
+		</ParticleEffect>
+	</CellDataChild>
+
 	<CellDataChild
 		_parent="radioactive_liquid"
 		name="cc_radioactive_waste"

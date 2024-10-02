@@ -1,4 +1,5 @@
 dofile_once("data/scripts/perks/perk.lua")
+dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/RAD_ENUMS.lua")
 
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
@@ -7,26 +8,6 @@ local currentframe = GameGetFrameNum()
 
 local var_comps = EntityGetComponent(entity_id, "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end
-
-
-
-
-
-
-
-local stage1 = 0
-local stage2 = 100
-local stage3 = 200
-local stage4 = 300
-local stage5 = 400
-local stage6 = 500
-local stage7 = 600
-local stage8 = 700
-local stage9 = 800
-local stage10 = 900
-local stage11 = 1000
-local stage12 = 1100
-local stage13 = 1200
 
 
 
@@ -41,7 +22,6 @@ for index, varcomp in ipairs(var_comps) do
 	if ComponentGetValue2(varcomp, "name") == "radcount" then radcountcomp = varcomp
     elseif ComponentGetValue2(varcomp, "name") == "radstage" then radstagecomp = varcomp
     elseif ComponentGetValue2(varcomp, "name") == "leggytracker" then leggytracker = varcomp
-    elseif ComponentGetValue2(varcomp, "name") == "leggytracker" then leggytracker = varcomp
     elseif ComponentGetValue2(varcomp, "name") == "perktracker" then perktracker = varcomp
 	end
 end
@@ -55,13 +35,13 @@ local stage = ComponentGetValue2(radstagecomp, "value_int")
 --#region stage checks
 
 local vomit = false
-if radcount >= stage1 then --vomit
+if radcount >= STAGE1 then --vomit
 	stage = 1
 	vomit = true
 end
 
 local immunities = {}
-if radcount >= stage2 then --immunities
+if radcount >= STAGE2 then --immunities
 	stage = 2
 	
 	if owner_children ~= nil then
@@ -76,25 +56,25 @@ if radcount >= stage2 then --immunities
 end
 
 
-if radcount >= stage3 then --radiation positioning + shader + maybe mana fluctuations?
+if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
 	
 end
 
 local deal_static = 0
-if radcount >= stage4 then --damage that scales with radcount
+if radcount >= STAGE4 then --damage that scales with radcount
 	stage = 4
-	deal_static = (radcount - stage4) * .002 -- divide by 20 so +5 damage every 100 rad, divide by a further 25 cuz of damage conversion
+	deal_static = (radcount - STAGE4) * .002 -- divide by 20 so +5 damage every 100 rad, divide by a further 25 cuz of damage conversion
 end
 
 local leggyamount = 0
 local leggyentity
-if radcount >= stage5 then --leggy temp
+if radcount >= STAGE5 then --leggy temp
 	stage = 5
-	leggyamount = math.ceil((radcount - stage5) * .01)
+	leggyamount = math.ceil((radcount - STAGE5) * .01)
 end
 
-if radcount >= stage6 then --gain random perk
+if radcount >= STAGE6 then --gain random perk
 	stage = 6 --check if the countdown thingamabob
 	if perktracker ~= nil and ComponentGetValue2(perktracker, "int_value") < currentframe then
 		AddPerk()
@@ -115,37 +95,37 @@ function AddPerk(isMutant, count)
 end
 
 
-if radcount >= stage7 then --layers extra damage that scales with HP and radcount, + sounds
+if radcount >= STAGE7 then --layers extra damage that scales with HP and radcount, + sounds
 	stage = 7
 	
 end
 
-if radcount >= stage8 then --leggy becomes permanent
+if radcount >= STAGE8 then --leggy becomes permanent
 	stage = 8
 	
 end
 
-if radcount >= stage9 then --Static Damage starts being dealt faster
+if radcount >= STAGE9 then --Static Damage starts being dealt faster
 	stage = 9
 	
 end
 
-if radcount >= stage10 then --start gaining goofy bootleg perks
+if radcount >= STAGE10 then --start gaining goofy bootleg perks
 	stage = 10
 	
 end
 
-if radcount >= stage11 then --warning from the gods, shaders and sounds are intense
+if radcount >= STAGE11 then --warning from the gods, shaders and sounds are intense
 	stage = 11
 	
 end
 
-if radcount >= stage12 then --both damages gets ridiculously high
+if radcount >= STAGE12 then --both damages gets ridiculously high
 	stage = 12
 	
 end
 
-if radcount >= stage13 then --custom ascend script
+if radcount >= STAGE13 then --custom ascend script
 	stage = 13
 	
 end
@@ -169,7 +149,7 @@ end
 
 if immunities ~= nil then
 	for k,v in pairs(immunities) do
-		print(k .. " = " .. v)
+		--print(k .. " = " .. v)
 	end
 end
 
@@ -195,12 +175,9 @@ if leggyentity then --if there is a leggy
 	leggypermanent = leggypermanent or false
 
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
-	if radcount < stage5 and leggypermanent == false then --if radcount is below stage5 and leggy is not permanent, no more leggy :(
-		EntityKill(leggyentity)
-	else  --else, do the logic managing leggy
-		local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
-		if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount*10) end
-	end
+	local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
+	if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount * 15 + 15) end
+	
 end
 
 if GameGetFrameNum() % 5 == 0 then print(radcount) end

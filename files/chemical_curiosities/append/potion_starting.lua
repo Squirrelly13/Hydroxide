@@ -12,27 +12,25 @@ local starterpotions = {
 
 local cc_starterpotions = {
 	{	probability = 0.700, "cc_grease"},
-	{	probability = 0.100, "cc_devouring_moss"},
 	{	probability = 0.600, "cc_sparkling_liquid"},
-	{	probability = 0.075, "cc_unstable_metamorphine"},
-	{	probability = 0.050, "cc_health_tonic"},
-	{	probability = 0.010, "cc_frozen_meat"},	
 	{	probability = 0.500, "cc_persistine"},
 	{	probability = 0.400, "cc_dormant_crystal_molten"},
-	{	probability = 0.030, "cc_antimatter_gas"},
+	{	probability = 0.100, "cc_devouring_moss"},
+	{	probability = 0.075, "cc_unstable_metamorphine"},
+	{	probability = 0.050, "cc_health_tonic"},
 	{	probability = 0.030, "cc_antimatter_liquid"},
-	{	probability = 0.030, "cc_antimatter_powder"},
+	{	probability = 0.010, "cc_frozen_meat"},	
 }
 
 local aa_starterpotions = {
+	{	probability = 0.700, "aa_base_potion"},
 	{	probability = 0.600, "aa_repultium"},
 	{	probability = 0.400, "aa_hungry_slime"},
-	{	probability = 0.700, "aa_base_potion"},
-	{	probability = 0.200, "aa_arborium"},
-	{	probability = 0.010, "aa_unstable_pandorium"},
-	{	probability = 0.150, "aa_catalyst"},
 	{	probability = 0.300, "aa_icy_inferno"},
+	{	probability = 0.200, "aa_arborium"},
 	{	probability = 0.100, "aa_compost"},
+	{	probability = 0.150, "aa_catalyst"},
+	{	probability = 0.010, "aa_unstable_pandorium"},
 }
 
 
@@ -71,9 +69,12 @@ end
 function TableConcat(t1,t2)
  end
 
-function potion_a_materials()
 
-	--if true then return "terror_teleportatium" end --function for forcing mat in case of testing
+
+
+ 
+function potion_a_materials()
+	--if true then return "cc_uranium_excited" end --function for forcing mat in case of testing
 
 	if (ModSettingGet("Hydroxide.CC_ENABLED")) then
 		starterpotions = combine_table(starterpotions, cc_starterpotions)
@@ -84,15 +85,15 @@ function potion_a_materials()
 		magicpotions = combine_table(magicpotions, aa_magicpotions)
 	end
 
-	local date_time = {year = 0, month = 0, day = 0, hour = 0, minute = 0, second = 0}
-	date_time.year, date_time.month, date_time.day, date_time.hour, date_time.minute, date_time.second = GameGetDateAndTimeUTC()
+	local UTC = {}
+	UTC.year, UTC.month, UTC.day, UTC.hour, UTC.minute, UTC.second = GameGetDateAndTimeUTC()
 
 	rnd = random_create(Random(1,100), Random(1,100))
 	local r_value = Random( 1, 100 )
 
-	if (date_time.month == 4 and date_time.day == 1 and ModSettingGet("Hydroxide.AA_ENABLED") and r_value >= 10) then
+	if (UTC.month == 4 and UTC.day == 1 and ModSettingGet("Hydroxide.AA_ENABLED") and r_value >= 10) then
 		return "aa_hitself" -- 10% chance on April Fools for joke material
-	elseif (date_time.month == 7 and date_time.day == 4 and ModSettingGet("Hydroxide.CC_ENABLED") and r_value >= 20) then
+	elseif (UTC.month == 7 and UTC.day == 4 and ModSettingGet("Hydroxide.CC_ENABLED") and r_value >= 20) then
 		return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
 	elseif( r_value <= 80 ) then
 		return tostring(pick_random_from_table_weighted( rnd, starterpotions)[1])
@@ -112,8 +113,9 @@ function potion_a_materials()
 		r_value = Random( 0, 100000 )
 		if( r_value == 666 ) then return "urine" end
 		if( r_value == 79 ) then return "gold" end 
-		if( r_value == 100 ) then return "cc_warp_powder" end
 		if( r_value == 77 ) then return "cc_alchemy_powder" end
+		if( r_value == 100 ) then return "cc_warp_powder" end
+		if( r_value == 100 ) then return "cc_paradox_powder" end
 		if( r_value == 777 ) then return "cc_liberum_magicas" end
 		return random_from_array( { "slime", "gunpowder_unstable", "kindling" } )
 	end
