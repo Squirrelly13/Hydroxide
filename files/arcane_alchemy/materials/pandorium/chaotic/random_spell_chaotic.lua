@@ -17,77 +17,26 @@ local x, y = EntityGetTransform(entity_id)
 SetRandomSeed(GameGetFrameNum() + x, GameGetFrameNum() + y)
 local seed_x = Randomf()*1000
 local seed_y = Randomf()*1000 
---[[ print(Randomf()) --testing if this works
-print(Randomf()) --testing if this works
-print(Randomf()) --testing if this works
-print(Randomf()) --testing if this works
-print(Randomf()) --testing if this works
-]]
---SetRandomSeed(seed_x, seed_y)
+
 
 
 ---- get wand entity ----
-
---[[ local gun = EZWand({
-    shuffle = false,
-    spellsPerCast = 1,
-    castDelay = 100,
-    rechargeTime = 100,
-    manaMax = 1,
-    mana = 1,
-    manaChargeSpeed = 0,
-    capacity = 20,
-    spread = 360,
-    speedMultiplier = 1
-})
-
-EntityAddChild(entity_id, gun) ]]
-
-
 
 local inventory_comp = EntityGetAllChildren(entity_id)[1]
 
 local gun = EntityGetAllChildren(inventory_comp)[1]
 
 
---[[ local gun1 = {
-    deck_capacity = 20,
-    actions_per_round = 1,
-    reload_time = 10,
-    shuffle_deck_when_empty = 0,
-    fire_rate_wait = 10,
-    spread_degrees = 360,
-    speed_multiplier = 1,
-    mana_charge_speed = 0,
-    mana_max = 0,
-    is_rare = 0
-} ]]
 
-
----- add spells ----
-
-spell_levels = {
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    10
-} -- tier 7 is just touch-of spells, 8 and 9 do not exist.
+---- Build Wand ----
 
 local spell_formula = ""
 
-function add_spell(spellType, position, tier)
+function add_spell(spellType, position)
 
     local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
-    --print(spell_id)
     local spell = EntityCreateNew(spell_id)
     EntityAddChild(gun, spell)
-
-
-    --EntityAddTag(spell, "card_action")
 
     EntityAddComponent2(spell, "ItemActionComponent", {
         action_id = spell_id
@@ -98,23 +47,20 @@ function add_spell(spellType, position, tier)
 
     --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
     --spell_formula = spell_formula .. spell_id .. ","
-    
 end
 
 
-for i=1, Random(5, 10) do --positions 1-5
+for i=1, Random(5, 10) do --positions 1-10
     add_spell("MODIFIERS", i)
 end
 
-if Random() < (spell_table.month == 6 and .2 or .2) then add_spell("GLIMMERS", 13) end
-add_spell("PROJECTILES", 15, 1)
+if Random() < (spell_table.month == 6 and .6 or .1) then add_spell("GLIMMERS", 13) end --position 13
+add_spell("PROJECTILES", 15) --position 15
 
-for i=1, 10 do --positions 16-20
+for i=1, 10 do --positions 16-26
     add_spell("MODIFIERS", i + 15)
 end
-add_spell("STATIC_PROJECTILES", 21)
-
---gun:AddSpells(GetRandomActionWithType(seed_x, seed_y, spell_levels[Random(1,#spell_levels)], ACTION_TYPE_PROJECTILE))
+add_spell("STATIC_PROJECTILES", 30) --position 30
 
 
 
@@ -128,10 +74,13 @@ add_spell("STATIC_PROJECTILES", 21)
 -- 	end
 -- end --gave up on this fn
 
----- cast ----
+
+
+---- Prepare and Cast Wand ----
 
 
 --print("\n======= PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
+
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
 if not inventory2 then return end
@@ -142,7 +91,3 @@ ComponentSetValue2(inventory2, "mActualActiveItem", 0)
 local platformShooterPlayer = EntityGetFirstComponentIncludingDisabled(entity_id, "PlatformShooterPlayerComponent")
 if not platformShooterPlayer then return end
 ComponentSetValue2(platformShooterPlayer, "mForceFireOnNextUpdate", true)
-
-
-
---EntityKill(GetUpdatedEntityID())

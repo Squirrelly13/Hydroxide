@@ -4,6 +4,7 @@ local catastrophicMaterials = {creepy_liquid = true, monster_powder_test = true,
 
 
 
+
 --[[
 
 function OnModPreInit()
@@ -18,9 +19,6 @@ function OnModPostInit()
 	print("Mod - OnModPostInit()") -- Then this is called for all mods
 end
 
-function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
-	GamePrint( "OnWorldInitialized() " .. tostring(GameGetFrameNum()) )
-end
 
 function OnWorldPreUpdate() -- This is called every time the game is about to start updating the world
 	GamePrint( "Pre-update hook " .. tostring(GameGetFrameNum()) )
@@ -77,7 +75,6 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 --local test_values = {GameGetDateAndTimeLocal()}
 --for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
-ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
 
 
 
@@ -225,7 +222,10 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 end
 
-
+if Terror then
+	ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
+	ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/terror/status_effects.lua") --effects
+end
 
 
 
@@ -450,7 +450,7 @@ register_translation("item_vial_with_material", "Vial of $0")
 register_translation("item_vial_with_material_description", "A glass vial containing $0")
 ]]
 
-register_localizations("mods/Hydroxide/translations.csv", 2)
+register_localizations("mods/Hydroxide/translations.csv")
 
 
 
@@ -517,7 +517,6 @@ end
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 
-	if CC then ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste")) end --no uranium :(
 
 
 	print(tostring(catastrophicMaterials.construction_paste))
@@ -581,9 +580,15 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 
 end
 
+
+function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
+	if CC then ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste")) end 
+end
+
+
 OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time
 
-print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time .. " with the following branches: CC_" .. CC .. ", AA"  .. AA .. ", MM"  .. MM .. ", FF"  .. FF .. ", Terror_" .. Terror )
+print( "Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time .. " with the following branches: CC_" .. tostring(CC) .. ", AA_"  .. tostring(AA) .. ", MM_"  .. tostring(MM) .. ", FF_"  .. tostring(FF) .. ", Terror_" .. tostring(Terror) )
 
 print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee

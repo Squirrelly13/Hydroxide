@@ -87,7 +87,7 @@
     show_in_creative_mode="1"
   >
     <Graphics
-      texture_file="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/test.png"
+      texture_file="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/shrinkium.png"
       color="ffffade1" >
       <Edge>
         <EdgeGraphics 
