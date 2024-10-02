@@ -3,6 +3,12 @@
 	<!-- metals -->
 	
 	<Reaction probability="50"
+	input_cell1="[*]"		input_cell2="air"
+	output_cell1="[*]"	output_cell2="[*]"
+	>
+	</Reaction>
+	
+	<Reaction probability="50"
 	input_cell1="cc_iron"		input_cell2="magic_liquid_random_polymorph"
 	output_cell1="cc_cobalt"	output_cell2="smoke"
 	>

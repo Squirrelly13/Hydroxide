@@ -17,6 +17,13 @@ local radstagecomp
 local perktracker
 local leggytracker
 local owner_children = EntityGetAllChildren(owner)
+local owner_comps = EntityGetAllComponents(owner) or {}
+
+local damage_model
+
+for k, comp in ipairs(owner_comps) do
+	if ComponentGetTypeName(comp) == "DamageModelComponent" then damage_model = comp end
+end
 
 for index, varcomp in ipairs(var_comps) do
 	if ComponentGetValue2(varcomp, "name") == "radcount" then radcountcomp = varcomp
@@ -28,17 +35,18 @@ end
 
 local radcount = ComponentGetValue2(radcountcomp, "value_int")
 local stage = ComponentGetValue2(radstagecomp, "value_int")
-
-
+local blessed = ComponentGetValue2(radcountcomp, "value_bool")
 
 
 --#region stage checks
+
 
 local vomit = false
 if radcount >= STAGE1 then --vomit
 	stage = 1
 	vomit = true
 end
+
 
 local immunities = {}
 if radcount >= STAGE2 then --immunities
@@ -55,17 +63,21 @@ if radcount >= STAGE2 then --immunities
 	end
 end
 
-
+local radiation_positioning
 if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
-	
+	radiation_positioning = true
 end
 
+
 local deal_static = 0
+local deal_rate = 0
 if radcount >= STAGE4 then --damage that scales with radcount
 	stage = 4
 	deal_static = (radcount - STAGE4) * .002 -- divide by 20 so +5 damage every 100 rad, divide by a further 25 cuz of damage conversion
+	deal_rate = 90
 end
+
 
 local leggyamount = 0
 local leggyentity
@@ -73,6 +85,7 @@ if radcount >= STAGE5 then --leggy temp
 	stage = 5
 	leggyamount = math.ceil((radcount - STAGE5) * .01)
 end
+
 
 if radcount >= STAGE6 then --gain random perk
 	stage = 6 --check if the countdown thingamabob
@@ -95,35 +108,43 @@ function AddPerk(isMutant, count)
 end
 
 
+local deal_scaling = 0
 if radcount >= STAGE7 then --layers extra damage that scales with HP and radcount, + sounds
 	stage = 7
-	
+	deal_scaling = (radcount - STAGE7) * .01
 end
+
 
 if radcount >= STAGE8 then --leggy becomes permanent
 	stage = 8
 	
 end
 
-if radcount >= STAGE9 then --Static Damage starts being dealt faster
+
+if radcount >= STAGE9 then --Static Damage starts being dealt faster, puke turns to radioactive waste
 	stage = 9
-	
+	deal_static = ((radcount - STAGE9) * .05) + deal_static
+	deal_rate = 40
 end
+
 
 if radcount >= STAGE10 then --start gaining goofy bootleg perks
 	stage = 10
 	
 end
 
+
 if radcount >= STAGE11 then --warning from the gods, shaders and sounds are intense
 	stage = 11
 	
 end
 
+
 if radcount >= STAGE12 then --both damages gets ridiculously high
 	stage = 12
 	
 end
+
 
 if radcount >= STAGE13 then --custom ascend script
 	stage = 13
@@ -154,6 +175,17 @@ if immunities ~= nil then
 end
 
 
+if deal_rate > 0 and damage_model ~= nil then
+	if GameGetFrameNum() % deal_rate then
+		local max_hp = ComponentGetValue2(damage_model, "max_hp") or 0
+		local total_damage = deal_static + ComponentGetValue2(damage_model, "max_hp") * (deal_scaling^1.3 + 1 - deal_scaling^1.2)
+		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_CURSE", "", "", x, y)
+		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_RADIOACTIVE", "", "", x, y)
+	end
+end
+
+
+
 
 
 leggyentity = ComponentGetValue2(leggytracker, "value_int")
@@ -176,7 +208,7 @@ if leggyentity then --if there is a leggy
 
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
 	local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
-	if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount * 15 + 15) end
+	if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount * 15 + 15) end --start with a base of 30 reach and add 15 every 100 rad (leggyamount is divided by 100 and rounded up)
 	
 end
 

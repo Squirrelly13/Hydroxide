@@ -114,8 +114,8 @@ function potion_a_materials()
 		if( r_value == 666 ) then return "urine" end
 		if( r_value == 79 ) then return "gold" end 
 		if( r_value == 77 ) then return "cc_alchemy_powder" end
-		if( r_value == 100 ) then return "cc_warp_powder" end
-		if( r_value == 100 ) then return "cc_paradox_powder" end
+		if( r_value == 778 ) then return "cc_warp_powder" end
+		if( r_value == 779 ) then return "cc_paradox_powder" end
 		if( r_value == 777 ) then return "cc_liberum_magicas" end
 		return random_from_array( { "slime", "gunpowder_unstable", "kindling" } )
 	end
