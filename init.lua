@@ -72,10 +72,11 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 ---- print entire function:
---local test_values = {GameGetDateAndTimeLocal()}
---for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
+local test_values = {GameGetDateAndTimeLocal()}
+for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
 
+ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_starting_lib.lua")
 
 
 
@@ -113,7 +114,7 @@ if CC then
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
-	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions --NOTE: verify these potion appends later
+	--ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions --NOTE: verify these potion appends later
 
 
 	----	[Spells]

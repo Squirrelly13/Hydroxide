@@ -4,7 +4,7 @@
 	
 	<Reaction probability="50"
 	input_cell1="[*]"		input_cell2="air"
-	output_cell1="[*]"	output_cell2="[*]"
+	output_cell1="air"	output_cell2="air"
 	>
 	</Reaction>
 	
