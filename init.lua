@@ -76,7 +76,7 @@ local test_values = {GameGetDateAndTimeLocal()}
 for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
 
-ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_starting_lib.lua")
+ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 
 
 
