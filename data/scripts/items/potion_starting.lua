@@ -133,7 +133,8 @@ function init( entity_id ) --mostly vanilla function
 	SetRandomSeed( x, y )
 	CorrectTables() --add default probabilities
 
-	TEST(100000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
+	--TEST(10000000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
+	--default value of 10000000 (ten million) takes approx 40 seconds for me, so it should be a good testing value (decrease to like, 100k or 1mil for faster testing ig, 100k should be basically instant)
 
 	local n_of_deaths = tonumber( StatsGlobalGetValue("death_count") )
 	if( n_of_deaths >= 1 ) then
@@ -153,17 +154,16 @@ end
 
 
 
---Handy script for mass-generating potion outcomes
+--Handy script for mass-generating potion outcomes and displaying them neatly in the console
 function TEST(num)
-	local keys = {}
 	local _table = {}
+	_table["TOTAL"] = num --add total display
 	
-	for i = 1, num do
-		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints n% when n is a whole number (basically print current% without decimals)
+	for i = 1, num do --this is the most intensive part of the function at high values, so i return the current% to show current progress through running the test
+		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage when it can be displayed without decimals
 		local result = potion_a_materials() --simulate potion start
 		_table[result] = (_table[result] or 0) + 1 --add string to table, give it +1 every time its returned
 	end
-	
 	local t = {}
 	for k, v in pairs(_table) do
 	  table.insert(t, { key = k, value = v }) --sort function grabbed from Ribbit and Horscht after very painstakingly futile attempts to explain this to me
@@ -172,26 +172,44 @@ function TEST(num)
 	  return a.value > b.value
 	end)
 
-	local longest_string
+
+	--wretched code, it does its job well... enough.
+	local longest_name = 0
+	local longest_amount = 0
+	local longest_percent = 0
+	for i, j in ipairs(t) do
+		local n = string.len(tostring(j.key))
+		if longest_name < n then longest_name = n end
+
+		local a = string.len(tostring(j.value))
+		if longest_amount < a then longest_amount = a end
+
+		local p = math.min(string.len(tostring(({math.modf(j.value/(num/100))})[2])) - 2, 30) --grabs the decimal length of the percentage minus 2 for the 0 and decimal point with maximum or 30
+		if longest_percent < p then longest_percent = p end
+	end
+
+	local function add_gap(variable, size, before)
+		if before then for l = 0, size - string.len(variable) do variable = ' ' .. variable end
+		else for l = 0, size - string.len(variable) do end end
+		return variable
+	end
+
 	for i, j in ipairs(t) do --print table
-		longest_string = longest_string or string.len(j.value)
-		local material_name = j.key .. ','
+		local material_name = j.key
 		local material_amount = j.value .. ','
-		local material_percent = j.value/(num/100) .. ','
-		local material_percent_rounded = math.floor(((j.value/(num/100)) + 0.5) * 10) * .1
+		local material_percent = string.format(("%.Xf"):gsub("X", tostring(longest_percent)) ,j.value/(num/100)) .. '%'
+		local material_percent_rounded = string.format("%.1f", math.floor(((j.value/(num/100)) + 0.05) * 10) * .1) .. "%"
 		
-		for l = 0, 35 - string.len(material_name) do
-			material_name = material_name .. ' '
-		end
-		for l = 0, longest_string - string.len(tostring(material_amount)) do
-			material_amount = ' ' .. material_amount
-		end
-		for l = 0, 15 - string.len(tostring(material_amount)) - longest_string do
-			material_amount = material_amount .. ' '
-		end
-		for l = 0, 15 - string.len(material_percent) do
-			material_percent = material_percent .. ' '
-		end
-		print(material_name .. " = " .. material_amount .. material_percent .. string.format("%.1f", material_percent_rounded))
+		material_name = add_gap(material_name, longest_name) --add gap after material name
+
+		material_amount = add_gap(material_amount, longest_amount, true) --add gap before material amount
+		material_amount = add_gap(material_amount, 15 - longest_amount) --add gap after material amount
+
+		material_percent = add_gap(material_percent, longest_percent + 6, true) --add gap before material percentage
+		material_percent = add_gap(material_percent, 20 - longest_percent) --add gap after material percentage
+
+		material_percent_rounded = add_gap(material_percent_rounded, 13, true)
+
+		print(material_name .. " = " .. material_amount .. material_percent .. material_percent_rounded .. "  " .. j.key)-- MATERIAL	= AMOUNT,   AMOUNT%				ROUNDED%  MATERIAL
 	end
 end
