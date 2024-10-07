@@ -76,7 +76,6 @@ local test_values = {GameGetDateAndTimeLocal()}
 for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
 
-ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 
 
 
@@ -84,10 +83,15 @@ ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/file
 -----////
 
 
+--		[GLOBAL]	
 
 
-
+ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/GLOBAL/potion_start/potion_start.lua")
+ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/GLOBAL/status_effects.lua" ) --effects
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
+
+
+
 
 --		[Chemical Curiosities]
 
@@ -107,7 +111,6 @@ if CC then
 	
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua") -- init electrolysis system
 	
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/chemical_curiosities/append/status_effects.lua" ) --effects
 
 	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --Fungal shifts
 
@@ -153,7 +156,6 @@ if AA then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
 	
-	ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/arcane_alchemy/append/status_effects.lua" ) --effects
 
 	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
 
@@ -225,7 +227,6 @@ end
 
 if Terror then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/terror/materials.xml" )
-	ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/terror/status_effects.lua") --effects
 end
 
 

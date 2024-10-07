@@ -845,7 +845,8 @@
 	<CellDataChild
 	_parent="fungi"
 	name="cc_dull_fungus"
-	ui_name="$mat_fungi_trippy"
+	wang_color="FF75484c"
+	ui_name="$mat_cc_dull_fungus"
 	tags="[plant],[corrodible],[burnable],[alchemy],[impure],[fungus]"
 	gfx_glow="85"
 	>
