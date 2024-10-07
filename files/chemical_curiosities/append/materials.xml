@@ -840,7 +840,24 @@
 		count.max="4"
 	>
 	</ParticleEffect>
-	</CellData> <!-- TODO find out what the hell is calling "cc_nullium" with lowercase M and throwing a hell of a lotta errors -->
+	</CellData>
+
+	<CellDataChild
+	_parent="fungi"
+	name="cc_dull_fungus"
+	ui_name="$mat_fungi_trippy"
+	tags="[plant],[corrodible],[burnable],[alchemy],[impure],[fungus]"
+	gfx_glow="85"
+	>
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="CC_NULL_TRIP" amount="0.5" />
+			</Ingestion>
+		</StatusEffects>
+    	<Graphics 
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_fungus.png" >
+    	</Graphics>
+	</CellDataChild>
 	
 	<CellData
 		name="cc_liberum_magicas"

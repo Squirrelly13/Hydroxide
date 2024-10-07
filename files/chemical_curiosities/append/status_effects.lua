@@ -157,3 +157,12 @@ table.insert(status_effects, {
 	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/paradox/paradox.xml",
 	is_harmful=false,
 });
+
+table.insert(status_effects, {
+	id="CC_NULL_TRIP",
+	ui_name="$status_cc_null_trip",
+	ui_description="$status_desc_cc_null_trip",
+	ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_trip.png",
+	effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_trip.xml",
+	is_harmful=false,
+});

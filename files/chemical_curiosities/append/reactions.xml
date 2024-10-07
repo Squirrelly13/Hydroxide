@@ -632,6 +632,19 @@
 	>
 	</Reaction>
 	
+  
+  	<Reaction probability="3"
+		input_cell1="cc_dull_fungus" 	input_cell2="air"
+		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus" 
+		direction="top" >
+  	</Reaction>
+	
+  	<Reaction probability="11.25"
+		input_cell1="cc_dull_fungus" 	input_cell2="air"
+		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus" 
+		direction="bottom" >
+  	</Reaction>
+	
 	<!-- metastasizium -->
 	
 	<Reaction probability="100"
