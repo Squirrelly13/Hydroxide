@@ -89,7 +89,7 @@ for index, value in ipairs(test_values) do print(index .. " = " .. tostring(valu
 ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/GLOBAL/potion_start/potion_start.lua")
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/GLOBAL/status_effects.lua" ) --effects
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
-
+ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/GLOBAL/fungal_shift.lua" ) --Fungal shifts
 
 
 
@@ -112,7 +112,6 @@ if CC then
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua") -- init electrolysis system
 	
 
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/chemical_curiosities/append/fungal_shift.lua" ) --Fungal shifts
 
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
 	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
@@ -157,7 +156,6 @@ if AA then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
 	
 
-	ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/arcane_alchemy/append/fungal_shift.lua" ) --fungal
 
 
 	--		[Bloomium]
