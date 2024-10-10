@@ -38,6 +38,22 @@ local stage = ComponentGetValue2(radstagecomp, "value_int")
 local blessed = ComponentGetValue2(radcountcomp, "value_bool")
 
 
+
+
+function AddPerk(isMutant, count)
+	isMutant = isMutant or false
+	count = count or 1
+
+	local perklist
+	if isMutant then perklist = {} else perklist = {} end
+	
+	for i = 1, count, 1 do
+		
+	end
+end
+
+
+
 --#region stage checks
 
 
@@ -92,18 +108,6 @@ if radcount >= STAGE6 then --gain random perk
 	if perktracker ~= nil and ComponentGetValue2(perktracker, "int_value") < currentframe then
 		AddPerk()
 		ComponentSetValue2(perktracker, "int_value", currentframe + 36000)
-	end
-end
-
-function AddPerk(isMutant, count)
-	isMutant = isMutant or false
-	count = count or 1
-
-	local perklist
-	if isMutant then perklist = {} else perklist = {} end
-	
-	for i = 1, count, 1 do
-		
 	end
 end
 
