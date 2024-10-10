@@ -1,4 +1,4 @@
-dofile_once("data/scripts/perks/perk.lua")
+dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/perk_compiler.lua")
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/RAD_ENUMS.lua")
 
 local entity_id = GetUpdatedEntityID()
@@ -39,15 +39,14 @@ local blessed = ComponentGetValue2(radcountcomp, "value_bool")
 
 
 
-
 function AddPerk(isMutant, count)
 	isMutant = isMutant or false
 	count = count or 1
 
 	local perklist
-	if isMutant then perklist = {} else perklist = {} end
+	if isMutant then perklist = MutantPerks else perklist = BonusPerks end
 	
-	for i = 1, count, 1 do
+	for i = 1, count do
 		
 	end
 end
