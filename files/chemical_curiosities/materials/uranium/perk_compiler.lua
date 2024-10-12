@@ -1,8 +1,20 @@
-dofile_once("data/scripts/perks/perklua")
+dofile_once("data/scripts/perks/perk.lua")
 
+
+local function AddTable(tableto, tablefrom)
+	for i=1,#tablefrom do
+		tableto[#tableto+1] = tablefrom[i]
+	end
+end
+
+local function AddTable2(tableto, tablefrom)
+	for k,v in pairs(tablefrom) do
+		tableto[#tableto+1] = { probability = v, perk = k}
+	end
+end
 
 BonusPerks = {
-    
+    --{ probability = 0, perk = "lmao"}
 }
 
 MutantPerks = {
@@ -96,3 +108,9 @@ local vanilla_bonuses = {
     EDIT_WANDS_EVERYWHERE =          2,
     NO_WAND_EDITING =                1,
 }
+
+AddTable2(BonusPerks, vanilla_bonuses)
+
+for index, value in pairs(BonusPerks) do
+    --print("perk " .. value.perk .. " = " .. value.probability)
+end

@@ -26,10 +26,15 @@
 		value_int = "-1"
 	></VariableStorageComponent>
 
+	<VariableStorageComponent
+		name = "perktracker"
+		value_int = "0"
+	></VariableStorageComponent>
+
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"   
-		execute_every_n_frame="2"
+		execute_every_n_frame="1"
 		>
 	</LuaComponent>
 

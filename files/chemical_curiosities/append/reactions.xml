@@ -340,6 +340,14 @@
 
 	<Reaction probability="100"
 	input_cell1="cc_uranium_excited"			input_cell2="air"
+	output_cell1="cc_uranium_excited"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	fast_reaction="1"
+	>
+	</Reaction>
+
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="air"
 	output_cell1="cc_radioactive_waste"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>

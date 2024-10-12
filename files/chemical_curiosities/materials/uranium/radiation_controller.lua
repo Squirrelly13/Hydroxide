@@ -38,16 +38,33 @@ local stage = ComponentGetValue2(radstagecomp, "value_int")
 local blessed = ComponentGetValue2(radcountcomp, "value_bool")
 
 
+local function get_weighted_random(table)
+    local total_weight = 0
+    for i, v in ipairs(table) do
+        total_weight = total_weight + v.probability
+    end
+    local rnd = Random(0, total_weight)
+    for i, v in ipairs(table) do
+        rnd = rnd - v.probability
+        if rnd <= 0 then
+            return v.perk
+        end
+    end
+end
+
 
 function AddPerk(isMutant, count)
 	isMutant = isMutant or false
 	count = count or 1
 
-	local perklist
-	if isMutant then perklist = MutantPerks else perklist = BonusPerks end
+	local perklist = isMutant and MutantPerks or BonusPerks
+	
+
 	
 	for i = 1, count do
-		
+		local _perk = get_weighted_random(perklist)
+		print("granting perk " .. _perk)
+		perk_pickup( nil, owner, _perk, true, false, true )
 	end
 end
 
@@ -104,9 +121,11 @@ end
 
 if radcount >= STAGE6 then --gain random perk
 	stage = 6 --check if the countdown thingamabob
-	if perktracker ~= nil and ComponentGetValue2(perktracker, "int_value") < currentframe then
-		AddPerk()
-		ComponentSetValue2(perktracker, "int_value", currentframe + 36000)
+	if perktracker ~= nil then
+		if ComponentGetValue2(perktracker, "value_int") < currentframe then
+			AddPerk()
+			ComponentSetValue2(perktracker, "value_int", currentframe + 36000)
+		end
 	end
 end
 
@@ -177,13 +196,19 @@ if immunities ~= nil then
 	end
 end
 
-
 if deal_rate > 0 and damage_model ~= nil then
-	if GameGetFrameNum() % deal_rate then
+	if GameGetFrameNum() % deal_rate == 0 then
+		print("SUCCESS!!!!")
+
 		local max_hp = ComponentGetValue2(damage_model, "max_hp") or 0
-		local total_damage = deal_static + ComponentGetValue2(damage_model, "max_hp") * (deal_scaling^1.3 + 1 - deal_scaling^1.2)
-		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_CURSE", "", "", x, y)
-		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_RADIOACTIVE", "", "", x, y)
+		local total_damage = deal_static + (ComponentGetValue2(damage_model, "max_hp") * ((deal_scaling^1.3 + 1 - deal_scaling^1.2) - 1))
+		print("DEALRATE = " .. deal_rate)
+		print("MAXHP = " .. max_hp)
+		print("DEALSTATIC = " .. deal_static)
+		print("DEALSCALED = " .. deal_scaling)
+		print("TOTALDEAL = " .. total_damage)
+		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_CURSE", "", "NONE", x, y)
+		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_RADIOACTIVE", "", "NONE", x, y)
 	end
 end
 
