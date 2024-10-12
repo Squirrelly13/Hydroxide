@@ -11,10 +11,12 @@ local leggyentity = -1
 
 for index, varcomp in ipairs(var_comps) do
     local name = ComponentGetValue2(varcomp, "name")
+    --get leggytracker
     if name == "leggytracker" then
         leggytracker = varcomp
         leggyentity = ComponentGetValue2(leggytracker, "value_int") or -1 --grab leggy entity
     
+    --get and decrease radcount
     elseif name == "radcount" then
         radcount = ComponentGetValue2(varcomp, "value_int")
         if radcount >= 0 then
@@ -24,8 +26,8 @@ for index, varcomp in ipairs(var_comps) do
 	end
 end
 
-print(tostring(STAGE5))
 
+--leggy remove
 if leggyentity > 0 and radcount < STAGE5 then
     print("ATTEMPTING TO REMOVE " .. leggyentity)
     local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
@@ -35,5 +37,5 @@ if leggyentity > 0 and radcount < STAGE5 then
 end
 
 function KillLeggy()
-    EntityKill(leggyentity) ComponentSetValue2(leggytracker, "value_int", -1)
+    EntityKill(leggyentity) ComponentSetValue2(leggytracker, "value_int", -1) --kill the entity and reset the id stored in the leggytracker
 end

@@ -1,3 +1,6 @@
+do return end
+
+
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/perk_compiler.lua")
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/RAD_ENUMS.lua")
 

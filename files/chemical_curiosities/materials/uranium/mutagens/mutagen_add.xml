@@ -3,7 +3,7 @@
 	>
 	
 	<LifetimeComponent
-		lifetime="300"
+		lifetime="4"
 		>
 	</LifetimeComponent>
 	
