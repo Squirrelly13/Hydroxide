@@ -33,9 +33,7 @@ end ]]  --this seemed inefficient to me rolling through the entire list on every
 	-- replacing with script that rolls a material and just removes the previously rolled catastrophic material from the pool
 
 
-function CheckCatastrophic() 
-	
-end
+
 
 
 local material_string = "water"
