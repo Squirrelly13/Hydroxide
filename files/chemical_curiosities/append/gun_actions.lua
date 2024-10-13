@@ -321,8 +321,8 @@ table.insert( actions, {
 		sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/spell_icon.png",
 		related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/projectile.xml"},
 		type 		= ACTION_TYPE_PROJECTILE,
-		spawn_level                       = "2,3,4,5,6", -- LOCAL_SHIFT
-		spawn_probability                 = "0.6,0.6,0.6,0.6,0.6", -- LOCAL_SHIFT
+		spawn_level                       = "",
+		spawn_probability                 = "",
 		price = 400,
 		mana = 260,
 		max_uses 	= 10,

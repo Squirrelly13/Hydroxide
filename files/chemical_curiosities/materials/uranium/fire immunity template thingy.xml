@@ -1,0 +1,63 @@
+    <Entity
+        tags="effect_protection,perk_entity" >
+
+        <GameEffectComponent
+            _tags="effect_protection,perk_component"
+            caused_by_ingestion_status_effect="0"
+            caused_by_stains="0"
+            causing_status_effect="NONE"
+            custom_effect_id=""
+            disable_movement="0"
+            effect="PROTECTION_FIRE"
+            exclusivity_group="0"
+            frames="-1"
+            mCasterHerdId="0"
+            mCharmDisabledCameraBound="0"
+            mCharmEnabledTeleporting="0"
+            mCooldown="0"
+            mCounter="0"
+            mInvisible="0"
+            mIsExtension="0"
+            mIsSpent="0"
+            mSerializedData=""
+            no_heal_max_hp_cap="3.4028234663853e+038"
+            polymorph_target=""
+            ragdoll_effect="NONE"
+            ragdoll_effect_custom_entity_file=""
+            ragdoll_fx_custom_entity_apply_only_to_largest_body="0"
+            ragdoll_material="air"
+            report_block_msg="1"
+            teleportation_delay_min_frames="30"
+            teleportation_probability="600"
+            teleportation_radius_min="128"
+            teleportation_radius_max="1024"
+            teleportations_num="0" />
+
+        <InheritTransformComponent
+            always_use_immediate_parent_rotation="0"
+            only_position="0"
+            parent_hotspot_tag=""
+            parent_sprite_id="-1"
+            rotate_based_on_x_scale="0"
+            use_root_parent="0" >
+
+            <Transform
+                position.x="0"
+                position.y="0"
+                rotation="0"
+                scale.x="1"
+                scale.y="1" />
+        </InheritTransformComponent>
+    </Entity>
+
+    <Entity
+        tags="perk_entity" >
+
+        <UIIconComponent
+            description="$perkdesc_protection_fire"
+            display_above_head="0"
+            display_in_hud="1"
+            icon_sprite_file="data/ui_gfx/perk_icons/protection_fire.png"
+            is_perk="1"
+            name="$perk_protection_fire" />
+    </Entity>

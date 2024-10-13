@@ -29,7 +29,7 @@ end
 local items = {
 }
 
-if(ModSettingGet("Hydroxide.MM_MATERIALS"))then
+if(ModSettingGet("Hydroxide.MM_ENABLED"))then
     table.insert(items, {
         weight = 3,
         entity = "mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml",

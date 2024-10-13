@@ -272,48 +272,101 @@
 	
 	<!-- uranium -->
 	
-	<Reaction probability="110"
+	<Reaction probability="60"
 	input_cell1="cc_uranium"	input_cell2="air"
 	output_cell1="cc_uranium"	output_cell2="air"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
 	<Reaction probability="4"
 	input_cell1="cc_uranium"	input_cell2="cc_uranium"
 	output_cell1="cc_uranium"	output_cell2="cc_uranium"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction> 
 	
 	<Reaction probability="30"
 	input_cell1="cc_uranium"	input_cell2="[liquid]"
 	output_cell1="cc_uranium"	output_cell2="[liquid]"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 
 	<Reaction probability="1"
 	input_cell1="cc_uranium"	input_cell2="[liquid]"
 	output_cell1="cc_uranium"	output_cell2="[liquid]"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
-	<Reaction probability="50"
+	<Reaction probability="20"
 	input_cell1="cc_uranium"	input_cell2="air"
-	output_cell1="air"	output_cell2="air"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	output_cell1="air"			output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+	
+	<Reaction probability="7"
+	input_cell1="cc_uranium"			input_cell2="air"
+	output_cell1="cc_radioactive_waste"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
 	<Reaction probability="70"
 	input_cell1="[lava]" 					input_cell2="cc_radioactive_waste"
-	output_cell1="cc_uranium"			output_cell2="radioactive_gas"
+	output_cell1="cc_uranium"				output_cell2="radioactive_gas"
 	blob_radius1="4"						blob_radius2="4"
 	blob_restrict_to_input_material1="1" 	blob_restrict_to_input_material2="1" 
 	audio_fx_volume_1="100.0" >
 	</Reaction>
+	
+	<Reaction probability="200"
+	input_cell1="cc_uranium_excited"	input_cell2="air"
+	output_cell1="air"			output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+
+	
+	
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="cc_uranium"
+	output_cell1="cc_uranium_excited"	output_cell2="cc_uranium_excited"
+	convert_all="1" 
+	>
+	</Reaction>
+
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="air"
+	output_cell1="cc_uranium_excited"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	fast_reaction="1"
+	>
+	</Reaction>
+
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="air"
+	output_cell1="cc_radioactive_waste"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="air"
+	output_cell1="cc_radioactive_waste"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_uranium_excited"			input_cell2="[liquid]"
+	output_cell1="cc_radioactive_waste"	output_cell2="air"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction>
+
 
 	<!-- melting Crystals -->
 	
@@ -576,35 +629,29 @@
 	<Reaction probability="3"
 	input_cell1="cc_nullium"			input_cell2="wizardstone"
 	output_cell1="cc_uranium"			output_cell2="cc_antimatter_liquid"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
 	<Reaction probability="100"
 	input_cell1="cc_nullium"			input_cell2="wizardstone"
 	output_cell1="cc_nullium"			output_cell2="wizardstone"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radiation.xml"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-
-
-	<Reaction probability="100"
-	input_cell1="cc_nullium"			input_cell2="anvilofdestinium"
-	output_cell1="smoke"				output_cell2="anvilofdestinium"
-	>
-	</Reaction>
-
-	<Reaction probability="15"
-	input_cell1="cc_nullium"			input_cell2="anvilofdestinium"
-	output_cell1="smoke"				output_cell2="smoke"
-	>
-	</Reaction>
-
-	<Reaction probability="15"
-	input_cell1="cc_nullium"			input_cell2="aa_divine_magma"
-	output_cell1="smoke"				output_cell2="lava"
-	>
-	</Reaction>
+	
+  
+  	<Reaction probability="3"
+		input_cell1="cc_dull_fungus" 	input_cell2="air"
+		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus" 
+		direction="top" >
+  	</Reaction>
+	
+  	<Reaction probability="11.25"
+		input_cell1="cc_dull_fungus" 	input_cell2="air"
+		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus" 
+		direction="bottom" >
+  	</Reaction>
 	
 	<!-- metastasizium -->
 	

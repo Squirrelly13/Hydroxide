@@ -125,14 +125,19 @@ table.insert(ALL_MATERIALS, {
         id="cc_dormant_crystal_molten"
       },
       {
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/radiation_waste.png",
+        name="Radioactive Waste",
+        id="cc_radioactive_waste"
+      },
+      {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/uranium.png",
         name="Uranium",
         id="cc_uranium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/radiation_waste.png",
-        name="Radioactive Waste",
-        id="cc_radioactive_waste"
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/uranium_excited.png",
+        name="Excited Uranium",
+        id="cc_uranium_excited"
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/squirrellymorphine.png",

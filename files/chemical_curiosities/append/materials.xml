@@ -325,7 +325,7 @@
 	liquid_gravity="0.5"
 	liquid_sand="0"
 	liquid_stains="1"
-	liquid_sprite_stain_shaken_drop_chance="5"
+	liquid_sprite_stain_shaken_drop_chance="2"
 	status_effects="CC_INGESTION_METHANE"
 	lifetime="600"
 	generates_flames="20"
@@ -840,7 +840,25 @@
 		count.max="4"
 	>
 	</ParticleEffect>
-	</CellData> <!-- TODO find out what the hell is calling "cc_nullium" with lowercase M and throwing a hell of a lotta errors -->
+	</CellData>
+
+	<CellDataChild
+	_parent="fungi"
+	name="cc_dull_fungus"
+	wang_color="FF75484c"
+	ui_name="$mat_cc_dull_fungus"
+	tags="[plant],[corrodible],[burnable],[alchemy],[impure],[fungus]"
+	gfx_glow="85"
+	>
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="CC_NULL_TRIP" amount="0.5" />
+			</Ingestion>
+		</StatusEffects>
+    	<Graphics 
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_fungus.png" >
+    	</Graphics>
+	</CellDataChild>
 	
 	<CellData
 		name="cc_liberum_magicas"
@@ -1085,7 +1103,7 @@
 		show_in_creative_mode="1"
 		>
 		<Graphics
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/uranium.png"
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium.png"
 			>
 		</Graphics>
 		<ParticleEffect
@@ -1109,7 +1127,40 @@
 			>
 		</ParticleEffect>
 	</CellData>
-	
+
+	<CellDataChild
+		_parent="cc_uranium"
+		name="cc_uranium_excited"
+		ui_name="$mat_cc_uranium_excited"
+		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
+		wang_color="ff1cff8B"
+		>
+		<Graphics
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium_depleting.png"
+			>
+		</Graphics>
+		<ParticleEffect
+			vel.y="0"
+			vel_random.min_x="-23.42"
+			vel_random.max_x="23.42"
+			vel_random.min_y="-34.36"
+			vel_random.max_y="34.36"
+			lifetime.min="0.6"
+			lifetime.max="10.0"
+			gravity.y="0"
+			render_on_grid="1"
+			cosmetic_force_create="1"
+			draw_as_long="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="0.003"
+			count.min="1"
+			count.max="5"
+			>
+		</ParticleEffect>
+	</CellDataChild>
+
 	<CellDataChild
 		_parent="radioactive_liquid"
 		name="cc_radioactive_waste"
@@ -1128,7 +1179,7 @@
 			</Ingestion>
 		</StatusEffects>
 		<Graphics
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/radioactive/radioactive_waste.png"
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radioactive_waste.png"
 			>
 		</Graphics>
 	</CellDataChild>
@@ -1637,6 +1688,35 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
+
+	<CellData
+		name="cc_paradox_powder"
+		ui_name="$mat_cc_paradox_powder"
+		tags="[sand_ground],[burnable],[corrodible],[alchemy]"
+		burnable="1"
+		density="7.15"
+		cell_type="liquid"
+		wang_color="ff7ccfc2"
+		gfx_glow="150"
+		generates_smoke="0"
+		liquid_gravity="2"
+		liquid_sand="1"
+		on_fire="0"
+		requires_oxygen="0"
+		temperature_of_fire="60"
+		autoignition_temperature="10"
+		>
+		<Graphics
+			color="8c7ccfc2"
+			>
+		</Graphics>
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="CC_PARADOX" amount="0.15"/>
+			</Ingestion>
+		</StatusEffects>
+	</CellData>
+
 
 	<CellData
 		name="cc_warp_sickness"

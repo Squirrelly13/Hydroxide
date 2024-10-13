@@ -43,7 +43,7 @@ end
 
 local is_player = EntityHasTag(root, "player_unit")
 
-local percentage = GetIngestionPercentage(root, "CC_WARP")
+local percentage = GetIngestionSeconds(root, "CC_WARP")
 is_warped = is_warped or false
 ticks = ticks or 0
 

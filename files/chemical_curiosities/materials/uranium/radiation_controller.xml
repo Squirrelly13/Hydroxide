@@ -1,0 +1,47 @@
+<Entity name="radiation_controller">
+	<InheritTransformComponent />
+	
+	<UIIconComponent
+		name="Radiation Poisoning"
+		description="Exposure to radiation is causing problems!"
+		icon_sprite_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.png"
+		is_perk="1"
+		display_above_head="0"
+		display_in_hud="0"
+		>
+	</UIIconComponent>
+
+	<VariableStorageComponent
+		name = "radcount"
+		value_int = "10"
+	></VariableStorageComponent>
+
+	<VariableStorageComponent
+		name = "radstage"
+		value_int = "0"
+	></VariableStorageComponent>
+
+	<VariableStorageComponent
+		name = "leggytracker"
+		value_int = "-1"
+	></VariableStorageComponent>
+
+	<VariableStorageComponent
+		name = "perktracker"
+		value_int = "0"
+	></VariableStorageComponent>
+
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"   
+		execute_every_n_frame="-1"
+		>
+	</LuaComponent>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_decrease.lua"   
+		execute_every_n_frame="60"
+		>
+	</LuaComponent>
+	
+</Entity>
