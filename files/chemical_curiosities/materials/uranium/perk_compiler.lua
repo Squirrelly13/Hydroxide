@@ -24,16 +24,16 @@ MutantPerks = {
 
 
 local vanilla_bonuses = {
-    ORBIT =                         15,
-    ATTACK_FOOT =                   14,
-    DUPLICATE_PROJECTILE =          14,
-    INVISIBILITY =                  13,
+    ORBIT =                         27,
+    PERSONAL_LASER =                25,
+    INVISIBILITY =                  21,
+    TELEKINESIS =                   21,
+    DUPLICATE_PROJECTILE =          19,
+    ATTACK_FOOT =                   15,
+    RADAR_ENEMY =                   15,
     VAMPIRISM =                     13,
-    RADAR_ENEMY =                   13,
     REVENGE_TENTACLE =              13,
     CONTACT_DAMAGE =                13,
-    PERSONAL_LASER =                13,
-    TELEKINESIS =                   12,
     SAVING_GRACE =                  12,
     TELEPORTITIS_DODGE =            12,
     REVENGE_RATS =                  12,

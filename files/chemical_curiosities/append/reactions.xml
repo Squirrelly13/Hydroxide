@@ -279,9 +279,16 @@
 	>
 	</Reaction>
 	
-	<Reaction probability="4"
+	<Reaction probability="12"
 	input_cell1="cc_uranium"	input_cell2="cc_uranium"
 	output_cell1="cc_uranium"	output_cell2="cc_uranium"
+	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
+	>
+	</Reaction> 
+	
+	<Reaction probability="18"
+	input_cell1="cc_uranium"	input_cell2="[any_powder]"
+	output_cell1="cc_uranium"	output_cell2="[any_powder]"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction> 
@@ -292,23 +299,16 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-
-	<Reaction probability="1"
-	input_cell1="cc_uranium"	input_cell2="[liquid]"
-	output_cell1="cc_uranium"	output_cell2="[liquid]"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
-	>
-	</Reaction>
 	
-	<Reaction probability="20"
+	<Reaction probability="60"
 	input_cell1="cc_uranium"	input_cell2="air"
 	output_cell1="air"			output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
 	
-	<Reaction probability="7"
-	input_cell1="cc_uranium"			input_cell2="air"
+	<Reaction probability="11"
+	input_cell1="cc_uranium"			input_cell2="[water]"
 	output_cell1="cc_radioactive_waste"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>

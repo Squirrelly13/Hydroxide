@@ -17,9 +17,9 @@ local radcount
 --vars and trackers
 local radcountcomp
 local radstagecomp
+local radpostracker
 local perktracker
 local leggytracker
-local radpostracker
 local owner_comps = EntityGetAllComponents(owner) or {}
 
 
@@ -45,9 +45,9 @@ for index, varcomp in ipairs(var_comps) do --index varcomps to their designated 
 		radcount = ComponentGetValue2(varcomp, "value_int") + 10 --set radcount here too
 		ComponentSetValue2(varcomp, "value_int", radcount)
     elseif varcomp_name == "radstage" then radstagecomp = varcomp
+	elseif varcomp_name == "radpostracker" then radpostracker = varcomp
     elseif varcomp_name == "leggytracker" then leggytracker = varcomp
     elseif varcomp_name == "perktracker" then perktracker = varcomp
-	elseif varcomp_name == "radpostracker" then radpostracker = varcomp
 	end
 end
 
@@ -88,20 +88,7 @@ local function get_weighted_random(table)
 end
 
 
-function AddPerk(isMutant, count)
-	isMutant = isMutant or false
-	count = count or 1
 
-	local perklist = isMutant and MutantPerks or BonusPerks
-	
-
-	
-	for i = 1, count do
-		local _perk = get_weighted_random(perklist)
-		print("granting perk " .. _perk)
-		perk_pickup( nil, owner, _perk, true, false, true )
-	end
-end
 
 
 
@@ -141,7 +128,7 @@ local deal_static = 0
 local deal_damage
 if radcount >= STAGE4 then --damage that scales with radcount
 	stage = 4
-	deal_static = (radcount - STAGE4) * .002 -- divide by 20 so +5 damage every 100 rad, divide by a further 25 cuz of damage conversion
+	deal_static = (radcount - STAGE4) * .001 -- divide by 20 so +2.5 damage every 100 rad, divide by a further 25 cuz of damage conversion
 	deal_damage = true --90
 end
 
@@ -153,6 +140,44 @@ if radcount >= STAGE5 then --leggy temp
 	leggyamount = math.ceil((radcount - STAGE5) * .01)
 end
 
+
+local function sort_table(_table)
+	local t = {}
+	for k, v in pairs(_table) do
+	  table.insert(t, { key = k, value = v }) --sort function grabbed from Ribbit and Horscht after very painstakingly futile attempts to explain this to me
+	end
+	table.sort(t, function(a, b)
+	  return a.value > b.value
+	end)
+	return t
+end
+
+
+function AddPerk(isMutant, count)
+	isMutant = isMutant or false
+	count = count or 1
+
+	local perklist = isMutant and MutantPerks or BonusPerks
+	
+--[[
+	local _test_perks = {}
+	for i = 1, 100000 do
+		local _perk = get_weighted_random(perklist)
+		_test_perks[_perk] = (_test_perks[_perk] or 0) + 1
+	end
+	_test_perks["TOTAL"] = 100000
+	_test_perks = sort_table(_test_perks)
+	for k,v in ipairs(_test_perks) do
+		print(v.key .. ": " .. v.value)
+	end --]]
+	
+
+	for i = 1, count do
+		local _perk = get_weighted_random(perklist)
+		print("granting perk " .. _perk)
+		perk_pickup( nil, owner, _perk, true, false, true )
+	end
+end
 
 if radcount >= STAGE6 then --gain random perk
 	stage = 6 --check if the countdown thingamabob
@@ -242,8 +267,8 @@ if deal_damage and damage_model ~= nil then
 	print("DEALSTATIC = " .. deal_static)
 	print("DEALSCALED = " .. deal_scaling)
 	print("TOTALDEAL = " .. total_damage)
-	EntityInflictDamage(owner, total_damage * .15, "DAMAGE_CURSE", "Radiation", "NONE", x, y)
-	EntityInflictDamage(owner, total_damage * .15, "DAMAGE_RADIOACTIVE", "Radiation", "NONE", x, y)
+	EntityInflictDamage(owner, total_damage * .3, "DAMAGE_CURSE", "Radiation", "NONE", x, y)
+	EntityInflictDamage(owner, total_damage * .3, "DAMAGE_RADIOACTIVE", "Radiation", "NONE", x, y)
 end
 
 
@@ -276,7 +301,44 @@ end
 
 print(radcount)
 
+if stage then
+	local name
+	local desc
+	local icon
+	name = "$statis_cc_radstage_" .. tostring(stage)
+	desc = "$statis_cc_desc_radstage_" .. tostring(stage)
+	icon = "mods/Hydroxide/files/chemical_curiosities/materials/uranium/icons/icon_" .. stage .. ".png"
 
+	--[[
+	if stage == 1 then
+
+	elseif stage == 2 then
+
+	elseif stage == 3 then
+
+	elseif stage == 4 then
+
+	elseif stage == 5 then
+
+	elseif stage == 6 then
+
+	elseif stage == 7 then
+
+	elseif stage == 8 then
+
+	elseif stage == 9 then
+
+	elseif stage == 10 then
+
+	elseif stage == 11 then
+
+	elseif stage == 12 then
+
+	else
+
+	end
+	--]]
+end
 
 
 

@@ -3,6 +3,20 @@
 	
 <!-- TODO make unstable metamorphine more procedural if possible -->
 	
+
+<!--  
+	<CellData
+		name="unknown"
+		ui_name="unknown_mat_test"
+		tags="[water]"
+		cell_type="liquid"
+		liquid_sand="1"
+		liquid_static="1"
+		wang_color="12345678"
+		ignore_self_reaction_warning="1"
+	> 
+	</CellData> --> <!-- testing material for unknown case in reaction input/output  -->
+
  <CellData 
         name="cc_hydroxide"
         ui_name="$mat_cc_hydroxide"
@@ -1101,6 +1115,7 @@
 		audio_physics_material_wall="gold"
 		audio_physics_material_solid="gold"
 		show_in_creative_mode="1"
+		ignore_self_reaction_warning="1"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium.png"
@@ -1130,10 +1145,12 @@
 
 	<CellDataChild
 		_parent="cc_uranium"
+		_inherit_reactions="1"
 		name="cc_uranium_excited"
 		ui_name="$mat_cc_uranium_excited"
 		tags="[static],[corrodible],[alchemy],[solid],[radioactive],[uranium]"
 		wang_color="ff1cff8B"
+		ignore_self_reaction_warning="1"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium_depleting.png"
@@ -1521,7 +1538,6 @@
 		name="cc_cobaline"
 		ui_name="$mat_cc_cobaline"
 		tags="[liquid],[corrodible],[impure]"
-		burnable="1"
 		density="0.5"
 		cell_type="liquid"
 		wang_color="803A7BE3"

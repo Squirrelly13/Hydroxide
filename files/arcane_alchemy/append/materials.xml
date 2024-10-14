@@ -576,6 +576,7 @@
 	liquid_sprite_stains_check_offset="1"
 	liquid_sprite_stains_status_threshold="0.2" 
 	show_in_creative_mode="1"
+	ignore_self_reaction_warning="1"
 	>
 	<StatusEffects>
 		<Stains>
@@ -701,11 +702,9 @@
 	name="aa_love"
 	ui_name="$mat_aa_love"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[burnable],[magic_liquid],[impure]"
-	burnable="1"  
 	density="5"  
 	lifetime="225"
 	burnable="1"
-	temperature_of_fire="95"
 	fire_hp="500"
 	autoignition_temperature="10"
 	cell_type="liquid" 
@@ -1295,7 +1294,6 @@
 
     <ExplosionConfig 
         damage="0"
-        cell_explosion_power="100000"
         ray_energy="400000" 
         explosion_radius="1000000" 
         cell_explosion_damage_required="1"
