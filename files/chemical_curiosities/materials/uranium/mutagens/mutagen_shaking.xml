@@ -1,4 +1,4 @@
-<Entity name="mutagenShaking" >
+<Entity name="mutagenPositioning" >
 
 	<LifetimeComponent lifetime="300" />
 	

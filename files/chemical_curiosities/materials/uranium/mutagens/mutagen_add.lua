@@ -103,24 +103,26 @@ end
 
 
 local immunities = {}
+local immunities_list = {}
 if radcount >= STAGE2 then --immunities
 	stage = 2
 	
 	if owner_children ~= nil then
 		for k,v in ipairs(owner_children) do
-			if EntityHasTag(v, "effect_protection") then 
+			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then 
 				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
 				--print("adding " .. key .. " to immunities table")
-				immunities[key] = (immunities[key] or 0) + 1
+				table.insert(immunities[key], v)
+				immunities_list[key] = (immunities_list[key] or 0) + 1
 			end
 		end
 	end
 end
 
-local radiation_positioning
+local positioning
 if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
-	radiation_positioning = true
+	positioning = true
 end
 
 
@@ -140,17 +142,6 @@ if radcount >= STAGE5 then --leggy temp
 	leggyamount = math.ceil((radcount - STAGE5) * .01)
 end
 
-
-local function sort_table(_table)
-	local t = {}
-	for k, v in pairs(_table) do
-	  table.insert(t, { key = k, value = v }) --sort function grabbed from Ribbit and Horscht after very painstakingly futile attempts to explain this to me
-	end
-	table.sort(t, function(a, b)
-	  return a.value > b.value
-	end)
-	return t
-end
 
 
 function AddPerk(isMutant, count)
@@ -248,6 +239,18 @@ if vomit == true and _vomit == nil then
 end
 
 
+local _positioning
+if owner_children ~= nil then
+	for k,v in ipairs(owner_children) do
+		if EntityGetName(v) == "mutagenPositioning" then _positioning = v end
+	end
+end
+
+if positioning == true and _positioning == nil then
+	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_shaking.xml", x, y ))
+end
+
+
 
 
 if immunities ~= nil then
@@ -302,6 +305,13 @@ end
 print(radcount)
 
 if stage then
+	local ui_comps = EntityGetComponent(radiation_controller, "UIIconComponent")
+	if ui_comps ~= nil then
+		local radstatus = ui_comps[1]
+		ComponentSetValue2(radstatus, "name", GameTextGet("$statis_cc_radstage_" .. tostring(stage), radcount))
+		ComponentSetValue2(radstatus, "description", GameTextGet("$statis_cc_desc_radstage_" .. tostring(stage), radcount))
+		ComponentSetValue2(radstatus, "icon_sprite_file", "mods/Hydroxide/files/chemical_curiosities/materials/uranium/icons/icon_" .. stage .. ".png")
+	end
 	local name
 	local desc
 	local icon

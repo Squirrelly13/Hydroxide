@@ -2,6 +2,7 @@ dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/RAD_ENU
 
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
+local owner_children = EntityGetAllChildren(owner) or {}
 
 local var_comps = EntityGetComponent(GetUpdatedEntityID(), "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end
@@ -25,6 +26,14 @@ for index, varcomp in ipairs(var_comps) do
         end
 	end
 end
+
+local positioning
+for k,v in ipairs(owner_children) do
+    if EntityGetName(v) == "mutagenPositioning" then positioning = v end
+end
+
+
+--positioning remove
 
 
 --leggy remove
