@@ -1,6 +1,5 @@
 -- all functions below are optional and can be left out
 
-local catastrophicMaterials = {creepy_liquid = true, monster_powder_test = true, totallyBogusMaterial = true} --Create Catastrophic Materials list
 
 
 
@@ -30,11 +29,6 @@ end
 
 ]]--
 
-local CC = ModSettingGet("Hydroxide.CC_ENABLED")
-local AA = ModSettingGet("Hydroxide.AA_ENABLED")
-local MM = ModSettingGet("Hydroxide.MM_ENABLED")
-local FF = ModSettingGet("Hydroxide.FF_ENABLED")
-local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 
 
@@ -43,11 +37,20 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
+local CC = ModSettingGet("Hydroxide.CC_ENABLED")
+local AA = ModSettingGet("Hydroxide.AA_ENABLED")
+local MM = ModSettingGet("Hydroxide.MM_ENABLED")
+local FF = ModSettingGet("Hydroxide.FF_ENABLED")
+local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
+
+local catastrophicMaterials = {creepy_liquid = true, monster_powder_test = true, totallyBogusMaterial = true} --Create Catastrophic Materials list
+
 
 
 dofile("mods/Hydroxide/lib/translations.lua")
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 nxml.error_handler = function() end
+
 
 local function make_timed(fn, name)
 	return function(...)
@@ -65,6 +68,21 @@ dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
 
+
+
+--allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
+function SetBloodMaterial(xml_path, material)
+	material = material or "air"
+	local xml = ModDoesFileExist(xml_path) and nxml.parse(ModTextFileGetContent(xml_path))
+	if xml ~= nil then
+		xml:first_of("Base"):first_of("DamageModelComponent").attr.blood_material = material
+		ModTextFileSetContent(xml_path, tostring(xml))
+	end
+end
+
+
+
+
 --   	[Chemical Curiosities]
 
 
@@ -72,8 +90,8 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 ---- print entire function:
-local test_values = {GameGetDateAndTimeLocal()}
-for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
+--local test_values = {GameGetDateAndTimeLocal()}
+--for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
 
 
@@ -146,7 +164,18 @@ if CC then
 
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 
+
+	---- Enemies
+
+	SetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
+	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_jitterium")
+	--todo: add Master of Monochrome
+
 end
+
+
+
+
 
 
 --		[Arcane Alchemy]
@@ -180,12 +209,22 @@ if AA then
 end
 
 
+
+
+
+
+
 -- 		[Mystical Mixtures]
 
 if MM then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 end
+
+
+
+
+
 
 
 --		[Fluent Fluids]
