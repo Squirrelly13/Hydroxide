@@ -46,7 +46,7 @@ end --awesomium function grabbed from nathan (i was incompetent so he made the f
 function ps.CorrectTables()
 	for index, value in ipairs({ps.starterpotions, ps.magicpotions, ps.failpotions}) do
 		for k, v in ipairs(value) do
-			if v.probability == nil then v.probability = 10 print(v[1] .. " corrected.") end
+			if v.probability == nil then v.probability = 10 --[[print(v[1] .. " corrected.")]] end
 		end
 	end
 end
