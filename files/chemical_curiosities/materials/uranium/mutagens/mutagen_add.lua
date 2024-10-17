@@ -119,10 +119,20 @@ if radcount >= STAGE2 then --immunities
 	end
 end
 
-local positioning
+ 
 if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
-	positioning = true
+	
+	local positioning
+	if owner_children ~= nil then
+		for k,v in ipairs(owner_children) do
+			if EntityGetName(v) == "mutagenPositioning" then positioning = v end
+		end
+	end
+
+	if positioning == nil then
+		EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_shaking.xml", x, y ))
+	end
 end
 
 
@@ -176,6 +186,7 @@ if radcount >= STAGE6 then --gain random perk
 		if ComponentGetValue2(perktracker, "value_int") < currentframe then
 			AddPerk()
 			ComponentSetValue2(perktracker, "value_int", currentframe + 36000)
+			GamePrintImportant("Mutagen Upgrade", "Radiation gives you superpowers!")
 		end
 	end
 end
@@ -239,16 +250,6 @@ if vomit == true and _vomit == nil then
 end
 
 
-local _positioning
-if owner_children ~= nil then
-	for k,v in ipairs(owner_children) do
-		if EntityGetName(v) == "mutagenPositioning" then _positioning = v end
-	end
-end
-
-if positioning == true and _positioning == nil then
-	EntityAddChild( owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_shaking.xml", x, y ))
-end
 
 
 
@@ -312,12 +313,6 @@ if stage then
 		ComponentSetValue2(radstatus, "description", GameTextGet("$statis_cc_desc_radstage_" .. tostring(stage), radcount))
 		ComponentSetValue2(radstatus, "icon_sprite_file", "mods/Hydroxide/files/chemical_curiosities/materials/uranium/icons/icon_" .. stage .. ".png")
 	end
-	local name
-	local desc
-	local icon
-	name = "$statis_cc_radstage_" .. tostring(stage)
-	desc = "$statis_cc_desc_radstage_" .. tostring(stage)
-	icon = "mods/Hydroxide/files/chemical_curiosities/materials/uranium/icons/icon_" .. stage .. ".png"
 
 	--[[
 	if stage == 1 then
