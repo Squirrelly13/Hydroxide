@@ -167,7 +167,6 @@
   <Reaction probability="10"
 	input_cell1="smoke" 	input_cell2="air"
 	output_cell1="aa_soot" 	output_cell2="aa_soot"
-	fast_reaction="1"
 	>
   </Reaction>
 
@@ -178,14 +177,12 @@
 	<Reaction probability="100"
 	input_cell1="[magic_liquid]" 	input_cell2="lava"
 	output_cell1="aa_potion_gas" 	output_cell2="lava"
-	fast_reaction="1"
 	>
 	</Reaction>
   
 	<Reaction probability="95"
 	input_cell1="aa_potion_gas" 	input_cell2="air"
 	output_cell1="aa_base_potion" 	output_cell2="air"
-	fast_reaction="1"
 	>
 	</Reaction>
 
@@ -257,7 +254,7 @@
 	
 	<!-- arborium (wood juice) -->
 	  <Reaction probability="100"
-	input_cell1="aa_arborium" 	input_cell2="[alchemy]"
+	input_cell1="aa_arborium" 	input_cell2="[any_sand]"
 	output_cell1="smoke" 	output_cell2="wood_static"
 	fast_reaction="1"
 	blob_radius1="2"		blob_radius2="8"
