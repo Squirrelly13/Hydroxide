@@ -1,5 +1,7 @@
 ---@diagnostic disable: undefined-global, lowercase-global
 
+local PS = PotionStartingLib --shorten the ugly PotionStartingLib
+
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
@@ -39,18 +41,18 @@ local cc_failpotions = {
 
 local cc_functions = {
 	function(outcome, r_value)
-		if (CompareTables({UTC.month, UTC.day}, {7,4}) and r_value >= 20) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
+		if (PS.CompareTables({PS.UTC.month, PS.UTC.day}, {7,4}) and r_value >= 20) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
 		elseif outcome == "acid" and Random(0,1) then return "cc_hydroxide"
 		end
 	end
 }
 
 if CC then
-	starterpotions = CombineTables(starterpotions, cc_starterpotions)
-	magicpotions = CombineTables(magicpotions, cc_magicpotions)
-	one_in_millions = CombineTables(one_in_millions, cc_one_in_millions)
-	failpotions = CombineTables(failpotions, cc_failpotions)
-	functions = CombineTables(functions, cc_functions)
+	PS.starterpotions = PS.CombineTables(PS.starterpotions, cc_starterpotions)
+	PS.magicpotions = PS.CombineTables(PS.magicpotions, cc_magicpotions)
+	PS.one_in_millions = PS.CombineTables(PS.one_in_millions, cc_one_in_millions)
+	PS.failpotions = PS.CombineTables(PS.failpotions, cc_failpotions)
+	PS.functions = PS.CombineTables(PS.functions, cc_functions)
 end
 
 
@@ -76,14 +78,14 @@ local aa_magicpotions = {
 
 local aa_functions = {
 	function(outcome, r_value)
-		if (CompareTables({UTC.month, UTC.day}, {4,1}) and AA and r_value <= 10) then return "aa_hitself" end -- 10% chance on April Fools for joke material
+		if (PS.CompareTables({PS.UTC.month, PS.UTC.day}, {4,1}) and AA and r_value <= 10) then return "aa_hitself" end -- 10% chance on April Fools for joke material
 	end
 }
 
 if AA then
-	starterpotions = CombineTables(starterpotions, aa_starterpotions)
-	magicpotions = CombineTables(magicpotions, aa_magicpotions)
+	PS.starterpotions = PS.CombineTables(PS.starterpotions, aa_starterpotions)
+	PS.magicpotions = PS.CombineTables(PS.magicpotions, aa_magicpotions)
 	--one_in_millions = CombineTables(one_in_millions, aa_one_in_millions)
 	--failpotions = CombineTables(failpotions, aa_failpotions)
-	functions = CombineTables(functions, aa_functions)
+	PS.functions = PS.CombineTables(PS.functions, aa_functions)
 end

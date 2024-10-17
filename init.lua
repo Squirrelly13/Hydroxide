@@ -95,9 +95,6 @@ end
 
 
 
-
-
-
 -----////
 
 
@@ -545,7 +542,7 @@ ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/
 
 
 function OnModPostInit()
-	print("Chemical Curiosities - OnModPostInit()") -- First this is called for all mods
+	--print("Chemical Curiosities - OnModPostInit()") -- First this is called for all mods
 
 
 	

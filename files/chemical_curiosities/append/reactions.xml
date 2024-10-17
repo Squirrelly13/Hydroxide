@@ -669,15 +669,100 @@
 	>
 	</Reaction>
 	
-	<Reaction probability="1"
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="cc_hydroxide"
+	output_cell1="cc_hydroxide"				output_cell2="cc_hydroxide"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="[slime]"
+	output_cell1="[slime]"				output_cell2="[slime]"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="vomit"
+	output_cell1="vomit"				output_cell2="vomit"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="vomit_fading"
+	output_cell1="vomit_fading"				output_cell2="vomit_fading"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="cc_slicing_liquid"
+	output_cell1="cc_slicing_liquid"				output_cell2="cc_slicing_liquid"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="radioactive_liquid"
+	output_cell1="radioactive_liquid"				output_cell2="radioactive_liquid"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="cursed_liquid"
+	output_cell1="cursed_liquid"				output_cell2="cursed_liquid"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_polymorph"
+	output_cell1="magic_liquid_polymorph"				output_cell2="magic_liquid_polymorph"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_random_polymorph"
+	output_cell1="magic_liquid_random_polymorph"				output_cell2="magic_liquid_random_polymorph"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_unstable_polymorph"
+	output_cell1="magic_liquid_unstable_polymorph"				output_cell2="magic_liquid_unstable_polymorph"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="20"
+	input_cell1="cc_metastasizium"	input_cell2="poison"
+	output_cell1="poison"				output_cell2="poison_gas"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability=".1"
 	input_cell1="cc_metastasizium"	input_cell2="air"
 	output_cell1="air"				output_cell2="air"
 	>
 	</Reaction>
 	
-	<Reaction probability=".5"
-	input_cell1="cc_metastasizium"	input_cell2="air"
-	output_cell1="vomit"			output_cell2="air"
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="blood"
+	output_cell1="cc_metastasizium"				output_cell2="cc_metastasizium"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="[meat]"
+	output_cell1="cc_metastasizium"				output_cell2="cc_metastasizium"
+	blob_radius1="5"
 	>
 	</Reaction>
 

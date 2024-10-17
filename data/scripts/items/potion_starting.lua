@@ -2,21 +2,24 @@
 dofile_once("data/scripts/lib/utilities.lua")
 dofile_once("data/scripts/items/init_potion.lua")
 
+--PotionStartingLib global table
+PotionStartingLib = {}
+local ps = PotionStartingLib --rename it here so it doesnt look ugly
 
 ---Default potion material
 local potion_material = "water"
 
 ---Current UTC time
-UTC = {}
-UTC.year, UTC.month, UTC.day, UTC.hour, UTC.minute, UTC.second = GameGetDateAndTimeUTC()
+ps.UTC = {}
+ps.UTC.year, ps.UTC.month, ps.UTC.day, ps.UTC.hour, ps.UTC.minute, ps.UTC.second = GameGetDateAndTimeUTC()
 
 ---Current Local time (includes jussi and mammi bools)
-LOCAL = {}
-LOCAL.year, LOCAL.month, LOCAL.day, LOCAL.hour, LOCAL.minute, LOCAL.second, LOCAL.jussi, LOCAL.mammi = GameGetDateAndTimeLocal()
+ps.LOCAL = {}
+ps.LOCAL.year, ps.LOCAL.month, ps.LOCAL.day, ps.LOCAL.hour, ps.LOCAL.minute, ps.LOCAL.second, ps.LOCAL.jussi, ps.LOCAL.mammi = GameGetDateAndTimeLocal()
 
 
 ---This function combines tables so you can easily merge your custom tables into the vanilla ones
-function CombineTables(base, addition)
+function ps.CombineTables(base, addition)
 	for i=1,#addition do
 		base[#base+1] = addition[i]
 	end
@@ -24,13 +27,13 @@ function CombineTables(base, addition)
 end
 
 ---Function that compares two tables to see if they are identical. Can be used to easily check between current date and desired date using tables. By Nahtan
-function CompareTables(a, b) 
+function ps.CompareTables(a, b) 
     if type(a) ~= type(b) then
         return false
     end
     if type(a) == "table" then
         for k, v in pairs(a) do
-            if not CompareTables(v, b[k]) then
+            if not ps.CompareTables(v, b[k]) then
                 return false
             end
         end
@@ -40,8 +43,8 @@ function CompareTables(a, b)
 end --awesomium function grabbed from nathan (i was incompetent so he made the function for me)
 
 ---This function just corrects the tables that lack probability fields. Probability will default to 10 for all material tables
-function CorrectTables()
-	for index, value in ipairs({starterpotions, magicpotions, failpotions}) do
+function ps.CorrectTables()
+	for index, value in ipairs({ps.starterpotions, ps.magicpotions, ps.failpotions}) do
 		for k, v in ipairs(value) do
 			if v.probability == nil then v.probability = 10 print(v[1] .. " corrected.") end
 		end
@@ -50,7 +53,7 @@ end
 
 
 ---starter potions, 70% chance to pull from this table
-starterpotions = {
+ps.starterpotions = {
 	{	probability = 32.5, 	"water"			},
 	{	probability = 6.5, 		"mud"			},
 	{	probability = 6.5, 		"water_swamp"	},
@@ -61,7 +64,7 @@ starterpotions = {
 }
 
 ---magic potions, 29% chance to pull from this table
-magicpotions = {
+ps.magicpotions = {
 	{	"acid"							},
 	{	"magic_liquid_polymorph"		},
 	{	"magic_liquid_random_polymorph"	},
@@ -71,22 +74,22 @@ magicpotions = {
 }
 
 	-- 1/10,000,100 technically, lmao.
-one_in_millions = { -- "key" must be from 1 to 100000
+ps.one_in_millions = { -- "key" must be from 1 to 100000
 	{	key = 666, 	"urine"},
 	{	key = 79, 	"gold"}
 }
 
 ---Material outcomes if the "one-in-a-million" doesnt hit anything
-failpotions = {
+ps.failpotions = {
 	{	"slime"					},
 	{	"gunpowder_unstable"	}
 }
 
 ---Table of custom functions potion_a_materials runs through before returning the chosen material
 ---@type fun(outcome: string, r_value: number, r_value2: number, data: table)[]
-functions = {
+ps.functions = {
 	function()
-		if CompareTables({LOCAL.month, LOCAL.day}, {5, 1}) or CompareTables({LOCAL.month, LOCAL.day}, {4, 30}) and (Random( 0, 100 ) <= 20) then return "sima" end
+		if ps.CompareTables({ps.LOCAL.month, ps.LOCAL.day}, {5, 1}) or ps.CompareTables({ps.LOCAL.month, ps.LOCAL.day}, {4, 30}) and (Random( 0, 100 ) <= 20) then return "sima" end
 	end
 }
 
@@ -99,7 +102,8 @@ local functions2 = {
 
 
 ---Function that chooses the potion material
-local function potion_a_materials(outcome, r_value, r_value2, data) --Variables are available as inputs in case you want to run with forced RNG. data lets you pass extra data if you want
+---@diagnostic disable
+function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are available as inputs in case you want to run with forced RNG. data lets you pass extra data if you want
     outcome = outcome or potion_material
 	r_value = r_value or Random( 1, 100 )
 	r_value2 = r_value2 or Random( 0, 100000 )
@@ -107,19 +111,19 @@ local function potion_a_materials(outcome, r_value, r_value2, data) --Variables 
 
 	local rnd = random_create(r_value, r_value2)
 	if( r_value <= 70 ) then --70% chance for staterpotions
-		outcome = pick_random_from_table_weighted(rnd, starterpotions)[1]
+		outcome = pick_random_from_table_weighted(rnd, ps.starterpotions)[1]
 	elseif( r_value <= 99 ) then --29% chance for magicpotions
 		r_value = Random( 0, 100 )
-		outcome = pick_random_from_table_weighted(rnd, magicpotions)[1]
+		outcome = pick_random_from_table_weighted(rnd, ps.magicpotions)[1]
 	else --1% chance to try for the one_in_millions
-		outcome = pick_random_from_table_weighted(rnd, failpotions)[1]
-		for k,v in pairs(one_in_millions) do
+		outcome = pick_random_from_table_weighted(rnd, ps.failpotions)[1]
+		for k,v in pairs(ps.one_in_millions) do
 			if r_value2 == v.key then outcome = v[1] end --loop over one_in_millions
 		end
 	end
 
-	if functions ~= nil then --in case someone empties the function to skip this step
-		for index, value in pairs(functions) do
+	if ps.functions ~= nil then --in case someone empties the function to skip this step
+		for index, value in pairs(ps.functions) do
 			 outcome = value(outcome, r_value, r_value2, data) or outcome
 		end
 	end
@@ -131,14 +135,14 @@ end
 function init( entity_id ) --mostly vanilla function
 	local x,y = EntityGetTransform( entity_id )
 	SetRandomSeed( x, y )
-	CorrectTables() --add default probabilities
+	ps.CorrectTables() --add default probabilities
 
-	--TEST(10000000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
+	ps.TEST(100000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
 	--default value of 10000000 (ten million) takes approx 40 seconds for me, so it should be a good testing value (decrease to like, 100k or 1mil for faster testing ig, 100k should be basically instant)
 
 	local n_of_deaths = tonumber( StatsGlobalGetValue("death_count") )
 	if( n_of_deaths >= 1 ) then
-		potion_material = potion_a_materials() or potion_material --if potion_a_materials returns nil or smth, default to potion_material
+		potion_material = ps.potion_a_materials() or potion_material --if potion_a_materials returns nil or smth, default to potion_material
 	end
 
 	
@@ -155,13 +159,13 @@ end
 
 
 --Handy script for mass-generating potion outcomes and displaying them neatly in the console
-function TEST(num)
+function ps.TEST(num)
 	local _table = {}
 	_table["TOTAL"] = num --add total display
 	
 	for i = 1, num do --this is the most intensive part of the function at high values, so i return the current% to show current progress through running the test
 		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage when it can be displayed without decimals
-		local result = potion_a_materials() --simulate potion start
+		local result = ps.potion_a_materials() --simulate potion start
 		_table[result] = (_table[result] or 0) + 1 --add string to table, give it +1 every time its returned
 	end
 	local t = {}

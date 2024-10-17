@@ -125,6 +125,41 @@
 
 	<!-- metastasizium -->
 	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="aa_pandorium"
+	output_cell1="aa_pandorium"				output_cell2="aa_pandorium"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="aa_chaotic_pandorium"
+	output_cell1="aa_chaotic_pandorium"				output_cell2="aa_chaotic_pandorium"
+	blob_radius1="5"
+	>
+	</Reaction>
+	
+	<Reaction probability="100"
+	input_cell1="cc_metastasizium"	input_cell2="aa_unstable_pandorium"
+	output_cell1="aa_unstable_pandorium"				output_cell2="aa_unstable_pandorium"
+	blob_radius1="5"
+	>
+	</Reaction>
+
+	<Reaction probability="80"
+	input_cell1="cc_metastasizium"	input_cell2="air"	input_cell3="aa_cloning_solution"
+	output_cell1="cc_metastasizium"	output_cell2="cc_metastasizium"	output_cell3="aa_cloning_solution"
+	blob_radius2="5"
+	>
+	</Reaction>
+
+	<Reaction probability="80"
+	input_cell1="cc_metastasizium"	input_cell2="air"	input_cell3="aa_cloning_solution"
+	output_cell1="cc_metastasizium"	output_cell2="aa_cloning_solution"	output_cell3="aa_cloning_solution"
+	blob_radius2="5"
+	>
+	</Reaction>
+	
 
 	
 	<!-- agitine -->
