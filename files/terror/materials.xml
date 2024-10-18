@@ -1,0 +1,62 @@
+<Materials>
+	
+ <CellData 
+    name="terror_teleportatium"
+    ui_name="$mat_terror_teleportatium"
+    tags="[liquid],[magic_liquid],[terror]"
+    density="4.19"
+    cell_type="liquid"
+    wang_color="807fceeb"
+    gfx_glow="170"
+    liquid_gravity="0.6"
+	liquid_stains="1"
+	audio_materialaudio_type="MAGICAL" 
+
+    >
+	<ParticleEffect
+		vel.y="17.14"
+		vel_random.min_y="-100"
+		vel_random.max_y="51.42"
+		lifetime.min="0"
+		gravity.y="-8.57"
+		render_on_grid="1"
+		draw_as_long="1"
+		friction="-3.429"
+		probability="0.0518"
+		--color="807fceeb"
+	/>
+        <StatusEffects>
+            <Ingestion> <StatusEffect type="TERROR_TELEPORT" amount="0.3"/> </Ingestion>
+			<Stains> <StatusEffect type="TERROR_TELEPORT"/> </Stains>
+        </StatusEffects>
+ </CellData>  <!-- Terrorportium, actively tries to teleport you into danger -->
+
+ <CellData
+	name="terror_water"
+	ui_name="$mat_t_terrifying_water"
+	tags="[liquid],[water],[terror]"
+	burnable="0"
+	density="3.91"
+	cell_type="liquid"
+	wang_color="902F559C"
+	liquid_gravity="1.5"
+	liquid_sand="0"
+	requires_oxygen="1"
+	danger_water="1"
+	liquid_stains="1"
+	liquid_sprite_stain_ignited_drop_chance="10"
+	liquid_sprite_stains_check_offset="-1"
+	show_in_creative_mode="1"
+	>
+	<Graphics
+		color="A0376259"
+		>
+	</Graphics>
+	<StatusEffects>
+		<Stains>
+			<StatusEffect type="WET" />
+		</Stains>
+	</StatusEffects>
+  </CellData> <!-- Terrifying Water, the player is given a material converter at the start of a run that transforms twater into a random dangerous material depending on the seed when the player gets close -->
+
+</Materials>

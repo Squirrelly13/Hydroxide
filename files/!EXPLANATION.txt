@@ -1,0 +1,23 @@
+The Chemical Curiosities or "Hydroxide" Mod is actually secretly 3 (soon to be 4) mods in a trench-coat, hence being able to divide up the functions and features makes things much easier to handle
+
+The Category explanations can be found here:
+
+
+Arcane Alchemy: Content from or related to the original Arcane Alchemy mod, this branch is commonly referred to as the AA branch, it has many materials such as Pandorium, Hungry Slime and Condensed Gravity
+
+Chemical Curiosities: This is general materials and things not related to the other branches, you could consider this the core of the entire mod which every other branch is built around- (though technically it was made after the AA mod), this branch was mostly created by and worked on by Squirrelly13 (creator of the mod)
+
+Mystical Mixtures: This is a branch where Evaisa (or Eba/Eva) toys around with alternative alchemy handling where materials are moreso ingredients to alter or create items/wands instead of the materials being the end goal
+
+Fluent Fluids: This is a WIP branch that is intended to be the successor to Philadelphus' Fluid Dynamics mod, primarily worked on by UserK
+
+Terror: This branch is different from the others, in that it is less of an additional mod, and more of an expansion or DLC that adds "Terrifying" variants of materials from both the base game and other branches, primarily worked on by UserK (very lacking atm, its on low-priority atm)
+
+GDBD: [data expunged] (WIP²)
+
+
+Compelling Compatibility: The first non-content "branch" of the mod. as the Amazingly Alliterative title may suggest, it handles compatibility- but not just with other mods, but it also manages internal compatibility between the branches when necessary
+
+Overwhelming Overrides: This is a branch I may merge into Compelling Compatibility as they sorta overlap a bunch, but its fine fn, basically just stuff that overrides vanilla behaviour regardless of the other branches.
+
+Worrying WIPs!: This is the category where miscellaneous or unknown scripts and other files that aren't in use are stored, this was a folder I (UserK) created to dump all the stuff I didn't understand during the refactor of the entire mod I did, I occasionally pull broken scripts from there and reimplement them whenever I find their use

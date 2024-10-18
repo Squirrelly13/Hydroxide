@@ -1,0 +1,21 @@
+Hi, UserK here (like the hit-person from discord!!)
+I did a refactor a while back on the whole internal structure of the mod to make it easier for myself to understand and grasp how it works, and I hope it is just as intuitive to anyone else looking through here
+If you do encounter any bugs or inconsistencies- or even just have some neat suggestions, feel free to ping or DM me on discord @UserK
+Please note that we are very much still finding bugs caused by the aforementioned refactor, so please do let me know if you spot anything!
+
+Credit:
+
+Squirrelly, for making the mod and adding the vast majority of CC features (she also made Flasky and the mod thumbnail!)
+
+Evaisa, for the original Arcane Alchemy mod, on top of which CC was built off of, as well as everything related to the Mystical Mixtures branch, as well as doing some work on CC from time to time
+
+and me, for uhhh, breaking everything to make it more readable and then struggling to fix the stuff i broke (in progress)
+
+
++ loads of people from the Noitacord, I personally have no idea what im doing when it comes to noiter coding, so i absolutely would be lost without them reluctantly asking only my most obvious and oblivious questions!
+
+
+
+Translations Credit: (people who provided very helpful translations we would not have been able to add ourselves)
+
+Alex GoD (RU Translations)

@@ -3,6 +3,9 @@
 	description="This mod is a vast expansion of Evaisa's Arcane Alchemy! Now including many more features!"
 	request_no_api_restrictions="0" 
 > 
+    <translations>
+        <file>translations.csv</file>
+    </translations>
 </Mod>
 
  <!--

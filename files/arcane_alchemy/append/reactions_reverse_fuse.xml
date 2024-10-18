@@ -1,0 +1,63 @@
+<Materials>
+
+ <!-- plan for this file is for there to be a setting that inverts materials that are activated by fire and those who just go off passively -->
+
+	<Reaction probability = "75"
+		input_cell1="aa_pandorium" input_cell2="[fire]"
+		output_cell1="fire" output_cell2="air"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction><!-- Pandorium casts spells -->
+	
+
+	<Reaction probability = "75"
+		input_cell1="aa_unstable_pandorium" input_cell2="[fire]"
+		output_cell1="fire" output_cell2="[fire]"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell_unstable.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction><!-- unstable pandorium casts spells -->
+
+
+	<Reaction probability = "75"
+		input_cell1="aa_chaotic_pandorium" input_cell2="[fire]"
+		output_cell1="fire" output_cell2="[fire]"
+	>
+	<ExplosionConfig
+		camera_shake="0" 
+		damage="0"
+		cell_explosion_power="5"
+		cell_explosion_damage_required="3000"
+		cell_explosion_radius_min="1"
+		cell_explosion_radius_max="1"
+		cell_explosion_probability="1.1"
+		explosion_sprite="data/particles/explosion_012.xml"
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml" 
+		ray_energy="1"
+		>
+	</ExplosionConfig>
+	</Reaction><!-- chaotic pandorium casts spells -->
+</Materials>

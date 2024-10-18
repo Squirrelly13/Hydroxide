@@ -1,0 +1,45 @@
+New Features:
+-Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
+-Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
+-Finalise Chaotic Pandorium
+-Think of things for Terror Mode
+-Add Runestone of Spells (converts things to ~~Chaotic~~ Pandorium (chaotic would be too much, might even scrap the idea in general))
+-Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
+-Local Failshift perk, triggers a local shift when near dangerous materials
+-Add interactions or something to some materials to make them less useless (like the slowdown potions)
+-Subway Surpher.
+
+Fixes/Reworks:
+-Fix translations being broken with other mods and idk the end of the world or smth? idk nathan seemed pretty upset over \n\n
+-Fix Veilium effect being too snappy
+-Uranium Reimplementation
+-Ores Rework
+-Finish getting the settings menu finished and fully functional
+
+Under Consideration:
+-Alchemist Settings controls
+-Base Potion interactions
+-Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
+-Void overtakes Love
+-Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles from Slicing Liquid)
+-Item that opens a one-way portal to a neighbouring PW (if you are coming from Main World, you get warped back shortly and the portal closes)
+
+Terror Mode:
+-Terrorportium, chooses 5 destinations to teleport the player and then chooses the most dangerous one based on nearby materials and/or enemies
+-Terrifying Pandorium, Unstable Pandorium Spells with Chaotic Pandorium Modifiers
+-Terrifying Water, picks a random material based on the seed to convert to when the player is near (component on player that converts twater in a small circle around them, about the size of a Touch Of spell, maybe smaller)
+-Material-born projectiles home in on the player?
+
+Compatibility:
+-Finish Anvil of Destiny compatibility
+ -Potentially switch to working on an Anvil of Destiny Overwrite
+-Finish Conjurer Compatibility
+
+
+Fluent Fluids Expansion
+-Gas Variants
+-More Explosive Canisters for different liquids/gases
+-Powder Variants
+ -Dry Water.
+-Candy Variants
+ -Powder Rainbow is "Failed Product" and Candy Rainbow is "Blessed Pebbles"

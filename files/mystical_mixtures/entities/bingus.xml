@@ -1,0 +1,102 @@
+<Entity tags="hittable,teleportable_NOT,item_physics,item_pickup,bingus" >
+	<Base file="data/entities/base_item_projectile.xml" />
+
+	<!-- physical presence -->
+	
+	<PhysicsBodyComponent 
+		_tags="enabled_in_world"
+		uid="1" 
+		allow_sleep="1" 
+		angular_damping="0" 
+		fixed_rotation="0" 
+		is_bullet="1" 
+		linear_damping="0"
+		auto_clean="0"
+		on_death_leave_physics_body="1"
+		hax_fix_going_through_ground="1"
+	></PhysicsBodyComponent>
+	
+	<PhysicsImageShapeComponent 
+		body_id="1"
+		centered="1"
+		image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
+		material="mm_meat_bingus"
+	></PhysicsImageShapeComponent>
+	
+	<PhysicsThrowableComponent
+		max_throw_speed="180"
+		throw_force_coeff="1.5"
+	></PhysicsThrowableComponent>
+
+	<VelocityComponent
+		_tags="enabled_in_world"
+	></VelocityComponent>
+
+	<!-- item -->
+
+	<SpriteComponent
+		_tags="enabled_in_hand"
+		_enabled="0"
+		offset_x="8"
+		offset_y="8"
+		image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
+	></SpriteComponent>
+
+	<ItemComponent
+		_tags="enabled_in_world"
+		item_name="Bingus"
+		ui_description="Some kind of strange critter."
+		ui_sprite="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
+		max_child_items="0"
+		is_pickable="1"
+		is_equipable_forced="1"
+		preferred_inventory="QUICK"
+	></ItemComponent>
+
+	<UIInfoComponent
+		_tags="enabled_in_world"
+		name="Bingus">
+	</UIInfoComponent>
+	
+	<AbilityComponent
+		ui_name="Bingus"
+		throw_as_item="1"
+		><gun_config
+			deck_capacity="0"
+		></gun_config>
+	</AbilityComponent>
+
+	<LuaComponent
+		_tags="enabled_in_world,enabled_in_hand,enabled_in_inventory"
+		script_source_file="mods/Hydroxide/files/mystical_mixtures/scripts/bingus_handler.lua"
+		script_interacting="mods/Hydroxide/files/mystical_mixtures/scripts/bingus_handler.lua"
+		execute_on_added="1"
+		execute_every_n_frame="1"
+	/>
+
+	<VariableStorageComponent
+		name="bingus_volume"
+		value_float="1"
+	/>
+
+	<InheritTransformComponent/>
+	
+	<InteractableComponent
+		_enabled="0"
+		_tags="enabled_in_hand"
+		radius="20"
+		ui_text="Press $0 to toggle bingus tunes."
+		name="interact"
+	/>
+
+	<AudioLoopComponent
+		_tags="enabled_in_world,enabled_in_hand,enabled_in_inventory"
+		file="mods/Hydroxide/files/mystical_mixtures/misc/mystical_mixtures.bank"
+		event_name="bingus/loop"
+		auto_play="1"
+		auto_play_if_enabled="1"
+		play_on_component_enable="1"
+		>
+	</AudioLoopComponent>	
+
+</Entity>

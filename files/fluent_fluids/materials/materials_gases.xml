@@ -1,0 +1,61 @@
+<Materials>
+    
+    
+    <CellData
+        name="ff_magic_gas"
+	    ui_name="$mat_ff_magic_gas"
+  	    tags="[gas],[vapour],[ff_magic_gas]"
+	    density="4.23"
+	    cell_type="gas"
+	    liquid_stains="1"
+	    liquid_stains_self="0"
+	    liquid_sprite_stains_status_threshold="0.3"
+	    wang_color="7ff9f898"
+	    gfx_glow="100"
+	    lifetime="7200"
+	    liquid_stains="1"
+	    liquid_sprite_stain_shaken_drop_chance="1"
+	    audio_materialaudio_type="MAGICAL" 
+	> <ParticleEffect
+		vel.y="2.86"
+		vel_random.min_x="-6"
+		vel_random.max_x="6"
+		vel_random.min_y="-2.9"
+		vel_random.max_y="3.2"
+		render_on_grid="1"
+		probability="0.6"
+		count.min="0"
+		count.max="1"
+	> </ParticleEffect>
+    </CellData>
+
+  <Reaction probability="1"
+	input_cell1="ff_magic_gas" 	input_cell2="[*]"
+	output_cell1="magic_liquid" 	output_cell2="[*]"
+	>
+  </Reaction>
+
+
+    <CellDataChild
+        _parent="ff_magic_gas"
+        name="ff_acceleratium_gas"
+        ui_name="$$mat_ff_acceleratium_gas"
+        tags="[gas],[vapour],[ff_magic_gas],[magic_faster]"
+	    wang_color="80c1dda5"
+        denstity="0.55"
+	> <ParticleEffect
+		vel.y="17.14"
+		vel_random.min_y="-100"
+		vel_random.max_y="25.71"
+		lifetime.min="0"
+		gravity.y="-8.57"
+		render_on_grid="1"
+		draw_as_long="1"
+		friction="-3.429"
+		probability="0.0518"
+	> </ParticleEffect> 
+    </CellDataChild>
+
+
+
+</Materials>

@@ -1,0 +1,23 @@
+<Entity>
+	<InheritTransformComponent />
+	
+	<GameEffectComponent
+		effect="CUSTOM"
+		custom_effect_id="CC_WARP"
+		frames="99999"
+		>
+	</GameEffectComponent>
+
+	<LuaComponent
+    script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_effect.lua"
+	execute_every_n_frame="1"
+    execute_on_added="1"
+    vm_type="ONE_PER_COMPONENT_INSTANCE"
+    ></LuaComponent><!--hp = trueHealth-->
+	
+    <AudioComponent
+        file="mods/Hydroxide/files/mystical_mixtures/misc/mystical_mixtures.bank"
+        event_root="warp/warp_sound"
+        play_only_if_visible="0"
+    />
+</Entity>

@@ -1,0 +1,13 @@
+<MagicConvertMaterialComponent _enabled="1"
+    radius="3"
+    is_circle="1"
+    from_material="cc_dormant_crystal"
+    to_material="fire"
+    loop="1" />
+
+<MagicConvertMaterialComponent _enabled="1"
+    radius="3"
+    is_circle="1"
+    from_material="cc_uranium"
+    to_material="cc_uranium_excited"
+    loop="1" />

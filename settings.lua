@@ -32,54 +32,163 @@ mod_settings_version = 1 -- This is a magic global that can be used to migrate s
 mod_settings = 
 {
 	{
-		category_id = "CC_SETTINGS",
+		id = "mod_title",
 		ui_name = "Squirrelly's Chemical Curiosities",
-		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy",
+		ui_description = "A sequel/remastering of Evaisa's Arcane Alchemy!",
+		not_setting = true,
+	},
+	{
+		category_id = "GLOBAL_SETTINGS",
+		ui_name = "General",
+		ui_description = "Settings and Options for configuring the mod in general",
+		foldable = true,
+		_folded = true,
 		settings = {
 			{
-				id = "cc_spells",
-				ui_name = "Load Spells",
-				ui_description = "Allow for Chemical Curiosities to add spells to the game",
+				id = "MAX_MATERIAL_PROJECTILES",
+				ui_name = "Max Material Projectiles",
+				ui_description = "Decides the maximum material projectiles for a few materials (acts more like a multiplier in some cases, rate is 1:1 for Blast Powder)\nThis does not apply to the Pandoriums. It applies mainly to Glittering Liquid, Blast Powder, and Uranium.",
+				value_default = 60,
+				value_min = 0,
+				value_max = 200,
+				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
+		},
+	},
+	{
+		category_id = "CC_SETTINGS",
+		ui_name = "Chemical Curiosities",
+		ui_description = "Settings and Options for configuring Chemical Curiosities content",
+		foldable = true,
+		_folded = true,
+		settings = {
+
+			{
+				id = "CC_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Chemical Curiosities branch of this mod\n\"Why would you turn this off!\"",
 				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
-				id = "cc_items",
-				ui_name = "Spawn Items",
-				ui_description = "Allow for Chemical Curiosities to add magical items to the game",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_flasks",
-				ui_name = "Spawn Potions",
-				ui_description = "Allow for Chemical Curiosities to add new materials in flasks",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_pixelscenes",
-				ui_name = "Spawn Structures",
-				ui_description = "Allow Chemical Curiosities to spawn rare and hidden unique structures in the world",
-				value_default = true,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_props",
-				ui_name = "Spawn Props",
-				ui_description = "Allow Chemical Curiosities to spawn various props in the world",
-				value_default = true,				
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "cc_ores",
+				id = "CC_ORES",
 				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world!",
+				ui_description = "Spawn Various ores throughout the world! (this setting is currently being reworked on GitHub Branch)",
 				value_default = true,				
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "CC_METHANE_EFFECT_MULTIPLIER",
+				ui_name = "Methane Effect Multiplier",
+				ui_description = "Change how much methane poisoning affects visuals.",
+				value_default = 100,
+				value_min = 1,
+				value_max = 100,
+				value_display_multiplier = 1,
+				value_display_formatting = " $0%",
+				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
+
+		}
+	},
+	{
+		category_id = "AA_SETTINGS",
+		ui_name = "Arcane Alchemy",
+		ui_description = "Settings and Options for configuring Arcane Alchemy content",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "AA_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Arcane Alchemy branch of this mod\n\"Where it all started...\"",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "AA_BLOOMIUM",
+				ui_name = "Bloomium",
+				value_default = true,
+				ui_description = "Disable bloomium altogether, note that bloomium is not as destructive or performance heavy as it once was.",
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			}
+		}
+	},
+	{
+		category_id = "MM_SETTINGS",
+		ui_name = "Mystical Mixtures",
+		ui_description = "Settings and Options for configuring Mystical Mixtures content",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "MM_ENABLED",
+				ui_name = "Enabled",
+				ui_description = "Enables the Mystical Mixtures branch of this mod\n\"It's at least partially-implemented!\"",
+				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 		}
-	}
+	},
+	{
+		category_id = "TERROR_SETTINGS",
+		ui_name = "Terror.",
+		ui_description = "Settings and Options for configuring Terror content!",
+		foldable = true,
+		_folded = true,
+		settings = {
+			{
+				id = "TERROR_ENABLED",
+				ui_name = "Terror Mode (WIP!)",
+				ui_description = "Adds some \"Fun\" things to the game...",
+				value_default = false,
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
+			{
+				id = "TERROR_MODE_WARNING",
+				ui_name = "Warning! Terror Mode is Terrifying!!",
+				ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis branch is for those who truly understand the philosophy behind this mod.",
+				not_setting = true,
+			},
+		},
+	},
+	{	
+		category_id = "COMPATIBILITY_SETTINGS",
+		ui_name = "Compelling Compatibility",
+		ui_description = "Settings and Options for configuring compatibility both internally and externally",
+		foldable = true,
+		_folded = true,
+		settings = {
+			
+			{
+				category_id = "COMPATIBILITY_INTERNAL",
+				ui_name = "Internal",
+				ui_description = "Settings for Internal Compatibility (compatibility between CC, AA and MM)",
+				foldable = true,
+				_folded = true,
+				settings = {
+					{
+						id = "CC_AA_SUPERNOVA",
+						ui_name = "Supernova Reaction",
+						ui_description = "Enables a very rare reaction between Chemical Curiosities and Arcane Alchemy that triggers a Supernova \nThe Materials involved are Condensed Gravity, Dark Matter and Anti-Matter (none of which should normally spawn remotely close to each other anymore)\n(will require materials from both CC & AA enabled)",
+						value_default = false,
+						scope = MOD_SETTING_SCOPE_RUNTIME_RESTART,
+					},
+				}
+			},
+
+			{
+				category_id = "ALCHEMIST_POTIONS",
+				ui_name = "Alchemist Potions",
+				ui_description = "Configure what potions can be thrown by alchemists.",
+				foldable = true,
+				_folded = true,
+				initialized = false,
+				settings = {}
+			},
+		},
+	},
 }
 
 -- This function is called to ensure the correct setting values are visible to the game via ModSettingGet(). your mod's settings don't work if you don't have a function like this defined in settings.lua.
@@ -105,6 +214,36 @@ end
 
 -- This function is called to display the settings UI for this mod. Your mod's settings wont be visible in the mod settings menu if this function isn't defined correctly.
 function ModSettingsGui( gui, in_main_menu )
+	for k, v in ipairs(mod_settings)do
+		if(v.category_id == "ALCHEMIST_POTIONS")then
+			if(in_main_menu)then
+
+				v.settings = {
+					{
+						id = "alchemist_potions_main_menu",
+						ui_name = "Due to Noita limitations, these settings are only available in-game.",
+						ui_description = "Please start a new game to configure this.",
+						not_setting = true,
+					},
+				}
+			else
+				if(not v.initialized)then
+					dofile("mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua")
+					for _, potion in ipairs(cc_alchemist_potions)do
+						table.insert(v.settings, {
+							id = "alchemist_potions_" .. potion.material,
+							ui_name = potion.name,
+							ui_description = "Allow alchemists to throw " .. GameTextGetTranslatedOrNot(potion.name) .. " potions.",
+							value_default = potion.default_disabled ~= true,
+							scope = MOD_SETTING_SCOPE_NEW_GAME,
+						})
+					end
+					v.initialized = true
+				end
+			end
+		end
+	end
+
 	mod_settings_gui( mod_id, mod_settings, gui, in_main_menu )
 
 	--example usage:
