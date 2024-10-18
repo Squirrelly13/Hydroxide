@@ -42,7 +42,7 @@ for index, varcomp in ipairs(var_comps) do --index varcomps to their designated 
 	local varcomp_name = ComponentGetValue2(varcomp, "name") --get varcomp name once before attemping to index
 
 	if varcomp_name == "radcount" then
-		radcount = ComponentGetValue2(varcomp, "value_int") + 10 --set radcount here too
+		radcount = math.min(ComponentGetValue2(varcomp, "value_int"), 500) + 10 --set radcount here too, limit to 500 for now
 		ComponentSetValue2(varcomp, "value_int", radcount)
     elseif varcomp_name == "radstage" then radstagecomp = varcomp
 	elseif varcomp_name == "radpostracker" then radpostracker = varcomp

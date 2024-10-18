@@ -19,7 +19,7 @@ for index, varcomp in ipairs(var_comps) do
     
     --get and decrease radcount
     elseif name == "radcount" then
-        radcount = ComponentGetValue2(varcomp, "value_int")
+        radcount = math.min(ComponentGetValue2(varcomp, "value_int"), 510)
         if radcount >= 0 then
             ComponentSetValue2(varcomp, "value_int", radcount - 1) --decrease rad by 1
         else if radcount == -1 then EntityKill(entity_id) end --remove the component entirely if radiation reaches -1
