@@ -4,7 +4,7 @@ dofile_once("data/scripts/items/init_potion.lua")
 
 --PotionStartingLib global table
 PotionStartingLib = {}
-local ps = PotionStartingLib --rename it here so it doesnt look ugly
+local ps = PotionStartingLib --rename it here so it doesnt look ugly for the rest of the script
 
 ---Default potion material
 local potion_material = "water"
@@ -137,7 +137,7 @@ function init( entity_id ) --mostly vanilla function
 	SetRandomSeed( x, y )
 	ps.CorrectTables() --add default probabilities
 
-	--ps.TEST(100000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
+	ps.TEST(100000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
 	--default value of 10000000 (ten million) takes approx 40 seconds for me, so it should be a good testing value (decrease to like, 100k or 1mil for faster testing ig, 100k should be basically instant)
 
 	local n_of_deaths = tonumber( StatsGlobalGetValue("death_count") )
@@ -194,7 +194,8 @@ function ps.TEST(num)
 
 	local function add_gap(variable, size, before)
 		if before then for l = 0, size - string.len(variable) do variable = ' ' .. variable end
-		else for l = 0, size - string.len(variable) do end end
+		else for l = 0, size - string.len(variable) do variable = variable .. ' ' end end
+		--print(string.format("[%s]", variable))
 		return variable
 	end
 
