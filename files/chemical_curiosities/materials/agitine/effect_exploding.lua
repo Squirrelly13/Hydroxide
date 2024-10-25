@@ -60,8 +60,8 @@ ComponentObjectSetValue2(comp, "config_explosion", "damage", 4 * multiplier^1.5)
 ComponentObjectSetValue2(comp, "config_explosion", "explosion_radius", 12 * math.min(50, multiplier^.8)) --radius of the explosion (obviously limited for good reasons)
 ComponentObjectSetValue2(comp, "config_explosion", "ray_energy", 20000 * math.min(1200, multiplier^1.8)) --the strength of the exposion (damage it does to pixels)
 ComponentObjectSetValue2(comp, "config_explosion", "who_is_responsible", owner) --identify the explosion origin (so they get kill credit probs)
-ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_min", (5 * math.min(20, multiplier))^1.4) --minimum particle sparks
-ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_max", (12 * math.min(20, multiplier)^2)) --maximum particle sparks
+ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_min", 5 * math.min(20, multiplier^1.4)) --minimum particle sparks
+ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_max", (5 * math.min(100, multiplier))^1.3) --maximum particle sparks
 ComponentObjectSetValue2(comp, "config_explosion", "max_durability_to_destroy", 14) --ensures this can break through high-level materials if it has enough ray_energy
 
 if GameHasFlagRun("PERK_PICKED_IRON_STOMACH") and b ~= 0 then --if player has picked IRON_STOMACH and Ingestion is not 0:

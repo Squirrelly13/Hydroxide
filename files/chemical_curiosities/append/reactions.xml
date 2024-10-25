@@ -691,8 +691,8 @@
 	</Reaction>
 	
 	<Reaction probability="100"
-	input_cell1="cc_metastasizium"	input_cell2="vomit_fading"
-	output_cell1="vomit_fading"				output_cell2="vomit_fading"
+	input_cell1="cc_metastasizium"	input_cell2="cc_vomit_fading"
+	output_cell1="cc_vomit_fading"				output_cell2="cc_vomit_fading"
 	blob_radius1="5"
 	>
 	</Reaction>
