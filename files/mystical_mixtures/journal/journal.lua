@@ -164,7 +164,7 @@ for _, category in ipairs(categories) do
     for _, entry in ipairs(entries) do
         local has_custom_flag = entry.custom_unlock_flag ~= nil
         local is_unlocked = has_custom_flag and HasFlagPersistent(entry.custom_unlock_flag) or HasFlagPersistent("journal_entry_unlocked_"..entry.id)
-        if(entry.unlocked_default)then
+        if(entry.unlocked_default or GameHasFlagRun("mm_DEBUG_unlock_all_pages"))then
             is_unlocked = true
         end
         GuiLayoutBeginHorizontal(gui, 5, 0, true)
