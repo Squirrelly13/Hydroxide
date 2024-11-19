@@ -119,6 +119,6 @@ if string.sub(toname, 1, 1) == "$" then
 	toname = GameTextGet(toname)
 end
 
-GamePrint("shifted " .. from.name .. " to " .. toname)
+--GamePrint("shifted " .. from.name .. " to " .. toname)
 shift_materials_in_range(200, from.materials, to.material, entity_id)	---@diagnostic disable-line: undefined-global
 

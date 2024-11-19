@@ -35,6 +35,16 @@ function EntityGetDamageFromMaterial(entity, material)
 	return nil
 end
 
+
+function MimicMaterialDamage(target, target_material, template)
+    if(EntityGetDamageFromMaterial(target, target_material) ~= nil) then EntityKill(entity) return end
+    
+    local template_strength = EntityGetDamageFromMaterial(target, template)
+    if (template_strength ~= nil) then
+        EntitySetDamageFromMaterial(target, target_material, template_strength)
+    end  
+end
+
 --a modified version of a function by Evaisa
 function shift_materials_in_range(radius, materials_input, output, e_id)
 	local shift_entity = EntityCreateNew("shifting_guy")
