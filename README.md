@@ -3,7 +3,7 @@ Welcome to the Chemical Curiosities™ Repository!!
 
 .
 
-main Branch is the version currently pushed to the workshop, 
+main Branch is the version currently pushed to the steam workshop, 
 
 Experimental Branch is a funtional build of the game that is worked on before being fully pushed, 
 
