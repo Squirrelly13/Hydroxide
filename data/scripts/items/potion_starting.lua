@@ -85,17 +85,19 @@ ps.failpotions = {
 	{	"gunpowder_unstable"	}
 }
 
+ps.potion_functions = {}
+
 ---Table of custom functions potion_a_materials runs through before returning the chosen material
 ---@type fun(outcome: string, r_value: number, r_value2: number, data: table)[]
 ps.functions = {
-	function()
+	function() --vanilla 20/101 chance for sima on first of May and 30th of April
 		if ps.CompareTables({ps.LOCAL.month, ps.LOCAL.day}, {5, 1}) or ps.CompareTables({ps.LOCAL.month, ps.LOCAL.day}, {4, 30}) and (Random( 0, 100 ) <= 20) then return "sima" end
 	end
 }
 
 ---Table of custom functions init runs through after potion_a_materials returns the chosen material
 ---@type fun(potion_material: string, data: table)[]
-local functions2 = {
+ps.post_functions = {
 }
 
 
@@ -107,7 +109,16 @@ function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are
     outcome = outcome or potion_material
 	r_value = r_value or Random( 1, 100 )
 	r_value2 = r_value2 or Random( 0, 100000 )
-	data = data or {}
+	data = data and {
+		data = data,
+		outcome = outcome,
+		r_value = r_value,
+		r_value2 = r_value2,
+	} or {
+		outcome = outcome,
+		r_value = r_value,
+		r_value2 = r_value2,
+	}
 
 	local rnd = random_create(r_value, r_value2)
 	if( r_value <= 70 ) then --70% chance for staterpotions
@@ -124,8 +135,12 @@ function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are
 
 	if ps.functions ~= nil then --in case someone empties the function to skip this step
 		for index, value in pairs(ps.functions) do
-			 outcome = value(outcome, r_value, r_value2, data) or outcome
+			outcome = value(data) or outcome
 		end
+	end
+
+	if ps.potion_functions[outcome] then
+		outcome = ps.potion_functions[outcome](data) or outcome
 	end
 	
     return tostring(outcome)
@@ -137,7 +152,7 @@ function init( entity_id ) --mostly vanilla function
 	SetRandomSeed( x, y )
 	ps.CorrectTables() --add default probabilities
 
-	ps.TEST(100000) --1 billion took about 45 minutes for me to render so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
+	--ps.TEST(10000000) --1 billion took about 45 minutes for me to build so 100k-10mil should be good enough for regular tests (probs still super excessive tbh lmao)
 	--default value of 10000000 (ten million) takes approx 40 seconds for me, so it should be a good testing value (decrease to like, 100k or 1mil for faster testing ig, 100k should be basically instant)
 
 	local n_of_deaths = tonumber( StatsGlobalGetValue("death_count") )
@@ -146,10 +161,8 @@ function init( entity_id ) --mostly vanilla function
 	end
 
 	
-	if functions2 ~= nil then
-		for index, value in pairs(functions2) do
-			potion_material = value(potion_material) or potion_material
-   		end
+	for index, value in pairs(ps.post_functions) do
+		potion_material = value(potion_material) or potion_material
 	end
 
 	init_potion( entity_id, potion_material )
@@ -161,7 +174,7 @@ end
 --Handy script for mass-generating potion outcomes and displaying them neatly in the console
 function ps.TEST(num)
 	local _table = {}
-	_table["TOTAL"] = num --add total display
+	_table.TOTAL = num --add total display
 	
 	for i = 1, num do --this is the most intensive part of the function at high values, so i return the current% to show current progress through running the test
 		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage when it can be displayed without decimals
@@ -177,7 +190,7 @@ function ps.TEST(num)
 	end)
 
 
-	--wretched code, it does its job well... enough.
+	--wretched overengineered code, it does its job well... enough.
 	local longest_name = 0
 	local longest_amount = 0
 	local longest_percent = 0

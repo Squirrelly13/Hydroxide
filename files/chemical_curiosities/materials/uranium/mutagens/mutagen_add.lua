@@ -5,6 +5,7 @@ local entity_id = GetUpdatedEntityID()
 local owner = EntityGetRootEntity(entity_id)
 local x,y = EntityGetTransform(owner)
 local currentframe = GameGetFrameNum()
+SetRandomSeed(x, y)
 
 local owner_children = EntityGetAllChildren(owner) or {}
 
@@ -112,7 +113,7 @@ if radcount >= STAGE2 then --immunities
 			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then 
 				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
 				--print("adding " .. key .. " to immunities table")
-				table.insert(immunities[key], v)
+				table.insert(immunities, key, v)
 				immunities_list[key] = (immunities_list[key] or 0) + 1
 			end
 		end
@@ -173,10 +174,11 @@ function AddPerk(isMutant, count)
 	end --]]
 	
 
+
 	for i = 1, count do
 		local _perk = get_weighted_random(perklist)
-		print("granting perk " .. _perk)
-		perk_pickup( nil, owner, _perk, true, false, true )
+		print("granting perk " .. _perk .. " to " .. EntityGetName(owner))
+		perk_pickup( nil, owner, _perk, false, false, true )
 	end
 end
 
@@ -184,9 +186,19 @@ if radcount >= STAGE6 then --gain random perk
 	stage = 6 --check if the countdown thingamabob
 	if perktracker ~= nil then
 		if ComponentGetValue2(perktracker, "value_int") < currentframe then
+			if EntityHasTag(owner, "player_unit") or EntityHasTag(owner, "polymorphed_player") then
+				GamePrintImportant("$cc_mutagen_superpowers", "$cc_mutagen_superpowers_desc")
+				
+				if( StatsBiomeGetValue("enemies_killed") ~= "0" ) then
+					EntityLoad( "data/entities/particles/image_emitters/perk_effect.xml", x, y )
+				else
+					EntityLoad( "data/entities/particles/image_emitters/perk_effect_pacifist.xml", x, y )
+				end
+			else
+				EntityLoad( "data/entities/particles/image_emitters/perk_effect.xml", x, y ) --i doubt most enemies are pacifists.
+			end
 			AddPerk()
 			ComponentSetValue2(perktracker, "value_int", currentframe + 36000)
-			GamePrintImportant("Mutagen Upgrade", "Radiation gives you superpowers!")
 		end
 	end
 end
@@ -265,12 +277,13 @@ end
 if deal_damage and damage_model ~= nil then
 	local max_hp = ComponentGetValue2(damage_model, "max_hp") or 0
 	local total_damage = deal_static + (ComponentGetValue2(damage_model, "max_hp") * ((deal_scaling^1.3 + 1 - deal_scaling^1.2) - 1))
+	--[[
 	print("DEALRATE = " .. tostring(deal_damage))
 	print("MAXHP = " .. max_hp)
 	print("HP = " .. (ComponentGetValue2(damage_model, "hp") or 0))
 	print("DEALSTATIC = " .. deal_static)
 	print("DEALSCALED = " .. deal_scaling)
-	print("TOTALDEAL = " .. total_damage)
+	print("TOTALDEAL = " .. total_damage)--]]
 	EntityInflictDamage(owner, total_damage * .3, "DAMAGE_CURSE", "Radiation", "NONE", x, y)
 	EntityInflictDamage(owner, total_damage * .3, "DAMAGE_RADIOACTIVE", "Radiation", "NONE", x, y)
 end
@@ -303,7 +316,6 @@ if leggyentity then --if there is a leggy
 	
 end
 
-print(radcount)
 
 if stage then
 	local ui_comps = EntityGetComponent(radiation_controller, "UIIconComponent")
