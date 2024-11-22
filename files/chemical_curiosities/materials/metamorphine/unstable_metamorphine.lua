@@ -68,10 +68,10 @@ if ( convertcomponents ~= nil ) then
 	for key,comp_id in pairs(convertcomponents) do 
 		local name = tonumber( ComponentGetValue2( comp_id, "from_material" ) )
 		--local smoke_id = CellFactory_GetType( "smoke" )
-		
-		if (CheckCatastrophic(material)) then
-			return
-		elseif (material == name) then
+		for index, value in ipairs(CellFactory_GetTags(material)) do
+			if value == "catastrophic" then return end
+		end
+		if (material == name) then
 			--ComponentSetValue( comp_id, "to_material", smoke_id )
 		else
 			ComponentSetValue2( comp_id, "to_material", material )
