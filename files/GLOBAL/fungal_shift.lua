@@ -10,12 +10,12 @@ local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 function AddMaterialsFrom(addition)
 	for i=1,#addition do
-		material_from[#material_to+1] = addition[i]
+		materials_from[#materials_to+1] = addition[i]
 	end
 end
 function AddMaterialsTo(addition)
 	for i=1,#addition do
-		material_to[#material_to+1] = { probability = addition[i], material = i}
+		materials_to[#materials_to+1] = { probability = addition[i], material = i}
 	end
 end
 
@@ -84,7 +84,7 @@ local CC_to = {
 }
 
 
-local aa_from = {
+local AA_from = {
 	{
 		probability = 0.6,
 		materials 	= {"aa_potion_gas", "aa_base_potion"},
@@ -96,7 +96,7 @@ local aa_from = {
 }
 
 
-local aa_to = {
+local AA_to = {
 	aa_base_potion = 0.9,
 	aa_potion_gas = 0.7,
 	aa_icy_inferno = 0.7,

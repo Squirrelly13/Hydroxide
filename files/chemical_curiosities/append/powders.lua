@@ -20,17 +20,17 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-	materials="cc_alchemy_powder",
+	material="cc_alchemy_powder",
 	cost=3500,
 });
 
 table.insert(materials_magic, {
-	materials="cc_thunder_powder",
+	material="cc_thunder_powder",
 	cost=800,
 });
 
 table.insert(materials_magic, {
-	materials="cc_morphine",
+	material="cc_morphine",
 	cost=800,
 });
 
@@ -49,6 +49,7 @@ function init( entity_id )
 		potion_material = random_from_array( materials_magic )
 		potion_material = potion_material.material
 	else
+		print()
 		potion_material = random_from_array( materials_standard )
 		potion_material = potion_material.material
 	end
