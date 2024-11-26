@@ -17,6 +17,39 @@
 	> 
 	</CellData> --> <!-- testing material for unknown case in reaction input/output  -->
 
+
+
+  
+  <CellDataChild
+  	_parent="water"
+	tags="[liquid]"
+	name="void_liquid"
+	ui_name="$mat_void_liquid"
+	wang_color="ffa2332a"
+	density="14.5"
+	gfx_glow="255"
+	lifetime="200"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	color="ff000000"
+	>
+    </Graphics>
+	<ParticleEffect
+		vel.y="2.86"
+		vel_random.min_x="-6"
+		vel_random.max_x="6"
+		vel_random.min_y="-2.9"
+		vel_random.max_y="3.2"
+		render_on_grid="1"
+		probability="0.6"
+		count.min="0"
+		count.max="1"
+	>
+	</ParticleEffect>
+  </CellDataChild>
+
+
  <CellData 
         name="cc_hydroxide"
         ui_name="$mat_cc_hydroxide"
