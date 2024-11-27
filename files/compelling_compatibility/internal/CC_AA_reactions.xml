@@ -341,6 +341,14 @@
 	blob_radius1="2"
 	>
 	</Reaction>
+
+
+	
+	<Reaction probability="60"
+	input_cell1="aa_base_potion"				input_cell2="cc_morphine"
+	output_cell1="magic_liquid_protection_all"	output_cell2="cc_morphine"
+	>
+	</Reaction>
 	
 
 
