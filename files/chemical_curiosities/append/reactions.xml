@@ -1210,7 +1210,7 @@
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction> <Reaction probability="100"
+	</Reaction> <Reaction probability="10"
 	input_cell1="cc_devouring_moss"	input_cell2="snowrock_static"
 	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
 	blob_radius2="1"
