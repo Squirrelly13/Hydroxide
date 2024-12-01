@@ -137,7 +137,7 @@
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Can"
+    item_name="$item_mm_can"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"

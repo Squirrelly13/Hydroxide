@@ -1174,21 +1174,6 @@
 
 	
 	<!-- devouring moss interactions -->
-	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"   	input_cell2="rock_static"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction><!-- rock -->
-	
-	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"   	input_cell2="sand_static"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="2"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction><!-- ground -->
 
 	<Reaction probability="100"
 	input_cell1="cc_devouring_moss"	input_cell2="[moss_devour]"
@@ -1196,43 +1181,7 @@
 	blob_radius2="1"
 	blob_restrict_to_input_material2="1"
 	>
-	</Reaction><!-- tags based  -->
-
-	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"	input_cell2="rock_static_grey"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction> <Reaction probability="100"
-	input_cell1="cc_devouring_moss"	input_cell2="rock_static_wet"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction> <Reaction probability="10"
-	input_cell1="cc_devouring_moss"	input_cell2="snowrock_static"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction> 
-	
-	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"   	input_cell2="rock_box2d_nohit_hard"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction><!-- devour gate boss -->
-
-	<Reaction probability="100"
-	input_cell1="cc_devouring_moss"   	input_cell2="rock_box2d_nohit"
-	output_cell1="cc_devouring_moss"	output_cell2="cc_devouring_moss"
-	blob_radius2="1"
-	blob_restrict_to_input_material2="1"
-	>
-	</Reaction><!-- devour certain enemies -->
+	</Reaction><!-- tags based cuz nolla is fucked up and evil -->
 
 	<!-- water extinguishes fires -->
 

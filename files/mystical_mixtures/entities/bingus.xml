@@ -44,8 +44,8 @@
 
 	<ItemComponent
 		_tags="enabled_in_world"
-		item_name="Bingus"
-		ui_description="Some kind of strange critter."
+		item_name="$item_mm_bingus"
+		ui_description="$itemdesc_mm_bingus"
 		ui_sprite="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
 		max_child_items="0"
 		is_pickable="1"

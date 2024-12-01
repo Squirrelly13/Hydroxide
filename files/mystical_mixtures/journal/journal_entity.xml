@@ -49,8 +49,8 @@
 		is_equipable_forced="1"
 		ui_sprite="mods/Hydroxide/files/mystical_mixtures/journal/gfx/book.png"
 		preferred_inventory="QUICK"
-		item_name="Alchemy Journal"
-		ui_description="A recipe book of sorts for alchemists."
+		item_name="$item_mm_alchemy_journal"
+		ui_description="$itemdesc_mm_alchemy_journal"
 	></ItemComponent>
   
 	<SpriteComponent

@@ -108,7 +108,7 @@ local immunities_list = {}
 if radcount >= STAGE2 then --immunities
 	stage = 2
 	
-	if owner_children ~= nil then
+	if owner_children ~= nil and false then --disabled
 		for k,v in ipairs(owner_children) do
 			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then 
 				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
@@ -187,7 +187,7 @@ if radcount >= STAGE6 then --gain random perk
 	if perktracker ~= nil then
 		if ComponentGetValue2(perktracker, "value_int") < currentframe then
 			if EntityHasTag(owner, "player_unit") or EntityHasTag(owner, "polymorphed_player") then
-				GamePrintImportant("$cc_mutagen_superpowers", "$cc_mutagen_superpowers_desc")
+				GamePrintImportant("$log_cc_mutagen_superpowers", "$log_cc_mutagen_superpowers_desc")
 				
 				if( StatsBiomeGetValue("enemies_killed") ~= "0" ) then
 					EntityLoad( "data/entities/particles/image_emitters/perk_effect.xml", x, y )

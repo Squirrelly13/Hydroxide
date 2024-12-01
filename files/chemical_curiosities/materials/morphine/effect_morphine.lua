@@ -20,10 +20,7 @@ hp		= ComponentGetValue2( damagemodel, "hp"	 )
 local diff 	= max_hp - hp
 if diff == 0 then return end
 
-print(diff*25)
-print(trueHP*25)
-trueHP = trueHP - (diff * .6) --morphine provides 50% damage resistance
-print(trueHP*25)
+trueHP = trueHP - (diff * .5) --morphine provides 50% damage resistance
 
 
 

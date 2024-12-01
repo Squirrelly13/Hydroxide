@@ -59,7 +59,7 @@
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Nerf Dart"
+    item_name="$nerf_dart"
     play_spinning_animation="0"
     stats_count_as_item_pick_up="0"
     play_pick_sound="1" 
@@ -90,6 +90,6 @@
   -->
   <UIInfoComponent
     _tags="enabled_in_world"
-    name="Nerf Dart">
+    name="$nerf_dart">
   </UIInfoComponent>
 </Entity>

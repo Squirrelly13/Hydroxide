@@ -32,5 +32,9 @@
 		custom_effect_id="CC_NULL_TRIP"
 	>
 	</GameEffectComponent>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_trip.lua"
+	/>
 	
 </Entity>
