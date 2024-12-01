@@ -1,7 +1,7 @@
 <Entity>
     <PixelSceneComponent
 		pixel_scene_background=	""
-		pixel_scene_visual=		""
+		pixel_scene_visual=		"mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/funni.png"
 		pixel_scene=			"mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/void.png" 
 		offset_x="0"
 		offset_y="0"
@@ -9,5 +9,5 @@
 		>
     </PixelSceneComponent>
 	<LifetimeComponent lifetime="-1" />
-	<!--i thought Squirrelly's thing was neat so i decided to make my own :D (wait void liquid in pixel scenes seems to be tied to cauldron calendar, will figure this out another time) -UserK -->
+	<!--i thought Squirrelly's thing was neat so i decided to make my own :D (VL is weird, need to make a duplicate material) -UserK -->
 </Entity>
