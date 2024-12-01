@@ -145,7 +145,7 @@
 
   <ItemComponent
     _tags="enabled_in_world"
-    item_name="Vial"
+    item_name="$item_aa_vial"
     max_child_items="0"
     is_pickable="1"
     is_equipable_forced="1"

@@ -74,7 +74,7 @@ mod_settings =
 			{
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
-				ui_description = "Spawn Various ores throughout the world! (this setting is currently being reworked on GitHub Branch)",
+				ui_description = "Spawn Various ores throughout the world! (this feature is currently being reworked)",
 				value_default = true,				
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},

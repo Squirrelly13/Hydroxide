@@ -12,19 +12,19 @@
 		</LuaComponent>
   
 		<ItemComponent
-			item_name="Runestone of Crystals"
+			item_name="$item_cc_runestone_crystal"
 			ui_sprite="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
 			ui_description="$itemdesc_runestone" 
 			>
 		</ItemComponent>
   
 		<UIInfoComponent
-			name="Runestone of Crystals"
+			name="$item_cc_runestone_crystal"
 			>
 		</UIInfoComponent>
   
 		<AbilityComponent
-			ui_name="Runestone of Crystals"
+			ui_name="$item_cc_runestone_crystal"
 			>
 		</AbilityComponent>
 	

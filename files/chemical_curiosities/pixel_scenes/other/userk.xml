@@ -8,9 +8,6 @@
 		skip_biome_checks="1" 
 		>
     </PixelSceneComponent>
-	<LifetimeComponent
-		lifetime="-1"
-		>
-	</LifetimeComponent>
-	<!--i thought Squirrelly's thing was neat so i decided to make my own :D (wait void liquid in pixel scenes seems to be tied to cauldron calendar, will figure this out another time) -UserK -->
+	<LifetimeComponent lifetime="-1" />
+	<!--i thought Squirrelly's thing was neat so i decided to make my own :D (VL is weird, need to make a duplicate material) -UserK -->
 </Entity>

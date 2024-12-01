@@ -16,7 +16,7 @@
 
 	<Base file="data/entities/base_item.xml" >
 		<ItemComponent
-			item_name="nerf gun"
+			item_name="$nerf_wand"
 			remove_on_death="1"
 			collect_nondefault_actions="1" >
 		</ItemComponent>

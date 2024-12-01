@@ -17,22 +17,18 @@ max_hp 	= ComponentGetValue2( damagemodel, "max_hp" )
  
 hp		= ComponentGetValue2( damagemodel, "hp"	 ) 
 
-diff 	= max_hp - hp
---print("morphine.lua: Max HP: " .. max_hp .. " HP: " .. hp .. " diff: " .. diff )
+local diff 	= max_hp - hp
+if diff == 0 then return end
 
-trueHP = trueHP - diff
+trueHP = trueHP - (diff * .5) --morphine provides 50% damage resistance
 
---print("morphine.lua: trueHP after math: " .. trueHP)
 
 
 if (trueHP <= 0) then
-	EntityInflictDamage( root, 5 * max_hp, "DAMAGE_OVEREATING", "Careful with those painkillers.", "PLAYER_RAGDOLL_CAMERA", -500, 0)
+	EntityInflictDamage( root, 5 * max_hp, "DAMAGE_OVEREATING", "$death_cc_morphine", "PLAYER_RAGDOLL_CAMERA", -500, 0)
 end
 ComponentSetValue2(damagemodel, "hp", max_hp)
 
 ComponentSetValue2( vsc, "value_float", trueHP)
-
-
---print("maxhp: " .. max_hp .. " hp: " .. hp .. " trueHP: " .. trueHP .. " diff: " .. diff)
 
 --print("Morphine")

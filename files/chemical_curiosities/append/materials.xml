@@ -7,7 +7,7 @@
 <!--  
 	<CellData
 		name="unknown"
-		ui_name="unknown_mat_test"
+		ui_name="unknown_mat_test" 
 		tags="[water]"
 		cell_type="liquid"
 		liquid_sand="1"
@@ -15,7 +15,15 @@
 		wang_color="12345678"
 		ignore_self_reaction_warning="1"
 	> 
-	</CellData> --> <!-- testing material for unknown case in reaction input/output  -->
+	</CellData> --> <!-- testing material for unknown case in reaction input/output  --> <!-- holy shit material "unknown" is weird, should totally document this -->
+
+	<CellDataChild
+		_parent="void_liquid"
+		name="cc_void_liquid_extended"
+		wang="ffb2332b"
+		lifetime="-1"
+	/>
+
 
  <CellData 
         name="cc_hydroxide"
@@ -1758,7 +1766,7 @@
 		_parent="vomit"
 		name="cc_vomit_fading"
 		wang_color="88E8BD5D"
-		lifetime="2000"
+		lifetime="1000"
 		>
 	</CellDataChild>
 

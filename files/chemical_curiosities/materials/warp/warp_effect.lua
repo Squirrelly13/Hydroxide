@@ -98,7 +98,7 @@ if(is_warped)then
             GameSetPostFxParameter("cc_warp_multiplier", warp, 0 ,0 ,0)
         end
         if(done)then
-            GamePrint("You feel as if you are no longer in the same place..")
+            GamePrint("$log_cc_paradox_warp")
             EntityRemoveIngestionStatusEffect( root, "CC_WARP" )
             EntityIngestMaterial( root, CellFactory_GetType("cc_warp_sickness"), 1)
             EntityKill(entity_id)

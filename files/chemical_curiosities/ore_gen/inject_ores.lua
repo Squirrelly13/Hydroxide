@@ -173,7 +173,7 @@ ore_sandcave = {
 }
 
 
-if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true and ModSettingGet("Hydroxide.AA_BLOOMIUM_VEINS") == true then
+if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true and ModSettingGet("Hydroxide.AA_BLOOMIUM_VEINS") == true then --this should probs be jungle-only... yeah i cant even think of any external biomes this would fit for, not least cuz having bloomium be able to escape sounds like a dangerous idea lmao
 	table.insert(ore_types, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
 	table.insert(ore_coalmines, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
 	table.insert(ore_snowcastle, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})

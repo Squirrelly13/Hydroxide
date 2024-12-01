@@ -394,29 +394,6 @@ if ModIsEnabled("anvil_of_destiny") and AA then --[[implement this properly when
 	else
 		print("AoD Anvil Converter not found at expected location: \"" .. anvil_converter .. "\". Please contact/inform @UserK")
 	end
-
-
- 	--[[local anvil_script = "mods/anvil_of_destiny/files/entities/anvil/anvil.lua"
-	if ModDoesFileExist(anvil_script) then
-		ModTextFileSetContent(anvil_script, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/anvil_overwrite.lua"))
-	else	
-		print("AoD Anvil Converter not found at expected location: \"" .. anvil_script .. "\". Please contact/inform @UserK")
-	end
-
-	local potion_bonuses = "mods/anvil_of_destiny/files/entities/anvil/potion_bonuses.lua"
-	if ModDoesFileExist(potion_bonuses) then
-		ModTextFileSetContent(potion_bonuses, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_bonuses_overwrite.lua"))
-	else	
-		print("AoD Anvil Converter not found at expected location: \"" .. potion_bonuses .. "\". Please contact/inform @UserK")
-	end
-
-	local potion_insert = "mods/anvil_of_destiny/files/entities/anvil/potion_insert.lua"
-	if ModDoesFileExist(potion_insert) then
-		ModTextFileSetContent(potion_insert, ModTextFileGetContent("mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potion_insert_overwrite.lua"))
-	else	
-		print("AoD Anvil Converter not found at expected location: \"" .. potion_insert .. "\". Please contact/inform @UserK")
-	end ]] --hacky method to rewrite parts of AoD before sharpy said i should just ask horscht to implement stuff directly into the base mod lmao
-
 end
 
 --	Glimmers Expanded
@@ -477,15 +454,6 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	return input1[mat1num], input2[mat1num], output1, output2
 end 
 
--- this do work now :)
---[[
-register_translation("item_can_with_material", "Can of $0")
-register_translation("item_can_with_material_description", "A Can containing $0")
-
-register_translation("item_vial_with_material", "Vial of $0")
-register_translation("item_vial_with_material_description", "A glass vial containing $0")
-]]
-
 register_localizations("mods/Hydroxide/translations.csv")
 
 
@@ -503,32 +471,6 @@ ModMagicNumbersFileAdd( "mods/Hydroxide/files/magic_numbers.xml" )
 --appends
 
 
-
-
-
---[[
-local baseAcidHurt = {"base_enemy_robot", "base_enemy_robot_boss_limbs", "base_helpless_animal", "base_humanoid", "base_prop_crystal" }
-
-local acidHurt = {"alchemist", "bigfirebug", "boss_dragon", "chest_leggy", "darkghost", "eel", "firebug", "firemage", "fireskull", "fish", "gazer", "ghost", "giant", "icemage", "icer", "iceskull", "scavenger_poison", "skygazer", "spitmonster", "thunderskull", "wizard_dark", "wizard_hearty", "wizard_homing", "wizard_neutral", "wizard_poly", "wizard_returner", "wizard_swapper", "wizard_tele", "wizard_twitchy", "wizard_weaken", "worm", "worm_big", "worm_end", "worm_skull", "worm_tiny" }
-
-OnModPostInit(
-	for i, entity in ipairs(baseAcidHurt) do
-		local path = "data/entities/" .. entity .. ".xml"
-		content = ModTextFileGetContent(path)
-		xml = nxml.parse(content)
-		
-		for elem in xml:each_child() do
-			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
-		end
-	end
-	
-	for i, entity in ipairs(acidHurt) do
-		local path = "data/entities/animals/" .. entity .. ".xml"	
-			--TODO FINISH THIS UP, ITS THE HYDROXIDE DEALING DAMAGE STUFF
-	end
-)
-]]--finish this up
-
 --More Musical Magic implementation, coded by Y🍵
 if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
 	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
@@ -536,19 +478,6 @@ if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
 end
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
 ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
-
-
-
-
-
-function OnModPostInit()
-	--print("Chemical Curiosities - OnModPostInit()") -- First this is called for all mods
-
-
-	
-
-
-end
 
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
@@ -569,35 +498,40 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 	end
 
+	local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla tags
 	for elem in xml:each_child() do
 		--print(("CC: Checking " .. elem.attr.name) or "")
 		if catastrophicMaterials[elem.attr.name] then
 			elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
 			print("CC: Added tag [catastrophic] to " .. elem.attr.name)
 		end
-	end
-
-	for elem in xml:each_child() do
 	
-	    if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
-		
+		if elem.attr.name == "rock_static" then
+			rock_tags = elem.attr.tags
 	        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"	
-	--[[	
-		elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
-			elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-		elseif (elem.attr.tags ~= nil) then
-			if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
-				elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-				]]--fuck this. Too annoying
+		end
+	    if CC and elem.attr.name == "rock_static_glow"
+		or elem.attr.name == "rock_static_purple"
+		or elem.attr.name == "rock_static_noedge"
+		or elem.attr.name == "rock_static_trip_secret"
+		or elem.attr.name == "rock_static_trip_secret2"
+		or elem.attr.name == "rock_static_intro"
+		or elem.attr.name == "rock_static_intro_breakable"
+		or elem.attr.name == "rock_static_grey"
+		or elem.attr.name == "rock_static_wet"
+		or elem.attr.name == "snowrock_static"
+		or elem.attr.name == "rock_box2d_nohit_hard" 
+		or elem.attr.name == "rock_box2d_nohit" 
+		or elem.attr.name == "rock_box2d" 
+		or elem.attr.name == "rock_box2d_nohit"
+		or elem.attr.name == "lavarock_static" then
+	        elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"	
+		elseif elem.attr.name == "coal_static" then
+			elem.attr.tags = rock_tags
 	    end
 	end
 
 	ModTextFileSetContent("data/materials.xml", tostring(xml))
-
-
-
 
 
 	local x = ProceduralRandom(0,0)

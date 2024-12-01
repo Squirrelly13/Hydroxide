@@ -29,7 +29,7 @@ table.insert(ALL_ENTITIES, {
       image="mods/Hydroxide/files/compelling_compatibility/conjurer/entities/vial_chaotic_pandorium.png",  -- This should be a 16*16px icon
     },
     {
-      name="Runestone of Crystals",
+      name="$item_cc_runestone_crystal",
       desc="Turns nearby liquids into Molten Crystal",
       image="mods/Hydroxide/files/compelling_compatibility/conjurer/entities/runestone_crystal.png",  -- This should be a 16*16px icon
       path="mods/hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.xml",
