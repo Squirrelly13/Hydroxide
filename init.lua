@@ -236,26 +236,26 @@ end
 ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
-	if CC then
-		EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
-
-		if GameHasFlagRun("squirrellys_music_altar_is_spawned") == false then  --Rename the flag to something unique, this checks if the game has this flag
+	if not GameHasFlagRun("cc_onplayerspawned") then
+		if CC then
+			EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
-			GameAddFlagRun("squirrellys_music_altar_is_spawned")  --this tells the game to add this flag, the previous "if" statement won't spawn it every time you load the save now
-		end															--ngl Squirrelly, p sure theres probs a much better way to do that, but this is honestly kinda funny so W lmao -UserK
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/userk.xml", 11605, 20501) --me too!
+		end
+
+		-- debugging stuffs from eba
+		--local player_x, player_y = EntityGetTransform( player_entity )
+		--EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
+		-- debugging stuff end
+		GameAddFlagRun("cc_onplayerspawned")
 	end
 
-	EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
-
-	-- debugging stuffs from eba
-	--local player_x, player_y = EntityGetTransform( player_entity )
-	--EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/journal_entity.xml", player_x + 20, player_y - 10)
-	-- debugging stuff end
 
 
 
 	
-	print("CC init took " .. total_time .. "seconds")
+	print("CC init took " .. total_time .. " seconds")
 
 end
 
@@ -398,7 +398,7 @@ end
 
 --	Glimmers Expanded
 
-if (ModIsEnabled("GlimmersExpanded")) then
+if ModIsEnabled("GlimmersExpanded") then
 	ModLuaFileAppend("mods/GlimmersExpanded/files/lib/glimmer_data.lua", "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/glimmers.lua")
 end
 
