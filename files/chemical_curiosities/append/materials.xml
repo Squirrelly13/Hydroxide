@@ -19,9 +19,10 @@
 
 	<CellDataChild
 		_parent="void_liquid"
-		name="cc_void_liquid_extended"
-		wang="ffb2332b"
-		lifetime="-1"
+		name="glitchium"
+		ui_name="$mat_cc_glitchium"
+		wang_color="ff12cc21"
+		lifetime="0"
 	/>
 
 

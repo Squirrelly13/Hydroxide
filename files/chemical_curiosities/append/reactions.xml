@@ -987,28 +987,28 @@
 	<!-- meat rots with snow -->
 	
 	<Reaction probability="23"
-	input_cell1="snow" 		input_cell2="meat"
+	input_cell1="snow" 		input_cell2="rotten_meat"
 	output_cell1="slush"	output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="23"
-	input_cell1="snow_sticky" 	input_cell2="meat"
+	input_cell1="snow_sticky" 	input_cell2="rotten_meat"
 	output_cell1="slush"		output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
 	
 	<Reaction probability="23"
-	input_cell1="snow_static" 	input_cell2="meat"
+	input_cell1="snow_static" 	input_cell2="rotten_meat"
 	output_cell1="slush"		output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
 
 	<Reaction probability="23"
-	input_cell1="cc_frozen_meat" 	input_cell2="meat"
+	input_cell1="cc_frozen_meat" 	input_cell2="rotten_meat"
 	output_cell1="cc_frozen_meat"		output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
