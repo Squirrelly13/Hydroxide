@@ -5,33 +5,15 @@ local player_id = EntityGetParent( entity_id )
 local x, y = EntityGetTransform( entity_id )
 
 if ( player_id ~= NULL_ENTITY ) and ( entity_id ~= player_id ) then
-	local comp = EntityGetFirstComponent( player_id, "DamageModelComponent" )
-	local comps = EntityGetComponent( entity_id, "VariableStorageComponent" )
+	local dmgcomp = EntityGetFirstComponent( player_id, "DamageModelComponent" )
 	
-	local resists = { "drill", "electricity", "explosion", "fire", "ice", "melee", "projectile", "radioactive", "slice" }
+	local resists = { "drill", "electricity", "explosion", "fire", "ice", "melee", "projectile", "radioactive", "slice", "physics_hit", "overeating" }
 	local result = ""
 	
-	if ( comp ~= nil ) and ( comps ~= nil ) then
-		for i,v in ipairs( comps ) do
-			local n = ComponentGetValue2( v, "name" )
-			
-			if ( n == "ironskin_data" ) then
-				result = ComponentGetValue2( v, "value_string" )
-				break
-			end
-		end
-		
-		if ( #result > 0 ) then
-			local data = {}
-			
-			for r in string.gmatch( result, "%S+" ) do
-				table.insert( data, tonumber(r) )
-			end
-			
-			for a,b in ipairs( resists ) do
-				local r = data[a] or 1
-				ComponentObjectSetValue2( comp, "damage_multipliers", b, r )
-			end
+	if ( dmgcomp ~= nil ) then
+		for a,b in ipairs( resists ) do
+			ComponentObjectSetValue2( dmgcomp, "damage_multipliers", b, ComponentObjectGetValue2(dmgcomp, "damage_multipliers", b) / .75)
+			print("resistance "..b.." set to: ".. ComponentObjectGetValue2(dmgcomp, "damage_multipliers", b) / .75)
 		end
 	end
 	
