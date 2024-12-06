@@ -1249,7 +1249,7 @@
 		liquid_gravity="1"
 		liquid_sand="0"
 		gfx_glow="255"
-		liquid_stains="1"
+		liquid_stains=".5"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1260,7 +1260,7 @@
 				<StatusEffect type="CC_ANTIMATTER" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="CC_ANTIMATTER" amount="1.0" />
+				<StatusEffect type="CC_ANTIMATTER" amount=".5" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 
@@ -1276,7 +1276,7 @@
 		liquid_gravity="1"
 		liquid_sand="0"
 		gfx_glow="255"
-		liquid_stains="1"
+		liquid_stains=".4"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1287,7 +1287,7 @@
 				<StatusEffect type="CC_ANTIMATTER" />
 			</Stains>
 			<Ingestion>
-				<StatusEffect type="CC_ANTIMATTER" amount="1.0" />
+				<StatusEffect type="CC_ANTIMATTER" amount=".4" />
 			</Ingestion>
 		</StatusEffects>
 	</CellData> 

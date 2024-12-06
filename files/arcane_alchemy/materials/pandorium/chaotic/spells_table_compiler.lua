@@ -3,29 +3,29 @@ dofile("data/scripts/gun/gun.lua")
 local year, month, day, hour, minute, second = GameGetDateAndTimeLocal()
 
 local chaotic = {
-    PROJECTILES = {
-    },
-
-    STATIC_PROJECTILES = {
-    },
-
-    MODIFIERS = {
-    },
-
-    MATERIALS = {
-    },
-
-    UTILITY ={
-    },
-
-    GLIMMERS = {
-    },
+    PROJECTILES = {},
+    STATIC_PROJECTILES = {},
+    MODIFIERS = {},
+    MATERIALS = {},
+    UTILITY = {},
+    GLIMMERS = {},
 
     data = {
-        month = month,
-        day = day,
+        gimmer_chance = month == 6 and .6 or .1,
     },
 }
+
+local exclude = {
+    NUKE = true,
+    ALL_NUKES = true,
+    ALL_DISCS = true,
+    ALL_ROCKETS = true,
+    ALL_DEATHCROSSES = true,
+    RANDOM_MODIFIER = true,
+    APOTHEOSIS_NUKE_RAY = true,
+    APOTHEOSIS_NUKE_RAY_ENEMY = true,
+}
+
 
 function IsValidProjectile(spell)
     --if true then return true end --crying and shaking rn, this line of code stumped me for like an hour cuz i forgot it existed :sob:
@@ -43,7 +43,9 @@ end
 
 for k, data in pairs(actions)do
     if data.pandorium_ignore then goto continue end
-    if data.id:find("NUKE") then goto continue end
+    if data.ai_never_uses or data.recursive then goto continue end
+    if exclude[data.id] then goto continue end
+
     if data.type == 0 and IsValidProjectile(data) then table.insert(chaotic.PROJECTILES, data.id) end
     if data.type == 1 and IsValidProjectile(data) then table.insert(chaotic.STATIC_PROJECTILES, data.id) end
     if data.type == 2 and IsValidModifier(data) then table.insert(chaotic.MODIFIERS, data.id) end
@@ -67,14 +69,6 @@ end
 
 local include = {
     COPITH_SUMMON_HAMIS = true,
-}
-
-local exclude = {
-    ALL_NUKES = true,
-    ALL_DISCS = true,
-    ALL_ROCKETS = true,
-    ALL_DEATHCROSSES = true,
-    RANDOM_MODIFIER = true,
 }
 
 return chaotic

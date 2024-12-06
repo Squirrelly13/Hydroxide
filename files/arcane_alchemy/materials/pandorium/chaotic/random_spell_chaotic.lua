@@ -6,6 +6,7 @@ dofile_once("data/scripts/lib/utilities.lua") --holy shit i dont need utilities 
 
 
 local spell_table = dofile_once("mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/spells_table_compiler.lua")
+--local data_table = spell_table.data
 
 --print(spell_table.PROJECTILES[Random(1,#spell_table.PROJECTILES)])
 
@@ -35,12 +36,10 @@ local spell_formula = ""
 function add_spell(spellType, position)
 
     local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
-    local spell = EntityCreateNew(spell_id)
+    local spell = EntityCreateNew()
     EntityAddChild(gun, spell)
 
-    EntityAddComponent2(spell, "ItemActionComponent", {
-        action_id = spell_id
-    })
+    EntityAddComponent2(spell, "ItemActionComponent", {action_id = spell_id})
 
     local item_comp = EntityAddComponent2(spell, "ItemComponent")
     ComponentSetValue2(item_comp, "inventory_slot", position, 1)
@@ -54,13 +53,27 @@ for i=1, Random(5, 10) do --positions 1-10
     add_spell("MODIFIERS", i)
 end
 
-if Random() < (spell_table.month == 6 and .6 or .1) then add_spell("GLIMMERS", 13) end --position 13
+
+
+if Random() <= spell_table.data.gimmer_chance then add_spell("GLIMMERS", 13) add_spell("GLIMMERS", 29) end --positions 13 and 29
 add_spell("PROJECTILES", 15) --position 15
 
 for i=1, 10 do --positions 16-26
     add_spell("MODIFIERS", i + 15)
 end
 add_spell("STATIC_PROJECTILES", 30) --position 30
+
+
+--[[
+local spell = EntityCreateNew()
+EntityAddChild(gun, spell)
+
+EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
+
+local item_comp = EntityAddComponent2(spell, "ItemComponent", {inventory_slot = {x = 14, y = 1}})
+ComponentSetValue2(item_comp, "inventory_slot", 14, 1)--]]
+
+
 
 
 

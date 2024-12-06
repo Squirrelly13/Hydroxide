@@ -1,6 +1,8 @@
 dofile_once("data/scripts/lib/utilities.lua")
 
-table.insert( actions, {
+
+local AA_spells = {
+	{
 		id          = "AA_REPULTIUM_TRAIL",
 		name 		= "$action_repultium_trail",
 		author		= "$name_squirrelly",
@@ -19,31 +21,28 @@ table.insert( actions, {
 			c.trail_material_amount = c.trail_material_amount + 20
 			draw_actions( 1, true )
 		end,
-});	
-
-table.insert( actions,
-{
-	id          = "AA_ALCHEMY_NERF_DARTS",
-	name 		= "$action_aa_alchemy_nerf_darts",
-	author		= "$name_evaisa",
-	mod 		= "$name_mod_aa",
-	description = "$action_desc_aa_alchemy_nerf_darts",
-	sprite 		= "mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/darts.png",
-	type 		= ACTION_TYPE_PROJECTILE,
-	spawn_level                       = "0,1,2,3,4,5,6,7", 
-	spawn_probability                 = "0,0,0,0,0,0,0,0",
-	price = 200000000,
-	mana = 0,
-	max_uses = 20,
-	action 		= function()
-		add_projectile("mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_dart.xml")
-		c.speed_multiplier = 0.1
-		c.screenshake = c.screenshake + 20.0
-		shot_effects.recoil_knockback = shot_effects.recoil_knockback + 10
-	end,
-});
-
-table.insert( actions,	{
+	},
+	{
+		id          = "AA_ALCHEMY_NERF_DARTS",
+		name 		= "$action_aa_alchemy_nerf_darts",
+		author		= "$name_evaisa",
+		mod 		= "$name_mod_aa",
+		description = "$action_desc_aa_alchemy_nerf_darts",
+		sprite 		= "mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/darts.png",
+		type 		= ACTION_TYPE_PROJECTILE,
+		spawn_level                       = "0,1,2,3,4,5,6,7", 
+		spawn_probability                 = "0,0,0,0,0,0,0,0",
+		price = 200000000,
+		mana = 0,
+		max_uses = 20,
+		action 		= function()
+			add_projectile("mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_dart.xml")
+			c.speed_multiplier = 0.05
+			c.screenshake = c.screenshake + 20.0
+			shot_effects.recoil_knockback = shot_effects.recoil_knockback + 10
+		end,
+	},
+	{
 		id          = "AA_HUNGRYSLIME_SHOT",
 		name 		= "$action_aa_hungryslime_shot",
 		author		= "$name_squirrelly",
@@ -62,9 +61,8 @@ table.insert( actions,	{
 			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/arcane_alchemy/spells/enemy_modifiers/hitfx_vomitslime.xml,"
 			draw_actions( 1, true )
 		end,
-});
-
-table.insert( actions, {
+	},
+	{
 		id          = "AA_POTION_TO_GAS",
 		name 		= "$action_aa_potion_to_gas",
 		author		= "$name_squirrelly",
@@ -84,4 +82,25 @@ table.insert( actions, {
 			c.fire_rate_wait = c.fire_rate_wait + 45
 			draw_actions( 1, true )
 		end,
-});
+	},
+	{
+		
+		id          = "AA_PANDORIUM_MODIFIER",
+		name 		= "You shouldn't be here!",
+		description = "This spell is used to set some stuff for Chaotic Pandorium\nThis should not show up in normal gameplay!!",
+		sprite 		= "",
+		type 		= ACTION_TYPE_MODIFIER,
+		spawn_level                       = "",
+		spawn_probability                 = "",
+		mana = 0,
+		pandorium_ignore = true,
+		action 		= function()
+			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml,"
+			draw_actions( 1, true )
+		end,
+	},
+}
+
+for _, spell in ipairs(AA_spells) do
+	table.insert(actions, spell)
+end

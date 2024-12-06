@@ -101,10 +101,10 @@ end
 --		[GLOBAL]	
 
 
-ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/GLOBAL/potion_start/potion_start.lua")
-ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/overwhelming_overrides/potion_random.lua") --override random potion selection
-ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/GLOBAL/status_effects.lua" ) --effects
-ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/GLOBAL/fungal_shift.lua" ) --Fungal shifts
+ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
+ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_random.lua") --override random potion selection
+ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua" ) --effects
+ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua" ) --Fungal shifts
 
 
 

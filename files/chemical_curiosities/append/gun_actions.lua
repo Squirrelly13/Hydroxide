@@ -197,8 +197,8 @@ table.insert( actions,	{
 		sprite_unidentified = "data/ui_gfx/gun_actions/electric_charge_unidentified.png",
 		related_extra_entities = { "mods/Hydroxide/files/chemical_curiosities/spells/antimatter_field/hitfx_antimatterfield.xml" },
 		type 		= ACTION_TYPE_MODIFIER,
-		spawn_level                       = "1,2,4,5", -- GRAVITY_FIELD_ENEMY
-		spawn_probability                 = "0.6,0.6,0.4,0.4", -- GRAVITY_FIELD_ENEMY
+		spawn_level                       = "4,5",
+		spawn_probability                 = "0.3,0.3",
 		price = 350,
 		mana = 150,
 		max_uses = 20,

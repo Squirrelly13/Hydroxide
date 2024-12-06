@@ -1,0 +1,6 @@
+<Entity>
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.lua"
+        execute_on_added="1"
+    />
+</Entity>
