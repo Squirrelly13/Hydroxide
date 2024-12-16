@@ -90,7 +90,7 @@ end
 
 
 ---- print entire function:
---local test_values = {GameGetDateAndTimeLocal()}
+--local test_values = {}
 --for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
 
 
@@ -381,7 +381,7 @@ end --copi's chemical curiosity compatibility combo
 
 if ModIsEnabled("anvil_of_destiny") and AA then --[[implement this properly when we can add custom materials to anvil]]
 
-	ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
+	--ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
 
 	local anvil_converter = "mods/anvil_of_destiny/files/entities/anvil/converter.xml"

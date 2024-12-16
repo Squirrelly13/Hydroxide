@@ -14,7 +14,6 @@ local length = Random(40,80)
 
 local vel_x = math.cos( angle ) * length
 local vel_y = 0 - math.sin( angle ) * length
-	
 
 shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/kindling/fire_line.xml", pos_x, pos_y, vel_x, vel_y ) --fuckk had no idea this also called fire_line.xml, might have to move it in the future -UserK
 

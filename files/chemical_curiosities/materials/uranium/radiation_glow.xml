@@ -1,30 +1,23 @@
-<Entity 
-  name="$projectile_default" tags="projectile_player,projectile_not, radiation"
-   >
-
-	
+<Entity name="$projectile_default" tags="projectile_player,projectile_not,radiation">
 	
 	<VelocityComponent
-			gravity_y="0"
-			mass="0.04"
-            air_friction="0.8"
-            terminal_velocity="100"
-			affect_physics_bodies="1"
-		>
-	</VelocityComponent>
+		gravity_y="0"
+		mass="0.04"
+        air_friction="0.8"
+        terminal_velocity="100"
+		affect_physics_bodies="1"
+	/>
 
 	<AudioComponent
 		file="data/audio/Desktop/projectiles.bank"
 		audio_physics_material="projectile"
-		event_root="projectiles/hit" >
-	</AudioComponent>
-
+		event_root="projectiles/hit" 
+    />
 	
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/flow.lua"
 		execute_every_n_frame="2"
-		>
-	</LuaComponent>
+	/>
 	
   <ProjectileComponent 
     _enabled="1" 
@@ -61,84 +54,83 @@
 
     <HitEffectComponent 
         effect_hit="LOAD_CHILD_ENTITY"
-        value_string="mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_add.xml" >
-    </HitEffectComponent>
+        value_string="mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_add.xml"
+    />
 
 
-  <LightComponent 
-    _enabled="1" 
-    radius="20" 
-    r="20"
-    g="70"
-    b="20">
-  </LightComponent>
+    <LightComponent 
+        _enabled="1" 
+        radius="20" 
+        r="20"
+        g="70"
+        b="20"
+    />
 
   <!-- cloud -->
-  <ParticleEmitterComponent 
-    emitted_material_name="cc_uranium"
-    emitter_lifetime_frames="280"
-    offset.x="0"
-    offset.y="0"
-	gravity.y="0.0"
-	x_vel_min="-20"
-    x_vel_max="20"
-    y_vel_min="-20"
-    y_vel_max="20"
-    friction="10"
-    count_min="1"
-    count_max="1" 
-    lifetime_min="0.05"
-    lifetime_max="0.8"
-    emit_real_particles="0"
-	render_on_grid="1"
-    emit_cosmetic_particles="1"
-    emission_interval_min_frames="1"
-    emission_interval_max_frames="16"
-    is_emitting="1" >
-  </ParticleEmitterComponent>
+    <ParticleEmitterComponent 
+        emitted_material_name="cc_uranium"
+        emitter_lifetime_frames="280"
+        offset.x="0"
+        offset.y="0"
+	    gravity.y="0.0"
+	    x_vel_min="-20"
+        x_vel_max="20"
+        y_vel_min="-20"
+        y_vel_max="20"
+        friction="10"
+        count_min="1"
+        count_max="1" 
+        lifetime_min="0.05"
+        lifetime_max="0.8"
+        emit_real_particles="0"
+	    render_on_grid="1"
+        emit_cosmetic_particles="1"
+        emission_interval_min_frames="1"
+        emission_interval_max_frames="16"
+        is_emitting="1"
+    />
 
   <!-- trail -->
-  <ParticleEmitterComponent 
-    emitted_material_name="cc_uranium"
-    emitter_lifetime_frames="280"
-    offset.x="0"
-    offset.y="0"
-    gravity.y="0.0"
-    x_vel_min="-10"
-    x_vel_max="10"
-    y_vel_min="-10"
-    y_vel_max="10"
-    friction="0"
-    count_min="1"
-    count_max="15"
-    lifetime_min="0.2"
-    lifetime_max="0.8"
-	airflow_force="5"
-	airflow_time="2"
-	airflow_scale="1"
-    emit_real_particles="0"
-	fade_based_on_lifetime="1"
-    render_on_grid="1"
-	is_trail="1"
-    trail_gap="1"
-    emit_cosmetic_particles="1"
-    emission_interval_min_frames="1"
-    emission_interval_max_frames="2"
-    is_emitting="1" >
-  </ParticleEmitterComponent>
+    <ParticleEmitterComponent 
+        emitted_material_name="cc_uranium"
+        emitter_lifetime_frames="280"
+        offset.x="0"
+        offset.y="0"
+        gravity.y="0.0"
+        x_vel_min="-10"
+        x_vel_max="10"
+        y_vel_min="-10"
+        y_vel_max="10"
+        friction="0"
+        count_min="1"
+        count_max="15"
+        lifetime_min="0.2"
+        lifetime_max="0.8"
+	    airflow_force="5"
+	    airflow_time="2"
+	    airflow_scale="1"
+        emit_real_particles="0"
+	    fade_based_on_lifetime="1"
+        render_on_grid="1"
+	    is_trail="1"
+        trail_gap="1"
+        emit_cosmetic_particles="1"
+        emission_interval_min_frames="1"
+        emission_interval_max_frames="2"
+        is_emitting="1"
+    />
   
   	<MagicConvertMaterialComponent
-      kill_when_finished="0"
-      from_material_tag="[liquid]"
-      steps_per_frame="2"
-      to_material="cc_radioactive_waste"
-      clean_stains="0"
-      is_circle="1"
-      radius="3" 
-	  reaction_audio_amount="1"
-	  convert_same_material="0"
-	  loop="1"
-	  >
-    </MagicConvertMaterialComponent>
+        kill_when_finished="0"
+        from_material_tag="[liquid]"
+        steps_per_frame="2"
+        to_material="cc_radioactive_waste"
+        clean_stains="0"
+        is_circle="1"
+        radius="3" 
+	    reaction_audio_amount="1"
+	    convert_same_material="0"
+	    loop="1"
+	/>
 
 </Entity>
