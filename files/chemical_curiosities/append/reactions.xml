@@ -1264,4 +1264,16 @@
 	output_cell1="rock_static" 		output_cell2="moss"  
 	>
   	</Reaction>
+
+	<Reaction probability="100"
+		input_cell1="cc_air" 	input_cell2="[*]" 	
+		output_cell1="air" 		output_cell2="[*]"
+		fast_reaction="1"
+	/>
+
+	<Reaction probability="100"
+		input_cell1="cc_air" 	input_cell2="cc_air" 	
+		output_cell1="air" 		output_cell2="air"
+		fast_reaction="1"
+	/>
 </Materials>

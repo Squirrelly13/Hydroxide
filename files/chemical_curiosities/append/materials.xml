@@ -25,6 +25,14 @@
 		lifetime="0"
 	/>
 
+	<CellDataChild
+		_parent="air"
+		name="cc_air"
+		wang_color="00000142"
+		cell_type="gas" 
+		ignore_self_reaction_warning="1"
+		lifetime="1"
+	/>
 
  <CellData 
         name="cc_hydroxide"
@@ -879,7 +887,7 @@
 			</Ingestion>
 		</StatusEffects>
     	<Graphics 
-			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_fungus.png" >
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_fungus.png" >
     	</Graphics>
 	</CellDataChild>
 	
