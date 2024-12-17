@@ -19,7 +19,7 @@ if (rocketCount <= ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") or 60) th
 	local vel_x = math.cos( angle ) * length
 	local vel_y = 0 - math.sin( angle ) * length
 	
-	shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/blast_powder/blast_rocket.xml", pos_x, pos_y, vel_x, vel_y)
+	shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/blast_powder/blast_rocket.xml", pos_x, pos_y, vel_x, vel_y)
 end
 
 EntityKill(GetUpdatedEntityID())

@@ -56,8 +56,6 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit)
 
 	local frame = GameGetFrameNum()
 	local last_shift = tonumber(GlobalsGetValue("fungal_shift_last_frame", "-1000000")) --shares cooldown with fungal shifting
-    print("frame = " .. frame)
-    print("last_shift = " .. last_shift)
 	if frame < last_shift + 18000 and not ignore_cooldown then return end
 
 	local iteration = tonumber(GlobalsGetValue("cc_null_shift_iteration", "0"))
@@ -96,7 +94,8 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit)
         end
     end
 
-    GlobalsGetValue("fungal_shift_last_frame", tostring(frame))
+
+    GlobalsSetValue("fungal_shift_last_frame", tostring(frame))
     GlobalsSetValue("cc_null_shift_iteration", tostring(iteration + 1))
     GamePrintImportant( random_from_array( null_log_messages ), GameTextGet("$logdesc_cc_nullified_trip"), "mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/3piece_null_shift.png" )
 

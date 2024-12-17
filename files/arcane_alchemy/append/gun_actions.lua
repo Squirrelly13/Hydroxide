@@ -17,7 +17,7 @@ local AA_spells = {
 		mana = 25,
 		--max_uses = 50,
 		action 		= function()
-			c.trail_material = c.trail_material .. "aa_repultium"
+			c.trail_material = c.trail_material .. "aa_repultium,"
 			c.trail_material_amount = c.trail_material_amount + 20
 			draw_actions( 1, true )
 		end,

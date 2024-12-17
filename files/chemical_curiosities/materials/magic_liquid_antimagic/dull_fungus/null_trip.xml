@@ -33,11 +33,12 @@
 	/>
 
 	<LuaComponent
+	    execute_every_n_frame="1"
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip.lua"
 	/>
 
 	<LuaComponent
-	    execute_every_n_frame="120"
+	    execute_every_n_frame="600"
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip2.lua"
 	/>
 
