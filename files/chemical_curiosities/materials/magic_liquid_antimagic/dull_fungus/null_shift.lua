@@ -2,34 +2,95 @@ dofile_once("data/scripts/lib/utilities.lua")
 
 null_materials = {
 	{
+        main_material = "water",
         probability = 1.0,
-        materials = { "water", "water_static", "water_salt", "water_ice" },
-        name_material = "water",
+        variants = {
+            "water_static",
+            "water_salt",
+            "water_ice"
+        },
     },
 	{
+        main_material = "fungi",
         probability = 1.0,
-        materials = { "blood_fungi", "fungi", "fungisoil" },
-        name_material = "fungi",
+        variants = {
+            "blood_fungi",
+            "fungisoil",
+        },
     },
 	{
-        probability = 1.0,
-        materials = { "blood_cold", "blood_worm", "blood" },
-        name_material = "blood"
+        main_material = "cc_nullium",
+        probability = 0.7,
+        variants = {
+            "cc_dull_fungus",
+        },
     },
 	{
+        main_material = "blood",
         probability = 1.0,
-        materials = { "acid", "cc_hydroxide" },
-        name_material = "acid",
+        variants = {
+            "ice_blood_static",
+            "blood_cold",
+            "blood_worm",
+        },
     },
 	{
+        main_material = "acid",
+        probability = 0.5,
+        variants = {
+            "ice_acid_static",
+        },
+    },
+	{
+        main_material = "cc_hydroxide",
+        probability = 0.5,
+    },
+	{
+        main_material = "acid_gas",
+        probability = 0.8,
+        variants = {
+            "acid_gas_static",
+            "poison_gas",
+            "fungal_gas",
+            "radioactive_gas",
+            "radioactive_gas_static",
+            "cc_hydroxide_gas",
+            "cc_methane"
+        },
+    },
+	{
+        main_material = "magic_liquid_polymorph",
         probability = 0.4,
-        materials = { "acid_gas", "acid_gas_static", "poison_gas", "fungal_gas", "radioactive_gas", "radioactive_gas_static", "cc_hydroxide_gas", "cc_methane" },
-        name_material = "acid_gas",
+        variants = {
+            "magic_liquid_unstable_polymorph",
+            "magic_liquid_random_polymorph"
+        },
     },
 	{
-        probability = 0.4,
-        materials = { "magic_liquid_polymorph", "magic_liquid_unstable_polymorph", "magic_liquid_random_polymorph"},
-        name_material = "magic_liquid_polymorph",
+        main_material = "oil",
+        probability = 0.6,
+        variants = {
+            "aa_oil_splitting",
+            "aa_light_oil",
+            "aa_heavy_oil"
+        },
+    },
+    {
+        main_material = "magic_liquid_berserk",
+        probability = 0.5,
+        variants = {
+            "magic_liquid_charm",
+            "magic_liquid_invisibility",
+            "cc_veilium",
+            "cc_agitine",
+        }
+    },
+    {
+        main_material = "gold",
+        probability = 0.1,
+        variants = {
+            "gold_box2d",
+        }
     },
 }
 
@@ -51,7 +112,10 @@ function get_held_item_material( entity_id )
 	return 0
 end
 
-function NullShift(shifter, x, y, ignore_cooldown, ignore_limit)
+
+
+
+function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT_ALL)
 
 
 	local frame = GameGetFrameNum()
@@ -84,13 +148,23 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit)
     if held_material then
         --target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(held_material))
         ConvertMaterialEverywhere(CellFactory_GetType(held_material), CellFactory_GetType("cc_air"))
-    else
+    elseif not DEBUG_NULLSHIFT_ALL then
         local target = pick_random_from_table_weighted(rnd, null_materials)
         if target == nil then print_error("target null shift table is nil") return end
 
         --target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(CellFactory_GetType(target.name_material or target.materials[1])))
-        for index, material in ipairs(target.materials) do
+        ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
+        for index, material in ipairs(target.variants or {}) do
             ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
+        end
+    end
+
+    if DEBUG_NULLSHIFT_ALL then
+        for index, target in ipairs(null_materials) do
+            ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
+            for index, material in ipairs(target.variants or {}) do
+                ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
+            end
         end
     end
 

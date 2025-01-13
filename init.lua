@@ -137,13 +137,13 @@ if CC then
 	----	[Spells]
 
 	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
-	
 
 
-	
+
+
 
 	---- Structures/Pixel Scenes
-	
+
 	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
 	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
 	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
@@ -153,7 +153,7 @@ if CC then
 	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
 
 	---- Spells
-	
+
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
 
 
