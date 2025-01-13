@@ -89,16 +89,6 @@
     <Graphics
       texture_file="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/shrinkium.png"
       color="ffffade1" >
-      <Edge>
-        <EdgeGraphics 
-          overwrite="0" 
-          percent="0.8" 
-          require_same_material="0" 
-          require_same_material_type="1" 
-          type="EVERYWHERE" 
-          z="1" >
-        </EdgeGraphics>
-      </Edge>
     </Graphics>    
     <StatusEffects>
       <Ingestion>
@@ -134,16 +124,6 @@
     <Graphics
       texture_file="mods/Hydroxide/files/arcane_alchemy/materials/dark_matter/space.png"
       color="FF000000" >
-      <Edge>
-        <EdgeGraphics 
-          overwrite="0" 
-          percent="0.8" 
-          require_same_material="0" 
-          require_same_material_type="1" 
-          type="EVERYWHERE" 
-          z="1" >
-        </EdgeGraphics>
-      </Edge>
     </Graphics>
     <StatusEffects>
       <Ingestion>
