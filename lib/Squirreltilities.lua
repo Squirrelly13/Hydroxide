@@ -12,37 +12,67 @@ function stringsplit(inputstr, sep)
 	return output
 end
 
---Does what it says on the tin
+--Acquires the designated entity's damage model and returns the material damage of the requested material
 function EntityGetDamageFromMaterial(entity, material)
-	local value = 0.000
-	
-	local damage_model_component = EntityGetFirstComponentIncludingDisabled(entity, "DamageModelComponent")
-	if damage_model_component then
-	
-		local materials_that_damage = ComponentGetValue2(damage_model_component, "materials_that_damage")
-		materials_that_damage = stringsplit(materials_that_damage, ",")
-		
-		local materials_how_much_damage = ComponentGetValue2(damage_model_component, "materials_how_much_damage")
-		materials_how_much_damage = stringsplit(materials_how_much_damage, ",")
-		
-		for i, v in ipairs(materials_that_damage) do
-			if (materials_that_damage[i] == material) then
-				value = tonumber(materials_how_much_damage[i])
-				return value
-			end
-		end
+    print("0")
+    local damage_model_component = EntityGetFirstComponentIncludingDisabled(entity, "DamageModelComponent")
+    print(tostring(damage_model_component))
+    if damage_model_component then
+        print("1")
+
+        local materials_that_damage = ComponentGetValue2(damage_model_component, "materials_that_damage")
+        materials_that_damage = stringsplit(materials_that_damage, ",")
+
+        local materials_how_much_damage = ComponentGetValue2(damage_model_component, "materials_how_much_damage")
+        materials_how_much_damage = stringsplit(materials_how_much_damage, ",")
+
+        if material then --if requested material, return damage for that material
+            print("2")
+            for i, v in ipairs(materials_that_damage) do
+                print("3")
+                if (materials_that_damage[i] == material) then
+                    print("4")
+                    return tonumber(materials_how_much_damage[i])
+                end
+            end
+        else --if material field blank, return full table of material damage
+            print("5")
+            local material_damage_table = {}
+            for key, value in pairs(materials_that_damage) do
+                print("6")
+                material_damage_table[value] = materials_how_much_damage[key]
+            end
+            print("7")
+            return material_damage_table
+        end
+        print("8")
 	end
+    print("9")
 	return nil
 end
 
 
-function MimicMaterialDamage(target, target_material, template)
-    if(EntityGetDamageFromMaterial(target, target_material) ~= nil) then EntityKill(entity) return end
+function EntityMimicMaterialDamage(target, target_material, template, just_once)
+    print("b")
+    
+    local template_strength = EntityGetDamageFromMaterial(target, template)
+    print("c")
+    print(tostring(template_strength))
+    if template_strength ~= nil then
+        print("d")
+        EntitySetDamageFromMaterial(target, target_material, template_strength)
+    end  
+end
+
+function FileMimicMaterialDamage(target, target_material, template)
+    local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
+	local xml = ModDoesFileExist(target) and nxml.parse(ModTextFileGetContent(target))
+    if xml == nil then return end
     
     local template_strength = EntityGetDamageFromMaterial(target, template)
     if (template_strength ~= nil) then
         EntitySetDamageFromMaterial(target, target_material, template_strength)
-    end  
+    end
 end
 
 --a modified version of a function by Evaisa

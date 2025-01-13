@@ -1098,18 +1098,17 @@
 	</Reaction>
 	
 	<Reaction probability="30"
-	input_cell1="magic_liquid_mana_regeneration"		input_cell2="gunpowder_explosive"
-	output_cell1="smoke"								output_cell2="cc_blasting_powder"
-	blob_radius2="3"
-	>
-	</Reaction>
+	    input_cell1="magic_liquid_mana_regeneration"		input_cell2="gunpowder_explosive"
+	    output_cell1="smoke"								output_cell2="cc_blasting_powder"
+	    blob_radius2="3"
+	/>
 	
 	<Reaction probability="25"
-	input_cell1="cc_blasting_powder"	input_cell2="[fire]"
-	output_cell1="fire"			output_cell2="air"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/blast_powder/blasting_powder.xml"
-	>
-	</Reaction>
+	    input_cell1="cc_blasting_powder"	input_cell2="[fire]"
+	    output_cell1="fire"			output_cell2="air"
+	    entity="mods/Hydroxide/files/chemical_curiosities/materials/blast_powder/blasting_powder.xml"
+	/>
+
 	<!-- acid and hydroxide -->
 	<Reaction probability="100"
 	input_cell1="cc_hydroxide"		input_cell2="acid"
@@ -1119,6 +1118,16 @@
 	blob_radius2="3"
 	>
 	</Reaction><!--  hydroxide and acid form acid water -->
+  
+    <Reaction probability="80"
+	    input_cell1="[lava]" 		input_cell2="[meltable_to_hydroxide]"
+	    output_cell1="[lava]" 		output_cell2="cc_hydroxide"
+    />
+
+    <Reaction probability="90"
+	    input_cell1="[fire]" 		input_cell2="[meltable_to_hydroxide]"
+	    output_cell1="[fire]" 		output_cell2="cc_hydroxide"
+    />
 
 
 	<Reaction probability="15"

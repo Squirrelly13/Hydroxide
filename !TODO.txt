@@ -15,6 +15,7 @@ Fixes/Reworks:
 -Uranium Reimplementation
 -Ores Rework
 -Finish getting the settings menu finished and fully functional
+-Rework Item and Pixel Scene generation with branches in mind
 
 Under Consideration:
 -Alchemist Settings controls

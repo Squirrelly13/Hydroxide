@@ -8,15 +8,20 @@ local entity = GetUpdatedEntityID()
 
 local root = EntityGetParent( entity)
 
-if(root == entity)then return end
+if (root == entity) then return end
 
 
 
 
 
+print("a")
+print(tostring(root))
 
-MimicMaterialDamage(root, "cc_hydroxide", "acid")
-MimicMaterialDamage(root, "aa_divine_magma", "lava")
+EntityMimicMaterialDamage(root, "cc_hydroxide", "acid")
+EntityMimicMaterialDamage(root, "cc_ice_hydroxide_static", "ice_acid_static")
+EntityMimicMaterialDamage(root, "cc_ice_hydroxide_glass", "ice_acid_glass")
+EntityMimicMaterialDamage(root, "aa_divine_magma", "lava")
+print("e")
 
 
 
