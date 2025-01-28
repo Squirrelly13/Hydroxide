@@ -238,7 +238,7 @@ ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydrox
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
 	if not GameHasFlagRun("cc_onplayerspawned") then
 		if CC then
-			EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
+			--EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
 			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/userk.xml", 11605, 20501) --me too!
