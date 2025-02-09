@@ -41,7 +41,7 @@ end
 
 --Clones the material damage value of a designated template material to be applied to a target material
 function EntityMimicMaterialDamage(target, target_material, template_material, just_once)
-    if target ~= 0 then print("Target Name: " .. EntityGetName(target)) end
+    if target == 0 then print("No Entity to mimic damage for") return end
     local template_strength = EntityGetDamageFromMaterial(target, template_material)
     if template_strength ~= nil then
         EntitySetDamageFromMaterial(target, target_material, template_strength)
