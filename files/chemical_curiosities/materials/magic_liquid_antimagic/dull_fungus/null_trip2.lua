@@ -8,8 +8,6 @@ SetRandomSeed(pos_x + GameGetFrameNum(), pos_y)
 
 -- spawn random eye particles
 if ( Random(0,1) > 0.5 ) then
-	local function spawn( x,y )
-	end
 
 	local x,y = pos_x + Random(-100,100), pos_y + Random(-80,80)
 	local rad = Random(0,30)

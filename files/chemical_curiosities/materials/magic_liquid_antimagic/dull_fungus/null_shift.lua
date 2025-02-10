@@ -1,98 +1,6 @@
 dofile_once("data/scripts/lib/utilities.lua")
 
-null_materials = {
-	{
-        main_material = "water",
-        probability = 1.0,
-        variants = {
-            "water_static",
-            "water_salt",
-            "water_ice"
-        },
-    },
-	{
-        main_material = "fungi",
-        probability = 1.0,
-        variants = {
-            "blood_fungi",
-            "fungisoil",
-        },
-    },
-	{
-        main_material = "cc_nullium",
-        probability = 0.7,
-        variants = {
-            "cc_dull_fungus",
-        },
-    },
-	{
-        main_material = "blood",
-        probability = 1.0,
-        variants = {
-            "ice_blood_static",
-            "blood_cold",
-            "blood_worm",
-        },
-    },
-	{
-        main_material = "acid",
-        probability = 0.5,
-        variants = {
-            "ice_acid_static",
-        },
-    },
-	{
-        main_material = "cc_hydroxide",
-        probability = 0.5,
-    },
-	{
-        main_material = "acid_gas",
-        probability = 0.8,
-        variants = {
-            "acid_gas_static",
-            "poison_gas",
-            "fungal_gas",
-            "radioactive_gas",
-            "radioactive_gas_static",
-            "cc_hydroxide_gas",
-            "cc_methane"
-        },
-    },
-	{
-        main_material = "magic_liquid_polymorph",
-        probability = 0.4,
-        variants = {
-            "magic_liquid_unstable_polymorph",
-            "magic_liquid_random_polymorph"
-        },
-    },
-	{
-        main_material = "oil",
-        probability = 0.6,
-        variants = {
-            "aa_oil_splitting",
-            "aa_light_oil",
-            "aa_heavy_oil"
-        },
-    },
-    {
-        main_material = "magic_liquid_berserk",
-        probability = 0.5,
-        variants = {
-            "magic_liquid_charm",
-            "magic_liquid_invisibility",
-            "cc_veilium",
-            "cc_agitine",
-        }
-    },
-    {
-        main_material = "gold",
-        probability = 0.1,
-        variants = {
-            "gold_box2d",
-        }
-    },
-}
+local null_materials = dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
 null_log_messages = 
 {
@@ -117,7 +25,6 @@ end
 
 function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT_ALL)
 
-
 	local frame = GameGetFrameNum()
 	local last_shift = tonumber(GlobalsGetValue("fungal_shift_last_frame", "-1000000")) --shares cooldown with fungal shifting
 	if frame < last_shift + 18000 and not ignore_cooldown then return end
@@ -138,19 +45,26 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
             if inventory2_comp ~= nil then
                 local active_item = tonumber(ComponentGetValue(inventory2_comp, "mActiveItem"))
                 if active_item ~= nil and (EntityHasTag(active_item, "potion") or EntityHasTag(active_item, "powder_stash")) then
-                    local held_material = GetMaterialInventoryMainMaterial(active_item)
+                    held_material = CellFactory_GetName(GetMaterialInventoryMainMaterial(active_item))
+                    if held_material == "air" then held_material = nil end
                 end
             end
         end
     end
 
-    local target_name
     if held_material then
         --target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(held_material))
         ConvertMaterialEverywhere(CellFactory_GetType(held_material), CellFactory_GetType("cc_air"))
     elseif not DEBUG_NULLSHIFT_ALL then
-        local target = pick_random_from_table_weighted(rnd, null_materials)
-        if target == nil then print_error("target null shift table is nil") return end
+        local target
+        for i = 1, 10 do
+            target = pick_random_from_table_weighted(rnd, null_materials)
+            if target == nil then print_error("target null shift table is nil on attempt ["..i.."], retrying...") return end
+            if target.condition and not target:condition() then return end --check if there's a condition function and runs it if so
+            break
+        end
+        
+        if target == nil then print_error("final target null shift table is nil, null shift cancelled.") return end
 
         --target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(CellFactory_GetType(target.name_material or target.materials[1])))
         ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
@@ -191,7 +105,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
             EntityAddComponent(icon_entity, "UIIconComponent", {
                 name = "$status_cc_nullified_trip",
                 description = "$statusdesc_cc_nullified_trip",
-                icon_sprite_file = "mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/ui_null_shift.png"
+                icon_sprite_file = "mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift.png"
             })
             EntityAddChild(shifter, icon_entity)
         end
