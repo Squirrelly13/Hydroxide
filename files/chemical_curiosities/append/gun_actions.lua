@@ -315,7 +315,6 @@ table.insert( actions, {
 	table.insert( actions, {
 		id			= "CC_MAGIC_CIRCLE",
 		name		= "magic circle",
-		author		= "$name_userk",
 		mod 		= "$name_mod_cc",
 		description	= "spawns a magic circle for testing purposes",
 		sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/spell_icon.png",
