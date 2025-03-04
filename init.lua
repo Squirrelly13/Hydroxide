@@ -379,7 +379,7 @@ if (ModIsEnabled("copis_things")) then
 end --copi's chemical curiosity compatibility combo
 
 
-if ModIsEnabled("anvil_of_destiny") and AA then --[[implement this properly when we can add custom materials to anvil]]
+if ModIsEnabled("anvil_of_destiny") and AA and false then --[[implement this properly when we can add custom materials to anvil]]
 
 	--ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
