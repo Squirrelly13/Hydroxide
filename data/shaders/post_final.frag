@@ -507,7 +507,7 @@ void main()
 // brightness / contrast=======================================================================================
 
 	vec3 brightness = vec3( brightness_contrast_gamma.r, brightness_contrast_gamma.r, brightness_contrast_gamma.r );
-	vec3 contrast = vec3( brightness_contrast_gamma.g * 10);
+	vec3 contrast = vec3( brightness_contrast_gamma.g );
 	vec3 gamma = vec3( brightness_contrast_gamma.b, brightness_contrast_gamma.b, brightness_contrast_gamma.b );
 	vec3 halfpoint = vec3( 0.5, 0.5, 0.5 );
 

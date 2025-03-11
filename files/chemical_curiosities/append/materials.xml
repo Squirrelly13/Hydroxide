@@ -1733,22 +1733,7 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
-	
 
-	<CellData
-		name="cc_deezium"
-		ui_name=""
-		tags="[liquid]"
-		density="0.69"
-		cell_type="liquid"
-		wang_color="00000001"
-		liquid_gravity="1.9"
-		>
-		<Graphics
-			texture_file="mods/Hydroxide/files/dont_push_to_git/materials/deezium/deezium.png"
-			>
-		</Graphics>
-	</CellData> <!--803A7BE4-->
 
 	<CellDataChild
 		_parent="wood_static"

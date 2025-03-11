@@ -31,7 +31,7 @@ local items = {
 
 if(ModSettingGet("Hydroxide.MM_ENABLED"))then
     table.insert(items, {
-        weight = 3,
+        weight = .6,
         entity = "mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml",
         offset = -5
     })
