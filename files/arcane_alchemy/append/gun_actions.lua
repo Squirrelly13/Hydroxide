@@ -95,7 +95,7 @@ local AA_spells = {
 		mana = 0,
 		pandorium_ignore = true,
 		action 		= function()
-			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml,"
+			c.extra_entities = "mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml," .. c.extra_entities
 			draw_actions( 1, true )
 		end,
 	},

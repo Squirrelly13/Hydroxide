@@ -49,10 +49,14 @@ function add_spell(spellType, position)
 end
 
 
-for i=1, Random(5, 10) do --positions 1-10
+for i=1, Random(4, 8) do --positions 1-10
     add_spell("MODIFIERS", i)
 end
 
+local spell = EntityCreateNew()
+EntityAddChild(gun, spell)
+EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
+ComponentSetValue2(EntityAddComponent2(spell, "ItemComponent"), "inventory_slot", 14, 1)
 
 
 if Random() <= spell_table.data.gimmer_chance then add_spell("GLIMMERS", 13) add_spell("GLIMMERS", 29) end --positions 13 and 29
@@ -64,14 +68,7 @@ end
 add_spell("STATIC_PROJECTILES", 30) --position 30
 
 
---[[
-local spell = EntityCreateNew()
-EntityAddChild(gun, spell)
 
-EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
-
-local item_comp = EntityAddComponent2(spell, "ItemComponent", {inventory_slot = {x = 14, y = 1}})
-ComponentSetValue2(item_comp, "inventory_slot", 14, 1)--]]
 
 
 

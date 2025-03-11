@@ -45,7 +45,7 @@ dofile("data/scripts/gun/gun_actions.lua")
 
 for k, data in pairs(actions)do
     if(data.related_projectiles ~= nil)then
-        if(data.pandorium_ignore)then
+        if data.pandorium_ignore or data.ai_never_uses or data.recursive then
             goto continue
         end
         for k2, v in pairs(data.related_projectiles)do
