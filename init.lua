@@ -341,9 +341,9 @@ end
 
 --  Conjurer
 
-if ModIsEnabled("raksa") then
+if ModIsEnabled("raksa") then --DUE TO THE EXISTENCE OF CONJURER-REBORN, CONJURER SUPPORT WILL NO LONGER BE SUPPORTED NOR EXTENDED, EXISTING SUPPORT WILL REMAIN FOR NOW
 
-		print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
+	print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
 	-- Adds Construction Paste to the Catastrophic materials list
 	catastrophicMaterials.construction_paste = true
 
@@ -369,7 +369,13 @@ if ModIsEnabled("raksa") then
 		"mods/raksa/files/scripts/lists/entity_categories.lua",
 		"mods/Hydroxide/files/compelling_compatibility/conjurer/entities.lua"
 	  )
-  end --adds compatibility with Conjurer
+end --adds compatibility with Conjurer
+
+
+if ModIsEnabled("conjurer_reborn") then
+	ModLuaFileAppend("mods/conjurer_reborn/files/wandhelper/ent_list_pre.lua", "mods/Hydroxide/files/compelling_compatibility/conjurer_reborn/entities.lua")
+end
+
 
 
 --	Copi's Things
