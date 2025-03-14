@@ -24,14 +24,13 @@
 
     <PlatformShooterPlayerComponent/>
 
-    <Entity>
+    <Entity name="inventory_quick">
         <Entity>
             <AbilityComponent
                 mana="1500"
                 mana_max="1500"
-                use_gun_script="1" >
+                use_gun_script="1">
                 <gunaction_config
-                    extra_entities="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml,"
                     friendly_fire="1"
                     spread_degrees="360"/>
             </AbilityComponent>

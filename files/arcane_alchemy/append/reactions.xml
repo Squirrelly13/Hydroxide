@@ -150,9 +150,13 @@
 		explosion_sprite="data/particles/explosion_012.xml"
 		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml" 
 		ray_energy="1"
-		>
-	</ExplosionConfig>
+	/>
 	</Reaction><!-- chaotic pandorium casts spells -->
+
+	<Reaction probability = "15"
+		input_cell1="aa_chaotic_pandorium" input_cell2="air"
+		output_cell1="air" output_cell2="air"
+	/><!-- chaotic pandorium does nothing -->
 	
 	
 	<!-- ash and soot -->
