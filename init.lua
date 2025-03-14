@@ -37,6 +37,10 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
+dofile_once("data/fixnoita/fix.lua")
+
+
+
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
@@ -370,7 +374,7 @@ if ModIsEnabled("raksa") then
 
 --	Copi's Things
 
-if (ModIsEnabled("copis_things")) then
+if ModIsEnabled("copis_things") then
 	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
 	
 	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compelling_compatibility/copis_compatibility/material_random_options.lua") ) 
