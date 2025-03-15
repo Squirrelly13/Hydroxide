@@ -83,22 +83,6 @@ local AA_spells = {
 			draw_actions( 1, true )
 		end,
 	},
-	{
-		
-		id          = "AA_PANDORIUM_MODIFIER",
-		name 		= "You shouldn't be here!",
-		description = "This spell is used to set some stuff for Chaotic Pandorium\nThis should not show up in normal gameplay!!",
-		sprite 		= "",
-		type 		= ACTION_TYPE_MODIFIER,
-		spawn_level                       = "",
-		spawn_probability                 = "",
-		mana = 0,
-		pandorium_ignore = true,
-		action 		= function()
-			c.extra_entities = "mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml," .. c.extra_entities
-			draw_actions( 1, true )
-		end,
-	},
 }
 
 for _, spell in ipairs(AA_spells) do

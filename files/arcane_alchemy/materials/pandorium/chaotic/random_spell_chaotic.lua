@@ -49,35 +49,17 @@ function add_spell(spellType, position)
 end
 
 
-for i=1, Random(4, 9) do --positions 1-10
+for i=1, Random(3, 10) do --positions 1-10
     add_spell("MODIFIERS", i)
 end
 
 if Random() <= spell_table.data.gimmer_chance then add_spell("GLIMMERS", 13) add_spell("GLIMMERS", 29) end --positions 13 and 29
 add_spell("PROJECTILES", 15) --position 15
 
-for i=1, 10 do --positions 16-26
+for i=1, Random(4, 12) do --positions 16-27
     add_spell("MODIFIERS", i + 15)
 end
 add_spell("STATIC_PROJECTILES", 30) --position 30
-
-
-
-
-
-
-
-
----- set mana to combined spells mana cost * 1.5 ----
-
--- function action_get_by_id(action_id)
--- 	for i, action in ipairs(actions) do
--- 		if (action.id == action_id) then
--- 			return action
--- 		end
--- 	end
--- end --gave up on this fn
-
 
 
 ---- Prepare and Cast Wand ----
