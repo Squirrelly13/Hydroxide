@@ -169,7 +169,7 @@ if CC then
 	---- Enemies
 
 	SetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
-	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_jitterium")
+	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
 
 end

@@ -486,8 +486,8 @@
 	</CellDataChild><!-- sometimes drips from methane gas, pretty fun -->
 	
 	  <CellData
-	name="cc_jitterium"
-	ui_name="$mat_cc_jitterium"
+	name="cc_ectospasm"
+	ui_name="$mat_cc_ectospasm"
 	tags="[magic_liquid],[corrodible],[liquid],[impure]"
 	burnable="0"
 	density="5.13"
