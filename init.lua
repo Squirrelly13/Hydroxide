@@ -37,6 +37,10 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
+dofile_once("data/fixnoita/fix.lua")
+
+
+
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
@@ -137,13 +141,13 @@ if CC then
 	----	[Spells]
 
 	ModLuaFileAppend( "data/scripts/gun/gun_extra_modifiers.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_extra_modifiers.lua" ) --something to do with metastasizium's trail effect
-	
 
 
-	
+
+
 
 	---- Structures/Pixel Scenes
-	
+
 	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
 	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
 	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
@@ -153,7 +157,7 @@ if CC then
 	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
 
 	---- Spells
-	
+
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
 
 
@@ -165,7 +169,7 @@ if CC then
 	---- Enemies
 
 	SetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
-	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_jitterium")
+	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
 
 end
@@ -337,9 +341,9 @@ end
 
 --  Conjurer
 
-if ModIsEnabled("raksa") then
+if ModIsEnabled("raksa") then --DUE TO THE EXISTENCE OF CONJURER-REBORN, CONJURER SUPPORT WILL NO LONGER BE SUPPORTED NOR EXTENDED, EXISTING SUPPORT WILL REMAIN FOR NOW
 
-		print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
+	print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
 	-- Adds Construction Paste to the Catastrophic materials list
 	catastrophicMaterials.construction_paste = true
 
@@ -365,12 +369,18 @@ if ModIsEnabled("raksa") then
 		"mods/raksa/files/scripts/lists/entity_categories.lua",
 		"mods/Hydroxide/files/compelling_compatibility/conjurer/entities.lua"
 	  )
-  end --adds compatibility with Conjurer
+end --adds compatibility with Conjurer
+
+
+if ModIsEnabled("conjurer_reborn") then
+	ModLuaFileAppend("mods/conjurer_reborn/files/wandhelper/ent_list_pre.lua", "mods/Hydroxide/files/compelling_compatibility/conjurer_reborn/entities.lua")
+end
+
 
 
 --	Copi's Things
 
-if (ModIsEnabled("copis_things")) then
+if ModIsEnabled("copis_things") then
 	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
 	
 	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compelling_compatibility/copis_compatibility/material_random_options.lua") ) 
@@ -379,7 +389,7 @@ if (ModIsEnabled("copis_things")) then
 end --copi's chemical curiosity compatibility combo
 
 
-if ModIsEnabled("anvil_of_destiny") and AA then --[[implement this properly when we can add custom materials to anvil]]
+if ModIsEnabled("anvil_of_destiny") and AA and false then --[[implement this properly when we can add custom materials to anvil]]
 
 	--ModLuaFileAppend("mods/anvil_of_destiny/files/scripts/modded_content.lua", "mods/hydroxide/files/compelling_compatibility/anvil_of_destiny/potionbonus_append.lua")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/anvil_of_destiny/materials.xml" )
@@ -554,7 +564,7 @@ end
 function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
 	if CC then 
 		--ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste")) 
-		ConvertMaterialEverywhere(CellFactory_GetType("cc_dull_fungus"), CellFactory_GetType("cc_nullium")) 
+		--ConvertMaterialEverywhere(CellFactory_GetType("cc_dull_fungus"), CellFactory_GetType("cc_nullium")) 
 	end 
 end
 

@@ -21,7 +21,7 @@ cc_alchemist_potions = {
 	},
 	{
 		name = "Jitterium",
-		material = "cc_jitterium",
+		material = "cc_ectospasm",
 		cost = 600,
 	},
 	{

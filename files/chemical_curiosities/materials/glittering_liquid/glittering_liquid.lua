@@ -27,16 +27,16 @@ local max_projectiles = ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") and 
 if (fireworkCount <= max_projectiles) then
 	local value = Random(1,4)
 	if (value == 1) then
-		shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_blue.xml", pos_x, pos_y, vel_x, vel_y)
+		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_blue.xml", pos_x, pos_y, vel_x, vel_y)
 	
 	elseif (value == 2) then 
-		shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_green.xml", pos_x, pos_y, vel_x, vel_y)
+		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_green.xml", pos_x, pos_y, vel_x, vel_y)
 	
 	elseif (value == 3) then
-		shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_orange.xml", pos_x, pos_y, vel_x, vel_y)
+		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_orange.xml", pos_x, pos_y, vel_x, vel_y)
 	
 	elseif (value == 4) then
-		shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_pink.xml", pos_x, pos_y, vel_x, vel_y)
+		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_pink.xml", pos_x, pos_y, vel_x, vel_y)
 	
 	end
 end

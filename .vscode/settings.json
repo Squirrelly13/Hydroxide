@@ -1,6 +1,4 @@
 {
     "Lua.diagnostics.globals": [
-        "add_spell",
-        "random_create"
     ]
 }

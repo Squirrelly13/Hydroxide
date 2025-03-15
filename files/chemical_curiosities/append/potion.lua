@@ -23,7 +23,7 @@ table.insert(materials_magic, {
 });
 
 table.insert(materials_magic, {
-    material="cc_jitterium",
+    material="cc_ectospasm",
 	cost=500,
 });
 

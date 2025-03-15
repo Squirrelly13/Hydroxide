@@ -9,7 +9,7 @@ local AA_spells = {
 		mod 		= "$name_mod_aa",
 		description = "$action_desc_aa_repultium_trail",
 		sprite 		= "mods/Hydroxide/files/arcane_alchemy/spells/projectile_modifiers/repultium_trail.png",
-		sprite_unidentified = "data/ui_gfx/gun_actions/oil_trail_unidentified.png",
+		sprite_unidentified = "data/ui_gfx/gun_actions/oil_trail_unindentified.png",
 		type 		= ACTION_TYPE_MODIFIER,
 		spawn_level                       = "1,2,3,4,5,7", -- REPULTIUM_TRAIL
 		spawn_probability                 = "0.2,0.2,0.2,0.2,0.3,0.5", -- REPULTIUM_TRAIL
@@ -17,7 +17,7 @@ local AA_spells = {
 		mana = 25,
 		--max_uses = 50,
 		action 		= function()
-			c.trail_material = c.trail_material .. "aa_repultium"
+			c.trail_material = c.trail_material .. "aa_repultium,"
 			c.trail_material_amount = c.trail_material_amount + 20
 			draw_actions( 1, true )
 		end,
@@ -80,22 +80,6 @@ local AA_spells = {
 		action 		= function()
 			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/arcane_alchemy/spells/material_enhancers/potion_to_gas.xml,data/entities/particles/tinyspark_orange.xml,"
 			c.fire_rate_wait = c.fire_rate_wait + 45
-			draw_actions( 1, true )
-		end,
-	},
-	{
-		
-		id          = "AA_PANDORIUM_MODIFIER",
-		name 		= "You shouldn't be here!",
-		description = "This spell is used to set some stuff for Chaotic Pandorium\nThis should not show up in normal gameplay!!",
-		sprite 		= "",
-		type 		= ACTION_TYPE_MODIFIER,
-		spawn_level                       = "",
-		spawn_probability                 = "",
-		mana = 0,
-		pandorium_ignore = true,
-		action 		= function()
-			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.xml,"
 			draw_actions( 1, true )
 		end,
 	},

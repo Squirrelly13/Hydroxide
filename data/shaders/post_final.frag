@@ -46,7 +46,6 @@ uniform float drugged_doublevision_amount;
 uniform sampler2D tex_debug;
 uniform sampler2D tex_debug2;
 
-uniform vec4 warp_multiplier;    
 
 varying vec2 tex_coord_;
 varying vec2 tex_coord_y_inverted_;
@@ -228,29 +227,6 @@ void main()
    	pos_seed = vec2(camera_pos.x / SCREEN_W, camera_pos.y / SCREEN_H) + vec2( tex_coord.x, - tex_coord.y );
 #endif
 
-// create warp effect around center of screen based on multiplier
-// when the multiplier is 0, there should be no warping
-// when the multiplier is higher it should warp more
-// think of the warp as a fisheye effect
-float warp_effect_multiplier = warp_multiplier.x;
-
-// Calculate the distance from the center
-vec2 center = vec2(0.5); // assuming the center is at (0.5, 0.5)
-vec2 direction = tex_coord - center;
-
-// Get the length of the direction vector
-float len = length(direction);
-
-// Normalize the direction
-vec2 norm_direction = normalize(direction);
-
-// Apply the warp effect
-vec2 warp_direction = norm_direction * len / (1.0 + warp_effect_multiplier * len);
-
-// Get the new texture coordinate
-tex_coord = center + warp_direction;
-
-
 // ===========================================================================================================
 // sample the original color =================================================================================
 
@@ -264,48 +240,8 @@ tex_coord = center + warp_direction;
 	color = mix( color, texture2D(tex_bg, tex_coord + doublevision_offset  ).rgb, 0.5 );
 #endif
 
-// add triple vision effect based on warp_effect_multiplier
-// the duplicate visions should be blue and red
-// the original vision should be green
-// the duplicate visions should be offset from the original vision
-// the offset should be based on the warp_effect_multiplier
-
-if(warp_effect_multiplier > 0.5) {
-	color.r = color.r / 2.0;
-	color.b = color.b / 2.0;
-	color.g = color.g * 2.0;
-	color_fg.g = color_fg.g * 2.0;
-	color_fg.b = color_fg.b / 2.0;
-	color_fg.r = color_fg.r / 2.0;
-}
-
-vec2 triplevision_offset = vec2(0.005 * cos(time*0.5)  * warp_effect_multiplier,0.005 * sin(time*0.5) * warp_effect_multiplier );
-vec4 offset_texture_1_fg = texture2D(tex_fg, tex_coord + triplevision_offset );
-offset_texture_1_fg.g = offset_texture_1_fg.g / 2.0;
-offset_texture_1_fg.b = offset_texture_1_fg.b / 2.0;
-offset_texture_1_fg.r = offset_texture_1_fg.r * 2.0;
-vec4 offset_texture_2_fg = texture2D(tex_fg, tex_coord - triplevision_offset );
-offset_texture_2_fg.g = offset_texture_2_fg.g / 2.0;
-offset_texture_2_fg.b = offset_texture_2_fg.b * 2.0;
-offset_texture_2_fg.r = offset_texture_2_fg.r / 2.0;
-vec4 offset_texture_1_bg = texture2D(tex_bg, tex_coord + triplevision_offset );
-offset_texture_1_bg.g = offset_texture_1_bg.g / 2.0;
-offset_texture_1_bg.b = offset_texture_1_bg.b / 2.0;
-offset_texture_1_bg.r = offset_texture_1_bg.r * 2.0;
-vec4 offset_texture_2_bg = texture2D(tex_bg, tex_coord - triplevision_offset );
-offset_texture_2_bg.g = offset_texture_2_bg.g / 2.0;
-offset_texture_2_bg.b = offset_texture_2_bg.b * 2.0;
-offset_texture_2_bg.r = offset_texture_2_bg.r / 2.0;
-color_fg = mix( color_fg, offset_texture_1_fg, min(0.5, warp_effect_multiplier) );
-color_fg = mix( color_fg, offset_texture_2_fg, min(0.5, warp_effect_multiplier) );
-color = mix( color, offset_texture_1_bg.rgb, min(0.5, warp_effect_multiplier) );
-color = mix( color, offset_texture_2_bg.rgb, min(0.5, warp_effect_multiplier) );
-
-
-
 	vec3 color_orig    = color;
 	vec4 color_fg_orig = color_fg;
-
 
 // ============================================================================================================
 // sample glow texture ========================================================================================
@@ -517,7 +453,14 @@ color = mix( color, offset_texture_2_bg.rgb, min(0.5, warp_effect_multiplier) );
 	color_fg.rgb = mix( color_fg.rgb, fog_color_fg.rgb, fog_amount_fg * fog_amount_multiplier_final );
 
 	// combine foreground and background
-	color = color_fg.rgb * color_fg.a + color * (1.0-color_fg.a);
+	// NOTE( Petri ): Apparently the sky can sometimes be black and color_fg.a being 0 is at fault for that
+	// Credit to Noita community for finding this bug.
+	if( color_fg.a == 0.0 ) {
+		color = color;
+	} else {
+		color = color_fg.rgb * color_fg.a + color * (1.0-color_fg.a);
+	}
+
 
 // ============================================================================================================
 // color correction effect ====================================================================================
@@ -629,17 +572,7 @@ color = mix( color, offset_texture_2_bg.rgb, min(0.5, warp_effect_multiplier) );
 // ============================================================================================================
 // output =====================================================================================================
 
-
-
-
-
 	//color.r = tex_coord_warped_lerp;
 	gl_FragColor.rgb  = color;
-	// oversaturate the screen based on warp_effect_multiplier
-	// when the multiplier is 0, there should be no oversaturation
-	// when the multiplier is higher it should oversaturate more
-	vec3 weights_ = vec3(0.2125, 0.7154, 0.0721); // sums to 1
-	float luminance_ = dot(gl_FragColor.rgb, weights_);
-	gl_FragColor = mix(vec4(luminance_), gl_FragColor, vec4((warp_effect_multiplier / 20.0) + 1.0));
 	gl_FragColor.a = 1.0;
 }

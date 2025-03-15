@@ -6,22 +6,16 @@ dofile_once("mods/Hydroxide/lib/squirreltilities.lua")
 
 local entity = GetUpdatedEntityID()
 
-local root = EntityGetParent( entity)
+local root = EntityGetRootEntity(entity)
 
-if(root == entity)then return end
-
-
+--if (root == entity) then return end
 
 
 
-
-MimicMaterialDamage(root, "cc_hydroxide", "acid")
-MimicMaterialDamage(root, "aa_divine_magma", "lava")
-
-
-
-
-
+EntityMimicMaterialDamage(root, "cc_hydroxide", "acid")
+EntityMimicMaterialDamage(root, "aa_divine_magma", "lava")
+EntityMimicMaterialDamage(root, "cc_ice_hydroxide_static", "ice_acid_static")
+EntityMimicMaterialDamage(root, "cc_ice_hydroxide_glass", "ice_acid_glass")
 
 
 --[[ if(EntityGetDamageFromMaterial(root, "cc_hydroxide") ~= nil) then EntityKill(GetUpdatedEntityID()) end

@@ -20,21 +20,26 @@
 		x_vel_max="10"
 		y_vel_min="-10"
 		y_vel_max="10"
-		is_emitting="1" >
-	</ParticleEmitterComponent>
+		is_emitting="1"
+    />
 	
 	<InheritTransformComponent
-		_enabled="1" >
-	</InheritTransformComponent>
+		_enabled="1"
+    />
 	
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_NULL_TRIP"
-	>
-	</GameEffectComponent>
+	/>
 
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/null_trip.lua"
+	    execute_every_n_frame="1"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip.lua"
 	/>
-	
+
+	<LuaComponent
+	    execute_every_n_frame="600"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip2.lua"
+	/>
+
 </Entity>

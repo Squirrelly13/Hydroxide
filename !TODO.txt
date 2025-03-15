@@ -1,3 +1,9 @@
+Urgent:
+-Add Shader and Audio effects for Dull Fungus effect
+-Add damage to Hydroxide Ice
+-Fix Alchemy Journal
+-Fix CC overriding copiscript
+
 New Features:
 -Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
 -Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
@@ -7,14 +13,18 @@ New Features:
 -Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
 -Local Failshift perk, triggers a local shift when near dangerous materials
 -Add interactions or something to some materials to make them less useless (like the slowdown potions)
--Subway Surpher.
+-Subway Surfer.
+-Frostburn effect makes you temporarily immune to Freezing Vapour
+-Unstable Teleportatium under a Holy Mountain Portal makes you tp somewhere random in the next biome, has a 2% chance to replace the regular Teleportatium
+-Spectrolium, gives an effect similar to Shimmer from Terraria, infinite flight when you have it
+-Make Unstable Teleportatium teleport you to a random part of the eye room- just as a hint that UTele yields slightly different results than Tele
 
 Fixes/Reworks:
--Fix translations being broken with other mods and idk the end of the world or smth? idk nathan seemed pretty upset over \n\n
 -Fix Veilium effect being too snappy
 -Uranium Reimplementation
--Ores Rework
+-Ores Rework (speckles and chunks)
 -Finish getting the settings menu finished and fully functional
+-Rework Item and Pixel Scene generation with branches in mind
 
 Under Consideration:
 -Alchemist Settings controls

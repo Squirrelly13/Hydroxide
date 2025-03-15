@@ -47,7 +47,7 @@ table.insert(ALL_MATERIALS, {
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/twitchy_juice.png",
         name="Jitterium",
-        id="cc_jitterium"
+        id="cc_ectospasm"
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/fire_starter.png",

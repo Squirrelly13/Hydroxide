@@ -17,6 +17,7 @@ local chaotic = {
 
 local exclude = {
     NUKE = true,
+    BOMB_HOLY = true,
     ALL_NUKES = true,
     ALL_DISCS = true,
     ALL_ROCKETS = true,
@@ -43,7 +44,7 @@ end
 
 for k, data in pairs(actions)do
     if data.pandorium_ignore then goto continue end
-    if data.ai_never_uses or data.recursive then goto continue end
+    if data.ai_never_uses then goto continue end
     if exclude[data.id] then goto continue end
 
     if data.type == 0 and IsValidProjectile(data) then table.insert(chaotic.PROJECTILES, data.id) end
