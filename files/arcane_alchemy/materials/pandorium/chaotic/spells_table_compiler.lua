@@ -25,6 +25,7 @@ local exclude = {
     RANDOM_MODIFIER = true,
     APOTHEOSIS_NUKE_RAY = true,
     APOTHEOSIS_NUKE_RAY_ENEMY = true,
+    OVERCAST_FOLLOW = true, --modifier that drags player to projectile
 }
 
 

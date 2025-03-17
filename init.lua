@@ -380,12 +380,8 @@ end
 
 --	Copi's Things
 
-if ModIsEnabled("copis_things") then
-	--ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/scripts/append/copis_compatibility/material_random_options.lua") 
-	
-	ModTextFileSetContent("mods/copis_things/files/scripts/projectiles/material_random.lua", ModTextFileGetContent("mods/Hydroxide/files/compelling_compatibility/copis_compatibility/material_random_options.lua") ) 
-
-	
+if ModIsEnabled("copis_things") then	
+	dofile_once("mods/Hydroxide/files/compelling_compatibility/copis_things/random_material_append.lua")
 end --copi's chemical curiosity compatibility combo
 
 
