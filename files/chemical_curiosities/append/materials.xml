@@ -19,7 +19,7 @@
 
 	<CellDataChild
 		_parent="void_liquid"
-		name="glitchium"
+		name="cc_glitchium"
 		ui_name="$mat_cc_glitchium"
 		wang_color="ff12cc21"
 		lifetime="0"

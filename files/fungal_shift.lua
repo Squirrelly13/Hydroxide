@@ -112,7 +112,6 @@ local AA_to = {
 	aa_rice = 0.1,
 	aa_meagre_offering = 0.07,
 	aa_creeping_slime = 0.05,
-	aa_pop_rocks = 0.01,
 }
 
 
