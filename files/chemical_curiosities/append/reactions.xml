@@ -962,7 +962,7 @@
 	><!--This should actually create Hydrogen and carbon monoxide but lazy--> <!--Wouldn't carbon monoxide function basically like methane but more deadly? (and go down) -UserK -->
 	</Reaction>
 		
-	<Reaction probability=".05"
+	<Reaction probability="0.05"
 		input_cell1="air" 		input_cell2="cc_methane"
 		output_cell1="air"	output_cell2="air"
 	>

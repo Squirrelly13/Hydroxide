@@ -2,7 +2,6 @@ Urgent:
 -Add Shader and Audio effects for Dull Fungus effect
 -Add damage to Hydroxide Ice
 -Fix Alchemy Journal
--Fix CC overriding copiscript
 
 New Features:
 -Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
