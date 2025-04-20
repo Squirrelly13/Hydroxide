@@ -230,8 +230,8 @@ end
 
 --		[Fluent Fluids]
 
-if FF == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
+if FF == true or true then
+    ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials/gases.xml" )
 end
 
 

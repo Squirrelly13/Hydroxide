@@ -1,17 +1,17 @@
 --this mostly consists of grabbed 
 
-
+--actually i think ill scrap this
 
 ModMaterialsFileAdd("mods/Hydroxide/files/fluent_fluids/materials/materials.xml") --Regular Materials
 
 
-local gases_xml
+local powders_xml = ""
 
-local gases = {
+local powders = {
     {
-        material = "water", --material you are using
-        wang_color = "FF2F554C", --id for the new material
-        name = "$mat_ff_water_powder", --in-game name (leave blank for just "MATERIAL Powder")
+        material = "water", --REQUIRED
+        wang = "FF2F554C", --REQUIRED
+        name = "$mat_ff_water_powder", --DEFAULT: DEPENDENT ON LANGUAGE, "[material base] Powder" IN ENGLISH
         color = nil, --set custom colour
         texture = nil, --set custom texture
         tags = nil, --additional tags you want to add
@@ -21,12 +21,31 @@ local gases = {
     }
 }
 
-for k, v in ipairs(gases)do
-        gases_xml = gases_xml .. [[
+local gases = {
+    {
+        material = "magic_liquid_movement_faster", --REQUIRED
+        wang = "FF2F554C", --REQUIRED
+        name = "$mat_ff_water_powder", --DEFAULT: DEPENDENT ON LANGUAGE, "[material base] Gas" IN ENGLISH
+        color = nil, --set custom colour
+        texture = nil, --set custom texture
+        tags = nil, --additional tags you want to add
+        density = 10,
+        glow = nil,
+        burnable = nil,
+    }
+}
+
+
+
+
+do return end
+
+for k, v in ipairs(powders)do
+        powders_xml = powders_xml .. [[
     <CellData 
         name="ff_]]..v.material..[[_powder"
         ui_name="]]..(v.name ~= nil and (v.name) or "$mat_ff_powder_generic")..[["
-        wang_color="]]..v.color..[["
+        wang_color="]]..v.wang..[["
         tags="]]..(v.tags ~= nil and (v.tags .. ",[liquid]") or "[liquid]")..[["
         density="]]..(v.density ~= nil and v.density or 3)..[["
         cell_type="liquid"
@@ -42,19 +61,18 @@ for k, v in ipairs(gases)do
         on_fire="]]..(v.on_fire and "1" or "0")..[["
         temperature_of_fire="]]..(v.temperature_of_fire ~= nil and v.temperature_of_fire or 95)..[["
         autoignition_temperature="10"
-        >
-        <Graphics
-            color="]]..v.color..[["
-            ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
-        >
-        </Graphics>
+        >]]..(v.color or v.texture and
+        [[<Graphics
+            color="]]..(v.color or v.wang)..[["
+            ]]..(v.texture ~= nil and "texture_file=\""..v.texture.."\"" or "") ..[[
+        />]] or "")..(v.status and [[
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP" amount="0.15"/>
 			</Ingestion>
-		</StatusEffects>
+		</StatusEffects>]] or "")..[[
     </CellData>
-        ]]
+]]
 end
 
 --340282366920938463463374607431768211456
@@ -114,7 +132,7 @@ end
 
 
 local materials_xml = [[<Materials>
-]]..gases_xml..powders_xml..candies_xml..[[
+]]..powders_xml..powders_xml..candies_xml..[[
 </Materials>]]
 
 
@@ -153,7 +171,7 @@ local table = {
     {
         material = material,
         wang_color = wang_color,
-        name = name or "$mat_ff_powder_generic", --note to self, figure out how to pass the material into the $0
+        name = name or "$mat_ff_powder_generic",
         tags = "[corrodible],[alchemy],[ff_powder]," .. tags
     }
 }
