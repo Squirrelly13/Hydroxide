@@ -1,5 +1,6 @@
 Urgent:
 -Look into tinker effect not working
+-Add translation support for mod settings
 -Add Shader and Audio effects for Dull Fungus effect
 -Add damage to Hydroxide Ice
 -Fix Alchemy Journal
