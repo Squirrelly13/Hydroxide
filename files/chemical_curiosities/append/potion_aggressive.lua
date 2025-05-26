@@ -72,7 +72,7 @@ cc_alchemist_potions = {
 	},
 	{
 		name = "Molten Solid Crystal",
-		material = "Liquid Crystal",
+		material = "cc_dormant_crystal_molten",
 		cost = 400,
 	},
 	--[[ {
