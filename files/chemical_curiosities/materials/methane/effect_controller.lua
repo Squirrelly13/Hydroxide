@@ -16,6 +16,10 @@ count = count * multiplier
 
 GameSetPostFxParameter("grayscale", 0, 0, 0, count)
 
+if count < 0.136 / multiplier then --bandaid code, REMOVE THIS AT SOME POINT!!!!
+    GameSetPostFxParameter("grayscale", 0, 0, 0, 0)
+end
+
 if (count <= 0) then
     EntityKill(entity_id)
 end
