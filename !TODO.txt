@@ -1,37 +1,49 @@
 Urgent:
+-Look into tinker effect not working
+-Add translation support for mod settings
 -Add Shader and Audio effects for Dull Fungus effect
 -Add damage to Hydroxide Ice
 -Fix Alchemy Journal
 
+Major Expansions:
+-Uranium Rework
+-Materia Mushrooms
+-AoD Compatibility
+ -Need to finish AoD rework first, get on that!
+-New Fluent Fluids branch
+-Alchemy Journal Rework
+
 New Features:
--Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
 -Add Iron Stomach interactions for some materials (eg Veilium blocks blindness, Twitchy Liquid blocks twitchy debuff, Frozen Meat blocks colour blindness)
 -Finalise Chaotic Pandorium
 -Think of things for Terror Mode
--Add Runestone of Spells (converts things to ~~Chaotic~~ Pandorium (chaotic would be too much, might even scrap the idea in general))
--Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
+-Add Runestone of Spells (converts things to ~~Chaotic~~ Pandorium (chaotic would be too much, might even scrap the idea in general (actually Pandorium does sound fun in hindsight)))
 -Local Failshift perk, triggers a local shift when near dangerous materials
 -Add interactions or something to some materials to make them less useless (like the slowdown potions)
 -Subway Surfer.
+ -Additionally: Rappa.
 -Frostburn effect makes you temporarily immune to Freezing Vapour
 -Unstable Teleportatium under a Holy Mountain Portal makes you tp somewhere random in the next biome, has a 2% chance to replace the regular Teleportatium
 -Spectrolium, gives an effect similar to Shimmer from Terraria, infinite flight when you have it
--Make Unstable Teleportatium teleport you to a random part of the eye room- just as a hint that UTele yields slightly different results than Tele
+ -Connected to Ectospasm
+-Make Unstable Teleportatium inserted into the hourglass cause the portal to teleport you to a random part of the eye room- just as a hint that UTele yields slightly different results than Tele (and cuz it fun)
 
 Fixes/Reworks:
 -Fix Veilium effect being too snappy
--Uranium Reimplementation
 -Ores Rework (speckles and chunks)
 -Finish getting the settings menu finished and fully functional
 -Rework Item and Pixel Scene generation with branches in mind
+-Clean up Status Effect Icons
 
 Under Consideration:
 -Alchemist Settings controls
--Base Potion interactions
 -Invisibilum interactions (invisibilum is taken over by non-magical liquids, maybe some magical ones too)
 -Void overtakes Love
 -Material Projectile Immunity perk (would not work on like giga-blackhole or something, might work on disc projectiles from Slicing Liquid)
 -Item that opens a one-way portal to a neighbouring PW (if you are coming from Main World, you get warped back shortly and the portal closes)
+-Make Runestone of Nullification spawn a small amount of Nullium where spells are neutralised
+-Growth Potion (glitchy liquid, gives glitchy status with animated distorted player animations)
+-Clean up material textures
 
 Terror Mode:
 -Terrorportium, chooses 5 destinations to teleport the player and then chooses the most dangerous one based on nearby materials and/or enemies
@@ -40,9 +52,8 @@ Terror Mode:
 -Material-born projectiles home in on the player?
 
 Compatibility:
--Finish Anvil of Destiny compatibility
- -Potentially switch to working on an Anvil of Destiny Overwrite
--Finish Conjurer Compatibility
+-AoD Compat (see Major Expansions)
+-Look into other mods compat could be done for
 
 
 Fluent Fluids Expansion
