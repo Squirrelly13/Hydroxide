@@ -1,32 +1,18 @@
-dofile_once("data/scripts/lib/utilities.lua") --holy shit i dont need utilities lesgoooo
---dofile_once("data/scripts/gun/gun_actions.lua") --i dont need this either oh my god (uncommented these tho since apparently they are only ever really run once and never again, even for duplicate entities)
-
 -- this is mostly a mish-mash of code i built and copied using Anvil of Destiny, as well as looking at Copi's Things Turret Spell to get an initial idea on how this stuff works
--- once this works, it will be thanks to the work of Copi and Horscht, and the multiple people who are helping me on the noitacord while i stumble my way through LUA for the first time
-
+-- assuming this works, it is thanks to the work of Copi and Horscht, and the multiple other people who helped me on the noitacord while i stumble my way through LUA for the first time -K
 
 local spell_table = dofile_once("mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/spells_table_compiler.lua")
---local data_table = spell_table.data
-
---print(spell_table.PROJECTILES[Random(1,#spell_table.PROJECTILES)])
 
 
 local entity_id = GetUpdatedEntityID()
-
 local x, y = EntityGetTransform(entity_id)
-
-SetRandomSeed(GameGetFrameNum() + x, GameGetFrameNum() + y)
-local seed_x = Randomf()*1000
-local seed_y = Randomf()*1000 
-
+SetRandomSeed(GameGetFrameNum() + x, y)
 
 
 ---- get wand entity ----
 
 local inventory_comp = EntityGetAllChildren(entity_id)[1]
-
 local gun = EntityGetAllChildren(inventory_comp)[1]
-
 
 
 ---- Build Wand ----
@@ -64,9 +50,7 @@ add_spell("STATIC_PROJECTILES", 30) --position 30
 
 ---- Prepare and Cast Wand ----
 
-
 --print("\n======= PANDORIUM: [" .. entity_id .. "] IS CASTING FORMULA [" .. spell_formula .. "]")
-
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
 if not inventory2 then return end

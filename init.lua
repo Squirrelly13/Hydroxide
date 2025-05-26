@@ -428,15 +428,15 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	parser:parse(materials)
 
 
-	
+
 
 	local mat1num = Random(0, #input1)
-	
+
 	--[[local has_key = table_get_key(input2, input1[mat1num])
 	if(has_key ~= nil)then
 		input2[has_key] = nil
 	end]]
-	
+
 	for k,v in pairs(input2) do
 		if v == input1[mat1num] then
 			table.remove(input2, k)

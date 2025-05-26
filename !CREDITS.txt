@@ -1,4 +1,4 @@
-Original mod, Arcane Alchemy, created by Evaisa
+Original mod, Arcane Alchemy, Mystical Mixtures, created by Evaisa
 
 
 Remaster/Port, Chemical Curiosities, created by Squirrely
@@ -8,3 +8,4 @@ Maintaining and some Minor Additions by UserK
 
 
 Russian Translations by Alex(GoD)
+Brazilian Portuguese Translations by Absent Friend
