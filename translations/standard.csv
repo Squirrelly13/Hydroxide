@@ -148,7 +148,7 @@ mat_cc_glittering_liquid,Glittering Liquid,Блестящая жидкость,L
 mat_cc_blasting_powder,Blasting Powder,Взрывчатый порох,Pó detonante,,,,,,,,,,,
 mat_cc_methane,Methane Gas,Метан,Metano,,,,,,,,,,,
 mat_cc_carbon_dioxide,Carbon Dioxide,Углекислый газ,Dióxido de carbono,,,,,,,,,,,
-mat_cc_ectospasm,Ectospasm,Трясун,Ectoespasmo,,,,,,,,,,"name change: Jitterium -> Ectospasm, name is pun based off the words Ectoplasm and Spasm",
+mat_cc_ectospasm,Ectospasm,Трясун,Ectoespasmo,,,,,,,,,,name is pun based off the words Ectoplasm and Spasm,NEED_RUSSIAN_VERIFICATION
 mat_cc_kindling,Kindling,Растопка,Faíscante,,,,,,,,,,,
 mat_cc_deceleratium,Deceleratium,Замедлятий,Desacelerácio,,,,,,,,,,like Decelerate (antithesis of Acceleratium),
 mat_cc_heftium,Heftium,Утяжелятий,Pesádio,,,,,,,,,,like Hefty (antithesis of Levitatium),
@@ -188,9 +188,9 @@ mat_cc_lichtenberg_coal,Burnt Wood,Обожжённая древесина,Madei
 mat_cc_warp_powder,Warp Powder,Искажающий порошок,Pó distorcedor,,,,,,,,,,,
 mat_cc_deezium,Deez...,Вот эти...,Esas...,,,,,,,,,,,
 mat_cc_warp_sickness,Warp Powder,Искажающий порошок,Pó distorcedor,,,,,,,,,,,
-mat_cc_paradox_powder,Paradox Powder,,Pó paradoxal,,,,,,,,,,,
-mat_cc_dull_fungus,Dull Fungus,,Fungo parado,,,,,,,,,,Dull having connotations of numbness or emptiness- somewhat contrasting 'Weird' fungus,
-mat_cc_glitchium,Glitchium,,Glitchio,,,,,,,,,,like Glitch,
+mat_cc_paradox_powder,Paradox Powder,,Pó paradoxal,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+mat_cc_dull_fungus,Dull Fungus,,Fungo parado,,,,,,,,,,Dull having connotations of numbness or emptiness- somewhat contrasting 'Weird' fungus,|NEED_RUSSIAN_TRANSLATION
+mat_cc_glitchium,Glitchium,,Glitchio,,,,,,,,,,like Glitch,|NEED_RUSSIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Spells!,
@@ -258,18 +258,18 @@ status_cc_warp,Warp,Искажение,Distorção,,,,,,,,,,,
 status_desc_cc_warp,You feel something pulling you in every direction,"Вы чувствуете, как вас тянет во все стороны",Você sente algo te puxar em todas as direções,,,,,,,,,,,
 status_cc_warp_sickness,Warp Sickness,Искажающая болезнь,Enjoo da distorção,,,,,,,,,,,
 status_desc_cc_warp_sickness,You feel as if your body was just turned inside out,"Кажется, ваше тело только что вывернуло наизнанку",Você sente como se seu corpo foi virado de dentro para fora,,,,,,,,,,,
-status_cc_paradox,Paradox,,Paradoxo,,,,,,,,,,,
-status_desc_cc_paradox,You feel time slipping.,,Você sente o tempo passar rapidamente.,,,,,,,,,,,
-status_cc_null_trip_1,Numb,,Dormente,,,,,,,,,,,
-status_desc_cc_null_trip_1,You feel hollow,,Você se sente vazio,,,,,,,,,,,
-status_cc_null_trip_2,Bad Trip,,Bad Trip,,,,,,,,,,referencing the Tripping effect from eating Weird Fungus,
-status_desc_cc_null_trip_2,You feel like a corpse reanimated,,Você se sente como um cadaver reanimado,,,,,,,,,,,
-status_cc_null_trip_3,Hollowed,,Oco,,,,,,,,,,,
-status_desc_cc_null_trip_3,A pervasive emptiness is flowing through your veins,,Um vazio está fluindo em suas veias,,,,,,,,,,,
-status_cc_null_trip_4,Null,,Nulo,,,,,,,,,,,
-status_desc_cc_null_trip_4,The Universe is losing meaning,,O universo está perdendo o sentido,,,,,,,,,,,
-status_cc_nullified_trip,Something is missing,,Algo está faltando,,,,,,,,,,,
-statusdesc_cc_nullified_trip,You feel as though the universe is emptier than it once was,,Você sente como se o universo estivesse mais vazio do que antes,,,,,,,,,,,
+status_cc_paradox,Paradox,,Paradoxo,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_desc_cc_paradox,You feel time slipping.,,Você sente o tempo passar rapidamente.,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_cc_null_trip_1,Numb,,Dormente,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_desc_cc_null_trip_1,You feel hollow,,Você se sente vazio,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_cc_null_trip_2,Bad Trip,,Bad Trip,,,,,,,,,,referencing the Tripping effect from eating Weird Fungus,|NEED_RUSSIAN_TRANSLATION
+status_desc_cc_null_trip_2,You feel like a corpse reanimated,,Você se sente como um cadaver reanimado,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_cc_null_trip_3,Hollowed,,Oco,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_desc_cc_null_trip_3,A pervasive emptiness is flowing through your veins,,Um vazio está fluindo em suas veias,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_cc_null_trip_4,Null,,Nulo,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_desc_cc_null_trip_4,The Universe is losing meaning,,O universo está perdendo o sentido,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+status_cc_nullified_trip,Something is missing,,Algo está faltando,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+statusdesc_cc_nullified_trip,You feel as though the universe is emptier than it once was,,Você sente como se o universo estivesse mais vazio do que antes,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
 statis_cc_radstage_1,Radiation Poisoning,,Envenenamento por radiação,,,,,,,,,,,
 statis_cc_desc_radstage_1,Exposure to radiation is causing problems!\nRadcount: $0,,A exposição à radiação está causando problemas!\Rad: $0,,,,,,,,,,'Rads' is what Radiation is generally measured in,
 statis_cc_radstage_2,Irradiated,,Irradiado,,,,,,,,,,,
@@ -303,24 +303,24 @@ statis_cc_desc_radstage_13,"Beautiful beams radiate forth!\nThe mechanism appear
 item_cc_runestone_crystal,Runestone of Crystals,Рунный камень кристаллов,Pedra rúnica de cristais,,,,,,,,,,,
 itemdesc_runestone_crystal,Converts nearby liquids to a beautiful crystalline liquid,Превращает ближайшие жидкости в красивую кристаллическую жидкость,Converte líquidos ao seu redor em um lindo líquido cristalino,,,,,,,,,,unused- currently uses default runestone description,
 item_runestone_spells,Runestone of Spells,Рунный камень заклинаний,Pedra rúnica de feitiços,,,,,,,,,,,
-itemdesc_runestone_spells,Converts nearby liquids into a flurry of spells,,Converte projéteis ao seu redor em um aglomerado de feitiços,,,,,,,,,,flurry meaning almost like a blizzard or gust of spells; a large chaotic cloud/collection of them,
+itemdesc_runestone_spells,Converts nearby liquids into a flurry of spells,,Converte projéteis ao seu redor em um aglomerado de feitiços,,,,,,,,,,flurry meaning almost like a blizzard or gust of spells; a large chaotic cloud/collection of them,|NEED_RUSSIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Miscellaneous,
 ,,,,,,,,,,,,,,
-log_cc_tinkersong_secret,The Gods sing along to your song,,Os Deuses cantam juntos com sua canção,,,,,,,,,,,
-log_cc_tinkersong_secrect_desc,Can you hear them?,,Você consegue ouvi-los?,,,,,,,,,,,
-log_cc_mutagen_superpowers,Mutagen Upgrade,,Upgrade Mutagen,,,,,,,,,,,
-log_cc_mutagen_superpowers_desc,Radiation gives you superpowers!,,A radiação te dá superpoderes!,,,,,,,,,,,
-log_cc_nullified_trip_00,Your sense of reality flickers,,O seu sentido da realidade tremula,,,,,,,,,,,
-log_cc_nullified_trip_01,You sense something is missing,,Você sente que algo está faltando,,,,,,,,,,,
-log_cc_nullified_trip_02,Something has lost meaning,,Algo perdeu o sentido,,,,,,,,,,,
-log_cc_nullified_trip_03,You feel a void in the cosmos,,Você sente um vazio nos cosmos,,,,,,,,,,,
-log_cc_nullified_trip_04,The universe feels emptier,,O universe parece mais vazio,,,,,,,,,,,
-log_cc_nullified_trip_05,You feel a vague sense of loss,,Você sente uma vaga sensação de perda,,,,,,,,,,,
-logdesc_cc_nullified_trip,You hear something fade into quiet obscurity,,Você escuta algo desaparecer silenciosamente e obscuramente,,,,,,,,,,,
-log_cc_paradox_warp,You feel as if you are no longer in the same place...,,Você sente que não está mais no mesmo lugar...,,,,,,,,,,,
-death_cc_morphine,Careful with those painkillers,,Cuidado com esses analgésicos,,,,,,,,,,death msg from when you die to something while Morphine is obfuscating your HP,
+log_cc_tinkersong_secret,The Gods sing along to your song,,Os Deuses cantam juntos com sua canção,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_tinkersong_secrect_desc,Can you hear them?,,Você consegue ouvi-los?,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_mutagen_superpowers,Mutagen Upgrade,,Upgrade Mutagen,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_mutagen_superpowers_desc,Radiation gives you superpowers!,,A radiação te dá superpoderes!,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_00,Your sense of reality flickers,,O seu sentido da realidade tremula,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_01,You sense something is missing,,Você sente que algo está faltando,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_02,Something has lost meaning,,Algo perdeu o sentido,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_03,You feel a void in the cosmos,,Você sente um vazio nos cosmos,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_04,The universe feels emptier,,O universe parece mais vazio,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_nullified_trip_05,You feel a vague sense of loss,,Você sente uma vaga sensação de perda,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+logdesc_cc_nullified_trip,You hear something fade into quiet obscurity,,Você escuta algo desaparecer silenciosamente e obscuramente,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+log_cc_paradox_warp,You feel as if you are no longer in the same place...,,Você sente que não está mais no mesmo lugar...,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+death_cc_morphine,Careful with those painkillers,,Cuidado com esses analgésicos,,,,,,,,,,death msg from when you die to something while Morphine is obfuscating your HP,|NEED_RUSSIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
@@ -338,7 +338,7 @@ mat_mm_alchemical_base,Alchemical Base,Алхимическая основа,Bas
 desc_mm_alchemical_base,The base of all proper alchemy.,Основа всей правильной алхимии.,A base de toda alquimia adequada.,,,,,,,,,,,
 mat_mm_ephemeral_ether,Ephemeral Ether,Эфемерный эфир,Éter efêmero,,,,,,,,,,,
 desc_mm_ephemeral_ether,A volatile substance which evaporates quickly.\nA side product of many alchemical processes.\nUses are yet unknown.,"Летучее вещество, которое быстро испаряется.\nПобочный продукт многих алхимических процессов.\nПрименение пока неизвестно.","Uma substância volátil que evapora rapidamente.\nUm produto secundário de vários processos alquímicos.\nOs usos ainda são desconhecidos.",,,,,,,,,,,
-mat_mm_desc_submystery,Substitate Nymphium,,Nínfio substitato,,,,,,,,,,please contact @userk on discord if you are translating this.,
+mat_mm_desc_submystery,Substitate Nymphium,,Nínfio substitato,,,,,,,,,,please contact @userk on discord if you are translating this,
 mat_mm_ephemeral_ether_gas,Ephemeral Ether Gas,Газообразный эфемерный эфир,Gás de éter efêmero,,,,,,,,,,,
 desc_mm_ephemeral_ether_gas,The evaporated form of Ephemeral Ether.,Испарённая форма эфемерного эфира.,A forma evaporada do éter efêmero.,,,,,,,,,,,
 mat_mm_gold_solution,Gold Solution,Раствор золота,Solução dourada,,,,,,,,,,,
@@ -373,21 +373,21 @@ reac_mana_charge,Mana regeneration,Восстановление маны,Regener
 reac_desc_mana_charge,Wands refill their mana pool over time by absorbing mana from the surrounding environment.\nA wand can be made more efficient at this by infusing it with Refined Mana.,"Жезлы со временем пополняют свой запас маны, поглощая ману из окружающей среды.\nЖезл можно сделать более эффективным в этом отношении, наполнив его очищенной маной.","As varinhas reabastecem sua reserva de mana ao longo do tempo, absorvendo mana do ambiente ao redor.\nUma varinha pode se tornar mais eficiente nisso ao infundi-la com mana refinado.",,,,,,,,,,,
 reac_flux_welding,Flux Welding,Сварка потоком,União por fluxo arcano,,,,,,,,,,,
 reac_desc_flux_welding,"Arcane Flux can be used to weld spells together, this however is a very volatile process and results are variable.\nAlso note that the spell will be more expensive to cast based on what you weld to it.","Тайный поток можно использовать для соединения заклинаний, однако это очень нестабильный процесс, и результаты могут быть разными.\nТакже обратите внимание, что стоимость заклинания увеличится в зависимости от того, что вы к нему приварите.","O fluxo arcano pode ser usado para unir feitiços, porém, este é um processo muito volátil e os resultados são variáveis.\nObserve também que o feitiço irá custar mais mana para ser conjurado com base no que você unir a ele.",,,,,,,,,,,
-reac_replicating_agent,Procurement of a Replicating Agent,,Aquisição de um agente de replicação,,,,,,,,,,,
-reac_desc_replicating_agent,"By mixing a base, a solvent, and a byproduct of other alchemical processes, you may come across an agent that is able to replicate various materials.",,"Ao misturar uma base, um solvente e um subproduto de outros processos alquímicos, você pode encontrar um agente capaz de replicar vários materiais.",,,,,,,,,,,
+reac_replicating_agent,Procurement of a Replicating Agent,,Aquisição de um agente de replicação,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+reac_desc_replicating_agent,"By mixing a base, a solvent, and a byproduct of other alchemical processes, you may come across an agent that is able to replicate various materials.",,"Ao misturar uma base, um solvente e um subproduto de outros processos alquímicos, você pode encontrar um agente capaz de replicar vários materiais.",,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Items!,
 ,,,,,,,,,,,,,,
-item_mm_bingus,Bingus,,Bingus,,,,,,,,,,name of aforementioned furless 'bingus' cat,
-item_mm_bingus,Some kind of strange critter.,,Um tipo de bichinho estranho...,,,,,,,,,,,
-item_mm_can,Can,,Lata,,,,,,,,,,,
+item_mm_bingus,Bingus,,Bingus,,,,,,,,,,name of aforementioned furless 'bingus' cat,|NEED_RUSSIAN_TRANSLATION
+item_mm_bingus,Some kind of strange critter.,,Um tipo de bichinho estranho...,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+item_mm_can,Can,,Lata,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
 item_can_with_material,Can of $0,Банка $0,Lata de $0,,,,,,,,,,,
 item_can_with_material_description,A Can containing $0,"Банка, содержащая $0",Uma lata contendo $0,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,Alchemy Journal:,
-item_mm_alchemy_journal,Alchemy Journal,,Diário Alquimico,,,,,,,,,,,
-itemdesc_mm_alchemy_journal,A recipe book of sorts for alchemists.,,Um livro de receitas para alquimistas,,,,,,,,,,,
+item_mm_alchemy_journal,Alchemy Journal,,Diário Alquimico,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
+itemdesc_mm_alchemy_journal,A recipe book of sorts for alchemists.,,Um livro de receitas para alquimistas,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION
 log_mm_lab_note_pickup,A new entry has been added to your Alchemy Journal,В ваш алхимический журнал добавлена новая запись,Um novo registro foi adicionado ao seu Diário Alquimico,,,,,,,,,,,
 note_mm_labnote_entry,Lab Note #$0: $1,Лабораторная запись №$0: $1,Nota laboratorial #$0: $1,,,,,,,,,,,
 title_mm_alchemist_journal,Alchemy Journal,Алхимический журнал,Diário Alquimico,,,,,,,,,,,
@@ -435,11 +435,11 @@ itemdesc_runestone_terror,You feel as though dropping this would be a terrible i
 ,,,,,,,,,,,,,   just misc stuff referring to the name of the mod/developers working on it as well as other misc stuff,
 ,,,,,,,,,,,,,,
 name_mod_cc_global,Chemical Curiosities,,,,,,,,,,,,up to interpretation,
-cc_name_mod_aa,Arcane Alchemy,,,,,,,,,,,,up to interpretation,
-cc_name_mod_cc,Chemical Curiosities,,,,,,,,,,,,up to interpretation,
-cc_name_mod_mm,Mystical Mixtures,,,,,,,,,,,,up to interpretation,
-cc_name_mod_ff,Fluent Fluids,,,,,,,,,,,,up to interpretation,
-cc_name_mod_t,Terror.,,,,,,,,,,,,up to interpretation,
+cc_branch_name_aa,Arcane Alchemy,,,,,,,,,,,,up to interpretation,
+cc_branch_name_cc,Chemical Curiosities,,,,,,,,,,,,up to interpretation,
+cc_branch_name_mm,Mystical Mixtures,,,,,,,,,,,,up to interpretation,
+cc_branch_name_ff,Fluent Fluids,,,,,,,,,,,,up to interpretation,
+cc_branch_name_t,Terror.,,,,,,,,,,,,up to interpretation,
 ,,,,,,,,,,,,,,
 cc_name_evaisa,Evaisa,,,,,,,,,,,,transliterate,
 cc_name_squirrelly,Squirrelly,,,,,,,,,,,,transliterate,

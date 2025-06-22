@@ -4,7 +4,7 @@
 	request_no_api_restrictions="0" 
 > 
     <translations>
-        <file>translations.csv</file>
+        <file>translations/standard.csv</file>
     </translations>
 </Mod>
 

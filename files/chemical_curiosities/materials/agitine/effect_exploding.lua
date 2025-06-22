@@ -19,25 +19,25 @@ local do_explosion = ComponentGetValue2(vscomp, "value_bool") --grab the current
 
 --get the Stain% and Ingestion Amount and derive a General Multiplier from it
 
-local a = GetStainPercentage(owner, "CC_EXPLODING") --Get Stain% as value from 0 to 1
-local b = GetIngestionSeconds(owner, "CC_EXPLODING") --Get Ingestion Seconds (1:1 in terms of seconds, 10% of flask = 30 seconds)
+local stain = GetStainPercentage(owner, "CC_EXPLODING") --Get Stain% as value from 0 to 1
+local inges = GetIngestionSeconds(owner, "CC_EXPLODING") --Get Ingestion Seconds (1:1 in terms of seconds, 10% of flask = 30 seconds)
 
-local multiplier = ((a + .3)^2.7 * 1.5) + (b^1.2 * .02) --Combine them using some fun mildly-exponential math stuff (healvily decrease Ingestion to avoid it completely throwing off the Stain%)
+local multiplier = ((stain + .3)^2.7 * 1.5) + (inges^1.2 * .02) --Combine them using some fun mildly-exponential math stuff (healvily decrease Ingestion to avoid it completely throwing off the Stain%)
 
 
 --logic for if there should be an explosion:
 
-if b > previous_ingestion then --if more has been ingested since the last frame:
+if inges > previous_ingestion then --if more has been ingested since the last frame:
     ComponentSetValue2(vscomp, "value_int", 0) --set counter to 0
-    ComponentSetValue2(vscomp, "value_float", b) --set new ingestion record to current
+    ComponentSetValue2(vscomp, "value_float", inges) --set new ingestion record to current
     return --exit script
 
-elseif ComponentGetValue2(vscomp, "value_int") < 5 and b + previous_ingestion ~= 0 then --if counter is less than 5 AND the player has ingested the effect:
+elseif ComponentGetValue2(vscomp, "value_int") < 5 and inges + previous_ingestion ~= 0 then --if counter is less than 5 AND the player has ingested the effect:
     GamePlaySound("data/audio/Desktop/ui.bank", "ui/streaming_integration/new_vote", pos_x, pos_y) --play tick sound effect (i need to find/make a better one or make it louder)
     ComponentSetValue2(vscomp, "value_int", counter + 1) --increment the counter by 1
     return --exit script
 
-elseif b == 0 and do_explosion == false then --effect should run every 2 seconds but the script runs every 1 second, so i have a script 
+elseif inges == 0 and do_explosion == false then --effect should run every 2 seconds but the script runs every 1 second, so i have a script 
     ComponentSetValue2(vscomp, "value_bool", true)
     return --exit script
 
@@ -64,7 +64,7 @@ ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_min", 5 * math.
 ComponentObjectSetValue2(comp, "config_explosion", "sparks_count_max", (5 * math.min(100, multiplier))^1.3) --maximum particle sparks
 ComponentObjectSetValue2(comp, "config_explosion", "max_durability_to_destroy", 14) --ensures this can break through high-level materials if it has enough ray_energy
 
-if GameHasFlagRun("PERK_PICKED_IRON_STOMACH") and b ~= 0 then --if player has picked IRON_STOMACH and Ingestion is not 0:
+if GameHasFlagRun("PERK_PICKED_IRON_STOMACH") and inges ~= 0 then --if player has picked IRON_STOMACH and Ingestion is not 0:
     ComponentObjectSetValue2(comp, "config_explosion", "dont_damage_this", owner) --set the explosion to not harm the owner
 end
 EntityRemoveIngestionStatusEffect(owner, "CC_EXPLODING") --Remove all of the ingested effect (leaves the stain)
