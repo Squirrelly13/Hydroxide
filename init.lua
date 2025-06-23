@@ -458,9 +458,16 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 	ModTextFileSetContent(file_to_insert, xml2lua.toXml(handler.root, "Materials", 0))
 
 	return input1[mat1num], input2[mat1num], output1, output2
-end 
+end
 
-register_localizations("mods/Hydroxide/translations.csv")
+local target = "mods/Hydroxide/translations/standard.csv"
+if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
+    target = "mods/Hydroxide/translations/turkish.csv"
+end
+for i = 1, 10, 1 do
+    print(GameTextGetTranslatedOrNot("$current_language"))
+end
+register_localizations(target)
 
 
 

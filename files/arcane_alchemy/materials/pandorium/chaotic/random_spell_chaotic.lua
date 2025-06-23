@@ -19,7 +19,7 @@ local gun = EntityGetAllChildren(inventory_comp)[1]
 
 local spell_formula = ""
 
-function add_spell(spellType, position)
+local function add_spell(spellType, position)
 
     local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
     local spell = EntityCreateNew()
