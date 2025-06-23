@@ -464,9 +464,6 @@ local target = "mods/Hydroxide/translations/standard.csv"
 if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
     target = "mods/Hydroxide/translations/turkish.csv"
 end
-for i = 1, 10, 1 do
-    print(GameTextGetTranslatedOrNot("$current_language"))
-end
 register_localizations(target)
 
 
