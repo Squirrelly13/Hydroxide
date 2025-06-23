@@ -461,8 +461,11 @@ function add_random_recipe(file_to_insert, input1, input2, output1, output2, pro
 end
 
 local target = "mods/Hydroxide/translations/standard.csv"
-if ModIsEnabled("translation_tr") then
+if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
     target = "mods/Hydroxide/translations/turkish.csv"
+end
+for i = 1, 10, 1 do
+    print(GameTextGetTranslatedOrNot("$current_language"))
 end
 register_localizations(target)
 
