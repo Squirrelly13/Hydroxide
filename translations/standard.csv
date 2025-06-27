@@ -222,7 +222,15 @@ action_desc_cc_gunpowder_buff,Makes nearby gunpowder more dangerous,Делает
 action_cc_fire_to_grease,Fire Enhancer,Усилитель огня,Intesificador de fogo,,,,,,,,,,,
 action_desc_cc_fire_to_grease,Causes nearby fires to erupt violently,Заставляет ближайший огонь яростно вспыхнуть,Converte o fogo dos arredores para uma erupção violenta,,,,,,,,,,,
 action_cc_gunpowder_cloud,Gunpowder Cloud,Пороховое облако,Nuvem de pólvora,,,,,,,,,,,
-action_desc_cc_gunpowder_cloud,???,???,???,,,,,,,,,,,
+action_desc_cc_gunpowder_cloud,???,???,???,,,,,,,,,,"i think the question marks were supposed to be temporary, but at this point this one has been translated twice (clearly a lot of effort), i kinda just wanna leave it as is lmao",
+action_desc_cc_ge_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,,,,,degenerate as in the opposite of regenerate,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
+action_desc_cc_ge_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Status Effects!,

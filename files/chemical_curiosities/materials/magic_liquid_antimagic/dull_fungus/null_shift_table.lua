@@ -93,7 +93,7 @@ materials = {
         }
     },
     gold = {
-        probability = 0.1,
+        probability = 0.05,
         variants = {
             "gold_box2d",
         }

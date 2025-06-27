@@ -223,6 +223,14 @@ action_cc_fire_to_grease,Ateş Yoğunlaştırıcı,Fire Enhancer,,,,,,,,,,,,
 action_desc_cc_fire_to_grease,Çevredeki ateşlerin şiddetle alevlenmesini sağlar,Causes nearby fires to erupt violently,,,,,,,,,,,,
 action_cc_gunpowder_cloud,Barut Bulutu,Gunpowder Cloud,,,,,,,,,,,,
 action_desc_cc_gunpowder_cloud,???,???,,,,,,,,,,,,
+action_desc_cc_ge_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,Gives a projectile a corrosive sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,Gives a projectile a silvery sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,Gives a projectile a glittering sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,Gives a projectile a degenerative sparkly trail,,,,,,,,,,,degenerate as in the opposite of regenerate,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,Gives a projectile a volatile sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_uranium,Gives a projectile a radioactive sparkly trail,Gives a projectile a radioactive sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
+action_desc_cc_ge_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,Gives a projectile an annihilative sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Status Effects!,
@@ -435,11 +443,11 @@ itemdesc_runestone_terror,Bunu yere düşürmenin berbat bir fikir olacağını 
 ,,,,,,,,,,,,,   just misc stuff referring to the name of the mod/developers working on it as well as other misc stuff,
 ,,,,,,,,,,,,,,
 name_mod_cc_global,Kimyevi Arzular,Chemical Curiosities,,,,,,,,,,,up to interpretation,
-cc_name_mod_aa,Büyülü Kimya,Arcane Alchemy,,,,,,,,,,,up to interpretation,
-cc_name_mod_cc,Kimyevi Arzular,Chemical Curiosities,,,,,,,,,,,up to interpretation,
-cc_name_mod_mm,Gizemli Karışımlar,Mystical Mixtures,,,,,,,,,,,up to interpretation,
-cc_name_mod_ff,Büyülü Sıvılar,Fluent Fluids,,,,,,,,,,,up to interpretation,
-cc_name_mod_t,Kaos,Terror.,,,,,,,,,,,up to interpretation,
+cc_cc_branch_name_aa,Büyülü Kimya,Arcane Alchemy,,,,,,,,,,,up to interpretation,
+cc_cc_branch_name_cc,Kimyevi Arzular,Chemical Curiosities,,,,,,,,,,,up to interpretation,
+cc_cc_branch_name_mm,Gizemli Karışımlar,Mystical Mixtures,,,,,,,,,,,up to interpretation,
+cc_cc_branch_name_ff,Büyülü Sıvılar,Fluent Fluids,,,,,,,,,,,up to interpretation,
+cc_cc_branch_name_t,Kaos,Terror.,,,,,,,,,,,up to interpretation,
 ,,,,,,,,,,,,,,
 cc_name_evaisa,Evaisa,,,,,,,,,,,,transliterate,
 cc_name_squirrelly,Squirrelly,,,,,,,,,,,,transliterate,
