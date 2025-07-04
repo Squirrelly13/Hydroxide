@@ -118,7 +118,7 @@ status_desc_aa_vomit_spells_unstable,This was a terrible idea!,Это была �
 ,,,,,,,,,,,,,,
 item_aa_vial,Vial,,Frasco,,,,,,,,,,,
 item_vial_with_material,Vial of $0,Флакон $0,Frasco de $0,,,,,,,,,,,
-item_vial_with_material_description,A glass vial containing $0,"Стеклянный флакон, содержащий $0",Um frasco de vidro contendo $0,,,,,,,,,,,
+item_vial_with_material_description,A glass vial containing $0\nUseful for throwing!,"Стеклянный флакон, содержащий $0",Um frasco de vidro contendo $0,,,,,,,,,,,
 nerf_wand,Nerf Gun,,Arminha Nerf,,,,,,,,,,'Nerf' as in the brand for toy-guns with foam darts,
 nerf_dart,Nerf Dart,,Dardo Nerf,,,,,,,,,,read above,
 ,,,,,,,,,,,,,,

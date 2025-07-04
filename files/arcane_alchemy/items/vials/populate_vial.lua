@@ -91,9 +91,6 @@ materials = {
     MM:
         material="mm_bingus",
         weight=0.6,
-        
-        material="mm_bingus_wetfood",
-        weight=0.6,
 
         material="mm_alchemical_solvent",
         weight=1,

@@ -27,6 +27,7 @@ New Features:
 -Spectrolium, gives an effect similar to Shimmer from Terraria, infinite flight when you have it
  -Connected to Ectospasm
 -Make Unstable Teleportatium inserted into the hourglass cause the portal to teleport you to a random part of the eye room- just as a hint that UTele yields slightly different results than Tele (and cuz it fun)
+-Material that grants status which increases Max HP for a period
 
 Fixes/Reworks:
 -Fix Veilium effect being too snappy

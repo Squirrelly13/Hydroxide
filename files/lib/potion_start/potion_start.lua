@@ -41,7 +41,7 @@ local cc_failpotions = {
 
 local cc_functions = {
 	function(outcome, r_value)
-		if (PS.CompareTables({PS.LOCAL.month, PS.LOCAL.day}, {7,4}) and r_value >= 20) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
+		if (PS.CompareTables({PS.LOCAL.month, PS.LOCAL.day}, {7,4}) and Random(1, 5) == 5) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
 		elseif outcome == "acid" and Random(0,1) then return "cc_hydroxide"
 		end
 	end
