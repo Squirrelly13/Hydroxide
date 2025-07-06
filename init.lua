@@ -107,6 +107,7 @@ end
 
 ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_random.lua") --override random potion selection
+ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) --powder pouches
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua" ) --effects
 ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua" ) --Fungal shifts
 
@@ -133,7 +134,6 @@ if CC then
 
 
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
-	ModLuaFileAppend( "data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua" ) -- powder bags spawn with new materials
 	ModLuaFileAppend( "data/scripts/items/potion_aggressive.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_aggressive.lua" ) --for alchemist enemy
 	--ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion_starting.lua") --starting potions --NOTE: verify these potion appends later
 
