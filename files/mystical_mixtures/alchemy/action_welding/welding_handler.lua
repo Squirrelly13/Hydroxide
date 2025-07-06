@@ -49,7 +49,7 @@ local function Split (inputstr, sep)
 	return t
 end
 
-if(actions == nil)then 
+if(actions == nil)then
     dofile("data/scripts/gun/gun_actions.lua")
 end
 
@@ -143,7 +143,7 @@ end
 
 handler.AddWeld = function(entity_id, action_id)
     local existing_enchantments = EntityGetVariable(entity_id, "welds", "string") or ""
-    
+
     EntitySetVariable(entity_id, "welds", "string", existing_enchantments .. action_id .. ",")
 
     handler.appendEnchantmentString(entity_id)
@@ -177,13 +177,13 @@ end
 function table.dump(tbl, indentLevel)
 	if not indentLevel then indentLevel = 0 end
 	local toprint = "{\n"
-	indentLevel = indentLevel + 2 
+	indentLevel = indentLevel + 2
 	for key, value in pairs(tbl) do
 	  toprint = toprint .. string.rep(" ", indentLevel)
 	  if (type(key) == "number") then
 		-- Do nothing, we don't want to print out the numeric key
 	  elseif (type(key) == "string") then
-		toprint = toprint  .. key .. " = "   
+		toprint = toprint  .. key .. " = "
 	  end
 	  if (type(value) == "number") then
 		toprint = toprint .. value .. ",\n"

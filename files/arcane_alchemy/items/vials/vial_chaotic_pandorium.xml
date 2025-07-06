@@ -4,6 +4,5 @@
 	<VariableStorageComponent
 		name="potion_material"
 		value_string="aa_chaotic_pandorium"
-		>
-	</VariableStorageComponent>
+	/>
 </Entity>

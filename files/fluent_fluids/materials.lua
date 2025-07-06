@@ -1,4 +1,4 @@
---this mostly consists of grabbed 
+--this mostly consists of grabbed
 
 
 
@@ -23,7 +23,7 @@ local gases = {
 
 for k, v in ipairs(gases)do
         gases_xml = gases_xml .. [[
-    <CellData 
+    <CellData
         name="ff_]]..v.material..[[_powder"
         ui_name="]]..(v.name ~= nil and (v.name) or "$mat_ff_powder_generic")..[["
         wang_color="]]..v.color..[["
@@ -58,7 +58,7 @@ for k, v in ipairs(gases)do
 end
 
 --340282366920938463463374607431768211456
---340282366920938463463374607431768211456-340282356779733661637539395458142568447 
+--340282366920938463463374607431768211456-340282356779733661637539395458142568447
 
 local powders_xml
 
@@ -78,7 +78,7 @@ local powders = {
 
 for k, v in ipairs(powders)do
         powders_xml = powders_xml .. [[
-    <CellData 
+    <CellData
         name="ff_]]..v.material..[[_powder"
         ui_name="]]..(v.name ~= nil and (v.name) or "$mat_ff_powder_generic")..[["
         wang_color="]]..v.color..[["
@@ -144,7 +144,7 @@ local materials_xml = [[<Materials>
 --                 ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
 --             >
 --             </Graphics>
---         </CellData>     
+--         </CellData>
 -- ]])
 
 
@@ -206,7 +206,7 @@ CreatePowder(water,)
                 ..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..
             >
             </Graphics>
-        </CellData>     
+        </CellData>
 ]]
 
 
@@ -234,7 +234,7 @@ local materials_xml = [[<Materials>
 for k, v in ipairs(alchemical_materials)do
     if(v.type == "liquid")then
         materials_xml = materials_xml .. [[
-    <CellData 
+    <CellData
         name="]]..v.id..[["
         ui_name="]]..v.name..[["
         tags="]]..(v.tags ~= nil and (v.tags .. ",[liquid]") or "[liquid]")..[["
@@ -286,7 +286,7 @@ for k, v in ipairs(alchemical_materials)do
                 ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
-        </CellData>     
+        </CellData>
         ]]
     elseif(v.type == "gas")then
         materials_xml = materials_xml .. [[
@@ -311,7 +311,7 @@ for k, v in ipairs(alchemical_materials)do
                 ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
-        </CellData> 
+        </CellData>
         ]]
     end
 end
@@ -327,15 +327,15 @@ ModMaterialsFileAdd("data/mystical_mixtures/alchemy_materials.xml")
 
 
 if (ModSettingGet("Hydroxide.CC_ENABLED")) == true then
-    
+
 end
 
 if (ModSettingGet("Hydroxide.AA_ENABLED")) == true then
-    
+
 end
 
 if (ModSettingGet("Hydroxide.MM_ENABLED")) == true then
-    
+
 end
 
 ModTextFileSetContent("mods/Hydroxide/files/fluent_fluids/materials/materials_gases.xml", tostring(gases))

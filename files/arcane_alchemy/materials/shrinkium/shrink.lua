@@ -88,7 +88,7 @@ if(is_polymorphed == false)then
             GlobalsSetValue(root.."_collision_"..component.."_min_y", tostring(ComponentGetValue2(component, "collision_aabb_min_y")))
             GlobalsSetValue(root.."_collision_"..component.."_max_x", tostring(ComponentGetValue2(component, "collision_aabb_max_x")))
             GlobalsSetValue(root.."_collision_"..component.."_max_y", tostring(ComponentGetValue2(component, "collision_aabb_max_y")))
-            
+
             ComponentSetValue2(component, "collision_aabb_min_x", tonumber(ComponentGetValue2(component, "collision_aabb_min_x") / 2))
             ComponentSetValue2(component, "collision_aabb_min_y", tonumber(ComponentGetValue2(component, "collision_aabb_min_y") / 2))
             ComponentSetValue2(component, "collision_aabb_max_x", tonumber(ComponentGetValue2(component, "collision_aabb_max_x") / 2))

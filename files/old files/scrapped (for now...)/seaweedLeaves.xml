@@ -1,7 +1,7 @@
 <Sprite
  filename="data/vegetation/seaweedLeaves.png"
  offset_x="12"
- offset_y="31" 
+ offset_y="31"
  default_animation="vegetation_growth" >
 
  <!-- vegetation_growth is special name, creates a growing vegetation with it -->

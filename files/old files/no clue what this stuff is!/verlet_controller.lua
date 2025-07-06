@@ -36,7 +36,7 @@ if(controller ~= nil and holder ~= nil)then
         local index = 0
 
         edit_all_components( entity, "VerletWorldJointComponent", function(comp,vars)
-           
+
             if index == 0 then
                 ComponentSetValueVector2( comp, "world_position", x1, y1 )
             else

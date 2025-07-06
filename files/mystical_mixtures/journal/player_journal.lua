@@ -94,10 +94,10 @@ if(chunk_id ~= last_chunk_id)then
 
                     -- spawn a note
                     local note = EntityLoad("mods/Hydroxide/files/mystical_mixtures/journal/lab_note.xml", x, y)
-                    
+
                     local variable_storage = nil
                     local variable_storage_components = EntityGetComponentIncludingDisabled(note, "VariableStorageComponent") or {}
-                
+
                     for k, v in ipairs(variable_storage_components)do
                         local name = ComponentGetValue2(v, "name")
                         if(name == "entry_id")then

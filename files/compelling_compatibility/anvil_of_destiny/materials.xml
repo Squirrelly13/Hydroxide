@@ -4,10 +4,10 @@
         name = "aa_divine_slime"
         ui_name="$mat_aa_divine_slime"
         tags="[alchemy],[liquid]"
-        burnable="0"  
-        density="8.79"  
-        cell_type="liquid" 
-        wang_color="88c3b1e6" 
+        burnable="0"
+        density="8.79"
+        cell_type="liquid"
+        wang_color="88c3b1e6"
         liquid_gravity="0.1"
         liquid_sticks_to_ceiling="100"
         liquid_damping="0.9"
@@ -20,7 +20,7 @@
         status_effects="CC_EDIT_WANDS_EVERYWHERE"
         audio_physics_material_event="slime"
         audio_physics_material_wall="slime"
-        audio_physics_material_solid="slime" 
+        audio_physics_material_solid="slime"
   >
 	<ParticleEffect
         vel.y="17.14"
@@ -51,7 +51,7 @@
     <CellDataChild
         name = "aa_divine_magma"
         _parent="lava"
-        wang_color="88cc316" 
+        wang_color="88cc316"
         ui_name="$mat_aa_divine_magma"
         status_effects="CC_HYDROXIDE"
     >
@@ -78,7 +78,7 @@
         input_cell1="lava"      input_cell2="aa_divine_magma"
         output_cell1="lava"     output_cell2="lava"
     /> <!--dilute Divine Magma with Regular-Ass Magma:tm:-->
-  
+
     <Reaction probability="15"
         input_cell1="cc_nullium"			input_cell2="aa_divine_magma"
         output_cell1="smoke"				output_cell2="lava"
@@ -90,7 +90,7 @@
         input_cell1="cc_nullium"    input_cell2="anvilofdestinium"
         output_cell1="smoke"        output_cell2="anvilofdestinium"
     />
-  
+
     <Reaction probability="15"
         input_cell1="cc_nullium"    input_cell2="anvilofdestinium"
         output_cell1="smoke"        output_cell2="smoke"

@@ -16,7 +16,7 @@ SetRandomSeed(x,y)
 
 for k, v in pairs(variable_storage)do
     local name = ComponentGetValue2(v, "name")
-    
+
     if(name == "subverlet_files")then
         verlet_files = ComponentGetValue2(v, "value_string")
     end
@@ -66,7 +66,7 @@ if(verlet_files ~= nil)then
                 local joint = EntityAddComponent( verlet_entity, "VerletWorldJointComponent" )
 
                 ComponentSetValueVector2( joint, "world_position", verlet_x, verlet_y )
-                
+
                 EntityAddComponent(entity, "VariableStorageComponent", {
                     name = "verletentity_"..k,
                     value_string = verlet_entity

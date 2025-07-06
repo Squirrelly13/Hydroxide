@@ -10,7 +10,7 @@
       play_only_if_visible="1" >
     </AudioComponent>
 	
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="spark_purple"
 		gravity.y="0.0"
 		lifetime_min="8"
@@ -56,4 +56,3 @@
 	</ParticleEmitterComponent>
 
 </Entity>
-

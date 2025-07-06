@@ -1,7 +1,7 @@
 <Sprite
  filename="mods/Hydroxide/files/arcane_alchemy/materials/bloomium/healthy/bloom_ground_07.png"
  offset_x="16"
- offset_y="33" 
+ offset_y="33"
  default_animation="vegetation_growth" >
 
  <!-- vegetation_growth is special name, creates a growing vegetation with it -->

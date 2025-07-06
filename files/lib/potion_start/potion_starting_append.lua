@@ -33,7 +33,7 @@ ps.starterpotions = ps.CombineTables(ps.starterpotions, modded_starterpotions) -
 
 
 --append magicpotions:
-local modded_magicpotions = { 
+local modded_magicpotions = {
 	{"awesomium"}, --even if you arent using probability, each material should be contained within its own table
 	{"lamium"},
 	{"averagium", probability = 30}, --adding probability fields is optional for starterpotions, magicpotions, and failpotions

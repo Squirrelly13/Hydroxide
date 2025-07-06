@@ -55,20 +55,20 @@ ocarina_funcs["alchemy"] = function()
           local var_name = ComponentGetValue2( storage_id, "name" )
           if ( var_name == "status" ) then
             local status = ComponentGetValue2( storage_id, "value_int" )
-            
+
             status = status + 1
-            
+
             ComponentSetValue2( storage_id, "value_int", status )
             GameAddFlagRun( "alchemy_ocarina" )
             EntityAddTag( key_id, "alchemy_ocarina" )
-            
+
             print( tostring(status) )
-            
+
             if ( status == 1 ) then
               GamePrintImportant( "$log_alchemist_key_first", "$logdesc_alchemist_key_first" )
               EntitySetComponentsWithTagEnabled( key_id, "first", true )
               EntityLoadToEntity( "data/entities/animals/boss_alchemist/key_particles_first.xml", key_id )
-              
+
               edit_component( key_id, "ItemComponent", function(comp,vars)
                 ComponentSetValue2( comp, "ui_description", "$itemdesc_key_1")
               end)
@@ -76,7 +76,7 @@ ocarina_funcs["alchemy"] = function()
               GamePrintImportant( "$log_alchemist_key_second", "$logdesc_alchemist_key_second" )
               EntitySetComponentsWithTagEnabled( key_id, "second", false )
               EntityLoadToEntity( "data/entities/animals/boss_alchemist/key_particles_second.xml", key_id )
-              
+
               edit_component( key_id, "ItemComponent", function(comp,vars)
                 ComponentSetValue2( comp, "ui_description", "$itemdesc_key_2")
               end)
@@ -106,20 +106,20 @@ kantele_funcs["alchemy"] = function()
           local var_name = ComponentGetValue2( storage_id, "name" )
           if ( var_name == "status" ) then
             local status = ComponentGetValue2( storage_id, "value_int" )
-            
+
             status = status + 1
-            
+
             ComponentSetValue2( storage_id, "value_int", status )
             GameAddFlagRun( "alchemy_kantele" )
             EntityAddTag( key_id, "alchemy_kantele" )
-            
+
             print( tostring(status) )
-            
+
             if ( status == 1 ) then
               GamePrintImportant( "$log_alchemist_key_first", "$logdesc_alchemist_key_first" )
               EntitySetComponentsWithTagEnabled( key_id, "first", true )
               EntityLoadToEntity( "data/entities/animals/boss_alchemist/key_particles_first.xml", key_id )
-              
+
               edit_component( key_id, "ItemComponent", function(comp,vars)
                 ComponentSetValue2( comp, "ui_description", "$itemdesc_key_1")
               end)
@@ -127,7 +127,7 @@ kantele_funcs["alchemy"] = function()
               GamePrintImportant( "$log_alchemist_key_second", "$logdesc_alchemist_key_second" )
               EntitySetComponentsWithTagEnabled( key_id, "second", false )
               EntityLoadToEntity( "data/entities/animals/boss_alchemist/key_particles_second.xml", key_id )
-              
+
               edit_component( key_id, "ItemComponent", function(comp,vars)
                 ComponentSetValue2( comp, "ui_description", "$itemdesc_key_2")
               end)

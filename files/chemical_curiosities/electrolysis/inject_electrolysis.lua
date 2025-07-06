@@ -5,9 +5,9 @@ function AddComponent(entity_file, component)
     ModTextFileSetContent(entity_file, ent)
 end
 
-local electricity_entities = {	"data/entities/misc/electricity.xml", 
-								"data/entities/misc/electricity_weak.xml", 
-								"data/entities/misc/electricity_medium.xml", 
+local electricity_entities = {	"data/entities/misc/electricity.xml",
+								"data/entities/misc/electricity_weak.xml",
+								"data/entities/misc/electricity_medium.xml",
 								"data/entities/misc/arc_electric.xml",
 								"data/entities/projectiles/lightning.xml",
 								"data/entities/projectiles/lightning_thunderburst.xml",

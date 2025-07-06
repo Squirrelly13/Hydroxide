@@ -37,7 +37,7 @@ uniform float fog_amount_background;
 uniform float fog_amount_foreground;
 
 uniform float drugged_distortion_amount;
-uniform float drugged_color_amount;    
+uniform float drugged_color_amount;
 uniform float drugged_fractals_amount;
 uniform float drugged_fractals_size;
 uniform float drugged_nightvision_amount;
@@ -83,7 +83,7 @@ float mlength(vec2 uv) {
 }
 
 mat2 rotate(float a) {
-	float c = cos(a), 
+	float c = cos(a),
         s = sin(a);
     return mat2(c, -s, s, c);
 }
@@ -105,9 +105,9 @@ float shape(vec2 uv) {
 
 	float k = sinr(T * .05, 2., 12.);
     float a = 4.;
-    
-    return cos(st.y * k + st.x * a + T) * 
-        	cos(st.y * k - st.x * a + T) * 
+
+    return cos(st.y * k + st.x * a + T) *
+        	cos(st.y * k - st.x * a + T) *
         	smoothstep(.2, .8, st.y);
 }
 
@@ -115,15 +115,15 @@ vec3 render(vec2 uv) {
 
     uv = abs(uv) - sinr(T * .5, .25, .5);
 
-    float t = shape(uv) + 
+    float t = shape(uv) +
         clamp(abs(.2 / shape(uv)) * .25, .0, 2.); // glow
-   
+
     // rotate, scale and layer
     uv *= rotate(.785);
-    t *= shape(uv) + 
+    t *= shape(uv) +
         clamp(abs(.03 / shape(uv)) * .25, .0, .9);
     //t *= length(uv);
-   
+
     return mix(vec3(t, .4, sinr(T, .3, .8)),
                vec3(.1, .0, .3), t);
 }
@@ -183,7 +183,7 @@ void main()
 
 // ===========================================================================================================
 // liquid distortion/refraction effect (calculate distorted texture coordinates for later use) ===============
-  
+
   	const float SHADING_BRIGHT_BITS_ALPHA = 0.25;
     const float SHADING_LIQUID_BITS_ALPHA = 0.99;
 
@@ -197,8 +197,8 @@ void main()
 		float distortion_mult  = time * DISTORTION_TIME_SPD; // time * (DISTORTION_TIME_SPD - 5.0 *drugged_distortion_amount);
 
 		vec2 liquid_distortion_offset = vec2(
-			liquid_mask * sin( distortion_mult + (tex_coord.x + camera_pos.x / world_viewport_size.x ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2, 
-			liquid_mask * cos( distortion_mult + (tex_coord.y - camera_pos.y / world_viewport_size.y ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2 
+			liquid_mask * sin( distortion_mult + (tex_coord.x + camera_pos.x / world_viewport_size.x ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2,
+			liquid_mask * cos( distortion_mult + (tex_coord.y - camera_pos.y / world_viewport_size.y ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2
 			) / camera_inv_zoom_ratio;
 			
 		// distort the texture coordinate if the pixel we would sample is liquid
@@ -377,7 +377,7 @@ void main()
 	lights = pow( lights, vec3( 1.5 ) );
 
 	// apply light from the glow buffer ---
-	lights += glow; 
+	lights += glow;
 
 	vec3 sky_light = sky_light_color.rgb * sky_ambient_amount;
 
@@ -566,7 +566,7 @@ void main()
 
 	#ifdef DEBUG_DEBUG
 		debug_tex_coord = vec2(0.45,-0.1) + tex_coord * 1.5 * vec2(1.0 / 15.625 * 2.0,1.0); // vec2(-0.01,-0.05) + vec2(tex_coord_glow.x, 1.0 - tex_coord_glow.y) * vec2(64.0,40.0 * world_viewport_size.x / world_viewport_size.y) / 64.0 * 0.8;
-		color.r += 0.75 * texture2D(tex_debug2, debug_tex_coord).r; // 
+		color.r += 0.75 * texture2D(tex_debug2, debug_tex_coord).r; //
 	#endif
 
 // ============================================================================================================

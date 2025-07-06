@@ -1,10 +1,10 @@
 <Entity >
-   
+
     <VerletPhysicsComponent
     	num_points="21"
     	stiffness="1.0"
 		velocity_dampening="0.9"
-    	resting_distance="4" 
+    	resting_distance="4"
     	pixelate_sprite_transforms="1"
         follow_entity_transform="0"
     	simulate_wind="1"
@@ -49,5 +49,5 @@
 		file="data/audio/Desktop/materials.snd"
 		event_root="collision/vine" >
 	</AudioComponent>
-  
+
 </Entity>

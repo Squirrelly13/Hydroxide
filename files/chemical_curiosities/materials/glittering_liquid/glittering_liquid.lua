@@ -29,7 +29,7 @@ if (fireworkCount <= max_projectiles) then
 	if (value == 1) then
 		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_blue.xml", pos_x, pos_y, vel_x, vel_y)
 	
-	elseif (value == 2) then 
+	elseif (value == 2) then
 		shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_green.xml", pos_x, pos_y, vel_x, vel_y)
 	
 	elseif (value == 3) then

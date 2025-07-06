@@ -254,7 +254,7 @@ if(active_entry ~= nil and active_entry_contents ~= nil)then
             -- If there is no color tag, add the whole line to the result table with a default color
             table.insert(sub_lines, {color = nil, line = line})
         end
-        
+
         -- Now process the rest of the string as before
         for color, text in string.gmatch(line, "<c (%x+)>([^<]+)") do
             table.insert(sub_lines, {color = color, line = text})
@@ -262,7 +262,7 @@ if(active_entry ~= nil and active_entry_contents ~= nil)then
 
         table.insert (description_lines_parsed, sub_lines)
     end
-    
+
 
     local description_sublines = description_lines_parsed
 

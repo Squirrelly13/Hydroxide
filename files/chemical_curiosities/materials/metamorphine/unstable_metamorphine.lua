@@ -65,7 +65,7 @@ material = CellFactory_GetType( material )
 	
 
 if ( convertcomponents ~= nil ) then
-	for key,comp_id in pairs(convertcomponents) do 
+	for key,comp_id in pairs(convertcomponents) do
 		local name = tonumber( ComponentGetValue2( comp_id, "from_material" ) )
 		--local smoke_id = CellFactory_GetType( "smoke" )
 		for index, value in ipairs(CellFactory_GetTags(material)) do

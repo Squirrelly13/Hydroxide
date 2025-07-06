@@ -21,7 +21,7 @@ function calculate_force_at(body_x, body_y)
 	end
 	local direction = 0 - math.atan2( ( y - body_y ), ( x - body_x ) )
 
-	-- local gravity_percent = ( distance_full - distance ) / distance_full 
+	-- local gravity_percent = ( distance_full - distance ) / distance_full
 	-- local gravity_percent = 8
 	local gravity_coeff = 196
 	
@@ -34,7 +34,7 @@ end
 -- attract projectiles
 local entities = EntityGetInRadiusWithTag(x, y, distance_full, "projectile")
 for _,id in ipairs(entities) do	
-	local physicscomp = EntityGetFirstComponent(id, "PhysicsBody2Component") or EntityGetFirstComponent( id, "PhysicsBodyComponent") 
+	local physicscomp = EntityGetFirstComponent(id, "PhysicsBody2Component") or EntityGetFirstComponent( id, "PhysicsBodyComponent")
 	if physicscomp == nil then -- velocity for physics bodies is done later
 		local px, py = EntityGetTransform( id )
 

@@ -35,8 +35,8 @@ if(has_vomit ~= true)then
             local time = GameGetFrameNum()
 
             local previous_vomit_time = tonumber(GlobalsGetValue("last_vomited_time_"..material, "-500"))
-    
-            local time_difference = time - previous_vomit_time         
+
+            local time_difference = time - previous_vomit_time
 
             if(time_difference > 400)then
                 GlobalsSetValue("last_vomited_time_"..material, tostring(time))

@@ -6,7 +6,7 @@
       to_material="lava"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -18,7 +18,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -30,7 +30,7 @@
       to_material="radioactive_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -42,7 +42,7 @@
       to_material="oil"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -54,7 +54,7 @@
       to_material="slime"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -66,7 +66,7 @@
       to_material="blood"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -78,7 +78,7 @@
       to_material="blood_thick"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -90,7 +90,7 @@
       to_material="water_ice"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -102,7 +102,7 @@
       to_material="swamp"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -114,7 +114,7 @@
       to_material="blood_worm"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -126,7 +126,7 @@
       to_material="blood_fungi"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -138,7 +138,7 @@
       to_material="endslime"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -150,7 +150,7 @@
       to_material="sand"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -162,7 +162,7 @@
       to_material="coal"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -174,7 +174,7 @@
       to_material="gunpowder"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -186,7 +186,7 @@
       to_material="snow"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -198,7 +198,7 @@
       to_material="honey"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -210,7 +210,7 @@
       to_material="gunpowder_unstable"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -222,7 +222,7 @@
       to_material="gunpowder_explosive"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -234,7 +234,7 @@
       to_material="bone"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -246,7 +246,7 @@
       to_material="alcohol"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -258,7 +258,7 @@
       to_material="acid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -270,7 +270,7 @@
       to_material="burning_powder"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -282,7 +282,7 @@
       to_material="plasma_fading"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -294,7 +294,7 @@
       to_material="cc_veilium"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -309,7 +309,7 @@
       to_material="aa_rice"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -322,7 +322,7 @@
       to_material="cc_sparkling_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -334,7 +334,7 @@
       to_material="cc_slicing_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -346,7 +346,7 @@
       to_material="cc_glittering_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -358,7 +358,7 @@
       to_material="cc_blasting_powder"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -370,7 +370,7 @@
       to_material="aa_arborium"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -382,7 +382,7 @@
       to_material="aa_pop_rocks"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -394,7 +394,7 @@
       to_material="cc_kindling"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -406,7 +406,7 @@
       to_material="aa_base_potion"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -418,7 +418,7 @@
       to_material="magic_liquid_random_polymorph"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -430,7 +430,7 @@
       to_material="magic_liquid_polymorph"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -442,7 +442,7 @@
       to_material="magic_liquid_invisibility"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -454,7 +454,7 @@
       to_material="magic_liquid_charm"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -466,7 +466,7 @@
       to_material="magic_liquid_berserk"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -478,7 +478,7 @@
       to_material="magic_liquid_teleportation"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -490,7 +490,7 @@
       to_material="magic_liquid_unstable_teleportation"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -502,7 +502,7 @@
       to_material="fungi_creeping_secret"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -514,7 +514,7 @@
       to_material="creepy_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -527,7 +527,7 @@
       to_material="aa_creeping_slime"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -539,7 +539,7 @@
       to_material="magic_liquid_mana_regeneration"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -551,7 +551,7 @@
       to_material="magic_liquid"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -563,7 +563,7 @@
       to_material="material_confusion"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -575,7 +575,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -587,7 +587,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -599,7 +599,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -611,7 +611,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -624,7 +624,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -635,7 +635,7 @@
       to_material="water"
       clean_stains="0"
       is_circle="1"
-      radius="22" 
+      radius="22"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
@@ -651,7 +651,7 @@
 	
 
   <LifetimeComponent
-        lifetime="2" 
+        lifetime="2"
     >
   </LifetimeComponent>
 </Entity>

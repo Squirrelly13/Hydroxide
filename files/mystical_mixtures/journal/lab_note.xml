@@ -22,7 +22,7 @@
 		item_name="Placeholder"
 		ui_description="Bottom Text"
 	></ItemComponent>
-  
+
 	<SpriteComponent
 		_enabled="1"
         _tags="enabled_in_world"
@@ -31,17 +31,17 @@
 		image_file="data/items_gfx/scroll.png"
 	></SpriteComponent>
 
-	<HitboxComponent 
+	<HitboxComponent
 		_tags="enabled_in_world"
-		aabb_min_x="-3" 
-		aabb_max_x="3" 
-		aabb_min_y="-5" 
+		aabb_min_x="-3"
+		aabb_max_x="3"
+		aabb_min_y="-5"
 		aabb_max_y="0" >
 	</HitboxComponent>
 
-	<LightComponent 
+	<LightComponent
 		_tags="enabled_in_world"
-		_enabled="1" 
+		_enabled="1"
 		r="255"
 		g="255"
 		b="255"

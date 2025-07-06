@@ -6,7 +6,7 @@
         from_material="aa_bloom_roof"
         to_material="aa_bloom_roof_inert"
     />
-    
+
     <LifetimeComponent
         lifetime="4"
     />

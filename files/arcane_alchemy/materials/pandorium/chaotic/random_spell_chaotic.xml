@@ -1,7 +1,7 @@
 <Entity name="Chaotic Pandorium">
 
     <SpriteAnimatorComponent/>
-    
+
     <LifetimeComponent lifetime = 45/>
 
 	<GenomeDataComponent herd_id = "mage_swapper"/>

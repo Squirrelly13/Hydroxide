@@ -13,13 +13,13 @@ journal_entries = {
         id = "test_entry",
         category = "Materials",
         title = "$mat_mm_ephemeral_ether",
-        description = "$desc_mm_ephemeral_ether",    
+        description = "$desc_mm_ephemeral_ether",
         custom_unlock_flag = nil,
         unlocked_default = true,
         generate_notes = true,
         icon = nil,
         image = "mods/Hydroxide/files/mystical_mixtures/journal/gfx/ether.png",
-        weight = 1, -- probabilty of note spawning, 1 is default. 
+        weight = 1, -- probabilty of note spawning, 1 is default.
     },]]
 }
 
@@ -74,7 +74,7 @@ for i, v in ipairs(alchemical_materials)do
     })
 
     ::continue::
-end 
+end
 
 for i, v in ipairs(alchemical_recipes)do
     if(not v.generate_notes)then

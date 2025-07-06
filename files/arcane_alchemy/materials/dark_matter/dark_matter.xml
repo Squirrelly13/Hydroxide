@@ -1,5 +1,5 @@
 <Entity>
-	<GameEffectComponent 
+	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="COLLAPSE"
 		frames="600"

@@ -8,8 +8,8 @@ table.insert( actions,{
 	description = "$action_desc_cc_sea_of_methane",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_methane.png",
 	type 		= ACTION_TYPE_MATERIAL,
-	spawn_level                       = "0,4,5,6", 
-	spawn_probability                 = "1,1,1,1",  
+	spawn_level                       = "0,4,5,6",
+	spawn_probability                 = "1,1,1,1",
 	price = 350,
 	mana = 140,
 	max_uses = 3,
@@ -218,8 +218,8 @@ table.insert( actions,{
 	description = "$action_desc_cc_sea_of_lightning",
 	sprite 		= "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/sea_lightning.png",
 	type 		= ACTION_TYPE_MATERIAL,
-	spawn_level                       = "0,4,5,6", 
-	spawn_probability                 = "0.4,1,0.5,1",  
+	spawn_level                       = "0,4,5,6",
+	spawn_probability                 = "0.4,1,0.5,1",
 	price = 350,
 	mana = 140,
 	max_uses = 3,
@@ -283,7 +283,7 @@ table.insert( actions, {
 		price = 100,
 		mana = 25,
 		max_uses = 25,
-		action 		= function() 
+		action 		= function()
 			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/fire_to_grease.xml,data/entities/particles/tinyspark_red.xml,"
 			c.fire_rate_wait = c.fire_rate_wait + 6
 			draw_actions( 1, true )

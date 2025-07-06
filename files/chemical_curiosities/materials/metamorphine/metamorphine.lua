@@ -6,7 +6,7 @@ local pos_x, pos_y = EntityGetTransform( entity_id )
 local convertcomponents = EntityGetComponent( entity_id, "MagicConvertMaterialComponent" )
 
 SetRandomSeed( pos_x + 436, pos_y - 3252 )
-local material_options = { 
+local material_options = {
 	"water",
 	"oil",
 	"lava",
@@ -21,9 +21,9 @@ local material_options = {
 	"blood_fungi",
 	"burning_powder",
 	"honey",
-	"fungi",    
+	"fungi",
 	"aa_rice" }
-local material_options_rare = { 
+local material_options_rare = {
 	"acid",
 	"magic_liquid_teleportation",
 	"magic_liquid_polymorph",
@@ -60,7 +60,7 @@ end
 material = CellFactory_GetType( material )
 
 if ( convertcomponents ~= nil ) then
-	for key,comp_id in pairs(convertcomponents) do 
+	for key,comp_id in pairs(convertcomponents) do
 		local name = tonumber( ComponentGetValue2( comp_id, "from_material" ) )
 		--local smoke_id = CellFactory_GetType( "smoke" )
 		

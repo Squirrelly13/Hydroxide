@@ -49,10 +49,10 @@ for _, reaction in ipairs(reactions)do
     local entity = entity .. [[
     <MaterialAreaCheckerComponent
         material="]]..reaction.input..[["
-        area_aabb.min_x="-0.5" 
-        area_aabb.min_y="-0.5"        
-        area_aabb.max_x="0.5" 
-        area_aabb.max_y="0.5"   
+        area_aabb.min_x="-0.5"
+        area_aabb.min_y="-0.5"
+        area_aabb.max_x="0.5"
+        area_aabb.max_y="0.5"
     />]]
 
     materials_content = materials_content .. [[

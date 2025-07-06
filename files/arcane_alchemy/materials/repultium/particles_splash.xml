@@ -1,5 +1,5 @@
-<Entity 
-  name="unknown" 
+<Entity
+  name="unknown"
    >
 
 	<Base file="data/entities/base_projectile.xml" >
@@ -7,16 +7,16 @@
     		gravity_y="200"
 			air_friction="8.7"
 			>
-    	</VelocityComponent> 
+    	</VelocityComponent>
 	</Base>
 
-	<ProjectileComponent 
-		_enabled="1" 
+	<ProjectileComponent
+		_enabled="1"
 		speed_min="450"
 		speed_max="650"
 		die_on_low_velocity="0"
 		on_death_explode="0"
-		on_death_gfx_leave_sprite="0" 
+		on_death_gfx_leave_sprite="0"
 		on_lifetime_out_explode="0"
 		damage="0.0"
 		bounce_always="1"
@@ -26,10 +26,10 @@
 		collide_with_entities="0"
 		lifetime="10" >
 	</ProjectileComponent>
-   
-	<LightComponent 
-		_enabled="1" 
-		radius="64" 
+
+	<LightComponent
+		_enabled="1"
+		radius="64"
 		r="255"
 		g="230"
 		b="120"
@@ -37,7 +37,7 @@
 		>
 	</LightComponent>
 	
-  <ParticleEmitterComponent 
+  <ParticleEmitterComponent
     emitted_material_name="plasma_fading"
     offset.x="0"
     offset.y="0"
@@ -62,4 +62,3 @@
     is_emitting="1" >
   </ParticleEmitterComponent>
 </Entity>
-

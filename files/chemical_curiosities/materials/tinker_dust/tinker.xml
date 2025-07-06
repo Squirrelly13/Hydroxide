@@ -28,10 +28,10 @@
 	randomize_velocity.max_y="5"
     >
   </SpriteParticleEmitterComponent>
-  
-  <LightComponent 
-    _enabled="1" 
-    radius="600" 
+
+  <LightComponent
+    _enabled="1"
+    radius="600"
 	r="0"
 	g="40"
 	b="80">

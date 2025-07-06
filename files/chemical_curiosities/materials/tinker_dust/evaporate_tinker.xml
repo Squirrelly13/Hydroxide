@@ -6,7 +6,7 @@
 	</LuaComponent>
 	
 	<LifetimeComponent
-        lifetime="1" 
+        lifetime="1"
     >
   </LifetimeComponent>
 		

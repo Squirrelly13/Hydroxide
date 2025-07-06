@@ -20,7 +20,7 @@ if(#mortals > 0)then
 
     local velocityComp = EntityGetFirstComponentIncludingDisabled( entity, "VelocityComponent" )
     if not velocityComp then return end
-    ComponentSetValue2( velocityComp, "mVelocity", velocity_x, velocity_y )    
+    ComponentSetValue2( velocityComp, "mVelocity", velocity_x, velocity_y )
 
 else
     EntityKill(entity)

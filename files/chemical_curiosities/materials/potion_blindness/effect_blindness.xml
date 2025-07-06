@@ -1,8 +1,8 @@
 <Entity>
     <InheritTransformComponent>
-    </InheritTransformComponent>    
-    
-    <GameEffectComponent 
+    </InheritTransformComponent>
+
+    <GameEffectComponent
         effect="BLINDNESS"
         frames="99999"
     ></GameEffectComponent>

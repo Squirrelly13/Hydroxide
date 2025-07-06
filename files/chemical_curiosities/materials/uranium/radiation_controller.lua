@@ -89,7 +89,7 @@ if radcount >= STAGE2 then --immunities
 	
 	if owner_children ~= nil then
 		for k,v in ipairs(owner_children) do
-			if EntityHasTag(v, "effect_protection") then 
+			if EntityHasTag(v, "effect_protection") then
 				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
 				--print("adding " .. key .. " to immunities table")
 				immunities[key] = (immunities[key] or 0) + 1
@@ -234,7 +234,7 @@ local leggypermanent
 if leggyentity then --if there is a leggy
 
 	local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
-	if leggyvarcomps ~= nil then leggypermanent = ComponentGetValue2(leggyvarcomps[1], "value_bool") end 
+	if leggyvarcomps ~= nil then leggypermanent = ComponentGetValue2(leggyvarcomps[1], "value_bool") end
 	leggypermanent = leggypermanent or false
 
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")

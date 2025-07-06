@@ -1,6 +1,6 @@
 <Materials>
 	
- <CellData 
+ <CellData
     name="terror_teleportatium"
     ui_name="$mat_terror_teleportatium"
     tags="[liquid],[magic_liquid],[terror]"
@@ -10,7 +10,7 @@
     gfx_glow="170"
     liquid_gravity="0.6"
 	liquid_stains="1"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 
     >
 	<ParticleEffect

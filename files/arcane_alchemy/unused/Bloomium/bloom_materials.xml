@@ -18,7 +18,7 @@
 	solid_friction="0.05"
 	requires_oxygen="1"
 	gfx_glow="1"
-	hp="30" 
+	hp="30"
 	platform_type="1"
 	
 	>
@@ -39,7 +39,7 @@
 	wang_color="ff4ab183"
 	generates_smoke="0"
 	liquid_gravity="0"
-	liquid_sand="1" 
+	liquid_sand="1"
 	liquid_static="1"
 	temperature_of_fire="90"
 	autoignition_temperature="85"
@@ -48,7 +48,7 @@
 	solid_friction="0.05"
 	requires_oxygen="1"
 	gfx_glow="1"
-	hp="30" 
+	hp="30"
 	platform_type="1"
 	>
     <Graphics
@@ -58,7 +58,7 @@
     </Graphics>
 	
   </CellData><!-- bloomium Ceiling -->
-  
+
      <CellData
 	name="aa_bloom_roof_dead"
 	ui_name="Bloomium"
@@ -69,7 +69,7 @@
 	wang_color="ff4ab184"
 	generates_smoke="0"
 	liquid_gravity="0"
-	liquid_sand="1" 
+	liquid_sand="1"
 	liquid_static="1"
 	temperature_of_fire="90"
 	autoignition_temperature="85"
@@ -78,7 +78,7 @@
 	solid_friction="0.05"
 	requires_oxygen="1"
 	gfx_glow="1"
-	hp="30" 
+	hp="30"
 	platform_type="1"
 	>
     <Graphics
@@ -88,7 +88,7 @@
     </Graphics>
 	
   </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
-  
+
   <CellData
 	name="aa_bloom_roof_plant"
 	ui_name="Bloomium"
@@ -99,11 +99,11 @@
 	wang_color="ff4ab185"
 	generates_smoke="0"
 	liquid_gravity="0"
-	liquid_sand="1" 
+	liquid_sand="1"
 	liquid_viscosity="101"
 	liquid_sticks_to_ceiling="100"
   vegetation_full_lifetime_growth="700"
-	vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ceiling_$[1-7].xml" 
+	vegetation_sprite="mods/Hydroxide/files/arcane_alchemy/bloomium/healthy/bloom_ceiling_$[1-7].xml"
 	temperature_of_fire="90"
 	autoignition_temperature="85"
 	on_fire="0"
@@ -111,7 +111,7 @@
 	solid_friction="0.05"
 	requires_oxygen="0"
 	gfx_glow="1"
-	hp="30" 
+	hp="30"
 	platform_type="0"
 	>
     <Graphics
@@ -121,7 +121,7 @@
     </Graphics>
 	
   </CellData><!-- i think this is the roots that hang from bloomium roofs -->
-  
+
   <CellData
 	name="AA_BLOOM_LIQUID"
 	ui_name="Bloomium"

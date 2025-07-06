@@ -34,9 +34,9 @@
         count_max="3"
 		gravity.y="-5"
 		
-        y_vel_min="-15" 
+        y_vel_min="-15"
         y_vel_max="-1"
-		x_vel_min="-1"  
+		x_vel_min="-1"
         x_vel_max="1"
 		
         x_pos_offset_min="-1"

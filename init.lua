@@ -154,7 +154,7 @@ if CC then
 	ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_liquidcave.lua" ) --new structures in the alchemy lab
 	ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcastle.lua" ) --new structures in hiisi base
 	ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
-	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault 
+	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault
 
 	---- Spells
 
@@ -271,8 +271,8 @@ end
 
 
 --- bloomium
---ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml" ) 
---ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml" ) 
+--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml" )
+--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml" )
 
 
 	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
@@ -280,8 +280,8 @@ end
 
 	--ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
 	--[[
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" ) 
-	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_reactions.xml" ) 
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml" )
+	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_reactions.xml" )
 
 		-- this code adds tags to preexisting materials, its good for compatibility--
 
@@ -530,9 +530,9 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		or elem.attr.name == "rock_static_grey"
 		or elem.attr.name == "rock_static_wet"
 		or elem.attr.name == "snowrock_static"
-		or elem.attr.name == "rock_box2d_nohit_hard" 
-		or elem.attr.name == "rock_box2d_nohit" 
-		or elem.attr.name == "rock_box2d" 
+		or elem.attr.name == "rock_box2d_nohit_hard"
+		or elem.attr.name == "rock_box2d_nohit"
+		or elem.attr.name == "rock_box2d"
 		or elem.attr.name == "rock_box2d_nohit"
 		or elem.attr.name == "lavarock_static" then
 	        elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"	
@@ -547,7 +547,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	local x = ProceduralRandom(0,0)
 	print( "===================================== random " .. tostring(x) )
 
-	if ModSettingGet("Hydroxide.CC_ORES") then 
+	if ModSettingGet("Hydroxide.CC_ORES") then
 	
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
@@ -562,10 +562,10 @@ end
 
 
 function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
-	if CC then 
-		--ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste")) 
-		--ConvertMaterialEverywhere(CellFactory_GetType("cc_dull_fungus"), CellFactory_GetType("cc_nullium")) 
-	end 
+	if CC then
+		--ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste"))
+		--ConvertMaterialEverywhere(CellFactory_GetType("cc_dull_fungus"), CellFactory_GetType("cc_nullium"))
+	end
 end
 
 

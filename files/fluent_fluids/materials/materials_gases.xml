@@ -1,6 +1,6 @@
 <Materials>
-    
-    
+
+
     <CellData
         name="ff_magic_gas"
 	    ui_name="$mat_ff_magic_gas"
@@ -15,7 +15,7 @@
 	    lifetime="7200"
 	    liquid_stains="1"
 	    liquid_sprite_stain_shaken_drop_chance="1"
-	    audio_materialaudio_type="MAGICAL" 
+	    audio_materialaudio_type="MAGICAL"
 	> <ParticleEffect
 		vel.y="2.86"
 		vel_random.min_x="-6"
@@ -53,7 +53,7 @@
 		draw_as_long="1"
 		friction="-3.429"
 		probability="0.0518"
-	> </ParticleEffect> 
+	> </ParticleEffect>
     </CellDataChild>
 
 

@@ -10,7 +10,7 @@ local possible_wands = EntityGetInRadiusWithTag(x, y, 200, "item_physics")
 if(possible_wands ~= nil)then
     for k, entity in pairs(possible_wands)do
         if(EntityHasTag(entity, "modified_broken") ~= true)then
-            
+
             EntityAddTag(entity, "modified_broken")
             local physics_shape_components = EntityGetComponent(entity, "PhysicsImageShapeComponent")
             if(physics_shape_components ~= nil)then
@@ -21,10 +21,10 @@ if(possible_wands ~= nil)then
                         EntityAddComponent(entity, "LuaComponent", {
                             script_material_area_checker_success="mods/Hydroxide/files/scripts/misc/convert_to_nerf_gun.lua",
                         })
-                                               
+
                         local area_checker = EntityAddComponent(entity, "MaterialAreaCheckerComponent", {
                             update_every_x_frame="20",
-                            look_for_failure="0",  
+                            look_for_failure="0",
                             material="aa_magic_plastic",
                             material2="item_box2d",
                             kill_after_message="0",

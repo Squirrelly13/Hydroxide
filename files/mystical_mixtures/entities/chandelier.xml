@@ -3,7 +3,7 @@
   <PhysicsBody2Component
       allow_sleep="1"
       angular_damping="0.01"
-      linear_damping="0.1" 
+      linear_damping="0.1"
       init_offset_x="8.5"
       init_offset_y="0"
       root_offset_x="8.5"
@@ -28,41 +28,41 @@
     body1_id="0"
   ></PhysicsJoint2Component>
 
-  <LightComponent 
+  <LightComponent
     radius="120"
-    fade_out_time="1.5" 
+    fade_out_time="1.5"
     offset_y="-15"
     >
   </LightComponent>
 
 
-	<DamageModelComponent 
-    air_needed="0" 
-    blood_material="oil" 
-    drop_items_on_death="0" 
-    falling_damages="0" 
-    fire_probability_of_ignition="0" 
+	<DamageModelComponent
+    air_needed="0"
+    blood_material="oil"
+    drop_items_on_death="0"
+    falling_damages="0"
+    fire_probability_of_ignition="0"
 	critical_damage_resistance="1"
-    hp="0.5" 
-    is_on_fire="0" 
-    materials_create_messages="0" 
-    materials_damage="0" 
-    ragdoll_filenames_file="" 
-    ragdoll_material="" 
+    hp="0.5"
+    is_on_fire="0"
+    materials_create_messages="0"
+    materials_damage="0"
+    ragdoll_filenames_file=""
+    ragdoll_material=""
 	ui_report_damage="0"
 	>
   </DamageModelComponent>
 
-  <SpriteComponent 
+  <SpriteComponent
     _tags="character"
-    alpha="1" 
+    alpha="1"
     image_file="data/props_gfx/chandelier_flames.xml"
-    offset_x="8.5" 
+    offset_x="8.5"
     offset_y="0"
     emissive="1"
     additive="0"
-    next_rect_animation="" 
-    rect_animation="stand" 
+    next_rect_animation=""
+    rect_animation="stand"
      >
   </SpriteComponent>
 
@@ -74,7 +74,7 @@
   </SpriteAnimatorComponent>
 
   <LuaComponent script_physics_body_modified="data/scripts/props/physics_lantern_damaged.lua"  />
-  
+
   <LuaComponent script_death="data/scripts/props/lantern_small_death.lua" />
 
   <AudioComponent

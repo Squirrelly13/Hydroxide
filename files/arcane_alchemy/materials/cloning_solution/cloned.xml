@@ -1,10 +1,10 @@
 <Entity tags="hittable,teleportable_NOT" >
 
-<GameEffectComponent 
+<GameEffectComponent
     effect="CUSTOM"
     custom_effect_id="AA_CLONE"
     frames="60">
-</GameEffectComponent> 
+</GameEffectComponent>
 
 	
 	<LuaComponent

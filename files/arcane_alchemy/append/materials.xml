@@ -45,12 +45,12 @@
     liquid_stains_self="0"
     on_fire="0"
     requires_oxygen="1"
-    temperature_of_fire="10" 
+    temperature_of_fire="10"
     danger_water="1"
     liquid_stains="1"
 	status_effects="AA_HIT_SELF"
     liquid_sprite_stain_shaken_drop_chance="10"
-    liquid_sprite_stains_check_offset="-1" 
+    liquid_sprite_stains_check_offset="-1"
     show_in_creative_mode="1"
   >
     <Graphics
@@ -63,7 +63,7 @@
 			</Ingestion>
     </StatusEffects>
   </CellData> <!--  Why are you hitting yourself?  -->
-  
+
   <CellData
     name="aa_shrinkium"
     ui_name="$mat_aa_shrinkium"
@@ -78,24 +78,24 @@
     liquid_stains_self="0"
     on_fire="0"
     requires_oxygen="1"
-    temperature_of_fire="10" 
+    temperature_of_fire="10"
     danger_water="1"
     liquid_stains="1"
 	status_effects="AA_SHRINK"
     liquid_sprite_stain_shaken_drop_chance="0"
-    liquid_sprite_stains_check_offset="-1" 
+    liquid_sprite_stains_check_offset="-1"
     show_in_creative_mode="1"
   >
     <Graphics
       texture_file="mods/Hydroxide/files/arcane_alchemy/materials/shrinkium/shrinkium.png"
       color="ffffade1" >
-    </Graphics>    
+    </Graphics>
     <StatusEffects>
       <Ingestion>
           <StatusEffect type="AA_SHRINK" amount="0.3"/>
       </Ingestion>
     </StatusEffects>
-  </CellData>  
+  </CellData>
 
     <CellData
     name="aa_darkmatter"
@@ -111,15 +111,15 @@
     liquid_stains_self="0"
     on_fire="0"
     requires_oxygen="1"
-    temperature_of_fire="10" 
+    temperature_of_fire="10"
     danger_water="1"
     liquid_stains="2"
 	status_effects="AA_COLLAPSE"
     liquid_sprite_stain_ignited_drop_chance="25"
     liquid_sprite_stain_shaken_drop_chance="25"
-    liquid_sprite_stains_check_offset="-1" 
+    liquid_sprite_stains_check_offset="-1"
     show_in_creative_mode="1"
-	audio_materialaudio_type="LAVA" 
+	audio_materialaudio_type="LAVA"
   >
     <Graphics
       texture_file="mods/Hydroxide/files/arcane_alchemy/materials/dark_matter/space.png"
@@ -135,7 +135,7 @@
       </Ingestion>
     </StatusEffects>
   </CellData><!--  COLLAPSE -->
-  
+
   <CellData
     name="aa_static_charge"
     ui_name="$mat_aa_static_charge"
@@ -150,13 +150,13 @@
     liquid_stains_self="0"
     on_fire="0"
     requires_oxygen="1"
-    temperature_of_fire="10" 
+    temperature_of_fire="10"
     danger_water="1"
     liquid_stains="1"
 	  gfx_glow="200"
 	  status_effects="aa_static_charge"
     liquid_sprite_stain_ignited_drop_chance="10"
-    liquid_sprite_stains_check_offset="-1" 
+    liquid_sprite_stains_check_offset="-1"
     show_in_creative_mode="1"
     >
     <Graphics
@@ -183,18 +183,18 @@
     </StatusEffects>
   </CellData><!--  makes you shocking -->
 
-  
-  <CellData 
+
+  <CellData
     name="aa_repultium"
     ui_name="$mat_aa_repultium"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid]"
-    burnable="0"  
-    density="5"  
-    cell_type="liquid" 
-    wang_color="8888e570"  
-    generates_smoke="0"  
-    liquid_gravity="0.1"  
-    liquid_sand="0"  
+    burnable="0"
+    density="5"
+    cell_type="liquid"
+    wang_color="8888e570"
+    generates_smoke="0"
+    liquid_gravity="0.1"
+    liquid_sand="0"
     liquid_sticks_to_ceiling="100"
     liquid_damping="0.9"
     liquid_flow_speed="0.01"
@@ -203,34 +203,34 @@
     liquid_sprite_stain_shaken_drop_chance="100"
     stickyness="0"
     solid_friction="1.0"
-    on_fire="0"  
-    requires_oxygen="0"  
+    on_fire="0"
+    requires_oxygen="0"
     temperature_of_fire="10"
     lifetime="-1"
     audio_physics_material_event="slime"
     audio_physics_material_wall="slime"
     audio_physics_material_solid="slime" >
-    <Graphics 
+    <Graphics
       color="8832a89d">
     </Graphics>
     <StatusEffects>
         <Stains>
             <StatusEffect type="AA_REPULSION" />
         </Stains>
-    </StatusEffects>    
+    </StatusEffects>
   </CellData><!-- Things bounce off this. -->
-  
-  <CellData 
+
+  <CellData
     name="aa_hungry_slime"
     ui_name="$mat_aa_hungry_slime"
     tags="[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
-    burnable="0"  
-    density="5"  
-    cell_type="liquid" 
-    wang_color="88c301e6"  
-    generates_smoke="0"  
-    liquid_gravity="0.1"  
-    liquid_sand="0"  
+    burnable="0"
+    density="5"
+    cell_type="liquid"
+    wang_color="88c301e6"
+    generates_smoke="0"
+    liquid_gravity="0.1"
+    liquid_sand="0"
     liquid_sticks_to_ceiling="100"
     liquid_damping="0.9"
     liquid_flow_speed="0.01"
@@ -239,8 +239,8 @@
     liquid_sprite_stain_shaken_drop_chance="40"
     stickyness="1.0"
     solid_friction="1.0"
-    on_fire="0"  
-    requires_oxygen="0"  
+    on_fire="0"
+    requires_oxygen="0"
     temperature_of_fire="10"
     lifetime="-1"
 	status_effects="AA_SINKING"
@@ -256,20 +256,20 @@
         <Ingestion>
             <StatusEffect type="AA_HUNGRY_VOMIT" amount="0.15"/>
         </Ingestion>
-    </StatusEffects> 
+    </StatusEffects>
   </CellData><!-- slowly growing slime of some kind. not sure how this goes -->
-  
-   <CellData 
+
+   <CellData
     name="aa_creeping_slime"
     ui_name="$mat_aa_creeping_slime"
     tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[liquid],[catastrophic]"
-    burnable="0"  
-    density="5"  
-    cell_type="liquid" 
-    wang_color="88c301e7"  
-    generates_smoke="0"  
-    liquid_gravity="1.0"  
-    liquid_sand="0"  
+    burnable="0"
+    density="5"
+    cell_type="liquid"
+    wang_color="88c301e7"
+    generates_smoke="0"
+    liquid_gravity="1.0"
+    liquid_sand="0"
     liquid_sticks_to_ceiling="100"
     liquid_damping="0.5"
     liquid_flow_speed="0.5"
@@ -278,8 +278,8 @@
     liquid_sprite_stain_shaken_drop_chance="40"
     stickyness="0.8"
     solid_friction="1.0"
-    on_fire="0"  
-    requires_oxygen="0"  
+    on_fire="0"
+    requires_oxygen="0"
     temperature_of_fire="10"
     lifetime="-1"
     audio_physics_material_event="slime"
@@ -291,17 +291,17 @@
 	</Graphics>
   </CellData><!-- this one spreads over ground, pretty aggressively -->
 
-  <CellData 
+  <CellData
     name="aa_hungry_slime_growing"
     ui_name="$mat_aa_hungry_slime_growing"
     tags="[burnable],[corrodible],[slimy],[meltable_to_lava],[alchemy],[liquid],[hungry_slime]"
-    burnable="1"  
-    density="4"  
-    cell_type="liquid" 
-    wang_color="78E8BD5D"  
-    generates_smoke="0"  
-    liquid_gravity="0.1"  
-    liquid_sand="0"  
+    burnable="1"
+    density="4"
+    cell_type="liquid"
+    wang_color="78E8BD5D"
+    generates_smoke="0"
+    liquid_gravity="0.1"
+    liquid_sand="0"
     liquid_sticks_to_ceiling="100"
     liquid_damping="0.9"
     liquid_flow_speed="0.01"
@@ -309,24 +309,24 @@
     liquid_stains="2"
     stickyness="1.0"
     solid_friction="1.0"
-    on_fire="0"  
-    requires_oxygen="0"  
+    on_fire="0"
+    requires_oxygen="0"
     temperature_of_fire="10"
 	hp="10"
     lifetime="900"
     status_effects="SLIMY"
     audio_physics_material_event="slime"
     audio_physics_material_wall="slime"
-    audio_physics_material_solid="slime" 
+    audio_physics_material_solid="slime"
 	audio_materialaudio_type="LAVA"
 	>
     <Graphics
-      texture_file="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/hungry2.png" 
+      texture_file="mods/Hydroxide/files/arcane_alchemy/materials/hungry_slime/hungry2.png"
       color="FF7C5100">
     </Graphics>
   </CellData><!-- Growing Slime -->
 
-  
+
     <CellData
 	name="aa_ash"
 	ui_name="$mat_aa_ash"
@@ -341,7 +341,7 @@
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="10"
-	hp="1" 
+	hp="1"
 	audio_physics_material_event="sand"
 	audio_physics_material_wall="sand"
 	audio_physics_material_solid="sand"
@@ -352,7 +352,7 @@
 		
     </Graphics>
   </CellData><!-- ASH -->
-  
+
   <CellData
 	name="aa_soot"
 	ui_name="$mat_aa_soot"
@@ -374,7 +374,7 @@
     </Graphics>
   </CellData><!-- Soot? -->
 
-   
+
   <CellData
 	name="aa_potion_gas"
 	ui_name="$mat_aa_potion_gas"
@@ -389,8 +389,8 @@
 	liquid_sand="0"
 	on_fire="0"
 	requires_oxygen="0"
-	temperature_of_fire="60" 
-	gfx_glow="150" 
+	temperature_of_fire="60"
+	gfx_glow="150"
 	>
 	<Graphics
 		
@@ -399,7 +399,7 @@
     </Graphics>
   </CellData><!-- Potion Gas, a catalyst for making other potions. -->
 
-  
+
   <CellData
 	name="aa_solidified_slime"
 	ui_name="$mat_aa_solidified_slime"
@@ -414,13 +414,13 @@
 	solid_static_type="1"
 	durability="10"
 	on_fire="0"
-	hp="1" 
+	hp="1"
 	platform_type="1"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
 	audio_physics_material_solid="slime"
 	>
-    <Graphics 
+    <Graphics
 		color="98b8376d"
 		>
     </Graphics>
@@ -441,7 +441,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="1"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	>
 	<ParticleEffect
 		vel.y="-40"
@@ -460,13 +460,13 @@
 		probability="0.0343"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="98F0FFE4"
 		>
     </Graphics>
 	
   </CellData><!-- Neutral potion, used in reactions probably -->
-  
+
   <CellData
 	name="aa_arborium"
 	ui_name="$mat_aa_arborium"
@@ -501,11 +501,11 @@
 		probability="0.0343"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="980C7C13"
 		>
     </Graphics>
-  </CellData> 
+  </CellData>
 
 	 <CellData
 	name="aa_catalyst"
@@ -534,7 +534,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Catalyst -->
-  
+
    <CellData
 	name="aa_oil_splitting"
 	ui_name="$mat_oil"
@@ -554,7 +554,7 @@
 	autoignition_temperature="10"
 	electrical_conductivity="0"
 	liquid_sprite_stains_check_offset="1"
-	liquid_sprite_stains_status_threshold="0.2" 
+	liquid_sprite_stains_status_threshold="0.2"
 	show_in_creative_mode="1"
 	ignore_self_reaction_warning="1"
 	>
@@ -572,7 +572,7 @@
     </Graphics>
   </CellData> <!-- seperating oil material -->
 
-  
+
     <CellData
 	name="aa_light_oil"
 	ui_name="$mat_aa_light_oil"
@@ -592,7 +592,7 @@
 	autoignition_temperature="10"
 	electrical_conductivity="0"
 	liquid_sprite_stains_check_offset="1"
-	liquid_sprite_stains_status_threshold="0.2" 
+	liquid_sprite_stains_status_threshold="0.2"
 	show_in_creative_mode="1"
 	>
 	<StatusEffects>
@@ -609,7 +609,7 @@
     </Graphics>
   </CellData><!-- LIGHT OIL -->
 
-  
+
     <CellData
 	name="aa_heavy_oil"
 	ui_name="$mat_aa_heavy_oil"
@@ -629,7 +629,7 @@
 	autoignition_temperature="10"
 	electrical_conductivity="0"
 	liquid_sprite_stains_check_offset="1"
-	liquid_sprite_stains_status_threshold="0.2" 
+	liquid_sprite_stains_status_threshold="0.2"
 	show_in_creative_mode="1"
 	>
 	<StatusEffects>
@@ -646,66 +646,66 @@
     </Graphics>
   </CellData><!-- HEAVY OIL -->
 
-   <CellData 
+   <CellData
 	name="aa_magic_plastic"
 	ui_name="$mat_aa_magic_plastic"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[slime]"
-	burnable="0"  
-	density="5"  
-	cell_type="liquid" 
-	wang_color="885a9911"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	burnable="0"
+	density="5"
+	cell_type="liquid"
+	wang_color="885a9911"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_sticks_to_ceiling="40"
 	liquid_slime="1"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="350"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
+	audio_physics_material_solid="slime"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
- 
+    <Graphics
+
 		color="FF7A0B03"
 		>
     </Graphics>
   </CellData><!-- idk makes a nerf gun with something but idk what. kinda broken, gonna leave it in -->
-  
-    <CellData 
+
+    <CellData
 	name="aa_love"
 	ui_name="$mat_aa_love"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[burnable],[magic_liquid],[impure]"
-	density="5"  
+	density="5"
 	lifetime="225"
 	burnable="1"
 	fire_hp="500"
 	autoignition_temperature="10"
-	cell_type="liquid" 
-	wang_color="885a9913"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	cell_type="liquid"
+	wang_color="885a9913"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_stains="4"
 	solid_friction="0.1"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="65"
 	status_effects="AA_LOVE_POTION"
-	requires_oxygen="1"  
-	temperature_of_fire="10" 
+	requires_oxygen="1"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
+	audio_physics_material_solid="slime"
 	show_in_creative_mode="1"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	>
-    <Graphics 
+    <Graphics
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/love/LOVE.png"
 		color="77FF38F1"
 		>
@@ -732,34 +732,34 @@
     </StatusEffects>
   </CellData><!-- love heart potion, kinda cool -->
 
-  
-  <CellData 
+
+  <CellData
 	name="aa_meagre_offering"
 	ui_name="$mat_aa_meagre_offering"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
-	burnable="0"  
-	density="5"  
-	cell_type="liquid" 
-	wang_color="885a9914"  
-	generates_smoke="0"  
-	liquid_gravity="0.8"  
-	liquid_sand="0"  
+	burnable="0"
+	density="5"
+	cell_type="liquid"
+	wang_color="885a9914"
+	generates_smoke="0"
+	liquid_gravity="0.8"
+	liquid_sand="0"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="120"
 	status_effects="AA_PATH"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
-	audio_materialaudio_type="MAGICAL" 
+	audio_physics_material_solid="slime"
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
- 
+    <Graphics
+
 		color="60FFE86B"
 		>
     </Graphics>
@@ -785,7 +785,7 @@
     </StatusEffects>
   </CellData><!-- A meagre offering -->
  <!-- TODO reactions maybe gold and something? -->
-  
+
      <CellData
 	name="aa_rice"
 	ui_name="$mat_aa_rice"
@@ -800,7 +800,7 @@
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="10"
-	hp="800" 
+	hp="800"
 	audio_physics_material_event="sand"
 	audio_physics_material_wall="sand"
 	audio_physics_material_solid="sand"
@@ -811,17 +811,17 @@
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/meager_offering/rice.png"
 		color="ffb89e57" >
 		<Edge>
-			 <EdgeGraphics 
-				overwrite="0" 
-				percent="0.6" 
-				require_same_material="1" 
-				require_same_material_type="1" 
-				type="EVERYWHERE" 
+			 <EdgeGraphics
+				overwrite="0"
+				percent="0.6"
+				require_same_material="1"
+				require_same_material_type="1"
+				type="EVERYWHERE"
 				z="1" >
 				<Images>
-					<Image 
+					<Image
 						allow_random_rotation="1"
-						filename="data/materials_gfx/edge_files/edge_sand.png" 
+						filename="data/materials_gfx/edge_files/edge_sand.png"
 					/>
 				</Images>
 			  </EdgeGraphics>
@@ -833,33 +833,33 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- RICE -->
-  
-  <CellData 
+
+  <CellData
 	name="aa_icy_inferno"
 	ui_name="$mat_aa_icy_inferno"
   	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
-	burnable="0"  
-	density="5"  
-	cell_type="liquid" 
-	wang_color="885a2217"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	burnable="0"
+	density="5"
+	cell_type="liquid"
+	wang_color="885a2217"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_sticks_to_ceiling="40"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="200"
 	status_effects="AA_ICEFIRE"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
+	audio_physics_material_solid="slime"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
+    <Graphics
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/icy_inferno/icefire.png"
 		color="607B00FF"
 		>
@@ -886,8 +886,8 @@
     </StatusEffects>
   </CellData><!-- Icy Inferno turns fire to freezing vapor in vicinity of player -->
 
-  
-  <CellData 
+
+  <CellData
 	name="aa_pandorium"
 	ui_name="$mat_aa_pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure]"
@@ -924,7 +924,7 @@
 		probability="0.0343"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="44FF8DEA"
 		>
     </Graphics>
@@ -935,8 +935,8 @@
     </StatusEffects>
   </CellData><!-- Pandorium -->
 
-  
-   <CellData 
+
+   <CellData
 	name="aa_unstable_pandorium"
 	ui_name="$mat_aa_unstable_pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
@@ -970,7 +970,7 @@
 		probability="0.0343"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="44FF4E99"
 		>
     </Graphics>
@@ -981,8 +981,8 @@
     </StatusEffects>
 	
   </CellData><!-- Unstable Pandorium -->
-  
-  <CellData 
+
+  <CellData
 	name="aa_chaotic_pandorium"
 	ui_name="$mat_aa_chaotic_pandorium"
   	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
@@ -1019,20 +1019,20 @@
 		probability="0.0543"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="44FF93EB"
 		>
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10" /> 
+			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10" />
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Chaotic Pandorium -->
 
 
 
-   <CellData 
+   <CellData
 	name="aa_pop_rocks"
 	ui_name="$mat_aa_pop_rocks"
   	tags="[liquid],[magic_liquid],[water],[impure]"
@@ -1066,39 +1066,39 @@
 		probability="0.0343"
 	>
 	</ParticleEffect>
-	<Graphics 
+	<Graphics
 		color="984C4E59"
 		>
     </Graphics>
 	
   </CellData><!-- POP ROCKS!!!! -->
 
-    <CellData 
+    <CellData
 	name="aa_condensed_gravity"
 	ui_name="$mat_aa_condensed_gravity"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
-	burnable="0"  
-	density="5"  
-	cell_type="liquid" 
-	wang_color="885a9919"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	burnable="0"
+	density="5"
+	cell_type="liquid"
+	wang_color="885a9919"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_sticks_to_ceiling="40"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="200"
 	status_effects="AA_GRAVITY"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
+	audio_physics_material_solid="slime"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
+    <Graphics
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/condensed_gravity/gravity.png"
 		color="602D38FF"
 		>
@@ -1124,35 +1124,35 @@
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Condensed Gravity -->
-  
-  <CellData 
+
+  <CellData
 	name="aa_cloning_solution"
 	ui_name="$mat_aa_cloning_solution"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
-	burnable="0"  
-	density="0.01"  
-	cell_type="liquid" 
-	wang_color="885a9917"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	burnable="0"
+	density="0.01"
+	cell_type="liquid"
+	wang_color="885a9917"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_sticks_to_ceiling="40"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="200"
 	liquid_sprite_stain_shaken_drop_chance="35"
 	status_effects="AA_CLONE"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
-	audio_materialaudio_type="MAGICAL" 
+	audio_physics_material_solid="slime"
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
+    <Graphics
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/clone.png"
 		color="607F3300"
 		>
@@ -1179,34 +1179,34 @@
     </StatusEffects>
   </CellData><!-- Cloning Solution -->
 
- 
-    <!-- <CellData 
+
+    <!-- <CellData
 	name="AA_GLUE"
 	ui_name="Omega glue"
   	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
-	burnable="1"  
-	density="0.01"  
-	cell_type="liquid" 
-	wang_color="885a9918"  
-	generates_smoke="0"  
-	liquid_gravity="0.1"  
-	liquid_sand="0"  
+	burnable="1"
+	density="0.01"
+	cell_type="liquid"
+	wang_color="885a9918"
+	generates_smoke="0"
+	liquid_gravity="0.1"
+	liquid_sand="0"
 	liquid_sticks_to_ceiling="40"
 	liquid_stains="2"
 	stickyness="0.0"
 	solid_friction="1.0"
-	on_fire="0"  
+	on_fire="0"
 	gfx_glow="200"
 	liquid_sprite_stain_shaken_drop_chance="15"
 	status_effects="GLUED"
-	requires_oxygen="0"  
-	temperature_of_fire="10" 
+	requires_oxygen="0"
+	temperature_of_fire="10"
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
-	audio_physics_material_solid="slime" 
+	audio_physics_material_solid="slime"
 	show_in_creative_mode="1"
 	>
-    <Graphics 
+    <Graphics
 		texture_file="mods/Hydroxide/files/arcane_alchemy/materials/AA_GLUE/glue.png"
 		color="60FEFFD1"
 		>
@@ -1220,7 +1220,7 @@
  <!-- TODO fi -->
 <!-- POssibly using a hitbox to detect which enemies to add anchors t -->
 
-  
+
   <CellData
 	name="aa_compost"
 	ui_name="$mat_aa_compost"
@@ -1235,7 +1235,7 @@
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="10"
-	hp="800" 
+	hp="800"
 	gfx_glow="900"
 	audio_physics_material_event="sand"
 	audio_physics_material_wall="sand"
@@ -1248,11 +1248,11 @@
 	  color="ff80C850" >
     </Graphics>
   </CellData><!-- Compost, grows big plants its pretty coo -->
-  
-  
+
+
 <!-- todo: invent a material called "Growth" so I don't look like an idiot in the materials spreadsheet-->
 
-  
+
 <CellData
     name="aa_strange_matter"
     ui_name="$mat_aa_strange_matter"
@@ -1272,32 +1272,32 @@
     autoignition_temperature="1"
     gfx_glow="200" >
 
-    <ExplosionConfig 
+    <ExplosionConfig
         damage="0"
-        ray_energy="400000" 
-        explosion_radius="1000000" 
+        ray_energy="400000"
+        explosion_radius="1000000"
         cell_explosion_damage_required="1"
         cell_explosion_radius_min="1000"
-        cell_explosion_radius_min="1000" 
+        cell_explosion_radius_min="1000"
         hole_destroy_liquid="1"
         explosion_sprite="data/particles/explosion_012.xml"
         ray_energy="1000000"
-        spark_material="void_liquid" 
-        material_sparks_real="1" 
-        cell_explosion_power="100000" 
-        cell_explosion_power_ragdoll_coeff="0.75" 
-        cell_explosion_probability="100" 
-        cell_explosion_velocity_min="0" 
-        create_cell_probability="1" 
-        sparks_count_max="5" 
-        sparks_count_min="5" 
+        spark_material="void_liquid"
+        material_sparks_real="1"
+        cell_explosion_power="100000"
+        cell_explosion_power_ragdoll_coeff="0.75"
+        cell_explosion_probability="100"
+        cell_explosion_velocity_min="0"
+        create_cell_probability="1"
+        sparks_count_max="5"
+        sparks_count_min="5"
         >
     </ExplosionConfig>
   </CellData><!-- Strange Matter -->
-  
 
-  <CellData 
-	name="aa_petrified_moss"  
+
+  <CellData
+	name="aa_petrified_moss"
 	ui_name="$mat_aa_petrified_moss"
 	tags="[corrodible]"
 	density="7"
@@ -1306,12 +1306,12 @@
 	liquid_sand="1"
 	liquid_static="1"
 	solid_static_type="1"
-	hp="800" 
+	hp="800"
 	platform_type="1"
 	audio_physics_material_event="gravel"
 	audio_physics_material_wall="gravel"
 	audio_physics_material_solid="rock"
-	> 
+	>
   </CellData>
 
 

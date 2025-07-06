@@ -9,7 +9,7 @@
 			>
 		</LifetimeComponent>
 		
-		<SpriteComponent 
+		<SpriteComponent
 			image_file=""
 			>
 		</SpriteComponent>
@@ -30,4 +30,3 @@
 	
 
 </Entity>
-

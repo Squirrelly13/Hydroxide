@@ -6,7 +6,7 @@
       to_material="cc_grease"
       clean_stains="0"
       is_circle="1"
-      radius="32" 
+      radius="32"
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>

@@ -5,13 +5,13 @@
 		name="Alchemy Journal"
 	></UIInfoComponent>
 
-	<PhysicsBodyComponent 
+	<PhysicsBodyComponent
 		_tags="enabled_in_world"
-		uid="1" 
-		allow_sleep="1" 
-		angular_damping="0" 
-		fixed_rotation="0" 
-		is_bullet="1" 
+		uid="1"
+		allow_sleep="1"
+		angular_damping="0"
+		fixed_rotation="0"
+		is_bullet="1"
 		linear_damping="0"
 		auto_clean="1"
 		hax_fix_going_through_ground="1"
@@ -19,7 +19,7 @@
 		on_death_really_leave_body="0"
 	></PhysicsBodyComponent>
 
-	<PhysicsImageShapeComponent 
+	<PhysicsImageShapeComponent
 		body_id="1"
 		centered="1"
 		image_file="mods/Hydroxide/files/mystical_mixtures/journal/gfx/book_small.png"
@@ -52,7 +52,7 @@
 		item_name="$item_mm_alchemy_journal"
 		ui_description="$itemdesc_mm_alchemy_journal"
 	></ItemComponent>
-  
+
 	<SpriteComponent
 		_tags="enabled_in_hand"
 		_enabled="0"
@@ -61,17 +61,17 @@
 		image_file="mods/Hydroxide/files/mystical_mixtures/journal/gfx/book_small.png"
 	></SpriteComponent>
 
-	<HitboxComponent 
+	<HitboxComponent
 		_tags="enabled_in_world"
-		aabb_min_x="-3" 
-		aabb_max_x="3" 
-		aabb_min_y="-5" 
+		aabb_min_x="-3"
+		aabb_max_x="3"
+		aabb_min_y="-5"
 		aabb_max_y="0" >
 	</HitboxComponent>
 
-	<LightComponent 
+	<LightComponent
 		_tags="enabled_in_world"
-		_enabled="1" 
+		_enabled="1"
 		r="255"
 		g="255"
 		b="255"

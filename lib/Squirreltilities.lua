@@ -45,7 +45,7 @@ function EntityMimicMaterialDamage(target, target_material, template_material, j
     local template_strength = EntityGetDamageFromMaterial(target, template_material)
     if template_strength ~= nil then
         EntitySetDamageFromMaterial(target, target_material, template_strength)
-    end  
+    end
 end
 
 --Edits an entity's XML file to mimic a material damage value for a different material
@@ -53,7 +53,7 @@ function FileMimicMaterialDamage(target, target_material, template_material)
     local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 	local xml = ModDoesFileExist(target) and nxml.parse(ModTextFileGetContent(target))
     if xml == nil then return end
-    
+
     local template_strength = EntityGetDamageFromMaterial(target, template_material)
     if (template_strength ~= nil) then
         EntitySetDamageFromMaterial(target, target_material, template_strength)
@@ -93,8 +93,8 @@ function shift_materials_in_range(radius, materials_input, output, e_id)
 							return material_amount
 						end
 					end
-				end   
-				return 0  
+				end
+				return 0
 			end
 		end
 	end

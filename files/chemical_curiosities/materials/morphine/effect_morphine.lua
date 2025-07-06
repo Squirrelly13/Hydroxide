@@ -13,9 +13,9 @@ local trueHP = tonumber(ComponentGetValue2( vsc, "value_float" ))
 --print("morphine.lua: trueHP before math: " .. trueHP)
 local damagemodel = EntityGetFirstComponentIncludingDisabled( root, "DamageModelComponent" )
 if not damagemodel then return end
-max_hp 	= ComponentGetValue2( damagemodel, "max_hp" ) 
- 
-hp		= ComponentGetValue2( damagemodel, "hp"	 ) 
+max_hp 	= ComponentGetValue2( damagemodel, "max_hp" )
+
+hp		= ComponentGetValue2( damagemodel, "hp"	 )
 
 local diff 	= max_hp - hp
 if diff == 0 then return end

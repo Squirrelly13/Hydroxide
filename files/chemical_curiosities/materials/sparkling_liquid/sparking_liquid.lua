@@ -18,7 +18,7 @@ local angle = 2.5708
 
 if tpos_x ~= nil then
 angle = math.atan2( pos_y - tpos_y, tpos_x - pos_x)
-end 
+end
 
 local spread = math.rad(Random(-10,10))
 angle = angle + spread

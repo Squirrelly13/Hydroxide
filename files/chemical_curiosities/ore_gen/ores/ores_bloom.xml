@@ -17,9 +17,8 @@
     rare_scale_y="0.03"
     rare_use_perlin="1"
     rare_use_polka="1"
-    
+
     rare_offset_by_seed="1"
-    rare_offset_x="5324" 
+    rare_offset_x="5324"
     rare_offset_y="2454">
 </MaterialComponent>
-

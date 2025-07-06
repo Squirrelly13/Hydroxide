@@ -27,12 +27,12 @@ else
 end
 	
 material = CellFactory_GetType( material )
-local sulphur = CellFactory_GetType( "sulphur" ) 
+local sulphur = CellFactory_GetType( "sulphur" )
 
 if ( convertcomponents ~= nil ) then
-	for key,comp_id in pairs(convertcomponents) do 
+	for key,comp_id in pairs(convertcomponents) do
 		local name = tonumber( ComponentGetValue2( comp_id, "from_material" ) )
-		--local smoke_id = CellFactory_GetType( "smoke" 
+		--local smoke_id = CellFactory_GetType( "smoke"
 		
 		
 		local to = tonumber( ComponentGetValue2( comp_id, "to_material" ) )

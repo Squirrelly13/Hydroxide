@@ -7,7 +7,7 @@
       to_material="cc_dormant_crystal_molten"
       clean_stains="0"
       is_circle="1"
-      radius="192" 
+      radius="192"
 	  loop="0"
 	  >
     </MagicConvertMaterialComponent>

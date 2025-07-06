@@ -166,7 +166,7 @@ end
 
 function test_GetProperties(wand)
   local all_props = wand:GetProperties()
-  
+
   for k,v in pairs(wand_props) do
     assert(all_props[k] ~= nil)
   end
@@ -373,7 +373,7 @@ function test_RemoveSpellAtIndex(wand)
   local success, err = wand:RemoveSpellAtIndex(6)
   assert(success == false)
   assert(type(err) == "string")
-  
+
   -- Test if it returns an error correctly when trying to remove at index that doesn't have a spell
   local success, err = wand:RemoveSpellAtIndex(1)
   assert(success == false)
@@ -426,7 +426,7 @@ function test_Clone(wand)
   end
   -- Test if sprites are the same
   local a1, b1, c1, d1, e1 = GetWandSprite(wand.entity_id)
-  local a2, b2, c2, d2, e2 = GetWandSprite(cloned_wand.entity_id) 
+  local a2, b2, c2, d2, e2 = GetWandSprite(cloned_wand.entity_id)
   assert(a1 == a2, string.format("Clone failed, %s ~= %s", a1, a2))
   assert(b1 == b2, string.format("Clone failed, %s ~= %s", b1, b2))
   assert(c1 == c2, string.format("Clone failed, %s ~= %s", c1, c2))

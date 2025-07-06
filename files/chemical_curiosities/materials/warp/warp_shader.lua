@@ -1,7 +1,7 @@
 local postfx = dofile("mods/Hydroxide/lib/shader_utilities.lua")
 
 postfx.append([[
-uniform vec4 cc_warp_multiplier;    
+uniform vec4 cc_warp_multiplier;
 ]], "uniform vec4 brightness_contrast_gamma;")
 
 postfx.prepend([[
@@ -31,7 +31,7 @@ vec2 cc_final_warp_direction = cc_warp_norm_direction * cc_warp_len / (1.0 + (cc
 tex_coord = cc_warp_center + (cc_final_warp_direction);
 ]], [[// sample the original color =================================================================================]])
 
-postfx.prepend([[  
+postfx.prepend([[
     vec2 cc_warp_triplevision_offset = vec2(min(0.03,0.005 * cos(time*0.5)  * (cc_warp_effect_multiplier / 10.0)),min(0.03, 0.005 * sin(time*0.5) * (cc_warp_effect_multiplier / 10.0) ));
     vec4 cc_warp_offset_texture_1_fg = texture2D(tex_fg, tex_coord + cc_warp_triplevision_offset );
     vec4 cc_warp_offset_texture_2_fg = texture2D(tex_fg, tex_coord - cc_warp_triplevision_offset );
@@ -41,7 +41,7 @@ postfx.prepend([[
     color_fg = mix( color_fg, cc_warp_offset_texture_2_fg, min(0.5, cc_warp_effect_multiplier) );
     color = mix( color, cc_warp_offset_texture_1_bg.rgb, min(0.5, cc_warp_effect_multiplier) );
     color = mix( color, cc_warp_offset_texture_2_bg.rgb, min(0.5, cc_warp_effect_multiplier) );
-    
+
 ]], [[vec3 color_orig    = color;]])
 
 postfx.append([[

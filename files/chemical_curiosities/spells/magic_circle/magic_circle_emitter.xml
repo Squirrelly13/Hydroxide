@@ -1,6 +1,6 @@
 <Entity>
 	
-  	<ParticleEmitterComponent 
+  	<ParticleEmitterComponent
 		emitted_material_name="fungi"
         lifetime_min="3"
     	lifetime_max="4"
@@ -25,7 +25,7 @@
 		is_emitting="1" >
 	</ParticleEmitterComponent>
 
-  	<ParticleEmitterComponent 
+  	<ParticleEmitterComponent
 		emitted_material_name="fungi"
 		delay_frames="40"
         lifetime_min="2.128"

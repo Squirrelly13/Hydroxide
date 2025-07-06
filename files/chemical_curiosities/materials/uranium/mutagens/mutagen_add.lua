@@ -35,7 +35,7 @@ if radiation_controller == nil then --if it could not find it, create a new one
 	radiation_controller = EntityAddChild(owner, EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.xml"))
 	if radiation_controller == nil then return end --if it fucks up creating a new one, fuck man just give up at that point
 end
- 
+
 local var_comps = EntityGetComponent(radiation_controller, "VariableStorageComponent")
 if var_comps == nil then print("no var_comps? :megamind:") return end --get varcomps. if none, give up
 
@@ -110,7 +110,7 @@ if radcount >= STAGE2 then --immunities
 	
 	if owner_children ~= nil and false then --disabled
 		for k,v in ipairs(owner_children) do
-			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then 
+			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then
 				local key = ComponentGetValue2(EntityGetComponent(v, "GameEffectComponent")[1], "effect")
 				--print("adding " .. key .. " to immunities table")
 				table.insert(immunities, key, v)
@@ -120,7 +120,7 @@ if radcount >= STAGE2 then --immunities
 	end
 end
 
- 
+
 if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
 	
@@ -307,7 +307,7 @@ local leggypermanent
 if leggyentity then --if there is a leggy
 
 	local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
-	if leggyvarcomps ~= nil then leggypermanent = ComponentGetValue2(leggyvarcomps[1], "value_bool") end 
+	if leggyvarcomps ~= nil then leggypermanent = ComponentGetValue2(leggyvarcomps[1], "value_bool") end
 	leggypermanent = leggypermanent or false
 
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
@@ -362,7 +362,7 @@ end
 
 
 
---[[ 
+--[[
 local count = 0
 local leggy = false
 local vomit = false

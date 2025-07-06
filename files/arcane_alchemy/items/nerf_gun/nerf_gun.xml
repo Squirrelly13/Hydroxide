@@ -1,16 +1,16 @@
 <Entity tags="wand">
 
 	<AbilityComponent
-		_enabled="1" 
+		_enabled="1"
 		sprite_file="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_gun_small.xml"
 		swim_propel_amount="0"
-		use_gun_script="1" 
+		use_gun_script="1"
 		>
 	</AbilityComponent>
 
-	<HotspotComponent 
-		_tags="shoot_pos" 
-		offset.x="10" 
+	<HotspotComponent
+		_tags="shoot_pos"
+		offset.x="10"
 		offset.y="-3" >
 	</HotspotComponent>
 
@@ -22,7 +22,7 @@
 		</ItemComponent>
 	</Base>
 
-	<LuaComponent 
+	<LuaComponent
 		execute_on_added="1"
 		remove_after_executed="1"
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_gun_setup.lua"
@@ -32,6 +32,5 @@
 	<ManaReloaderComponent
 		_tags="enabled_in_world,enabled_in_hand,enabled_in_inventory" >
 	</ManaReloaderComponent>
-   
-</Entity>
 
+</Entity>

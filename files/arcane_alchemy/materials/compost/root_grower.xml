@@ -8,13 +8,13 @@
 	</HitboxComponent>
 
 	<DamageModelComponent
-		air_needed="0" 
+		air_needed="0"
 		falling_damages="0"
-		fire_damage_amount="0.5" 
-		fire_probability_of_ignition="0.5" 
-		hp="1" 
-		materials_damage="1" 
-		materials_that_damage="acid,lava" 
+		fire_damage_amount="0.5"
+		fire_probability_of_ignition="0.5"
+		hp="1"
+		materials_damage="1"
+		materials_that_damage="acid,lava"
 		materials_how_much_damage="0.004,0.004"
 		blood_material="grass"
 		blood_multiplier="2"
@@ -31,7 +31,7 @@
 		>
 	</VelocityComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		_tags="grow"
 		_enabled="1"
 		emitted_material_name="root_growth"
@@ -70,7 +70,7 @@
 	</CollisionTriggerComponent>
 
 	<!-- controls the growth movement -->
-	<LuaComponent 
+	<LuaComponent
 		_tags="grow"
 		_enabled="1"
 		script_source_file="data/scripts/props/root_grower_spread.lua"
@@ -79,7 +79,7 @@
 	</LuaComponent>
 
 	<!-- the main root has a random chance to spawn root_grower_branch.xml for branching -->
-	<LuaComponent 
+	<LuaComponent
 		_tags="grow"
 		_enabled="1"
 		script_source_file="data/scripts/props/root_grower_split.lua"
@@ -88,7 +88,7 @@
 	</LuaComponent>
 
 	<!-- this runs when growth ends -->
-	<LuaComponent 
+	<LuaComponent
 		script_source_file="data/scripts/props/root_grower_fruit.lua"
 		execute_on_removed="1"
 		execute_every_n_frame="-1"

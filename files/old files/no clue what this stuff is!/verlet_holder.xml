@@ -25,17 +25,17 @@
     <VariableStorageComponent
         name="velocity_falloff"
         value_string="90"
-    ></VariableStorageComponent>  
+    ></VariableStorageComponent>
 
     <VariableStorageComponent
         name="target_tag"
         value_string="mortal"
-    ></VariableStorageComponent>   
+    ></VariableStorageComponent>
 
     <VariableStorageComponent
         name="enable_raytrace"
         value_string="1"
-    ></VariableStorageComponent> 
+    ></VariableStorageComponent>
 
    <LuaComponent
         script_source_file="mods/Hydroxide/files/scripts/misc/verlet_loader.lua"

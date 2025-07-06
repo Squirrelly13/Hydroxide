@@ -1,5 +1,5 @@
 <Entity>
-  	<ParticleEmitterComponent 
+  	<ParticleEmitterComponent
 		emitted_material_name="aa_bloomium_gas"
 		create_real_particles="1"
 		gravity.y="0.0"
@@ -26,7 +26,7 @@
 		set_magic_creation="1"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-    
+
     <LifetimeComponent
         lifetime="4"
     />

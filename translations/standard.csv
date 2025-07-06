@@ -357,7 +357,7 @@ mat_mm_diluted_mana,Diluted Mana,Разбавленная мана,Mana diluído
 desc_mm_diluted_mana,Mana diluted in an alchemical base.\nCan be used for modifying wand mana capacity.,"Мана, разбавленная в алхимической основе.\nМожет использоваться для изменения вместимости маны жезла.","Mana diluído em uma base alquímica.\nPode ser usada para modificar a capacidade de mana da varinha.",,,,,,,,,,,
 mat_mm_refined_mana,Refined Mana,Очищенная мана,Mana refinado,,,,,,,,,,,
 desc_mm_refined_mana,"Mana refined with Hydroxide.\nIt can be used in a variety of recipes, notably improving the speed at which wands gain mana.","Мана, очищенная гидроксидом.\nЕё можно использовать во множестве рецептов, в частности, для увеличения скорости получения маны жезлами.","Mana refinado com hidróxido.\nPode ser usado em uma variedade de receitas, principalmente melhorando o tempo de recarga de mana da varinha.",,,,,,,,,,,
-mat_mm_refined_mana_gas,Evaporated Mana,Испарённая мана,Mana evaporado,,,,,,,,,,, 
+mat_mm_refined_mana_gas,Evaporated Mana,Испарённая мана,Mana evaporado,,,,,,,,,,,
 desc_mm_refined_mana_gas,The evaporated form of Refined Mana.,Испарённая форма очищенной маны.,A forma evaporada de mana refinado,,,,,,,,,,,
 mat_mm_arcane_flux,Arcane Flux,Тайный поток,Fluxo arcano,,,,,,,,,,Arcane being ancient-magic or mystical. Flux being a sort of chaos or not static,
 desc_mm_arcane_flux,"This substance is used to weld various spells together, to variable success.","Это вещество используется для соединения различных заклинаний, с переменным успехом.","Essa substância é usada para unir vários feitiços juntos, o sucesso desse procedimento é variável.",,,,,,,,,,,

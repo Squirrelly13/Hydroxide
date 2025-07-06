@@ -1,28 +1,28 @@
 <Entity tags="hittable,teleportable_NOT,knife_bag" >
 
   <!-- physical presence -->
-  
-  <PhysicsBodyComponent 
+
+  <PhysicsBodyComponent
     _tags="enabled_in_world"
-    uid="1" 
-    allow_sleep="1" 
+    uid="1"
+    allow_sleep="1"
 	send_collision_messages="1"
-    angular_damping="0" 
-    fixed_rotation="0" 
-    is_bullet="0" 
+    angular_damping="0"
+    fixed_rotation="0"
+    is_bullet="0"
     linear_damping="0"
     auto_clean="0"
     on_death_leave_physics_body="1"
 	projectiles_rotate_toward_velocity="1"
   ></PhysicsBodyComponent>
-  
-  <PhysicsImageShapeComponent 
+
+  <PhysicsImageShapeComponent
     body_id="1"
     centered="1"
     image_file="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_dart_small.png"
     material="rock_box2d_nohit_hard"
   ></PhysicsImageShapeComponent>
-  
+
   <PhysicsThrowableComponent
     _tags="enabled_in_world"
     max_throw_speed="350"
@@ -40,7 +40,7 @@
 	damage="0.075"
   physics_impulse_coeff="1000"
    knockback_force="50"
-	 blood_count_multiplier="0"   
+	 blood_count_multiplier="0"
   ></ProjectileComponent>
 
   <VelocityComponent
@@ -62,11 +62,11 @@
     item_name="$nerf_dart"
     play_spinning_animation="0"
     stats_count_as_item_pick_up="0"
-    play_pick_sound="1" 
+    play_pick_sound="1"
     ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_dart_small.png"
   ></ItemComponent>
 
-  	<LuaComponent 
+  	<LuaComponent
 		script_item_picked_up="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/dart_pickup.lua" >
 	</LuaComponent>
 

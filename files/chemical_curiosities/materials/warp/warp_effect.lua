@@ -59,12 +59,12 @@ if(percentage > 20)then
         is_warped = true
         local map_w, map_h = BiomeMapGetSize()
         local offset_x = map_w * 512
-    
+
         if(Random(1, 100) < 50)then
             offset_x = offset_x * -1
         end
-    
-    
+
+
         target_x = root_x + offset_x
         target_y = root_y
 

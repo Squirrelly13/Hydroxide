@@ -18,7 +18,7 @@ alchemical_materials = {
         color = "c77e6996",
         texture = nil, -- texture path
         type = "liquid",
-        tags = "[alchemical],[ingredient]",       
+        tags = "[alchemical],[ingredient]",
     },
     {
         id = "mm_ephemeral_ether",
@@ -131,7 +131,7 @@ alchemical_materials = {
 alchemical_recipes = {
     {
         id = "ether_evaporation",
-        probability = 3, 
+        probability = 3,
         inputs = {
             "mm_ephemeral_ether",
             "air",
@@ -144,7 +144,7 @@ alchemical_recipes = {
     },
     {
         id = "mana_evaporation",
-        probability = 3, 
+        probability = 3,
         inputs = {
             "mm_refined_mana",
             "air",
@@ -153,14 +153,14 @@ alchemical_recipes = {
             "mm_refined_mana_gas",
             "air",
         },
-        func = nil        
+        func = nil
     },
     {
         id = "gold_solution",
         name = "$reac_gold_solution",
         description = "$reac_desc_gold_solution",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         inputs = { -- three ingredients is the limit
             "[gold]",
             "[gold]",
@@ -177,7 +177,7 @@ alchemical_recipes = {
         name = "$reac_mana_dilution",
         description = "$reac_desc_mana_dilution",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         inputs = { -- three ingredients is the limit
             "magic_liquid_mana_regeneration",
             "magic_liquid_mana_regeneration",
@@ -194,7 +194,7 @@ alchemical_recipes = {
         name = "$reac_mana_refining",
         description = "$reac_desc_mana_refining",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         inputs = { -- three ingredients is the limit
             "mm_diluted_mana",
             "mm_diluted_mana",
@@ -205,7 +205,7 @@ alchemical_recipes = {
             "mm_ephemeral_ether",
             "mm_ephemeral_ether",
         },
-    },    
+    },
     {
         id = "mystic_alloy",
         name = "$reac_mystic_alloy",
@@ -234,7 +234,7 @@ alchemical_recipes = {
                             EntityAddComponent2(converter, "LifetimeComponent", {
                                 lifetime=2
                             })
-                    
+
                             EntityAddComponent2(converter, "MagicConvertMaterialComponent", {
                                 radius=20,
                                 from_material=CellFactory_GetType("item_box2d"),
@@ -270,7 +270,7 @@ alchemical_recipes = {
         name = "$reac_wand_capacity",
         description = "$reac_desc_wand_capacity",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         func_probability = 1,
         inputs = { -- three ingredients is the limit
             "mm_gold_solution",
@@ -306,11 +306,11 @@ alchemical_recipes = {
 
                         local c = EntityGetAllChildren( wand ) or {}
                         EntityAddTag(v, "capacity_altered")
-                        
+
                         if #c > new_capacity then
                             local spells_to_remove = #c - new_capacity
                             for i=1,spells_to_remove do
-                                -- 
+                                --
                                 v = c[(#c)-i + 1]
                                 local comp2 = EntityGetFirstComponentIncludingDisabled( v, "ItemActionComponent" )
 
@@ -318,9 +318,9 @@ alchemical_recipes = {
 
                                     EntityRemoveFromParent( v )
                                     EntitySetTransform( v, x, y )
-                                    
+
                                     local all = EntityGetAllComponents( v )
-                                    
+
                                     for a,b in ipairs( all ) do
                                         EntitySetComponentIsEnabled( v, b, true )
                                     end
@@ -332,13 +332,13 @@ alchemical_recipes = {
             end
 
         end,
-    },    
+    },
     {
         id = "mana_capacity",
         name = "$reac_mana_capacity",
         description = "$reac_desc_mana_capacity",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         func_probability = 1,
         inputs = { -- three ingredients is the limit
             "mm_diluted_mana",
@@ -358,7 +358,7 @@ alchemical_recipes = {
                     local ability_component = EntityGetFirstComponentIncludingDisabled(v, "AbilityComponent")
                     if(ability_component ~= nil)then
                         local mana_max = ComponentGetValue2(ability_component, "mana_max")
-   
+
                         local multiplier = Random(10, 100) / 100
                         local additional_multiplier = math.max(0.25, 1 - (mana_max / 1000))
 
@@ -379,7 +379,7 @@ alchemical_recipes = {
         name = "$reac_mana_charge",
         description = "$reac_desc_mana_charge",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         func_probability = 1,
         inputs = { -- three ingredients is the limit
             "mm_refined_mana",
@@ -420,7 +420,7 @@ alchemical_recipes = {
         name = "$reac_flux_welding",
         description = "$reac_desc_flux_welding",
         generate_notes = true,
-        probability = 100, 
+        probability = 100,
         func_probability = 100,
         inputs = { -- three ingredients is the limit
             "mm_arcane_flux",
@@ -460,15 +460,15 @@ alchemical_recipes = {
                 end
                 valid_spells = new_valid_spells
             end
-            
+
             local root_spell = valid_spells[Random(1, #valid_spells)]
 
             local root_x, root_y = EntityGetTransform(root_spell)
 
             root_y = root_y - 16
-            
+
             EntityLoad("mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/weld_effect.xml", root_x, root_y)
-            
+
             -- reverse iterate
             for i = #valid_spells, 1, -1 do
                 local spell = valid_spells[i]
@@ -510,7 +510,7 @@ alchemical_recipes = {
             "[magic_liquid]",
             "[magic_liquid]",
         },
-    }, 
+    },
     {
         id = "replicating_agent_3",
         probability = 100,
@@ -522,7 +522,7 @@ alchemical_recipes = {
             "[ingredient]",
             "[ingredient]",
         },
-    }, 
+    },
     {
         id = "replicating_agent_creation",
         name = "$reac_replicating_agent",

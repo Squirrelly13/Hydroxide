@@ -2,17 +2,17 @@
 
     <InheritTransformComponent
       	parent_hotspot_tag="hand"
-	    ><Transform 
-	        position.x="6" 
+	    ><Transform
+	        position.x="6"
 	        position.y="-5" >
 	 	</Transform>
-	 </InheritTransformComponent>  
+	 </InheritTransformComponent>
 
 	<LifetimeComponent
 		lifetime="60"
 	></LifetimeComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="cc_vomit_fading"
 		gravity.y="150.0"
 		lifetime_min="10"
@@ -42,6 +42,3 @@
 	</AudioComponent>
 
 </Entity>
-
-
-

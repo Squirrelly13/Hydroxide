@@ -31,7 +31,7 @@ ps.post_funcs = {}
 
 
 --Standard materials, 25/101 chance for this pool to be drawn
-ps.materials_standard = 
+ps.materials_standard =
 {
 	{
 		material="sand",
@@ -72,7 +72,7 @@ ps.materials_standard =
 materials_standard = {} --so mods not using this lib dont break
 
 --Magic materials, 76/101 chance for this pool to be drawn
-ps.materials_magic = 
+ps.materials_magic =
 {
 	{
 		material="copper",

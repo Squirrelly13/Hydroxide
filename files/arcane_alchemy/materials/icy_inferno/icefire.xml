@@ -1,10 +1,10 @@
 <Entity name="$projectile_default">
 
-<GameEffectComponent 
+<GameEffectComponent
     effect="CUSTOM"
     custom_effect_id="AA_ICEFIRE"
     frames="50">
-</GameEffectComponent> 
+</GameEffectComponent>
 
 	<GameAreaEffectComponent
 		radius="300"
@@ -14,7 +14,7 @@
 
 	
 
-  
+
 
 	<Base file="mods/Hydroxide/files/lib/base_field.xml">
 		<LifetimeComponent
@@ -22,7 +22,7 @@
 			>
 		</LifetimeComponent>
 		
-		<SpriteComponent 
+		<SpriteComponent
 			image_file=""
 			>
 		</SpriteComponent>
@@ -56,7 +56,7 @@
 	
 	
 
-  
+
 
 	<VariableStorageComponent
 		name="projectile_file"
@@ -64,4 +64,3 @@
 		>
 	</VariableStorageComponent>
 </Entity>
-

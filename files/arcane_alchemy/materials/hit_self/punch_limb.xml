@@ -17,8 +17,8 @@
 		length="40" >
 	</IKLimbComponent>
 
-	<SpriteComponent 
-		image_file="data/entities/animals/lukki/lukki_feet/chest_limb_a.png" 
+	<SpriteComponent
+		image_file="data/entities/animals/lukki/lukki_feet/chest_limb_a.png"
 		z_index="1.1"
 		offset_x="0"
 		offset_y="5"
@@ -26,8 +26,8 @@
 		update_transform_rotation="0" >
 	</SpriteComponent>
 
-	<SpriteComponent 
-		image_file="data/entities/animals/lukki/lukki_feet/chest_limb_attacker.png" 
+	<SpriteComponent
+		image_file="data/entities/animals/lukki/lukki_feet/chest_limb_attacker.png"
 		z_index="1.1"
 		offset_x="0"
 		offset_y="5"
@@ -35,8 +35,8 @@
 		update_transform_rotation="0" >
 	</SpriteComponent>
 
-	<SpriteComponent 
-		image_file="data/entities/animals/lukki/lukki_feet/chest_elbow.png" 
+	<SpriteComponent
+		image_file="data/entities/animals/lukki/lukki_feet/chest_elbow.png"
 		z_index="1.1"
 		offset_x="4"
 		offset_y="4"

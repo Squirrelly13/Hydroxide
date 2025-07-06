@@ -8,7 +8,7 @@ local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 local table = {}
 
-local CC_effects = { 
+local CC_effects = {
 	{
 		id="CC_INGESTION_METHANE",
 		ui_name="$status_cc_ingestion_methane",
@@ -114,7 +114,7 @@ local CC_effects = {
 		ui_icon="",
 		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/effect_hydroxide.xml",
 		is_harmful=true,
-	}, 
+	},
 	{
 		id="CC_IRONSKIN",
 		ui_name="$status_cc_ironskin",

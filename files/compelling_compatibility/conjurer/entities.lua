@@ -10,9 +10,9 @@ table.insert(ALL_ENTITIES, {
       path="mods/Hydroxide/files/arcane_alchemy/items/vials/empty_vial.xml",
       image="mods/Hydroxide/files/compelling_compatibility/conjurer/entities/vial.png",  -- This should be a 16*16px icon
       --[[ spawn_func=function(x, y)
-        local entity 
+        local entity
         local comp = entity.LuaComponent
-        comp.disabled = true 
+        comp.disabled = true
         return e
       end, ]]
     },

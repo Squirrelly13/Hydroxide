@@ -10,7 +10,7 @@
 	</Reaction>
 	
 	<Reaction probability="7"
-	input_cell1="cc_preskite"			input_cell2="blood_worm" 
+	input_cell1="cc_preskite"			input_cell2="blood_worm"
 	output_cell1="aa_soot"		output_cell2="aa_potion_gas"
 	blob_radius2="3"
 	>
@@ -294,7 +294,7 @@
   blob_radius1="3"						blob_radius2="5"							blob_radius3="3"				
   >
   </Reaction>
-  
+
 	
 	
 

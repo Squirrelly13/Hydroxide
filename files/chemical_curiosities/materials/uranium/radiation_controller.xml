@@ -33,13 +33,13 @@
 
 
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"   
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_controller.lua"
 		execute_every_n_frame="-1"
 		>
 	</LuaComponent>
 
 	<LuaComponent
-		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_decrease.lua"   
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_decrease.lua"
 		execute_every_n_frame="60"
 		>
 	</LuaComponent>

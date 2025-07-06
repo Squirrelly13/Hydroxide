@@ -2,7 +2,7 @@ dofile_once("data/scripts/lib/utilities.lua")
 
 local null_materials = dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
-null_log_messages = 
+null_log_messages =
 {
 	"$log_cc_nullified_trip_00",
 	"$log_cc_nullified_trip_01",
@@ -63,7 +63,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
             if target.condition and not target:condition() then return end --check if there's a condition function and runs it if so
             break
         end
-        
+
         if target == nil then print_error("final target null shift table is nil, null shift cancelled.") return end
 
         --target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(CellFactory_GetType(target.name_material or target.materials[1])))
@@ -99,7 +99,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
                 end
             end
         end
-    
+
         if add_icon then
             local icon_entity = EntityCreateNew("cc_null_shift_ui_icon")
             EntityAddComponent(icon_entity, "UIIconComponent", {

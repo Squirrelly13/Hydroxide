@@ -1,12 +1,12 @@
 <Entity>
 	
-	<Base file="data/entities/base_custom_card.xml" > 
-		<SpriteComponent 
-			image_file="mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.png" 
+	<Base file="data/entities/base_custom_card.xml" >
+		<SpriteComponent
+			image_file="mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.png"
 			>
 		</SpriteComponent>
 		
-		<ItemActionComponent 
+		<ItemActionComponent
 			_tags="enabled_in_world"
 			action_id="CC_GREASE_BLAST" >
 		</ItemActionComponent>
@@ -14,13 +14,13 @@
 
 	<InheritTransformComponent
 		_tags="enabled_in_world,enabled_in_hand" >
-	  <Transform 
-		position.x="4" 
+	  <Transform
+		position.x="4"
 		position.y="0" >
 	  </Transform>
 	</InheritTransformComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		_tags="enabled_in_hand,item_identified"
 		emitted_material_name="smoke"
 		offset.x="0"

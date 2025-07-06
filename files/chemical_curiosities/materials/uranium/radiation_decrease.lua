@@ -16,7 +16,7 @@ for index, varcomp in ipairs(var_comps) do
     if name == "leggytracker" then
         leggytracker = varcomp
         leggyentity = ComponentGetValue2(leggytracker, "value_int") or -1 --grab leggy entity
-    
+
     --get and decrease radcount
     elseif name == "radcount" then
         radcount = math.min(ComponentGetValue2(varcomp, "value_int"), 510)
@@ -34,37 +34,37 @@ end
 
 if radcount < STAGE12 then
     stage = 11
-    
+
 end
 
 if radcount < STAGE11 then
     stage = 10
-    
+
 end
 
 if radcount < STAGE10 then
     stage = 9
-    
+
 end
 
 if radcount < STAGE9 then
     stage = 8
-    
+
 end
 
 if radcount < STAGE8 then
     stage = 7
-    
+
 end
 
 if radcount < STAGE7 then
     stage = 6
-    
+
 end
 
 if radcount < STAGE6 then
     stage = 5
-    
+
 end
 
 --leggy remove
@@ -74,12 +74,12 @@ if leggyentity > 0 and radcount < STAGE5 then
     local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
 	if leggyvarcomps == nil then KillLeggy()
     elseif ComponentGetValue2(leggyvarcomps[1], "value_bool") ~= true then KillLeggy()
-    end 
+    end
 end
 
 if radcount < STAGE4 then
     stage = 3
-    
+
 end
 
 if radcount < STAGE3 then
@@ -92,7 +92,7 @@ end
 
 if radcount < STAGE2 then
     stage = 1
-    
+
 end
 
 

@@ -18,7 +18,7 @@
         script_source_file="mods/Hydroxide/files/terror/terrorportium/effect_terrorport_decide.lua"
     ></LuaComponent>
 
-    <GameEffectComponent 
+    <GameEffectComponent
         effect="CUSTOM"
     >
 	</GameEffectComponent >

@@ -6,8 +6,8 @@ table.insert( actions,{
 	description = "Summons a large body of methane gas",
 	sprite 		= "mods/Hydroxide/files/actions/sea_methane.png",
 	type 		= ACTION_TYPE_MATERIAL,
-	spawn_level                       = "0,4,5,6", 
-	spawn_probability                 = "1,1,1,1",  
+	spawn_level                       = "0,4,5,6",
+	spawn_probability                 = "1,1,1,1",
 	price = 350,
 	mana = 140,
 	max_uses = 3,
@@ -230,8 +230,8 @@ table.insert( actions,{
 	description = "Summons a large body of highly conductive powder",
 	sprite 		= "mods/Hydroxide/files/actions/sea_lightning.png",
 	type 		= ACTION_TYPE_MATERIAL,
-	spawn_level                       = "0,4,5,6", 
-	spawn_probability                 = "0.4,1,0.5,1",  
+	spawn_level                       = "0,4,5,6",
+	spawn_probability                 = "0.4,1,0.5,1",
 	price = 350,
 	mana = 140,
 	max_uses = 3,
@@ -310,7 +310,7 @@ table.insert( actions, {
 		price = 100,
 		mana = 25,
 		max_uses = 25,
-		action 		= function() 
+		action 		= function()
 			c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/actions/fire_to_grease.xml,data/entities/particles/tinyspark_red.xml,"
 			c.fire_rate_wait = c.fire_rate_wait + 6
 			draw_actions( 1, true )

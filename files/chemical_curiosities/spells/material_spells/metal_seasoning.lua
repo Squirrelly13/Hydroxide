@@ -1,5 +1,5 @@
---this code is credited to copi 
-dofile_once("data/scripts/lib/utilities.lua") 
+--this code is credited to copi
+dofile_once("data/scripts/lib/utilities.lua")
 local options =
 {
 	{ probability = 1.0000, "cc_preskite"},

@@ -126,7 +126,7 @@ ore_vault = {
 	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 		},
 }
 
-metals_vault_1 = { 
+metals_vault_1 = {
 	{	probability = 1.000, "metals_cobalt1"	},
 	{	probability = 1.000, "metals_iron1"		},
 	{	probability = 1.000, "metals_preskite1"	},
@@ -200,14 +200,14 @@ function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal2 .. ".xml"
 		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)
-	else 
+	else
 		ores = oreType
 		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)
 	end
 end
 
-function nextSeed() 
+function nextSeed()
 
 	SetRandomSeed(StatsGetValue("world_seed") - Random(1,10), StatsGetValue("world_seed") + Random(1,10))
 
@@ -217,7 +217,7 @@ end
 addOresToBiome("data/biome/coalmine.xml", ore_coalmines, metals_1, metals_2)
 addOresToBiome("data/biome/coalmine_alt.xml", ore_coalmines, metals_1, metals_2)
 
-addOresToBiome("data/biome/excavationsite.xml", ore_excavationsite, metals_1, metals_excavationsite) 
+addOresToBiome("data/biome/excavationsite.xml", ore_excavationsite, metals_1, metals_excavationsite)
 
 addOresToBiome("data/biome/snowcave.xml", ore_snowcave, metals_1, metals_2)
 addOresToBiome("data/biome/winter.xml", ore_snowcave, metals_1, metals_2)
@@ -227,7 +227,7 @@ addOresToBiome("data/biome/snowcastle.xml", ore_snowcastle, metals_1, metals_2)
 
 addOresToBiome("data/biome/rainforest.xml", ore_rainforest, metals_1, metals_2)
 
-addOresToBiome("data/biome/fungicave.xml", ore_types, metals_1, metals_2) 
+addOresToBiome("data/biome/fungicave.xml", ore_types, metals_1, metals_2)
 
 addOresToBiome("data/biome/vault.xml", ore_vault, metals_vault_1, metals_vault_2)
 

@@ -1,5 +1,5 @@
 <Entity >
-   
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/spark_starter_line.lua"
 		execute_every_n_frame="1"
@@ -10,5 +10,5 @@
 		lifetime="5"
 		>
 	</LifetimeComponent>
-  
+
 </Entity>

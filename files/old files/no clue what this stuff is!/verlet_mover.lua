@@ -19,15 +19,15 @@ if(variable_storage ~= nil)then
         if(name == "holder")then
             holder = tonumber(ComponentGetValue2(v, "value_string"))
         elseif(name == "attack_radius")then
-            radius = tonumber(ComponentGetValue2(v, "value_string"))        
+            radius = tonumber(ComponentGetValue2(v, "value_string"))
         elseif(name == "attack_speed")then
-            move_speed = tonumber(ComponentGetValue2(v, "value_string")) 
+            move_speed = tonumber(ComponentGetValue2(v, "value_string"))
         elseif(name == "enable_raytrace")then
-            enable_raytrace = tonumber(ComponentGetValue2(v, "value_string")) 
+            enable_raytrace = tonumber(ComponentGetValue2(v, "value_string"))
         elseif(name == "velocity_falloff")then
-            velocity_falloff = tonumber(ComponentGetValue2(v, "value_string")) 
+            velocity_falloff = tonumber(ComponentGetValue2(v, "value_string"))
         elseif(name == "target_tag")then
-            tag = ComponentGetValue2(v, "value_string")     
+            tag = ComponentGetValue2(v, "value_string")
         end
     end
 
@@ -51,8 +51,8 @@ if(variable_storage ~= nil)then
             local len = math.sqrt((direction_x*direction_x) + (direction_y*direction_y))
 
             local dir_x = direction_x / len
-            local dir_y = direction_y / len       
-        
+            local dir_y = direction_y / len
+
             local did_hit, hit_x, hit_y = RaytraceSurfaces( closest_x, closest_y, x + dir_x, y + dir_y)
 
             local hit_entities = EntityGetInRadiusWithTag( hit_x, hit_y, 10, tag)
@@ -60,57 +60,57 @@ if(variable_storage ~= nil)then
             if(hit_entities[1] == nil or raytrace_enabled == false)then
                 edit_component( entity, "VelocityComponent", function(comp,vars)
                     local velocity_x, velocity_y = ComponentGetValueVector2( comp, "mVelocity")
-            
+
                     local force_x = (velocity_x*velocity_falloff) +  (dir_x * move_speed)
                     local force_y = (velocity_y*velocity_falloff) + (dir_y * move_speed)
-                
+
                     ComponentSetValue( comp, "gravity_x", 0 )
                     ComponentSetValue( comp, "gravity_y", 0 )
                     ComponentSetValueVector2( comp, "mVelocity", force_x, force_y )
-            
+
                 end)
             else
                 local direction_x = holder_x - x
                 local direction_y = holder_y - y
-            
+
                 local len = math.sqrt((direction_x*direction_x) + (direction_y*direction_y))
-        
+
                 local dir_x = direction_x / len
-                local dir_y = direction_y / len    
-        
+                local dir_y = direction_y / len
+
                 edit_component( entity, "VelocityComponent", function(comp,vars)
-                    local velocity_x, velocity_y = ComponentGetValueVector2( comp, "mVelocity") 
-        
+                    local velocity_x, velocity_y = ComponentGetValueVector2( comp, "mVelocity")
+
                     local force_x = (velocity_x*velocity_falloff) +  (dir_x * move_speed)
                     local force_y = (velocity_y*velocity_falloff) + (dir_y * move_speed)
-                
+
                     ComponentSetValue( comp, "gravity_x", 0 )
                     ComponentSetValue( comp, "gravity_y", 0 )
                     ComponentSetValueVector2( comp, "mVelocity", force_x, force_y )
-            
-                end)               
+
+                end)
             end
         else
 
             local direction_x = holder_x - x
             local direction_y = holder_y - y
-        
+
             local len = math.sqrt((direction_x*direction_x) + (direction_y*direction_y))
 
             local dir_x = direction_x / len
-            local dir_y = direction_y / len    
+            local dir_y = direction_y / len
 
             edit_component( entity, "VelocityComponent", function(comp,vars)
-                local velocity_x, velocity_y = ComponentGetValueVector2( comp, "mVelocity") 
+                local velocity_x, velocity_y = ComponentGetValueVector2( comp, "mVelocity")
 
                 local force_x = (velocity_x*velocity_falloff) +  (dir_x * move_speed)
                 local force_y = (velocity_y*velocity_falloff) + (dir_y * move_speed)
-            
+
                 ComponentSetValue( comp, "gravity_x", 0 )
                 ComponentSetValue( comp, "gravity_y", 0 )
                 ComponentSetValueVector2( comp, "mVelocity", force_x, force_y )
-        
-            end)    
+
+            end)
         end
-    end 
+    end
 end

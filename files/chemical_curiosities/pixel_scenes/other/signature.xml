@@ -2,10 +2,10 @@
     <PixelSceneComponent
 		pixel_scene_background=	"mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature_background.png"
 		pixel_scene_visual=		""
-		pixel_scene=			"mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.png" 
+		pixel_scene=			"mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.png"
 		offset_x="0"
 		offset_y="0"
-		skip_biome_checks="1" 
+		skip_biome_checks="1"
 		>
     </PixelSceneComponent>
 	<LifetimeComponent

@@ -17,7 +17,7 @@
 		>
 	</LuaComponent>
 
-    <GameEffectComponent 
+    <GameEffectComponent
         effect="CUSTOM"
 	custom_effect_id="SLOWER_LEVITATION"
         frames="600" >

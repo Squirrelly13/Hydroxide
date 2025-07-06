@@ -1,6 +1,6 @@
 <Entity>
 	<Base file="data/entities/items/pickup/runestones/runestone_base.xml">
-		<PhysicsImageShapeComponent 
+		<PhysicsImageShapeComponent
 			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
 			>
 		</PhysicsImageShapeComponent>
@@ -10,29 +10,29 @@
 		
 		<LuaComponent>
 		</LuaComponent>
-  
+
 		<ItemComponent
 			item_name="$item_cc_runestone_crystal"
 			ui_sprite="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.png"
-			ui_description="$itemdesc_runestone" 
+			ui_description="$itemdesc_runestone"
 			>
 		</ItemComponent>
-  
+
 		<UIInfoComponent
 			name="$item_cc_runestone_crystal"
 			>
 		</UIInfoComponent>
-  
+
 		<AbilityComponent
 			ui_name="$item_cc_runestone_crystal"
 			>
 		</AbilityComponent>
 	
 		<SpriteComponent
-			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_hand.png" 
+			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_hand.png"
 			>
 		</SpriteComponent>
-  
+
 		<ParticleEmitterComponent
 			_tags="activate"
 			_enabled="0"
@@ -60,7 +60,7 @@
 	
 		<LuaComponent
 			_tags="activate"
-			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_emitter.lua"   
+			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_emitter.lua"
 			execute_every_n_frame="40"
 			_enabled="0"
 			>

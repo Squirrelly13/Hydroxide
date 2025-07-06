@@ -14,7 +14,7 @@
 		lifetime="300">
 	</LifetimeComponent>
 	
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="cc_thunder_powder"
 		gravity.y="0.0"
 		lifetime_min="6"
@@ -53,4 +53,3 @@
 	</AudioComponent>
 
 </Entity>
-

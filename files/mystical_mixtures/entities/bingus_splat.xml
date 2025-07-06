@@ -8,7 +8,7 @@
         velocity_y="0"
     />
     <VelocityComponent/>
-    
+
     <ProjectileComponent
         _tags="enabled_in_world"
         lifetime="1"
@@ -18,7 +18,7 @@
         penetrate_world="1"
     ></ProjectileComponent>
 
-  
+
     <LuaComponent
         script_source_file="mods/Hydroxide/files/mystical_mixtures/scripts/bingus_splat_init.lua"
         execute_on_added="1"

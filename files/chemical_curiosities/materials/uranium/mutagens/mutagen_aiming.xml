@@ -10,8 +10,8 @@
 			randomize_position_inside_hitbox="0"  >
 		</SpriteParticleEmitterComponent>
 	</Base>
-    
-    <GameEffectComponent 
+
+    <GameEffectComponent
         effect="DRUNK"
         frames="1200"
     >

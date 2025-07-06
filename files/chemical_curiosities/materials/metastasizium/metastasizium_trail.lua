@@ -1,6 +1,6 @@
 function shot(projectile_id)
-    EntityAddComponent2(projectile_id, "ParticleEmitterComponent", 
-        { 
+    EntityAddComponent2(projectile_id, "ParticleEmitterComponent",
+        {
             emitted_material_name = "cc_metastasizium",
             render_on_grid = true,
             create_real_particles = true,

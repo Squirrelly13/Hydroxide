@@ -1,7 +1,7 @@
 <Entity>
     <InheritTransformComponent/>
-    
-    <GameEffectComponent 
+
+    <GameEffectComponent
         effect="CUSTOM"
 		custom_effect_id="CC_INGESTION_METHANE"
         frames="99999"

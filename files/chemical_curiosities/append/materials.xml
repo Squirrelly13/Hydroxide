@@ -4,17 +4,17 @@
 <!-- TODO make unstable metamorphine more procedural if possible -->
 	
 
-<!--  
+<!--
 	<CellData
 		name="unknown"
-		ui_name="unknown_mat_test" 
+		ui_name="unknown_mat_test"
 		tags="[water]"
 		cell_type="liquid"
 		liquid_sand="1"
 		liquid_static="1"
 		wang_color="12345678"
 		ignore_self_reaction_warning="1"
-	> 
+	>
 	</CellData> --> <!-- testing material for unknown case in reaction input/output  --> <!-- holy shit material "unknown" is weird, should totally document this -->
 
 	<CellDataChild
@@ -29,12 +29,12 @@
 		_parent="air"
 		name="cc_air"
 		wang_color="00000142"
-		cell_type="gas" 
+		cell_type="gas"
 		ignore_self_reaction_warning="1"
 		lifetime="1"
 	/>
 
-    <CellData 
+    <CellData
         name="cc_hydroxide"
         ui_name="$mat_cc_hydroxide"
         tags="[liquid],[hydroxide],[impure],[liquid_common]"
@@ -69,11 +69,11 @@
 	    liquid_static="1"
 	    slippery="1"
 	    solid_friction="0.05"
-	    hp="30000" 
+	    hp="30000"
 	    convert_to_box2d_material="cc_ice_hydroxide_glass"
 	    platform_type="1"
 	    audio_physics_material_wall="ice"
-	    audio_physics_material_solid="ice" 
+	    audio_physics_material_solid="ice"
 	    gfx_glow="70"
 	    liquid_stains="1"
 	    status_effects="CC_HYDROXIDE"
@@ -100,17 +100,17 @@
 	    	count.max="1"
 	    />
     </CellData>
-  
+
     <CellDataChild
   	    _parent="ice_glass"
 	    tags="[static],[meltable_to_hydroxide],[alchemy],[solid],[cold]"
   	    _inherit_reactions="1"
   	    solid_friction="0.05"
-  	    name="cc_ice_hydroxide_glass" 
+  	    name="cc_ice_hydroxide_glass"
 	    ui_name="$mat_cc_ice_hydroxide"
 	    wang_color="ff4080FF"
 	    audio_physics_material_wall="ice"
-	    audio_physics_material_solid="ice" 
+	    audio_physics_material_solid="ice"
 	    solid_break_to_type="cc_ice_hydroxide_static"
 	    gfx_glow="70"
 	    liquid_stains="1"
@@ -149,7 +149,7 @@
 	liquid_stains_self="0"
 	on_fire="0"
 	requires_oxygen="1"
-	temperature_of_fire="10" 
+	temperature_of_fire="10"
 	danger_water="1"
 	liquid_stains="1"
 	liquid_sprite_stain_ignited_drop_chance="10"
@@ -169,7 +169,7 @@
 		</Stains>
 	</StatusEffects>
   </CellData><!--  acidic water, used exclusively for the hydroxide acid interactions -->
-  
+
   <CellData
 	name="cc_devouring_moss"
 	ui_name="$mat_cc_devouring_moss"
@@ -189,7 +189,7 @@
 	>
 	</Graphics>
   </CellData><!--  spreads over rock and ground aggressively. Very fun! -->
-  
+
 
  <CellData
 	name="cc_hydroxide_gas"
@@ -207,7 +207,7 @@
 	fire_hp="1000"
 	requires_oxygen="0"
 	temperature_of_fire="60"
-	autoignition_temperature="1" 
+	autoignition_temperature="1"
 	show_in_creative_mode="1"
 	>
 	<Graphics
@@ -232,7 +232,7 @@
 	liquid_stains="2"
 	liquid_sprite_stain_shaken_drop_chance="8"
 	status_effects="CC_BLINDNESS"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	on_fire_smoke_material="alcohol_gas"
 	liquid_sprite_stains_status_threshold="0.1"
@@ -280,7 +280,7 @@
 	burnable="0"
 	electrical_conductivity="1"
 	liquid_stains="3"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	>
 	<Graphics
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/sparkling_liquid/sparkling_liquid.png"
@@ -304,7 +304,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!--  Liquid Spark bolts -->
-  
+
   <CellData
 	name="cc_slicing_liquid"
 	ui_name="$mat_cc_slicing_liquid"
@@ -319,7 +319,7 @@
 	autoignition_temperature="5"
 	electrical_conductivity="1"
 	liquid_stains="3"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	>
 	<Graphics
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/slicing_liquid.png"
@@ -338,7 +338,7 @@
 	>
 	</ParticleEffect>
   </CellData><!-- liquid discs -->
-  
+
   <CellData
 	name="cc_glittering_liquid"
 	ui_name="$mat_cc_glittering_liquid"
@@ -353,7 +353,7 @@
 	autoignition_temperature="5"
 	electrical_conductivity="1"
 	liquid_stains="3"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	>
 	<Graphics
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/glittering_liquid.png"
@@ -419,8 +419,8 @@
 			<StatusEffect type="CC_EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
-  </CellData> 
-  
+  </CellData>
+
   <CellData
 	name="cc_methane"
 	ui_name="$mat_cc_methane"
@@ -440,7 +440,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	temperature_of_fire="80"
-	autoignition_temperature="20" 
+	autoignition_temperature="20"
 	show_in_creative_mode="1"
 	>
 	<Graphics
@@ -504,7 +504,7 @@
 	audio_physics_material_event="slime"
 	audio_physics_material_wall="slime"
 	audio_physics_material_solid="slime"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
 	<Graphics
@@ -520,7 +520,7 @@
 			</Ingestion>
 		</StatusEffects>
   </CellData><!-- twitchy mage blood -->
-  
+
   <CellData
 	name="cc_kindling"
 	ui_name="$mat_cc_kindling"
@@ -546,7 +546,7 @@
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/kindling/kindling.png"
 	>
 	</Graphics>
-	<ExplosionConfig 
+	<ExplosionConfig
 		damage="0"
 		cell_explosion_power="2"
 		cell_explosion_damage_required="1"
@@ -592,7 +592,7 @@
 	burnable="0"
 	density="4.1"
 	cell_type="liquid"
-	wang_color="806f823e" 
+	wang_color="806f823e"
 	generates_smoke="0"
 	liquid_gravity="0.7"
 	liquid_sand="0"
@@ -623,7 +623,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData> <!-- Deceleratium -->
-  
+
   <CellData
 	name="cc_heftium"
 	ui_name="$mat_cc_heftium"
@@ -641,7 +641,7 @@
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="1"
 	status_effects="CC_LEVITATION_SLOWER"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
 	<ParticleEffect
@@ -681,7 +681,7 @@
 	requires_oxygen="0"
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="0.5"
-	audio_materialaudio_type="MAGICAL" 
+	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
 	<ParticleEffect
@@ -707,7 +707,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Stillium -->
-  
+
   <CellData
 	name="cc_metamorphine"
 	ui_name="$mat_cc_metamorphine"
@@ -753,7 +753,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
-  
+
   <CellData
 	name="cc_unstable_metamorphine"
 	ui_name="$mat_cc_unstable_metamorphine"
@@ -799,7 +799,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
-  
+
   <CellData
 	name="cc_explodePlayer"
 	ui_name="$mat_cc_explodePlayer"
@@ -812,7 +812,7 @@
 	requires_oxygen="0"
 	temperature_of_fire="50"
 	autoignition_temperature="1"
-	hp="1000" 
+	hp="1000"
 	cell_type="liquid"
 	liquid_gravity="2"
 	liquid_sand="0"
@@ -820,7 +820,7 @@
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
-	<ExplosionConfig 
+	<ExplosionConfig
 		damage="0.2"
 		cell_explosion_power="40"
 		cell_explosion_damage_required="20"
@@ -854,7 +854,7 @@
 			<StatusEffect type="CC_EXPLODING" amount="0.3" />
 		</Ingestion>
 	</StatusEffects>
-	</CellData> 
+	</CellData>
 		
 	<CellData
 	name="cc_alchemy_powder"
@@ -876,11 +876,11 @@
 	>
 	<Graphics
 	texture_file="data/materials_gfx/midas_precursor.png"
-	color="ff1b5aff" 
+	color="ff1b5aff"
 	>
 	</Graphics>
 	</CellData>
-	 
+	
 	<CellData
 	name="cc_metastasizium"
 	ui_name="$mat_cc_metastasizium"
@@ -895,8 +895,8 @@
 	requires_oxygen="0"
 	liquid_stains="2"
 	liquid_sprite_stain_shaken_drop_chance="5"
-	audio_materialaudio_type="MAGICAL" 
-	show_in_creative_mode="1" 
+	audio_materialaudio_type="MAGICAL"
+	show_in_creative_mode="1"
 	>
 	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metastasizium/metastasizium.png"
@@ -910,9 +910,9 @@
 			<StatusEffect type="CC_METASTASIZIUM" amount="0.5" />
 		</Ingestion>
 	</StatusEffects>
-   </CellData> 
-   
-   
+   </CellData>
+
+
    <CellData
 	name="cc_nullium"
 	ui_name="$mat_cc_nullium"
@@ -962,7 +962,7 @@
 				<StatusEffect type="CC_NULL_TRIP" amount="0.5" />
 			</Ingestion>
 		</StatusEffects>
-    	<Graphics 
+    	<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_fungus.png" >
     	</Graphics>
 	</CellDataChild>
@@ -1018,7 +1018,7 @@
 
 
 	<CellDataChild
-		_parent="cc_blasting_powder" 
+		_parent="cc_blasting_powder"
 		name="cc_thunder_powder"
 		ui_name="$mat_cc_thunder_powder"
 		tags="[sand_ground],[corrodible],[alchemy]"
@@ -1062,7 +1062,7 @@
 				<StatusEffect type="CC_INCREASEHP" amount="0.01" />
 			</Ingestion>
 		</StatusEffects>
-	</CellData> 
+	</CellData>
 
 	<CellData
 		name="cc_grease"
@@ -1083,7 +1083,7 @@
 		autoignition_temperature="10"
 		show_in_creative_mode="1"
 		>
-		<ExplosionConfig 
+		<ExplosionConfig
 			damage="0"
 			cell_explosion_power="2"
 			cell_explosion_damage_required="1"
@@ -1100,7 +1100,7 @@
 			stains_enabled="0"
 			damage_mortals="0"
 			particle_effect="0"
-			camera_shake="1" 
+			camera_shake="1"
 			>
 		</ExplosionConfig>
 		<StatusEffects>
@@ -1149,7 +1149,7 @@
 		show_in_creative_mode="1"
 		durability="7"
 		>
-		<ExplosionConfig 
+		<ExplosionConfig
 			damage="0"
 			cell_explosion_power="20"
 			cell_explosion_damage_required="1"
@@ -1181,7 +1181,7 @@
 		on_fire="0"
 		gfx_glow="20"
 		show_in_creative_mode="1"
-		audio_materialaudio_type="MAGICAL" 
+		audio_materialaudio_type="MAGICAL"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/liquid_crystal.png"
@@ -1347,7 +1347,7 @@
 				<StatusEffect type="CC_ANTIMATTER" amount=".5" />
 			</Ingestion>
 		</StatusEffects>
-	</CellData> 
+	</CellData>
 	
 	<CellData
 		name="cc_antimatter_liquid"
@@ -1374,7 +1374,7 @@
 				<StatusEffect type="CC_ANTIMATTER" amount=".4" />
 			</Ingestion>
 		</StatusEffects>
-	</CellData> 
+	</CellData>
 	
 	<CellData
 		name="cc_antimatter_powder"
@@ -1399,7 +1399,7 @@
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
 			>
 			</Graphics>
-	</CellData> 
+	</CellData>
 	
 	<CellDataChild
 		_parent="rotten_meat"
@@ -1434,7 +1434,7 @@
 	temperature_of_fire="50"
 	autoignition_temperature="99"
 	solid_friction="0.7"
-	hp="7000" 
+	hp="7000"
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
@@ -1443,7 +1443,7 @@
 	color="ffb89e58" >
     </Graphics>
 	</CellData>
-  
+
     <CellData
 	name="cc_cobalt_molten"
 	ui_name="$mat_cc_cobalt_molten"
@@ -1462,7 +1462,7 @@
 	danger_fire="1"
 	gfx_glow="200"
 	show_in_creative_mode="1"
-	audio_materialaudio_type="LAVA" 
+	audio_materialaudio_type="LAVA"
 	fire_hp="90000"
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
@@ -1477,7 +1477,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
-  
+
   <CellData
 	name="cc_iron"
 	ui_name="$mat_cc_iron"
@@ -1496,7 +1496,7 @@
 	temperature_of_fire="50"
 	autoignition_temperature="99"
 	solid_friction="0.7"
-	hp="15000" 
+	hp="15000"
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
@@ -1505,7 +1505,7 @@
 	color="ffb89e58" >
     </Graphics>
 	</CellData>
-  
+
     <CellData
 	name="cc_iron_molten"
 	ui_name="$mat_cc_iron_molten"
@@ -1524,7 +1524,7 @@
 	danger_fire="1"
 	gfx_glow="200"
 	show_in_creative_mode="1"
-	audio_materialaudio_type="LAVA" 
+	audio_materialaudio_type="LAVA"
 	fire_hp="90000"
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
@@ -1539,8 +1539,8 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
-  
-   
+
+
   <CellData
 	name="cc_preskite"
 	ui_name="$mat_cc_preskite"
@@ -1559,7 +1559,7 @@
 	temperature_of_fire="50"
 	autoignition_temperature="99"
 	solid_friction="0.7"
-	hp="15000" 
+	hp="15000"
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
@@ -1568,7 +1568,7 @@
 	color="ffb89e58" >
     </Graphics>
 	</CellData>
-  
+
     <CellData
 	name="cc_preskite_molten"
 	ui_name="$mat_cc_preskite_molten"
@@ -1587,7 +1587,7 @@
 	danger_fire="1"
 	gfx_glow="200"
 	show_in_creative_mode="1"
-	audio_materialaudio_type="LAVA" 
+	audio_materialaudio_type="LAVA"
 	fire_hp="90000"
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
@@ -1602,7 +1602,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData>
-  
+
 	<CellData
 		name="cc_ferrine"
 		ui_name="$mat_cc_ferrine"
@@ -1617,7 +1617,7 @@
 		liquid_stains="2"
 		on_fire="0"
 		liquid_damping="0.7"
-		liquid_flow_speed="0.2" 
+		liquid_flow_speed="0.2"
 		liquid_viscosity="0"
 		stickyness="0.7"
 		>
@@ -1649,7 +1649,7 @@
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/cobaline.png"
 			>
 		</Graphics>
-	</CellData> 
+	</CellData>
 	
 	<CellData
 		name="cc_crystal_box2d"
@@ -1677,7 +1677,7 @@
 		audio_physics_material_solid="glass"
 		show_in_creative_mode="1"
 		>
-		<ExplosionConfig 
+		<ExplosionConfig
 			damage="0"
 			cell_explosion_power="20"
 			cell_explosion_damage_required="1"
@@ -1705,7 +1705,7 @@
 		requires_oxygen="0"
 		liquid_stains="2"
 		liquid_sprite_stain_shaken_drop_chance="10"
-		audio_materialaudio_type="MAGICAL" 
+		audio_materialaudio_type="MAGICAL"
 		show_in_creative_mode="1"
 		>
 		<ParticleEffect

@@ -1,17 +1,17 @@
 <Entity tags="curse_cloud">
 	<!--
-	<InheritTransformComponent 
+	<InheritTransformComponent
 		_enabled="1" >
 	</InheritTransformComponent>
 	-->
-	<GameEffectComponent 
+	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CURSE_CLOUD_00"
 		frames="-1"
 		>
 	</GameEffectComponent >
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="aa_love"
 		offset.x="0"
 		offset.y="-42"
@@ -35,7 +35,7 @@
 		create_real_particles="1" >
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="steam"
 		offset.x="0"
 		offset.y="-45"
@@ -60,11 +60,11 @@
 		image_animation_file="mods/Hydroxide/files/arcane_alchemy/materials/love/LOVE_out.png"
 		image_animation_loop="1"
 		emit_cosmetic_particles="1"
-		create_real_particles="0" 
+		create_real_particles="0"
 		is_emitting="0">
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="steam"
 		offset.x="0"
 		offset.y="-45"
@@ -93,7 +93,7 @@
 		is_emitting="0" >
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="spark_purple"
 		offset.x="0"
 		offset.y="-45"
@@ -125,7 +125,7 @@
 		create_real_particles="0" >
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="spark_white"
 		offset.x="0"
 		offset.y="-45"
@@ -161,9 +161,9 @@
 		event_root="player_projectiles/cloud">
 	</AudioComponent>
 
-	<LuaComponent 
+	<LuaComponent
 		_tags="curse_cloud_script"
-		script_source_file="data/scripts/status_effects/effect_curse_cloud.lua" 
+		script_source_file="data/scripts/status_effects/effect_curse_cloud.lua"
 		execute_every_n_frame="1">
    </LuaComponent>
 </Entity>

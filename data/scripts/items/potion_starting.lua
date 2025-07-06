@@ -27,7 +27,7 @@ function ps.CombineTables(base, addition)
 end
 
 ---Function that compares two tables to see if they are identical. Can be used to easily check between current date and desired date using tables. By Nahtan
-function ps.CompareTables(a, b) 
+function ps.CompareTables(a, b)
     if type(a) ~= type(b) then
         return false
     end

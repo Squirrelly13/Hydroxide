@@ -6,7 +6,7 @@
       to_material="gunpowder"
       clean_stains="0"
       is_circle="1"
-      radius="32" 
+      radius="32"
 	  loop="1" />
 	
 	<MagicConvertMaterialComponent
@@ -16,7 +16,7 @@
       to_material="gunpowder_explosive"
       clean_stains="0"
       is_circle="1"
-      radius="32" 
+      radius="32"
 	  loop="1" />
 	
 	<MagicConvertMaterialComponent
@@ -26,9 +26,9 @@
       to_material="gunpowder_tnt"
       clean_stains="0"
       is_circle="1"
-      radius="32" 
+      radius="32"
 	  loop="1" />
-	  
+	
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="coal"
@@ -36,7 +36,7 @@
       to_material="sulphur"
       clean_stains="0"
       is_circle="1"
-      radius="32" 
+      radius="32"
 	  loop="1" />
 	
 	<LuaComponent

@@ -20,7 +20,7 @@ table.insert(ALL_MATERIALS, {
         id="cc_veilium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/spark_liquid.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/spark_liquid.png",
         name="Sparkling Liquid",
         id="cc_sparkling_liquid"
       },
@@ -40,7 +40,7 @@ table.insert(ALL_MATERIALS, {
         id="cc_blasting_powder"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/methane.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/methane.png",
         name="Methane Gas",
         id="cc_methane"
       },
@@ -55,22 +55,22 @@ table.insert(ALL_MATERIALS, {
         id="cc_kindling"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_movement_slower.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_movement_slower.png",
         name="Deceleratium",
         id="cc_deceleratium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_slower_levitation.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_slower_levitation.png",
         name="Heftium",
         id="cc_heftium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_slower_levitation_and_movement.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/magic_liquid_slower_levitation_and_movement.png",
         name="Stillium",
         id="cc_stillium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/metamorphine.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/metamorphine.png",
         name="Metamorphine",
         id="cc_metamorphine"
       },
@@ -95,7 +95,7 @@ table.insert(ALL_MATERIALS, {
         id="cc_metastasizium"
       },
       {
-        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/antimagic.png", 
+        image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/antimagic.png",
         name="Nullium",
         id="cc_nullium"
       },

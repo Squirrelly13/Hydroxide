@@ -1,17 +1,17 @@
 <Entity name="$projectile_default">
 
-    <GameEffectComponent 
+    <GameEffectComponent
         effect="CUSTOM"
         custom_effect_id="AA_PATH"
         frames="120"
-    /> 
+    />
 
     <GameAreaEffectComponent
         radius="50"
         frame_length="90"
     />
 
-  	<ParticleEmitterComponent 
+  	<ParticleEmitterComponent
         emitted_material_name="spark_yellow"
         gravity.y="0.0"
         lifetime_min="5"
@@ -80,4 +80,3 @@
         value_string="data/entities/projectiles/freeze_circle.xml"
     />
 </Entity>
-

@@ -6,7 +6,7 @@ local materials_xml = [[<Materials>
 for k, v in ipairs(alchemical_materials)do
     if(v.type == "liquid")then
         materials_xml = materials_xml .. [[
-    <CellData 
+    <CellData
         name="]]..v.id..[["
         ui_name="]]..v.name..[["
         tags="]]..(v.tags ~= nil and (v.tags .. ",[liquid]") or "[liquid]")..[["
@@ -58,7 +58,7 @@ for k, v in ipairs(alchemical_materials)do
                 ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
-        </CellData>     
+        </CellData>
         ]]
     elseif(v.type == "gas")then
         materials_xml = materials_xml .. [[
@@ -83,13 +83,13 @@ for k, v in ipairs(alchemical_materials)do
                 ]]..((v.texture ~= nil) and ("texture_file=\""..v.texture.."\"") or "") ..[[
             >
             </Graphics>
-        </CellData> 
+        </CellData>
         ]]
     end
 end
 
 for k, v in ipairs(alchemical_recipes)do
-    
+
     local input1 = nil
     local input2 = nil
     local input3 = nil
@@ -146,12 +146,12 @@ for k, v in ipairs(alchemical_recipes)do
         blob_radius1="]]..(v.blob_radius1 or "1")..[[" blob_radius2="]]..(v.blob_radius2 or "1")..[[" blob_radius3="]]..(v.blob_radius3 or "1")..[["
     ]]
 
-    if(v.func ~= nil)then 
+    if(v.func ~= nil)then
         materials_xml = materials_xml .. [[
         entity="data/mystical_mixtures/alchemy/]]..v.id..[[.xml"
     />
     ]]
-    
+
     local entity_xml = [[
     <Entity name="mm_alchemy_handler">
         <LifetimeComponent

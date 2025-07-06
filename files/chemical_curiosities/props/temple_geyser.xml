@@ -2,12 +2,12 @@
 	
 	
 	
-	<DamageModelComponent 
+	<DamageModelComponent
         hp="4.5"
         ragdoll_material="plastic"
-		ragdoll_filenames_file="" 
+		ragdoll_filenames_file=""
 		blood_material="smoke"
-		fire_probability_of_ignition="0" 
+		fire_probability_of_ignition="0"
 		air_needed="0" >
 		<damage_multipliers
 			drill="0.4"
@@ -18,8 +18,8 @@
 		</damage_multipliers>
 	</DamageModelComponent>
 	
-	<SpriteComponent 
-		image_file="mods/Hydroxide/files/gfx/geysertrap.xml" 
+	<SpriteComponent
+		image_file="mods/Hydroxide/files/gfx/geysertrap.xml"
 		special_scale_x="1"
 		has_special_scale="1"
 		offset_x="0"
@@ -31,18 +31,18 @@
 
 	
 	
-	<GenomeDataComponent 
+	<GenomeDataComponent
 		herd_id="trap"
 		food_chain_rank="7"
 		is_predator="1" >
 	</GenomeDataComponent>
 	
-	<HitboxComponent 
-		_enabled="1" 
+	<HitboxComponent
+		_enabled="1"
 		aabb_min_x="0"
-		aabb_max_x="5" 
+		aabb_max_x="5"
 		aabb_min_y="-5"
-		aabb_max_y="5" 
+		aabb_max_y="5"
 		>
 	</HitboxComponent>
 
@@ -54,7 +54,7 @@
 	<Entity>
 		<InheritTransformComponent />
 		
-	    <GameEffectComponent 
+	    <GameEffectComponent
 	        effect="STUN_PROTECTION_FREEZE"
 	        frames="-1"
 	    >
@@ -64,7 +64,7 @@
 	<Entity>
 		<InheritTransformComponent />
 		
-	    <GameEffectComponent 
+	    <GameEffectComponent
 	        effect="STUN_PROTECTION_ELECTRICITY"
 	        frames="-1"
 	    >

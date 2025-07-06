@@ -3,7 +3,7 @@
         scale.x="10" scale.y="10" >
     </_Transform>
 
-    <SpriteComponent 
+    <SpriteComponent
         alpha="0.2"
         image_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flare.xml"
         smooth_filtering="1"
@@ -13,7 +13,7 @@
     </SpriteComponent>
 	
 	
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="cc_antimatter_gas"
 		gravity.y="0.0"
 		lifetime_min="0.5"
@@ -43,4 +43,3 @@
       event_root="misc/orb_powder" >
 	</AudioComponent>
 </Entity>
-

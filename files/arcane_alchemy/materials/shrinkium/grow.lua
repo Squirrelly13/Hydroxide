@@ -52,7 +52,7 @@ if(is_polymorphed == false)then
                         local rx, ry = tonumber(GlobalsGetValue(root.."_hotspot_"..hotspot.."_x")), tonumber(GlobalsGetValue(root.."_hotspot_"..hotspot.."_y"))
                         ComponentSetValue2(hotspot, "offset", rx, ry)
                     end
-                    
+
                 end
             end
         end

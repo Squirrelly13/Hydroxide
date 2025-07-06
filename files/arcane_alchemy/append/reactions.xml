@@ -68,7 +68,7 @@
 
 	
 	<!-- Compost -->
-	  
+	
 	<Reaction probability="2"
 		input_cell1="aa_compost" 	input_cell2="air"
 		output_cell1="air"          	output_cell2="air"  >
@@ -78,16 +78,16 @@
 			cell_explosion_radius_min="0.00001"
 			cell_explosion_radius_max="0.00001"
 			cell_explosion_probability="1.1"
-			camera_shake="0" 
+			camera_shake="0"
 			damage="0"
 			explosion_sprite=""
-			load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/compost/grow_plant.xml" 
-			spark_material="spark" 
-			sparks_count_max="0" 
-			sparks_count_min="0" 
-			sparks_enabled="0" 
-  			stains_enabled="0" 
-			hole_enabled="0"  
+			load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/compost/grow_plant.xml"
+			spark_material="spark"
+			sparks_count_max="0"
+			sparks_count_min="0"
+			sparks_enabled="0"
+  			stains_enabled="0"
+			hole_enabled="0"
 			ray_energy="50000"
 			>
 		</ExplosionConfig>
@@ -100,7 +100,7 @@
 		output_cell1="air" output_cell2="air"
 	>
 	<ExplosionConfig
-		camera_shake="0" 
+		camera_shake="0"
 		damage="0"
 		cell_explosion_power="5"
 		cell_explosion_damage_required="3000"
@@ -108,7 +108,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml"
 		ray_energy="1"
 		>
 	</ExplosionConfig>
@@ -120,7 +120,7 @@
 		output_cell1="air" output_cell2="air"
 	>
 	<ExplosionConfig
-		camera_shake="0" 
+		camera_shake="0"
 		damage="0"
 		cell_explosion_power="5"
 		cell_explosion_damage_required="3000"
@@ -128,7 +128,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell_unstable.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell_unstable.xml"
 		ray_energy="1"
 		>
 	</ExplosionConfig>
@@ -140,7 +140,7 @@
 		output_cell1="air" output_cell2="air"
 	>
 	<ExplosionConfig
-		camera_shake="0" 
+		camera_shake="0"
 		damage="0"
 		cell_explosion_power="5"
 		cell_explosion_damage_required="3000"
@@ -148,7 +148,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.xml"
 		ray_energy="1"
 	/>
 	</Reaction><!-- chaotic pandorium casts spells -->
@@ -163,11 +163,11 @@
 	
   <Reaction probability="10"
   	input_cell1="wood_static" 	input_cell2="fire"
-  	output_cell1="aa_ash"	output_cell2="aa_ash" 
+  	output_cell1="aa_ash"	output_cell2="aa_ash"
 	blob_radius1="1"	blob_radius2="1"
 	>
   </Reaction>
-  
+
   <Reaction probability="10"
 	input_cell1="smoke" 	input_cell2="air"
 	output_cell1="aa_soot" 	output_cell2="aa_soot"
@@ -183,7 +183,7 @@
 	output_cell1="aa_potion_gas" 	output_cell2="lava"
 	>
 	</Reaction>
-  
+
 	<Reaction probability="95"
 	input_cell1="aa_potion_gas" 	input_cell2="air"
 	output_cell1="aa_base_potion" 	output_cell2="air"
@@ -228,21 +228,21 @@
   	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 				
 	>
   </Reaction><!-- make plastic -->
-  
+
    <Reaction probability="50"
   	input_cell1="magic_liquid_polymorph" 	input_cell2="aa_light_oil"
   	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 				
 	>
   </Reaction><!-- make plastic -->
-  
-  
-  
+
+
+
 	<Reaction probability="100"
 		input_cell1="aa_magic_plastic" input_cell2="item_box2d"
 		output_cell1="aa_magic_plastic" output_cell2="item_box2d"
 	>
 	<ExplosionConfig
-		camera_shake="0" 
+		camera_shake="0"
 		damage="0"
 		cell_explosion_power="5"
 		cell_explosion_damage_required="3000"
@@ -250,7 +250,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="100"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/create_nerf_gun.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/create_nerf_gun.xml"
 		ray_energy="1"
 		>
 	</ExplosionConfig>
@@ -272,7 +272,7 @@
 	blob_radius1="4"		blob_radius2="8"
 	>
   </Reaction>
-  
+
    <Reaction probability="100"
 	input_cell1="aa_arborium" 	input_cell2="[sand_ground]"
 	output_cell1="smoke" 	output_cell2="wood_static"
@@ -280,7 +280,7 @@
 	blob_radius1="4"		blob_radius2="8"
 	>
   </Reaction>
-  
+
    <Reaction probability="100"
 	input_cell1="aa_arborium" 	input_cell2="[sand_metal]"
 	output_cell1="smoke" 	output_cell2="wood_static"
@@ -288,7 +288,7 @@
 	blob_radius1="4"		blob_radius2="8"
 	>
   </Reaction>
-  
+
    <Reaction probability="100"
 	input_cell1="aa_arborium" 	input_cell2="[sand_other]"
 	output_cell1="smoke" 	output_cell2="wood_static"
@@ -296,8 +296,8 @@
 	blob_radius1="4"		blob_radius2="8"
 	>
   </Reaction>
-  
-  
+
+
   <Reaction probability="100"
 	input_cell1="aa_arborium" 	input_cell2="[box2d]"
 	output_cell1="smoke" 	output_cell2="wood_static"
@@ -306,67 +306,67 @@
 	>
   </Reaction>
 	<!-- hungry slime -->
-  <Reaction 
+  <Reaction
     probability="3"
-    input_cell1="aa_hungry_slime" 	input_cell2="[box2d]" 
-    output_cell1="aa_hungry_slime_growing"	output_cell2="aa_hungry_slime_growing" 
+    input_cell1="aa_hungry_slime" 	input_cell2="[box2d]"
+    output_cell1="aa_hungry_slime_growing"	output_cell2="aa_hungry_slime_growing"
   >
   </Reaction>
 
-  <Reaction 
+  <Reaction
     probability="10"
-    input_cell1="aa_hungry_slime_growing" 	input_cell2="air" 
-    output_cell1="aa_hungry_slime_growing"	output_cell2="aa_hungry_slime" 
+    input_cell1="aa_hungry_slime_growing" 	input_cell2="air"
+    output_cell1="aa_hungry_slime_growing"	output_cell2="aa_hungry_slime"
   >
   </Reaction><!-- christ this is scary -->
-  
+
   <Reaction probability="3"
 	input_cell1="aa_hungry_slime"				input_cell2="rotten_meat"
 	output_cell1="aa_hungry_slime_growing"		output_cell2="aa_hungry_slime"
   >
   </Reaction><!-- more fear ;) -->
-  
+
   <Reaction probability="8"
   input_cell1="aa_hungry_slime_growing"	input_cell2="[fire]"
   output_cell1="[fire]"						output_cell2="aa_soot"
   >
   </Reaction><!-- fire kills it -->
-  
+
   <Reaction probability="8"
   input_cell1="aa_hungry_slime"	input_cell2="[fire]"
   output_cell1="[fire]"				output_cell2="smoke"
   >
   </Reaction><!-- burns -->
-  
-  
+
+
 	<!-- catalyst/oil interactions -->
 	<Reaction probability="75"
   	input_cell1="alcohol" 	input_cell2="acid"
-  	output_cell1="aa_catalyst"	output_cell2="aa_catalyst" 
+  	output_cell1="aa_catalyst"	output_cell2="aa_catalyst"
 	blob_radius1="2"		blob_radius2="2"
 	>
 	</Reaction>
-  
+
   <Reaction probability="75"
   	input_cell1="aa_catalyst" 	input_cell2="oil"
-  	output_cell1="aa_oil_splitting"	output_cell2="aa_oil_splitting" 
+  	output_cell1="aa_oil_splitting"	output_cell2="aa_oil_splitting"
 	blob_radius1="2"		blob_radius2="2"
 	>
   </Reaction>
-  
+
   <Reaction probability="50"
   	input_cell1="aa_oil_splitting" 	input_cell2="aa_oil_splitting"
-  	output_cell1="aa_heavy_oil"	output_cell2="aa_light_oil" 
+  	output_cell1="aa_heavy_oil"	output_cell2="aa_light_oil"
 	>
   </Reaction>
-  
-   
+
+
   <Reaction probability="50"
   	input_cell1="aa_oil_splitting" 	input_cell2="aa_oil_splitting"
-  	output_cell1="aa_light_oil"	output_cell2="aa_heavy_oil" 
+  	output_cell1="aa_light_oil"	output_cell2="aa_heavy_oil"
 	>
   </Reaction>
-  
+
 	
 
 
@@ -378,7 +378,7 @@
 		req_lifetime="120"
 	>
 	<ExplosionConfig
-		camera_shake="0" 
+		camera_shake="0"
 		damage="0"
 		cell_explosion_power="5"
 		cell_explosion_damage_required="3000"
@@ -386,7 +386,7 @@
 		cell_explosion_radius_max="1"
 		cell_explosion_probability="1.1"
 		explosion_sprite="data/particles/explosion_012.xml"
-		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pop_rocks/physics_stone_01.xml" 
+		load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pop_rocks/physics_stone_01.xml"
 		ray_energy="1"
 		>
 	</ExplosionConfig>

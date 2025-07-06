@@ -20,17 +20,17 @@ for k, v in pairs(variable_storage)do
     if(name == "verlet_file")then
         verlet_file = ComponentGetValue2(v, "value_string")
     elseif(name == "attack_radius")then
-        radius = ComponentGetValue2(v, "value_string")      
+        radius = ComponentGetValue2(v, "value_string")
     elseif(name == "projectile_file")then
-        projectile_file = ComponentGetValue2(v, "value_string")      
+        projectile_file = ComponentGetValue2(v, "value_string")
     elseif(name == "attack_speed")then
-        move_speed = ComponentGetValue2(v, "value_string") 
+        move_speed = ComponentGetValue2(v, "value_string")
     elseif(name == "enable_raytrace")then
         enable_raytrace = ComponentGetValue2(v, "value_string")
     elseif(name == "velocity_falloff")then
         velocity_falloff = ComponentGetValue2(v, "value_string")
     elseif(name == "target_tag")then
-        tag = ComponentGetValue2(v, "value_string")     
+        tag = ComponentGetValue2(v, "value_string")
     end
 end
 
@@ -49,7 +49,7 @@ if(verlet_file ~= nil)then
             name="holder",
             value_string=holder_string,
         })
-        
+
         EntityAddComponent(verlet_controller, "LuaComponent", {
             script_source_file="mods/Hydroxide/files/scripts/misc/verlet_mover.lua",
             execute_on_added="1",
@@ -79,12 +79,12 @@ if(verlet_file ~= nil)then
         EntityAddComponent(verlet_controller, "VariableStorageComponent", {
             name="enable_raytrace",
             value_string=enable_raytrace,
-        })    
-        
+        })
+
         EntityAddComponent(verlet_controller, "VariableStorageComponent", {
             name="velocity_falloff",
             value_string=velocity_falloff,
-        })       
+        })
 
         local x2, y2 = EntityGetTransform(verlet_controller)
 
@@ -92,31 +92,31 @@ if(verlet_file ~= nil)then
             EntityAddComponent( verlet, "VerletWorldJointComponent" )
             EntityAddComponent( verlet, "VerletWorldJointComponent" )
         end
-        
+
         local verletphysics_comp_found = false
         local last_point_index = 0
         edit_component( verlet, "VerletPhysicsComponent", function(comp,vars)
             verletphysics_comp_found = true
             last_point_index = ComponentGetValue( comp, "num_points" )
         end)
-        
+
         if verletphysics_comp_found then
 
             local index = 0
-        
+
             edit_all_components( verlet, "VerletWorldJointComponent", function(comp,vars)
-                
+
                 if index == 0 then
                     ComponentSetValueVector2( comp, "world_position", x, y )
                 else
                     ComponentSetValueVector2( comp, "world_position", x2, y2 )
                     vars.verlet_point_index = last_point_index
                 end
-        
+
                 index = index + 1
             end)
-    
-        end   
+
+        end
 
         EntityAddComponent(verlet, "LuaComponent", {
             script_source_file="mods/Hydroxide/files/scripts/misc/verlet_controller.lua",

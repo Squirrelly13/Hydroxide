@@ -50,7 +50,7 @@ table.insert(materials_magic, {
 table.insert(materials_magic, {
     material="cc_unstable_metamorphine",
 	cost=900,
-}); 
+});
 
 table.insert(materials_magic, {
     material="cc_explodePlayer",

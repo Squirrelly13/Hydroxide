@@ -5,9 +5,9 @@
 		>
 	</VelocityComponent>
 
-	<SpriteComponent 
+	<SpriteComponent
 		alpha="0.6"
-		image_file="data/projectiles_gfx/glue.xml" 
+		image_file="data/projectiles_gfx/glue.xml"
 		>
 	</SpriteComponent>
 
@@ -78,7 +78,7 @@
 		>
 	</LifetimeComponent>
 	<!--
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="glue"
 		emitter_lifetime_frames="3"
 		offset.x="0"
@@ -103,4 +103,3 @@
 	</ParticleEmitterComponent>
 -->
 </Entity>
-

@@ -21,7 +21,7 @@
 		>
 	</DieIfSpeedBelowComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="plasma_fading"
 		offset.x="0"
 		offset.y="0"
@@ -48,7 +48,7 @@
 		>
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="spark"
 		offset.x="0"
 		offset.y="0"
@@ -70,7 +70,7 @@
 		emit_cosmetic_particles="1"
 		emission_interval_min_frames="1"
 		emission_interval_max_frames="1"
-		is_emitting="1" 
+		is_emitting="1"
 		airflow_force="0.5"
 		airflow_time="0.401"
 		airflow_scale="0.5"
@@ -78,7 +78,7 @@
 		>
 	</ParticleEmitterComponent>
 
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="plasma_fading"
 		x_pos_offset_min="0"
 		y_pos_offset_min="0"
@@ -95,7 +95,7 @@
 		>
 	</ParticleEmitterComponent>
 	
-	<ParticleEmitterComponent 
+	<ParticleEmitterComponent
 		emitted_material_name="plasma_fading"
 		fade_based_on_lifetime="1"
 		x_pos_offset_min="-8"
@@ -112,4 +112,3 @@
 		>
 	</ParticleEmitterComponent>
 </Entity>
-

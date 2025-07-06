@@ -37,7 +37,7 @@ elseif ComponentGetValue2(vscomp, "value_int") < 5 and inges + previous_ingestio
     ComponentSetValue2(vscomp, "value_int", counter + 1) --increment the counter by 1
     return --exit script
 
-elseif inges == 0 and do_explosion == false then --effect should run every 2 seconds but the script runs every 1 second, so i have a script 
+elseif inges == 0 and do_explosion == false then --effect should run every 2 seconds but the script runs every 1 second, so i have a script
     ComponentSetValue2(vscomp, "value_bool", true)
     return --exit script
 

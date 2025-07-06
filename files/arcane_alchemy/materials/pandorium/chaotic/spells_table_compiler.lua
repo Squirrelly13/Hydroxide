@@ -32,13 +32,13 @@ local exclude = {
 function IsValidProjectile(spell)
     --if true then return true end --crying and shaking rn, this line of code stumped me for like an hour cuz i forgot it existed :sob:
 
-    if ("," .. spell.spawn_level .. ","):find(",[012],") then --[[print(spell.id .. " IS VALID")]] return true end 
+    if ("," .. spell.spawn_level .. ","):find(",[012],") then --[[print(spell.id .. " IS VALID")]] return true end
     --fancy string shenanigans here and in the modifier script grabbed from Nathan and other lovel ppl from noitacord
     return false
 end
 
 function IsValidModifier(spell)
-    if ("," .. spell.spawn_level .. ","):find(",[012345],") then --[[print(spell.id .. " IS VALID")]] return true end 
+    if ("," .. spell.spawn_level .. ","):find(",[012345],") then --[[print(spell.id .. " IS VALID")]] return true end
 
     return false
 end
@@ -57,7 +57,7 @@ for k, data in pairs(actions)do
     ::continue::
 end
 
---[[ 
+--[[
 for k,v in pairs(chaotic) do
     for a,b in pairs(v) do
         print(b .. " ADDED TO " .. k)
@@ -67,7 +67,7 @@ end
 
 
 
- 
+
 
 local include = {
     COPITH_SUMMON_HAMIS = true,

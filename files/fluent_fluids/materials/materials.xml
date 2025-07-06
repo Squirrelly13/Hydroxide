@@ -15,7 +15,7 @@
 	requires_oxygen="1"
 	temperature_of_fire="10"
 	solid_friction="1"
-	hp="1000" 
+	hp="1000"
 	audio_physics_material_event="sand"
 	audio_physics_material_wall="sand"
 	audio_physics_material_solid="sand"

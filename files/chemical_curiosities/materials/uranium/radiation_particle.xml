@@ -1,4 +1,4 @@
-<Entity 
+<Entity
   name="$projectile_default" tags="projectile_player,projectile_not"
    >
 
@@ -12,8 +12,8 @@
 		</VelocityComponent>
 	</Base>
 	
-  <ProjectileComponent 
-    _enabled="1" 
+  <ProjectileComponent
+    _enabled="1"
     lob_min="0.8"
     lob_max="1.0"
     speed_min="50"
@@ -23,9 +23,9 @@
     penetrate_world="1"
     penetrate_world_velocity_coeff="0.8"
     on_death_explode="0"
-    on_death_gfx_leave_sprite="0" 
+    on_death_gfx_leave_sprite="0"
     on_lifetime_out_explode="0"
-    explosion_dont_damage_shooter="1" 
+    explosion_dont_damage_shooter="1"
     on_collision_die="0"
 	die_on_liquid_collision="0"
 	velocity_sets_scale="1"
@@ -45,16 +45,16 @@
     <config_explosion />
   </ProjectileComponent>
 
-  <LightComponent 
-    _enabled="1" 
-    radius="20" 
+  <LightComponent
+    _enabled="1"
+    radius="20"
     r="20"
     g="70"
     b="20">
   </LightComponent>
 
   <!-- cloud -->
-  <ParticleEmitterComponent 
+  <ParticleEmitterComponent
     emitted_material_name="cc_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
@@ -78,7 +78,7 @@
   </ParticleEmitterComponent>
 
   <!-- trail -->
-  <ParticleEmitterComponent 
+  <ParticleEmitterComponent
     emitted_material_name="cc_uranium"
     emitter_lifetime_frames="280"
     offset.x="0"
@@ -106,7 +106,7 @@
     emission_interval_max_frames="2"
     is_emitting="1" >
   </ParticleEmitterComponent>
-  
+
   	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material_tag="[liquid]"
@@ -114,7 +114,7 @@
       to_material="cc_radioactive_waste"
       clean_stains="0"
       is_circle="1"
-      radius="3" 
+      radius="3"
 	  reaction_audio_amount="1"
 	  convert_same_material="0"
 	  loop="1"

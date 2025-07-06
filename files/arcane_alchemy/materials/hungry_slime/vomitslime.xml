@@ -1,6 +1,6 @@
 <Entity>
 
-	<GameEffectComponent 
+	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CUSTOM_VOMIT"
 		frames="10"
@@ -28,6 +28,3 @@
 	</VariableStorageComponent>
 
 </Entity>
-
-
-
