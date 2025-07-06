@@ -25,7 +25,6 @@
 	>
 	<config_explosion
 		never_cache="1"
-		never_cache="1"
 		camera_shake="1.2"
 		explosion_radius="3"
 		explosion_sprite=""
@@ -37,7 +36,6 @@
 		hole_enabled="1"
 		ray_energy="100000"
 		damage="0.15"
-		hole_image="data/temp/explosion_hole.png"
 		particle_effect="0"
 		damage_mortals="1"
 		gore_particle_count="8"
@@ -54,8 +52,7 @@
 		light_r="10"
 		light_g="30"
 		light_b="10"
-		>
-    </config_explosion>
+	/>
   </ProjectileComponent>
 
 	<ParticleEmitterComponent

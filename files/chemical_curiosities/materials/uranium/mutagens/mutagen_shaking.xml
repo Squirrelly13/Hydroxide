@@ -1,6 +1,6 @@
 <Entity name="mutagenPositioning" >
 
-	<LifetimeComponent lifetime="300" />
+	<LifetimeComponent lifetime="300"/>
 
 	<InheritTransformComponent />
 

@@ -33,8 +33,8 @@
     />
 
     <Base file="mods/Hydroxide/files/lib/base_field.xml">
-        <LifetimeComponent lifetime="30" />
-        <SpriteComponent image_file="" />
+        <LifetimeComponent lifetime="30"/>
+        <SpriteComponent image_file=""/>
     </Base>
 
 

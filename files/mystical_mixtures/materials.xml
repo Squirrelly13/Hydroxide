@@ -35,7 +35,7 @@
         </Graphics>
         <StatusEffects>
 			<Ingestion>
-				<StatusEffect type="FOOD_POISONING" amount="0.3" />
+				<StatusEffect type="FOOD_POISONING" amount="0.3"/>
 			</Ingestion>
 		</StatusEffects>
     </CellData>
@@ -136,31 +136,31 @@
 					do_only_vertical_stripe="0"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_hor.png"
 					min_angle="45"
-					max_angle="135" />
+					max_angle="135"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="135"
-					max_angle="235" />
+					max_angle="235"/>
 				  <Image
 					do_only_horizontal_stripe="1"
 					do_only_vertical_stripe="0"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_hor.png"
 					min_angle="235"
-					max_angle="315" />
+					max_angle="315"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="315"
-					max_angle="360" />
+					max_angle="360"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="0"
-					max_angle="45" />
+					max_angle="45"/>
 				</Images>
 			  </EdgeGraphics>
 		</Edge>
@@ -193,31 +193,31 @@
 					do_only_vertical_stripe="0"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_hor.png"
 					min_angle="45"
-					max_angle="135" />
+					max_angle="135"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="135"
-					max_angle="235" />
+					max_angle="235"/>
 				  <Image
 					do_only_horizontal_stripe="1"
 					do_only_vertical_stripe="0"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_hor.png"
 					min_angle="235"
-					max_angle="315" />
+					max_angle="315"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="315"
-					max_angle="360" />
+					max_angle="360"/>
 				  <Image
 					do_only_horizontal_stripe="0"
 					do_only_vertical_stripe="1"
 					filename="data/materials_gfx/edge_files/edge_wizardstone_ver.png"
 					min_angle="0"
-					max_angle="45" />
+					max_angle="45"/>
 				</Images>
 			  </EdgeGraphics>
 		</Edge>
@@ -250,7 +250,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1" />
+			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1"/>
 		</Ingestion>
 	</StatusEffects>
   </CellDataChild>
@@ -297,31 +297,31 @@
 				do_only_vertical_stripe="0"
 				filename="data/materials_gfx/edge_files/edge_steel_grey_hor.png"
 				min_angle="45"
-				max_angle="135" />
+				max_angle="135"/>
 			  <Image
 				do_only_horizontal_stripe="0"
 				do_only_vertical_stripe="1"
 				filename="data/materials_gfx/edge_files/edge_steel_grey_ver.png"
 				min_angle="135"
-				max_angle="225" />
+				max_angle="225"/>
 			  <Image
 				do_only_horizontal_stripe="1"
 				do_only_vertical_stripe="0"
 				filename="data/materials_gfx/edge_files/edge_steel_grey_hor.png"
 				min_angle="225"
-				max_angle="315" />
+				max_angle="315"/>
 			  <Image
 				do_only_horizontal_stripe="0"
 				do_only_vertical_stripe="1"
 				filename="data/materials_gfx/edge_files/edge_steel_grey_ver.png"
 				min_angle="315"
-				max_angle="360" />
+				max_angle="360"/>
 			  <Image
 				do_only_horizontal_stripe="0"
 				do_only_vertical_stripe="1"
 				filename="data/materials_gfx/edge_files/edge_steel_grey_ver.png"
 				min_angle="0"
-				max_angle="45" />
+				max_angle="45"/>
 			</Images>
 		  </EdgeGraphics>
 		</Edge>

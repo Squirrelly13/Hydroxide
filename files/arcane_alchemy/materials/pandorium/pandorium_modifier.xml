@@ -5,5 +5,5 @@
         execute_on_added="1"
     />
 
-    <LifetimeComponent lifetime="3" />
+    <LifetimeComponent lifetime="3"/>
 </Entity>

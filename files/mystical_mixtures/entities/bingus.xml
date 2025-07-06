@@ -1,5 +1,5 @@
 <Entity tags="hittable,teleportable_NOT,item_physics,item_pickup,bingus" >
-	<Base file="data/entities/base_item_projectile.xml" />
+	<Base file="data/entities/base_item_projectile.xml"/>
 
 	<!-- physical presence -->
 

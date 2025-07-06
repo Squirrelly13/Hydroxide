@@ -1,7 +1,7 @@
 <Entity>
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="REPULSION"
+		custom_effect_id="AA_REPULSION"
 		frames="600"
 	>
 	</GameEffectComponent >

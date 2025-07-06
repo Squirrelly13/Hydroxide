@@ -1151,7 +1151,7 @@
 	</Reaction> <!-- acid water turns into normal water -->
 
 
-  
+
   <Reaction probability="50"
 	input_cell1="[hydroxide]" 		input_cell2="[corrodible]"
 	output_cell1="[hydroxide]" 		output_cell2="cc_hydroxide_gas"
@@ -1269,19 +1269,19 @@
 
 	<!-- moss grows a tiny bit more often -->
 	<Reaction probability="2"
-	input_cell1="rock_static" 		input_cell2="air" 
+	input_cell1="rock_static" 		input_cell2="air"
 	output_cell1="rock_static" 		output_cell2="moss"
 	>
   	</Reaction>
 
 	<Reaction probability="100"
-		input_cell1="cc_air" 	input_cell2="[*]" 
+		input_cell1="cc_air" 	input_cell2="[*]"
 		output_cell1="air" 		output_cell2="[*]"
 		fast_reaction="1"
 	/>
 
 	<Reaction probability="100"
-		input_cell1="cc_air" 	input_cell2="cc_air" 
+		input_cell1="cc_air" 	input_cell2="cc_air"
 		output_cell1="air" 		output_cell2="air"
 		fast_reaction="1"
 	/>

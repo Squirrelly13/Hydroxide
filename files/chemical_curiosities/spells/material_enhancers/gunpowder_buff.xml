@@ -7,7 +7,7 @@
       clean_stains="0"
       is_circle="1"
       radius="32"
-	  loop="1" />
+	  loop="1"/>
 
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
@@ -17,7 +17,7 @@
       clean_stains="0"
       is_circle="1"
       radius="32"
-	  loop="1" />
+	  loop="1"/>
 
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
@@ -27,7 +27,7 @@
       clean_stains="0"
       is_circle="1"
       radius="32"
-	  loop="1" />
+	  loop="1"/>
 
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
@@ -37,10 +37,10 @@
       clean_stains="0"
       is_circle="1"
       radius="32"
-	  loop="1" />
+	  loop="1"/>
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_enhancer.lua"
 		remove_after_executed="1"
-		execute_every_n_frame="1" />
+		execute_every_n_frame="1"/>
 </Entity>

@@ -205,7 +205,7 @@ local AA_effects = {
 		add_as_child=true
 	},
 	{
-		id="aa_static_charge",
+		id="AA_STATIC_CHARGE",
 		ui_name="$status_aa_static_charge",
 		ui_description="$status_desc_aa_static_charge",
 		ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/static_charge/effect_charged.png",

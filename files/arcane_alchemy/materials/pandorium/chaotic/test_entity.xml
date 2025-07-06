@@ -48,7 +48,7 @@
         mFlyingTimeLeft="1000"
         mass="1.2999999523163"
         platforming_type="0"
-        send_transform_update_message="0" />
+        send_transform_update_message="0"/>
 
     <CharacterPlatformingComponent
         accel_x="0.30000001192093"
@@ -84,7 +84,7 @@
         velocity_min_x="-50"
         velocity_min_y="-500"
         velocity_max_x="50"
-        velocity_max_y="500" />
+        velocity_max_y="500"/>
 
     <ControlsComponent
         enabled="0"
@@ -92,7 +92,7 @@
         gamepad_fire_on_thumbstick_extend_threshold="0.69999998807907"
         gamepad_indirect_aiming_enabled="0"
         polymorph_hax="0"
-        polymorph_next_attack_frame="0" />
+        polymorph_next_attack_frame="0"/>
 
     <GunComponent />
 
@@ -100,7 +100,7 @@
         full_inventory_slots_x="8"
         full_inventory_slots_y="8"
         mSavedActiveItemIndex="0"
-        quick_inventory_slots="1" />
+        quick_inventory_slots="1"/>
 
     <PlatformShooterPlayerComponent
         aiming_reticle_distance_from_character="40"
@@ -117,7 +117,7 @@
         eating_delay_frames="30"
         eating_probability="5"
         move_camera_with_aim="1"
-        stoned_speed="0.10000000149012" />
+        stoned_speed="0.10000000149012"/>
 
     <Entity
         name="inventory_quick" >
@@ -176,7 +176,7 @@
                     actions_per_round="1"
                     deck_capacity="20"
                     reload_time="27"
-                    shuffle_deck_when_empty="0" />
+                    shuffle_deck_when_empty="0"/>
 
                 <gunaction_config
                     action_ai_never_uses="0"
@@ -243,11 +243,11 @@
                     state_discarded_action="0"
                     state_shuffled="0"
                     trail_material=""
-                    trail_material_amount="0" />
+                    trail_material_amount="0"/>
             </AbilityComponent>
 
             <ManaReloaderComponent
-                _tags="enabled_in_world,enabled_in_hand,enabled_in_inventory" />
+                _tags="enabled_in_world,enabled_in_hand,enabled_in_inventory"/>
 
             <Entity
                 tags="card_action" >
@@ -255,7 +255,7 @@
                 <ItemActionComponent
                     _enabled="0"
                     _tags="enabled_in_world"
-                    action_id="FUNKY_SPELL" />
+                    action_id="FUNKY_SPELL"/>
 
                 <ItemComponent
                     _enabled="0"
@@ -299,7 +299,7 @@
                     ui_description=""
                     ui_display_description_on_pick_up_hint="0"
                     ui_sprite=""
-                    uses_remaining="-1" />
+                    uses_remaining="-1"/>
 
 
             </Entity>
@@ -310,7 +310,7 @@
                 <ItemActionComponent
                     _enabled="0"
                     _tags="enabled_in_world"
-                    action_id="LIGHT_BULLET" />
+                    action_id="LIGHT_BULLET"/>
 
                 <ItemComponent
                     _enabled="0"
@@ -354,7 +354,7 @@
                     ui_description=""
                     ui_display_description_on_pick_up_hint="0"
                     ui_sprite=""
-                    uses_remaining="-1" />
+                    uses_remaining="-1"/>
 
             </Entity>
         </Entity>

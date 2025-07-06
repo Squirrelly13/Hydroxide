@@ -54,7 +54,7 @@
 	</Graphics>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="WET" />
+			<StatusEffect type="WET"/>
 		</Stains>
 	</StatusEffects>
   </CellData> <!-- Terrifying Water, the player is given a material converter at the start of a run that transforms twater into a random dangerous material depending on the seed when the player gets close -->

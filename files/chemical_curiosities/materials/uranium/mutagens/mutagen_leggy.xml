@@ -3,7 +3,7 @@
 
 	<InheritTransformComponent />
 
-	<IKLimbComponent length="30" />
+	<IKLimbComponent length="30"/>
 	<IKLimbWalkerComponent
 		affect_flying="1"
 		>

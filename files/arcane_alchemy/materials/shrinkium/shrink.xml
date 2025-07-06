@@ -1,7 +1,7 @@
 <Entity>
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="SINKING"
+		custom_effect_id="AA_SHRINK"
 		frames="600"
 	>
 	</GameEffectComponent >

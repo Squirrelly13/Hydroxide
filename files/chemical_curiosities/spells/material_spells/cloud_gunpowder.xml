@@ -25,7 +25,7 @@
 	</ProjectileComponent>
 
 	<Entity>
-		<InheritTransformComponent only_position="1" />
+		<InheritTransformComponent only_position="1"/>
 
 		<ParticleEmitterComponent
 			emitted_material_name="gunpowder_explosive"

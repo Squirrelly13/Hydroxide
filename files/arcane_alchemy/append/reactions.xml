@@ -225,13 +225,13 @@
 
 	<Reaction probability="50"
   	input_cell1="magic_liquid_random_polymorph" 	input_cell2="aa_light_oil"
-  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 
+  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic"
 	>
   </Reaction><!-- make plastic -->
 
    <Reaction probability="50"
   	input_cell1="magic_liquid_polymorph" 	input_cell2="aa_light_oil"
-  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 
+  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic"
 	>
   </Reaction><!-- make plastic -->
 

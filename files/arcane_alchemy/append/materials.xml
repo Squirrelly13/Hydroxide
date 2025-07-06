@@ -26,7 +26,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="POISONED" amount="0.1" />
+			<StatusEffect type="POISONED" amount="0.1"/>
 		</Ingestion>
 	</StatusEffects>
    </CellData>--> <!--  magic liquid specifically for creating a bloomery  -->
@@ -59,7 +59,7 @@
     </Graphics>
     <StatusEffects>
 			<Ingestion>
-			<StatusEffect type="FOOD_POISONING" amount="0.1" />
+			<StatusEffect type="FOOD_POISONING" amount="0.1"/>
 			</Ingestion>
     </StatusEffects>
   </CellData> <!--  Why are you hitting yourself?  -->
@@ -154,7 +154,7 @@
     danger_water="1"
     liquid_stains="1"
 	  gfx_glow="200"
-	  status_effects="aa_static_charge"
+	  status_effects="AA_STATIC_CHARGE"
     liquid_sprite_stain_ignited_drop_chance="10"
     liquid_sprite_stains_check_offset="-1"
     show_in_creative_mode="1"
@@ -178,7 +178,7 @@
 	</ParticleEffect>
     <StatusEffects>
         <Ingestion>
-            <StatusEffect type="aa_static_charge" amount="0.1"/>
+            <StatusEffect type="AA_STATIC_CHARGE" amount="0.1"/>
         </Ingestion>
     </StatusEffects>
   </CellData><!--  makes you shocking -->
@@ -215,7 +215,7 @@
     </Graphics>
     <StatusEffects>
         <Stains>
-            <StatusEffect type="AA_REPULSION" />
+            <StatusEffect type="AA_REPULSION"/>
         </Stains>
     </StatusEffects>
   </CellData><!-- Things bounce off this. -->
@@ -527,10 +527,10 @@
     </Graphics>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="ALCOHOLIC" />
+			<StatusEffect type="ALCOHOLIC"/>
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="INGESTION_DRUNK" amount="0.3" />
+			<StatusEffect type="INGESTION_DRUNK" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Catalyst -->
@@ -560,11 +560,11 @@
 	>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="OILED" />
+			<StatusEffect type="OILED"/>
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="POISONED" amount="0.05" />
-			<StatusEffect type="FOOD_POISONING" amount="0.2" />
+			<StatusEffect type="POISONED" amount="0.05"/>
+			<StatusEffect type="FOOD_POISONING" amount="0.2"/>
 		</Ingestion>
 	</StatusEffects>
 	<Graphics
@@ -597,11 +597,11 @@
 	>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="OILED" />
+			<StatusEffect type="OILED"/>
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="POISONED" amount="0.05" />
-			<StatusEffect type="FOOD_POISONING" amount="0.2" />
+			<StatusEffect type="POISONED" amount="0.05"/>
+			<StatusEffect type="FOOD_POISONING" amount="0.2"/>
 		</Ingestion>
 	</StatusEffects>
 	<Graphics
@@ -634,11 +634,11 @@
 	>
 	<StatusEffects>
 		<Stains>
-			<StatusEffect type="OILED" />
+			<StatusEffect type="OILED"/>
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="POISONED" amount="0.05" />
-			<StatusEffect type="FOOD_POISONING" amount="0.2" />
+			<StatusEffect type="POISONED" amount="0.05"/>
+			<StatusEffect type="FOOD_POISONING" amount="0.2"/>
 		</Ingestion>
 	</StatusEffects>
 	<Graphics
@@ -727,7 +727,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_LOVE_POTION" amount="0.15" />
+			<StatusEffect type="AA_LOVE_POTION" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- love heart potion, kinda cool -->
@@ -780,7 +780,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_PATH" amount="0.15" />
+			<StatusEffect type="AA_PATH" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- A meagre offering -->
@@ -829,7 +829,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="HP_REGENERATION" amount="0.003" />
+			<StatusEffect type="HP_REGENERATION" amount="0.003"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- RICE -->
@@ -881,7 +881,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_ICEFIRE" amount="0.15" />
+			<StatusEffect type="AA_ICEFIRE" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Icy Inferno turns fire to freezing vapor in vicinity of player -->
@@ -930,7 +930,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS" amount="0.10"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Pandorium -->
@@ -976,7 +976,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS_UNSTABLE" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS_UNSTABLE" amount="0.10"/>
 			</Ingestion>
     </StatusEffects>
 
@@ -1025,7 +1025,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10" />
+			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Chaotic Pandorium -->
@@ -1120,7 +1120,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_GRAVITY" amount="0.15" />
+			<StatusEffect type="AA_GRAVITY" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Condensed Gravity -->
@@ -1174,7 +1174,7 @@
 	</ParticleEffect>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="AA_CLONE" amount="0.15" />
+			<StatusEffect type="AA_CLONE" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData><!-- Cloning Solution -->
@@ -1213,7 +1213,7 @@
     </Graphics>
 	<StatusEffects>
 			<Ingestion>
-			<StatusEffect type="GLUED" amount="0.15" />
+			<StatusEffect type="GLUED" amount="0.15"/>
 			</Ingestion>
     </StatusEffects>
   </CellData>--><!--Omega Glue  -->

@@ -7,7 +7,7 @@
 		name="Combustion Counter"
     	value_int="0"
 		value_float="0"
-		value_bool="false"
+		value_bool="0"
 	/>
 
 	<GameEffectComponent

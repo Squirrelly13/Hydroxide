@@ -125,7 +125,7 @@
 
   <LuaComponent script_physics_body_modified="data/scripts/props/physics_lantern_damaged.lua"  />
 
-  <LuaComponent script_death="data/scripts/props/lantern_small_death.lua" />
+  <LuaComponent script_death="data/scripts/props/lantern_small_death.lua"/>
 
   <AudioComponent
     file="data/audio/Desktop/materials.bank"

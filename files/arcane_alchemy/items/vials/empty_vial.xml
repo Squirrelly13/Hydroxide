@@ -1,5 +1,5 @@
 <Entity>
-	<Base file="mods/Hydroxide/files/arcane_alchemy/items/vials/vial.xml" />
+	<Base file="mods/Hydroxide/files/arcane_alchemy/items/vials/vial.xml"/>
 
 	<VariableStorageComponent
 		name="potion_material"

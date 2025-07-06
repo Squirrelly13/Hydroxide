@@ -4,7 +4,8 @@
     </InheritTransformComponent>
 
       <GameEffectComponent
-        effect="CC_TWITCHY"
+        effect="CUSTOM"
+        custom_effect_id="CC_TWITCHY"
         frames="12000"
     >
 	</GameEffectComponent>

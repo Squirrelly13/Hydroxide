@@ -85,19 +85,19 @@
         velocity_min_x="-57"
         velocity_max_x="57"
         velocity_min_y="-200"
-        velocity_max_y="350" />
+        velocity_max_y="350"/>
 
     <ControlsComponent enabled="1"
         gamepad_fire_on_thumbstick_extend="0"
         gamepad_fire_on_thumbstick_extend_threshold="0.9"
-        gamepad_indirect_aiming_enabled="0" />
+        gamepad_indirect_aiming_enabled="0"/>
 
     <MaterialSuckerComponent suck_gold="1"
-        suck_health="1" />
+        suck_health="1"/>
 
     <Inventory2Component quick_inventory_slots="10"
         full_inventory_slots_x="16"
-        full_inventory_slots_y="1" />
+        full_inventory_slots_y="1"/>
 
     <InventoryGuiComponent />
 
@@ -153,11 +153,11 @@
         event_name="player/pick_gold_sand"
         volume_autofade_speed="0.05"></AudioLoopComponent>
 
-    <AudioListenerComponent z="-60" />
+    <AudioListenerComponent z="-60"/>
     <GunComponent />
-    <ItemPickUpperComponent drop_items_on_death="0" />
+    <ItemPickUpperComponent drop_items_on_death="0"/>
     <GameLogComponent report_damage="0"
-        report_death="1" />
+        report_death="1"/>
 
     <!-- cape -->
 
@@ -203,8 +203,8 @@
 
     <Entity name="inventory_quick">
         <Entity>
-            <Base file="[POLYTOOLS_PATH]ui/polywand.xml" />
+            <Base file="[POLYTOOLS_PATH]ui/polywand.xml"/>
         </Entity>
     </Entity>
-    <Entity name="inventory_full" />
+    <Entity name="inventory_full"/>
 </Entity>

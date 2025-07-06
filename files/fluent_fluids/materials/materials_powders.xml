@@ -24,7 +24,7 @@
     </Graphics>
 	<StatusEffects>
 	    <Ingestion>
-            <StatusEffect type="FOOD_POISONING" amount="0.2" />
+            <StatusEffect type="FOOD_POISONING" amount="0.2"/>
 	    </Ingestion>
     </StatusEffects>
   </CellData>
@@ -78,9 +78,9 @@
     </Graphics>
     <StatusEffects>
 		<Ingestion>
-			<StatusEffect type="CONFUSION" amount="0.25" />
-            <StatusEffect type="TRIP" amount="0.25" />
-            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+			<StatusEffect type="CONFUSION" amount="0.25"/>
+            <StatusEffect type="TRIP" amount="0.25"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.25"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -111,8 +111,8 @@
     </Graphics>
 	<StatusEffects>
 	    <Ingestion>
-		    <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.3" />
-            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+		    <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.3"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.3"/>
 	    </Ingestion>
     </StatusEffects>
   </CellData>
@@ -143,8 +143,8 @@
     </Graphics>
 	<StatusEffects>
 	    <Ingestion>
-		    <StatusEffect type="FASTER_LEVITATION" amount="0.3" />
-            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+		    <StatusEffect type="FASTER_LEVITATION" amount="0.3"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.3"/>
 	    </Ingestion>
     </StatusEffects>
   </CellData>
@@ -175,9 +175,9 @@
     </Graphics>
 	<StatusEffects>
 	    <Ingestion>
-		    <StatusEffect type="FASTER_LEVITATION" amount="0.35" />
-            <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.35" />
-            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+		    <StatusEffect type="FASTER_LEVITATION" amount="0.35"/>
+            <StatusEffect type="MOVEMENT_FASTER_2X" amount="0.35"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.4"/>
 	    </Ingestion>
     </StatusEffects>
   </CellData>
@@ -208,8 +208,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="WORM_ATTRACTOR" amount="0.6" />
-            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+			<StatusEffect type="WORM_ATTRACTOR" amount="0.6"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.4"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -240,7 +240,7 @@
     </Graphics>
     <StatusEffects>
 		<Ingestion>
-			<StatusEffect type="FOOD_POISONING" amount="0.3" />
+			<StatusEffect type="FOOD_POISONING" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -271,8 +271,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="MANA_REGENERATION" amount="0.3" />
-            <StatusEffect type="FOOD_POISONING" amount="0.3" />
+			<StatusEffect type="MANA_REGENERATION" amount="0.3"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -303,8 +303,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="UNSTABLE_TELEPORTATION" amount="0.15" />
-            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+			<StatusEffect type="UNSTABLE_TELEPORTATION" amount="0.15"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.25"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -336,8 +336,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="TELEPORTATION" amount="0.15" />
-            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+			<StatusEffect type="TELEPORTATION" amount="0.15"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.25"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -368,8 +368,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="HP_REGENERATION" amount="0.15" />
-            <StatusEffect type="FOOD_POISONING" amount="0.25" />
+			<StatusEffect type="HP_REGENERATION" amount="0.15"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.25"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -400,7 +400,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="POLYMORPH" amount="0.3" />
+			<StatusEffect type="POLYMORPH" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -431,7 +431,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="POLYMORPH_RANDOM" amount="0.3" />
+			<StatusEffect type="POLYMORPH_RANDOM" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -462,7 +462,7 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="POLYMORPH_UNSTABLE" amount="0.3" />
+			<StatusEffect type="POLYMORPH_UNSTABLE" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -493,8 +493,8 @@
     </Graphics>
     <StatusEffects>
 		<Ingestion>
-			<StatusEffect type="BERSERK" amount="0.45" />
-            <StatusEffect type="FOOD_POISONING" amount="0.4" />
+			<StatusEffect type="BERSERK" amount="0.45"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.4"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -525,8 +525,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-			<StatusEffect type="CHARM" amount="0.4" />
-            <StatusEffect type="FOOD_POISONING" amount="0.35" />
+			<StatusEffect type="CHARM" amount="0.4"/>
+            <StatusEffect type="FOOD_POISONING" amount="0.35"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>
@@ -557,8 +557,8 @@
     </Graphics>
 	<StatusEffects>
 		<Ingestion>
-            <StatusEffect type="INVISIBILITY" amount="0.3" />
-			<StatusEffect type="FOOD_POISONING" amount="0.3" />
+            <StatusEffect type="INVISIBILITY" amount="0.3"/>
+			<StatusEffect type="FOOD_POISONING" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
   </CellData>

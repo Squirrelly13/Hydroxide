@@ -1,7 +1,7 @@
 <Entity>
 	<GameEffectComponent
 		effect="CUSTOM"
-		custom_effect_id="COLLAPSE"
+		custom_effect_id="AA_COLLAPSE"
 		frames="600"
 	>
 	</GameEffectComponent >

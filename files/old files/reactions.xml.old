@@ -1006,13 +1006,13 @@ b<Materials>
 
 	<Reaction probability="50"
   	input_cell1="magic_liquid_random_polymorph" 	input_cell2="aa_light_oil"
-  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 
+  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic"
 	>
   </Reaction><!-- make plastic -->
 
    <Reaction probability="50"
   	input_cell1="magic_liquid_polymorph" 	input_cell2="aa_light_oil"
-  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic" 
+  	output_cell1="aa_magic_plastic"	output_cell2="aa_magic_plastic"
 	>
   </Reaction><!-- make plastic -->
 
@@ -1502,7 +1502,7 @@ b<Materials>
 	</Reaction><!-- acid water turns into normal water-->
 
 
-  
+
   <Reaction probability="50"
 	input_cell1="[hydroxide]" 		input_cell2="[corrodible]"
 	output_cell1="[hydroxide]" 		output_cell2="cc_hydroxide_gas"
@@ -1777,7 +1777,7 @@ b<Materials>
 
 	<!-- moss grows a tiny bit more often -->
 	<Reaction probability="2"
-	input_cell1="rock_static" 		input_cell2="air" 
+	input_cell1="rock_static" 		input_cell2="air"
 	output_cell1="rock_static" 		output_cell2="moss"
 	>
   	</Reaction>

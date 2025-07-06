@@ -13,49 +13,49 @@
 
 	<!-- anchor entities that stick to target entities or to terrain -->
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 	<Entity tags="glue_anchor">
-		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml" />
+		<Base file="mods/Hydroxide/files/entities/effects/custom_glue/glue_anchor.xml"/>
 	</Entity>
 
 	<!-- keep this entity between the anchors + handle the stretching & breaking of glue -->

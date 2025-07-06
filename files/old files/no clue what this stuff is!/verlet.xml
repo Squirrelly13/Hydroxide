@@ -24,26 +24,26 @@
         >
     </LuaComponent>
 
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml" />
-	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml" />
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_5.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_6.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_7.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_8.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_1.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_2.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_3.xml"/>
+	<Base file="data/entities/verlet_chains/vines/vine_parts/vine_verlet_a_4.xml"/>
 
 	<AudioComponent
 		file="data/audio/Desktop/materials.snd"

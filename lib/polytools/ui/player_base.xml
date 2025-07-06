@@ -2,22 +2,22 @@
 
     <HotspotComponent _tags="hand"
         offset.x="0"
-        offset.y="-2" />
+        offset.y="-2"/>
     <HotspotComponent _tags="shoot_pos"
         offset.x="0"
-        offset.y="-2" />
+        offset.y="-2"/>
     <HotspotComponent _tags="kick_pos"
         offset.x="0"
-        offset.y="2" />
+        offset.y="2"/>
     <HotspotComponent _tags="crouch_sensor"
         offset.x="0"
-        offset.y="-14" />
+        offset.y="-14"/>
 
     <PhysicsPickUpComponent original_left_joint_pos.x="-8"
         original_left_joint_pos.y="-2"
         original_right_joint_pos.x="-2"
         original_right_joint_pos.y="-2"
-        pick_up_strength="400" />
+        pick_up_strength="400"/>
 
     <PlatformShooterPlayerComponent center_camera_on_this_entity="1"
         aiming_reticle_distance_from_character="60"
@@ -27,10 +27,10 @@
         eating_area_max.x="6"
         eating_area_min.y="-4"
         eating_area_max.y="6"
-        eating_cells_per_frame="2" />
+        eating_cells_per_frame="2"/>
 
     <PlayerCollisionComponent getting_crushed_threshold="6"
-        moving_up_before_getting_crushed_threshold="6" />
+        moving_up_before_getting_crushed_threshold="6"/>
 
     <CharacterDataComponent platforming_type="2"
         check_collision_max_size_x="4"
@@ -61,7 +61,7 @@
         flying_in_air_wait_frames="38"
         flying_recharge_removal_frames="8"
         gravity="0"
-        buoyancy_check_offset_y="-7" />
+        buoyancy_check_offset_y="-7"/>
 
     <CharacterPlatformingComponent animation_to_play=""
         jump_keydown_buffer="2"
@@ -84,84 +84,84 @@
         velocity_min_x="-57"
         velocity_max_x="57"
         velocity_min_y="-200"
-        velocity_max_y="350" />
+        velocity_max_y="350"/>
 
     <ControlsComponent enabled="1"
         gamepad_fire_on_thumbstick_extend="0"
         gamepad_fire_on_thumbstick_extend_threshold="0.9"
-        gamepad_indirect_aiming_enabled="0" />
+        gamepad_indirect_aiming_enabled="0"/>
 
     <MaterialSuckerComponent suck_gold="1"
-        suck_health="1" />
+        suck_health="1"/>
 
     <Inventory2Component quick_inventory_slots="10"
         full_inventory_slots_x="16"
-        full_inventory_slots_y="1" />
+        full_inventory_slots_y="1"/>
 
     <InventoryGuiComponent />
 
     <HotspotComponent _tags="right_arm_root"
         offset.x="0"
         offset.y="-2"
-        transform_with_scale="1" />
+        transform_with_scale="1"/>
 
     <Entity name="arm_r">
         <InheritTransformComponent parent_hotspot_tag="right_arm_root"
-            only_position="1" />
+            only_position="1"/>
         <HotspotComponent _tags="hand"
             offset.x="0"
             offset.y="-2"
-            transform_with_scale="1" />
+            transform_with_scale="1"/>
     </Entity>
 
     <AudioComponent file="data/audio/Desktop/player.bank"
         event_root="player"
         audio_physics_material="character_player"
-        set_latest_event_position="1" />
+        set_latest_event_position="1"/>
 
     <AudioLoopComponent _tags="sound_jetpack"
         file="data/audio/Desktop/player.bank"
         event_name="player/jetpack"
-        volume_autofade_speed="0.25" />
+        volume_autofade_speed="0.25"/>
 
     <AudioLoopComponent _tags="sound_air_whoosh"
         file="data/audio/Desktop/player.bank"
         event_name="player/air_whoosh"
-        volume_autofade_speed="0.5" />
+        volume_autofade_speed="0.5"/>
 
     <AudioLoopComponent _tags="sound_underwater"
         file="data/audio/Desktop/player.bank"
         event_name="player/underwater"
-        volume_autofade_speed="0.25" />
+        volume_autofade_speed="0.25"/>
 
     <AudioLoopComponent _tags="sound_suffocating"
         file="data/audio/Desktop/player.bank"
         event_name="player/suffocating"
-        volume_autofade_speed="0.25" />
+        volume_autofade_speed="0.25"/>
 
     <AudioLoopComponent _tags="sound_damage_curse"
         file="data/audio/Desktop/player.bank"
         event_name="player/suffocating"
-        volume_autofade_speed="0.1" />
+        volume_autofade_speed="0.1"/>
 
     <AudioLoopComponent _tags="sound_pick_gold_sand"
         file="data/audio/Desktop/player.bank"
         event_name="player/pick_gold_sand"
         volume_autofade_speed="0.05"></AudioLoopComponent>
 
-    <AudioListenerComponent z="-60" />
+    <AudioListenerComponent z="-60"/>
     <SpriteAnimatorComponent />
     <GunComponent />
-    <LiquidDisplacerComponent radius="1" />
-    <ItemPickUpperComponent drop_items_on_death="0" />
+    <LiquidDisplacerComponent radius="1"/>
+    <ItemPickUpperComponent drop_items_on_death="0"/>
     <GameLogComponent report_damage="0"
-        report_death="1" />
+        report_death="1"/>
 
     <!-- cape -->
 
     <HotspotComponent _tags="cape_root"
         offset.x="-3"
-        offset.y="-8" />
+        offset.y="-8"/>
     <Entity name="cape">
         <Base file="data/entities/verlet_chains/cape/cape.xml">
         </Base>
@@ -172,10 +172,10 @@
     <MaterialInventoryComponent _tags="ingestion"
         drop_as_item="0"
         on_death_spill="0"
-        kill_when_empty="0" />
+        kill_when_empty="0"/>
     <IngestionComponent ingestion_capacity="7500"
         overingestion_damage="0.002"
-        blood_healing_speed="0.0008" />
+        blood_healing_speed="0.0008"/>
 
     <DrugEffectComponent />
 
@@ -186,18 +186,18 @@
     <KickComponent />
 
     <VariableStorageComponent name="ocarina_song"
-        value_string="" />
+        value_string=""/>
     <VariableStorageComponent name="kantele_song"
-        value_string="" />
+        value_string=""/>
     <VariableStorageComponent name="ocarina_song_pos"
-        value_int="0" />
+        value_int="0"/>
     <VariableStorageComponent name="kantele_song_pos"
-        value_int="0" />
+        value_int="0"/>
 
     <Entity name="inventory_quick">
         <Entity>
-            <Base file="[POLYTOOLS_PATH]ui/polywand.xml" />
+            <Base file="[POLYTOOLS_PATH]ui/polywand.xml"/>
         </Entity>
     </Entity>
-    <Entity name="inventory_full" />
+    <Entity name="inventory_full"/>
 </Entity>

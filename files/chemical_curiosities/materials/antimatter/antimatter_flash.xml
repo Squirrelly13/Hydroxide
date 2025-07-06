@@ -1,16 +1,16 @@
 <Entity>
 	<_Transform
-        scale.x="10" scale.y="10" >
-    </_Transform>
+		scale.x="10" scale.y="10" >
+	</_Transform>
 
-    <SpriteComponent
-        alpha="0.2"
-        image_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flare.xml"
-        smooth_filtering="1"
-        kill_entity_after_finished="1"
-        additive="1"
-        emissive="0" >
-    </SpriteComponent>
+	<SpriteComponent
+		alpha="0.2"
+		image_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flare.xml"
+		smooth_filtering="1"
+		kill_entity_after_finished="1"
+		additive="1"
+		emissive="0" >
+	</SpriteComponent>
 
 
 	<ParticleEmitterComponent
@@ -39,7 +39,7 @@
 
 
 	<AudioComponent
-      file="data/audio/Desktop/misc.bank"
-      event_root="misc/orb_powder" >
+	  file="data/audio/Desktop/misc.bank"
+	  event_root="misc/orb_powder" >
 	</AudioComponent>
 </Entity>
