@@ -91,9 +91,9 @@ end
 
 handler.getWeldMap = function(entity_id)
 	local existing_enchantments = EntityGetVariable(entity_id, "welds", "string") or ""
-	
+
 	--print("Existing enchantments: " .. existing_enchantments)
-	
+
 	local list = Split(existing_enchantments, literalize(","))
 
 	local enchantment_map = {}
@@ -114,7 +114,7 @@ handler.appendEnchantmentString = function(entity_id)
 	if(action_comp ~= nil)then
 		local item_comp = EntityGetFirstComponentIncludingDisabled(entity_id, "ItemComponent")
 		if(item_comp ~= nil)then
-			
+
 			local action_id = ComponentGetValue2(action_comp, "action_id")
 			local enchantment_string = ""
 
@@ -123,11 +123,11 @@ handler.appendEnchantmentString = function(entity_id)
 			for _, e in pairs(enchantment_map)do
 				enchantment_string = enchantment_string .. "(" .. GameTextGetTranslatedOrNot(e[2].name) .. " " .. tostring(RomanNumerals(e[1])) .. ") "
 			end
-			
+
 			reading_name = true
 			for k, a in ipairs(actions --[[@as table]])do
 				if(a.id == action_id)then
-					
+
 					ComponentSetValue2( item_comp, "always_use_item_name_in_ui", true )
 					ComponentSetValue2( item_comp, "item_name", enchantment_string..GameTextGetTranslatedOrNot(a.name) )
 					local ability_component = EntityGetFirstComponentIncludingDisabled(entity_id, "AbilityComponent")
@@ -228,7 +228,7 @@ handler.hook = function(action, recursion_level, iteration)
 	end
 
 	local enhancement_old_add_projectile = add_projectile
-			
+
 	local enhancement_old_add_projectile_trigger_timer = add_projectile_trigger_timer
 
 	local enhancement_old_add_projectile_trigger_hit_world = add_projectile_trigger_hit_world
@@ -252,7 +252,7 @@ handler.hook = function(action, recursion_level, iteration)
 		extra_projectile_count = extra_projectile_count + 1
 		table.insert(enhancement_extra_entities, entity_filename)
 	end
-	
+
 	add_projectile_trigger_timer = function( entity_filename, delay_frames, action_draw_count, a, b, c, is_volley )
 		for i = 1, action_draw_count or 1 do
 			table.insert(enhancement_extra_entities, entity_filename)
@@ -263,9 +263,9 @@ handler.hook = function(action, recursion_level, iteration)
 			delay_frames = delay_frames,
 			action_draw_count = action_draw_count,
 		})
-		
+
 	end
-	
+
 	add_projectile_trigger_hit_world = function( entity_filename, action_draw_count, a, b, c, is_volley )
 		for i = 1, action_draw_count or 1 do
 			table.insert(enhancement_extra_entities, entity_filename)
@@ -276,7 +276,7 @@ handler.hook = function(action, recursion_level, iteration)
 			action_draw_count = action_draw_count,
 		})
 	end
-	
+
 	add_projectile_trigger_death = function( entity_filename, action_draw_count, a, b, c, is_volley )
 		for i = 1, action_draw_count or 1 do
 			table.insert(enhancement_extra_entities, entity_filename)
@@ -288,7 +288,7 @@ handler.hook = function(action, recursion_level, iteration)
 		})
 	end
 
-	
+
 
 	draw_actions = function(c, v)
 		if(c > 1)then

@@ -1,5 +1,5 @@
 <Entity name="$projectile_default" tags="projectile_player,projectile_not,radiation">
-	
+
 	<VelocityComponent
 		gravity_y="0"
 		mass="0.04"
@@ -13,12 +13,12 @@
 		audio_physics_material="projectile"
 		event_root="projectiles/hit"
     />
-	
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/flow.lua"
 		execute_every_n_frame="2"
 	/>
-	
+
   <ProjectileComponent
     _enabled="1"
     lob_min="0.8"

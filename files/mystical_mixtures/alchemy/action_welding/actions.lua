@@ -24,11 +24,11 @@ for k, action in ipairs(actions)do
 
 
 		local enhancement_old_add_projectile = add_projectile
-			
+
 		local enhancement_old_add_projectile_trigger_timer = add_projectile_trigger_timer
-	
+
 		local enhancement_old_add_projectile_trigger_hit_world = add_projectile_trigger_hit_world
-	
+
 		local enhancement_old_add_projectile_trigger_death = add_projectile_trigger_death
 
 		local trigger_count = 0 + #data.timer + #data.hit_world + #data.death
@@ -48,7 +48,7 @@ for k, action in ipairs(actions)do
 				enhancement_old_add_projectile(entity_filename)
 			end
 		end
-		
+
 		add_projectile_trigger_timer = function( entity_filename, delay_frames, action_draw_count )
 			if(trigger_count > 0)then
 				for k, v in ipairs(data.timer)do
@@ -64,7 +64,7 @@ for k, action in ipairs(actions)do
 				enhancement_old_add_projectile_trigger_timer(entity_filename, delay_frames, action_draw_count)
 			end
 		end
-		
+
 		add_projectile_trigger_hit_world = function( entity_filename, action_draw_count )
 			if(trigger_count > 0)then
 				for k, v in ipairs(data.timer)do
@@ -80,7 +80,7 @@ for k, action in ipairs(actions)do
 				enhancement_old_add_projectile_trigger_hit_world(entity_filename, action_draw_count)
 			end
 		end
-		
+
 		add_projectile_trigger_death = function( entity_filename, action_draw_count )
 			if(trigger_count > 0)then
 				for k, v in ipairs(data.timer)do
@@ -97,7 +97,7 @@ for k, action in ipairs(actions)do
 			end
 		end
 
-		local return_value = old_action(recursion_level, iteration)	
+		local return_value = old_action(recursion_level, iteration)
 
 		add_projectile = enhancement_old_add_projectile
 		add_projectile_trigger_timer = enhancement_old_add_projectile_trigger_timer

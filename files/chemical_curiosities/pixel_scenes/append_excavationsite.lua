@@ -6,8 +6,8 @@ table.insert(g_pixel_scene_04, {
 	background_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/blast_tank_background.png",
 	is_unique		= 0
 	});
-	
-	
+
+
 table.insert(g_pixel_scene_04, {
 	prob			= 0.8,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/veilium_tank.png",
@@ -15,7 +15,7 @@ table.insert(g_pixel_scene_04, {
 	background_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/veilium_tank_background.png",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_04, {
 	prob			= 0.6,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/metamorphine.png",
@@ -33,8 +33,8 @@ table.insert(g_pixel_scene_04_alt, {
 	background_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/blast_tank_background.png",
 	is_unique		= 0
 	});
-	
-	
+
+
 table.insert(g_pixel_scene_04_alt, {
 	prob			= 0.8,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/veilium_tank.png",
@@ -42,7 +42,7 @@ table.insert(g_pixel_scene_04_alt, {
 	background_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/veilium_tank_background.png",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_04_alt, {
 	prob			= 0.6,
 	material_file	= "mods/Hydroxide/files/pixel_scenes/excavationsite/metamorphine.png",
@@ -51,7 +51,7 @@ table.insert(g_pixel_scene_04_alt, {
 	is_unique		= 0
 	});
 ]]--
-	
+
 table.insert(g_puzzleroom, {
 	prob			= 1.5,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/puzzleroom_04.png",
@@ -76,7 +76,7 @@ table.insert(g_gunpowderpool_01, {
 	background_file	= "",
 	is_unique		= 0,
 	});
-	
+
 
 
 table.insert(g_gunpowderpool_02, {
@@ -93,10 +93,10 @@ table.insert(g_gunpowderpool_02, {
 	visual_file		= "data/biome_impl/excavationsite/gunpowderpool_02_visual.png",
 	background_file	= "",
 	is_unique		= 0,
-	});	
-	
-	
-	
+	});
+
+
+
 table.insert(g_gunpowderpool_03, {
 	prob			= 0.5,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/gunpowderpool_03_blast.png",
@@ -112,9 +112,9 @@ table.insert(g_gunpowderpool_03, {
 	background_file	= "",
 	is_unique		= 0,
 	});
-	
-	
-	
+
+
+
 table.insert(g_gunpowderpool_04, {
 	prob			= 0.5,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/excavationsite/gunpowderpool_04_blast.png",
@@ -130,7 +130,7 @@ table.insert(g_gunpowderpool_04, {
 	background_file	= "",
 	is_unique		= 0,
 	});
-	
+
 
 table.insert(g_props, {
 	prob 		= 0.2,

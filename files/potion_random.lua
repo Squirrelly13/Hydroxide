@@ -50,17 +50,17 @@ init = function( entity_id )
 
 		if(potion_material == "aa_pandorium" or potion_material == "aa_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
-					
+
 			if ( comp1 ~= nil ) then
 				ComponentSetValue2( comp1, "hp", 1)
 			end
 
 			comp2 = EntityGetFirstComponentIncludingDisabled( entity_id, "ExplodeOnDamageComponent" )
-					
+
 			if ( comp2 ~= nil ) then
 				ComponentSetValue2( comp2, "physics_body_destruction_required", 80)
 			end
-			
+
 			comp3 = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialInventoryComponent" )
 
 			if ( comp3 ~= nil ) then
@@ -74,7 +74,7 @@ init = function( entity_id )
 				ComponentSetValue2(comp4, "damage_multiplier", 0)
 			end
 		end
-		
+
         AddMaterialInventoryMaterial( entity_id, potion_material, total_capacity )
     end
 end

@@ -1,7 +1,7 @@
 <Entity>
-	
-	
-	
+
+
+
 	<DamageModelComponent
         hp="4.5"
         ragdoll_material="plastic"
@@ -17,7 +17,7 @@
 			>
 		</damage_multipliers>
 	</DamageModelComponent>
-	
+
 	<SpriteComponent
 		image_file="mods/Hydroxide/files/gfx/geysertrap.xml"
 		special_scale_x="1"
@@ -25,18 +25,18 @@
 		offset_x="0"
 		offset_y="0" >
 	</SpriteComponent>
-	
+
 	<SpriteAnimatorComponent>
 	</SpriteAnimatorComponent>
 
-	
-	
+
+
 	<GenomeDataComponent
 		herd_id="trap"
 		food_chain_rank="7"
 		is_predator="1" >
 	</GenomeDataComponent>
-	
+
 	<HitboxComponent
 		_enabled="1"
 		aabb_min_x="0"
@@ -50,32 +50,32 @@
 		max_count="30"
 		distance="160000" >
 	</CameraBoundComponent>
-	
+
 	<Entity>
 		<InheritTransformComponent />
-		
+
 	    <GameEffectComponent
 	        effect="STUN_PROTECTION_FREEZE"
 	        frames="-1"
 	    >
 		</GameEffectComponent >
 	</Entity>
-	
+
 	<Entity>
 		<InheritTransformComponent />
-		
+
 	    <GameEffectComponent
 	        effect="STUN_PROTECTION_ELECTRICITY"
 	        frames="-1"
 	    >
 		</GameEffectComponent >
 	</Entity>
-	
+
 	<LuaComponent
 		script_source_file="data/scripts/buildings/crypt_trap_check.lua"
 		execute_every_n_frame="30"
 		>
 	</LuaComponent>
-	
+
 </Entity>
 	

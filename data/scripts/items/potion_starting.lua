@@ -142,7 +142,7 @@ function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are
 	if ps.potion_functions[outcome] then
 		outcome = ps.potion_functions[outcome](data) or outcome
 	end
-	
+
     return tostring(outcome)
 end
 
@@ -160,7 +160,7 @@ function init( entity_id ) --mostly vanilla function
 		potion_material = ps.potion_a_materials() or potion_material --if potion_a_materials returns nil or smth, default to potion_material
 	end
 
-	
+
 	for index, value in pairs(ps.post_functions) do
 		potion_material = value(potion_material) or potion_material
 	end
@@ -175,7 +175,7 @@ end
 function ps.TEST(num)
 	local _table = {}
 	_table.TOTAL = num --add total display
-	
+
 	for i = 1, num do --this is the most intensive part of the function at high values, so i return the current% to show current progress through running the test
 		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage when it can be displayed without decimals
 		local result = ps.potion_a_materials() --simulate potion start
@@ -217,7 +217,7 @@ function ps.TEST(num)
 		local material_amount = j.value .. ','
 		local material_percent = string.format(("%.Xf"):gsub("X", tostring(longest_percent)) ,j.value/(num/100)) .. '%'
 		local material_percent_rounded = string.format("%.1f", math.floor(((j.value/(num/100)) + 0.05) * 10) * .1) .. "%"
-		
+
 		material_name = add_gap(material_name, longest_name) --add gap after material name
 
 		material_amount = add_gap(material_amount, longest_amount, true) --add gap before material amount

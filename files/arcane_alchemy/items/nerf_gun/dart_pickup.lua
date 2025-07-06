@@ -5,14 +5,14 @@ function item_pickup( entity_item, entity_who_picked, name )
 
 	local has_increased_ammo = false
 	if(entity_who_picked ~= nil)then
-	
+
 		local inventory = nil
 
 		local player_child_entities = EntityGetAllChildren( entity_who_picked )
 		if ( player_child_entities ~= nil ) then
 			for i,child_entity in ipairs( player_child_entities ) do
 				local child_entity_name = EntityGetName( child_entity )
-				
+
 				if ( child_entity_name == "inventory_quick" ) then
 					inventory = child_entity
 				end
@@ -37,7 +37,7 @@ function item_pickup( entity_item, entity_who_picked, name )
 								  --  print(action_id)
 									if(action_id == "AA_ALCHEMY_NERF_DARTS")then
 										local item_component = EntityGetComponentIncludingDisabled( v, "ItemComponent")[1];
-										
+
 										if(item_component ~= nil)then
 											local uses_remaining = ComponentGetValue2(item_component, "uses_remaining")
 											if(uses_remaining < 20)then
@@ -58,16 +58,16 @@ function item_pickup( entity_item, entity_who_picked, name )
 					end
 				end
 			end
-		end	
+		end
 	end
-	
+
 	--[[local inventory = nil
 
 	local player_child_entities = EntityGetAllChildren( entity_who_picked )
 	if ( player_child_entities ~= nil ) then
 		for i,child_entity in ipairs( player_child_entities ) do
 			local child_entity_name = EntityGetName( child_entity )
-			
+
 			if ( child_entity_name == "inventory_quick" ) then
 				inventory = child_entity
 			end
@@ -80,8 +80,8 @@ function item_pickup( entity_item, entity_who_picked, name )
 		if inventory_items ~= nil then
 			for i,item_entity in ipairs( inventory_items ) do
 				local child_items = EntityGetAllChildren( item_entity )
-				
-				
+
+
 
 				for i,child_entity in ipairs( child_items ) do
 
@@ -99,7 +99,7 @@ function item_pickup( entity_item, entity_who_picked, name )
 										if(ItemComponent ~= nil)then
 											local uses_remaining = ComponentGetValue2(ItemComponent, "uses_remaining")
 											uses_remaining = uses_remaining + 1
-											
+
 											ComponentSetValue2(ItemComponent, "uses_remaining", uses_remaining)
 											local inventory2_comp = EntityGetFirstComponent( entity_who_picked, "Inventory2Component" )
 											if( inventory2_comp ) then
@@ -116,5 +116,5 @@ function item_pickup( entity_item, entity_who_picked, name )
 		end
 	end		]]
 	EntityKill( entity_item )
-	
+
 end

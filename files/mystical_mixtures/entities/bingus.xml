@@ -2,7 +2,7 @@
 	<Base file="data/entities/base_item_projectile.xml" />
 
 	<!-- physical presence -->
-	
+
 	<PhysicsBodyComponent
 		_tags="enabled_in_world"
 		uid="1"
@@ -15,14 +15,14 @@
 		on_death_leave_physics_body="1"
 		hax_fix_going_through_ground="1"
 	></PhysicsBodyComponent>
-	
+
 	<PhysicsImageShapeComponent
 		body_id="1"
 		centered="1"
 		image_file="mods/Hydroxide/files/mystical_mixtures/gfx/entities/bingus.png"
 		material="mm_meat_bingus"
 	></PhysicsImageShapeComponent>
-	
+
 	<PhysicsThrowableComponent
 		max_throw_speed="180"
 		throw_force_coeff="1.5"
@@ -57,7 +57,7 @@
 		_tags="enabled_in_world"
 		name="Bingus">
 	</UIInfoComponent>
-	
+
 	<AbilityComponent
 		ui_name="Bingus"
 		throw_as_item="1"
@@ -80,7 +80,7 @@
 	/>
 
 	<InheritTransformComponent/>
-	
+
 	<InteractableComponent
 		_enabled="0"
 		_tags="enabled_in_hand"
@@ -97,6 +97,6 @@
 		auto_play_if_enabled="1"
 		play_on_component_enable="1"
 		>
-	</AudioLoopComponent>	
+	</AudioLoopComponent>
 
 </Entity>

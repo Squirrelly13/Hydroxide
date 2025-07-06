@@ -10,7 +10,7 @@ function bullet_circle( which, count, speed, animal_ )
     local name = which
 
     local rotation = math.rad(Random(0, 360))
-	
+
 	local animal = animal_ or false
 
 	for i=1,count do
@@ -18,14 +18,14 @@ function bullet_circle( which, count, speed, animal_ )
 		local vel_y = 0 - math.sin( rotation ) * length
 
 		local bid = shoot_projectile( entity_id, name, pos_x + math.cos( rotation ) * 12, pos_y - math.sin( rotation ) * 12, vel_x, vel_y )
-		
+
 		if animal then
 			EntityAddComponent2( bid, "VariableStorageComponent",
             {
                 _tags="no_gold_drop",
             } )
 		end
-		
+
 	end
 end
 

@@ -60,7 +60,7 @@ local target_x, target_y = EntityGetTransform(target)
 if target_x ~= nil and target_x ~= 0 and target_y ~= 0 then
 	-- snap anchor to target
 	EntitySetTransform(entity_id, target_x, target_y - 2)
-	
+
 	-- if target is anchor, don't apply force to both
 	if target > entity_id and EntityHasTag(target, "glue_anchor") then return end
 
@@ -69,7 +69,7 @@ if target_x ~= nil and target_x ~= 0 and target_y ~= 0 then
 	if comp == nil or comp == 0 then
 		-- pull target closer to anchor
 		local center_x, center_y = EntityGetTransform(EntityGetParent(entity_id))
-		
+
 		local vx = center_x - target_x
 		local vy = center_y - target_y
 

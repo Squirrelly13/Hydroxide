@@ -5,7 +5,7 @@
 		execute_every_n_frame="1"
 		>
 	</LuaComponent>
-	
+
 	<LifetimeComponent
 		lifetime="5"
 		>

@@ -7,7 +7,7 @@
 			gravity.y="-100"
 			>
 		</ParticleEmitterComponent>
-		
+
 		<ParticleEmitterComponent
 			emitted_material_name="cc_methane"
 			emission_interval_min_frames="1"

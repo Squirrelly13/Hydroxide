@@ -14,7 +14,7 @@
 		execute_every_n_frame="1"
 		>
 	</LuaComponent>
-	
+
 
 	<DamageModelComponent
 		air_needed="0"

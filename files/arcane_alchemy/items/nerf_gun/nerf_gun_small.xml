@@ -3,7 +3,7 @@ In all my testing, this never needed to be modified.
 -->
 
 <Sprite filename="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_gun_small.png" >
-	
+
   <RectAnimation
 	name="default"
 	pos_x="0"

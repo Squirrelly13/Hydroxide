@@ -36,7 +36,7 @@ if (enemyCount <= 200) then
 	if(animalPath == "data/entities/animals/failed_alchemist.xml")then
 
 		genome = EntityGetFirstComponent(clonnedCreature, "GenomeDataComponent")
-	
+
 		if(genome ~= nil and genome ~= 0)then
 			ComponentSetValue2(genome, "herd_id", StringToHerdId("mage_swapper"))
 		end
@@ -46,7 +46,7 @@ if (enemyCount <= 200) then
 	EntityAddComponent2(clonnedCreature, "VariableStorageComponent", {
 		_tags = "no_gold_drop",
 	})
-	
+
 	EntityAddComponent2(clonnedCreature, "VariableStorageComponent", {
 		name = "is_cloned_entity"
 	})

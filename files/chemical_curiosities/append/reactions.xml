@@ -1,81 +1,81 @@
 <Materials>
-	
+
 	<!-- metals -->
-	
+
 	<Reaction probability="50"
 	input_cell1="cc_iron"		input_cell2="magic_liquid_random_polymorph"
 	output_cell1="cc_cobalt"	output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="cc_cobalt"		input_cell2="magic_liquid_polymorph"
 	output_cell1="metal_sand"	output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="10"
-	input_cell2="cc_iron_molten"	input_cell1="coal"			
-	output_cell2="steel_molten"	output_cell1="smoke"	
+	input_cell2="cc_iron_molten"	input_cell1="coal"
+	output_cell2="steel_molten"	output_cell1="smoke"
 	blob_radius2="2"
 	/>
-	
+
 	<Reaction probability="38"
 	input_cell1="steel_molten"	input_cell2="cc_iron"
 	output_cell1="steel_molten"	output_cell2="cc_iron_molten"
 	/>
-	
+
 	<Reaction probability="45"
 	input_cell1="cc_preskite"		input_cell2="acid"
 	output_cell1="cc_hydroxide"	output_cell2="acid"
 	blob_radius1="3"
 	/>
 
-	
+
 	<Reaction probability="10"
 	input_cell1="cc_iron"				input_cell2="vomit"
 	output_cell1="cc_ferrine"	output_cell2="cc_ferrine"
 	blob_radius1="3"
 	/>
-	
+
 	<Reaction probability="75"
 	input_cell1="cc_ferrine"	input_cell2="coal"
 	output_cell1="gunpowder_tnt"	output_cell2="gunpowder_tnt"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="15"
 	input_cell1="sulphur"			input_cell2="coal"
 	output_cell1="gunpowder_tnt"	output_cell2="gunpowder_tnt"
 	blob_radius1="2"				blob_radius2="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_cobalt"				input_cell2="cc_grease"
 	output_cell1="cc_cobaline"	output_cell2="cc_cobaline"
 	blob_radius1="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_ferrine"	input_cell2="cc_preskite"
 	output_cell1="cc_persistine"		output_cell2="smoke"
 	blob_radius1="2"
 	>
 	</Reaction>
-	
+
 	<!-- -persistine -->
-	
+
 	<Reaction probability="20"
 	input_cell1="[fire]" 		input_cell2="cc_persistine" input_cell3="cc_persistine"
 	output_cell1="[fire]" 		output_cell2="cc_iron" output_cell3="smoke" >
 	</Reaction>
-	
+
 	<!-- tweaks -->
-	
-	
+
+
 	<!-- antimatter -->
 
 
@@ -130,7 +130,7 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
-	</Reaction>	
+	</Reaction>
 	<Reaction probability="90"
 	input_cell1="cc_antimatter_gas"	input_cell2="[sand_ground]"
 	output_cell1="air"			output_cell2="air"
@@ -178,8 +178,8 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
-	</Reaction>	
-	
+	</Reaction>
+
 	<Reaction probability="50"
 	input_cell1="cc_antimatter_liquid"	input_cell2="[static]"
 	output_cell1="air"			output_cell2="air"
@@ -211,7 +211,7 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter_flash.xml"
 	audio_fx_volume_1="10.0"
 	>
-	</Reaction>	
+	</Reaction>
 	<Reaction probability="50"
 	input_cell1="cc_antimatter_liquid"	input_cell2="[sand_ground]"
 	output_cell1="air"			output_cell2="air"
@@ -260,60 +260,60 @@
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
-	
+
 	<!-- morphine -->
-	
+
 	<Reaction probability="68"
 	input_cell1="magic_liquid_protection_all"	input_cell2="material_confusion"
 	output_cell1="cc_morphine"			output_cell2="cc_morphine"
 	>
 	</Reaction>
-	
-	
+
+
 	<!-- uranium -->
-	
+
 	<Reaction probability="60"
 	input_cell1="cc_uranium"	input_cell2="air"
 	output_cell1="cc_uranium"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="12"
 	input_cell1="cc_uranium"	input_cell2="cc_uranium"
 	output_cell1="cc_uranium"	output_cell2="cc_uranium"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="18"
 	input_cell1="cc_uranium"	input_cell2="[any_powder]"
 	output_cell1="cc_uranium"	output_cell2="[any_powder]"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="30"
 	input_cell1="cc_uranium"	input_cell2="[liquid]"
 	output_cell1="cc_uranium"	output_cell2="[liquid]"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="60"
 	input_cell1="cc_uranium"	input_cell2="air"
 	output_cell1="air"			output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="11"
 	input_cell1="cc_uranium"			input_cell2="[water]"
 	output_cell1="cc_radioactive_waste"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="70"
 	input_cell1="[lava]" 					input_cell2="cc_radioactive_waste"
 	output_cell1="cc_uranium"				output_cell2="radioactive_gas"
@@ -321,7 +321,7 @@
 	blob_restrict_to_input_material1="1" 	blob_restrict_to_input_material2="1"
 	audio_fx_volume_1="100.0" >
 	</Reaction>
-	
+
 	<Reaction probability="200"
 	input_cell1="cc_uranium_excited"	input_cell2="air"
 	output_cell1="air"			output_cell2="air"
@@ -329,8 +329,8 @@
 	>
 	</Reaction>
 
-	
-	
+
+
 	<Reaction probability="100"
 	input_cell1="cc_uranium_excited"			input_cell2="cc_uranium"
 	output_cell1="cc_uranium_excited"	output_cell2="cc_uranium_excited"
@@ -352,14 +352,14 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_uranium_excited"			input_cell2="air"
 	output_cell1="cc_radioactive_waste"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_uranium_excited"			input_cell2="[liquid]"
 	output_cell1="cc_radioactive_waste"	output_cell2="air"
@@ -369,35 +369,35 @@
 
 
 	<!-- melting Crystals -->
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_dormant_crystal_molten" 	input_cell2="[static]"
 	output_cell1="cc_dormant_crystal"			output_cell2="[static]"
 	>
-	</Reaction>	
-	
-	<Reaction probability="2"	
+	</Reaction>
+
+	<Reaction probability="2"
 	input_cell1="cc_dormant_crystal_molten"	input_cell2="cc_dormant_crystal"
 	output_cell1="air"					output_cell2="cc_dormant_crystal"
 	blob_radius1="2"
 	>
 	</Reaction>
-	
-	<Reaction probability="1"	
+
+	<Reaction probability="1"
 	input_cell1="cc_dormant_crystal_molten"	input_cell2="cc_dormant_crystal"
 	output_cell1="cc_dormant_crystal"			output_cell2="cc_dormant_crystal"
 	blob_radius1="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="5"
 	input_cell1="cc_crystal_box2d"		input_cell2="air"
 	output_cell1="cc_crystal_box2d"	output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 	>
 	</Reaction>
-	
-	
+
+
 	<Reaction probability="60"
 	input_cell1="cc_dormant_crystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
@@ -405,7 +405,7 @@
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_dormant_crystal"		input_cell2="smoke"
 	output_cell1="air"				output_cell2="smoke"
@@ -413,28 +413,28 @@
 	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml"
 	>
 	</Reaction>
-	
+
 	<!-- Grease -->
-	
+
 	<Reaction probability="40"
 	input_cell1="oil"		input_cell2="slime"
 	output_cell1="cc_grease"	output_cell2="cc_grease"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="82"
 	input_cell1="cc_grease"	input_cell2="[fire]" 	input_cell3="magic_liquid_mana_regeneration"
 	output_cell1="smoke"	output_cell2="[fire]"	output_cell3="magic_liquid_faster_levitation"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="82"
 	input_cell1="cc_grease"	input_cell2="cc_nullium"
 	output_cell1="cc_heftium"	output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="60"
 	input_cell1="cc_grease"	input_cell2="water"		input_cell3="[fire]"
 	output_cell1="smoke"	output_cell2="steam"	output_cell3="[fire]"
@@ -442,9 +442,9 @@
 	audio_fx_volume_1="10.0"
 	>
 	</Reaction>
-	
+
 	<!-- Hiisi wires -->
-	
+
 	<Reaction probability="0.4"
 	input_cell1="water"					input_cell2="metal_wire_nohit"
 	output_cell1="steam"				output_cell2="metal_wire_nohit"
@@ -456,21 +456,21 @@
 	output_cell1="[liquid]"				output_cell2="metal_wire_nohit"
 	entity="data/entities/misc/shock_powder.xml"
 	>
-	</Reaction>	
+	</Reaction>
 	<Reaction probability="100"
 	input_cell3="water" 	input_cell2="air" 	input_cell1="metal_wire_nohit"
 	output_cell3="water"	output_cell2="air"	output_cell1="metal_wire_nohit"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/hiisi_wire/wire_spark.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="0.4"
 	input_cell1="metal_wire_nohit"		input_cell2="air"
 	output_cell1="metal_wire_nohit"		output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/hiisi_wire/wire_spark.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="metal_wire_nohit" 	input_cell2="steel_static"
 	output_cell1="metal_wire_nohit"	output_cell2="steel_static"
@@ -479,16 +479,16 @@
 	</Reaction>
 
 	<!-- health tonic -->
-	
+
 	<Reaction probability="68"
 	input_cell1="pea_soup"			input_cell2="honey"
 	output_cell1="cc_health_tonic"	output_cell2="pea_soup"
 	blob_radius1="3"
 	>
 	</Reaction>
-	
+
 	<!-- thunder powder -->
-	
+
 	<Reaction probability="35"
 	input_cell1="cc_thunder_powder"	input_cell2="[fire]"
 	output_cell1="cc_thunder_powder"	output_cell2="smoke"
@@ -497,20 +497,20 @@
 	</Reaction>
 
 	<!-- static charge -->
-	
+
 	<!-- Icy Inferno -->
-	
+
 	<!-- Liberum Magicas -->
-	
+
 	<Reaction probability="2"
 	input_cell1="cc_liberum_magicas"	input_cell2="air"
 	output_cell1="air"		output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/tinker_dust/evaporate_tinker.xml"
 	>
 	</Reaction>
-	
+
 	<!-- Nullium -->
-	
+
 	<Reaction probability="80"
 	input_cell1="magic_liquid_mana_regeneration"	input_cell2="cc_nullium"
 	output_cell1="acid_gas"							output_cell2="cc_hydroxide_gas"
@@ -528,21 +528,21 @@
 		>
 	</ExplosionConfig>
 	</Reaction>
-	
+
 	<Reaction probability="17"
 	input_cell1="cc_nullium"		input_cell2="[plant]"
 	output_cell1="cc_nullium"	output_cell2="acid_gas"
 	blob_radius2="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="3"
 	input_cell1="cc_nullium"		input_cell2="[magic_liquid]"
 	output_cell1="smoke"		output_cell2="water"
 	blob_radius2="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium" 		input_cell2="radioactive_liquid"
 	output_cell1="cc_nullium" 		output_cell2="cc_nullium"
@@ -554,31 +554,31 @@
 	output_cell1="cc_nullium" 		output_cell2="cc_nullium"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="[plant]"
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="[fungus]"
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="wood_player"
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="wood_prop"
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
-	</Reaction>	
-	
+	</Reaction>
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="wood"
 	output_cell1="cc_nullium"		output_cell2="smoke"
@@ -590,13 +590,13 @@
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="wood_static_vertical"
 	output_cell1="cc_nullium"		output_cell2="smoke"
 	>
 	</Reaction>
-	
+
 
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="templebrick_static"
@@ -604,49 +604,49 @@
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="cc_nullium"			input_cell2="templebrick_noedge_static"
 	output_cell1="cc_nullium"			output_cell2="templebrick_static_broken"
 	blob_radius2="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="templebrick_thick_static"
 	output_cell1="cc_nullium"			output_cell2="templebrick_static_broken"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="templebrick_thick_static_noedge"
 	output_cell1="cc_nullium"			output_cell2="templebrick_static_broken"
 	blob_radius2="3"
 	>
 	</Reaction> <!--de-magics HM stone-->
-	
+
 	<Reaction probability="3"
 	input_cell1="cc_nullium"			input_cell2="wizardstone"
 	output_cell1="cc_uranium"			output_cell2="cc_antimatter_liquid"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_nullium"			input_cell2="wizardstone"
 	output_cell1="cc_nullium"			output_cell2="wizardstone"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
 	>
 	</Reaction>
-	
+
 
   	<Reaction probability="3"
 		input_cell1="cc_dull_fungus" 	input_cell2="air"
 		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus"
 		direction="top" >
   	</Reaction>
-	
+
   	<Reaction probability="11.25"
 		input_cell1="cc_dull_fungus" 	input_cell2="air"
 		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus"
@@ -657,113 +657,113 @@
 		input_cell1="cc_dull_fungus" 	input_cell2="fungi"
 		output_cell1="cc_dull_fungus" 	output_cell2="cc_dull_fungus"
 	/>
-	
+
 	<!-- metastasizium -->
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="acid"
 	output_cell1="acid"						output_cell2="acid"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="cc_hydroxide"
 	output_cell1="cc_hydroxide"				output_cell2="cc_hydroxide"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="cc_hydroxide"
 	output_cell1="cc_hydroxide"				output_cell2="cc_hydroxide"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="[slime]"
 	output_cell1="[slime]"				output_cell2="[slime]"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="vomit"
 	output_cell1="vomit"				output_cell2="vomit"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="cc_vomit_fading"
 	output_cell1="cc_vomit_fading"				output_cell2="cc_vomit_fading"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="cc_slicing_liquid"
 	output_cell1="cc_slicing_liquid"				output_cell2="cc_slicing_liquid"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="radioactive_liquid"
 	output_cell1="radioactive_liquid"				output_cell2="radioactive_liquid"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="cursed_liquid"
 	output_cell1="cursed_liquid"				output_cell2="cursed_liquid"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_polymorph"
 	output_cell1="magic_liquid_polymorph"				output_cell2="magic_liquid_polymorph"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_random_polymorph"
 	output_cell1="magic_liquid_random_polymorph"				output_cell2="magic_liquid_random_polymorph"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="magic_liquid_unstable_polymorph"
 	output_cell1="magic_liquid_unstable_polymorph"				output_cell2="magic_liquid_unstable_polymorph"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_metastasizium"	input_cell2="poison"
 	output_cell1="poison"				output_cell2="poison_gas"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability=".1"
 	input_cell1="cc_metastasizium"	input_cell2="air"
 	output_cell1="air"				output_cell2="air"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="blood"
 	output_cell1="cc_metastasizium"				output_cell2="cc_metastasizium"
 	blob_radius1="5"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_metastasizium"	input_cell2="[meat]"
 	output_cell1="cc_metastasizium"				output_cell2="cc_metastasizium"
@@ -772,50 +772,50 @@
 	</Reaction>
 
 
-	
+
 	<!-- agitine -->
-	
+
 	<Reaction probability="30"
 		input_cell1="cc_explodePlayer"	input_cell2="[meat]"
 		output_cell1="fire"			output_cell2="smoke"
 		>
 		<ExplosionConfig
-	
+
 			cell_explosion_power="30"
 			cell_explosion_damage_required="3000"
 			cell_explosion_radius_min="5"
 			cell_explosion_radius_max="5"
 			cell_explosion_probability="1.1"
-		
+
 			ray_energy="50000"
 			>
 		</ExplosionConfig>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_explodePlayer"	input_cell2="wood_static"
 	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling_static"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="10"
 	input_cell1="cc_explodePlayer"	input_cell2="cc_kindling_static"
 	output_cell1="cc_explodePlayer"	output_cell2="cc_kindling_static_soaked"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="20"
 	input_cell1="cc_kindling_static_soaked"	input_cell2="cc_kindling_static"
 	output_cell1="cc_kindling_static"		output_cell2="cc_kindling_static_soaked"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="30"
 	input_cell1="cc_kindling_static_soaked"	input_cell2="wood_static"
 	output_cell1="cc_kindling_static"		output_cell2="cc_kindling_static"
 	>
 	</Reaction>
-	
+
 	<!-- tweaks -->
 
 
@@ -825,10 +825,10 @@
 	blob_radius_1="3"
 	>
 	</Reaction>
-	
+
 	<!-- alchemy powder -->
-	
-	
+
+
 	<Reaction probability="85"
 	input_cell1="cc_ferrine"		input_cell2="cc_cobaline"
 	output_cell1="cc_alchemy_powder"		output_cell2="cc_alchemy_powder"
@@ -836,15 +836,15 @@
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_alchemy_powder"		input_cell2="[liquid]"
 	output_cell1="cc_alchemy_powder"	output_cell2="cc_hydroxide_gas"
 	req_lifetime="240"
 	>
 	</Reaction>
-	
-	
+
+
 	<!-- Metamorphine -->
 	<Reaction probability="100"
 	input_cell1="cc_metamorphine"		input_cell2="[liquid]"
@@ -853,7 +853,7 @@
 	blob_radius1="4"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_unstable_metamorphine"	input_cell2="[liquid]"
 	output_cell1="air"					output_cell2="[liquid]"
@@ -861,21 +861,21 @@
 	blob_radius1="4"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="95"
 	input_cell1="cc_alchemy_powder"	input_cell2="[meat]"
 	output_cell1="cc_metamorphine"	output_cell2="rainbow_gas"
 	blob_radius1="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="95"
 	input_cell1="cc_alchemy_powder"	input_cell2="rotten_meat"
 	output_cell1="cc_unstable_metamorphine"	output_cell2="rainbow_gas"
 	blob_radius1="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="70"
 	input_cell1="cc_metamorphine" input_cell2="cc_alchemy_powder"
 	output_cell1="cc_metamorphine"	output_cell2="cc_metamorphine"
@@ -887,7 +887,7 @@
 	output_cell1="cc_unstable_metamorphine"	output_cell2="cc_unstable_metamorphine"
 	>
 	</Reaction>
-	
+
 	<!-- unspeed potion reactions -->
    <Reaction probability="50"
 	input_cell1="[magic_slower]" 		input_cell2="[magic_faster]"
@@ -899,7 +899,7 @@
 		cell_explosion_radius_min="5"
 		cell_explosion_radius_max="5"
 		cell_explosion_probability="1.1"
-	
+
 		ray_energy="50000"
 		>
 	</ExplosionConfig>
@@ -916,7 +916,7 @@
 	output_cell1="cc_heftium"	output_cell2="cc_heftium"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="56"
 	input_cell1="cc_stillium"	input_cell2="slime"
 	output_cell1="cc_stillium"	output_cell2="cc_stillium"
@@ -932,7 +932,7 @@
 	<!-- Kindling -->
 
 	<!-- methane gas -->
-	
+
 	<Reaction probability="1"
 	input_cell1="cc_methane"	input_cell2="[fire]"
 	output_cell1="water"		output_cell2="cc_carbon_dioxide"
@@ -944,31 +944,31 @@
 		cell_explosion_radius_min="5"
 		cell_explosion_radius_max="5"
 		cell_explosion_probability="1.1"
-	
+
 		ray_energy="50000"
 	>
 	</ExplosionConfig>
 	</Reaction>
-	
+
 	<Reaction probability="10"
 		input_cell1="[fire]" 		input_cell2="cc_methane"
 		output_cell1="water"	output_cell2="cc_carbon_dioxide"
 	><!--Methane burns into water and Co2-->
 	</Reaction>
-		
+
 	<Reaction probability="5"
 		input_cell1="steam" 		input_cell2="cc_methane"
 		output_cell1="water"	output_cell2="cc_carbon_dioxide"
 	><!--This should actually create Hydrogen and carbon monoxide but lazy--> <!--Wouldn't carbon monoxide function basically like methane but more deadly? (and go down) -UserK -->
 	</Reaction>
-		
+
 	<Reaction probability="0.05"
 		input_cell1="air" 		input_cell2="cc_methane"
 		output_cell1="air"	output_cell2="air"
 	>
 	</Reaction>
 
-		
+
 	<!--
     <Reaction probability="3"
 	input_cell1="cc_methane"	input_cell2="[fire]"
@@ -976,30 +976,30 @@
 	blob_radius1="2"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="100"
 	input_cell1="cc_methane_rain"	input_cell2="[static]" B2:E107 =$B2="AA"
 	output_cell1="fire"		output_cell2="[static]"
 	>
 	</Reaction>
 	-->
-	
+
 	<!-- meat rots with snow -->
-	
+
 	<Reaction probability="23"
 	input_cell1="snow" 		input_cell2="rotten_meat"
 	output_cell1="slush"	output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="23"
 	input_cell1="snow_sticky" 	input_cell2="rotten_meat"
 	output_cell1="slush"		output_cell2="cc_frozen_meat"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="23"
 	input_cell1="snow_static" 	input_cell2="rotten_meat"
 	output_cell1="slush"		output_cell2="cc_frozen_meat"
@@ -1020,59 +1020,59 @@
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 
 	<!-- glittering liquid -->
-	
+
 	<Reaction probability="14"
 	input_cell1="cc_glittering_liquid"	input_cell2="[fire]"
 	output_cell1="air"				output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_shot.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_glittering_liquid"	input_cell2="[fire]"
 	output_cell1="fire"				output_cell2="air"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="material_confusion"	input_cell2="gunpowder_tnt"
 	output_cell1="cc_hydroxide_gas"		output_cell2="cc_glittering_liquid"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="material_confusion"	input_cell2="gunpowder_explosive"
 	output_cell1="cc_hydroxide_gas"		output_cell2="cc_glittering_liquid"
 	>
 	</Reaction>
-	
+
 	<!-- spark liquid -->
-	
-	
+
+
 	<Reaction probability="1"
 	input_cell1="cc_sparkling_liquid"	input_cell2="air"
 	output_cell1="smoke"			output_cell2="air"
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/sparkling_liquid/spark_shot.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="25"
 	input_cell1="cc_sparkling_liquid" 	input_cell2="[fire]"
 	output_cell1="fire"			output_cell2="air"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="60"
 	input_cell1="cc_cobaline"		input_cell2="magic_liquid_berserk"
 	output_cell1="cc_sparkling_liquid"			output_cell2="smoke"
 	blob_radius1="2"
 	>
 	</Reaction>
-	
-	
+
+
 	<!-- slicing liquid -->
 
 	<Reaction probability="31"
@@ -1081,28 +1081,28 @@
 	entity="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/slicing_liquid_shoot.xml"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="magic_liquid_unstable_polymorph"	input_cell2="cc_glittering_liquid"
 	output_cell1="cc_hydroxide_gas"		output_cell2="cc_slicing_liquid"
 	>
 	</Reaction>
-	
+
 	<!-- blasting powder -->
-	
+
 	<Reaction probability="30"
 	input_cell1="magic_liquid_mana_regeneration"		input_cell2="gunpowder_tnt"
 	output_cell1="smoke"								output_cell2="cc_blasting_powder"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="30"
 	    input_cell1="magic_liquid_mana_regeneration"		input_cell2="gunpowder_explosive"
 	    output_cell1="smoke"								output_cell2="cc_blasting_powder"
 	    blob_radius2="3"
 	/>
-	
+
 	<Reaction probability="25"
 	    input_cell1="cc_blasting_powder"	input_cell2="[fire]"
 	    output_cell1="fire"			output_cell2="air"
@@ -1135,7 +1135,7 @@
 	output_cell1="salt" 		output_cell2="cc_acidic_water"
 	>
 	</Reaction><!--  acid water purifies acid -->
-	
+
 	<Reaction probability="15"
 	input_cell1="cc_hydroxide"		input_cell2="cc_acidic_water"
 	output_cell1="salt" 		output_cell2="cc_acidic_water"
@@ -1149,14 +1149,14 @@
 	blob_radius1="3"
 	>
 	</Reaction> <!-- acid water turns into normal water -->
-	
-	
-  	
+
+
+  
   <Reaction probability="50"
 	input_cell1="[hydroxide]" 		input_cell2="[corrodible]"
 	output_cell1="[hydroxide]" 		output_cell2="cc_hydroxide_gas"
 	fast_reaction="1"
-	blob_radius1="2"			
+	blob_radius1="2"
 	blob_radius2="2"
 	audio_fx_volume_1="10.0"
 	>
@@ -1181,7 +1181,7 @@
   </Reaction><!-- hydroxide acts like acid -->
 
 
-	
+
 	<!-- devouring moss interactions -->
 
 	<Reaction probability="100"
@@ -1200,60 +1200,60 @@
 	output_cell1="steam"		output_cell2="smoke"
 	>
 	</Reaction><!-- water kinda puts out fires -->
-	
+
 	<!-- Pop Rocks -->
-	
+
 	<!--  poly overtakes meat  -->
-	
+
 	<Reaction probability="10"
 	input_cell1="[meat]"	input_cell2="magic_liquid_unstable_polymorph"
 	output_cell1="magic_liquid_unstable_polymorph"	output_cell2="magic_liquid_unstable_polymorph"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="10"
 	input_cell1="[meat]" 	input_cell2="magic_liquid_random_polymorph"
 	output_cell1="magic_liquid_random_polymorph"	output_cell2="magic_liquid_random_polymorph"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="10"
 	input_cell1="[meat]"	input_cell2="magic_liquid_polymorph"
 	output_cell1="magic_liquid_polymorph"	output_cell2="magic_liquid_polymorph"
 	>
 	</Reaction>
-	
+
 
 	<!-- a few new recipes -->
-	
+
 	<!--  poly and fungus interactions  -->
 	<Reaction probability="40"
 	input_cell1="fungi"	input_cell2="magic_liquid_polymorph"
 	output_cell1="fungi"	output_cell2="fungi"
 	>
 	</Reaction>
-	
+
 	<Reaction probability="50"
 	input_cell1="magic_liquid_random_polymorph"		input_cell2="fungi"
 	output_cell1="magic_liquid_random_polymorph"	output_cell2="magic_liquid_random_polymorph"
 	>
 	</Reaction>
 
-	
+
 	<!-- veilium reactions -->
 	<Reaction probability="8"
 	input_cell1="cc_veilium"	input_cell2="alcohol"
 	output_cell1="cc_veilium"	output_cell2="cc_veilium"
 	>
 	</Reaction>
-	
-	<Reaction probability="24"		
+
+	<Reaction probability="24"
 	input_cell1="alcohol"			input_cell2="[fungus]"
 	output_cell1="cc_veilium"		output_cell2="alcohol_gas"
 	blob_radius2="3"
 	>
 	</Reaction>
-	
+
  	<Reaction probability="60"
 	input_cell1="cc_veilium" 	input_cell2="[fire]"
 	output_cell1="[fire]"			output_cell2="cc_methane"
@@ -1269,19 +1269,19 @@
 
 	<!-- moss grows a tiny bit more often -->
 	<Reaction probability="2"
-	input_cell1="rock_static" 		input_cell2="air" 	
+	input_cell1="rock_static" 		input_cell2="air" 
 	output_cell1="rock_static" 		output_cell2="moss"
 	>
   	</Reaction>
 
 	<Reaction probability="100"
-		input_cell1="cc_air" 	input_cell2="[*]" 	
+		input_cell1="cc_air" 	input_cell2="[*]" 
 		output_cell1="air" 		output_cell2="[*]"
 		fast_reaction="1"
 	/>
 
 	<Reaction probability="100"
-		input_cell1="cc_air" 	input_cell2="cc_air" 	
+		input_cell1="cc_air" 	input_cell2="cc_air" 
 		output_cell1="air" 		output_cell2="air"
 		fast_reaction="1"
 	/>

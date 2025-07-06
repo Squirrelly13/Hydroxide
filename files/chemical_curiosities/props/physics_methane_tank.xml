@@ -88,5 +88,5 @@
 		event_name="materials/spray"
 		volume_autofade_speed="0.25" >
 	</AudioLoopComponent>
-	
+
 </Entity>

@@ -61,9 +61,9 @@ function AddPerk(isMutant, count)
 	count = count or 1
 
 	local perklist = isMutant and MutantPerks or BonusPerks
-	
 
-	
+
+
 	for i = 1, count do
 		local _perk = get_weighted_random(perklist)
 		print("granting perk " .. _perk)
@@ -86,7 +86,7 @@ end
 local immunities = {}
 if radcount >= STAGE2 then --immunities
 	stage = 2
-	
+
 	if owner_children ~= nil then
 		for k,v in ipairs(owner_children) do
 			if EntityHasTag(v, "effect_protection") then
@@ -142,7 +142,7 @@ end
 
 if radcount >= STAGE8 then --leggy becomes permanent
 	stage = 8
-	
+
 end
 
 
@@ -155,25 +155,25 @@ end
 
 if radcount >= STAGE10 then --start gaining goofy bootleg perks
 	stage = 10
-	
+
 end
 
 
 if radcount >= STAGE11 then --warning from the gods, shaders and sounds are intense
 	stage = 11
-	
+
 end
 
 
 if radcount >= STAGE12 then --both damages gets ridiculously high
 	stage = 12
-	
+
 end
 
 
 if radcount >= STAGE13 then --custom ascend script
 	stage = 13
-	
+
 end
 
 --#endregion
@@ -240,7 +240,7 @@ if leggyentity then --if there is a leggy
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
 	local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
 	if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount * 15 + 15) end --start with a base of 30 reach and add 15 every 100 rad (leggyamount is divided by 100 and rounded up)
-	
+
 end
 
 if GameGetFrameNum() % 5 == 0 then print(radcount) end

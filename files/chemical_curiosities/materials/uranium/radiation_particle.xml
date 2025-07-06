@@ -11,7 +11,7 @@
 		>
 		</VelocityComponent>
 	</Base>
-	
+
   <ProjectileComponent
     _enabled="1"
     lob_min="0.8"

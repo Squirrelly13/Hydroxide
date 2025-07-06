@@ -4,9 +4,9 @@
 		custom_effect_id="COLLAPSE"
 		frames="600"
 	>
-	</GameEffectComponent >	
+	</GameEffectComponent >
 	<InheritTransformComponent>
-	</InheritTransformComponent>	
+	</InheritTransformComponent>
 	<Base file="data/entities/base_projectile.xml" >
 	<VelocityComponent
 	  air_friction="-0.2"
@@ -112,8 +112,8 @@
 		emission_interval_max_frames="2"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
-	
+
+
   <LightComponent
 	_enabled="1"
 	r="255"

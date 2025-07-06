@@ -5,7 +5,7 @@
 		custom_effect_id="CUSTOM_VOMIT"
 		frames="10"
 	>
-	</GameEffectComponent >	
+	</GameEffectComponent >
 
    <LuaComponent
         script_source_file="mods/Hydroxide/files/lib/vomit/vomitloaderscript.lua"
@@ -14,15 +14,15 @@
         execute_every_n_frame="-1"
         >
     </LuaComponent>
-	
+
 	<VariableStorageComponent
-	
+
 	name="vomit_material"
 	value_string="aa_hungry_slime"
-	
-	
-	
-	
+
+
+
+
 	>
 
 	</VariableStorageComponent>

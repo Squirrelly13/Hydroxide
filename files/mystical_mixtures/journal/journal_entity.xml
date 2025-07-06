@@ -41,7 +41,7 @@
 	<VelocityComponent
 		_tags="enabled_in_world"
 	></VelocityComponent>
-	
+
 	<ItemComponent
 		_tags="enabled_in_world"
 		max_child_items="0"
@@ -78,7 +78,7 @@
 		radius="64"
 		fade_out_time="0.75" >
 	</LightComponent>
-	
+
 	<AbilityComponent
 		ui_name="Alchemy Journal"
 		throw_as_item="1"

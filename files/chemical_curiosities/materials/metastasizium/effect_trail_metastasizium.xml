@@ -1,7 +1,7 @@
 <Entity>
-	
+
 	<InheritTransformComponent>
-    </InheritTransformComponent>	
+    </InheritTransformComponent>
 
     <GameEffectComponent
     	effect="CUSTOM"

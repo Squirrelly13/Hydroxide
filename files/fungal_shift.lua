@@ -22,7 +22,7 @@ end
 
 local CC_from = {
 	{
-		probability = 	0.1,	
+		probability = 	0.1,
 		materials 	= 	{"cc_devouring_moss"},
 	},
 	{
@@ -80,7 +80,7 @@ local CC_to = {
 	cc_unstable_metamorphine = 	0.005,
 	cc_health_tonic = 			0.005,
 	cc_devouring_moss = 		0.005,
-		
+
 }
 
 

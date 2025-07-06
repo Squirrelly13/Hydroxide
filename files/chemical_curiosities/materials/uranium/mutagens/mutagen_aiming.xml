@@ -2,7 +2,7 @@
 
     <InheritTransformComponent>
     </InheritTransformComponent>
-	
+
 	<Base file="data/entities/particles/drunk.xml" >
 		<SpriteParticleEmitterComponent
     		emission_interval_min_frames="20"
@@ -16,5 +16,5 @@
         frames="1200"
     >
 	</GameEffectComponent >
-	
+
 </Entity>

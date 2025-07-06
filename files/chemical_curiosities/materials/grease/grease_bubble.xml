@@ -57,7 +57,7 @@
 		>
     </config_explosion>
   </ProjectileComponent>
-	
+
 	<ParticleEmitterComponent
 		emitted_material_name="cc_grease"
 		gravity.y="0.3"
@@ -72,7 +72,7 @@
 		airflow_scale="0.15"
 		emission_interval_min_frames="1"
 		emission_interval_max_frames="1"
-		emit_cosmetic_particles="1"	
+		emit_cosmetic_particles="1"
 		collide_with_grid="0"
 		cosmetic_force_create="1"
 		x_vel_min="-20"
@@ -81,9 +81,9 @@
 		y_vel_max="10"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
-	
-	
+
+
+
 	<AudioComponent
       file="data/audio/Desktop/misc.bank"
       event_root="misc/orb_powder" >

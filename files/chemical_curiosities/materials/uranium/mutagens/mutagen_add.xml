@@ -1,21 +1,21 @@
 <Entity
 	name="radiationEffect"
 	>
-	
+
 	<LifetimeComponent
 		lifetime="4"
 		>
 	</LifetimeComponent>
-	
+
 	<InheritTransformComponent />
-	
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_add.lua"
 		execute_every_n_frame="1"
 		remove_after_executed="1"
 		>
 	</LuaComponent>
-<!--	
+<!--
 	<UIIconComponent
 		name="Radiation"
 		description="Radiation poisioning"
@@ -25,7 +25,7 @@
 		display_in_hud="1"
 		>
 	</UIIconComponent>
-	
+
 <ParticleEmitterComponent
     emitted_material_name="cc_uranium"
     emitter_lifetime_frames="300"
@@ -55,6 +55,6 @@
     is_emitting="1" >
   </ParticleEmitterComponent>-->
 
-	
-	
+
+
 </Entity>

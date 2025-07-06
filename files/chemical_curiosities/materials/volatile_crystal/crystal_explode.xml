@@ -1,11 +1,11 @@
 <Entity >
-	
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.lua"
 		execute_on_added="1"
 		>
 	</LuaComponent>
-	
+
 	<MagicConvertMaterialComponent
 		radius="20"
 		is_circle="1"
@@ -16,7 +16,7 @@
 		kill_when_finished="0"
 		>
 	</MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
 		radius="20"
 		is_circle="1"
@@ -27,7 +27,7 @@
 		kill_when_finished="0"
 		>
 	</MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
 		radius="20"
 		is_circle="1"
@@ -38,7 +38,7 @@
 		kill_when_finished="0"
 		>
 	</MagicConvertMaterialComponent>
-	
+
 	<LifetimeComponent
 		lifetime="2"
 	/>

@@ -75,7 +75,7 @@ mod_settings =
 				id = "CC_ORES",
 				ui_name = "Spawn Ores",
 				ui_description = "Spawn Various ores throughout the world! (this feature is currently being reworked)",
-				value_default = true,				
+				value_default = true,
 				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 			{
@@ -153,14 +153,14 @@ mod_settings =
 			},
 		},
 	},
-	{	
+	{
 		category_id = "COMPATIBILITY_SETTINGS",
 		ui_name = "Compelling Compatibility",
 		ui_description = "Settings and Options for configuring compatibility both internally and externally",
 		foldable = true,
 		_folded = true,
 		settings = {
-			
+
 			{
 				category_id = "COMPATIBILITY_INTERNAL",
 				ui_name = "Internal",

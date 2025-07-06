@@ -94,7 +94,7 @@
 		lifetime_max="0.8"
 		>
 	</ParticleEmitterComponent>
-	
+
 	<ParticleEmitterComponent
 		emitted_material_name="plasma_fading"
 		fade_based_on_lifetime="1"

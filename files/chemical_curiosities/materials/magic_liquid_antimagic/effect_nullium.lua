@@ -26,16 +26,16 @@ local gdc = EntityGetFirstComponentIncludingDisabled(root, "GenomeDataComponent"
 if gdc ~= nil then
 	local herd = HerdIdToString(ComponentGetValue2(gdc, "herd_id"))
 	if (herd == "mage") or (herd == "flower") or (herd == "fungus") or (herd == "mage_swapper") then
-		
+
 		--[[
-		
-		
-		
+
+
+
 			MAKE IT INFLICT DoT
-			
-			
+
+
 		]]--
 
 		EntitySetDamageFromMaterial(root, "cc_nullium", 0.004)
-	end	
+	end
 end	

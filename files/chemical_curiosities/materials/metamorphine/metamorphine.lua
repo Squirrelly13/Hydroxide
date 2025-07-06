@@ -56,14 +56,14 @@ else
 	rnd = Random( 1, #material_options_rare )
 	material = material_options_rare[rnd]
 end
-	
+
 material = CellFactory_GetType( material )
 
 if ( convertcomponents ~= nil ) then
 	for key,comp_id in pairs(convertcomponents) do
 		local name = tonumber( ComponentGetValue2( comp_id, "from_material" ) )
 		--local smoke_id = CellFactory_GetType( "smoke" )
-		
+
 		if (material == name) then
 			--ComponentSetValue( comp_id, "to_material", smoke_id )
 		else

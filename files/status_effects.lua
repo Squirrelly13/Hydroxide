@@ -310,7 +310,7 @@ local AA_effects = {
 		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/unstablepandoriumvomit.xml",
 		is_harmful=true,
 	}
-	
+
 --[[
 table.insert(status_effects, {
 	id="POLYMORPH2",
@@ -387,11 +387,11 @@ if AA then
 end
 
 if MM then
-	
+
 end
 
 if FF then
-	
+
 end
 
 if Terror then

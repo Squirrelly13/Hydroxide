@@ -86,9 +86,9 @@ if(percentage > 20)then
 			local solid2 = CellFactory_GetType(solids[Random(1, #solids)])
 			local sand1 = CellFactory_GetType(sands[Random(1, #sands)])
 			local sand2 = CellFactory_GetType(sands[Random(1, #sands)])
-			
+
 			--print(tostring(liquid1), tostring(liquid2), tostring(solid1), tostring(solid2), tostring(sand1), tostring(sand2))
-		
+
 			ConvertMaterialEverywhere( liquid1, liquid2 )
 			ConvertMaterialEverywhere( solid1, solid2 )
 			ConvertMaterialEverywhere( sand1, sand2 )

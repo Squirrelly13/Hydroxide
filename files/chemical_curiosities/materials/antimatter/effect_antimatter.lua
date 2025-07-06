@@ -5,7 +5,7 @@ local entity = GetUpdatedEntityID()
 local root = EntityGetRootEntity( entity )
 
 local x, y = EntityGetTransform(root)
-local max_hp = 0	
+local max_hp = 0
 local damagemodel = EntityGetFirstComponentIncludingDisabled( root, "DamageModelComponent" )
 if not damagemodel then return end
 max_hp = ComponentGetValue2( damagemodel, "max_hp" )

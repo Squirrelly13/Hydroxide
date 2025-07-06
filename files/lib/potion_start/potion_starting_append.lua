@@ -4,8 +4,8 @@
 									-- UserK's Super Handy-Dandy Starting-Potion Lib! --
 
 	simply override "data/scripts/items/potion_starting.lua" with the "potion_starting.lua" file and then append the file location with your tables and merge functions
-	
-	
+
+
 	appending should look something like:
 
 	ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/your_mod/file/path/to/your/custom_starting_potion_appends.lua" )
@@ -75,7 +75,7 @@ local modded_functions = {
 	function() --pretend to give deezium based on mod setting lmao
 		if ModSettingGet("mysuperawesomemod.DEEZIUM_START") == true then return "not_deezium" end
 	end,
-	
+
 	function(outcome, r_value)
 		if ps.CompareTables({ps.UTC.month, ps.UTC.day}, {4, 1}) then
 			if r_value == 69 then return "super_secret_material" end 	--check r_value for 1% chance

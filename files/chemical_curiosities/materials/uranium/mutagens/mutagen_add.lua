@@ -107,7 +107,7 @@ local immunities = {}
 local immunities_list = {}
 if radcount >= STAGE2 then --immunities
 	stage = 2
-	
+
 	if owner_children ~= nil and false then --disabled
 		for k,v in ipairs(owner_children) do
 			if EntityHasTag(v, "effect_protection") and EntityGetComponent(v, "GameEffectComponent") ~= nil then
@@ -123,7 +123,7 @@ end
 
 if radcount >= STAGE3 then --radiation positioning + shader + maybe mana fluctuations?
 	stage = 3
-	
+
 	local positioning
 	if owner_children ~= nil then
 		for k,v in ipairs(owner_children) do
@@ -160,7 +160,7 @@ function AddPerk(isMutant, count)
 	count = count or 1
 
 	local perklist = isMutant and MutantPerks or BonusPerks
-	
+
 --[[
 	local _test_perks = {}
 	for i = 1, 100000 do
@@ -172,7 +172,7 @@ function AddPerk(isMutant, count)
 	for k,v in ipairs(_test_perks) do
 		print(v.key .. ": " .. v.value)
 	end --]]
-	
+
 
 
 	for i = 1, count do
@@ -188,7 +188,7 @@ if radcount >= STAGE6 then --gain random perk
 		if ComponentGetValue2(perktracker, "value_int") < currentframe then
 			if EntityHasTag(owner, "player_unit") or EntityHasTag(owner, "polymorphed_player") then
 				GamePrintImportant("$log_cc_mutagen_superpowers", "$log_cc_mutagen_superpowers_desc")
-				
+
 				if( StatsBiomeGetValue("enemies_killed") ~= "0" ) then
 					EntityLoad( "data/entities/particles/image_emitters/perk_effect.xml", x, y )
 				else
@@ -213,7 +213,7 @@ end
 
 if radcount >= STAGE8 then --leggy becomes permanent
 	stage = 8
-	
+
 end
 
 
@@ -226,25 +226,25 @@ end
 
 if radcount >= STAGE10 then --start gaining goofy bootleg perks
 	stage = 10
-	
+
 end
 
 
 if radcount >= STAGE11 then --warning from the gods, shaders and sounds are intense
 	stage = 11
-	
+
 end
 
 
 if radcount >= STAGE12 then --both damages gets ridiculously high
 	stage = 12
-	
+
 end
 
 
 if radcount >= STAGE13 then --custom ascend script
 	stage = 13
-	
+
 end
 
 --#endregion
@@ -313,7 +313,7 @@ if leggyentity then --if there is a leggy
 	leggyentity = ComponentGetValue2(leggytracker, "value_int")
 	local leggylimbcomp = EntityGetComponent(leggyentity, "IKLimbComponent")
 	if leggylimbcomp ~= nil then ComponentSetValue2(leggylimbcomp[1], "length", leggyamount * 15 + 15) end --start with a base of 30 reach and add 15 every 100 rad (leggyamount is divided by 100 and rounded up)
-	
+
 end
 
 

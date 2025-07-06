@@ -15,10 +15,10 @@ local rocketCount = #rockets
 if (rocketCount <= ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") or 60) then
 	local angle = math.rad(Random(45,135))
 	local length = Random(30,60)
-	
+
 	local vel_x = math.cos( angle ) * length
 	local vel_y = 0 - math.sin( angle ) * length
-	
+
 	shoot_projectile(nil, "mods/Hydroxide/files/chemical_curiosities/materials/blast_powder/blast_rocket.xml", pos_x, pos_y, vel_x, vel_y)
 end
 

@@ -20,7 +20,7 @@
 		>
 	</ExplosionConfig>
 	</Reaction><!-- Pandorium casts spells -->
-	
+
 
 	<Reaction probability = "75"
 		input_cell1="aa_unstable_pandorium" input_cell2="[fire]"

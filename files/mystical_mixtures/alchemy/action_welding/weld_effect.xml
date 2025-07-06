@@ -9,7 +9,7 @@
       event_root="event_cues/chest"
       play_only_if_visible="1" >
     </AudioComponent>
-	
+
 	<ParticleEmitterComponent
 		emitted_material_name="spark_purple"
 		gravity.y="0.0"

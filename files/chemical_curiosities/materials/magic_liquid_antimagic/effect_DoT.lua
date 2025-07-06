@@ -11,6 +11,6 @@ if gdc ~= nil then
 		if not damagemodel then return end
 		local max_hp = ComponentGetValue2( damagemodel, "max_hp" )
 		EntityInflictDamage( root, max_hp * 0.2, "DAMAGE_POISON", "Mana Deficiency", "NORMAL", 0, 0)
-		
-	end	
+
+	end
 end	

@@ -8,7 +8,7 @@
       is_circle="1"
       radius="32"
 	  loop="1" />
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="gunpowder_explosive"
@@ -18,7 +18,7 @@
       is_circle="1"
       radius="32"
 	  loop="1" />
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="gunpowder_tnt"
@@ -28,7 +28,7 @@
       is_circle="1"
       radius="32"
 	  loop="1" />
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="coal"
@@ -38,7 +38,7 @@
       is_circle="1"
       radius="32"
 	  loop="1" />
-	
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_enhancer.lua"
 		remove_after_executed="1"

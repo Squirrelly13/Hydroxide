@@ -91,7 +91,7 @@ end
 	local setting = ModSettingGet("alchemist_potions_"..v.material)
 	local enabled = (setting ~= nil and setting) or (v.default_disabled and false) or true
 
-	
+
 		local setting = ModSettingGet("alchemist_potions_"..v.material)
 		local enabled = true
 		if(setting ~= nil)then
@@ -101,7 +101,7 @@ end
 				enabled = false
 			end
 		end
-	
+
 
 	if(enabled)then
 		table.insert(potions, v)

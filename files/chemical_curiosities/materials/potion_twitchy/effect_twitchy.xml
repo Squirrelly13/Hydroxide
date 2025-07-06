@@ -1,7 +1,7 @@
 <Entity>
 	<InheritTransformComponent
 		_enabled="1" >
-    </InheritTransformComponent>	
+    </InheritTransformComponent>
 
       <GameEffectComponent
         effect="CC_TWITCHY"
@@ -14,17 +14,17 @@
 		execute_every_n_frame="60"
 		>
 	</LuaComponent>
-	
+
 	<LuaComponent
 		script_shot="data/scripts/status_effects/twitchy_shot.lua"
 		execute_every_n_frame="-1"
 		>
 	</LuaComponent>
-	
+
 	<LifetimeComponent
 		lifetime="1200"
 		>
 	</LifetimeComponent>
-	
+
 
 </Entity>

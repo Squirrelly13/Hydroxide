@@ -10,7 +10,7 @@
 		loop="0"
 		>
 	</MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
 		kill_when_finished="1"
 		from_material="gold"
@@ -22,7 +22,7 @@
 		loop="0"
 		>
 	</MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
 		kill_when_finished="1"
 		from_material="gold_box2d"
@@ -33,6 +33,6 @@
 		radius="150"
 		loop="0"
 		>
-	</MagicConvertMaterialComponent>	
+	</MagicConvertMaterialComponent>
 
  </Entity>

@@ -1,11 +1,11 @@
 <Entity>
-	
+
 	<Base file="data/entities/base_custom_card.xml" >
 		<SpriteComponent
 			image_file="mods/Hydroxide/files/chemical_curiosities/spells/material_spells/grease_blast.png"
 			>
 		</SpriteComponent>
-		
+
 		<ItemActionComponent
 			_tags="enabled_in_world"
 			action_id="CC_GREASE_BLAST" >
@@ -43,5 +43,5 @@
 		emission_interval_max_frames="25"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
+
 </Entity>

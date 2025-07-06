@@ -22,11 +22,11 @@
 		y_vel_max="10"
 		is_emitting="1"
     />
-	
+
 	<InheritTransformComponent
 		_enabled="1"
     />
-	
+
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_NULL_TRIP"

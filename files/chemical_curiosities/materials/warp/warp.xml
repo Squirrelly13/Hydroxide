@@ -1,6 +1,6 @@
 <Entity>
 	<InheritTransformComponent />
-	
+
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_WARP"
@@ -14,7 +14,7 @@
     execute_on_added="1"
     vm_type="ONE_PER_COMPONENT_INSTANCE"
     ></LuaComponent><!--hp = trueHealth-->
-	
+
     <AudioComponent
         file="mods/Hydroxide/files/mystical_mixtures/misc/mystical_mixtures.bank"
         event_root="warp/warp_sound"

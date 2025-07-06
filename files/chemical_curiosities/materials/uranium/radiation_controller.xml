@@ -1,6 +1,6 @@
 <Entity name="radiation_controller">
 	<InheritTransformComponent />
-	
+
 	<UIIconComponent
 		name="Radiation Poisoning"
 		description="Exposure to radiation is causing problems!"
@@ -43,5 +43,5 @@
 		execute_every_n_frame="60"
 		>
 	</LuaComponent>
-	
+
 </Entity>

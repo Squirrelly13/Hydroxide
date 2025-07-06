@@ -22,14 +22,14 @@
 	gfx_glow="1"
 	hp="30"
 	platform_type="1"
-	
+
 	>
     <Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/healthy/root_growth.png">
     </Graphics>
-	
+
   </CellData><!-- bloomium (floor?) -->
-	
+
   <CellData
 	name="aa_bloom_roof"
 	ui_name="Bloomium"
@@ -57,7 +57,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- bloomium Ceiling -->
 
      <CellData
@@ -87,7 +87,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
 
   <CellData
@@ -120,7 +120,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- i think this is the roots that hang from bloomium roofs -->
 
   <CellData
@@ -163,7 +163,7 @@
 	show_in_creative_mode="1"
 	>
 	 <Graphics
-	
+
 	color="55678828" >
     </Graphics>
   </CellData><!-- bloomium gas -->
@@ -192,14 +192,14 @@
 	gfx_glow="1"
 	hp="30"
 	platform_type="1"
-	
+
 	>
     <Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/infected/root_growth.png">
     </Graphics>
-	
+
   </CellData><!-- bloomium (floor?) -->
-	
+
   <CellData
 	name="AA_BLOOM_ROOF_POISONED"
 	ui_name="Contaminated Bloomium"
@@ -227,7 +227,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- bloomium Ceiling -->
 
      <CellData
@@ -257,7 +257,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
 
   <CellData
@@ -290,7 +290,7 @@
 	is_grass="1"
 	color="ffCF1FC8" >
     </Graphics>
-	
+
   </CellData><!-- i think this is the roots that hang from bloomium roofs -->
 
   <CellData<!--  Bloomium Liquid -->
@@ -333,7 +333,7 @@
 	show_in_creative_mode="1"
 	>
 	 <Graphics
-	
+
 	color="55562888" >
     </Graphics>
   </CellData>

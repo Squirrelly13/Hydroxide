@@ -7,7 +7,7 @@
 
 		<LuaComponent>
 		</LuaComponent>
-		
+
 		<LuaComponent>
 		</LuaComponent>
 
@@ -27,7 +27,7 @@
 			ui_name="$item_runestone_terror"
 			>
 		</AbilityComponent>
-	
+
 		<SpriteComponent
 			image_file="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror_hand.png"
 			>
@@ -57,7 +57,7 @@
 			collide_with_grid="0"
 			>
 		</ParticleEmitterComponent>
-	
+
 		<LuaComponent
 			_tags="activate"
 			script_source_file="mods/Hydroxide/files/arcane_alchemy/items/runestone_terror/runestone_terror_emitter.lua"

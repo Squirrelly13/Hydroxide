@@ -10,7 +10,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="water"
@@ -22,7 +22,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="radioactive_liquid"
@@ -34,7 +34,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="oil"
@@ -46,7 +46,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="slime"
@@ -58,7 +58,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="blood"
@@ -70,7 +70,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="blood_thick"
@@ -82,7 +82,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="water_ice"
@@ -94,7 +94,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="swamp"
@@ -106,7 +106,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="blood_worm"
@@ -118,7 +118,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="blood_fungi"
@@ -130,7 +130,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="endslime"
@@ -142,7 +142,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="sand"
@@ -154,7 +154,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="coal"
@@ -166,7 +166,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="gunpowder"
@@ -178,7 +178,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="snow"
@@ -190,7 +190,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="honey"
@@ -202,7 +202,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="gunpowder_unstable"
@@ -214,7 +214,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="gunpowder_explosive"
@@ -226,7 +226,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="bone"
@@ -238,7 +238,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="alcohol"
@@ -250,7 +250,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="acid"
@@ -262,7 +262,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="burning_powder"
@@ -286,7 +286,7 @@
 	  loop="1"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 <MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="cc_veilium"
@@ -648,7 +648,7 @@
 	>
    </LuaComponent>
 
-	
+
 
   <LifetimeComponent
         lifetime="2"

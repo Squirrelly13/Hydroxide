@@ -1,8 +1,8 @@
 <Materials>
 <!-- making the ocarina script into an append rather than /data/ is hard, and requires more knowledge than i have now -->
-	
+
 <!-- TODO make unstable metamorphine more procedural if possible -->
-	
+
 
 <!--
 	<CellData
@@ -242,7 +242,7 @@
 	autoignition_temperature="10"
 	electrical_conductivity="1"
 	liquid_sprite_stains_check_offset="1"
-	
+
 	>
 	<Graphics
 		texture_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_blindness/veilium.png"
@@ -377,7 +377,7 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!--  firework liquid -->
-	
+
   <CellData
 	name="cc_blasting_powder"
 	ui_name="$mat_cc_blasting_powder"
@@ -452,7 +452,7 @@
 		</Ingestion>
 	</StatusEffects>
 	</CellData><!-- lol, methane gas. -->
-	
+
 	<CellData
 		name="cc_carbon_dioxide"
 		ui_name="$mat_cc_carbon_dioxide"
@@ -484,7 +484,7 @@
 	lifetime="80"
 	>
 	</CellDataChild><!-- sometimes drips from methane gas, pretty fun -->
-	
+
 	  <CellData
 	name="cc_ectospasm"
 	ui_name="$mat_cc_ectospasm"
@@ -584,8 +584,8 @@
 		>
 	</CellDataChild>
 
-	
-  <CellData	
+
+  <CellData
 	name="cc_deceleratium"
 	ui_name="$mat_cc_deceleratium"
 	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
@@ -662,8 +662,8 @@
 		</Ingestion>
 	</StatusEffects>
   </CellData><!-- Heftium -->
-	
-	
+
+
 
   <CellData
 	name="cc_stillium"
@@ -855,7 +855,7 @@
 		</Ingestion>
 	</StatusEffects>
 	</CellData>
-		
+
 	<CellData
 	name="cc_alchemy_powder"
 	ui_name="$mat_cc_alchemy_powder"
@@ -880,7 +880,7 @@
 	>
 	</Graphics>
 	</CellData>
-	
+
 	<CellData
 	name="cc_metastasizium"
 	ui_name="$mat_cc_metastasizium"
@@ -966,7 +966,7 @@
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_fungus.png" >
     	</Graphics>
 	</CellDataChild>
-	
+
 	<CellData
 		name="cc_liberum_magicas"
 		ui_name="$mat_cc_liberum_magicas"
@@ -1029,7 +1029,7 @@
 		fire_hp="6"
 		requires_oxygen="1"
 		temperature_of_fire="90"
-		autoignition_temperature="50"	
+		autoignition_temperature="50"
 		on_fire_flame_material="fire_blue"
 		>
 		<Graphics
@@ -1037,7 +1037,7 @@
 			>
 		</Graphics>
 	</CellDataChild>
-	
+
 	<CellData
 		name="cc_health_tonic"
 		ui_name="$mat_cc_health_tonic"
@@ -1160,12 +1160,12 @@
         >
 		</ExplosionConfig>
 		<Graphics
-			texture_file="data/materials_gfx/crystal_purple.png"	
+			texture_file="data/materials_gfx/crystal_purple.png"
 			color="ff74737f"
 			>
 		</Graphics>
 	</CellDataChild>
-	
+
 
 	<CellData
 		name="cc_dormant_crystal_molten"
@@ -1189,7 +1189,7 @@
 			>
 		</Graphics>
 	</CellData>
-	
+
 	<CellData
 		name="cc_uranium"
 		ui_name="$mat_cc_uranium"
@@ -1348,7 +1348,7 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
-	
+
 	<CellData
 		name="cc_antimatter_liquid"
 		ui_name="$mat_cc_antimatter_liquid"
@@ -1375,7 +1375,7 @@
 			</Ingestion>
 		</StatusEffects>
 	</CellData>
-	
+
 	<CellData
 		name="cc_antimatter_powder"
 		ui_name="$mat_cc_antimatter_powder"
@@ -1400,7 +1400,7 @@
 			>
 			</Graphics>
 	</CellData>
-	
+
 	<CellDataChild
 		_parent="rotten_meat"
 		name="cc_frozen_meat"
@@ -1413,7 +1413,7 @@
 		</Graphics>
 	</CellDataChild>
 
-	
+
 
 
 	<CellData
@@ -1626,7 +1626,7 @@
 			>
 		</Graphics>
 	</CellData>
-	
+
 	<CellData
 		name="cc_cobaline"
 		ui_name="$mat_cc_cobaline"
@@ -1650,7 +1650,7 @@
 			>
 		</Graphics>
 	</CellData>
-	
+
 	<CellData
 		name="cc_crystal_box2d"
 		ui_name="$mat_cc_crystal_box2d"
@@ -1688,7 +1688,7 @@
         >
 		</ExplosionConfig>
 	</CellData>
-	
+
 	<CellData
 		name="cc_persistine"
 		ui_name="$mat_cc_persistine"

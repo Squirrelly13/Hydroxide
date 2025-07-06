@@ -4,11 +4,11 @@
 function stringsplit(inputstr, sep)
 	sep = sep or "%s"
 	local output = {}
-	
+
 	for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
 		table.insert(output, str)
 	end
-	
+
 	return output
 end
 
@@ -67,7 +67,7 @@ function shift_materials_in_range(radius, materials_input, output, e_id)
 	local shift_entity = EntityCreateNew("shifting_guy")
 	if(e_id ~= nil)then
 		local x,y = EntityGetTransform(e_id)
-		
+
 		EntitySetTransform(shift_entity, x, y)
 		for k, v in ipairs(materials_input)do
 			EntityAddComponent2(shift_entity, "MagicConvertMaterialComponent", {
@@ -81,7 +81,7 @@ function shift_materials_in_range(radius, materials_input, output, e_id)
 			EntityAddComponent2(shift_entity, "LifetimeComponent", {
 				lifetime = 5,
 			})
-			
+
 			function getMaterialCount(material, inventory)
 				local count_per_material_type = ComponentGetValue2( inventory, "count_per_material_type");
 				for k,v in pairs(count_per_material_type) do

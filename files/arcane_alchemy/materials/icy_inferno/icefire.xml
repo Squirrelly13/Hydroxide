@@ -12,7 +12,7 @@
 		>
 	</GameAreaEffectComponent>
 
-	
+
 
 
 
@@ -21,19 +21,19 @@
 			lifetime="30"
 			>
 		</LifetimeComponent>
-		
+
 		<SpriteComponent
 			image_file=""
 			>
 		</SpriteComponent>
 
-		
 
-		
+
+
 	</Base>
-	
-	
-	
+
+
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="fire"
@@ -42,9 +42,9 @@
       is_circle="1"
       radius="300" >
     </MagicConvertMaterialComponent>
-	
-	
-	
+
+
+
 	<MagicConvertMaterialComponent
       kill_when_finished="0"
       from_material="smoke"
@@ -53,8 +53,8 @@
       is_circle="1"
       radius="300" >
     </MagicConvertMaterialComponent>
-	
-	
+
+
 
 
 

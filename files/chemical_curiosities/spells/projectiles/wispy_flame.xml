@@ -43,7 +43,7 @@
 		>
     </config_explosion>
   </ProjectileComponent>
-	
+
 	<ParticleEmitterComponent
 		emitted_material_name="brass_molten"
 		gravity.y="0.0"
@@ -58,7 +58,7 @@
 		airflow_scale="0.15"
 		emission_interval_min_frames="1"
 		emission_interval_max_frames="1"
-		emit_cosmetic_particles="1"	
+		emit_cosmetic_particles="1"
 		collide_with_grid="0"
 		cosmetic_force_create="1"
 		x_vel_min="-20"
@@ -67,7 +67,7 @@
 		y_vel_max="10"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
+
 	<ParticleEmitterComponent
 		emitted_material_name="fire"
 		gravity.y="0.0"
@@ -82,7 +82,7 @@
 		emit_cosmetic_particles="0"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
+
 	<ParticleEmitterComponent
         _tags="enabled_in_world,fire"
         emitted_material_name="smoke"
@@ -154,13 +154,13 @@
         emission_interval_max_frames="6"
         fire_cells_dont_ignite_damagemodel="1" >
     </ParticleEmitterComponent>
-	
+
 	<VariableStorageComponent
         name="projectile_file"
         value_string="mods/Hydroxide/files/chemical_curiosities/spells/projectiles/wispy_flame.xml"
         >
     </VariableStorageComponent>
-	
+
 	<AudioComponent
       file="data/audio/Desktop/misc.bank"
       event_root="misc/orb_powder" >

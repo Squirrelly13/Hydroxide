@@ -1,5 +1,5 @@
 dofile_once("data/scripts/lib/utilities.lua")
-	
+
 local rockets = EntityGetWithTag("rocket")
 local rocketCount = #rockets
 

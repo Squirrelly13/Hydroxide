@@ -69,7 +69,7 @@
   <TorchComponent
     _tags="enabled_in_world">
   </TorchComponent>
-	
+
   <SpriteAnimatorComponent>
   </SpriteAnimatorComponent>
 

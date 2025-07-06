@@ -7,8 +7,8 @@
 </GameEffectComponent>
 
 	<!-- physical presence -->
-	
-	
+
+
 
 	<!-- movement and gravity -->
 	<LuaComponent
@@ -18,6 +18,6 @@
 		>
 	</LuaComponent>
 
-	
+
 
 </Entity>

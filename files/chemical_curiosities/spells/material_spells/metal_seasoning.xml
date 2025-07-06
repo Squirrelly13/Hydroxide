@@ -41,12 +41,12 @@
 		ray_energy="0">
 	</config_explosion>
 	</ProjectileComponent>
-	
+
 	<AudioComponent
       file="data/audio/Desktop/projectiles.bank"
       event_root="player_projectiles/summon_generic">
   </AudioComponent>
-	
+
 	<VariableStorageComponent
 		name="projectile_file"
 		value_string="mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.xml"

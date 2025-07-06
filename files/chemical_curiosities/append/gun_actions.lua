@@ -242,23 +242,23 @@ table.insert( actions, {
 	spawn_probability				= "0.5,0.5,0.5",
 	price = 90,
 	mana = 30,
-	
+
 	action 		= function()
 		if c.trail_material:find("gunpowder,") then
-			
-	
+
+
 			local entity_id    = GetUpdatedEntityID()
 			local pos_x, pos_y = EntityGetTransform( entity_id )
-			
+
 			SetRandomSeed( pos_x + 436, pos_y - 3252 )
 			local material_options = { "cc_blasting_powder", "cc_kindling", "cc_thunder_powder" }
 			local rare = false
 			local rnd = 1
 			local material = "gunpowder"
-			
+
 			rnd = Random( 1, #material_options )
 			material = material_options[rnd]
-			
+
 			c.trail_material = c.trail_material:gsub("gunpowder,", material .. ",")
 		end
 		c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/chemical_curiosities/spells/material_enhancers/gunpowder_buff.xml,data/entities/particles/tinyspark_red.xml,"
@@ -289,8 +289,8 @@ table.insert( actions, {
 			draw_actions( 1, true )
 		end,
 	});
-	
-	
+
+
 table.insert( actions, {
 		id          = "CC_CLOUD_GUNPOWDER",
 		name 		= "$action_cc_gunpowder_cloud",

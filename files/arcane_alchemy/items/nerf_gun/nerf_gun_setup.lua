@@ -4,14 +4,14 @@ dofile("data/scripts/gun/procedural/gun_action_utils.lua")
 
 function get_random_from( target )
 	local rnd = Random(1, #target)
-	
+
 	return tostring(target[rnd])
 end
 
 function get_random_between_range( target )
 	local minval = target[1]
 	local maxval = target[2]
-	
+
 	return Random(minval, maxval)
 end
 
@@ -40,7 +40,7 @@ wand.mana_max = {100,100}
 AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
 AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
 AddGunAction( entity_id, "AA_ALCHEMY_NERF_DARTS" )
-	
+
 local mana_max = get_random_between_range( wand.mana_max )
 local deck_capacity = get_random_between_range( wand.deck_capacity )
 

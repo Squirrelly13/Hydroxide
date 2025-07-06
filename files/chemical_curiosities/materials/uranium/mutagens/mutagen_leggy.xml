@@ -1,14 +1,14 @@
 <Entity name="mutagenLeggy" >
 
-	
+
 	<InheritTransformComponent />
-	
+
 	<IKLimbComponent length="30" />
 	<IKLimbWalkerComponent
 		affect_flying="1"
 		>
 	</IKLimbWalkerComponent>
-	
+
 	<SpriteComponent
 		image_file="data/entities/animals/lukki/lukki_feet/chest_limb_a.png"
 		z_index="1.1"

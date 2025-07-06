@@ -1,5 +1,5 @@
 <Entity>
-	
+
   	<ParticleEmitterComponent
 		emitted_material_name="fungi"
 		gravity.y="0.0"
@@ -22,7 +22,7 @@
 		image_animation_loop="0"
 		is_emitting="1" >
 	</ParticleEmitterComponent>
-	
+
 
 	<LifetimeComponent
 		lifetime="-1" >

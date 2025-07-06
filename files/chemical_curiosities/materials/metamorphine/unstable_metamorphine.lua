@@ -18,7 +18,7 @@ end
 --[[  -- backwards loop through material options
 for i = #material_options, 1, -1 do
 	local material = material_options[i]
-	
+
 	local id = CellFactory_GetType( material )
 	local tags = CellFactory_GetTags( id ) or {}
 	for k, v in ipairs(tags)do
@@ -62,7 +62,7 @@ end
 ::escape::
 
 material = CellFactory_GetType( material )
-	
+
 
 if ( convertcomponents ~= nil ) then
 	for key,comp_id in pairs(convertcomponents) do

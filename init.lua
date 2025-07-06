@@ -102,7 +102,7 @@ end
 -----////
 
 
---		[GLOBAL]	
+--		[GLOBAL]
 
 
 ModLuaFileAppend( "data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
@@ -117,19 +117,19 @@ ModLuaFileAppend( "data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/f
 if CC then
 
 	---- 	[Materials]
-	
+
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/reactions.xml" ) --reactions
 
 	ModMaterialsFileAdd( "mods/Hydroxide/files/chemical_curiosities/append/methane_reactions.xml" ) --methane generation
 
-	
+
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/methane/methane_shader.lua") -- init methane shader
 
 	dofile("mods/Hydroxide/files/chemical_curiosities/materials/warp/warp_shader.lua") -- init warp shader
-	
+
 	dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/electrolysis_init.lua") -- init electrolysis system
-	
+
 
 
 	ModLuaFileAppend( "data/scripts/items/potion.lua", "mods/Hydroxide/files/chemical_curiosities/append/potion.lua" ) -- potions with new materials
@@ -184,7 +184,7 @@ end
 if AA then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/materials.xml" ) --materials
 	ModMaterialsFileAdd( "mods/Hydroxide/files/arcane_alchemy/append/reactions.xml" ) --reactions
-	
+
 
 
 
@@ -194,19 +194,19 @@ if AA then
 
 
 	--		[Spells]
-	
+
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/arcane_alchemy/append/gun_actions.lua" )
-		
+
 
 	--		[Items]
 
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
 	if CC then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua") end
 	if MM then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua") end
-	
 
 
-	
+
+
 end
 
 
@@ -258,7 +258,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 
 
-	
+
 	print("CC init took " .. total_time .. " seconds")
 
 end
@@ -296,17 +296,17 @@ end
 
 		print(elem)
 		if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
-		
 
-			elem.attr.tags = elem.attr.tags .. ",[bloomable]"	
-				
+
+			elem.attr.tags = elem.attr.tags .. ",[bloomable]"
+
 
 
 					elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
 						elem.attr.tags = elem.attr.tags .. ",[organic]"
-		
+
 					elseif (elem.attr.tags ~= nil) then
-			
+
 						if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
 							elem.attr.tags = elem.attr.tags .. ",[organic]"
 
@@ -332,7 +332,7 @@ if CC and AA then
 		print("DISABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC and AA) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 	else
 		ModMaterialsFileAdd( "mods/Hydroxide/files/compelling_compatibility/internal/supernova/reaction_supernova.xml" )
-	
+
 		print("ENABLING SUPERNOVA REACTION, CC_AA STATE == " .. tostring(CC and AA) .. ", CC_AA_SUPERNOVA == " .. tostring(ModSettingGet("Hydroxide.CC_AA_SUPERNOVA")))
 	end
 end
@@ -380,7 +380,7 @@ end
 
 --	Copi's Things
 
-if ModIsEnabled("copis_things") then	
+if ModIsEnabled("copis_things") then
 	dofile_once("mods/Hydroxide/files/compelling_compatibility/copis_things/random_material_append.lua")
 end --copi's chemical curiosity compatibility combo
 
@@ -512,13 +512,13 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	for elem in xml:each_child() do
 		--print(("CC: Checking " .. elem.attr.name) or "")
 		if catastrophicMaterials[elem.attr.name] then
-			elem.attr.tags = elem.attr.tags .. ",[catastrophic]"	
+			elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
 			print("CC: Added tag [catastrophic] to " .. elem.attr.name)
 		end
-	
+
 		if elem.attr.name == "rock_static" then
 			rock_tags = elem.attr.tags
-	        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"	
+	        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
 		end
 	    if CC and elem.attr.name == "rock_static_glow"
 		or elem.attr.name == "rock_static_purple"
@@ -535,7 +535,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		or elem.attr.name == "rock_box2d"
 		or elem.attr.name == "rock_box2d_nohit"
 		or elem.attr.name == "lavarock_static" then
-	        elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"	
+	        elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
 		elseif elem.attr.name == "coal_static" then
 			elem.attr.tags = rock_tags
 	    end
@@ -548,13 +548,13 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	print( "===================================== random " .. tostring(x) )
 
 	if ModSettingGet("Hydroxide.CC_ORES") then
-	
+
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
 			print("Chemical Curiosities oreGen complete")
 			GameAddFlagRun("Squirrelly_Ore_generated")
 		end
-		
+
 	end
 
 

@@ -30,7 +30,7 @@
     attach_to_surfaces_knife_style="1"
     min_torque="0"
     max_torque="0"
-	
+
   ></PhysicsThrowableComponent>
 
   <ProjectileComponent

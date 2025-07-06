@@ -26,7 +26,7 @@
 
 	<Entity>
 		<InheritTransformComponent only_position="1" />
-		
+
 		<ParticleEmitterComponent
 			emitted_material_name="cc_dormant_crystal_molten"
 			offset.x="0"
@@ -171,7 +171,7 @@
 	<LifetimeComponent
 		lifetime="600" >
 	</LifetimeComponent>
-	
+
 	<AudioComponent
 		file="data/audio/Desktop/projectiles.bank"
 		event_root="player_projectiles/cloud">

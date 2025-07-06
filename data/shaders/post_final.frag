@@ -99,7 +99,7 @@ float sinr(float v, float a, float b) {
 float shape(vec2 uv) {
 
     vec2 f = fract(uv) - .5;
-	
+
     // trying manhattan dist
     vec2 st = vec2(atan(f.x, f.y), mlength(f));
 
@@ -140,11 +140,11 @@ void main()
 	const bool ENABLE_GLOW 					= 1>0;
 	const bool ENABLE_GAMMA_CORRECTION		= 1>0;
 	const bool ENABLE_PATH_DEBUG			= 1>0;
-	
+
 	const float DISTORTION_TIME_SPD 		= 10.0;
 	const float DISTORTION_SCALE_MULT 		= 50.0;
 	const float DISTORTION_SCALE_MULT2 		= 0.002;
-	
+
 	const float REFLECTION_SAMPLES 			= 50.0;
 	const float REFLECTION_SAMPLE_DISTANCE 	= 0.0045;
 	const float REFLECTION_INTENSITY 		= 0.65;
@@ -159,7 +159,7 @@ void main()
 	const vec2  NOISE_TEX_SIZE				= vec2( 1024.0, 1024.0 );
 
 	const float EXTRA_BRIGHT_INTENSITY = 0.25;
-	
+
 	const vec3 LOW_HEALTH_INDICATOR_COLOR = vec3( 0.7, 0.1, 0.0 );
 
 	const float SCREEN_W = 427.0;
@@ -200,7 +200,7 @@ void main()
 			liquid_mask * sin( distortion_mult + (tex_coord.x + camera_pos.x / world_viewport_size.x ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2,
 			liquid_mask * cos( distortion_mult + (tex_coord.y - camera_pos.y / world_viewport_size.y ) * DISTORTION_SCALE_MULT) * DISTORTION_SCALE_MULT2
 			) / camera_inv_zoom_ratio;
-			
+
 		// distort the texture coordinate if the pixel we would sample is liquid
 		vec4 extra_data_at_liquid_offset = texture2D( tex_glow_unfiltered, tex_coord_glow + vec2( liquid_distortion_offset.x, -liquid_distortion_offset.y ) );
 		liquid_distortion_offset *= step( SHADING_LIQUID_BITS_ALPHA, extra_data_at_liquid_offset.a );
@@ -232,7 +232,7 @@ void main()
 
 	vec3 color    = texture2D(tex_bg, tex_coord).rgb;
 	vec4 color_fg = texture2D(tex_fg, tex_coord);
-	
+
 #ifdef TRIPPY
 	// drunk doublevision
 	vec2 doublevision_offset = vec2(0.005 * cos(time*0.5)  * drugged_doublevision_amount,0.005 * sin(time*0.5) * drugged_doublevision_amount );
@@ -373,7 +373,7 @@ void main()
 
 // ============================================================================================================
 // get sky light color ========================================================================================
-	
+
 	lights = pow( lights, vec3( 1.5 ) );
 
 	// apply light from the glow buffer ---
@@ -393,7 +393,7 @@ void main()
 		lights = pow(lights, vec3(1.0 / 2.2));
 
 	lights = dither_srgb(lights, noise.g, 128.0);
-	
+
 // ==========================================================================================================
 // fog of war ================================================================================================
 
@@ -424,7 +424,7 @@ void main()
 
 	fog_amount = dither_srgb(vec3(fog_amount), noise.b, 64.0).r;
 	fog_amount = fog_amount_fg * fog_amount;
-	
+
 	// apply fog to bg
 	color = mix(color, fog_color_bg, fog_amount_background);
 	color = mix(color , dither_srgb(color, noise.a, 64.0 ), fog_amount );

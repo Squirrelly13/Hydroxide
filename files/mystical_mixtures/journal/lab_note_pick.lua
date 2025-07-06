@@ -9,7 +9,7 @@ function item_pickup( entity_item, entity_who_picked, item_name )
 
 	-- load the gold_value from VariableStorageComponent
 	local components = EntityGetComponentIncludingDisabled( entity_item, "VariableStorageComponent" )
-	
+
     local entry = ""
 
 	if ( components ~= nil ) then

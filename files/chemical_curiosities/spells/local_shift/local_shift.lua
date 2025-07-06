@@ -34,7 +34,7 @@ if (biome == "mines") or (biome == "collapsed mines") then
 	table.insert(materials_from, metals);
 	table.insert(materials_from, slime);
 	table.insert(materials_from, potions);
-	
+
 elseif biome == "Coal Pits" then
 	table.insert(materials_from, water);
 	table.insert(materials_from, rock);
@@ -43,28 +43,28 @@ elseif biome == "Coal Pits" then
 	table.insert(materials_from, metals);
 	table.insert(materials_from, slime);
 	table.insert(materials_from, plants);
-	
+
 elseif biome == "Snowy Depths" then
 	table.insert(materials_from, cold);
 	table.insert(materials_from, rock);
 	table.insert(materials_from, gas);
-	
+
 	table.insert(materials_from, potions);
 elseif biome == "Hiisi Base" then
 	table.insert(materials_from, cold);
 	table.insert(materials_from, rock);
 	table.insert(materials_from, gas);
 	table.insert(materials_from, metals);
-	
+
 	table.insert(materials_from, potions);
-	
+
 elseif biome == "Underground Jungle" then
 	table.insert(materials_from, poison);
 	table.insert(materials_from, plants);
 	table.insert(materials_from, organic);
-	
+
 	table.insert(materials_from, potions);
-	
+
 elseif biome == "The Vault"  then
 	table.insert(materials_from, gas);
 	table.insert(materials_from, organic);
@@ -72,12 +72,12 @@ elseif biome == "The Vault"  then
 	table.insert(materials_from, gas);
 	table.insert(materials_from, metals);
 	table.insert(materials_from, slime);
-	
-	
+
+
 	table.insert(materials_from, potions);
 elseif (biome == "Temple of the Art") or (biome == "Pyramid") then
 	table.insert(materials_from, brickwork);
-	
+
 	table.insert(materials_from, potions);
 elseif biome == "Desert" then
 	table.insert(materials_from, { probability = 1.0, name = "sand", materials = {"sand_surface"}});

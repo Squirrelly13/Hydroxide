@@ -7,7 +7,7 @@
 
 		<LuaComponent>
 		</LuaComponent>
-		
+
 		<LuaComponent>
 		</LuaComponent>
 
@@ -27,7 +27,7 @@
 			ui_name="$item_cc_runestone_crystal"
 			>
 		</AbilityComponent>
-	
+
 		<SpriteComponent
 			image_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_hand.png"
 			>
@@ -57,7 +57,7 @@
 			collide_with_grid="0"
 			>
 		</ParticleEmitterComponent>
-	
+
 		<LuaComponent
 			_tags="activate"
 			script_source_file="mods/Hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal_emitter.lua"

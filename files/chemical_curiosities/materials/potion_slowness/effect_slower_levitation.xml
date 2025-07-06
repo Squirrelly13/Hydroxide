@@ -6,9 +6,9 @@
 			randomize_position_inside_hitbox="1"  >
 		</SpriteParticleEmitterComponent>
 	</Base>
-	
+
 	<InheritTransformComponent>
-    </InheritTransformComponent>	
+    </InheritTransformComponent>
 
     <LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_heavy.lua"

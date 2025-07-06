@@ -11,7 +11,7 @@
 	  loop="0"
 	  >
     </MagicConvertMaterialComponent>
-	
+
 	<LifetimeComponent
 		lifetime="25"
 		>

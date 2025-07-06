@@ -24,7 +24,7 @@ function calculate_force_at(body_x, body_y)
 	-- local gravity_percent = ( distance_full - distance ) / distance_full
 	-- local gravity_percent = 8
 	local gravity_coeff = 196
-	
+
 	local fx = math.cos( direction ) * ( gravity_coeff * stainPercent )
 	local fy = -math.sin( direction ) * ( gravity_coeff * stainPercent )
 
@@ -33,7 +33,7 @@ end
 
 -- attract projectiles
 local entities = EntityGetInRadiusWithTag(x, y, distance_full, "projectile")
-for _,id in ipairs(entities) do	
+for _,id in ipairs(entities) do
 	local physicscomp = EntityGetFirstComponent(id, "PhysicsBody2Component") or EntityGetFirstComponent( id, "PhysicsBodyComponent")
 	if physicscomp == nil then -- velocity for physics bodies is done later
 		local px, py = EntityGetTransform( id )
@@ -43,7 +43,7 @@ for _,id in ipairs(entities) do
 			local fx, fy = calculate_force_at(px, py)
 			edit_component( id, "VelocityComponent", function(comp,vars)
 				local vel_x,vel_y = ComponentGetValue2( comp, "mVelocity")
-				
+
 				vel_x = vel_x + fx
 				vel_y = vel_y + fy
 
@@ -75,7 +75,7 @@ do
 	local dir_x = 0
 	local dir_y = float_range
 	dir_x, dir_y = vec_rotate(dir_x, dir_y, ProceduralRandomf(x, y + GameGetFrameNum(), -float_sensor_sector, float_sensor_sector))
-	
+
 	local did_hit,hit_x,hit_y = RaytracePlatforms( x, y, x + dir_x, y + dir_y )
 	if did_hit then
 		local dist = get_distance(x, y, hit_x, hit_y)

@@ -6,7 +6,7 @@
         entity_file="mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/magic_circle_emitter.xml" >
     </LoadEntitiesComponent>
 
-	
+
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/magic_circle.lua"
 		execute_every_n_frame="50"
@@ -14,4 +14,3 @@
 		>
 	</LuaComponent>
 </Entity>
-

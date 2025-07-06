@@ -6,7 +6,7 @@ table.insert(g_pixel_scene_01, {
 	background_file	= "",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_02, {--TODO change 0.9 to lower numebr if this works
 	prob			= 0.9,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/coalmine/moss_pit.png",

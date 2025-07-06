@@ -1,5 +1,5 @@
 <Entity>
-	
+
   	<ParticleEmitterComponent
 		emitted_material_name="fungi"
         lifetime_min="3"

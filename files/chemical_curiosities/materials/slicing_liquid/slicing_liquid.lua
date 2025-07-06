@@ -14,7 +14,7 @@ local length = Random(30,800)
 
 local vel_x = math.cos( angle ) * length
 local vel_y = 0 - math.sin( angle ) * length
-	
+
 
 
 shoot_projectile(player, "data/entities/projectiles/deck/disc_bullet.xml", pos_x, pos_y, vel_x, vel_y)

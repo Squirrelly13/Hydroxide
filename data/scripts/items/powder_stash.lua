@@ -6,7 +6,7 @@ ps.default_material = "sand"
 --t should be the table with probability values
 function random_from_weighted_table(t)
 	if #t == 0 then return nil end
-	
+
 	local weight_sum = 0.0
 	for _,it in ipairs(t) do
 		it.weight_min = weight_sum
@@ -148,11 +148,11 @@ function init( entity_id )
 	local total_capacity = tonumber( GlobalsGetValue( "EXTRA_POTION_CAPACITY_LEVEL", "1000" ) ) or 1000
 	if ( total_capacity > 1000 ) then
 		local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
-			
+
 		if ( comp ~= nil ) then
 			ComponentSetValue( comp, "barrel_size", total_capacity )
 		end
-		
+
 		EntityAddTag( entity_id, "extra_potion_capacity" )
 	end
 

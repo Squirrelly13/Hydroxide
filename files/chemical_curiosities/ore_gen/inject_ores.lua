@@ -29,7 +29,7 @@ ore_types = {
 	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
 	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
 	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
-	
+
 	--{	probability = 0.100, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 			},
 }
 
@@ -39,9 +39,9 @@ metals_1 = {
 	{	probability = 0.800, "metals_preskite1"	},
 	{	probability = 0.600, "metals_silver1"	},
 	{	probability = 1.000, "metals_brass1"	},
-	
+
 	{	probability = 0.400, "metals_shock1"	},
-	
+
 }
 
 metals_2 = {
@@ -51,7 +51,7 @@ metals_2 = {
 	{	probability = 0.700, "metals_silver2"	},
 	{	probability = 1.000, "metals_brass2"	},
 	{	probability = 0.500, "metals_shock2"	},
-	
+
 }
 
 ore_coalmines = {
@@ -85,10 +85,10 @@ ore_snowcave = {
 	{ 	probability = 0.700, "random_metals",	},
 	{ 	probability = 0.800, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic_ice.xml",		},
 	{ 	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
-	
+
 	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
 }
-	
+
 ore_snowcastle = {
 	{	probability = 0.900, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml" 		},
 	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
@@ -133,7 +133,7 @@ metals_vault_1 = {
 	{	probability = 1.000, "metals_silver1"	},
 	{	probability = 1.000, "metals_brass1"	},
 	{	probability = 1.000, "metals_shock1"	},
-	
+
 }
 
 metals_vault_2 = {
@@ -143,19 +143,19 @@ metals_vault_2 = {
 	{	probability = 1.000, "metals_silver2"	},
 	{	probability = 1.000, "metals_brass2"	},
 	{	probability = 1.000, "metals_gold"		},
-	
+
 	{	probability = 1.000, "metals_shock2"	},
 }
 
 ore_fungiforest = {
 	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},	
+	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
 	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
 }
 
 ore_crypt = {
 	--{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 			},
-	{	probability = 0.500, "random_metals"	},	
+	{	probability = 0.500, "random_metals"	},
 	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml",	},
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
 	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
@@ -163,7 +163,7 @@ ore_crypt = {
 
 ore_wizardcave = {
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},	
+	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
 	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml"		},
 	{	probability = 0.400, "random_metals"	},
 }
@@ -186,14 +186,14 @@ function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
 	local rnd = random_create(Random(1,10), Random(1,10) )
 	local oreType = tostring(pick_random_from_table_weighted( rnd, ore_list)[1])
 	--print ("oretype: " .. oreType)
-	
+
 	local ores = ""
-	
+
 	if (oreType == "random_metals") then
 
 		local metal1 = tostring(pick_random_from_table_weighted(rnd, metal_list_1)[1])
 		local metal2 = tostring(pick_random_from_table_weighted(rnd, metal_list_2)[1])
-		
+
 		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal1 .. ".xml"
 		--print("adding " .. ores .. " to " .. biome)
 		InjectOre(biome, ores)

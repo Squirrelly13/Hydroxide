@@ -82,7 +82,7 @@
       		audio_event_name="explosions/propane_tank" >
 		</config_explosion>
 	</ExplodeOnDamageComponent>
-	
+
 	<ExplodeOnDamageComponent
 		explode_on_death_percent="1"
 		explode_on_damage_percent="0.0"
@@ -118,5 +118,5 @@
 		event_name="materials/spray"
 		volume_autofade_speed="0.25" >
 	</AudioLoopComponent>
-	
+
 </Entity>

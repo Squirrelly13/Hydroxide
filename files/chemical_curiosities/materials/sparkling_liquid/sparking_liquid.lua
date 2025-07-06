@@ -27,7 +27,7 @@ local length = Random(600,1500)
 
 local vel_x = math.cos( angle ) * length
 local vel_y = 0 - math.sin( angle ) * length
-	
+
 
 shoot_projectile(player, "mods/Hydroxide/files/chemical_curiosities/materials/sparkling_liquid/sparkling_particle.xml", pos_x, pos_y, vel_x, vel_y)
 

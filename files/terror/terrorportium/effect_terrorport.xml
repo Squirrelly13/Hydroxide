@@ -4,7 +4,7 @@
 			randomize_position_inside_hitbox="1"  >
 		</SpriteParticleEmitterComponent>
 	</Base>
-	
+
 	<InheritTransformComponent>
     </InheritTransformComponent>
 

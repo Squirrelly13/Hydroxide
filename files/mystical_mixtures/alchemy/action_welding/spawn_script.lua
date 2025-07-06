@@ -22,16 +22,16 @@ local projectile_component_data = {
 
 		},
 		damage_by_type = {
-			
+
 		},
 	},
 
 	valid_objects = {
 		config_explosion = {
-			
+
 		},
 		damage_by_type = {
-			
+
 		},
 	}
 }
@@ -195,7 +195,7 @@ end
 		end
 	end
 	]]
-	
+
 
 
 	for k, v in ipairs(projectile_component)do
@@ -206,7 +206,7 @@ end
 		for objectName, _ in pairs(projectile_component_data.objects)do
 			for a, b in ipairs(projectile_component_data.objects[objectName])do
 				ComponentObjectSetValue2(v, objectName, b, projectile_component_data.objects[objectName][b])
-				
+
 			end
 		end
 	end

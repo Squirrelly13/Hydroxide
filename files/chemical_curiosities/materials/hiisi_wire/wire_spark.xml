@@ -21,7 +21,7 @@
 		is_emitting="1"
 		>
 	</ParticleEmitterComponent>
-	
+
 	<LifetimeComponent
 		lifetime="3"
 	/>

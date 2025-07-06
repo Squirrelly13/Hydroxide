@@ -119,14 +119,14 @@
 		is_emitting="1" >
 	</ParticleEmitterComponent>
 
-	
+
 
 	<LightComponent
 		_enabled="1"
 		radius="10" >
 	</LightComponent>
 
-	
+
 
 	<VariableStorageComponent
 		name="projectile_file"

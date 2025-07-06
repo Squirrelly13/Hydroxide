@@ -1,19 +1,19 @@
 <Entity>
 	<InheritTransformComponent />
-	
+
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_MORPHINE"
 		frames="99999"
 		>
 	</GameEffectComponent>
-	
+
 	<VariableStorageComponent
         name="trueHealth"
         value_float="4"
         >
     </VariableStorageComponent>
-	
+
 	<DrugEffectModifierComponent>
 		<fx_add
 			distortion_amount="0.2"
@@ -21,7 +21,7 @@
 			fractals_amount="0.1"
 		/>
 	</DrugEffectModifierComponent>
-	
+
 	<SpriteParticleEmitterComponent
         sprite_file="data/particles/heal_small.xml"
         lifetime="0.75"
@@ -48,22 +48,22 @@
         randomize_animation_speed_coeff.max="1.0"
         >
     </SpriteParticleEmitterComponent>
-	
+
 	<LuaComponent
     script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_start.lua"
     execute_every_n_frame="1"
     remove_after_executed="1"
 	></LuaComponent><!--trueHealth = hp-->
-	
+
 	<LuaComponent
 	script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_morphine.lua"
 	execute_every_n_frame="5"
 	></LuaComponent><!--trueHealth = trueHealth - (maxhp - hp); hp = maxhp; if trueHealth = 0 then die-->
-	
+
 	<LuaComponent
     script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_end.lua"
 	execute_every_n_frame="-1"
     execute_on_removed="1"
     ></LuaComponent><!--hp = trueHealth-->
-	
+
 </Entity>

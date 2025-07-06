@@ -11,8 +11,8 @@
         additive="1"
         emissive="0" >
     </SpriteComponent>
-	
-	
+
+
 	<ParticleEmitterComponent
 		emitted_material_name="cc_antimatter_gas"
 		gravity.y="0.0"
@@ -37,7 +37,7 @@
 		is_emitting="1" >
 	</ParticleEmitterComponent>
 
-	
+
 	<AudioComponent
       file="data/audio/Desktop/misc.bank"
       event_root="misc/orb_powder" >

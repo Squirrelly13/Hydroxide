@@ -18,7 +18,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="1"
-	
+
 	>
     <Graphics
 	is_grass="1"
@@ -30,7 +30,7 @@
 		</Ingestion>
 	</StatusEffects>
    </CellData>--> <!--  magic liquid specifically for creating a bloomery  -->
-	
+
    <CellData
     name="aa_hitself"
     ui_name="$mat_aa_hitself"
@@ -349,7 +349,7 @@
 	>
     <Graphics
 		color="ffCDC9BE" >
-		
+
     </Graphics>
   </CellData><!-- ASH -->
 
@@ -393,9 +393,9 @@
 	gfx_glow="150"
 	>
 	<Graphics
-		
+
 		color="A0F0FFE4" >
-		
+
     </Graphics>
   </CellData><!-- Potion Gas, a catalyst for making other potions. -->
 
@@ -425,7 +425,7 @@
 		>
     </Graphics>
   </CellData><!-- Solidified slime. unsure the use case but its neat -->
-	
+
  <CellData
 	name="aa_base_potion"
 	ui_name="$mat_aa_base_potion"
@@ -464,7 +464,7 @@
 		color="98F0FFE4"
 		>
     </Graphics>
-	
+
   </CellData><!-- Neutral potion, used in reactions probably -->
 
   <CellData
@@ -482,7 +482,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="2"
-	
+
 	>
 	<ParticleEffect
 		vel.y="-40"
@@ -905,7 +905,7 @@
 	autoignition_temperature="10"
 	fire_hp="500"
 	liquid_stains="1"
-	
+
 	>
 	<ParticleEffect
 		vel.y="-40"
@@ -951,7 +951,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="1"
-	
+
 	>
 	<ParticleEffect
 		vel.y="-40"
@@ -979,7 +979,7 @@
 			<StatusEffect type="AA_VOMIT_SPELLS_UNSTABLE" amount="0.10" />
 			</Ingestion>
     </StatusEffects>
-	
+
   </CellData><!-- Unstable Pandorium -->
 
   <CellData
@@ -1000,7 +1000,7 @@
 	autoignition_temperature="10"
 	fire_hp="500"
 	liquid_stains="1"
-	
+
 	>
 	<ParticleEffect
 		vel.y="-30"
@@ -1047,7 +1047,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="1"
-	
+
 	>
 	<ParticleEffect
 		vel.y="-40"
@@ -1070,7 +1070,7 @@
 		color="984C4E59"
 		>
     </Graphics>
-	
+
   </CellData><!-- POP ROCKS!!!! -->
 
     <CellData

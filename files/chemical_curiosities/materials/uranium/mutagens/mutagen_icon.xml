@@ -1,6 +1,6 @@
 <Entity name="radiationIcon">
 	<InheritTransformComponent />
-	
+
 	<UIIconComponent
 		name="Radiation Poisoning"
 		description="Exposure to radiation is causing problems!"
@@ -10,5 +10,5 @@
 		display_in_hud="0"
 		>
 	</UIIconComponent>
-	
+
 </Entity>

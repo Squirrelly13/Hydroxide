@@ -6,7 +6,7 @@ table.insert(g_pixel_scene_01, {
 	background_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/vault/hydroxidetank_background.png",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_02, {
 	prob			= 1.0,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/vault/lab3.png",
@@ -15,7 +15,7 @@ table.insert(g_pixel_scene_02, {
 	is_unique		= 0
 	});
 
-		
+
 table.insert(g_props, {
 	prob 		= 0.5,
 	min_count	= 1,

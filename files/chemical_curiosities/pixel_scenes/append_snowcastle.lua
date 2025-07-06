@@ -7,15 +7,15 @@ table.insert(g_pixel_scene_01, {
 	background_file	= "",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_01, {
 	prob			= 1.0,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/shaft2.png",
 	visual_file		= "",
 	background_file	= "",
 	is_unique		= 0
-	});	
-	
+	});
+
 table.insert(g_pixel_scene_02, {
 	prob			= 0.5,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/hungry_slime.png",
@@ -23,7 +23,7 @@ table.insert(g_pixel_scene_02, {
 	background_file	= "",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_pixel_scene_02, {
 	prob			= 0.5,
 	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/methane_room.png",
@@ -31,7 +31,7 @@ table.insert(g_pixel_scene_02, {
 	background_file	= "",
 	is_unique		= 0
 	});
-	
+
 table.insert(g_props, {
 	prob		= 0.4,
 	min_count	= 1,

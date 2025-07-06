@@ -14,7 +14,7 @@ local length = Random(30,60)
 
 local vel_x = math.cos( angle ) * length
 local vel_y = 0 - math.sin( angle ) * length
-	
+
 
 
 shoot_projectile(player, "data/entities/projectiles/deck/thunder_blast.xml", pos_x, pos_y, vel_x, vel_y)
