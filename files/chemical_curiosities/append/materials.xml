@@ -45,7 +45,6 @@
         liquid_gravity="0.6"
 		liquid_stains="1"
 	    cold_freezes_to_material="cc_ice_hydroxide_static"
-        on_fire_convert_to_material="creepy_liquid"
         burnable="1"
 	    generates_smoke="0"
 	    temperature_of_fire="40"
