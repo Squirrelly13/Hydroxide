@@ -6,8 +6,7 @@
 	<InheritTransformComponent/>
 
 	<GameEffectComponent
-		effect="CUSTOM"
-        custom_effect_id="CC_EDIT_WANDS_EVERYWHERE"
+		effect="EDIT_WANDS_EVERYWHERE"
 		frames="1200"
 		exclusivity_group="2003"
 	/>
