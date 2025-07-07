@@ -5,7 +5,7 @@
     <SpriteAnimatorComponent/>
 
 
-    <LifetimeComponent lifetime = -1/>
+    <LifetimeComponent lifetime = "-1"/>
 
 
 

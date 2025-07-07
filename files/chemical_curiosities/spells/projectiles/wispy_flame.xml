@@ -32,7 +32,6 @@
 		create_cell_probability="0"
 		hole_destroy_liquid="0"
 		hole_enabled="0"
-		hole_image=""
 		particle_effect="0"
 		damage_mortals="0"
 		physics_explosion_power.max="0"

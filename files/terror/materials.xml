@@ -23,7 +23,7 @@
 		draw_as_long="1"
 		friction="-3.429"
 		probability="0.0518"
-		--color="807fceeb"
+		color="807fceeb"
 	/>
         <StatusEffects>
             <Ingestion> <StatusEffect type="TERROR_TELEPORT" amount="0.3"/> </Ingestion>

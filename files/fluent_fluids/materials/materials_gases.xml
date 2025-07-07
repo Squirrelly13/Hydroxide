@@ -7,7 +7,6 @@
   	    tags="[gas],[vapour],[ff_magic_gas]"
 	    density="4.23"
 	    cell_type="gas"
-	    liquid_stains="1"
 	    liquid_stains_self="0"
 	    liquid_sprite_stains_status_threshold="0.3"
 	    wang_color="7ff9f898"
@@ -42,7 +41,7 @@
         ui_name="$$mat_ff_acceleratium_gas"
         tags="[gas],[vapour],[ff_magic_gas],[magic_faster]"
 	    wang_color="80c1dda5"
-        denstity="0.55"
+        density="0.55"
 	> <ParticleEffect
 		vel.y="17.14"
 		vel_random.min_y="-100"

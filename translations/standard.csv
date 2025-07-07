@@ -68,6 +68,7 @@ mat_aa_bloomium,Bloomium,Блумиум,Brotânio,,,,,,,,,,,
 mat_aa_bloomium_gas,Bloomium Spores,Споры Блумиума,Esporos brotânicos,,,,,,,,,,,
 mat_aa_divine_slime,Divine Slime,Божественная слизь,Gosma divina,,,,,,,,,,,
 mat_aa_divine_magma,Divine Magma,Божественная магма,Magma divina,,,,,,,,,,,
+mat_aa_shrinkium,Shrinkium,,,,,,,,,,,,,|NEED_RUSSIAN_TRANSLATION|NEED_PORTUGUESE_BRAZILIAN_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Spells!,
@@ -148,7 +149,7 @@ mat_cc_glittering_liquid,Glittering Liquid,Блестящая жидкость,L
 mat_cc_blasting_powder,Blasting Powder,Взрывчатый порох,Pó detonante,,,,,,,,,,,
 mat_cc_methane,Methane Gas,Метан,Metano,,,,,,,,,,,
 mat_cc_carbon_dioxide,Carbon Dioxide,Углекислый газ,Dióxido de carbono,,,,,,,,,,,
-mat_cc_ectospasm,Ectospasm,Трясун,Ectoespasmo,,,,,,,,,,name is pun based off the words Ectoplasm and Spasm,NEED_RUSSIAN_VERIFICATION
+mat_cc_ectospasm,Ectospasm,Трясун,Ectoespasmo,,,,,,,,,,name is pun based off the words Ectoplasm and Spasm,|NEED_RUSSIAN_VERIFICATION
 mat_cc_kindling,Kindling,Растопка,Faíscante,,,,,,,,,,,
 mat_cc_deceleratium,Deceleratium,Замедлятий,Desacelerácio,,,,,,,,,,like Decelerate (antithesis of Acceleratium),
 mat_cc_heftium,Heftium,Утяжелятий,Pesádio,,,,,,,,,,like Hefty (antithesis of Levitatium),

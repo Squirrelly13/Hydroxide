@@ -32,29 +32,27 @@
 	<!-- creeping slime -->
 	<Reaction probability="200"
 		input_cell1="aa_creeping_slime" 	input_cell2="[static]"				input_cell3="air"
-		output_cell1="aa_creeping_slime"	output_cell2="[static]" 	output_cell3="aa_creeping_slime"
-		blob_radius1="8"					blob_radius2="8" 					blob_radius3="8"
-		>
-	</Reaction>
+		output_cell1="aa_creeping_slime"	output_cell2="[static]" 	        output_cell3="aa_creeping_slime"
+		blob_radius1="8"					blob_radius2="8"/>                  <!-- blob_radius3 isnt a thing -->
 
 	<Reaction probability="200"
 		input_cell1="aa_creeping_slime" 		input_cell2="[solid]"		input_cell3="air"
 		output_cell1="aa_creeping_slime"		output_cell2="[solid]" 		output_cell3="aa_creeping_slime"
-		blob_radius1="8"		blob_radius2="8" 	blob_radius3="8"
+		blob_radius1="8"		blob_radius2="8"
 		>
 	</Reaction>
 
 	<Reaction probability="200"
 		input_cell1="aa_creeping_slime" 		input_cell2="[sand_ground]"		input_cell3="air"
 		output_cell1="aa_creeping_slime"		output_cell2="[sand_ground]" 	output_cell3="aa_creeping_slime"
-		blob_radius1="2"		blob_radius2="2" 	blob_radius3="2"
+		blob_radius1="2"		blob_radius2="2"
 		>
 	</Reaction><!-- creeping slime absorbs [sand_ground] materials while in contact with air -->
 
 	<Reaction probability="200"
 		input_cell1="aa_creeping_slime" 		input_cell2="[sand_metal]"		input_cell3="air"
 		output_cell1="aa_creeping_slime"		output_cell2="[sand_metal]" 		output_cell3="aa_creeping_slime"
-		blob_radius1="2"		blob_radius2="2" 	blob_radius3="2"
+		blob_radius1="2"		blob_radius2="2"
 		>
 	</Reaction><!-- creeping slime absorbs [sand_metal] materials while in contact with air -->
 
@@ -62,7 +60,7 @@
 	<Reaction probability="200"
 		input_cell1="aa_creeping_slime" 		input_cell2="[sand_other]"		input_cell3="air"
 		output_cell1="aa_creeping_slime"		output_cell2="[sand_other]" 	output_cell3="aa_creeping_slime"
-		blob_radius1="2"		blob_radius2="2" 	blob_radius3="2"
+		blob_radius1="2"		blob_radius2="2"
 		>
 	</Reaction><!-- creeping slime absorbs [sand_other] materials while in contact with air -->
 

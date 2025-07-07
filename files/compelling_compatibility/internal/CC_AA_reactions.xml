@@ -291,7 +291,7 @@
   <Reaction probability="70"
   input_cell1="aa_base_potion"	input_cell2="[meat]"						input_cell3="cc_radioactive_waste"
   output_cell1="smoke"					output_cell2="aa_hungry_slime_growing"	output_cell3="aa_soot"
-  blob_radius1="3"						blob_radius2="5"							blob_radius3="3"
+  blob_radius1="3"						blob_radius2="5"
   >
   </Reaction>
 

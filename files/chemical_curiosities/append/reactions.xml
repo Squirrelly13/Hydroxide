@@ -401,16 +401,12 @@
 	<Reaction probability="60"
 	input_cell1="cc_dormant_crystal"		input_cell2="[fire]"
 	output_cell1="air"				output_cell2="[fire]"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
-	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml"
 	>
 	</Reaction>
 
 	<Reaction probability="20"
 	input_cell1="cc_dormant_crystal"		input_cell2="smoke"
 	output_cell1="air"				output_cell2="smoke"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
-	entity="data/entities/particles/particle_explosion/main_swirly_pink.xml"
 	>
 	</Reaction>
 
@@ -822,7 +818,7 @@
 	<Reaction probability="23"
 	input_cell1="radioactive_liquid"	input_cell2="material_confusion"
 	output_cell1="alcohol"				output_cell2="acid_gas"
-	blob_radius_1="3"
+	blob_radius1="3"
 	>
 	</Reaction>
 

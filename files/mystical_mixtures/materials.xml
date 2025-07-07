@@ -263,7 +263,6 @@
 	burnable="0"
 	density="10"
 	cell_type="liquid"
-	wang_color="ff353923"
 	liquid_gravity="1.2"
 	liquid_sand="1"
 	liquid_static="1"

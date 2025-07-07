@@ -20,6 +20,7 @@ if (rocketCount <= 5) then
 	local vel_y = 0 - math.sin( angle ) * length
 
 	shoot_projectile( entity_id, "data/entities/projectiles/rocket_crystal_pink.xml", pos_x, pos_y, vel_x, vel_y, false )
+    EntityLoad("data/entities/particles/particle_explosion/main_swirly_pink.xml", pos_x, pos_y)
 
 end
 

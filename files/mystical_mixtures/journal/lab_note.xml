@@ -12,7 +12,6 @@
 
 	<ItemComponent
 		_tags="enabled_in_world"
-		max_child_items="0"
 		is_pickable="1"
 		is_equipable_forced="0"
 		ui_sprite="data/items_gfx/scroll.png"

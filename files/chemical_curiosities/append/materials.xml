@@ -45,6 +45,11 @@
         liquid_gravity="0.6"
 		liquid_stains="1"
 	    cold_freezes_to_material="cc_ice_hydroxide_static"
+        on_fire_convert_to_material="creepy_liquid"
+        burnable="1"
+	    generates_smoke="0"
+	    temperature_of_fire="40"
+	    autoignition_temperature="85"
     >
 	<Graphics texture_file="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/hydroxide.png"/>
         <StatusEffects>
@@ -1224,7 +1229,6 @@
 			lifetime.max="10.0"
 			gravity.y="0"
 			render_on_grid="1"
-			cosmetic_force_create="1"
 			draw_as_long="1"
 			airflow_force="0.8314"
 			airflow_scale="0.1371"
@@ -1259,7 +1263,6 @@
 			lifetime.max="10.0"
 			gravity.y="0"
 			render_on_grid="1"
-			cosmetic_force_create="1"
 			draw_as_long="1"
 			airflow_force="0.8314"
 			airflow_scale="0.1371"
@@ -1333,7 +1336,8 @@
 		liquid_gravity="1"
 		liquid_sand="0"
 		gfx_glow="255"
-		liquid_stains=".5"
+		liquid_stains="1"
+	    liquid_sprite_stain_shaken_drop_chance="5"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1360,7 +1364,8 @@
 		liquid_gravity="1"
 		liquid_sand="0"
 		gfx_glow="255"
-		liquid_stains=".4"
+		liquid_stains="1"
+	    liquid_sprite_stain_shaken_drop_chance="5"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1428,7 +1433,6 @@
 	generates_smoke="0"
 	liquid_gravity="2"
 	liquid_sand="1"
-	liquid_solid="1"
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="50"
@@ -1490,7 +1494,6 @@
 	generates_smoke="0"
 	liquid_gravity="2"
 	liquid_sand="1"
-	liquid_solid="1"
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="50"
@@ -1553,7 +1556,6 @@
 	generates_smoke="0"
 	liquid_gravity="2"
 	liquid_sand="1"
-	liquid_solid="1"
 	on_fire="0"
 	requires_oxygen="1"
 	temperature_of_fire="50"
