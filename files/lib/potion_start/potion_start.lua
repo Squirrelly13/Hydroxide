@@ -9,7 +9,6 @@ local FF = ModSettingGet("Hydroxide.FF_ENABLED")
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 local cc_starterpotions = {
-	{	probability = 3.50,		"cc_grease"},
 	{	probability = 3.00,		"cc_sparkling_liquid"},
 	{	probability = 2.50,		"cc_persistine"},
 	{	probability = 2.00,		"cc_dormant_crystal_molten"},
@@ -22,7 +21,6 @@ local cc_starterpotions = {
 
 local cc_magicpotions = {
 	{"cc_veilium"},
-	{"cc_explodePlayer"},
 	{"cc_metamorphine"},
 	{"cc_slicing_liquid"},
 	{"cc_glittering_liquid"},
@@ -36,13 +34,13 @@ local cc_one_in_millions = {
 }
 
 local cc_failpotions = {
-	{"cc_kindling"}
+	{"cc_grease"}
 }
 
 local cc_functions = {
 	function(outcome, r_value)
 		if (PS.CompareTables({PS.LOCAL.month, PS.LOCAL.day}, {7,4}) and Random(1, 5) == 5) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
-		elseif outcome == "acid" and Random(0,1) then return "cc_hydroxide"
+		elseif outcome == "acid" and Random(0,1) == 1 then return "cc_hydroxide"
 		end
 	end
 }
