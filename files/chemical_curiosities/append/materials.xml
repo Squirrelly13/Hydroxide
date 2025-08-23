@@ -3,6 +3,47 @@
 
 <!-- TODO make unstable metamorphine more procedural if possible -->
 
+<!--
+  <CellDataChild
+  	_parent="templerock_static"
+  	_inherit_reactions="1"
+  	name="templebrick_noedge_static" 
+	ui_name="TESTBRICK"
+	wang_color="ff786C44"
+	wang_noise_percent="0.33"
+	durability="14"
+	hp="1000000"
+	wang_curvature="0.5"
+    liquid_sand_never_box2d="1"
+	wang_noise_type="2"
+	audio_physics_material_wall="gravel"
+	audio_physics_material_solid="rock"
+	>
+	    <ParticleEffect
+	    	vel.y="-17.14"
+	    	vel_random.min_x="-11.71"
+	    	vel_random.max_x="11.71"
+	    	vel_random.min_y="-17.18"
+	    	vel_random.max_y="-2.8"
+	    	lifetime.min="0.3"
+	    	lifetime.max="2"
+	    	gravity.y="0"
+	    	render_on_grid="1"
+	    	airflow_force="0.8314"
+	    	airflow_scale="0.1371"
+	    	friction="0.0001"
+	    	probability="1"
+	    	count.min="1"
+	    	count.max="1"
+            color="fffa8f2c"
+	    />
+  	<Graphics
+		texture_file="mods/Hydroxide/files/old files/no clue what this stuff is!/barrier.png"
+		color="ff786C44" 
+		>
+    </Graphics>
+  </CellDataChild>
+-->
 
 <!--
 	<CellData
