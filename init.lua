@@ -158,7 +158,7 @@ if CC then
 
 	---- Items
 
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
+	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 
 
 	---- Enemies
@@ -195,7 +195,7 @@ if AA then
 
 	--		[Items]
 
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
 	if CC then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua") end
 	if MM then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua") end
 
@@ -214,7 +214,7 @@ end
 
 if MM then
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
-	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 end
 
 
@@ -252,6 +252,15 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 
 
+    dofile_once("data/scripts/item_spawnlists.lua")
+    dofile_once("data/scripts/biome_scripts.lua")
+
+    SetRandomSeed(222, 994)
+    local timer_start = GameGetRealWorldTimeSinceStarted()
+    for i = 1, 100000000, 1 do
+        spawn_from_list("potion_spawnlist", Random(-300, 300), Random(-300, 300))
+    end
+    print("FINISHED ================================== " .. GameGetRealWorldTimeSinceStarted() - timer_start)
 
 
 	print("CC init took " .. total_time .. " seconds")
