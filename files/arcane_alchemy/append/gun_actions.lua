@@ -5,8 +5,8 @@ local AA_spells = {
     {
         id                  = "AA_REPULTIUM_TRAIL",
         name                = "$action_repultium_trail",
-        author              = "$name_squirrelly",
-        mod                 = "$cc_branch_name_aa",
+        author              = "$cc_name_squirrelly",
+        origin              = "$cc_branch_name_aa",
         description         = "$action_desc_aa_repultium_trail",
         sprite              = "mods/Hydroxide/files/arcane_alchemy/spells/projectile_modifiers/repultium_trail.png",
         sprite_unidentified = "data/ui_gfx/gun_actions/oil_trail_unindentified.png",
@@ -24,8 +24,8 @@ local AA_spells = {
     {
         id          = "AA_ALCHEMY_NERF_DARTS",
         name        = "$action_aa_alchemy_nerf_darts",
-        author      = "$name_evaisa",
-        mod         = "$cc_branch_name_aa",
+        author      = "$cc_name_evaisa",
+        origin      = "$cc_branch_name_aa",
         description = "$action_desc_aa_alchemy_nerf_darts",
         sprite      = "mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/darts.png",
         type        = ACTION_TYPE_PROJECTILE,
@@ -44,8 +44,8 @@ local AA_spells = {
     {
         id          = "AA_HUNGRYSLIME_SHOT",
         name        = "$action_aa_hungryslime_shot",
-        author      = "$name_squirrelly",
-        mod         = "$cc_branch_name_aa",
+        author      = "$cc_name_squirrelly",
+        origin      = "$cc_branch_name_aa",
         description = "$action_desc_aa_hungryslime_shot",
         sprite      = "mods/Hydroxide/files/arcane_alchemy/spells/enemy_modifiers/hungering_shot.png",
         sprite_unidentified = "data/ui_gfx/gun_actions/electric_charge_unidentified.png",
@@ -64,8 +64,8 @@ local AA_spells = {
     {
         id                      = "AA_POTION_TO_GAS",
         name                    = "$action_aa_potion_to_gas",
-        author                  = "$name_squirrelly",
-        mod                     = "$cc_branch_name_aa",
+        author                  = "$cc_name_squirrelly",
+        origin                  = "$cc_branch_name_aa",
         description             = "$action_desc_aa_potion_to_gas",
         sprite                  = "mods/Hydroxide/files/arcane_alchemy/spells/material_enhancers/potion_to_gas.png",
         sprite_unidentified     = "data/ui_gfx/gun_actions/explosive_projectile_unidentified.png",
@@ -85,6 +85,8 @@ local AA_spells = {
     { --note to self, get rid of this and created custom gun implementation instead
         id                  = "AA_PANDORIUM_MODIFIER",
         name                = "You shouldn't be here!",
+        author              = "$cc_name_userk",
+        origin              = "$cc_branch_name_aa",
         description         = "This spell is used to set some stuff for Chemical Curiosties AA Chaotic Pandorium, this should not show up in normal gameplay!!",
         sprite              = "",
         type                = ACTION_TYPE_MODIFIER,

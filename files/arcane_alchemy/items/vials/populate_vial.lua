@@ -1,4 +1,4 @@
-materials = {
+vial_materials = {
     {
         material="aa_base_potion",
         weight=1,
@@ -119,9 +119,9 @@ end
 
 function init( entity_id )
 	local x,y = EntityGetTransform( entity_id )
-	SetRandomSeed( x, y ) -- so that all the potions will be the same in every position with the same seed
+	SetRandomSeed(x-418, y+22) -- so that all the potions will be the same in every position with the same seed
 
-    local potion_material = get_weighted_random(materials)
+    local potion_material = get_weighted_random(vial_materials)
 
 	local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
 
@@ -135,8 +135,6 @@ function init( entity_id )
 	end
 
     AddMaterialInventoryMaterial( entity_id, potion_material, 200 )
-
-
 end
 
 

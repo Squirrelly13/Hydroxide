@@ -3,6 +3,37 @@
 
 <!-- TODO make unstable metamorphine more procedural if possible -->
 
+
+
+  <CellData
+	name="gold"
+	ui_name="$mat_gold"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[gold],[solid],[earth]"
+	burnable="0"
+	density="9"
+	cell_type="liquid"
+	wang_color="ffebcd01"
+	gfx_glow="127"
+	generates_smoke="0"
+	liquid_gravity="3"
+	liquid_sand="1"
+	liquid_static="1"
+	durability="12"
+	on_fire="0"
+	requires_oxygen="1"
+	temperature_of_fire="10"
+	solid_friction="0.7"
+	hp="8000" 
+	electrical_conductivity="1"
+	show_in_creative_mode="1"
+	>
+    <Graphics
+	texture_file="data/materials_gfx/gold.png"
+	color="ffb89e58" >
+    </Graphics>
+  </CellData>
+
+
 <!--
   <CellDataChild
   	_parent="templerock_static"
@@ -948,7 +979,7 @@
 			<StatusEffect type="CC_METASTASIZIUM"/>
 		</Stains>
 		<Ingestion>
-			<StatusEffect type="CC_METASTASIZIUM" amount="0.5"/>
+			<StatusEffect type="CC_METASTASIZIUM" amount="0.3"/>
 		</Ingestion>
 	</StatusEffects>
    </CellData>

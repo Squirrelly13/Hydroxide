@@ -38,6 +38,7 @@ local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
 dofile_once("data/fixnoita/fix.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
 
@@ -46,8 +47,6 @@ local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
 local FF = ModSettingGet("Hydroxide.FF_ENABLED")
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
-
-local catastrophicMaterials = {creepy_liquid = true, monster_powder_test = true, totallyBogusMaterial = true} --Create Catastrophic Materials list
 
 
 
@@ -74,15 +73,7 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 
---allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
-function SetBloodMaterial(xml_path, material)
-	material = material or "air"
-	local xml = ModDoesFileExist(xml_path) and nxml.parse(ModTextFileGetContent(xml_path))
-	if xml ~= nil then
-		xml:first_of("Base"):first_of("DamageModelComponent").attr.blood_material = material
-		ModTextFileSetContent(xml_path, tostring(xml))
-	end
-end
+
 
 
 
@@ -93,9 +84,13 @@ end
 -----//// TESTING!!!
 
 
----- print entire function:
---local test_values = {}
---for index, value in ipairs(test_values) do print(index .. " = " .. tostring(value)) end
+
+
+local disabled_materials = {
+    CC = {
+
+    }
+}
 
 
 
@@ -168,8 +163,8 @@ if CC then
 
 	---- Enemies
 
-	SetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
-	SetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
+	FileSetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
+	FileSetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
 
 end
@@ -342,11 +337,6 @@ end
 --  Conjurer
 
 if ModIsEnabled("raksa") then --DUE TO THE EXISTENCE OF CONJURER-REBORN, CONJURER SUPPORT WILL NO LONGER BE SUPPORTED NOR EXTENDED, EXISTING SUPPORT WILL REMAIN FOR NOW
-
-	print("ATTEMPTING TO ADD CONSTR PASTE TO CATASTROPHIC MATERIALS")
-	-- Adds Construction Paste to the Catastrophic materials list
-	catastrophicMaterials.construction_paste = true
-
 	-- Materials Append
 	  ModLuaFileAppend(
 		"mods/raksa/files/scripts/lists/material_categories.lua",
@@ -494,58 +484,62 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 
 
 
-	print(tostring(catastrophicMaterials.construction_paste))
+    local catastrophicMaterials = {
+        creepy_liquid = true,
+        monster_powder_test = true,
+        totallyBogusMaterial = true,
+        construction_paste = true,
 
-	-- this code adds tags to preexisting materials, its good for compatibility--
-	local xml = nxml.parse(ModTextFileGetContent("data/materials.xml"))
+    } --Create Catastrophic Materials list
 
+    local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
+
+	-- this code adds tags to preexisting materials, its good for compatibility
 	local files = ModMaterialFilesGet()
 	for _, file in ipairs(files) do --add modded materials
-		if file ~= "data/materials.xml" then
-			for _, comp in ipairs(nxml.parse(ModTextFileGetContent(file)).children) do
-				xml.children[#xml.children+1] = comp
-			end
-		end
+        for xml in nxml.edit_file(file) do
+	        for elem in xml:each_child() do
+	        	if catastrophicMaterials[elem.attr.name] then
+	        		elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
+	        		print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+	        	end
+
+	        	if elem.attr.name == "rock_static" then
+	        		rock_tags = elem.attr.tags
+	                elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
+	        	end
+
+                local rock_materials = {
+                    --vanilla:
+                    rock_static_glow = true,
+                    rock_static_purple = true,
+                    rock_static_noedge = true,
+                    rock_static_trip_secret = true,
+                    rock_static_trip_secret2 = true,
+                    rock_static_intro = true,
+                    rock_static_intro_breakable = true,
+                    rock_static_grey = true,
+                    rock_static_wet = true,
+                    snowrock_static = true,
+                    rock_box2d_nohit_hard = true,
+                    rock_box2d_nohit = true,
+                    rock_box2d = true,
+                    lavarock_static = true,
+                }
+	            if CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
+	                elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
+	        	elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour
+	        		elem.attr.tags = rock_tags
+	            end
+	        end
+        end
 	end
 
-	local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla tags
-	for elem in xml:each_child() do
-		--print(("CC: Checking " .. elem.attr.name) or "")
-		if catastrophicMaterials[elem.attr.name] then
-			elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
-			print("CC: Added tag [catastrophic] to " .. elem.attr.name)
-		end
-
-		if elem.attr.name == "rock_static" then
-			rock_tags = elem.attr.tags
-	        elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
-		end
-	    if CC and elem.attr.name == "rock_static_glow"
-		or elem.attr.name == "rock_static_purple"
-		or elem.attr.name == "rock_static_noedge"
-		or elem.attr.name == "rock_static_trip_secret"
-		or elem.attr.name == "rock_static_trip_secret2"
-		or elem.attr.name == "rock_static_intro"
-		or elem.attr.name == "rock_static_intro_breakable"
-		or elem.attr.name == "rock_static_grey"
-		or elem.attr.name == "rock_static_wet"
-		or elem.attr.name == "snowrock_static"
-		or elem.attr.name == "rock_box2d_nohit_hard"
-		or elem.attr.name == "rock_box2d_nohit"
-		or elem.attr.name == "rock_box2d"
-		or elem.attr.name == "rock_box2d_nohit"
-		or elem.attr.name == "lavarock_static" then
-	        elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
-		elseif elem.attr.name == "coal_static" then
-			elem.attr.tags = rock_tags
-	    end
-	end
-
-	ModTextFileSetContent("data/materials.xml", tostring(xml))
 
 
-	local x = ProceduralRandom(0,0)
-	print( "===================================== random " .. tostring(x) )
+
+	--local x = ProceduralRandom(0,0)
+	--print( "===================================== random " .. tostring(x) )
 
 	if ModSettingGet("Hydroxide.CC_ORES") then
 
@@ -562,10 +556,7 @@ end
 
 
 function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
-	if CC then
-		--ConvertMaterialEverywhere(CellFactory_GetType("cc_uranium"), CellFactory_GetType("cc_radioactive_waste"))
-		--ConvertMaterialEverywhere(CellFactory_GetType("cc_dull_fungus"), CellFactory_GetType("cc_nullium"))
-	end
+	
 end
 
 
