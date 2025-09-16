@@ -11,7 +11,7 @@ local chaotic = {
     GLIMMERS = {},
 
     data = {
-        gimmer_chance = month == 6 and .6 or .1,
+        gimmer_chance = month == 6 and .6 or .05,
     },
 }
 

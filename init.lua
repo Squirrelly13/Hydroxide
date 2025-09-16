@@ -258,7 +258,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
     SetRandomSeed(222, 994)
     local timer_start = GameGetRealWorldTimeSinceStarted()
     for i = 1, 100000000, 1 do
-        spawn_from_list("potion_spawnlist", Random(-300, 300), Random(-300, 300))
+        --spawn_from_list("potion_spawnlist", Random(-300, 300), Random(-300, 300))
     end
     print("FINISHED ================================== " .. GameGetRealWorldTimeSinceStarted() - timer_start)
 
