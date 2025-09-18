@@ -93,24 +93,29 @@
 
     <!-- Pandoria -->
 
-    <Reaction probability = "2"
+    <Reaction probability = ".7"
         input_cell1="aa_pandorium" input_cell2="air"
         output_cell1="air" output_cell2="air"
     >
-    <ExplosionConfig
-        camera_shake="0"
-        damage="0"
-        cell_explosion_power="5"
-        cell_explosion_damage_required="3000"
-        cell_explosion_radius_min="1"
-        cell_explosion_radius_max="1"
-        cell_explosion_probability="1.1"
-        explosion_sprite="data/particles/explosion_012.xml"
-        load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml"
-        ray_energy="1"
-        >
-    </ExplosionConfig>
+        <ExplosionConfig
+            camera_shake="0"
+            damage="0"
+            cell_explosion_power="5"
+            cell_explosion_damage_required="3000"
+            cell_explosion_radius_min="1"
+            cell_explosion_radius_max="1"
+            cell_explosion_probability="1.1"
+            explosion_sprite="data/particles/explosion_012.xml"
+            load_this_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.xml"
+            ray_energy="1"
+            >
+        </ExplosionConfig>
     </Reaction><!-- Pandorium casts spells -->
+    
+    <Reaction probability = "1.8"
+        input_cell1="aa_pandorium" input_cell2="air"
+        output_cell1="air" output_cell2="air"
+    />
 
 
     <Reaction probability = "0.9"
@@ -131,9 +136,14 @@
         >
     </ExplosionConfig>
     </Reaction><!-- unstable pandorium casts spells -->
+    
+    <Reaction probability = "1.8"
+        input_cell1="aa_unstable_pandorium" input_cell2="air"
+        output_cell1="air" output_cell2="air"
+    />
 
 
-    <Reaction probability = "2"
+    <Reaction probability = ".3"
         input_cell1="aa_chaotic_pandorium" input_cell2="air"
         output_cell1="air" output_cell2="air"
     >
@@ -151,7 +161,7 @@
     />
     </Reaction><!-- chaotic pandorium casts spells -->
 
-    <Reaction probability = "15"
+    <Reaction probability = "2.7"
         input_cell1="aa_chaotic_pandorium" input_cell2="air"
         output_cell1="air" output_cell2="air"
     /><!-- chaotic pandorium does nothing -->
@@ -460,7 +470,5 @@
     output_cell1="magic_liquid_random_polymorph"    output_cell2="magic_liquid_random_polymorph"
     >
     </Reaction>
-
-
 
 </Materials>
