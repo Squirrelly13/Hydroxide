@@ -67,8 +67,6 @@ local function make_timed(fn, name)
 
 
 
-dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
-ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
 
 
@@ -82,6 +80,7 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 -----//// TESTING!!!
+
 
 
 
@@ -158,7 +157,7 @@ if CC then
 
 	---- Items
 
-	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua" ) --adds items to pedestals
 
 
 	---- Enemies
@@ -195,7 +194,7 @@ if AA then
 
 	--		[Items]
 
-	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua" ) --adds items to pedestals
 	if CC then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua") end
 	if MM then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua") end
 
@@ -213,8 +212,10 @@ end
 -- 		[Mystical Mixtures]
 
 if MM then
+    dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+    ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
-	--ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
+	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 end
 
 
@@ -252,15 +253,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 
 
 
-    dofile_once("data/scripts/item_spawnlists.lua")
-    dofile_once("data/scripts/biome_scripts.lua")
 
-    SetRandomSeed(222, 994)
-    local timer_start = GameGetRealWorldTimeSinceStarted()
-    for i = 1, 100000000, 1 do
-        --spawn_from_list("potion_spawnlist", Random(-300, 300), Random(-300, 300))
-    end
-    print("FINISHED ================================== " .. GameGetRealWorldTimeSinceStarted() - timer_start)
 
 
 	print("CC init took " .. total_time .. " seconds")
@@ -491,8 +484,6 @@ ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 
-
-
     local catastrophicMaterials = {
         creepy_liquid = true,
         monster_powder_test = true,
@@ -559,15 +550,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 
 	end
-
-
 end
-
-
-function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
-	
-end
-
 
 OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time

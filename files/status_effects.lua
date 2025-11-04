@@ -6,8 +6,6 @@ local MM = ModSettingGet("Hydroxide.MM_ENABLED")
 local FF = ModSettingGet("Hydroxide.FF_ENABLED")
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
-local table = {}
-
 local CC_effects = {
 	{
 		id="CC_INGESTION_METHANE",
