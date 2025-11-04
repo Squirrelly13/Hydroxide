@@ -2,8 +2,8 @@
 
 local cc_glimmers = {
     {
-        name = "$mat_cc_hydroxide",
-        desc = "$action_desc_cc_ge_glimmer_hydroxide",
+        name = "$action_name_cc_glimmer_hydroxide",
+        desc = "$action_desc_action_name_cc_glimmer_hydroxide",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_hydroxide.png",
         materials = {"cc_hydroxide"},
         cast_delay = 15,
@@ -15,8 +15,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_slicing_liquid",
-        desc = "$action_desc_cc_ge_glimmer_slicing_liquid",
+        name = "$action_name_cc_glimmer_slicing_liquid",
+        desc = "$action_desc_action_name_cc_glimmer_slicing_liquid",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_slicing_liquid.png",
         materials = {"cc_slicing_liquid"},
         cast_delay = 15,
@@ -25,8 +25,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_glittering_liquid",
-        desc = "$action_desc_cc_ge_glimmer_glittering_liquid",
+        name = "$action_name_cc_glimmer_glittering_liquid",
+        desc = "$action_desc_action_name_cc_glimmer_glittering_liquid",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_glittering_liquid2.png",
         materials = {"cc_glittering_liquid"},
         cast_delay = 15,
@@ -35,8 +35,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_explodePlayer",
-        desc = "$action_desc_cc_ge_glimmer_explodePlayer",
+        name = "$action_name_cc_glimmer_explodePlayer",
+        desc = "$action_desc_action_name_cc_glimmer_explodePlayer",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_agitine.png",
         materials = {"cc_explodePlayer"},
         cast_delay = 15,
@@ -45,8 +45,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_nullium",
-        desc = "$action_desc_cc_ge_glimmer_nullium",
+        name = "$action_name_cc_glimmer_nullium",
+        desc = "$action_desc_action_name_cc_glimmer_nullium",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_nullium.png",
         materials = {"cc_nullium"},
         cast_delay = 15,
@@ -56,8 +56,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_dormant_crystal",
-        desc = "$action_desc_cc_ge_glimmer_dormant_crystal",
+        name = "$action_name_cc_glimmer_dormant_crystal",
+        desc = "$action_desc_action_name_cc_glimmer_dormant_crystal",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_dormant_crystal1.png",
         materials = {"cc_dormant_crystal"},
         cast_delay = 15,
@@ -66,8 +66,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_uranium",
-        desc = "$action_desc_cc_ge_glimmer_uranium",
+        name = "$action_name_cc_glimmer_uranium",
+        desc = "$action_desc_action_name_cc_glimmer_uranium",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_uranium.png",
         materials = {"cc_uranium"},
         cast_delay = 8,
@@ -77,8 +77,8 @@ local cc_glimmers = {
         mod_prefix = "CC"
     },
     {
-        name = "$mat_cc_antimatter_liquid",
-        desc = "$action_desc_cc_ge_glimmer_antimatter_liquid",
+        name = "$action_name_cc_glimmer_antimatter_liquid",
+        desc = "$action_desc_action_name_cc_glimmer_antimatter_liquid",
         image = "mods/Hydroxide/files/compelling_compatibility/GlimmersExpanded/icons/colour_anti-matter.png",
         materials = {"cc_antimatter_liquid"},
         cast_delay = 9,

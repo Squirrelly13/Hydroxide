@@ -100,10 +100,24 @@ function RandomFromTable(t)
         total_weight =  total_weight + entry.probability
     end
 
-    local rnd = Random(0, total_weight)
+    local rnd = Randomf(0, total_weight)
     for _, entry in ipairs(t) do
         if rnd <= entry.probability then
             return entry
         else rnd = rnd - entry.probability end
+    end
+    return t[#t]
+end
+
+function dump(o) --handy func i stole that prints an entire table
+    if type(o) == 'table' then
+       local s = '{ '
+       for k,v in pairs(o) do
+          if type(k) ~= 'number' then k = '"'..k..'"' end
+          s = s .. '['..k..'] = ' .. dump(v) .. ','
+       end
+       return s .. '} '
+    else
+       return tostring(o)
     end
 end

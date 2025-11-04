@@ -1,6 +1,6 @@
 <Entity>
 
-  	<ParticleEmitterComponent
+ 	<ParticleEmitterComponent
 		emitted_material_name="fungi"
 		gravity.y="0.0"
 		lifetime_min="1"

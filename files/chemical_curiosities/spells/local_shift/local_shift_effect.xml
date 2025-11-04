@@ -11,13 +11,11 @@
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua"
 		execute_every_n_frame="40"
 		remove_after_executed="1"
-		>
-	</LuaComponent>
+	/>
 
 	<LifetimeComponent
 		lifetime="350"
 		randomize_lifetime.min="-50"
 		randomize_lifetime.max="50"
-		>
-	</LifetimeComponent>
+	/>
 </Entity>

@@ -1,11 +1,13 @@
-Key,,English,Русский,Português (Brasil),Español (España),Deutsch,Français (France),Italiano,Polski,简体中文,日本語,한국어,,
-,,en,ru,pt-br,es-es,de,fr-fr,it,pl,zh-cn,jp,ko,NOTES – use \n for newline,max length
+current_language,Türkçe,English,,,,,,,,,,,,
+,tr-tr,en,,,,,,,,,,,NOTES – use \n for newline,max length
 current_language,,English,Русский,Português [Brasil],Español,Deutsch,Francais,Italiano,Polski,简体中文,日本語,한국어,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,           CREDITS:,
 ,,,,,,,,,,,,,       Russian Translations by Alex(GoD),
 ,,,,,,,,,,,,,       Brazilian Portuguese Translations by Absent Friend (Emília),
+,,,,,,,,,,,,,       Turkish Translations by Dylan Rhodes,
+,,,,,,,,,,,,,       Chinese Translations by SingularityNeko,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
@@ -16,10 +18,9 @@ current_language,,English,Русский,Português [Brasil],Español,Deutsch,Fr
 ,,,,,,,,,,,,,   Please ping me on the Noita Discord; Chemical Curiosities discord or just dm me @UserK on Discord if you have any queries,
 ,,,,,,,,,,,,,   I would be more than happy to assist in any additions or modifications to the translations and will try my best to answer any questions you may have,
 ,,,,,,,,,,,,,,
-,,,,,,,,,,,,,"   Just let me know and I'll help any way I can (btw Turkish translators the second english field in TLs is there as reference, you dont need to translate it o/)",
+,,,,,,,,,,,,,   Just let me know and I'll help any way I can,
+,,,,,,,,,,,,,"  (btw Turkish translators, the second english field in TLs is there as reference. you dont need to translate that part o/)",
 ,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,"   wait a minute, you *can* put commas in these notes! :devastated:",
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
@@ -224,14 +225,6 @@ action_cc_fire_to_grease,Ateş Yoğunlaştırıcı,Fire Enhancer,,,,,,,,,,,,
 action_desc_cc_fire_to_grease,Çevredeki ateşlerin şiddetle alevlenmesini sağlar,Causes nearby fires to erupt violently,,,,,,,,,,,,
 action_cc_gunpowder_cloud,Barut Bulutu,Gunpowder Cloud,,,,,,,,,,,,
 action_desc_cc_gunpowder_cloud,???,???,,,,,,,,,,,,
-action_desc_cc_ge_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,Gives a projectile a corrosive sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,Gives a projectile a silvery sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,Gives a projectile a glittering sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,Gives a projectile a degenerative sparkly trail,,,,,,,,,,,degenerate as in the opposite of regenerate,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,Gives a projectile a volatile sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_uranium,Gives a projectile a radioactive sparkly trail,Gives a projectile a radioactive sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
-action_desc_cc_ge_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,Gives a projectile an annihilative sparkly trail,,,,,,,,,,,,|NEED_TURKISH_TRANSLATION
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Status Effects!,
@@ -435,6 +428,36 @@ status_desc_terror_vomit_spells,Bu berbat bir fikirdi!\nIzdırap.,This was an aw
 ,,,,,,,,,,,,,,
 item_runestone_terror,Kaos Runik Taşı,Runestone of Terror,,,,,,,,,,,,
 itemdesc_runestone_terror,Bunu yere düşürmenin berbat bir fikir olacağını düşünüyorsun...,You feel as though dropping this would be a terrible idea...,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,   Misc!,
+,,,,,,,,,,,,,,
+animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандориум,Pandório aterrorizante,,,,,,惊悚潘多拉魔药,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,       Compatibility,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,   Glimmers Expanded!,
+,,,,,,,,,,,,,,
+action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,Hydroxide Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,Gives a projectile a corrosive sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,Slicing Liquid Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,Gives a projectile a silvery sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,Glittering Liquid Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,Gives a projectile a glittering sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_explodePlayer,Agitine Glimmer,Agitine Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_nullium,Nullium Glimmer,Nullium Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,,,,,degenerate as in the opposite of regenerate,|TR_missing
+action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,Dormant Crystal Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,Gives a projectile a volatile sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_uranium,Uranium Glimmer,Uranium Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_uranium,Gives a projectile a radioactive sparkly trail,Gives a projectile a radioactive sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_antimatter_liquid,Anti-Matter Glimmer,Anti-Matter Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,Gives a projectile an annihilative sparkly trail,,,,,,,,,,,,|TR_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,

@@ -153,6 +153,7 @@ if CC then
 	---- Spells
 
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
+    ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua")
 
 
 	---- Items
@@ -236,6 +237,7 @@ end
 ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
+
 	if not GameHasFlagRun("cc_onplayerspawned") then
 		if CC then
 			EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
