@@ -1,4 +1,4 @@
-dofile_once("data/scripts/lib/utilities.lua")
+dofile_once("mods/Hydroxide/lib/squirreltilities.lua")
 
 local null_materials = dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
@@ -58,7 +58,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
     elseif not DEBUG_NULLSHIFT_ALL then
         local target
         for i = 1, 10 do
-            target = pick_random_from_table_weighted(rnd, null_materials)
+            target = RandomFromTable(null_materials)
             if target == nil then print_error("target null shift table is nil on attempt ["..i.."], retrying...") return end
             if target.condition and not target:condition() then return end --check if there's a condition function and runs it if so
             break

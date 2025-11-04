@@ -57,7 +57,8 @@ function spawn_warderobe ( x, y )
 end
 
 function spawn_potion ( x, y )
-    if(Random(0, 100) < 30)then
+    SetRandomSeed(x, y)
+    if(Random(1, 100) <= 35)then
         EntityLoad( "mods/Hydroxide/files/arcane_alchemy/items/vials/vial.xml", x, y - 3 )
     else
         EntityLoad( "data/entities/items/pickup/potion.xml", x + 3, y - 3 )

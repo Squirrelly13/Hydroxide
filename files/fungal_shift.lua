@@ -10,12 +10,12 @@ local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 function AddMaterialsFrom(addition)
 	for i=1,#addition do
-		materials_from[#materials_to+1] = addition[i]
+		materials_from[#MaterialsTo+1] = addition[i]
 	end
 end
 function AddMaterialsTo(addition)
 	for i=1,#addition do
-		materials_to[#materials_to+1] = { probability = addition[i], material = i}
+		MaterialsTo[#MaterialsTo+1] = { probability = addition[i], material = i}
 	end
 end
 

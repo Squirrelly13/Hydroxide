@@ -28,18 +28,18 @@ end
 
 ---Function that compares two tables to see if they are identical. Can be used to easily check between current date and desired date using tables. By Nahtan
 function ps.CompareTables(a, b)
-    if type(a) ~= type(b) then
-        return false
-    end
-    if type(a) == "table" then
-        for k, v in pairs(a) do
-            if not ps.CompareTables(v, b[k]) then
-                return false
-            end
-        end
-        return true
-    end
-    return a == b
+	if type(a) ~= type(b) then
+		return false
+	end
+	if type(a) == "table" then
+		for k, v in pairs(a) do
+			if not ps.CompareTables(v, b[k]) then
+				return false
+			end
+		end
+		return true
+	end
+	return a == b
 end --awesomium function grabbed from nathan (i was incompetent so he made the function for me)
 
 ---This function just corrects the tables that lack probability fields. Probability will default to 10 for all material tables
@@ -73,7 +73,7 @@ ps.magicpotions = {
 	{	"magic_liquid_movement_faster"	},
 }
 
-	-- 1/10,000,100 technically, lmao.
+-- 1/10,000,100 technically, lmao.
 ps.one_in_millions = { -- "key" must be from 1 to 100000
 	{	key = 666, 	"urine"},
 	{	key = 79, 	"gold"}
@@ -101,12 +101,23 @@ ps.post_functions = {
 }
 
 
-
+local function random_from_table(t)
+	local total_weight = 0
+	for _, value in ipairs(t) do
+		total_weight = total_weight + value.probability
+	end
+	local rnd = Randomf(0, total_weight)
+	for _, value in ipairs(t) do
+		if rnd < value.probability then return value
+		else rnd = rnd - value.probability end
+	end
+	return t[#t] --Randomf() appears to very very rarely land outside the bounds set, this is the most efficient way to resolve this
+end
 
 ---Function that chooses the potion material
 ---@diagnostic disable
 function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are available as inputs in case you want to run with forced RNG. data lets you pass extra data if you want
-    outcome = outcome or potion_material
+	outcome = outcome or potion_material
 	r_value = r_value or Random( 1, 100 )
 	r_value2 = r_value2 or Random( 0, 100000 )
 	data = data and {
@@ -122,12 +133,12 @@ function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are
 
 	local rnd = random_create(r_value, r_value2)
 	if( r_value <= 70 ) then --70% chance for staterpotions
-		outcome = pick_random_from_table_weighted(rnd, ps.starterpotions)[1]
+		outcome = random_from_table(ps.starterpotions)[1]
 	elseif( r_value <= 99 ) then --29% chance for magicpotions
 		r_value = Random( 0, 100 )
-		outcome = pick_random_from_table_weighted(rnd, ps.magicpotions)[1]
+		outcome = random_from_table(ps.magicpotions)[1]
 	else --1% chance to try for the one_in_millions
-		outcome = pick_random_from_table_weighted(rnd, ps.failpotions)[1]
+		outcome = random_from_table(ps.failpotions)[1]
 		for k,v in pairs(ps.one_in_millions) do
 			if r_value2 == v.key then outcome = v[1] end --loop over one_in_millions
 		end
@@ -143,7 +154,7 @@ function ps.potion_a_materials(outcome, r_value, r_value2, data) --Variables are
 		outcome = ps.potion_functions[outcome](data) or outcome
 	end
 
-    return tostring(outcome)
+	return tostring(outcome)
 end
 
 ---@diagnostic disable
@@ -173,16 +184,16 @@ end
 
 --Handy script for mass-generating potion outcomes and displaying them neatly in the console
 function ps.TEST(num)
-	local _table = {}
-	_table.TOTAL = num --add total display
+	local raw_table = {}
+	raw_table.TOTAL = num --add total display
 
 	for i = 1, num do --this is the most intensive part of the function at high values, so i return the current% to show current progress through running the test
-		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage when it can be displayed without decimals
+		if i % (num/100) == 0 then print(i/(num/100).."%") end --prints current percentage at every 1% milestone
 		local result = ps.potion_a_materials() --simulate potion start
-		_table[result] = (_table[result] or 0) + 1 --add string to table, give it +1 every time its returned
+		raw_table[result] = (raw_table[result] or 0) + 1 --add string to table, give it +1 every time its returned
 	end
 	local t = {}
-	for k, v in pairs(_table) do
+	for k, v in pairs(raw_table) do
 	  table.insert(t, { key = k, value = v }) --sort function grabbed from Ribbit and Horscht after very painstakingly futile attempts to explain this to me
 	end
 	table.sort(t, function(a, b)
@@ -213,21 +224,21 @@ function ps.TEST(num)
 	end
 
 	for i, j in ipairs(t) do --print table
-		local material_name = j.key
-		local material_amount = j.value .. ','
-		local material_percent = string.format(("%.Xf"):gsub("X", tostring(longest_percent)) ,j.value/(num/100)) .. '%'
-		local material_percent_rounded = string.format("%.1f", math.floor(((j.value/(num/100)) + 0.05) * 10) * .1) .. "%"
+		local mat_name = j.key
+		local mat_amount = j.value .. ','
+		local mat_percent = string.format(("%.Xf"):gsub("X", tostring(longest_percent)) ,j.value/(num/100)) .. '%'
+		local mat_percent_rounded = string.format("%.1f", math.floor(((j.value/(num/100)) + 0.05) * 10) * .1) .. "%"
 
-		material_name = add_gap(material_name, longest_name) --add gap after material name
+		mat_name = add_gap(mat_name, longest_name) --add gap after material name
 
-		material_amount = add_gap(material_amount, longest_amount, true) --add gap before material amount
-		material_amount = add_gap(material_amount, 15 - longest_amount) --add gap after material amount
+		mat_amount = add_gap(mat_amount, longest_amount, true) --add gap before material amount
+		mat_amount = add_gap(mat_amount, 15 - longest_amount) --add gap after material amount
 
-		material_percent = add_gap(material_percent, longest_percent + 6, true) --add gap before material percentage
-		material_percent = add_gap(material_percent, 20 - longest_percent) --add gap after material percentage
+		mat_percent = add_gap(mat_percent, longest_percent + 6, true) --add gap before material percentage
+		mat_percent = add_gap(mat_percent, 20 - longest_percent) --add gap after material percentage
 
-		material_percent_rounded = add_gap(material_percent_rounded, 13, true)
+		mat_percent_rounded = add_gap(mat_percent_rounded, 13, true)
 
-		print(material_name .. " = " .. material_amount .. material_percent .. material_percent_rounded .. "  " .. j.key)-- MATERIAL	= AMOUNT,   AMOUNT%				ROUNDED%  MATERIAL
+		print(mat_name .. " = " .. mat_amount .. mat_percent .. mat_percent_rounded .. "  " .. j.key)-- MATERIAL	= AMOUNT,   AMOUNT%				ROUNDED%  MATERIAL
 	end
 end

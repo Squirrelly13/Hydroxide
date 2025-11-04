@@ -1,12 +1,15 @@
 -- this is mostly a mish-mash of code i built and copied using Anvil of Destiny, as well as looking at Copi's Things Turret Spell to get an initial idea on how this stuff works
 -- assuming this works, it is thanks to the work of Copi and Horscht, and the multiple other people who helped me on the noitacord while i stumble my way through LUA for the first time -K
 
+if tonumber(GlobalsGetValue("AA_last_cpand_cast", "0")) == GameGetFrameNum() then return end
+GlobalsSetValue("AA_last_cpand_cast", tostring(GameGetFrameNum())) --this should limit casts to one per frame
+
 local spell_table = dofile_once("mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/spells_table_compiler.lua")
 
 
 local entity_id = GetUpdatedEntityID()
 local x, y = EntityGetTransform(entity_id)
-SetRandomSeed(GameGetFrameNum() + x, y)
+SetRandomSeed(GameGetFrameNum() + x, entity_id + y)
 
 
 ---- get wand entity ----
@@ -17,9 +20,11 @@ local gun = EntityGetAllChildren(inventory_comp)[1]
 
 ---- Build Wand ----
 
-local spell_formula = ""
+--local spell_formula = ""
 
-local function add_spell(spellType, position)
+local spell_position = 0
+local function add_spell(spellType)
+    spell_position = spell_position + 1
 
     local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
     local spell = EntityCreateNew()
@@ -28,24 +33,41 @@ local function add_spell(spellType, position)
     EntityAddComponent2(spell, "ItemActionComponent", {action_id = spell_id})
 
     local item_comp = EntityAddComponent2(spell, "ItemComponent")
-    ComponentSetValue2(item_comp, "inventory_slot", position, 1)
+    ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
 
     --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
     --spell_formula = spell_formula .. spell_id .. ","
 end
 
+local function add_cpand_modifier()
+    spell_position = spell_position + 1
 
-for i=1, Random(3, 10) do --positions 1-10
-    add_spell("MODIFIERS", i)
+    local spell = EntityCreateNew()
+    EntityAddChild(gun, spell)
+
+    EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
+
+    local item_comp = EntityAddComponent2(spell, "ItemComponent")
+    ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
 end
 
-if Random() <= spell_table.data.gimmer_chance then add_spell("GLIMMERS", 13) add_spell("GLIMMERS", 29) end --positions 13 and 29
-add_spell("PROJECTILES", 15) --position 15
+local glimmer
+if Random() <= spell_table.data.gimmer_chance then glimmer = true end
 
-for i=1, Random(4, 12) do --positions 16-27
-    add_spell("MODIFIERS", i + 15)
+for i=1, Random(3, 10) do
+    add_spell("MODIFIERS")
 end
-add_spell("STATIC_PROJECTILES", 30) --position 30
+
+if glimmer then add_spell("GLIMMERS") end
+add_cpand_modifier()
+add_spell("PROJECTILES")
+
+for i=1, Random(1, 10) do
+    add_spell("MODIFIERS")
+end
+if glimmer then add_spell("GLIMMERS") end
+add_cpand_modifier()
+add_spell("STATIC_PROJECTILES")
 
 
 ---- Prepare and Cast Wand ----

@@ -67,8 +67,6 @@ local function make_timed(fn, name)
 
 
 
-dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
-ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 
 
 
@@ -82,6 +80,7 @@ ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs
 
 
 -----//// TESTING!!!
+
 
 
 
@@ -154,6 +153,7 @@ if CC then
 	---- Spells
 
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
+    ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua")
 
 
 	---- Items
@@ -213,6 +213,8 @@ end
 -- 		[Mystical Mixtures]
 
 if MM then
+    dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+    ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 end
@@ -235,6 +237,7 @@ end
 ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua")
 
 function OnPlayerSpawned( player_entity ) -- This runs when player entity has been created
+
 	if not GameHasFlagRun("cc_onplayerspawned") then
 		if CC then
 			EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
@@ -249,6 +252,7 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 		-- debugging stuff end
 		GameAddFlagRun("cc_onplayerspawned")
 	end
+
 
 
 
@@ -482,8 +486,6 @@ ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 
-
-
     local catastrophicMaterials = {
         creepy_liquid = true,
         monster_powder_test = true,
@@ -550,15 +552,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 		end
 
 	end
-
-
 end
-
-
-function OnWorldInitialized() -- This is called once the game world is initialized. Doesn't ensure any world chunks actually exist. Use OnPlayerSpawned to ensure the chunks around player have been loaded or created.
-	
-end
-
 
 OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time

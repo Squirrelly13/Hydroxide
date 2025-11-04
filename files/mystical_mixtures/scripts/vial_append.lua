@@ -1,19 +1,15 @@
 local MM_materials = {
     {
         material="mm_bingus",
-        weight=0.6,
-    },
-    {
-        material="mm_bingus_wetfood",
         weight=0.3,
     },
     {
         material="mm_alchemical_solvent",
-        weight=.3,
+        weight=.7,
     },
     {
         material="mm_alchemical_base",
-        weight=.3,
+        weight=1.1,
     },
 }
 

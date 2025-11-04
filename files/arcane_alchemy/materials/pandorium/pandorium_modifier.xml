@@ -3,7 +3,6 @@
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandorium_modifier.lua"
         execute_every_n_frame = "2"
         execute_on_added="1"
+        remove_after_executed="1"
     />
-
-    <LifetimeComponent lifetime="3"/>
 </Entity>
