@@ -1,12 +1,22 @@
 There are a few places we support compatibility!!
 
 # VIALS
-append [mods/Hydroxide/files/arcane_alchemy/items/vials/vial_populate.lua] with a script that add your material to the global table "vial_materials"
+append [mods/Hydroxide/files/arcane_alchemy/items/vials/vial_populate.lua] with a script that add your material to the global table `VialMaterials`
 like so:
 ```lua
-table.insert(vial_materials, {
+table.insert(VialMaterials, {
     material = "supercool_modded_material",
-    weight = .8 --we support decimal values for weight!
+    probability = .8 --we support decimal values for weight!
+    amount = 200 --optional value, 200 is the default
+    func = function(self, entityid, data)
+        --self is passed, so we can modify the outcome like so:
+        local materials = {"water", "slime", "slime_2"}
+        self.material = materials[Random(1,#materials)]
+        self.amount = ModSettingGet("mymod.x_vial_amount")
+
+        --if you `return true` at the end of the custom function, it will not populate the vial
+        --this is in case you wish to substitute the process with your own
+    end
 })
 ```
 

@@ -287,7 +287,7 @@ function spawn_from_list(target_list, x, y)
 
     local total_weight = 0
     for _, entry in ipairs(spawn_list) do
-        total_weight =  total_weight + entry.probability
+        total_weight = total_weight + entry.probability
     end
     local target = {}
     local rnd

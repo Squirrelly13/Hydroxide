@@ -1,5 +1,6 @@
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/perk_compiler.lua")
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/uranium/RAD_ENUMS.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 local entity_id = GetUpdatedEntityID()
 local owner = EntityGetRootEntity(entity_id)
@@ -72,24 +73,6 @@ end
 --[[
 local stage = ComponentGetValue2(radstagecomp, "value_int")
 local blessed = ComponentGetValue2(radcountcomp, "value_bool")--]]
-
-
-local function get_weighted_random(table)
-    local total_weight = 0
-    for i, v in ipairs(table) do
-        total_weight = total_weight + v.probability
-    end
-    local rnd = Random(0, total_weight)
-    for i, v in ipairs(table) do
-        rnd = rnd - v.probability
-        if rnd <= 0 then
-            return v.perk
-        end
-    end
-end
-
-
-
 
 
 
@@ -176,7 +159,7 @@ function AddPerk(isMutant, count)
 
 
 	for i = 1, count do
-		local _perk = get_weighted_random(perklist)
+		local _perk = RandomFromTable(perklist).perk
 		print("granting perk " .. _perk .. " to " .. EntityGetName(owner))
 		perk_pickup( nil, owner, _perk, false, false, true )
 	end

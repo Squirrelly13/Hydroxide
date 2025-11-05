@@ -97,7 +97,7 @@ end
 function RandomFromTable(t)
     local total_weight = 0
     for _, entry in ipairs(t) do
-        total_weight =  total_weight + entry.probability
+        total_weight = total_weight + entry.probability
     end
 
     local rnd = Randomf(0, total_weight)

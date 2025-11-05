@@ -1,74 +1,76 @@
-vial_materials = {
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
+
+PrefabVials = {}
+
+VialMaterials = {
     {
         material="aa_base_potion",
-        weight=1,
+        probability=1,
     },
     {
         material="aa_arborium",
-        weight=.7,
+        probability=.7,
     },
     {
         material="aa_catalyst",
-        weight=.5,
+        probability=.5,
     },
     {
         material="aa_hungry_slime",
-        weight=1,
+        probability=1,
     },
     {
         material="aa_creeping_slime",
-        weight=.4,
+        probability=.4,
     },
     {
         material="aa_pandorium",
-        weight=.8,
+        probability=.8,
     },
     {
         material="aa_unstable_pandorium",
-        weight=.3,
+        probability=.3,
     },
     {
         material="aa_chaotic_pandorium",
-        weight=.5,
+        probability=.5,
     },
     {
         material="aa_cloning_solution",
-        weight=.6,
+        probability=.6,
     },
 }
 
 
-function get_weighted_random(table)
-    local total_weight = 0
-    for i, v in ipairs(table) do
-        total_weight = total_weight + v.weight
-    end
-    local rnd = Randomf(0, total_weight)
-    for i, v in ipairs(table) do
-        rnd = rnd - v.weight
-        if rnd <= 0 then
-            return v.material
-        end
-    end
-    return table[#table].material
-end
-
-function init( entity_id )
-	local x,y = EntityGetTransform( entity_id )
+function init(entity_id)
+	local x,y = EntityGetTransform(entity_id)
 	SetRandomSeed(x-418, y+22) -- so that all the potions will be the same in every position with the same seed
 
-    local potion_material = get_weighted_random(vial_materials)
+    local material
+    local amount = 200
+    local target
 
-	local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
-
-	if( components ~= nil ) then
-		for key,comp_id in pairs(components) do
+	local varcomps = EntityGetComponent( entity_id, "VariableStorageComponent" )
+	if( varcomps ~= nil ) then
+		for key,comp_id in ipairs(varcomps) do
 			local var_name = ComponentGetValue2( comp_id, "name" )
 			if( var_name == "potion_material") then
-				potion_material = ComponentGetValue2( comp_id, "value_string" )
+				local vstring = ComponentGetValue2( comp_id, "value_string" )
+                if PrefabVials[vstring] then target = PrefabVials[vstring]
+                else
+                    material = vstring
+                    amount = ComponentGetValue2(comp_id, "value_int") or amount
+                end
 			end
 		end
 	end
 
-    AddMaterialInventoryMaterial( entity_id, potion_material, 200 )
+    if not material then
+        target = target or RandomFromTable(VialMaterials)
+        if target.func then if target:func(entity_id, {amount = amount}) then return end end
+        material = target.material
+        amount = target.amount or amount
+    end
+
+    AddMaterialInventoryMaterial(entity_id, material, amount)
 end
