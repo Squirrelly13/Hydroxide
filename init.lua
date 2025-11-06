@@ -403,6 +403,23 @@ if ModIsEnabled("GlimmersExpanded") then
 end
 
 
+--  Apotheosis
+if ModIsEnabled("apotheosis") then
+    if AA then
+        for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
+            ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
+                :gsub("\"oil\"", "\"oil\", \"aa_oil_splitting\", \"aa_light_oil\", \"aa_heavy_oil\""))
+        end
+    end
+    if CC then
+        for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
+            ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
+                :gsub("\"oil\"", "\"oil\", \"cc_grease\""))
+        end
+    end
+end
+
+
 
 
 
