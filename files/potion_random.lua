@@ -48,7 +48,7 @@ init = function( entity_id )
             EntityAddTag( entity_id, "extra_potion_capacity" )
         end
 
-		if(potion_material == "aa_pandorium" or potion_material == "aa_unstable_pandorium")then
+		if(potion_material == "aa_chaotic_pandorium" or potion_material == "aa_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
 
 			if ( comp1 ~= nil ) then
