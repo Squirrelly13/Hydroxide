@@ -559,7 +559,7 @@
 
 	<Reaction probability="25"
 	input_cell1="cc_nullium"			input_cell2="[fungus]"
-	output_cell1="cc_nullium"		output_cell2="smoke"
+	output_cell1="cc_nullium"		output_cell2="cc_dull_fungus"
 	>
 	</Reaction>
 
@@ -621,20 +621,6 @@
 	blob_radius2="3"
 	>
 	</Reaction> <!--de-magics HM stone-->
-
-	<Reaction probability="3"
-	input_cell1="cc_nullium"			input_cell2="wizardstone"
-	output_cell1="cc_uranium"			output_cell2="cc_antimatter_liquid"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
-	>
-	</Reaction>
-
-	<Reaction probability="100"
-	input_cell1="cc_nullium"			input_cell2="wizardstone"
-	output_cell1="cc_nullium"			output_cell2="wizardstone"
-	entity="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation.xml"
-	>
-	</Reaction>
 
 
   	<Reaction probability="3"
