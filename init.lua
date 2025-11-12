@@ -144,7 +144,7 @@ if CC then
 	---- Spells
 
 	ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/chemical_curiosities/append/gun_actions.lua" )
-    ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua")
+	ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua")
 
 
 	---- Items
@@ -204,8 +204,8 @@ end
 -- 		[Mystical Mixtures]
 
 if MM then
-    dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
-    ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
+	dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
+	ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 	ModMaterialsFileAdd( "mods/Hydroxide/files/mystical_mixtures/materials.xml" )
 	ModLuaFileAppend( "data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua" ) --adds items to pedestals
 end
@@ -244,14 +244,14 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 		-- debugging stuff end
 	end
 
-    if AA and ModIsEnabled("arcane_alchemy") then --warning message in-case AA is enabled twice
-        GamePrint("(CC) Arcane Alchemy (Mod) and Arcane Alchemy (Chemical Curiosities) are both enabled, this is unadvised!")
-        GamePrint("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
-        GamePrint("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
-        print("(CC) Arcane Alchemy (Mod) and Arcane Alchemy (Chemical Curiosities) are both enabled, this is unadvised!")
-        print("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
-        print("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
-    end
+	if AA and ModIsEnabled("arcane_alchemy") then --warning message in-case AA is enabled twice
+		GamePrint("(CC) Arcane Alchemy (Mod) and Arcane Alchemy (Chemical Curiosities) are both enabled, this is unadvised!")
+		GamePrint("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
+		GamePrint("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
+		print("(CC) Arcane Alchemy (Mod) and Arcane Alchemy (Chemical Curiosities) are both enabled, this is unadvised!")
+		print("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
+		print("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
+	end
 
 
 
@@ -311,13 +311,13 @@ end
 
 		end
 	end
-]]            --experimental bloomium stuff
+]]			--experimental bloomium stuff
 
 
 
 
 
---  	[Compelling Compatibility]       --
+--  	[Compelling Compatibility]	   --
 
 
 --  [Arcane Alchemy] x [Chemical Curiosities]
@@ -402,19 +402,19 @@ end
 
 
 --  Apotheosis
-if ModIsEnabled("apotheosis") then
-    if AA then
-        for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
-            ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
-                :gsub("\"oil\"", "\"oil\", \"aa_oil_splitting\", \"aa_light_oil\", \"aa_heavy_oil\""))
-        end
-    end
-    if CC then
-        for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
-            ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
-                :gsub("\"oil\"", "\"oil\", \"cc_grease\""))
-        end
-    end
+if ModIsEnabled("apotheosis") or ModIsEnabled("Apotheosis") then
+	if AA then
+		for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
+			ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
+				:gsub("\"oil\"", "\"oil\", \"aa_oil_splitting\", \"aa_light_oil\", \"aa_heavy_oil\""))
+		end
+	end
+	if CC then
+		for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
+			ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
+				:gsub("\"oil\"", "\"oil\", \"cc_grease\""))
+		end
+	end
 end
 
 
@@ -471,7 +471,7 @@ end
 
 local target = "mods/Hydroxide/translations/standard.csv"
 if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
-    target = "mods/Hydroxide/translations/turkish.csv"
+	target = "mods/Hydroxide/translations/turkish.csv"
 end
 register_localizations(target)
 
@@ -501,55 +501,55 @@ ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/
 
 function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
 
-    local catastrophicMaterials = {
-        creepy_liquid = true,
-        monster_powder_test = true,
-        totallyBogusMaterial = true,
-        construction_paste = true,
+	local catastrophicMaterials = {
+		creepy_liquid = true,
+		monster_powder_test = true,
+		totallyBogusMaterial = true,
+		construction_paste = true,
 
-    } --Create Catastrophic Materials list
+	} --Create Catastrophic Materials list
 
-    local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
+	local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
 
 	-- this code adds tags to preexisting materials, its good for compatibility
 	local files = ModMaterialFilesGet()
 	for _, file in ipairs(files) do --add modded materials
-        for xml in nxml.edit_file(file) do
-	        for elem in xml:each_child() do
-	        	if catastrophicMaterials[elem.attr.name] then
-	        		elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
-	        		print("CC: Added tag [catastrophic] to " .. elem.attr.name)
-	        	end
+		for xml in nxml.edit_file(file) do
+			for elem in xml:each_child() do
+				if catastrophicMaterials[elem.attr.name] then
+					elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
+					print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+				end
 
-	        	if elem.attr.name == "rock_static" then
-	        		rock_tags = elem.attr.tags
-	                elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
-	        	end
+				if elem.attr.name == "rock_static" then
+					rock_tags = elem.attr.tags
+					elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
+				end
 
-                local rock_materials = {
-                    --vanilla:
-                    rock_static_glow = true,
-                    rock_static_purple = true,
-                    rock_static_noedge = true,
-                    rock_static_trip_secret = true,
-                    rock_static_trip_secret2 = true,
-                    rock_static_intro = true,
-                    rock_static_intro_breakable = true,
-                    rock_static_grey = true,
-                    rock_static_wet = true,
-                    snowrock_static = true,
-                    rock_box2d_nohit_hard = true,
-                    rock_box2d_nohit = true,
-                    rock_box2d = true,
-                    lavarock_static = true,
-                }
-	            if CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
-	                elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
-	        	elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour
-	        		elem.attr.tags = rock_tags
-	            end
-	        end
-        end
+				local rock_materials = {
+					--vanilla:
+					rock_static_glow = true,
+					rock_static_purple = true,
+					rock_static_noedge = true,
+					rock_static_trip_secret = true,
+					rock_static_trip_secret2 = true,
+					rock_static_intro = true,
+					rock_static_intro_breakable = true,
+					rock_static_grey = true,
+					rock_static_wet = true,
+					snowrock_static = true,
+					rock_box2d_nohit_hard = true,
+					rock_box2d_nohit = true,
+					rock_box2d = true,
+					lavarock_static = true,
+				}
+				if CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
+					elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
+				elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour
+					elem.attr.tags = rock_tags
+				end
+			end
+		end
 	end
 
 
@@ -627,5 +627,5 @@ print("////////////// Hydroxide mod init done! //////////////") -- why so many s
 
 		end
 	end
-]]            --experimental bloomium stuff
+]]			--experimental bloomium stuff
 
