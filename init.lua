@@ -84,15 +84,6 @@ local function make_timed(fn, name)
 
 
 
-
-local disabled_materials = {
-    CC = {
-
-    }
-}
-
-
-
 -----////
 
 
@@ -382,7 +373,7 @@ end
 --	Copi's Things
 
 if ModIsEnabled("copis_things") then
-	dofile_once("mods/Hydroxide/files/compelling_compatibility/copis_things/random_material_append.lua")
+	ModLuaFileAppend("mods/copis_things/files/scripts/projectiles/material_random.lua", "mods/Hydroxide/files/compelling_compatibility/copis_things/random_material_append.lua")
 end --copi's chemical curiosity compatibility combo
 
 

@@ -17,58 +17,58 @@ end
 
 --Acquires the designated entity's damage model and returns the material damage of the requested material
 function EntityGetDamageFromMaterial(entity, material)
-    local damage_model_component = EntityGetFirstComponentIncludingDisabled(entity, "DamageModelComponent")
-    if damage_model_component then
-        local materials_that_damage = ComponentGetValue2(damage_model_component, "materials_that_damage")
-        materials_that_damage = stringsplit(materials_that_damage, ",")
+	local damage_model_component = EntityGetFirstComponentIncludingDisabled(entity, "DamageModelComponent")
+	if damage_model_component then
+		local materials_that_damage = ComponentGetValue2(damage_model_component, "materials_that_damage")
+		materials_that_damage = stringsplit(materials_that_damage, ",")
 
-        local materials_how_much_damage = ComponentGetValue2(damage_model_component, "materials_how_much_damage")
-        materials_how_much_damage = stringsplit(materials_how_much_damage, ",")
+		local materials_how_much_damage = ComponentGetValue2(damage_model_component, "materials_how_much_damage")
+		materials_how_much_damage = stringsplit(materials_how_much_damage, ",")
 
-        if material then --if requested material, return damage for that material
-            for i, v in ipairs(materials_that_damage) do
-                if (materials_that_damage[i] == material) then
-                    return tonumber(materials_how_much_damage[i])
-                end
-            end
-        else --if material field blank, return full table of material damage
-            local material_damage_table = {}
-            for key, value in pairs(materials_that_damage) do
-                material_damage_table[value] = materials_how_much_damage[key]
-            end
-            return material_damage_table
-        end
-    end
-    return nil
+		if material then --if requested material, return damage for that material
+			for i, v in ipairs(materials_that_damage) do
+				if (materials_that_damage[i] == material) then
+					return tonumber(materials_how_much_damage[i])
+				end
+			end
+		else --if material field blank, return full table of material damage
+			local material_damage_table = {}
+			for key, value in pairs(materials_that_damage) do
+				material_damage_table[value] = materials_how_much_damage[key]
+			end
+			return material_damage_table
+		end
+	end
+	return nil
 end
 
 --Clones the material damage value of a designated template material to be applied to a target material
 function EntityMimicMaterialDamage(target, target_material, template_material, just_once)
-    if target == 0 then print("No Entity to mimic damage for") return end
-    local template_strength = EntityGetDamageFromMaterial(target, template_material)
-    if template_strength ~= nil then
-        EntitySetDamageFromMaterial(target, target_material, template_strength)
-    end
+	if target == 0 then print("No Entity to mimic damage for") return end
+	local template_strength = EntityGetDamageFromMaterial(target, template_material)
+	if template_strength ~= nil then
+		EntitySetDamageFromMaterial(target, target_material, template_strength)
+	end
 end
 
 --Edits an entity's XML file to mimic a material damage value for a different material
 function FileMimicMaterialDamage(target, target_material, template_material)
-    local xml = ModDoesFileExist(target) and nxml.parse(ModTextFileGetContent(target))
-    if xml == nil then return end
+	local xml = ModDoesFileExist(target) and nxml.parse(ModTextFileGetContent(target))
+	if xml == nil then return end
 
-    local template_strength = EntityGetDamageFromMaterial(target, template_material)
-    if (template_strength ~= nil) then
-        EntitySetDamageFromMaterial(target, target_material, template_strength)
-    end
+	local template_strength = EntityGetDamageFromMaterial(target, template_material)
+	if (template_strength ~= nil) then
+		EntitySetDamageFromMaterial(target, target_material, template_strength)
+	end
 end
 
 --allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
 function FileSetBloodMaterial(xml_path, material)
-    local xml = ModDoesFileExist(xml_path) and nxml.parse(ModTextFileGetContent(xml_path))
-    if xml ~= nil then
-        xml:first_of("Base"):first_of("DamageModelComponent").attr.blood_material = material or "air"
-        ModTextFileSetContent(xml_path, tostring(xml))
-    end
+	local xml = ModDoesFileExist(xml_path) and nxml.parse(ModTextFileGetContent(xml_path))
+	if xml ~= nil then
+		xml:first_of("Base"):first_of("DamageModelComponent").attr.blood_material = material or "air"
+		ModTextFileSetContent(xml_path, tostring(xml))
+	end
 end
 
 
@@ -76,48 +76,48 @@ end
 ---@param radius number
 ---@param materials_input string[]
 function LocalShift(radius, materials_input, output, x, y)
-    local shift_entity = EntityCreateNew("CC_shifting_guy")
-    EntitySetTransform(shift_entity, x, y)
-    for _, material in ipairs(materials_input)do
-        EntityAddComponent2(shift_entity, "MagicConvertMaterialComponent", {
-            radius = radius,
-            from_material = CellFactory_GetType(material),
-            to_material = CellFactory_GetType(output),
-            kill_when_finished = true,
-            is_circle = true,
-            steps_per_frame = 256,
-        })
-        EntityAddComponent2(shift_entity, "LifetimeComponent", {
-            lifetime = 5,
-        })
-    end
+	local shift_entity = EntityCreateNew("CC_shifting_guy")
+	EntitySetTransform(shift_entity, x, y)
+	for _, material in ipairs(materials_input)do
+		EntityAddComponent2(shift_entity, "MagicConvertMaterialComponent", {
+			radius = radius,
+			from_material = CellFactory_GetType(material),
+			to_material = CellFactory_GetType(output),
+			kill_when_finished = true,
+			is_circle = true,
+			steps_per_frame = 256,
+		})
+		EntityAddComponent2(shift_entity, "LifetimeComponent", {
+			lifetime = 5,
+		})
+	end
 end
 --a modified version of a function by Evaisa
 
 function RandomFromTable(t)
-    local total_weight = 0
-    for _, entry in ipairs(t) do
-        total_weight = total_weight + entry.probability
-    end
+	local total_weight = 0
+	for _, entry in ipairs(t) do
+		total_weight = total_weight + entry.probability
+	end
 
-    local rnd = Randomf(0, total_weight)
-    for _, entry in ipairs(t) do
-        if rnd <= entry.probability then
-            return entry
-        else rnd = rnd - entry.probability end
-    end
-    return t[#t]
+	local rnd = Randomf(0, total_weight)
+	for _, entry in ipairs(t) do
+		if rnd <= entry.probability then
+			return entry
+		else rnd = rnd - entry.probability end
+	end
+	return t[#t]
 end
 
 function dump(o) --handy func i stole that prints an entire table
-    if type(o) == 'table' then
-       local s = '{ '
-       for k,v in pairs(o) do
-          if type(k) ~= 'number' then k = '"'..k..'"' end
-          s = s .. '['..k..'] = ' .. dump(v) .. ','
-       end
-       return s .. '} '
-    else
-       return tostring(o)
-    end
+	if type(o) == 'table' then
+		local s = '{ '
+		for k,v in pairs(o) do
+			if type(k) ~= 'number' then k = '"'..k..'"' end
+			s = s .. '['..k..'] = ' .. dump(v) .. ','
+		end
+		return s .. '} '
+	else
+		return tostring(o)
+	end
 end
