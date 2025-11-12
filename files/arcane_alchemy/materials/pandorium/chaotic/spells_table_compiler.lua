@@ -1,4 +1,4 @@
-dofile("data/scripts/gun/gun.lua")
+dofile_once("data/scripts/gun/gun.lua")
 
 local year, month, day, hour, minute, second = GameGetDateAndTimeLocal()
 

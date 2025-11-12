@@ -156,7 +156,7 @@ mat_cc_heftium,Heftium,Утяжелятий,Pesádio,,,,,,沉重魔药,,,,like H
 mat_cc_stillium,Stillium,Застыватий,Imóvio,,,,,,静止魔药,,,,like Stillness (antithesis of Hastium),
 mat_cc_metamorphine,Metamorphine,Метаморфин,Metamorfina,,,,,,质变魔药,,,,'Metamorph' as in like 'Metamorphosis' or to transform,
 mat_cc_unstable_metamorphine,Unstable Metamorphine,Нестабильный метаморфин,Metamorfina instável,,,,,,不稳质变魔药,,,,,
-mat_cc_explodePlayer,Agitine,Агитин,Agitínio,,,,,,激发魔药,,,,As in to 'Agitate',
+mat_cc_explode_player,Agitine,Агитин,Agitínio,,,,,,激发魔药,,,,As in to 'Agitate',
 mat_cc_alchemy_powder,Alchemy Powder,Алхимический порошок,Pó de alquimia,,,,,,炼金粉末,,,,,
 mat_cc_metastasizium,Metastasizium,Метастазий,Metastisísio,,,,,,扩散魔药,,,,like 'Metastasis' or similar to a cancer in its growth,
 mat_cc_nullium,Nullium,Нуллиум,Núlio,,,,,,虚无魔药,,,,like 'nullify',

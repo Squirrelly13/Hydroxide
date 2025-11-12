@@ -6,7 +6,7 @@ table.insert(g_pixel_scene_01, {
 	visual_file		= "data/biome_impl/liquidcave/container_01_visual.png",
 	background_file	= "",
 	is_unique		= 0,
-	color_material = { ["fff0bbee"] = {"cc_hydroxide", "cc_explodePlayer", "cc_veilium", "cc_sparkling_liquid", "cc_slicing_liquid", "cc_glittering_liquid", "aa_base_potion", "aa_icy_inferno", "cc_metamorphine", "cc_metastasizium"} }
+	color_material = { ["fff0bbee"] = {"cc_hydroxide", "cc_explode_player", "cc_veilium", "cc_sparkling_liquid", "cc_slicing_liquid", "cc_glittering_liquid", "aa_base_potion", "aa_icy_inferno", "cc_metamorphine", "cc_metastasizium"} }
 });
 
 table.insert(g_pixel_scene_01, {

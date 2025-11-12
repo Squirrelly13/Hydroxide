@@ -63,7 +63,7 @@ MaterialGroups = {
             "cc_deceleratium",
             "cc_heftium",
             "cc_stillium",
-            "cc_explodePlayer",
+            "cc_explode_player",
         }
     },
     metals = {

@@ -4,7 +4,7 @@ local CC_materials = {
         probability=0.3,
     },
     {
-        material="cc_explodePlayer",
+        material="cc_explode_player",
         probability=1,
     },
     {

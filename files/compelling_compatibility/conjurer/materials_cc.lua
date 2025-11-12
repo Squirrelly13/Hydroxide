@@ -82,7 +82,7 @@ table.insert(ALL_MATERIALS, {
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/explode_player.png",
         name="Agitine",
-        id="cc_explodePlayer"
+        id="cc_explode_player"
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/cc_mat_icons/alchemy_powder.png",
