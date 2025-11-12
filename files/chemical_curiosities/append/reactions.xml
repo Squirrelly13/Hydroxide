@@ -466,10 +466,9 @@
 	</ExplosionConfig>
 	</Reaction>
 
-	<Reaction probability="17"
-	input_cell1="cc_nullium"		input_cell2="[plant]"
-	output_cell1="cc_nullium"	output_cell2="acid_gas"
-	blob_radius2="2"
+	<Reaction probability="1"
+	    input_cell1="cc_nullium"		input_cell2="[plant]"
+	    output_cell1="cc_nullium"	output_cell2="smoke"
 	/>
 
 	<Reaction probability="3"
@@ -486,11 +485,6 @@
   	<Reaction probability="25"
 	input_cell1="cc_nullium" 		input_cell2="cloud_radioactive"
 	output_cell1="cc_nullium" 		output_cell2="cc_nullium"
-	/>
-
-	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="[plant]"
-	output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 	<Reaction probability="25"
