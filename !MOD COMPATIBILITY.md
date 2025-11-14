@@ -7,7 +7,7 @@ like so:
 table.insert(VialMaterials, {
     material = "supercool_modded_material",
     probability = .8 --we support decimal values for weight!
-    amount = 200 --optional value, 200 is the default
+    amount = 200 --optional value, 200 is the default (this is unused in vanilla but is also on potions, we may use this value for something in the future)
     func = function(self, entityid, data)
         --self is passed, so we can modify the outcome like so:
         local materials = {"water", "slime", "slime_2"}
@@ -31,9 +31,9 @@ table.insert(Pandorium_spells, "mods/modid/file/path/to/your/spell.xml")
 
 ## Unstable and Chaotic
 If you do not want your spell to be cast by Pandorium at all, add the "pandorium_ignore = true" variable to your spell
-Unstable Pandorium can cast any spell in which "related_projectiles" is not nil and `pandorium_ignore`, `ai_never_uses` and `recursive` are all false
-Chaotic Pandorium can cast any Projectile, Static Projectile or *Material* spell in tiers 0-2 and modifiers in tiers 0-5 unless they have `pandorium_ignore` or "ai_never_uses"
-Chaotic Pandorium also has special detection for Glimmer spells, we check for `"COLOUR"` in the name of a modifier but ideally we'd prefer if mods could add the `is_glimmer` variable to their spell
+Unstable Pandorium can cast any spell in which `related_projectiles` is not nil and (`pandorium_ignore`, `ai_never_uses` and `recursive`) are all false
+Chaotic Pandorium can cast any Projectile, Static Projectile or Material spell in tiers 0-2 and modifiers in tiers 0-5 unless they have `pandorium_ignore` or "ai_never_uses"
+Chaotic Pandorium also has special detection for Glimmer spells, we check for `"COLOUR"` in the name of a modifier but ideally we'd prefer if mods could add the `is_glimmer` variable to their spell as we intend to phase out the former method.
 
 A whitelist mode for Upand and Cpand is eventually planned.
 
