@@ -109,6 +109,18 @@ function RandomFromTable(t)
 	return t[#t]
 end
 
+function ConditionalRandomFromTable(t, context)
+	local temp = {}
+	for _, entry in ipairs(t) do
+		if entry.condition and not entry:condition(context) then goto continue end
+		temp[#temp+1] = entry
+		::continue::
+	end
+
+	if #temp == 0 then return end
+	return RandomFromTable(temp)
+end
+
 function dump(o) --handy func i stole that prints an entire table
 	if type(o) == 'table' then
 		local s = '{ '
