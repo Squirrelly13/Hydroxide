@@ -1,4 +1,5 @@
 --generally a collection of useful scripts. Not all are made by me. Anything i didnt make is credited as best i can
+---@type nxml
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")
 
 --useful for splitting one string into a series of strings, used in EntityGetDamageFromMaterial(). Found this on some website.
@@ -43,26 +44,34 @@ function EntityGetDamageFromMaterial(entity, material)
 end
 
 --Clones the material damage value of a designated template material to be applied to a target material
-function EntityMimicMaterialDamage(target, target_material, template_material, just_once)
-	if target == 0 then print("No Entity to mimic damage for") return end
-	local template_strength = EntityGetDamageFromMaterial(target, template_material)
+---@param entity entity_id
+---@param target_material string
+---@param template_material string
+function EntityMimicMaterialDamage(entity, target_material, template_material)
+	if not (entity and entity ~= 0) then print("No Entity to mimic damage for") return end
+	local template_strength = EntityGetDamageFromMaterial(entity, template_material)
 	if template_strength ~= nil then
-		EntitySetDamageFromMaterial(target, target_material, template_strength)
+		EntitySetDamageFromMaterial(entity, target_material, template_strength)
 	end
 end
 
 --Edits an entity's XML file to mimic a material damage value for a different material
-function FileMimicMaterialDamage(target, target_material, template_material)
-	local xml = ModDoesFileExist(target) and nxml.parse(ModTextFileGetContent(target))
+---@param filepath string
+---@param target_material string
+---@param template_material string
+function FileMimicMaterialDamage(filepath, target_material, template_material)
+	local xml = ModDoesFileExist(filepath) and nxml.parse(ModTextFileGetContent(filepath))
 	if xml == nil then return end
 
-	local template_strength = EntityGetDamageFromMaterial(target, template_material)
+	local template_strength = EntityGetDamageFromMaterial(filepath, template_material)
 	if (template_strength ~= nil) then
-		EntitySetDamageFromMaterial(target, target_material, template_strength)
+		EntitySetDamageFromMaterial(filepath, target_material, template_strength)
 	end
 end
 
 --allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
+---@param xml_path string
+---@param material string
 function FileSetBloodMaterial(xml_path, material)
 	local xml = ModDoesFileExist(xml_path) and nxml.parse(ModTextFileGetContent(xml_path))
 	if xml ~= nil then
@@ -94,6 +103,18 @@ function LocalShift(radius, materials_input, output, x, y)
 end
 --a modified version of a function by Evaisa
 
+
+---@class (exact) Weighted
+---@field probability number
+
+---@class (exact) Seed
+---@field [1] number
+---@field [2] number
+
+---@generic T : Weighted
+---@param t T[]
+---@return T
+---Function for picking a random table entry on `probability` as weight
 function RandomFromTable(t)
 	local total_weight = 0
 	for _, entry in ipairs(t) do
@@ -109,6 +130,10 @@ function RandomFromTable(t)
 	return t[#t]
 end
 
+---@generic T : Weighted
+---@param t T[]
+---@param context any
+---@return T|nil
 function ConditionalRandomFromTable(t, context)
 	local temp = {}
 	for _, entry in ipairs(t) do
@@ -119,6 +144,26 @@ function ConditionalRandomFromTable(t, context)
 
 	if #temp == 0 then return end
 	return RandomFromTable(temp)
+end
+
+---@generic T : Weighted
+---@param t T[]
+---@param seed Seed
+---@return T
+---Function for picking a procedurally random table entry on `probability` as weight based on `seed`
+function ProceduralRandomFromTable(t, seed)
+    local total_weight = 0
+    for _, entry in ipairs(t) do
+        total_weight = total_weight + entry.probability
+    end
+
+    local rnd = ProceduralRandomf(seed[1], seed[2], 0, total_weight)
+    for _, entry in ipairs(t) do
+        if rnd <= entry.probability then
+            return entry
+        else rnd = rnd - entry.probability end
+    end
+    return t[#t] --Randomf has a miniscule chance to overflow
 end
 
 function dump(o) --handy func i stole that prints an entire table
