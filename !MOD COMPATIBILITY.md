@@ -28,6 +28,10 @@ table.insert(VialMaterials, {
 You can add your own spells to Pandorium by appending [Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.lua]
 The table you adds your spells to is "Pandorium_projectiles"
 ```lua
+--your init.lua:
+ModLuaFileAppend("Hydroxide/files/arcane_alchemy/materials/pandorium/random_spell.lua", "mods/modid/file/path/to/your/append.lua")
+
+--your append.lua
 table.insert(Pandorium_spells, "mods/modid/file/path/to/your/spell.xml")
 ```
 
@@ -82,16 +86,16 @@ ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/materials/magic_liqu
 
 --your append.lua:
 NullShiftData.custom_functions[#NullShiftData.custom_functions+1] = function(shifter, x, y) --SHIFTER AND ITS COORDINATES CAN BE NIL
-    if not shifter then return end --nil check for shifter
-    local target_x = GlobalsGetValue("my_secret_pos.x")
-    local target_y = GlobalsGetValue("my_secret_pos.y")
-    if (target_x > (x - 100) and target_x < (x + 100)) and (target_y > (y - 100) and target_y < (y + 100)) then --basic 200 pixel bounding box check for of my_secret_pos
-        GamePrintImportant("gotcha!")
-        --execute custom code or whatever
+    if not (shifter and IsPlayer(shifter)) then return end --nil and player check for shifter
+    local tx = GlobalsGetValue("my_secret_pos.x")
+    local ty = GlobalsGetValue("my_secret_pos.y")
+    if (tx > (x - 100) and tx < (x + 100)) and (ty > (y - 100) and ty < (y + 100)) then --basic 200 pixel bounding box check for of my_secret_pos
+        GamePrintImportant("gotcha!", "player nullified :)")
+        EntityKill(shifter)
         return true --returning true will cancel the null shift and not change any materials
     end
 end
 
-NullShiftData.null_shift_limit = NullShiftData.null_shift_limit + 10 --increases the shift limit
+NullShiftData.null_shift_limit = NullShiftData.null_shift_limit + 10 --increases the shift limit by 10
 table.insert(NullShiftData.log_messages, "$modid_custom_null_shift_log") --add a custom shift message
 ```

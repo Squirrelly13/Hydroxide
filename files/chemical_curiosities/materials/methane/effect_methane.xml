@@ -1,14 +1,15 @@
 <Entity>
-    <InheritTransformComponent/>
+	<InheritTransformComponent/>
 
-    <GameEffectComponent
-        effect="CUSTOM"
+	<GameEffectComponent
+		effect="CUSTOM"
 		custom_effect_id="CC_INGESTION_METHANE"
-        frames="99999"
-    />
+		frames="99999"
+	/>
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/methane/effect_controller.lua"
 		execute_every_n_frame="1"
+		execute_on_removed="1"
 	/>
 </Entity>

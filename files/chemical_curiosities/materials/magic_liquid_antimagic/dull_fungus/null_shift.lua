@@ -25,9 +25,9 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 		if func(shifter, x, y) then return end
 	end
 
-    for _, entry in ipairs(NullShiftData.materials) do
-        if GameHasFlagRun("cc_null_shifted_" .. entry.main_material) then entry.condition = return_false end
-    end --prevent the same null shift happening twice
+	for _, entry in ipairs(NullShiftData.materials) do
+		if GameHasFlagRun("cc_null_shifted_" .. entry.main_material) then entry.condition = return_false end
+	end --prevent the same null shift happening twice
 
 	local frame = GameGetFrameNum()
 	local last_shift = tonumber(GlobalsGetValue("fungal_shift_last_frame", "-1000000")) --shares cooldown with fungal shifting
@@ -74,7 +74,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 		for _, material in ipairs(target.variants or {}) do
 			ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
 		end
-        GameAddFlagRun("cc_null_shifted_" .. target.main_material)
+		GameAddFlagRun("cc_null_shifted_" .. target.main_material)
 	end
 
 	if DEBUG_NULLSHIFT_ALL then
@@ -113,6 +113,6 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 			})
 			EntityAddChild(shifter, icon_entity)
 		end
-	    EntityRemoveIngestionStatusEffect(shifter, "CC_NULL_TRIP")
+		EntityRemoveIngestionStatusEffect(shifter, "CC_NULL_TRIP")
 	end
 end
