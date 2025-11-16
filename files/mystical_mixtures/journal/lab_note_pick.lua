@@ -1,22 +1,21 @@
-dofile_once( "data/scripts/game_helpers.lua" )
-dofile_once("data/scripts/lib/utilities.lua")
-dofile_once( "data/scripts/game_helpers.lua" )
+dofile_once("data/scripts/game_helpers.lua")
+dofile_once("data/scripts/game_helpers.lua")
 
 dofile("mods/Hydroxide/files/mystical_mixtures/journal/entries.lua")
 
-function item_pickup( entity_item, entity_who_picked, item_name )
-	local pos_x, pos_y = EntityGetTransform( entity_item )
+function item_pickup(entity_item, entity_who_picked, item_name)
+	local pos_x, pos_y = EntityGetTransform(entity_item)
 
 	-- load the gold_value from VariableStorageComponent
-	local components = EntityGetComponentIncludingDisabled( entity_item, "VariableStorageComponent" )
+	local components = EntityGetComponentIncludingDisabled(entity_item, "VariableStorageComponent")
 
     local entry = ""
 
-	if ( components ~= nil ) then
+	if (components ~= nil) then
 		for key,comp_id in pairs(components) do
-			local var_name = ComponentGetValue2( comp_id, "name" )
-			if( var_name == "entry_id") then
-				entry = ComponentGetValue2( comp_id, "value_string" )
+			local var_name = ComponentGetValue2(comp_id, "name")
+			if(var_name == "entry_id") then
+				entry = ComponentGetValue2(comp_id, "value_string")
 			end
 		end
 	end

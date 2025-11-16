@@ -1,5 +1,3 @@
-dofile_once("data/scripts/lib/utilities.lua")
-
 local entity_id = GetUpdatedEntityID()
 local root = EntityGetRootEntity( entity_id )
 
@@ -8,7 +6,7 @@ for i, child in ipairs(children) do
     if EntityGetName( child ) == "inventory_quick" then
         local inventory_items = EntityGetAllChildren(child)
 		if(inventory_items ~= nil) then
-        for i, item in ipairs(inventory_items) do
+        for _, item in ipairs(inventory_items) do
             if EntityHasTag( item, "wand" ) then
                 local ac_id = EntityGetFirstComponentIncludingDisabled( item, "AbilityComponent" )
                 if not ac_id then return end
@@ -22,10 +20,17 @@ for i, child in ipairs(children) do
     end
 end
 
+AllergicToNullium = {
+    mage = true,
+    flower = true,
+    fungus = true,
+    mage_swapper = true,
+}
+
 local gdc = EntityGetFirstComponentIncludingDisabled(root, "GenomeDataComponent")
 if gdc ~= nil then
 	local herd = HerdIdToString(ComponentGetValue2(gdc, "herd_id"))
-	if (herd == "mage") or (herd == "flower") or (herd == "fungus") or (herd == "mage_swapper") then
+	if AllergicToNullium[herd] then
 
 		--[[
 

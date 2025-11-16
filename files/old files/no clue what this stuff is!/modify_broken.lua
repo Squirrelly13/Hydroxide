@@ -1,8 +1,6 @@
-dofile_once("data/scripts/lib/utilities.lua")
-
 local entity_id = GetUpdatedEntityID()
 
-local root = EntityGetRootEntity( entity_id )
+local root = EntityGetRootEntity(entity_id)
 
 local x, y = EntityGetTransform(root)
 
@@ -16,13 +14,13 @@ if(possible_wands ~= nil)then
             if(physics_shape_components ~= nil)then
                 for k, component in pairs(physics_shape_components)do
                     local image = ComponentGetValue2(component, "image_file")
-                    if(image == "data/items_gfx/broken_wand.png" )then
+                    if(image == "data/items_gfx/broken_wand.png")then
 
-                        EntityAddComponent(entity, "LuaComponent", {
+                        EntityAddComponent2(entity, "LuaComponent", {
                             script_material_area_checker_success="mods/Hydroxide/files/scripts/misc/convert_to_nerf_gun.lua",
                         })
 
-                        local area_checker = EntityAddComponent(entity, "MaterialAreaCheckerComponent", {
+                        local area_checker = EntityAddComponent2(entity, "MaterialAreaCheckerComponent", {
                             update_every_x_frame="20",
                             look_for_failure="0",
                             material="aa_magic_plastic",

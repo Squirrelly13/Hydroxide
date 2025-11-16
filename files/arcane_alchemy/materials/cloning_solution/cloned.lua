@@ -1,8 +1,5 @@
-dofile_once("data/scripts/lib/utilities.lua")
-
-local entity_id = GetUpdatedEntityID()
-entity_id = EntityGetRootEntity( entity_id )
-local x, y = EntityGetTransform(entity_id)
+local root = EntityGetRootEntity(GetUpdatedEntityID())
+local x, y = EntityGetTransform(root)
 
 local enemies = EntityGetWithTag("enemy")
 local enemyCount = #enemies
@@ -11,7 +8,7 @@ local enemyCount = #enemies
 
 if (enemyCount <= 200) then
 
-	for i, comp in ipairs(EntityGetComponent(entity_id, "VariableStorageComponent") or {}) do
+	for i, comp in ipairs(EntityGetComponent(root, "VariableStorageComponent") or {}) do
 		if ComponentGetValue2(comp, "name") == "is_cloned_entity" then
 			do return end
 		end
@@ -19,23 +16,23 @@ if (enemyCount <= 200) then
 
 	local animalPath = ""
 
-	if(EntityHasTag(entity_id, "player_unit")) then
+	if(EntityHasTag(root, "player_unit")) then
 		animalPath = "data/entities/animals/failed_alchemist.xml"
 	else
-		local spriteComponent = EntityGetFirstComponent( entity_id, "SpriteComponent")
+		local spriteComponent = EntityGetFirstComponent(root, "SpriteComponent")
 		if not spriteComponent then return end
-		local spritePath = ComponentGetValue2( spriteComponent, "image_file" )
-		animalPath = string.gsub(spritePath, "data/enemies_gfx/", "data/entities/animals/")
+		local spritePath = ComponentGetValue2(spriteComponent, "image_file")
+		animalPath = spritePath:gsub("data/enemies_gfx/", "data/entities/animals/")
 	end
 
-	SetRandomSeed( GameGetFrameNum(), x + y + entity_id )
+	SetRandomSeed(GameGetFrameNum(), x + y + root)
 
 	local clonnedCreature = EntityLoad(animalPath, x + Random(15, -15), y + Random(5, 10))
 
 
 	if(animalPath == "data/entities/animals/failed_alchemist.xml")then
 
-		genome = EntityGetFirstComponent(clonnedCreature, "GenomeDataComponent")
+		local genome = EntityGetFirstComponent(clonnedCreature, "GenomeDataComponent")
 
 		if(genome ~= nil and genome ~= 0)then
 			ComponentSetValue2(genome, "herd_id", StringToHerdId("mage_swapper"))

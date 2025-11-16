@@ -1,4 +1,3 @@
-dofile_once("data/scripts/lib/utilities.lua")
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift.lua")
 
 local entity_id    = GetUpdatedEntityID()

@@ -1,4 +1,3 @@
-dofile( "data/scripts/lib/utilities.lua" )
 local projectile = GetUpdatedEntityID()
 
 local x, y = EntityGetTransform(projectile)

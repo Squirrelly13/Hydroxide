@@ -1,4 +1,3 @@
-dofile_once("data/scripts/lib/utilities.lua")
 dofile_once("mods/Hydroxide/lib/squirreltilities.lua")
 
 
@@ -9,4 +8,3 @@ EntityAddComponent2( GetUpdatedEntityID(), "AudioComponent", {
 });
 
 GamePrint("wooo, magiic shit wooooo")
-

@@ -1,6 +1,4 @@
 dofile_once("mods/Hydroxide/files/lib/status_helper.lua") --Handy lib we have, idk if it was made internally but i assume its grabbed some somewhere else like noita wiki, many thanks to whomever wrote it
-dofile_once("data/scripts/lib/utilities.lua") --lib that idk its probs vital to a bunch of the functions i used
-
 
 --Get the target (one with the effect)
 
