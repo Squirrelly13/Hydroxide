@@ -449,72 +449,66 @@
 	<!-- Nullium -->
 
 	<Reaction probability="80"
-	input_cell1="magic_liquid_mana_regeneration"	input_cell2="cc_nullium"
-	output_cell1="acid_gas"							output_cell2="cc_hydroxide_gas"
-	blob_radius1="2"								blob_radius2="2"
+		input_cell1="magic_liquid_mana_regeneration"	input_cell2="cc_nullium"
+		output_cell1="acid_gas"							output_cell2="cc_hydroxide_gas"
+		blob_radius1="2"								blob_radius2="2"
 	>
-	<ExplosionConfig
+		<ExplosionConfig
 
-		cell_explosion_power="30"
-		cell_explosion_damage_required="3000"
-		cell_explosion_radius_min="15"
-		cell_explosion_radius_max="15"
-		cell_explosion_probability="1.1"
-		load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/spark_starter.xml"
-		ray_energy="50000"
-		>
-	</ExplosionConfig>
+			cell_explosion_power="30"
+			cell_explosion_damage_required="3000"
+			cell_explosion_radius_min="15"
+			cell_explosion_radius_max="15"
+			cell_explosion_probability="1.1"
+			load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/spark_starter.xml"
+			ray_energy="50000"
+		/>
 	</Reaction>
 
 	<Reaction probability="1"
 		input_cell1="cc_nullium"		input_cell2="[plant]"
-		output_cell1="cc_nullium"	output_cell2="smoke"
+		output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 	<Reaction probability="3"
-	input_cell1="cc_nullium"		input_cell2="[magic_liquid]"
-	output_cell1="smoke"		output_cell2="water"
+	input_cell1="cc_nullium"			input_cell2="[magic_liquid]"
+	output_cell1="smoke"				output_cell2="water"
 	blob_radius2="2"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"		input_cell2="radioactive_liquid"
-	output_cell1="cc_nullium"		output_cell2="cc_nullium"
+		input_cell1="cc_nullium"		input_cell2="radioactive_liquid"
+		output_cell1="cc_nullium"		output_cell2="cc_nullium"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"		input_cell2="cloud_radioactive"
-	output_cell1="cc_nullium"		output_cell2="cc_nullium"
+		input_cell1="cc_nullium"		input_cell2="[fungus]"
+		output_cell1="cc_nullium"		output_cell2="cc_dull_fungus"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="[fungus]"
-	output_cell1="cc_nullium"		output_cell2="cc_dull_fungus"
+		input_cell1="cc_nullium"		input_cell2="wood_player"
+		output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="wood_player"
-	output_cell1="cc_nullium"		output_cell2="smoke"
+			input_cell1="cc_nullium"	input_cell2="wood_prop"
+			output_cell1="cc_nullium"	output_cell2="smoke"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="wood_prop"
-	output_cell1="cc_nullium"		output_cell2="smoke"
+		input_cell1="cc_nullium"		input_cell2="wood"
+		output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="wood"
-	output_cell1="cc_nullium"		output_cell2="smoke"
+		input_cell1="cc_nullium"		input_cell2="wood_static"
+		output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="wood_static"
-	output_cell1="cc_nullium"		output_cell2="smoke"
-	/>
-
-	<Reaction probability="25"
-	input_cell1="cc_nullium"			input_cell2="wood_static_vertical"
-	output_cell1="cc_nullium"		output_cell2="smoke"
+		input_cell1="cc_nullium"		input_cell2="wood_static_vertical"
+		output_cell1="cc_nullium"		output_cell2="smoke"
 	/>
 
 

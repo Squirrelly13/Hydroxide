@@ -8,6 +8,3 @@ local multiplier = (ModSettingGet("Hydroxide.CC_METHANE_EFFECT_MULTIPLIER") or 1
 
 count = count * multiplier
 GameSetPostFxParameter("greyscale", 0, 0, 0, count)
-
-print(count)
-GamePrint(tostring(count))

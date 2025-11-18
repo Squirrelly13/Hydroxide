@@ -47,7 +47,7 @@ mod_settings =
 			{
 				id = "MAX_MATERIAL_PROJECTILES",
 				ui_name = "Max Material Projectiles",
-				ui_description = "Decides the maximum material projectiles for a few materials (acts more like a multiplier in some cases, rate is 1:1 for Blast Powder)\nThis does not apply to the Pandoriums. It applies mainly to Glittering Liquid, Blast Powder, and Uranium.",
+				ui_description = "Decides the maximum material projectiles for a few materials\nIt applies mainly to Glittering Liquid, Blast Powder, and Uranium.\n(it does not apply to the Pandoriums)",
 				value_default = 60,
 				value_min = 0,
 				value_max = 200,
