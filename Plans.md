@@ -4,24 +4,24 @@ Tinker Effect does not work
 - likely broken by Epi2 counter system? need to look into vanilla implementation or Apotheosis tinker crystals
 
 # Requires attention
-- Mod Settings
-- Null Trip effect is lacking proper visual audio effects
-- Add material damage to Hydroxide Ice
-- Fix Veilium effect being too snappy
-- Ores Rework (speckles and chunks)
-- Look over Pixel Scene generation
- - Make sure it respects Branch Configuration
-- Clean up Status Effect Icons
-- Clean up material textures
+Mod Settings
+Null Trip effect is lacking proper visual audio effects
+Add material damage to Hydroxide Ice
+Fix Veilium effect being too snappy
+Ores Rework (speckles and chunks)
+Look over Pixel Scene generation
+- Make sure it respects Branch Configuration
+Clean up Status Effect Icons
+Clean up material textures
 
 # Planned Expansions/Reworks
-- Fluent Fluids branch
- - Remaster of Fluid Dynamics (has been approved by creator of Fluid Dynamics)
- - Focus on Gaseous "Magic Vapour" variants of magical liquids
- - I want the gasses to generally go up, so that's where the "Magic" part of "Magic Vapour" comes in lmao
- - Biome modifier for Hiisi Base which replaces all the canisters with Magic Vapour canisters
- - Powder Variants
-  - Dry Water.
+Fluent Fluids branch
+- Remaster of Fluid Dynamics (has been approved by creator of Fluid Dynamics)
+- Focus on Gaseous "Magic Vapour" variants of magical liquids
+- I want the gasses to generally go up, so that's where the "Magic" part of "Magic Vapour" comes in lmao
+- Biome modifier for Hiisi Base which replaces all the canisters with Magic Vapour canisters
+- Powder Variants
+  Dry Water.
  - Candy Variants
  - Powder Rainbow is "Failed Product" and Candy Rainbow is "Blessed Pebbles"
 
