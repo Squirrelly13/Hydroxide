@@ -104,9 +104,7 @@ local vanilla_bonuses = {
     DISSOLVE_POWDERS =               4,
     LOWER_SPREAD =                   4,
     GLASS_CANNON =                   3,
-    LEGGY_FEET =                     3,
     EDIT_WANDS_EVERYWHERE =          2,
-    NO_WAND_EDITING =                1,
 }
 
 AddTable2(BonusPerks, vanilla_bonuses)
