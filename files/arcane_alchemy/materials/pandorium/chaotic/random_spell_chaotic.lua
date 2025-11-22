@@ -54,7 +54,7 @@ end
 local glimmer
 if Random() <= spell_table.data.gimmer_chance then glimmer = true end
 
-for i=1, Random(3, 10) do
+for _=1, Random(3, 9) do
     add_spell("MODIFIERS")
 end
 
@@ -62,7 +62,7 @@ if glimmer then add_spell("GLIMMERS") end
 add_cpand_modifier()
 add_spell("PROJECTILES")
 
-for i=1, Random(1, 10) do
+for _=1, Random(1, 10) do
     add_spell("MODIFIERS")
 end
 if glimmer then add_spell("GLIMMERS") end
@@ -76,10 +76,11 @@ add_spell("STATIC_PROJECTILES")
 
 local inventory2 = EntityGetFirstComponentIncludingDisabled(entity_id, "Inventory2Component")
 if not inventory2 then return end
-ComponentSetValue2(inventory2, "mForceRefresh", true)
-ComponentSetValue2(inventory2, "mActualActiveItem", 0)
+ComponentSetValue2(inventory2, "mForceRefresh", true) --refresh inventory stuff to apply changes properly i think
+ComponentSetValue2(inventory2, "mActualActiveItem", 0) --make sure entity is holding the wand maybe?
 
 
 local platformShooterPlayer = EntityGetFirstComponentIncludingDisabled(entity_id, "PlatformShooterPlayerComponent")
 if not platformShooterPlayer then return end
-ComponentSetValue2(platformShooterPlayer, "mForceFireOnNextUpdate", true)
+ComponentSetValue2(platformShooterPlayer, "mForceFireOnNextUpdate", true) --force wand to fire next frame
+-- ^ "mForceFireOnNextUpdate" used by Twitchy is the whole reason i can manually fire a wand without the player, everyone say "thank you Twitchy Mage"

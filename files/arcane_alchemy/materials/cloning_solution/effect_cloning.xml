@@ -1,0 +1,14 @@
+<Entity name="aa cloning effect" tags="hittable,teleportable_NOT">
+
+	<GameEffectComponent
+		effect="CUSTOM"
+		custom_effect_id="AA_CLONE"
+	/>
+
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.lua"
+		execute_every_n_frame="90"
+	/>
+
+</Entity>

@@ -282,14 +282,14 @@ local AA_effects = {
 		ui_description="$status_desc_aa_clone",
 		ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.png",
 		protects_from_fire=false,
-		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/cloned.xml",
+		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.xml",
 	},
 	{
 		id="AA_VOMIT_SPELLS",
 		ui_name="$status_aa_vomit_spells",
 		ui_description="$status_desc_aa_vomit_spells",
 		ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/pandoriumvomit.xml",
+		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/vomit.xml",
 		is_harmful=true,
 	},
 	{
@@ -297,7 +297,7 @@ local AA_effects = {
 		ui_name="$status_aa_vomit_spells_chaotic",
 		ui_description="$status_desc_aa_vomit_spells_chaotic",
 		ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/chaoticpandoriumvomit.xml",
+		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/vomit.xml",
 		is_harmful=true,
 	},
 	{
@@ -305,7 +305,7 @@ local AA_effects = {
 		ui_name="$status_aa_vomit_spells_unstable",
 		ui_description="$status_desc_aa_vomit_spells_unstable",
 		ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
-		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/unstablepandoriumvomit.xml",
+		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/vomit.xml",
 		is_harmful=true,
 	}
 
