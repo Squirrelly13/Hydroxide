@@ -19,11 +19,16 @@
 		y_vel_min="-50"
 		y_vel_max="50"
 		is_emitting="1"
-		>
-	</ParticleEmitterComponent>
+	/>
 
 	<LifetimeComponent
 		lifetime="3"
+	/>
+
+	<AudioLoopComponent
+		file="data/audio/Desktop/projectiles.bank"
+		event_name="projectiles/fuse_burn_magic"
+		auto_play="1"
 	/>
 
 </Entity>

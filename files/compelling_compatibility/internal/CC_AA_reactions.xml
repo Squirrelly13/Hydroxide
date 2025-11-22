@@ -109,13 +109,13 @@
 	>
 	</Reaction>
 
-	<Reaction probability="25"
+	<Reaction probability="50"
 	input_cell1="cc_nullium"			input_cell2="aa_hungry_slime"
 	output_cell1="cc_nullium"		output_cell2="slime"
 	>
 	</Reaction>
 
-	<Reaction probability="25"
+	<Reaction probability="50"
 	input_cell1="cc_nullium"			input_cell2="aa_hungry_slime_growing"
 	output_cell1="cc_nullium"		output_cell2="slime"
 	>
@@ -264,12 +264,6 @@
 		blob_radius1="6"
 	>
 	</Reaction>
-
-	<Reaction probability="20"
-		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
-		output_cell1="aa_cloning_solution"			output_cell2="smoke"
-	>
-	</Reaction>
 	<Reaction probability="10"
 		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
 		output_cell1="aa_cloning_solution"			output_cell2="aa_cloning_solution"
@@ -363,14 +357,14 @@
 	</Reaction>
 
 	<Reaction probability="100"
-	input_cell1="cc_ferrine"	input_cell2="aa_hungry_slime"
+	input_cell1="cc_ferrine"	input_cell2="[hungry_slime]"
 	output_cell1="cc_devouring_moss" 	output_cell2="cc_devouring_moss"
 	>
 	</Reaction><!-- create devouring moss -->
 
 	<Reaction probability="100"
-	input_cell1="cc_ferrine"	input_cell2="aa_hungry_slime_growing"
+	input_cell1="cc_devouring_moss"	input_cell2="[hungry_slime]"
 	output_cell1="cc_devouring_moss" 	output_cell2="cc_devouring_moss"
 	>
-	</Reaction><!-- create devouring moss -->
+	</Reaction><!-- devouring moss devours hungry slime -->
 </Materials>

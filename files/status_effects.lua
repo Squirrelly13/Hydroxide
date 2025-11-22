@@ -282,7 +282,7 @@ local AA_effects = {
 		ui_description="$status_desc_aa_clone",
 		ui_icon="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.png",
 		protects_from_fire=false,
-		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/cloned.xml",
+		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/effect_cloning.xml",
 	},
 	{
 		id="AA_VOMIT_SPELLS",

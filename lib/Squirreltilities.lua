@@ -166,7 +166,10 @@ function ProceduralRandomFromTable(t, seed)
     return t[#t] --Randomf has a miniscule chance to overflow
 end
 
-function dump(o) --handy func i stole that prints an entire table
+---handy func i stole that converts an entire table to string, grabbed from [here](https://stackoverflow.com/questions/9168058/how-to-dump-a-table-to-console)
+---@param o table
+---@return string
+function dump(o)
 	if type(o) == 'table' then
 		local s = '{ '
 		for k,v in pairs(o) do
@@ -177,4 +180,43 @@ function dump(o) --handy func i stole that prints an entire table
 	else
 		return tostring(o)
 	end
+end
+
+---Creates a clone using `path` as a base
+---@param path string Filepath for the base entity
+---@param origin entity_id|nil Original entity from which the clone was derived (optional)
+---@param x number
+---@param y number
+---@param genome string|nil New genome for the clone (optional)
+---@return entity_id
+---@return component_id
+function CreateClone(path, origin, x, y, genome)
+	local entity = EntityLoad(path, x, y)
+	if genome then
+		local genome_comps = EntityGetComponent(entity, "GenomeDataComponent") or {}
+		for _, comp in ipairs(genome_comps) do
+			ComponentSetValue2(comp, "herd_id", StringToHerdId(genome))
+		end
+	end
+
+	local clone_data = EntityAddComponent2(entity, "VariableStorageComponent", {
+		_tags = "no_gold_drop",
+		name = "aa_clone_data",
+		value_int = origin
+	})
+
+	EntityAddComponent2(entity, "LuaComponent", {
+		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/cloned_entity.lua",
+		execute_on_added = true,
+		call_init_function= true,
+		execute_every_n_frame = 480,
+	})
+
+	EntityAddComponent2(entity, "LuaComponent", {
+		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/cloning_solution/clone_death.lua",
+		execute_on_removed = true,
+		execute_every_n_frame = -1,
+	})
+
+	return entity, clone_data
 end
