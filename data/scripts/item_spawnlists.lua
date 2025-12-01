@@ -7,7 +7,7 @@ ItemPedestalLib = {
 	convert = true,
 	error = function(self, log, x, y, target)
 		if ItemPedestalLib.error_prints then
-			print((log):format(x or 0, y or 0))
+			print((log):format(x or "nil", y or "nil"))
 		end
 	end,
 

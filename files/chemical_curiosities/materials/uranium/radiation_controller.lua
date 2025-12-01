@@ -66,7 +66,7 @@ function AddPerk(isMutant, count)
 
 	for i = 1, count do
 		local _perk = get_weighted_random(perklist)
-		print("granting perk " .. _perk)
+		--print("granting perk " .. _perk)
 		perk_pickup( nil, owner, _perk, true, false, true )
 	end
 end
@@ -201,15 +201,15 @@ end
 
 if deal_rate > 0 and damage_model ~= nil then
 	if GameGetFrameNum() % deal_rate == 0 then
-		print("SUCCESS!!!!")
+		--print("SUCCESS!!!!")
 
 		local max_hp = ComponentGetValue2(damage_model, "max_hp") or 0
 		local total_damage = deal_static + (ComponentGetValue2(damage_model, "max_hp") * ((deal_scaling^1.3 + 1 - deal_scaling^1.2) - 1))
-		print("DEALRATE = " .. deal_rate)
-		print("MAXHP = " .. max_hp)
-		print("DEALSTATIC = " .. deal_static)
-		print("DEALSCALED = " .. deal_scaling)
-		print("TOTALDEAL = " .. total_damage)
+		--print("DEALRATE = " .. deal_rate)
+		--print("MAXHP = " .. max_hp)
+		--print("DEALSTATIC = " .. deal_static)
+		--print("DEALSCALED = " .. deal_scaling)
+		--print("TOTALDEAL = " .. total_damage)
 		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_CURSE", "", "NONE", x, y)
 		EntityInflictDamage(owner, total_damage * .35, "DAMAGE_RADIOACTIVE", "", "NONE", x, y)
 	end
@@ -224,7 +224,7 @@ leggyentity = ComponentGetValue2(leggytracker, "value_int")
 if leggyentity ~= nil and EntityGetName(leggyentity) ~= "mutagenLeggy" then leggyentity = nil end --make sure the leggyentity is not only un-nil'd, but also the correct thing we're looking for
 
 if leggyamount ~= 0 and leggyentity == nil then --if needs leggy but no leggy, create leggy
-	print("creating new leggy mutagen")
+	--print("creating new leggy mutagen")
 	leggyentity = EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y )
 	EntityAddChild( owner, leggyentity)
 	if leggyentity ~= nil then ComponentSetValue2(leggytracker, "value_int", tonumber(leggyentity)) else print("failed to save leggyentity") end
@@ -243,4 +243,4 @@ if leggyentity then --if there is a leggy
 
 end
 
-if GameGetFrameNum() % 5 == 0 then print(radcount) end
+--if GameGetFrameNum() % 5 == 0 then print(radcount) end

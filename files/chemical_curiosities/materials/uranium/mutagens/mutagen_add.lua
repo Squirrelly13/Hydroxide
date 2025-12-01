@@ -38,7 +38,7 @@ if radiation_controller == nil then --if it could not find it, create a new one
 end
 
 local var_comps = EntityGetComponent(radiation_controller, "VariableStorageComponent")
-if var_comps == nil then print("no var_comps? :megamind:") return end --get varcomps. if none, give up
+if var_comps == nil then return end --get varcomps. if none, give up
 
 for index, varcomp in ipairs(var_comps) do --index varcomps to their designated variables
 	local varcomp_name = ComponentGetValue2(varcomp, "name") --get varcomp name once before attemping to index
@@ -160,7 +160,7 @@ function AddPerk(isMutant, count)
 
 	for i = 1, count do
 		local _perk = RandomFromTable(perklist).perk
-		print("granting perk " .. _perk .. " to " .. EntityGetName(owner))
+		--print("granting perk " .. _perk .. " to " .. EntityGetName(owner))
 		perk_pickup( nil, owner, _perk, false, false, true )
 	end
 end
@@ -280,7 +280,6 @@ leggyentity = ComponentGetValue2(leggytracker, "value_int")
 if leggyentity ~= nil and EntityGetName(leggyentity) ~= "mutagenLeggy" then leggyentity = nil end --make sure the leggyentity is not only un-nil'd, but also the correct thing we're looking for
 
 if leggyamount ~= 0 and leggyentity == nil then --if needs leggy but no leggy, create leggy
-	print("creating new leggy mutagen")
 	leggyentity = EntityLoad("mods/Hydroxide/files/chemical_curiosities/materials/uranium/mutagens/mutagen_leggy.xml", x, y )
 	EntityAddChild( owner, leggyentity)
 	if leggyentity ~= nil then ComponentSetValue2(leggytracker, "value_int", tonumber(leggyentity)) else print("failed to save leggyentity") end

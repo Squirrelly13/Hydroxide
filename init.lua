@@ -1,38 +1,3 @@
--- all functions below are optional and can be left out
-
-
-
-
-
---[[
-
-function OnModPreInit()
-	print("Mod - OnModInit()") -- After that this is called for all mods
-end
-
-function OnModInit()
-	print("Mod - OnModInit()") -- After that this is called for all mods
-end
-
-function OnModPostInit()
-	print("Mod - OnModPostInit()") -- Then this is called for all mods
-end
-
-
-function OnWorldPreUpdate() -- This is called every time the game is about to start updating the world
-	GamePrint( "Pre-update hook " .. tostring(GameGetFrameNum()) )
-end
-
-function OnWorldPostUpdate() -- This is called every time the game has finished updating the world
-	GamePrint( "Post-update hook " .. tostring(GameGetFrameNum()) )
-end
-
-]]--
-
-
-
-
-
 print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
@@ -45,7 +10,7 @@ dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
-local FF = ModSettingGet("Hydroxide.FF_ENABLED")
+local FF = ModSettingGet("Hydroxide.FF_ENABLED") and false --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 
@@ -219,7 +184,7 @@ end
 --		[Fluent Fluids]
 
 if FF == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
+	--ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
 end
 
 
@@ -252,12 +217,6 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 		print("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
 		print("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
 	end
-
-
-
-
-	print("CC init took " .. total_time .. " seconds")
-
 end
 
 if Terror then

@@ -5,7 +5,7 @@ function register_translation(key, en, ru, ptbr, eses, de, frfr, it, pl, zhch, j
     if(key ~= nil)then
         en = en or ""
         ru = ru or ""
-        ptbr = prbr or ""
+        ptbr = ptbr or ""
         eses = eses or ""
         de = de or ""
         frfr = frfr or ""

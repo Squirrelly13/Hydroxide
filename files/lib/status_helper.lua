@@ -1,10 +1,9 @@
----@diagnostic disable: undefined-global
 dofile("data/scripts/status_effects/status_list.lua")
 
 local unique_status_effects = {}
 local unique_status_effect_added = {}
-for k,v in pairs(status_effects)do
-	if(v.id ~= nil and not unique_status_effect_added[v.id])then
+for k,v in pairs(status_effects) do
+	if v.id ~= nil and not unique_status_effect_added[v.id] then
 		unique_status_effect_added[v.id] = true
 		table.insert(unique_status_effects, v.id)
 	end
@@ -15,8 +14,8 @@ end
 ---@param entity_id entity_id
 ---@param effect_id string
 ---@return number
-function GetStainPercentage( entity_id, effect_id )
-	local status_effect_data_component = EntityGetFirstComponentIncludingDisabled( entity_id, "StatusEffectDataComponent" )
+function GetStainPercentage(entity_id, effect_id)
+	local status_effect_data_component = EntityGetFirstComponentIncludingDisabled(entity_id, "StatusEffectDataComponent")
 	if status_effect_data_component == nil then return 0 end
 
 	local stain_effects = ComponentGetValue2(status_effect_data_component, "stain_effects")

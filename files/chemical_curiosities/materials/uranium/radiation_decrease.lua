@@ -5,7 +5,7 @@ local owner = EntityGetParent(entity_id)
 local owner_children = EntityGetAllChildren(owner) or {}
 
 local var_comps = EntityGetComponent(GetUpdatedEntityID(), "VariableStorageComponent")
-if var_comps == nil then print("no var_comps? :megamind:") return end
+if var_comps == nil then return end
 local radcount
 local leggytracker
 local leggyentity = -1
@@ -70,7 +70,6 @@ end
 --leggy remove
 if leggyentity > 0 and radcount < STAGE5 then
     stage = 4
-    print("ATTEMPTING TO REMOVE " .. leggyentity)
     local leggyvarcomps = EntityGetComponent(leggyentity,"VariableStorageComponent") --check if leggy is permanent
 	if leggyvarcomps == nil then KillLeggy()
     elseif ComponentGetValue2(leggyvarcomps[1], "value_bool") ~= true then KillLeggy()
