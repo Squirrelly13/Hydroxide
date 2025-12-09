@@ -1,21 +1,14 @@
-dofile_once("data/scripts/lib/utilities.lua")
-dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
-
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 local entity_id = GetUpdatedEntityID()
-entity_id = EntityGetRootEntity( entity_id )
-
 local pos_x, pos_y = EntityGetTransform( entity_id )
 
-SetRandomSeed( GameGetFrameNum() + GetUpdatedComponentID(), pos_x + pos_y + entity_id )
-
+SetRandomSeed(pos_x + GameGetFrameNum(), pos_y - entity_id)
 local angle = math.rad(Random(45,135))
-local length = Random(40,80)
+local speed = Random(40,80)
+local vel_x = math.cos(angle) * speed
+local vel_y = 0 - math.sin(angle) * speed
 
-local vel_x = math.cos( angle ) * length
-local vel_y = 0 - math.sin( angle ) * length
+ShootProjectile(entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/kindling/fire_line.xml", pos_x, pos_y, vel_x, vel_y) --fuckk had no idea this also called fire_line.xml, might have to move it in the future -UserK
 
-shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/kindling/fire_line.xml", pos_x, pos_y, vel_x, vel_y ) --fuckk had no idea this also called fire_line.xml, might have to move it in the future -UserK
-
-
-EntityKill( entity_id )
+EntityKill(entity_id)

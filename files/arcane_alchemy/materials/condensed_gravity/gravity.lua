@@ -1,4 +1,3 @@
-dofile_once("data/scripts/lib/utilities.lua")
 dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 
 local distance_full = 400
@@ -7,7 +6,7 @@ local float_force = 300
 local float_sensor_sector = math.pi * 0.3
 
 local entity_id = GetUpdatedEntityID()
-local x, y, rot = EntityGetTransform( entity_id )
+local x, y = EntityGetTransform( entity_id )
 
 
 local stainPercent = math.min(10, GetStainPercentage(EntityGetParent(entity_id), "AA_GRAVITY") * 3 + (GetIngestionSeconds(EntityGetParent(entity_id), "AA_GRAVITY") * .05))
@@ -41,14 +40,10 @@ for _,id in ipairs(entities) do
 		local velocitycomp = EntityGetFirstComponent( id, "VelocityComponent" )
 		if ( velocitycomp ~= nil ) then
 			local fx, fy = calculate_force_at(px, py)
-			edit_component( id, "VelocityComponent", function(comp,vars)
-				local vel_x,vel_y = ComponentGetValue2( comp, "mVelocity")
-
-				vel_x = vel_x + fx
-				vel_y = vel_y + fy
-
-				ComponentSetValue2( comp, "mVelocity", vel_x, vel_y)
-			end)
+			for _, velcomp in ipairs(EntityGetComponent(id, "VelocityComponent") or {}) do
+				local vel_x,vel_y = ComponentGetValue2(velcomp, "mVelocity")
+				ComponentSetValue2(velcomp, "mVelocity", vel_x + fx, vel_y + fy)
+			end
 		end
 	end
 end
@@ -74,15 +69,20 @@ PhysicsApplyForceOnArea( calculate_force_for_body, entity_id, x-size, y-size, x+
 do
 	local dir_x = 0
 	local dir_y = float_range
-	dir_x, dir_y = vec_rotate(dir_x, dir_y, ProceduralRandomf(x, y + GameGetFrameNum(), -float_sensor_sector, float_sensor_sector))
 
-	local did_hit,hit_x,hit_y = RaytracePlatforms( x, y, x + dir_x, y + dir_y )
+	local angle = ProceduralRandomf(x, y + GameGetFrameNum(), -float_sensor_sector, float_sensor_sector)
+	local ca = math.cos(angle)
+	local sa = math.sin(angle)
+	local px = ca * dir_x - sa * dir_y
+	local py = sa * dir_x + ca * dir_y
+
+	local did_hit,hit_x,hit_y = RaytracePlatforms( x, y, x + px, y + py )
 	if did_hit then
-		local dist = get_distance(x, y, hit_x, hit_y)
+		local dist = ((hit_x-x)^2 + (hit_y-y)^2)^.5
 		dist = math.max(6, dist) -- tame a bit on close encounters
-		dir_x = -dir_x / dist * float_force
-		dir_y = -dir_y / dist * float_force
-		PhysicsApplyForce(entity_id, dir_x, dir_y)
+		px = -px / dist * float_force
+		py = -py / dist * float_force
+		PhysicsApplyForce(entity_id, px, py)
 	end
 end
 

@@ -1,14 +1,15 @@
-dofile_once("data/scripts/lib/utilities.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 local entity_id    = GetUpdatedEntityID()
-local pos_x, pos_y = EntityGetTransform( entity_id )
+local owner = EntityGetRootEntity(entity_id)
+local pos_x, pos_y = EntityGetTransform(owner)
 
-SetRandomSeed( GameGetFrameNum() + GetUpdatedComponentID(), pos_x + pos_y + entity_id )
+SetRandomSeed(pos_x + GameGetFrameNum(), pos_y - entity_id)
 
 local angle = math.rad(Random(0,359))
-local length = 40
+local speed = 40
 
-local vel_x = math.cos( angle ) * length
-local vel_y = 0 - math.sin( angle ) * length
+local vel_x = math.cos(angle) * speed
+local vel_y = 0 - math.sin(angle) * speed
 
-local eid = shoot_projectile_from_projectile( entity_id, "data/entities/projectiles/deck/orb_laseremitter_weak.xml", pos_x, pos_y, vel_x, vel_y )
+local eid = shoot_projectile_from_projectile(owner, "data/entities/projectiles/deck/orb_laseremitter_weak.xml", pos_x, pos_y, vel_x, vel_y)

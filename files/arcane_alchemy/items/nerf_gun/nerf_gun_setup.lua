@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
-dofile("data/scripts/lib/utilities.lua")
-dofile("data/scripts/gun/procedural/gun_action_utils.lua")
+dofile_once("data/scripts/lib/utilities.lua")
+dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
 
 function get_random_from( target )
 	local rnd = Random(1, #target)
