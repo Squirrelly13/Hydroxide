@@ -1,4 +1,4 @@
-dofile("data/scripts/status_effects/status_list.lua")
+dofile_once("data/scripts/status_effects/status_list.lua")
 
 local unique_status_effects = {}
 local unique_status_effect_added = {}

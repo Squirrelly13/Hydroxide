@@ -46,7 +46,7 @@ end
 --explosion code:
 
 if inges >= 33550336 and IsPlayer(owner) then
-    dofile("mods/Hydroxide/files/chemical_curiosities/materials/agitine/blazing_sun.lua")
+    dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/agitine/blazing_sun.lua")
     era_nova(owner)
     return
 end
