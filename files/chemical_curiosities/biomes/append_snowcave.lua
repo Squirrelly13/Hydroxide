@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-global
 table.insert(g_props, {
 	prob 		= 0.3,
 	min_count	= 1,
@@ -30,18 +29,14 @@ table.insert(g_lamp, {
 	entity 	= "mods/Hydroxide/files/chemical_curiosities/props/lanterns/lantern_small_methane.xml",
 });
 
-
-
-
 table.insert(g_pixel_scene_01,{
 	prob			= 0.5,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcave/pipeline.png",
-	visual_file		= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcave/pipeline_visual.png",
-	background_file = "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcave/pipeline_background.png",
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcave/pipeline.png",
+	visual_file		= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcave/pipeline_visual.png",
+	background_file = "mods/Hydroxide/files/chemical_curiosities/biomes/snowcave/pipeline_background.png",
 	is_unique		= 0
 
 });
-
 
 RegisterSpawnFunction( 0xffff00be, "spawn_methane")
 function spawn_methane(x, y)

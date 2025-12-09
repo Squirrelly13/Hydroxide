@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")

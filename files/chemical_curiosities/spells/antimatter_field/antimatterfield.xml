@@ -1,13 +1,10 @@
 <Entity >
 
-	<InheritTransformComponent />
+	<InheritTransformComponent/>
 
 
 	<Base file="mods/Hydroxide/files/lib/base_field.xml">
-		<LifetimeComponent
-			lifetime="60"
-			>
-		</LifetimeComponent>
+		<LifetimeComponent lifetime="60"/>
 
 		<SpriteComponent
 			image_file=""

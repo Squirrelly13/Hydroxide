@@ -1,6 +1,3 @@
----@diagnostic disable: undefined-global
-
-
 table.insert(materials_magic, {
     material="aa_darkmatter",
     cost=500,
