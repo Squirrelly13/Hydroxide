@@ -21,7 +21,7 @@ if diff == 0 then return end
 true_hp = true_hp - (diff * .25) --morphine provides 75% damage resistance
 
 if (true_hp <= 0) then --if the player's true HP is equal to or below 0, trigger kill effect
-	EntityInflictDamage(root, 5 * max_hp, "DAMAGE_OVEREATING", "$death_cc_morphine", "PLAYER_RAGDOLL_CAMERA", -500, 0)
+	EntityInflictDamage(root, 5 * max_hp, "NONE", "$death_cc_morphine", "PLAYER_RAGDOLL_CAMERA", -500, 0)
 end
 
 ComponentSetValue2(damagemodel, "hp", max_hp)
