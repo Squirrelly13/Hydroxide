@@ -6,9 +6,9 @@ local pos_x, pos_y = EntityGetTransform(entity_id)
 
 SetRandomSeed(pos_x + GameGetFrameNum(), pos_y - entity_id)
 local angle = math.rad(Random(60,120))
-local length = Random(30,800)
-local vel_x = math.cos(angle) * length
-local vel_y = 0 - math.sin(angle) * length
+local speed = Random(30,800)
+local vel_x = math.cos(angle) * speed
+local vel_y = 0 - math.sin(angle) * speed
 
 ShootProjectile(nil, "data/entities/projectiles/deck/disc_bullet.xml", pos_x, pos_y, vel_x, vel_y)
 
