@@ -57,6 +57,7 @@
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_morphine.lua"
+		script_damage_about_to_be_received="mods/Hydroxide/files/chemical_curiosities/materials/morphine/effect_morphine.lua"
 		execute_every_n_frame="5"
 	/><!--trueHealth = trueHealth - (maxhp - hp); hp = maxhp; if trueHealth = 0 then die-->
 
