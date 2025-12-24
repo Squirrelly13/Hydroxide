@@ -40,10 +40,7 @@ function GetIngestionSeconds(entity_id, effect_id)
 	if(status_effect_data_component == nil)then
 		return 0
 	end
-	local ingestion_effects = ComponentGetValue2(status_effect_data_component, "ingestion_effects")
-	if(ingestion_effects == nil)then
-		return 0
-	end
+	local ingestion_effects = ComponentGetValue2(status_effect_data_component, "ingestion_effects") or {}
 	for k,v in pairs(ingestion_effects) do
 		local index = k - 1
 		if(index > 0)then

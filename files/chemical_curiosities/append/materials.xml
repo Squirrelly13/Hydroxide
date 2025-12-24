@@ -1030,8 +1030,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/tinker_dust/tinker.png"
-			>
-		</Graphics>
+			/>
 		<ParticleEffect
 			vel.y="-13.14"
 			vel_random.min_x="-17.71"
@@ -1075,8 +1074,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/lightning_powder/thunder_powder.png"
-			>
-		</Graphics>
+			/>
 	</CellDataChild>
 
 	<CellData
@@ -1096,8 +1094,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/increase_max_hp/hearty.png"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_INCREASEHP" amount="0.06"/>
@@ -1156,8 +1153,7 @@
 
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/grease/grease.png"
-			>
-		</Graphics>
+			/>
 	</CellData>
 
 	<CellDataChild
@@ -1203,8 +1199,7 @@
 		<Graphics
 			texture_file="data/materials_gfx/crystal_purple.png"
 			color="ff74737f"
-			>
-		</Graphics>
+			/>
 	</CellDataChild>
 
 
@@ -1227,8 +1222,7 @@
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/liquid_crystal.png"
 			color="20b333a3"
-			>
-		</Graphics>
+			/>
 	</CellData>
 
 	<CellData
@@ -1253,8 +1247,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium.png"
-			>
-		</Graphics>
+			/>
 		<ParticleEffect
 			vel.y="0"
 			vel_random.min_x="-11.71"
@@ -1287,8 +1280,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/uranium_depleting.png"
-			>
-		</Graphics>
+			/>
 		<ParticleEffect
 			vel.y="0"
 			vel_random.min_x="-23.42"
@@ -1329,8 +1321,7 @@
 		</StatusEffects>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/uranium/radioactive_waste.png"
-			>
-		</Graphics>
+			/>
 	</CellDataChild>
 
 	<CellData
@@ -1352,8 +1343,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/morphine/morphine.png"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_MORPHINE" amount="0.4"/>
@@ -1377,8 +1367,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Stains>
 				<StatusEffect type="CC_ANTIMATTER"/>
@@ -1405,8 +1394,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Stains>
 				<StatusEffect type="CC_ANTIMATTER"/>
@@ -1450,8 +1438,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/frozen_meat/meat_frozen.png"
-			>
-		</Graphics>
+			/>
 	</CellDataChild>
 
 
@@ -1661,8 +1648,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/hemoglobin.png"
-			>
-		</Graphics>
+			/>
 	</CellData>
 
 	<CellData
@@ -1685,8 +1671,7 @@
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/cobaline.png"
-			>
-		</Graphics>
+			/>
 	</CellData>
 
 	<CellData
@@ -1760,8 +1745,7 @@
 		</ParticleEffect>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/ironskin.png"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Stains>
 				<StatusEffect type="CC_IRONSKIN"/>
@@ -1780,8 +1764,7 @@
 		wang_color="afdae872"
 		electrical_conductivity="1"
 		burnable="0"
-	>
-	</CellDataChild>
+	/>
 
 	<CellDataChild
 		_parent="coal_static"
@@ -1790,8 +1773,7 @@
 		wang_color="afd6e241"
 		electrical_conductivity="1"
 		burnable="0"
-	>
-	</CellDataChild>
+	/>
 
 	<CellData
 		name="cc_warp_powder"
@@ -1812,8 +1794,7 @@
 		>
 		<Graphics
 			color="8cebaeba"
-			>
-		</Graphics><!-- [Finished!!!] material that will warp people to a parallel world -eba -->
+			/><!-- [Finished!!!] material that will warp people to a parallel world -eba -->
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP" amount="0.15"/>
@@ -1840,8 +1821,7 @@
 		>
 		<Graphics
 			color="8c7ccfc2"
-			>
-		</Graphics>
+			/>
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_PARADOX" amount="0.15"/>
@@ -1859,10 +1839,7 @@
 		wang_color="803A7BE4"
 		liquid_gravity="1.9"
 		>
-		<Graphics
-			color="8cebaeba"
-			>
-		</Graphics> <!-- This material should not be found in game, i use it to give the player warp sickness -->
+		<Graphics color="8cebaeba"/> <!-- This material should not be found in game, i use it to give the player warp sickness -->
 		<StatusEffects>
 			<Ingestion>
 				<StatusEffect type="CC_WARP_SICKNESS" amount="30"/>
@@ -1875,7 +1852,6 @@
 		name="cc_vomit_fading"
 		wang_color="88E8BD5D"
 		lifetime="1000"
-		>
-	</CellDataChild>
+	/>
 
 </Materials>
