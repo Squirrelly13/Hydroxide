@@ -1,4 +1,4 @@
-dofile("mods/Hydroxide/files/lib/status_helper.lua")
+dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 
 --[[
 was_executed = was_executed or false

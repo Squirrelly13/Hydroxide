@@ -5,14 +5,11 @@
 		effect="CUSTOM"
 		custom_effect_id="CC_INCREASEHP"
 		frames="99999"
-		>
-	</GameEffectComponent>
+	/>
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/increase_max_hp/effect_increasehp.lua"
-		execute_every_n_frame="10"
-		>
-	</LuaComponent>
+	/>
 
 	<SpriteParticleEmitterComponent
         sprite_file="mods/Hydroxide/files/chemical_curiosities/materials/increase_max_hp/max_hp.xml"

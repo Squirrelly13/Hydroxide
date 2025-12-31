@@ -3,7 +3,7 @@ dofile_once("mods/Hydroxide/files/lib/status_helper.lua") --Handy lib we have, i
 --Get the target (one with the effect)
 
 local entity_id    = GetUpdatedEntityID()
-local pos_x, pos_y, rot = EntityGetTransform( entity_id )
+local pos_x, pos_y = EntityGetTransform( entity_id )
 local owner = EntityGetParent(entity_id)
 
 
@@ -45,6 +45,12 @@ end
 
 --explosion code:
 
+if inges >= 33550336 and IsPlayer(owner) then
+    dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/agitine/blazing_sun.lua")
+    era_nova(owner)
+    return
+end
+
 local explosion = EntityLoad( "data/entities/projectiles/explosion.xml", pos_x, pos_y ) --load the explosion
 
 local comp = EntityGetFirstComponent(explosion, "ProjectileComponent") --grab its Projectile comp (since we wanna overwrite all the important stuff)
@@ -69,4 +75,4 @@ EntityRemoveIngestionStatusEffect(owner, "CC_EXPLODING") --Remove all of the ing
 ComponentSetValue2(vscomp, "value_bool", false) --reset the do_explosion bool so the effect continues to only take effect every 2 seconds
 
 
-EntityKill( entity_id ) --tbh idk, it was here when i got here, it shouldnt be killing the status entity cuz that has the vscomp on it and the script works fine, so idk ig he can stay.
+EntityKill(entity_id) --tbh idk, it was here when i got here, it shouldnt be killing the status entity cuz that has the vscomp on it and the script works fine, so idk ig he can stay.

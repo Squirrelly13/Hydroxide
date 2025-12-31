@@ -182,6 +182,35 @@ function dump(o)
 	end
 end
 
+function GetHerdID(entity_id)
+	local genome_comp = EntityGetFirstComponent(entity_id, "GenomeDataComponent")
+	if genome_comp then return ComponentGetValue2(genome_comp, "herd_id")
+	else return 0 end
+end
+
+function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
+	shooter = shooter or 0
+	local entity_id = EntityLoad(entity_file, x, y)
+	vel_x = vel_x or 0
+	vel_y = vel_y or 0
+	send_message =  send_message or true
+
+	local herd_id = GetHerdID(shooter)
+
+	GameShootProjectile(shooter, x, y, x+vel_x, y+vel_y, entity_id, send_message)
+
+	for _, proj_comp in ipairs(EntityGetComponent(entity_id, "ProjectileComponent") or {}) do
+		ComponentSetValue2(proj_comp, "mWhoShot", shooter)
+		ComponentSetValue2(proj_comp, "mShooterHerdId", herd_id) --should be fine if nil..?
+	end
+
+	for _, vel_comp in ipairs(EntityGetComponent(entity_id, "VelocityComponent") or {}) do
+		ComponentSetValue2(vel_comp, "mVelocity", vel_x, vel_y)
+	end
+
+	return entity_id
+end
+
 ---Creates a clone using `path` as a base
 ---@param path string Filepath for the base entity
 ---@param origin entity_id|nil Original entity from which the clone was derived (optional)

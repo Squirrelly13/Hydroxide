@@ -1,4 +1,4 @@
-dofile("mods/Hydroxide/files/lib/status_helper.lua")
+dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 
 dofile_once("mods/Hydroxide/lib/polytools/polytools_init.lua").init("mods/Hydroxide/lib/polytools")
 local polytools = dofile_once("mods/Hydroxide/lib/polytools/polytools.lua")

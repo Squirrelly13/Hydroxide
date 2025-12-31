@@ -1,33 +1,31 @@
----@diagnostic disable: undefined-global
+table.insert(g_pixel_scene_01, {
+	prob			= 1.0,
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcastle/alcohol_pipe.png",
+	visual_file		= "",
+	background_file	= "",
+	is_unique		= 0
+});
 
 table.insert(g_pixel_scene_01, {
 	prob			= 1.0,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/alcohol_pipe.png",
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcastle/shaft2.png",
 	visual_file		= "",
 	background_file	= "",
 	is_unique		= 0
-	});
-
-table.insert(g_pixel_scene_01, {
-	prob			= 1.0,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/shaft2.png",
-	visual_file		= "",
-	background_file	= "",
-	is_unique		= 0
-	});
+});
 
 table.insert(g_pixel_scene_02, {
 	prob			= 0.5,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/hungry_slime.png",
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcastle/hungry_slime.png",
 	visual_file		= "",
 	background_file	= "",
 	is_unique		= 0
-	});
+});
 
 table.insert(g_pixel_scene_02, {
 	prob			= 0.5,
-	material_file	= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/methane_room.png",
-	visual_file		= "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/snowcastle/methane_room_visual.png",
+	material_file	= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcastle/methane_room.png",
+	visual_file		= "mods/Hydroxide/files/chemical_curiosities/biomes/snowcastle/methane_room_visual.png",
 	background_file	= "",
 	is_unique		= 0
 	});

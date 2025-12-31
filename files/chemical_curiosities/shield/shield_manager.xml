@@ -1,0 +1,13 @@
+<Entity name="cc_shield_manager">
+	<InheritTransformComponent/>
+
+	<LuaComponent
+		script_damage_about_to_be_received="mods/Hydroxide/files/chemical_curiosities/shield/shield_manager.lua"
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/shield/shield_manager.lua"
+	/>
+
+	<VariableStorageComponent
+		name="shield_hp"
+		value_float="0.0"
+	/>
+</Entity>

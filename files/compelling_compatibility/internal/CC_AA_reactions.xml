@@ -264,6 +264,7 @@
 		blob_radius1="6"
 	>
 	</Reaction>
+
 	<Reaction probability="10"
 		input_cell1="cc_devouring_moss"		input_cell2="aa_cloning_solution"
 		output_cell1="aa_cloning_solution"			output_cell2="aa_cloning_solution"

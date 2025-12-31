@@ -2,7 +2,7 @@ local entity_id    = GetUpdatedEntityID()
 local x, y, rot = EntityGetTransform( entity_id )
 SetRandomSeed( GameGetFrameNum(), x + y + entity_id )
 
-print("SUMMONING SUPERNOVA AT " .. x .. " " .. y .. "!!!!!!!!!!!!!!!!!")
+print("SUMMONING SUPERNOVA AT [" .. x .. ", " .. y .. "]!!!!!!!!!!!!!!!!!")
 
 
 EntityLoad( "data/entities/particles/supernova.xml", x, y )

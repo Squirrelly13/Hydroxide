@@ -15,7 +15,7 @@ local function check_clone_cap(str)
 			new_str = new_str .. "," .. eid
 		end
 	end
-	return #valid_eids,new_str
+	return #valid_eids,new_str --return number of still alive entities from the list and list with invalid entities purged
 end
 
 --check for cooldown and cap on root entity

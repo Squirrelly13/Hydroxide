@@ -1,38 +1,3 @@
--- all functions below are optional and can be left out
-
-
-
-
-
---[[
-
-function OnModPreInit()
-	print("Mod - OnModInit()") -- After that this is called for all mods
-end
-
-function OnModInit()
-	print("Mod - OnModInit()") -- After that this is called for all mods
-end
-
-function OnModPostInit()
-	print("Mod - OnModPostInit()") -- Then this is called for all mods
-end
-
-
-function OnWorldPreUpdate() -- This is called every time the game is about to start updating the world
-	GamePrint( "Pre-update hook " .. tostring(GameGetFrameNum()) )
-end
-
-function OnWorldPostUpdate() -- This is called every time the game has finished updating the world
-	GamePrint( "Post-update hook " .. tostring(GameGetFrameNum()) )
-end
-
-]]--
-
-
-
-
-
 print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
@@ -45,7 +10,7 @@ dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
-local FF = ModSettingGet("Hydroxide.FF_ENABLED")
+local FF = ModSettingGet("Hydroxide.FF_ENABLED") and false --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 
@@ -133,13 +98,13 @@ if CC then
 
 	---- Structures/Pixel Scenes
 
-	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine.lua" ) --new structures in the mines
-	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
-	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_excavationsite.lua" ) --new structures in the coal pits
-	ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_liquidcave.lua" ) --new structures in the alchemy lab
-	ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcastle.lua" ) --new structures in hiisi base
-	ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_snowcave.lua" ) --new structures in hiisi base
-	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/pixel_scenes/append_vault.lua" ) --new structures in the vault
+	ModLuaFileAppend( "data/scripts/biomes/coalmine.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_coalmine.lua" ) --new structures in the mines
+	ModLuaFileAppend( "data/scripts/biomes/coalmine_alt.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_coalmine_alt.lua" ) --new structures in the collapsed mines
+	ModLuaFileAppend( "data/scripts/biomes/excavationsite.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_excavationsite.lua" ) --new structures in the coal pits
+	ModLuaFileAppend( "data/scripts/biomes/liquidcave.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_liquidcave.lua" ) --new structures in the alchemy lab
+	ModLuaFileAppend( "data/scripts/biomes/snowcastle.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_snowcastle.lua" ) --new structures in hiisi base
+	ModLuaFileAppend( "data/scripts/biomes/snowcave.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_snowcave.lua" ) --new structures in hiisi base
+	ModLuaFileAppend( "data/scripts/biomes/vault.lua", "mods/Hydroxide/files/chemical_curiosities/biomes/append_vault.lua" ) --new structures in the vault
 
 	---- Spells
 
@@ -219,7 +184,7 @@ end
 --		[Fluent Fluids]
 
 if FF == true then
-	ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
+	--ModMaterialsFileAdd( "mods/Hydroxide/files/fluent_fluids/materials.lua" )
 end
 
 
@@ -233,9 +198,9 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 		GameAddFlagRun("cc_onplayerspawned")
 		if CC then
 			EntitySetDamageFromMaterial( player_entity, "cc_hydroxide", 0.005 )
-			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
-			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
-			EntityLoad("mods/Hydroxide/files/chemical_curiosities/pixel_scenes/other/userk.xml", 11605, 20501) --me too!
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/userk.xml", 11605, 20501) --me too!
 		end
 
 		-- debugging stuffs from eba
@@ -252,12 +217,6 @@ function OnPlayerSpawned( player_entity ) -- This runs when player entity has be
 		print("(CC) Chemical Curiosities already contains a more updated/maintained version of Arcane Alchemy")
 		print("(CC) If you would like to use the legacy Arcane Alchemy mod, it is reccomended you disable Arcane Alchemy in Chemical Curiosities mod settings")
 	end
-
-
-
-
-	print("CC init took " .. total_time .. " seconds")
-
 end
 
 if Terror then

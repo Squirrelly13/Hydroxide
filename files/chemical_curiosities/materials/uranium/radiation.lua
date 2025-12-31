@@ -1,29 +1,24 @@
-dofile_once("data/scripts/lib/utilities.lua")
-dofile_once("data/scripts/gun/procedural/gun_action_utils.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 local entity_id = GetUpdatedEntityID()
-entity_id = EntityGetRootEntity( entity_id )
-
-local pos_x, pos_y = EntityGetTransform( entity_id )
-
-SetRandomSeed( GameGetFrameNum() + GetUpdatedComponentID(), pos_x + pos_y + entity_id )
-
-local angle = math.rad(Random(0,360))
-local length = Random(25,75)
-
-length = 5 * (length ^ 0.8)
-
-local vel_x = math.cos( angle ) * length
-local vel_y = 0 - math.sin( angle ) * length
-
-local particles = EntityGetWithTag("radiation")
-local radiationCount = #particles
+local pos_x, pos_y = EntityGetTransform(entity_id)
 
 
-local max_projectiles = ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") and ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") * 3 or 200
+SetRandomSeed(pos_x + GameGetFrameNum(), pos_y - entity_id)
 
-if (radiationCount <= max_projectiles) then
-	shoot_projectile( entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y )
+local angle = math.rad(Random(1,360))
+local speed = Random(25,75)
+speed = 5 * (speed^0.8)
+
+local vel_x = math.cos(angle) * speed
+local vel_y = 0 - math.sin(angle) * speed
+
+
+local radiation_particles = #EntityGetWithTag("radiation")
+local max_projectiles = (ModSettingGet("Hydroxide.MAX_MATERIAL_PROJECTILES") or 60) * 3
+
+if (radiation_particles <= max_projectiles) then
+	ShootProjectile(entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y)
 end
 
 EntityKill(GetUpdatedEntityID())

@@ -15,6 +15,6 @@ reactions = {
         input = "cc_antimatter_powder",
         output = "cc_antimatter_gas",
         probability = 100, -- likelihood of reaction happening when a checker is touched by electricity
-        radius = 30, -- How big an area it converts
+        radius = 6, -- How big an area it converts
     }, -- "my son would never blatantly copy-paste code without removing comments"
 }

@@ -37,12 +37,11 @@
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/effect_nullium.lua"
 		execute_every_n_frame="1"
-	></LuaComponent>
+	/>
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/effect_dot.lua"
 		execute_every_n_frame="30"
-		>
-	</LuaComponent>
+	/>
 
 </Entity>

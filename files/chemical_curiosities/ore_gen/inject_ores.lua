@@ -3,7 +3,6 @@ dofile_once("data/scripts/lib/utilities.lua")
 --SetRandomSeed( ({GameGetDateAndTimeLocal()})[5], ({GameGetDateAndTimeLocal()})[6])
 local world_seed = tonumber(StatsGetValue("world_seed")) or 1
 SetRandomSeed( world_seed, world_seed )
-print("oreGen Seed: " .. StatsGetValue("world_seed"))
 
 function InjectOre(biomefile, orefile)
     local pattern = "(<[%s]-Materials[%s]-name=\"[^\"]*\"[%s]->)"

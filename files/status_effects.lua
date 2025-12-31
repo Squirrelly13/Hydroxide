@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")
 local MM = ModSettingGet("Hydroxide.MM_ENABLED")
@@ -121,7 +119,14 @@ local CC_effects = {
 		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/metals/effect_ironskin.xml",
 		is_harmful=false,
 	},
-
+	{
+		id="CC_APPLY_INGESTED_SHIELD",
+		ui_name="",
+		ui_description="",
+		ui_icon="",
+		effect_entity="mods/Hydroxide/files/chemical_curiosities/shield/apply_ingested_shield.xml",
+		is_harmful=false,
+	},
 	{
 		id="CC_WARP",
 		ui_name="$status_cc_warp",
