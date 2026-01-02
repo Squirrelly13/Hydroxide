@@ -93,10 +93,6 @@ local aa_glimmers = {
 
 }
 
-local mm_glimmers = {
-
-}
-
 
 
 for _,entry in ipairs(ModSettingGet("Hydroxide.CC_ENABLED") and cc_glimmers or {}) do
