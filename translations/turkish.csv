@@ -453,8 +453,8 @@ action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,Slicing Liquid Glim
 action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,Gives a projectile a silvery sparkly trail,,,,,,,,,,,,|TR_missing
 action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,Glittering Liquid Glimmer,,,,,,,,,,,,|TR_missing
 action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,Gives a projectile a glittering sparkly trail,,,,,,,,,,,,|TR_missing
-action_name_cc_glimmer_explodePlayer,Agitine Glimmer,Agitine Glimmer,,,,,,,,,,,,|TR_missing
-action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,|TR_missing
+action_name_cc_glimmer_explode_player,Agitine Glimmer,Agitine Glimmer,,,,,,,,,,,,|TR_missing
+action_desc_cc_ge_glimmer_explode_player,Gives a projectile an agitating sparkly trail,Gives a projectile an agitating sparkly trail,,,,,,,,,,,,|TR_missing
 action_name_cc_glimmer_nullium,Nullium Glimmer,Nullium Glimmer,,,,,,,,,,,,|TR_missing
 action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,,,,,degenerate as in the opposite of regenerate,|TR_missing
 action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,Dormant Crystal Glimmer,,,,,,,,,,,,|TR_missing

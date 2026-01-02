@@ -447,21 +447,21 @@ animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандор�
 ,,,,,,,,,,,,,   Glimmers Expanded!,
 ,,,,,,,,,,,,,,
 action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,,,,,,,令投射物留下腐蚀性的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,,,,,,,令投射物留下腐蚀性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,,,,,,,令投射物留下银色的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,,,,,,,令投射物留下银色的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,,,,,,,令投射物留下充满光耀的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_explodePlayer,Agitine Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_explodePlayer,Gives a projectile an agitating sparkly trail,,,,,,,,令投射物留下激发性的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,,,,,,,令投射物留下充满光耀的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_name_cc_glimmer_explode_player,Agitine Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_cc_glimmer_explode_player,Gives a projectile an agitating sparkly trail,,,,,,,,令投射物留下激发性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_nullium,Nullium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,令投射物留下恶化的闪光轨迹,,,,degenerate as in the opposite of regenerate,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,令投射物留下恶化的闪光轨迹,,,,degenerate as in the opposite of regenerate,|RU_missing|PTBR_missing
 action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,,,,,,,令投射物留下易发散的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,,,,,,,令投射物留下易发散的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_uranium,Uranium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_antimatter_liquid,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_ge_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_desc_cc_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
