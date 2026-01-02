@@ -92,7 +92,7 @@ NullShift_materials = {
 		}
 	},
 	gold = {
-		probability = 0.05,
+		probability = 0.02,
 		variants = {}
 	},
 	cursed_liquid = {
@@ -103,6 +103,10 @@ NullShift_materials = {
 			if GameHasFlagRun("greed_curse") then return true end
 		end
 	},
+	lava = {
+		probability = 0.5,
+		variants = {}
+	}
 }
 
 if AA then

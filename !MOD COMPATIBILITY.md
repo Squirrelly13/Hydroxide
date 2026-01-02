@@ -36,7 +36,7 @@ table.insert(Pandorium_spells, "mods/modid/file/path/to/your/spell.xml")
 ```
 
 ## Unstable and Chaotic
-If you do not want your spell to be cast by Pandorium at all, add the "pandorium_ignore = true" variable to your spell
+If you do not want your spell to be cast by Pandorium at all, add the `pandorium_ignore = true` variable to your spell
 Unstable Pandorium can cast any spell in which `related_projectiles` is not nil and (`pandorium_ignore`, `ai_never_uses` and `recursive`) are all false
 Chaotic Pandorium can cast any Projectile, Static Projectile or Material spell in tiers 0-2 and modifiers in tiers 0-5 unless they have `pandorium_ignore` or "ai_never_uses"
 Chaotic Pandorium also has special detection for Glimmer spells, we check for `"COLOUR"` in the name of a modifier but ideally we'd prefer if mods could add the `is_glimmer` variable to their spell as we intend to phase out the former method.
@@ -78,6 +78,7 @@ NullShift_materials.my_primary_material = {
 	}
 }
 ```
+Null Shifts also have a 25% chance to pull from held material, add the tag `CC_NULL_SHIFT_IGNORE` if you would like your material to not be possible to Null Shift in this manner
 
 You can also directly append into `/null_shift.lua`'s `NullShiftData` global to alter global information directly or add custom functions under `NullShiftData.custom_functions`!
 ```lua

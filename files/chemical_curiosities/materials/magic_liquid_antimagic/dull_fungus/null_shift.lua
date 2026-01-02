@@ -49,7 +49,7 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 				if active_item ~= nil and (EntityHasTag(active_item, "potion") or EntityHasTag(active_item, "powder_stash")) then
 					local mat = GetMaterialInventoryMainMaterial(active_item)
 					held_material = CellFactory_GetName(mat)
-					if held_material == "air"or ("," .. CellFactory_GetTags(mat) .. ","):find(",CC_NULL_SHIFT_IGNORE") then
+					if held_material == "air" or CellFactory_HasTag(mat, "CC_NULL_SHIFT_IGNORE") then
 						held_material = nil
 					end
 				end
