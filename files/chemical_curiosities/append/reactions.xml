@@ -421,9 +421,15 @@
 	<!-- health tonic -->
 
 	<Reaction probability="68"
-	input_cell1="pea_soup"			input_cell2="honey"
-	output_cell1="cc_health_tonic"	output_cell2="pea_soup"
-	blob_radius1="3"
+		input_cell1="pea_soup"			input_cell2="honey"
+		output_cell1="cc_health_tonic"	output_cell2="pea_soup"
+		blob_radius1="3"
+	/>
+
+	<Reaction probability="100"
+		input_cell1="cc_health_tonic"		input_cell2="mimic_liquid"
+		output_cell1="material_darkness"	output_cell2="material_darkness"
+		blob_radius1="3"
 	/>
 
 	<!-- thunder powder -->
