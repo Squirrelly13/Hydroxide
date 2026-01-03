@@ -1,5 +1,5 @@
 table.insert(materials_magic, {
-    material="aa_darkmatter",
+    material="aa_dark_matter",
     cost=500,
 });
 

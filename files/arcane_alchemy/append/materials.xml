@@ -98,8 +98,8 @@
   </CellData>
 
 	<CellData
-	name="aa_darkmatter"
-	ui_name="$mat_aa_darkmatter"
+	name="aa_dark_matter"
+	ui_name="$mat_aa_dark_matter"
 	tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
 	burnable="0"
 	density="4"

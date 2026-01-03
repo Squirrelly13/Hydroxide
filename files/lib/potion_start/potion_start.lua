@@ -66,7 +66,7 @@ local aa_starterpotions = {
 
 local aa_magicpotions = {
 	{"aa_base_potion"},
-	{"aa_darkmatter"},
+	{"aa_dark_matter"},
 	{"aa_base_potion"},
 	{"aa_love"},
 	{"aa_pandorium"},

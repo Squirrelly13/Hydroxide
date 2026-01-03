@@ -29,7 +29,7 @@ current_language,English,Русский,Português [Brasil],Español,Deutsch,Fra
 ,,,,,,,,,,,,,   Materials!,
 ,,,,,,,,,,,,,,
 mat_aa_hitself,Stop Hitting Yourself,Перестань Бить Себя,Pare de se bater,,,,,,别打自己了,,,,,
-mat_aa_darkmatter,Dark Matter,Тёмная Материя,Matéria escura,,,,,,暗物质,,,,like the scientific form of matter,
+mat_aa_dark_matter,Dark Matter,Тёмная Материя,Matéria escura,,,,,,暗物质,,,,like the scientific form of matter,
 mat_aa_static_charge,Static Charge,Статический Заряд,Carga estática,,,,,,静电荷,,,,,
 mat_aa_repultium,Repultium,Отталкиватий,Repúlsio,,,,,,排斥魔药,,,,like Repulsion,
 mat_aa_hungry_slime,Hungry Slime,Голодная Слизь,Gosma faminta,,,,,,饥饿史莱姆,,,,,
@@ -446,6 +446,14 @@ animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандор�
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Glimmers Expanded!,
 ,,,,,,,,,,,,,,
+action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_aa_glimmer_condensed_gravity,Gives a projectile a heavy sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_name_aa_glimmer_dark_matter,Dark Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_aa_glimmer_dark_matter,Gives a projectile a cosmic sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_name_aa_glimmer_static_charge,Static Charge Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_aa_glimmer_static_charge,Gives a projectile a electrifying sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,,,,,,,令投射物留下腐蚀性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
@@ -460,8 +468,8 @@ action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,,,,,,,,,,,,,|RU_m
 action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,,,,,,,令投射物留下易发散的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_uranium,Uranium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_antimatter_liquid,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_antimatter_liquid,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
+action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,

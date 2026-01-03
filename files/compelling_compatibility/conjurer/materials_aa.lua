@@ -12,7 +12,7 @@ table.insert(ALL_MATERIALS, {
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/aa_mat_icons/darkmatter.png",
         name="Dark Matter",
-        id="aa_darkmatter"
+        id="aa_dark_matter"
       },
       {
         image="mods/Hydroxide/files/compelling_compatibility/conjurer/aa_mat_icons/static_charge.png",  -- This should be a 16*16px icon

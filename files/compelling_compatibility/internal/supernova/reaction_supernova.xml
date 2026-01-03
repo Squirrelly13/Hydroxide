@@ -1,6 +1,6 @@
 <Materials>
 	<Reaction probability = "50"
-        input_cell1="aa_condensed_gravity" input_cell2="aa_darkmatter" input_cell3="[antimatter]"
+        input_cell1="aa_condensed_gravity" input_cell2="aa_dark_matter" input_cell3="[antimatter]"
         output_cell1="air" output_cell2="air" output_cell3="air"
         fast_reaction="1"
     >
