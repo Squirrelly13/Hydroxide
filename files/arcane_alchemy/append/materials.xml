@@ -982,10 +982,10 @@
 
   </CellData><!-- Unstable Pandorium -->
 
-  <CellData
+<CellData
 	name="aa_chaotic_pandorium"
 	ui_name="$mat_aa_chaotic_pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
+	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -1028,7 +1028,7 @@
 			<StatusEffect type="AA_VOMIT_SPELLS_CHAOTIC" amount="0.10"/>
 			</Ingestion>
 	</StatusEffects>
-  </CellData><!-- Chaotic Pandorium -->
+</CellData><!-- Chaotic Pandorium -->
 
 
 

@@ -2,7 +2,7 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
-dofile_once("data/fixnoita/fix.lua")
+dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
 dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
