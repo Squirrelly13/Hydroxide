@@ -377,6 +377,14 @@ if ModIsEnabled("apotheosis") or ModIsEnabled("Apotheosis") then
 end
 
 
+--	Twitch Comments Live
+
+if ModIsEnabled("twitchcommentslive") then
+	ModLuaFileAppend("mods/twitchcommentslive/files/scripts/material_table.lua",
+		"mods/Hydroxide/files/compelling_compatibility/twitchcommentslive.lua")
+end
+
+
 
 
 
