@@ -49,6 +49,8 @@ if ModSettingGet("Hydroxide.CC_ENABLED") then
 	for i, material in ipairs(cc_potions) do
 		tcl_mats.potions[num+i] = material
 	end
+
+	
 end
 
 if ModSettingGet("Hydroxide.AA_ENABLED") then
