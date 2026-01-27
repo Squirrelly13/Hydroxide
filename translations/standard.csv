@@ -327,8 +327,6 @@ log_cc_paradox_warp,You feel as if you are no longer in the same place...,,Você
 death_cc_morphine,Careful with those painkillers,,Cuidado com esses analgésicos,,,,,,谨慎服用止痛药,,,,death msg from when you die to something while Morphine is obfuscating your HP,|RU_missing
 death_cc_antimatter,Annihilation,,,,,,,,,,,,annihilation specifically being the term for when Matter and Anti-Matter neutralise one another,
 cc_shield_depleted,Shield Depleted!,,,,,,,,,,,,,
-item_cc_fungal_curse,fungal curse,,,,,,,,,,,,,
-itemdesc_cc_fungal_curse,fungal curse description,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
