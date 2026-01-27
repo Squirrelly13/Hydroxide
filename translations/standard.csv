@@ -97,8 +97,8 @@ status_aa_repulsion,Repulsion,Отторжение,Repulsão,,,,,,排斥,,,,,
 status_desc_aa_repulsion,A mysterious force struggling to be rid of you,Таинственная сила пытается избавиться от вас,Uma força misteriosa está tentando se livrar de você,,,,,,某种试图排斥你的神秘力量,,,,,
 status_aa_hungry_vomit,Slime Vomit,Слизистая рвота,Vômito gosmento,,,,,,史莱姆呕吐,,,,,
 status_desc_aa_hungry_vomit,You feel something crawling back up,"Вы чувствуете, как что-то ползёт обратно",Você sente algo querendo voltar do seu estômago,,,,,,你感觉喉咙里有东西爬出来,,,,crawling back up your throat,
-status_aa_love_potion,LOVE ME,ЛЮБИ МЕНЯ,ME AME,,,,,,爱我,,,,'LOVE ME' and 'PLEASE DONT GO' should give off a 'needy' or 'desperate' vibe,
-status_desc_aa_love_potion,PLEASE DONT GO,"ПОЖАЛУЙСТА, НЕ УХОДИ","POR FAVOR, NÃO SE VÁ",,,,,,求求你不要走,,,,,
+status_aa_love_potion,LOVE ME,ЛЮБИ МЕНЯ,ME AME,,,,,,爱我,,,,'LOVE ME' and 'PLEASE DON'T GO' should give off a 'needy' or 'desperate' vibe,
+status_desc_aa_love_potion,PLEASE DON'T GO,"ПОЖАЛУЙСТА, НЕ УХОДИ","POR FAVOR, NÃO SE VÁ",,,,,,求求你不要走,,,,,
 status_aa_path,Infinite wealth?,Бесконечное богатство?,Riqueza infinita?,,,,,,无尽财富？,,,,,
 status_desc_aa_path,Reap what you have sown,"Что посеешь, то и пожнешь",Colha o que plantou,,,,,,自食其果,,,,,
 status_aa_icefire,Freezing Inferno,Замораживающий ад,Inferno congelante,,,,,,冰冷狱火,,,,,
@@ -223,7 +223,7 @@ action_desc_cc_gunpowder_buff,Makes nearby gunpowder more dangerous,Делает
 action_cc_fire_to_grease,Fire Enhancer,Усилитель огня,Intesificador de fogo,,,,,,火焰增幅器,,,,,
 action_desc_cc_fire_to_grease,Causes nearby fires to erupt violently,Заставляет ближайший огонь яростно вспыхнуть,Converte o fogo dos arredores para uma erupção violenta,,,,,,使附近的火焰猛烈爆发,,,,,
 action_cc_gunpowder_cloud,Gunpowder Cloud,Пороховое облако,Nuvem de pólvora,,,,,,火药云,,,,,
-action_desc_cc_gunpowder_cloud,???,???,???,,,,,,???,,,,"i think the question marks were supposed to be temporary, but at this point this one has been translated twice (clearly a lot of effort), i kinda just wanna leave it as is lmao",
+action_desc_cc_gunpowder_cloud,???,???,???,,,,,,???,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Status Effects!,
@@ -470,6 +470,7 @@ action_name_cc_glimmer_uranium,Uranium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_miss
 action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
+tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,

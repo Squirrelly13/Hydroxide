@@ -2,7 +2,7 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
-dofile_once("data/fixnoita/fix.lua")
+dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
 dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
@@ -374,6 +374,14 @@ if ModIsEnabled("apotheosis") or ModIsEnabled("Apotheosis") then
 				:gsub("\"oil\"", "\"oil\", \"cc_grease\""))
 		end
 	end
+end
+
+
+--	Twitch Comments Live
+
+if ModIsEnabled("twitchcommentslive") then
+	ModLuaFileAppend("mods/twitchcommentslive/files/scripts/material_table.lua",
+		"mods/Hydroxide/files/compelling_compatibility/twitchcommentslive.lua")
 end
 
 
