@@ -3,4 +3,5 @@
 	description=""
 	tags="gameplay,alchemy,Russian,Brazillian Portuguese,Chinese,Turkish"
 	dont_upload_folders="aseprite"
-/>	<!--I removed the description because i am pretty sure it would overwrite the workshop one.-->
+/> <!--I removed the description because i am pretty sure it would overwrite the workshop one.-->
+<!--Note: "Chinese" seems to default to "chinese", for some reason????? Ask SingularityNeko if using Simplified/Traditional Chinese might be more apt-->
