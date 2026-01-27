@@ -472,6 +472,7 @@ action_name_cc_glimmer_uranium,Uranium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_miss
 action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
 action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
+tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,

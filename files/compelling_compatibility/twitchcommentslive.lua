@@ -37,8 +37,8 @@ local aa_potions = {
 	"aa_meagre_offering",
 	"aa_icy_inferno",
 	"aa_pandorium",
-	"aa_unstable_pandorium",
-	"aa_chaotic_pandorium",
+	--"aa_unstable_pandorium",
+	--"aa_chaotic_pandorium", disabled until reroll options are appendable to TCL settings.lua
 	"aa_pop_rocks",
 	"aa_condensed_gravity",
 	"aa_cloning_solution",
@@ -50,7 +50,8 @@ if ModSettingGet("Hydroxide.CC_ENABLED") then
 		tcl_mats.potions[num+i] = material
 	end
 
-	
+	tcl_mats.mat_to_matkey.cc_health_tonic = "health_tonic"
+	tcl_mats.matkey_to_title.health_tonic = GameTextGetTranslatedOrNot("$mat_cc_health_tonic")
 end
 
 if ModSettingGet("Hydroxide.AA_ENABLED") then
@@ -60,4 +61,8 @@ if ModSettingGet("Hydroxide.AA_ENABLED") then
 	end
 
 	tcl_mats.blacklist.aa_strange_matter = true --this shit is too laggy atm
+
+	tcl_mats.mat_to_matkey.aa_unstable_pandorium = "pandorium_scary"
+	tcl_mats.mat_to_matkey.aa_chaotic_pandorium = "pandorium_scary"
+	tcl_mats.matkey_to_title.pandorium_scary = GameTextGetTranslatedOrNot("$tcl_aa_pandorium_scary")
 end
