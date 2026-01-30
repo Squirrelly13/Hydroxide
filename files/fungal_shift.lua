@@ -5,6 +5,8 @@ local FF = ModSettingGet("Hydroxide.FF_ENABLED")
 local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 
+CUSTOM_FUNGAL_FUNTIONS = CUSTOM_FUNGAL_FUNTIONS or {}
+
 
 function AddMaterialsFrom(addition)
 	for i=1,#addition do
@@ -78,7 +80,39 @@ local CC_to = {
 	cc_unstable_metamorphine = 	0.005,
 	cc_health_tonic = 			0.005,
 	cc_devouring_moss = 		0.005,
+}
 
+local cc_funcs = {
+	function(shifter, x, y, debug_no_limits)
+		local curses = {}
+		for _, entity in ipairs(EntityGetInRadiusWithTag(x, y, 200, "essence")) do
+			if EntityGetName(entity) == "curse_of_greed" then
+				curses[#curses+1] = entity
+			end
+		end
+
+		for _, cog in ipairs(curses) do
+			local item_comp = EntityGetFirstComponent(cog, "ItemComponent")
+			local sprite_comp = EntityGetFirstComponent(cog, "SpriteComponent")
+			local lua_comp = EntityGetFirstComponent(cog, "LuaComponent")
+
+			if item_comp then
+				ComponentSetValue2(item_comp, "item_name", "$item_cc_fungal_curse")
+				ComponentSetValue2(item_comp, "ui_description", "$itemdesc_cc_fungal_curse")
+			end
+
+			if sprite_comp then
+				ComponentSetValue2(sprite_comp, "image_file", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/curse/curse.png")
+			end
+
+			if lua_comp then
+				ComponentSetValue2(lua_comp, "script_item_picked_up", "mods/Hydroxide/files/chemical_curiosities/spells/local_shift/curse/curse_pickup.lua")
+			end
+
+			local cog_x,cog_y = EntityGetTransform(cog)
+			EntityLoad("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/curse/cog_transform_effect.xml", cog_x, cog_y)
+		end
+	end
 }
 
 
