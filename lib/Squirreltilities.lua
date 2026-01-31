@@ -57,6 +57,7 @@ function EntityMimicMaterialDamage(entity, target_material, template_material)
 	end
 end
 
+--[[
 --Edits an entity's XML file to mimic a material damage value for a different material. NOT IMPLEMENTED
 ---@param filepath string
 ---@param target_material string
@@ -66,12 +67,12 @@ function FileMimicMaterialDamage(filepath, target_material, template_material)
 	local xml = ModDoesFileExist(filepath) and nxml.parse(ModTextFileGetContent(filepath))
 	if xml == nil then return end
 
-	--oh this doesnt work
+	--oh this doesnt work, this needs to be doing nxml stuff, will resolve later
 	local template_strength = EntityGetDamageFromMaterial(filepath, template_material)
 	if template_strength ~= nil then
 		EntitySetDamageFromMaterial(filepath, target_material, template_strength)
 	end
-end
+end--]]
 
 --allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
 ---@param xml_path string
@@ -243,8 +244,7 @@ end
 function CreateClone(path, origin, x, y, genome)
 	local entity = EntityLoad(path, x, y)
 	if genome then
-		local genome_comps = EntityGetComponent(entity, "GenomeDataComponent") or {}
-		for _, comp in ipairs(genome_comps) do
+		for _, comp in ipairs(EntityGetComponent(entity, "GenomeDataComponent") or {}) do
 			ComponentSetValue2(comp, "herd_id", StringToHerdId(genome))
 		end
 	end
