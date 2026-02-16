@@ -15,8 +15,10 @@ function stringsplit(inputstr, sep)
 end
 
 
-
---Acquires the designated entity's damage model and returns the material damage of the requested material
+---If `material` parameter is passed, will return the amount of damage taken from that material, or nil if none. Otherwise, returns a table of material damage indexed by material name.
+---@param entity entity_id
+---@param material string
+---@return number[]|number|nil
 function EntityGetDamageFromMaterial(entity, material)
 	local damage_model_component = EntityGetFirstComponentIncludingDisabled(entity, "DamageModelComponent")
 	if damage_model_component then
@@ -55,19 +57,22 @@ function EntityMimicMaterialDamage(entity, target_material, template_material)
 	end
 end
 
---Edits an entity's XML file to mimic a material damage value for a different material
+--[[
+--Edits an entity's XML file to mimic a material damage value for a different material. NOT IMPLEMENTED
 ---@param filepath string
 ---@param target_material string
 ---@param template_material string
 function FileMimicMaterialDamage(filepath, target_material, template_material)
+	do return end
 	local xml = ModDoesFileExist(filepath) and nxml.parse(ModTextFileGetContent(filepath))
 	if xml == nil then return end
 
+	--oh this doesnt work, this needs to be doing nxml stuff, will resolve later
 	local template_strength = EntityGetDamageFromMaterial(filepath, template_material)
-	if (template_strength ~= nil) then
+	if template_strength ~= nil then
 		EntitySetDamageFromMaterial(filepath, target_material, template_strength)
 	end
-end
+end--]]
 
 --allows for a quick way to set the blood_material of an enemy. Most enemies have their DamageModelComponent nested under a Base component, but this function doesn't account for ones that don't. Will fix if necessary
 ---@param xml_path string
@@ -84,6 +89,9 @@ end
 ---Transforms materials within radius from materials_input to output material
 ---@param radius number
 ---@param materials_input string[]
+---@param output string
+---@param x number
+---@param y number
 function LocalShift(radius, materials_input, output, x, y)
 	local shift_entity = EntityCreateNew("CC_shifting_guy")
 	EntitySetTransform(shift_entity, x, y)
@@ -134,6 +142,7 @@ end
 ---@param t T[]
 ---@param context any
 ---@return T|nil
+---Compiles entries from `t` into a new table based on optional `condition` value in the entry and passes it through `RandomFromTable`. `context` is passed into the function as a parameter.
 function ConditionalRandomFromTable(t, context)
 	local temp = {}
 	for _, entry in ipairs(t) do
@@ -169,6 +178,7 @@ end
 ---handy func i stole that converts an entire table to string, grabbed from [here](https://stackoverflow.com/questions/9168058/how-to-dump-a-table-to-console)
 ---@param o table
 ---@return string
+---@diagnostic disable-next-line: lowercase-global
 function dump(o)
 	if type(o) == 'table' then
 		local s = '{ '
@@ -182,12 +192,24 @@ function dump(o)
 	end
 end
 
+---simple func to get herd id, mostly for other funcs in this file to utilise
+---@param entity_id entity_id
+---@return int
 function GetHerdID(entity_id)
 	local genome_comp = EntityGetFirstComponent(entity_id, "GenomeDataComponent")
 	if genome_comp then return ComponentGetValue2(genome_comp, "herd_id")
 	else return 0 end
 end
 
+---Replacement function for the vanilla `utilities.lua` function `shoot_projectile()`
+---@param shooter entity_id
+---@param entity_file string filepath to projectile.xml
+---@param x number
+---@param y number
+---@param vel_x number?
+---@param vel_y number?
+---@param send_message bool?
+---@return entity_id
 function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
 	shooter = shooter or 0
 	local entity_id = EntityLoad(entity_file, x, y)
@@ -216,14 +238,13 @@ end
 ---@param origin entity_id|nil Original entity from which the clone was derived (optional)
 ---@param x number
 ---@param y number
----@param genome string|nil New genome for the clone (optional)
+---@param genome string? New genome for the clone (optional)
 ---@return entity_id
 ---@return component_id
 function CreateClone(path, origin, x, y, genome)
 	local entity = EntityLoad(path, x, y)
 	if genome then
-		local genome_comps = EntityGetComponent(entity, "GenomeDataComponent") or {}
-		for _, comp in ipairs(genome_comps) do
+		for _, comp in ipairs(EntityGetComponent(entity, "GenomeDataComponent") or {}) do
 			ComponentSetValue2(comp, "herd_id", StringToHerdId(genome))
 		end
 	end
