@@ -16,10 +16,10 @@ The original Arcane Alchemy mod is by **Evaisa** and **Doe or Die**
 Chemical Curiosities mod and featured content is owned by **Squirrelly** and additionally developed by **Evaisa** and **UserK**
 
 
+## Translations:
 - Russian Translations by **Alex(GoD)**
 - Brazilian Portuguese Translations by **Absent Friend**
 - Turkish Translations by **Dylan Rhodes (Taha)**
 - Chinese Translations by **SingularityNeko**
-
 
 ***<ins>THIS MOD AND ITS CONTENT IS NOT TO BE USED FOR AI OR AI TRAINING OF ANY SORT WITHOUT EXPLICIT PERMISSION FROM THE CURRENT DEVELOPERS AND/OR OWNER OF THE MOD</ins>***
