@@ -6,7 +6,9 @@ This Noita mod is formed of the Chemical Curiosities, Arcane Alchemy, Mystical M
 ## Branches
 
 the `main` branch is the public version of the mod uploaded to the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2866701037) and [Mod Workshop](https://modworkshop.net/mod/53590)
+
 the `experimental` branch is where experimental content is sometimes pushed for testing before pushed to `main`
+
 the `development` branch is where development is done, and has no guarantee to be stable or playable
 
 # Credit:
