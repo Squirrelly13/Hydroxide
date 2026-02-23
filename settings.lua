@@ -97,10 +97,6 @@ ccs.translation_strings = {
 		},
 	},
 
-	mod_title = { --todo: colour the words separately
-		en = "Squirrelly's Chemical Curiosities",
-		en_desc = "A sequel/remastering of Evaisa's Arcane Alchemy, and more!",
-	},
 	global = {
 		en = "Global",
 		en_desc = "Settings that apply to all aspects of the mod",
@@ -174,6 +170,10 @@ ccs.translation_strings = {
 				en_example = "(Missing English translation)" --  <-- example on how it should be written
 			}
 		},
+		mod_title = { --todo: colour the words separately
+			en = {"Squirrelly's ", "Chemical ", "Curiosities"}, --split into 3 cuz they are coloured differently, contact me if the order is different so I can go account for that
+			en_desc = "A sequel/remastering of Evaisa's Arcane Alchemy, and more!",
+		},
 	},
 }
 
@@ -183,13 +183,13 @@ ccs.translation_strings = {
 local translation_credit_data = {
 	ptbr = {
 		text = "Tradução para português brasileiro por",
-		translator = { --note to self, account for multiple translators at some point if that ends up happening
+		translator = { --does not currently support multiple translators of the same language, will resolve when necessary
 			"Absent Friend",
 			r = 190/255,
 			g = 146/255,
 			b = 190/255,
 		}
-	} and nil,
+	},
 	de = {
 		text = "Deutsche Übersetzung von",
 		translator = {
