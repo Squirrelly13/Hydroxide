@@ -6,6 +6,11 @@ dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
 dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
+ModSettingSet("Hydroxide.CC_ENABLED", true)
+ModSettingSet("Hydroxide.AA_ENABLED", true)
+ModSettingSet("Hydroxide.MM_ENABLED", true)
+ModSettingSet("Hydroxide.FF_ENABLED", true)
+ModSettingSet("Hydroxide.TERROR_ENABLED", true)
 
 local CC = ModSettingGet("Hydroxide.CC_ENABLED")
 local AA = ModSettingGet("Hydroxide.AA_ENABLED")

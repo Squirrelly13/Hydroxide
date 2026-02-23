@@ -43,7 +43,7 @@ local langs_in_order = { --do this cuz key-indexed tables wont keep this order
 	"ukr",
 	"trtr",
 }
-
+do return end
 local current_language = languages[GameTextGetTranslatedOrNot("$current_language")] or "unknown"
 local cached_lang
 
@@ -122,6 +122,7 @@ ccs.translation_strings = {
 		}
 	},
 	aa = {
+		en = "Arcane Alchemy",
 		enabled = {
 			en = "Enabled",
 			en_desc = "Enables content from the Chemical Curiosities module."
@@ -132,6 +133,7 @@ ccs.translation_strings = {
 		}
 	},
 	mm = {
+		en = "Mystical Mixtures",
 		enabled = {
 			en = "Enabled",
 			en_desc = "Enables content from the Mystical Mixtures module."

@@ -76,7 +76,28 @@ table.insert( actions,  {
         action              = function()
             add_projectile("mods/Hydroxide/files/chemical_curiosities/spells/material_spells/metal_seasoning.xml")
             c.fire_rate_wait = c.fire_rate_wait - 15
-            current_reload_time = current_reload_time - ACTION_DRAW_RELOAD_TIME_INCREASE - 10 -- this is a hack to get the cement reload time back to 0
+            current_reload_time = current_reload_time - ACTION_DRAW_RELOAD_TIME_INCREASE - 10 -- this is a hack to get the cement reload time back to 0 --[[ what? -UserK]]
+        end,
+});
+
+table.insert( actions, {
+        id          = "CC_CLOUD_SLICE",
+        name         = "$action_cc_cloud_slice",
+        author        = "$cc_name_squirrelly",
+        origin         = "$cc_branch_name_cc",
+        description = "$action_desc_cc_cloud_slice",
+        sprite         = "mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_slice.png",
+        sprite_unidentified = "data/ui_gfx/gun_actions/cloud_water_unidentified.png",
+        related_projectiles    = {"mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_slice.xml"},
+        type         = ACTION_TYPE_STATIC_PROJECTILE,
+        spawn_level                       = "5",
+        spawn_probability                 = "0.2",
+        price = 200,
+        mana = 8,
+        max_uses = 10,
+        action         = function()
+            add_projectile("mods/Hydroxide/files/chemical_curiosities/spells/material_spells/cloud_slice.xml")
+            c.fire_rate_wait = c.fire_rate_wait + 15
         end,
 });
 
