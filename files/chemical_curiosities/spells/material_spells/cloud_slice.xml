@@ -138,7 +138,7 @@
 		</ParticleEmitterComponent>
 
 		<ParticleEmitterComponent
-			emitted_material_name="cc_dormant_crystal"
+			emitted_material_name="cc_slicing_liquid"
 			offset.x="0"
 			offset.y="0"
 			x_pos_offset_min="0"
