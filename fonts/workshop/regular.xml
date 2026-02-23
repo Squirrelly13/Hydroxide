@@ -254,4 +254,7 @@
 	<QuadChar id="8222" offset_x="0" offset_y="0" rect_h="11" rect_w="4" rect_x="1459" rect_y="0" width="4"/>
 	<QuadChar id="8230" offset_x="0" offset_y="0" rect_h="11" rect_w="6" rect_x="1464" rect_y="0" width="6"/>
 	<QuadChar id="8734" offset_x="0" offset_y="0" rect_h="11" rect_w="10" rect_x="1471" rect_y="0" width="10"/>
+	
+	<!-- row 2 -->
+	<QuadChar id="952" offset_x="0" offset_y="0" rect_h="11" rect_w="6" rect_x="4" rect_y="12" width="6"/>
 </FontData>
