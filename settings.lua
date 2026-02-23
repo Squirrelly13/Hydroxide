@@ -274,16 +274,22 @@ local function log(...)
 	end
 end
 
-local function dump(o)
+local function dump(o, q, r)
+	r = r or 0
+	local _t = ('    '):rep(r)
 	if type(o) == 'table' then
-		local s = '{ '
+		local s = '{\n'
 		for k,v in pairs(o) do
-			if type(k) ~= 'number' then k = '"'..k..'"' end
-			s = s .. '['..k..'] = ' .. dump(v) .. ','
+			if type(k) == 'number' then
+				k = '['..k..']'
+			elseif not q then
+				k = '["'..k..'"]'
+			end
+			s = s .. _t .. '    '..k..' = ' .. dump(v,q,r+1) .. ',\n'
 		end
-		return s .. '} '
+		return s .. _t .. '}'
 	else
-		return tostring(o)
+		return '"' .. tostring(o):gsub("\n", "\\n") .. '"'
 	end
 end
 
@@ -1012,7 +1018,9 @@ local function draw_translation_credits(gui, x, y)
 	GuiLayoutEndLayer(gui)
 end
 
+logging = true
 function ModSettingsGui(gui, in_main_menu)
+	log(dump(ccs.settings), false)
 	keyboard_state = 0
 	if InputIsKeyDown(225) or InputIsKeyDown(229) then
 		keyboard_state = 1
@@ -1044,6 +1052,7 @@ function ModSettingsGui(gui, in_main_menu)
 			else
 				render_setting = setting.render_condition ~= false
 			end
+			log(setting.path, " = ", render_setting)
 			if render_setting then
 				local setting_is_disabled = parent_is_disabled or (setting.requires and not ModSettingGetNextValue(setting.requires.id) == setting.requires.value)
 				if setting.type == "group" then
@@ -1276,6 +1285,7 @@ function ModSettingsGui(gui, in_main_menu)
 	end
 
 	RenderModSettingsGui(gui, in_main_menu)
+	logging = false
 end
 
 
