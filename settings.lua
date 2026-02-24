@@ -43,7 +43,7 @@ local langs_in_order = { --do this cuz key-indexed tables wont keep this order
 	"ukr",
 	"trtr",
 }
-do return end
+
 local current_language = languages[GameTextGetTranslatedOrNot("$current_language")] or "unknown"
 local cached_lang
 
@@ -140,6 +140,7 @@ ccs.translation_strings = {
 		},
 	},
 	t = {
+		en = "Terror",
 		enabled = {
 			en = "Enabled",
 			en_desc = "Enables content from the Terror module."
@@ -252,10 +253,12 @@ else
 end --if i cant locate the fonts under the local mods folder, the mod has to be running from the workshop directory
 
 local regular_font = font_dir .. "regular.xml"
+local ui_font = font_dir .. "ui.xml"
 
 
 if mods_are_loaded and DebugGetIsDevBuild() then --custom fonts do not work in-game for noita_dev.exe: https://discord.com/channels/453998283174576133/632303734877192192/1465859077216145541
 	regular_font = "data/fonts/font_pixel_noshadow.xml"
+	ui_font = "data/fonts/font_pixel_noshadow.xml"
 end
 
 
@@ -277,21 +280,31 @@ local function log(...)
 end
 
 local function dump(o, q, r)
+	q = q == nil and true
 	r = r or 0
 	local _t = ('    '):rep(r)
-	if type(o) == 'table' then
+	local t = type(o)
+	if t == 'table' then
 		local s = '{\n'
+		local table_is_empty = true
 		for k,v in pairs(o) do
+			table_is_empty = false
 			if type(k) == 'number' then
 				k = '['..k..']'
-			elseif not q then
+			elseif q then
 				k = '["'..k..'"]'
 			end
 			s = s .. _t .. '    '..k..' = ' .. dump(v,q,r+1) .. ',\n'
 		end
-		return s .. _t .. '}'
-	else
+		if table_is_empty then
+			return s:sub(1, -2) .. '}'
+		else
+			return s .. _t .. '}'
+		end
+	elseif t == "string" then
 		return '"' .. tostring(o):gsub("\n", "\\n") .. '"'
+	else
+		return tostring(o)
 	end
 end
 
@@ -561,6 +574,7 @@ ccs.settings = {
 	},
 	{
 		id = "cc", --Chemical Curiosities
+		type = "group",
 		collapsed = true,
 		items = {
 			{
@@ -579,6 +593,7 @@ ccs.settings = {
 	},
 	{
 		id = "aa", --Arcane Alchemy
+		type = "group",
 		collapsed = true,
 		items = {
 			{
@@ -593,6 +608,7 @@ ccs.settings = {
 	},
 	{
 		id = "mm", --Mystical Mixtures
+		type = "group",
 		collapsed = true,
 		items = {
 			{
@@ -603,6 +619,7 @@ ccs.settings = {
 	},
 	{
 		id = "t", --Terror
+		type = "group",
 		collapsed = true,
 		items = {
 			{
@@ -1020,9 +1037,7 @@ local function draw_translation_credits(gui, x, y)
 	GuiLayoutEndLayer(gui)
 end
 
-logging = true
 function ModSettingsGui(gui, in_main_menu)
-	log(dump(ccs.settings), false)
 	keyboard_state = 0
 	if InputIsKeyDown(225) or InputIsKeyDown(229) then
 		keyboard_state = 1
@@ -1054,7 +1069,6 @@ function ModSettingsGui(gui, in_main_menu)
 			else
 				render_setting = setting.render_condition ~= false
 			end
-			log(setting.path, " = ", render_setting)
 			if render_setting then
 				local setting_is_disabled = parent_is_disabled or (setting.requires and not ModSettingGetNextValue(setting.requires.id) == setting.requires.value)
 				if setting.type == "group" then
@@ -1084,7 +1098,7 @@ function ModSettingsGui(gui, in_main_menu)
 					local _, _, _, x, y = GuiGetPreviousWidgetInfo(gui)
 
 					--GuiOptionsAddForNextWidget(gui, GUI_OPTION.ForceFocusable)
-					GuiImageNinePiece(gui, create_id(), x, y, setting.w, setting.h, 0)
+					GuiImageNinePiece(gui, create_id(), x, y, setting.w+10, setting.h, 0)
 					if ({GuiGetPreviousWidgetInfo(gui)})[3] and mouse_is_valid then --check if element was clicked
 						c.r = math.min((c.r * 1.2)+.05, 1)
 						c.g = math.min((c.g * 1.2)+.05, 1)
@@ -1220,6 +1234,28 @@ function ModSettingsGui(gui, in_main_menu)
 					GuiColorSetForNextWidget(gui, c.r, c.g, c.b, 1)
 					GuiText(gui, offset + w, 0, ("[%s]"):format(setting.option_names[setting.current_option_int]), 1, regular_font)
 
+				elseif setting.type == "slider" then
+					GuiText(gui, 0, 0, "")
+					local _, _, _, x, y = GuiGetPreviousWidgetInfo(gui)
+					GuiImageNinePiece(gui, create_id(), x, y, setting.w, setting.h, 0)
+					local guiPrev = {GuiGetPreviousWidgetInfo(gui)}
+					GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
+					GuiText(gui, -1, 0, " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 1, ui_font)
+					GuiText(gui, 0, 0, "!\"#################################################\"!", 1, ui_font)
+					for index, value in ipairs({
+						" ",
+						"!",
+						'"',
+						"#",
+						"%",
+					}) do
+						GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
+						GuiText(gui, 10, 0, value:rep(10), 1, ui_font)
+						GuiText(gui, 0, 0, value .. ":")
+					end
+					GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
+					GuiText(gui, 9, 0, " "..("$"):rep(10), 1, ui_font)
+					GuiText(gui, -1, 0, " $:")
 
 				elseif setting.type == "reset_button" then
 					GuiText(gui, 0, 0, "")
@@ -1287,7 +1323,6 @@ function ModSettingsGui(gui, in_main_menu)
 	end
 
 	RenderModSettingsGui(gui, in_main_menu)
-	logging = false
 end
 
 

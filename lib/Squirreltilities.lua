@@ -192,6 +192,39 @@ function dump(o)
 	end
 end
 
+---a version of the `dump()` function but with formatting
+---@param o table
+---@param q bool? should keys be in quotes
+---@return string
+---@diagnostic disable-next-line: lowercase-global
+function dumpf(o, q, r)
+	r = r or 0
+	local _t = ('    '):rep(r)
+	local t = type(o)
+	if t == 'table' then
+		local s = '{\n'
+		local table_is_empty = true
+		for k,v in pairs(o) do
+			table_is_empty = false
+			if type(k) == 'number' then
+				k = '['..k..']'
+			elseif q then
+				k = '["'..k..'"]'
+			end
+			s = s .. _t .. '    '..k..' = ' .. dumpf(v,q,r+1) .. ',\n'
+		end
+		if table_is_empty then
+			return s:sub(1, -2) .. '}'
+		else
+			return s .. _t .. '}'
+		end
+	elseif t == "string" then
+		return '"' .. tostring(o):gsub("\n", "\\n") .. '"'
+	else
+		return tostring(o)
+	end
+end
+
 ---simple func to get herd id, mostly for other funcs in this file to utilise
 ---@param entity_id entity_id
 ---@return int
