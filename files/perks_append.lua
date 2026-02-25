@@ -7,9 +7,9 @@ dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 --nvm not adding perks rn cuz apparently Curse of Greed isnt a real perk mb
 local cc_perks = {
     {
-		id = "NLD_HP_ROULETTE",
-		ui_name = "$nld_perk_hp_roulette",
-		ui_description = "All players wager a portion of their Max Health and the winner is granted the bet three-times over",
+		id = "CC_GREATER_MATERIAL_CAPACITY",
+		ui_name = "$cc_perk_greater_capacity",
+		ui_description = "$cc_perkdesc_greater_capacity",
 		ui_icon = "data/ui_gfx/perk_icons/extra_hp.png",
 		perk_icon = "data/items_gfx/perks/extra_hp.png",
 		one_off_effect = true,

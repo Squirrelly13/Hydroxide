@@ -119,7 +119,7 @@ ip.lists = {
 					local oy = self.offset_y or 0
 					local entity_id = EntityLoad(opt, x + ox, y + oy)
 					if (Random(1, 10) == 2) then
-						runestone_activate(entity_id)
+						runestone_activate(entity_id) --using vanilla function in case someone modifies it for a specific purpose
 					end
 				end,
 			offset_y = -10,
@@ -219,16 +219,16 @@ ip.lists = {
 ip.lists.potion_spawnlist = ip.lists.default --pointers for vanilla names cuz i replaced the vanilla table names (i didnt like them)
 ip.lists.potion_spawnlist_liquidcave = ip.lists.liquidcave
 
-spawnlists  =
+spawnlists =
 {
 	potion_spawnlist = {
-		rnd_min = 0,
-		rnd_max = 0,
+		rnd_min = 1,
+		rnd_max = 91,
 		spawns = {}
 	},
 	potion_spawnlist_liquidcave = {
-		rnd_min = 0,
-		rnd_max = 0,
+		rnd_min = 1,
+		rnd_max = 86,
 		spawns = {}
 	}
 }

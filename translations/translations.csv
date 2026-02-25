@@ -1,6 +1,6 @@
 Key,English,Русский,Português (Brasil),tr-tr,简体中文,Español (España),Deutsch,Français (France),日本語,한국어,Polski,
-,en,ru,pt-br,Türkçe,zh-cn,es-es,de,fr-fr,jp,ko,pl,NOTES – use \n for newline
-current_language,English,Русский,Português [Brasil],,简体中文,Español,Deutsch,Francais,日本語,한국어,Polski,
+,en,ru,pt-br,tr-tr,zh-cn,es-es,de,fr-fr,jp,ko,pl,NOTES – use \n for newline
+current_language,English,Русский,Português [Brasil],Türkçe,简体中文,Español,Deutsch,Francais,日本語,한국어,Polski,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,CREDITS:
@@ -160,7 +160,7 @@ mat_cc_explode_player,Agitine,Агитин,Agitínio,Kışkırtm,激发魔药,,,
 mat_cc_alchemy_powder,Alchemy Powder,Алхимический порошок,Pó de alquimia,Simya Tozu,炼金粉末,,,,,,,
 mat_cc_metastasizium,Metastasizium,Метастазий,Metastisísio,Metastazm,扩散魔药,,,,,,,like 'Metastasis' or similar to a cancer in its growth
 mat_cc_nullium,Nullium,Нуллиум,Núlio,Etkisizm,虚无魔药,,,,,,,like 'nullify'
-mat_cc_liberum_magicas,Liberum Magicas,Либерум Маgикас,Liberum Magicas,Liberum Magicas,自由魔力,,,,,,,latin for 'Free Magic', free as in to be free or unshackled
+mat_cc_liberum_magicas,Liberum Magicas,Либерум Маgикас,Liberum Magicas,Liberum Magicas,自由魔力,,,,,,,"latin for 'Free Magic', free as in to be free or unshackled"
 mat_cc_thunder_powder,Thunder Powder,Грозовой порошок,Pó de trovão,Yıldırım Tozu,雷霆粉末,,,,,,,
 mat_cc_health_tonic,Health Tonic,Тоник здоровья,Tônico saudável,Can Toniği,生命补剂,,,,,,,
 mat_cc_grease,Grease,Смазка,Graxa,Gres Yağı,油脂,,,,,,,

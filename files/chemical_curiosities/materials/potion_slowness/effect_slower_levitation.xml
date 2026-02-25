@@ -1,25 +1,32 @@
 <Entity>
 	<Base file="data/entities/particles/levitation.xml" >
 		<SpriteParticleEmitterComponent
-		    emission_interval_min_frames="5"
-    		emission_interval_max_frames="15"
-			randomize_position_inside_hitbox="1"  >
-		</SpriteParticleEmitterComponent>
+			emission_interval_min_frames="5"
+			emission_interval_max_frames="15"
+			randomize_position_inside_hitbox="1"
+		/>
 	</Base>
 
-	<InheritTransformComponent>
-    </InheritTransformComponent>
+	<InheritTransformComponent/>
 
-    <LuaComponent
+	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_heavy.lua"
-		execute_on_added="1"
-		execute_every_n_frame="1"
-		>
-	</LuaComponent>
+	/>
 
-    <GameEffectComponent
-        effect="CUSTOM"
-	custom_effect_id="SLOWER_LEVITATION"
-        frames="600" >
-	</GameEffectComponent>
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_apply_heavy.lua"
+		remove_after_executed="1"
+	/>
+
+	<LuaComponent
+		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_remove_heavy.lua"
+		execute_every_n_frame="-1"
+		execute_on_removed="1"
+	/>
+
+	<GameEffectComponent
+		effect="CUSTOM"
+		custom_effect_id="SLOWER_LEVITATION"
+		frames="600"
+	/>
 </Entity>
