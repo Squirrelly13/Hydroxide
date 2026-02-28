@@ -2,7 +2,7 @@
 local path = "C:/Program Files (x86)/Steam/steamapps/common/Noita/mods/Hydroxide/translations/"
 
 local function lock()
-	while true do end
+	--while true do end
 end
 
 local translations = {
@@ -78,24 +78,20 @@ local function transcribe_line(line)
 	for i = 1, #line do
 		local char = line:sub(i, i)
 
-		-- Handle quoted fields
 		if char == '"' then
-			in_quotes = not in_quotes
+			in_quotes = not in_quotes --Handle quoted fields
 		elseif char == "," and not in_quotes then
-			-- End of a field
-			--if current_column == column then return  end
 			if current_column == #corder then return end
+
 			local str = line:sub(start_index, i - 1)
+
 			local target = translations[corder[current_column]]
 			if target then target[#target+1] = str end
 
 			current_column = current_column + 1
-			start_index = i + 1
+			start_index = i + 1 --thank you lamia for the csv parsing logic
 		end
 	end
-
-	-- Handle the last field
-	--if current_column == column then return line:sub(start_index) end
 end
 
 f:read("*l") --discard second line
@@ -103,13 +99,11 @@ local n = 1
 while true do
 	local line =  f:read("*l")
 	if line == nil then break end
-	--print(n..": "..line)
 
 	transcribe_line(line)
 	n = n + 1
 end
 f:close()
-print("test finished")
 
 for index, value in ipairs(translations["en"]) do
 	print(tostring(value))
@@ -127,7 +121,7 @@ for i, key in ipairs(translations["key"]) do
 end
 
 local standard_file = io.open(path .. "standard.csv","w")
-standard_file:write(standard:sub(1, -2))
+standard_file:write(standard)
 standard_file:close()
 
 for lang,name in pairs(nonstandard_langs) do
@@ -141,7 +135,7 @@ for lang,name in pairs(nonstandard_langs) do
 
 
 	local nonstandard_file = io.open(path .. name .. ".csv","w")
-	nonstandard_file:write(translation:sub(1, -2))
+	nonstandard_file:write(translation)
 	nonstandard_file:close()
 end
 

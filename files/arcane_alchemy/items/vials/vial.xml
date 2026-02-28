@@ -144,7 +144,7 @@
         is_pickable="1"
         is_equipable_forced="1"
         ui_sprite="mods/Hydroxide/files/arcane_alchemy/items/vials/vial_hand.png"
-        ui_description="$item_vial_with_material_description"
+        ui_description="$itemdesc_vial_with_material"
         preferred_inventory="QUICK"
     />
 
