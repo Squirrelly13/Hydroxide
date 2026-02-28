@@ -1,0 +1,148 @@
+
+local path = "C:/Program Files (x86)/Steam/steamapps/common/Noita/mods/Hydroxide/translations/"
+
+local function lock()
+	while true do end
+end
+
+local translations = {
+	["key"] = {},
+
+	--Standard langs
+	["en"] = {},
+	["ru"] = {},
+	["pt-br"] = {},
+	["es-es"] = {},
+	["de"] = {},
+	["fr-fr"] = {},
+	["it"] = {},
+	["pl"] = {},
+	["zh-cn"] = {},
+	["jp"] = {},
+	["ko"] = {},
+
+	--Non-standard langs
+	["tr-tr"] = {},
+}
+
+local standard_langs = {
+	"en",
+	"ru",
+	"pt-br",
+	"es-es",
+	"de",
+	"fr-fr",
+	"it",
+	"pl",
+	"zh-cn",
+	"jp",
+	"ko"
+}
+
+local nonstandard_langs = {
+	["tr-tr"] = "turkish"
+}
+
+local corder = {} --core order
+
+local f = io.open(path .. "core.csv", "r")
+
+local index = f:read("*l")
+
+do
+	local start_index = 1
+	local in_quotes = false
+	for i = 1, #index do
+		local char = index:sub(i, i)
+
+		-- Handle quoted fields
+		if char == '"' then
+			in_quotes = not in_quotes
+		elseif char == "," and not in_quotes then
+			-- End of a field
+			local str = index:sub(start_index, i - 1)
+			if translations[str] then corder[#corder+1] = str end
+			start_index = i + 1
+		end
+	end
+end
+
+local function transcribe_line(line)
+	if line:sub(1,1) == ',' then return end
+
+
+	local current_column = 1
+	local start_index = 1
+	local in_quotes = false
+
+	for i = 1, #line do
+		local char = line:sub(i, i)
+
+		-- Handle quoted fields
+		if char == '"' then
+			in_quotes = not in_quotes
+		elseif char == "," and not in_quotes then
+			-- End of a field
+			--if current_column == column then return  end
+			if current_column == #corder then return end
+			local str = line:sub(start_index, i - 1)
+			local target = translations[corder[current_column]]
+			if target then target[#target+1] = str end
+
+			current_column = current_column + 1
+			start_index = i + 1
+		end
+	end
+
+	-- Handle the last field
+	--if current_column == column then return line:sub(start_index) end
+end
+
+f:read("*l") --discard second line
+local n = 1
+while true do
+	local line =  f:read("*l")
+	if line == nil then break end
+	--print(n..": "..line)
+
+	transcribe_line(line)
+	n = n + 1
+end
+f:close()
+print("test finished")
+
+for index, value in ipairs(translations["en"]) do
+	print(tostring(value))
+end
+
+local standard = ""
+for i, key in ipairs(translations["key"]) do
+	if translations["en"] == nil then print("MISSING EN STRING!") lock() end
+
+	local line = key
+	for _, value in ipairs(standard_langs) do
+		line = line ..","..(translations[value][i] or "")
+	end
+	standard = standard .. line .. ",,,\n"
+end
+
+local standard_file = io.open(path .. "standard.csv","w")
+standard_file:write(standard:sub(1, -2))
+standard_file:close()
+
+for lang,name in pairs(nonstandard_langs) do
+	local translation = ""
+	for i, key in ipairs(translations["key"]) do
+		local tl = translations[lang][i]
+		if #tl == 0 then tl = translations["en"][i] end
+		local line = key .. ","..tl
+		translation = translation .. line .. ",,,,,,,,,,,,,\n"
+	end
+
+
+	local nonstandard_file = io.open(path .. name .. ".csv","w")
+	nonstandard_file:write(translation:sub(1, -2))
+	nonstandard_file:close()
+end
+
+lock()
