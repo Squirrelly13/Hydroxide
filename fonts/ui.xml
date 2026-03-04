@@ -16,5 +16,6 @@
 	<QuadChar id="32" offset_x="0" offset_y="0" rect_h="11" rect_w="1" rect_x="0" rect_y="0" width="1"/>
 	<QuadChar id="33" offset_x="0" offset_y="0" rect_h="11" rect_w="1" rect_x="2" rect_y="0" width="1"/>
 	<QuadChar id="34" offset_x="0" offset_y="0" rect_h="11" rect_w="1" rect_x="4" rect_y="0" width="1"/>
-	<QuadChar id="36" offset_x="0" offset_y="0" rect_h="11" rect_w="1" rect_x="6" rect_y="0" width="1"/>
+	<QuadChar id="35" offset_x="0" offset_y="0" rect_h="11" rect_w="1" rect_x="6" rect_y="0" width="1"/>
+	<QuadChar id="37" offset_x="0" offset_y="0" rect_h="11" rect_w="7" rect_x="8" rect_y="0" width="7"/>
 </FontData>

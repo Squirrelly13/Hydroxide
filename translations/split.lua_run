@@ -21,11 +21,11 @@ local translations = {
 	["jp"] = {},
 	["ko"] = {},
 
-	--Non-standard langs
+	--Non-Standard langs
 	["tr-tr"] = {},
 }
 
-local standard_langs = {
+local standard_langs_ordered = {
 	"en",
 	"ru",
 	"pt-br",
@@ -114,7 +114,7 @@ for i, key in ipairs(translations["key"]) do
 	if translations["en"] == nil then print("MISSING EN STRING!") lock() end
 
 	local line = key
-	for _, value in ipairs(standard_langs) do
+	for _, value in ipairs(standard_langs_ordered) do
 		line = line ..","..(translations[value][i] or "")
 	end
 	standard = standard .. line .. ",,,\n"

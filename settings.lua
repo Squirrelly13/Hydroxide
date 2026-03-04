@@ -441,13 +441,6 @@ local function SettingUpdate(gui, setting, translation)
 		setting.name = setting.name or setting.id
 	end
 
-	if setting.scope_func then
-		--print("scope func identified")
-		--print("pre: " .. setting.scope)
-		setting.scope = setting.scope_func()
-		--print("post: " .. setting.scope)
-	end
-
 	if ModSettingGet(setting.path) ~= ModSettingGetNextValue(setting.path) then
 		setting.extra_lines.scope_warning = ccs.data.extra_lines[scopes[setting.scope+1]]
 	else
@@ -512,7 +505,27 @@ local function SettingUpdate(gui, setting, translation)
 		setting.value_off = setting.value_off or setting.value_default
 	end
 
-	setting.desc_data = generate_tooltip_data(gui, setting.description, setting.recursion * ccs.offset_amount, setting.extra_lines)
+	if setting.type == "slider" then
+		local default_values = {
+			range = 100,
+			display_multiplier = 100,
+			display_offset = 0,
+		}
+		if setting.slider_data == nil then
+			setting.slider_data = default_values
+		else
+			for key, value in pairs(default_values) do
+				if setting[key] == nil then
+					setting[key] = value
+				end
+			end
+		end
+
+		setting.slider_data.current_value = ModSettingGet(setting.path)
+		setting.slider_data.position = 
+	end
+
+	if setting.description then setting.desc_data = generate_tooltip_data(gui, setting.description, setting.recursion * ccs.offset_amount, setting.extra_lines) end
 end
 
 local function SettingSetValue(setting, value)
@@ -569,6 +582,7 @@ ccs.settings = {
 			{
 				id = "max_material_projectiles",
 				type = "slider",
+				value_default = 100,
 			},
 		},
 	},
@@ -587,7 +601,8 @@ ccs.settings = {
 			},
 			{
 				id = "methane_effect_multiplier",
-				type = "slider"
+				type = "slider",
+				value_default = 100
 			},
 		},
 	},
@@ -1235,19 +1250,30 @@ function ModSettingsGui(gui, in_main_menu)
 					GuiText(gui, offset + w, 0, ("[%s]"):format(setting.option_names[setting.current_option_int]), 1, regular_font)
 
 				elseif setting.type == "slider" then
+					local default_values = {
+						range = 100,
+						display_multiplier = 100,
+						display_offset = 0,
+					}
 					GuiText(gui, 0, 0, "")
 					local _, _, _, x, y = GuiGetPreviousWidgetInfo(gui)
 					GuiImageNinePiece(gui, create_id(), x, y, setting.w, setting.h, 0)
 					local guiPrev = {GuiGetPreviousWidgetInfo(gui)}
+					GuiText(gui, 0, 0, setting.name, 1, regular_font)
 					GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
+					GuiColorSetForNextWidget(gui, 0, 0, 0, .8)
+					GuiText(gui, 0, 0, ('!'):rep(setting.slider_data.range + 9), 1, ui_font)
+					GuiText(gui, 0, 0, '!"' .. ('#'):rep(setting.slider_data.range + 5) .. '"!', 1, ui_font)
+					
+					
 					GuiText(gui, -1, 0, " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 1, ui_font)
 					GuiText(gui, 0, 0, "!\"#################################################\"!", 1, ui_font)
 					for index, value in ipairs({
 						" ",
-						"!",
-						'"',
-						"#",
-						"%",
+						"!", --solid
+						'"', --edge
+						"#", --middle
+						"%", --bar
 					}) do
 						GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
 						GuiText(gui, 10, 0, value:rep(10), 1, ui_font)

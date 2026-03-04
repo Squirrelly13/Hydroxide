@@ -12,7 +12,8 @@ lang,English,Русский,Português [Brasil],Türkçe,简体中文,Español (
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,TRANSLATIONS!!!
-,,,,,,,,,,,,"   Hi, UserK here! (use quotation marks like this to use commas)"
+,,,,,,,,,,,,"   Hi, UserK here! (use quotation marks like this to use commas (they must also be at the very beginning and very end of each intividual translation!!!!))"
+,,,,,,,,,,,,
 ,,,,,,,,,,,,I have tried to clarify some translations via to the best of my abilities; but they may not be perfect; feel free to add edit or remove any notes!!
 ,,,,,,,,,,,,Please ping me on the Noita Discord; Chemical Curiosities discord or just dm me @UserK on Discord if you have any queries
 ,,,,,,,,,,,,I would be more than happy to assist in any additions or modifications to the translations and will try my best to answer any questions you may have
@@ -27,7 +28,7 @@ lang,English,Русский,Português [Brasil],Türkçe,简体中文,Español (
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Materials!
 ,,,,,,,,,,,,
-mat_aa_hitself,Stop Hitting Yourself,Перестань Бить Себя,Pare de se bater,Kendine Vurmayı Bırak,别打自己了,,,,,,,
+mat_aa_hitself,Stop Hitting Yourself,Перестань Бить Себя,Pare de se bater,Kendine Vurmayı Bırak,别打自己了,,,,,,,"a common playground joke wherein a target will be physically forced into hitting themself, a common gag in cartoons"
 mat_aa_dark_matter,Dark Matter,Тёмная Материя,Matéria escura,Kara Madde,暗物质,,,,,,,like the scientific form of matter
 mat_aa_static_charge,Static Charge,Статический Заряд,Carga estática,Statik Elektrik,静电荷,,,,,,,
 mat_aa_repultium,Repultium,Отталкиватий,Repúlsio,İticm,排斥魔药,,,,,,,like Repulsion
@@ -48,13 +49,13 @@ mat_aa_magic_plastic,Magical plastic,Волшебный пластик,Plástico
 mat_aa_love,Love,Любовь,Amor,Aşk,爱,,,,,,,
 mat_aa_meagre_offering,A Meagre Offering,Скромное подношение,Uma oferenda insuficiente,Yavan Bir Teklif,微薄的供品,,,,,,,
 mat_aa_rice,Rice,Рис,Arroz,Pirinç,大米,,,,,,,
-mat_aa_icy_inferno,Icy Inferno,Ледяной ад,Inferno gelado,Donmuş Alev,寒冷狱火,,,,,,,
+mat_aa_icy_inferno,Icy Inferno,Ледяной ад,Inferno gelado,Donmuş Alev,寒冷狱火,,,,,,,intentionally opposing ideas of a hot thing being cold
 mat_aa_pandorium,Pandorium,Пандориум,Pandório,Pandoram,潘多拉魔药,,,,,,,derived from the mythological 'Pandora's Box'
 mat_aa_chaotic_pandorium,Chaotic Pandorium,Хаотический Пандориум,Pandório caótico,Kaotik Pandoram,混沌潘多拉魔药,,,,,,,
 mat_aa_unstable_pandorium,Unstable Pandorium,Нестабильный Пандориум,Pandório instável,Dengesiz Pandoram,不稳潘多拉魔药,,,,,,,
 mat_aa_pop_rocks,Pop Rocks,Шипучка,Pop Rocks,Patlayan Şekerler,爆石花,,,,,,,
 mat_aa_condensed_gravity,Condensed Gravity,Сжатая гравитация,Gravidade condensada,Yoğunlaştırılmış Yer Çekimi,浓缩引力,,,,,,,
-mat_aa_cloning_solution,Cloning Solution,Раствор для клонирования,Sólução de clonagem,Kopyalama Çözeltisi,克隆溶液,,,,,,,Solution' as in 'Substance'
+mat_aa_cloning_solution,Cloning Solution,Раствор для клонирования,Sólução de clonagem,Kopyalama Çözeltisi,克隆溶液,,,,,,,'Solution' as in 'Substance'
 mat_aa_compost,Compost,Компост,Adubo,Organik Gübre,堆肥,,,,,,,
 mat_aa_strange_matter,Strange matter,Странная материя,Matéria estranha,Tuhaf madde,奇异物质,,,,,,,
 mat_aa_bloom_solid,Bloomium Growth,Росток Блумиума,Crescimento brotânico,Filizlenme Büymü,绽放基质生长物,,,,,,,
@@ -120,7 +121,7 @@ item_aa_vial,Vial,,Frasco,Şişe,小瓶,,,,,,,
 item_vial_with_material,Vial of $0,Флакон $0,Frasco de $0,$0 Şişe,$0小瓶,,,,,,,
 itemdesc_vial_with_material,A glass vial containing $0\nUseful for throwing!,"Стеклянный флакон, содержащий $0",Um frasco de vidro contendo $0,İçinde $0 olan cam bir şişe,含有$0的玻璃小瓶\n适合投掷！,,,,,,,
 nerf_wand,Nerf Gun,,Arminha Nerf,Nerf Silahı,Nerf枪,,,,,,,Nerf' as in the brand for toy-guns with foam darts
-nerf_dart,Nerf Dart,,Dardo Nerf,Nerf Dartı,Nerf飞镖,,,,,,,read above
+nerf_dart,Nerf Dart,,Dardo Nerf,Nerf Dartı,Nerf飞镖,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Misc!
