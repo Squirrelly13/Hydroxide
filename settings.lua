@@ -508,21 +508,30 @@ local function SettingUpdate(gui, setting, translation)
 	if setting.type == "slider" then
 		local default_values = {
 			range = 100,
-			display_multiplier = 100,
-			display_offset = 0,
+			value_multiplier = 100,
+			value_offset = 0,
 		}
-		if setting.slider_data == nil then
-			setting.slider_data = default_values
-		else
-			for key, value in pairs(default_values) do
-				if setting[key] == nil then
-					setting[key] = value
-				end
+		setting.slider_data = setting.slider_data or {}
+		for key, value in pairs(default_values) do
+			if setting[key] == nil then
+				setting[key] = value
 			end
 		end
 
-		setting.slider_data.current_value = ModSettingGet(setting.path)
-		setting.slider_data.position = 
+		local slider_data = setting.slider_data
+
+		slider_data.current_value = ModSettingGet(setting.path)
+		if slider_data.value_to_position then
+			slider_data.position = slider_data.value_to_position(slider_data.current_value)
+		else
+			slider_data.position = slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
+		end
+
+		if slider_data.value_to_display then
+			slider_data.display_value = slider_data.value_to_display(slider_data.current_value)
+		else
+			slider_data.display_value = slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
+		end
 	end
 
 	if setting.description then setting.desc_data = generate_tooltip_data(gui, setting.description, setting.recursion * ccs.offset_amount, setting.extra_lines) end
