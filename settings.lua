@@ -224,7 +224,7 @@ print("translatable: " .. translatable)
 print("translations: " .. translations)
 print(("translated: %s%%"):format((translations/(translatable*3))*100))--]]
 
--- [[ injector for ModSettingSet and ModSettingSetValue so i can read the values being changed more easily
+--[[ injector for ModSettingSet and ModSettingSetValue so i can read the values being changed more easily
 local old_modsettingset = ModSettingSet
 function ModSettingSet(id, value)
 	local prev_value = ModSettingGet(id)
@@ -507,9 +507,15 @@ local function SettingUpdate(gui, setting, translation)
 
 	if setting.type == "slider" then
 		local default_values = {
-			range = 100,
-			value_multiplier = 100,
-			value_offset = 0,
+			min_value = 0,
+			max_value = 100,
+			width = 100, -- +1 cuz range is inclusive
+			value_to_position = function(slider_data)
+				return math.floor(((slider_data.current_value-slider_data.min_value)/slider_data.max_value*slider_data.width) + .5)
+			end,
+			value_to_display = function(slider_data)
+				return slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
+			end
 		}
 		setting.slider_data = setting.slider_data or {}
 		for key, value in pairs(default_values) do
@@ -520,18 +526,9 @@ local function SettingUpdate(gui, setting, translation)
 
 		local slider_data = setting.slider_data
 
-		slider_data.current_value = ModSettingGet(setting.path)
-		if slider_data.value_to_position then
-			slider_data.position = slider_data.value_to_position(slider_data.current_value)
-		else
-			slider_data.position = slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
-		end
-
-		if slider_data.value_to_display then
-			slider_data.display_value = slider_data.value_to_display(slider_data.current_value)
-		else
-			slider_data.display_value = slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
-		end
+		slider_data.current_value = ModSettingGetNextValue(setting.path)
+		slider_data.position = slider_data.value_to_position(slider_data.current_value)
+		slider_data.display_value = slider_data.value_to_display(slider_data.current_value)
 	end
 
 	if setting.description then setting.desc_data = generate_tooltip_data(gui, setting.description, setting.recursion * ccs.offset_amount, setting.extra_lines) end
