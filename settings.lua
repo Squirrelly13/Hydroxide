@@ -509,26 +509,26 @@ local function SettingUpdate(gui, setting, translation)
 		local default_values = {
 			min_value = 0,
 			max_value = 100,
-			width = 100, -- +1 cuz range is inclusive
+			width = 101, -- +1 cuz range is inclusive
 			value_to_position = function(slider_data)
 				return math.floor(((slider_data.current_value-slider_data.min_value)/slider_data.max_value*slider_data.width) + .5)
 			end,
 			value_to_display = function(slider_data)
-				return slider_data.current_value/slider_data.value_multiplier + slider_data.value_offset
+				return slider_data.current_value
 			end
 		}
 		setting.slider_data = setting.slider_data or {}
+		local slider_data = setting.slider_data
+
 		for key, value in pairs(default_values) do
-			if setting[key] == nil then
-				setting[key] = value
+			if slider_data[key] == nil then
+				slider_data[key] = value
 			end
 		end
 
-		local slider_data = setting.slider_data
-
-		slider_data.current_value = ModSettingGetNextValue(setting.path)
-		slider_data.position = slider_data.value_to_position(slider_data.current_value)
-		slider_data.display_value = slider_data.value_to_display(slider_data.current_value)
+		slider_data.current_value = ModSettingGetNextValue(setting.path) or ModSettingGet(setting.path) or setting.value_default
+		slider_data.position = slider_data.value_to_position(slider_data)
+		slider_data.display_value = slider_data.value_to_display(slider_data)
 	end
 
 	if setting.description then setting.desc_data = generate_tooltip_data(gui, setting.description, setting.recursion * ccs.offset_amount, setting.extra_lines) end
@@ -1256,24 +1256,32 @@ function ModSettingsGui(gui, in_main_menu)
 					GuiText(gui, offset + w, 0, ("[%s]"):format(setting.option_names[setting.current_option_int]), 1, regular_font)
 
 				elseif setting.type == "slider" then
-					local default_values = {
-						range = 100,
-						display_multiplier = 100,
-						display_offset = 0,
+					local values = {
+						min_value = true,
+						max_value = true,
+						width = true,
+						value_to_position = true,
+						value_to_display = true,
+						current_value = true,
+						position = true,
+						display_value = true,
 					}
 					GuiText(gui, 0, 0, "")
 					local _, _, _, x, y = GuiGetPreviousWidgetInfo(gui)
 					GuiImageNinePiece(gui, create_id(), x, y, setting.w, setting.h, 0)
 					local guiPrev = {GuiGetPreviousWidgetInfo(gui)}
 					GuiText(gui, 0, 0, setting.name, 1, regular_font)
+
 					GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
 					GuiColorSetForNextWidget(gui, 0, 0, 0, .8)
-					GuiText(gui, 0, 0, ('!'):rep(setting.slider_data.range + 9), 1, ui_font)
-					GuiText(gui, 0, 0, '!"' .. ('#'):rep(setting.slider_data.range + 5) .. '"!', 1, ui_font)
+					GuiText(gui, 0, 0, ('!'):rep(setting.slider_data.width + 9), 1, ui_font) -- 2 for side buffers + 7 for draggy width
+					GuiOptionsAddForNextWidget(gui, GUI_OPTION.Layout_NextSameLine)
+					GuiText(gui, 0, 0, '!"' .. ('#'):rep(setting.slider_data.width + 5) .. '"!', 1, ui_font)
+					GuiText(gui, 1 + setting.slider_data.position, 0, "%", 1, ui_font)
 					
 					
-					GuiText(gui, -1, 0, " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 1, ui_font)
-					GuiText(gui, 0, 0, "!\"#################################################\"!", 1, ui_font)
+					--GuiText(gui, -1, 0, " $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", 1, ui_font)
+					--GuiText(gui, 0, 0, "!\"#################################################\"!", 1, ui_font)
 					for index, value in ipairs({
 						" ",
 						"!", --solid

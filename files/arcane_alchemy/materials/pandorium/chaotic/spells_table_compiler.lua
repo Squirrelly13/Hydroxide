@@ -46,7 +46,7 @@ end
 
 function IsValidModifier(spell)
     if string.find(spell.id, "COLOUR") or spell.is_glimmer then table.insert(chaotic.GLIMMERS, spell.id) end
-    if ("," .. spell.spawn_level .. ","):find(",[012345],") then --[[print(spell.id .. " IS VALID")]] return true end
+    if (","..spell.spawn_level..","):find(",[012345],") then --[[print(spell.id .. " IS VALID")]] return true end
 
     return false
 end
