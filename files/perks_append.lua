@@ -25,12 +25,13 @@ local cc_perks = {
 		perk_icon = "data/items_gfx/perks/extra_hp.png",
 		func = function()
 			GameAddFlagRun("cc_chaotic_transfusion")
-			SetRandomSeed(434,-1415)
 			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/materials.lua")
 			for _,enemy in ipairs(EntityGetWithTag("enemy")) do
 				local dmc = EntityGetFirstComponent(enemy, "DamageModelComponent")
 				if not dmc then goto continue end
 				if not ComponentGetValue2(dmc, "blood_material") == "blood" then goto continue end
+				local x,y = EntityGetTransform(enemy)
+				SetRandomSeed(x+434,y-1415)
 				local option = RandomFromTable(material_options)
 				ComponentSetValue2(dmc, "blood_material", option.material)
 				ComponentSetValue2(dmc, "blood_spray_material", option.material)

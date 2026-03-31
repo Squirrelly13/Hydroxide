@@ -253,12 +253,13 @@ if settings.CC then
 	if settings.experimental_features then
 		hooks.new_eid[#hooks.new_eid+1] = function(entity_id, varcomp_tree)
 			if not GameHasFlagRun("cc_chaotic_transfusion") then return end
-			SetRandomSeed(434,frame-1415)
+			local x,y = EntityGetTransform(entity_id)
 			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/materials.lua")
 
 			if not EntityHasTag(entity_id, "enemy") then return end
 			local dmc = EntityGetFirstComponent(entity_id, "DamageModelComponent")
 			if not dmc then return end
+			SetRandomSeed(x+434,y-1415)
 			local option = RandomFromTable(material_options)
 			ComponentSetValue2(dmc, "blood_material", option.material)
 			ComponentSetValue2(dmc, "blood_spray_material", option.material)
