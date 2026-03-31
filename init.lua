@@ -159,7 +159,7 @@ local check_entities = function()
 		end
 		if player ~= nil then
 			for _,func in ipairs(hooks.player_changed) do
-				func(player_poly_identity)
+				func()
 			end
 		end
 	end
@@ -249,8 +249,8 @@ if settings.CC then
 	--todo: add Master of Monochrome
 
 	if settings.polymorph_gui then
-		hooks.player_changed[#hooks.player_changed+1] = function(poly_data)
-			if not poly_data then return end
+		hooks.player_changed[#hooks.player_changed+1] = function()
+			if not player_poly_identity then return end
 
 			if not EntityGetFirstComponentIncludingDisabled(player, "InventoryGuiComponent") then
 				EntityAddComponent2(player, "InventoryGuiComponent")
@@ -277,6 +277,10 @@ if settings.CC then
 				},
 			}
 
+			if MatchDateLocal({month = 3, day = 31}) then
+				polymorphs.POLYMORPH.desc = "$status_desc_cc_polymorph_trans"
+			end
+
 			local rare_polymorph = {
 				icon = "mods/Hydroxide/files/chemical_curiosities/polymorph_gui/rare_chaotic_polymorphed.png",
 				name = "$status_cc_rare_polymorph",
@@ -284,10 +288,10 @@ if settings.CC then
 			}
 
 			for _,rare_poly in pairs(PolymorphTableGet(true)) do
-				if poly_data.path == rare_poly then
+				if player_poly_identity.path == rare_poly then
 					local is_rare = true
 					for _,common_poly in pairs(PolymorphTableGet(false)) do
-						if poly_data.path == common_poly then
+						if player_poly_identity.path == common_poly then
 							is_rare = false
 							break
 						end
@@ -322,6 +326,23 @@ if settings.CC then
 		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/userk.xml", 11605, 20501) --me too!
 	end
 
+	local rock_materials = {
+		--vanilla:
+		rock_static_glow = true,
+		rock_static_purple = true,
+		rock_static_noedge = true,
+		rock_static_trip_secret = true,
+		rock_static_trip_secret2 = true,
+		rock_static_intro = true,
+		rock_static_intro_breakable = true,
+		rock_static_grey = true,
+		rock_static_wet = true,
+		snowrock_static = true,
+		rock_box2d_nohit_hard = true,
+		rock_box2d_nohit = true,
+		rock_box2d = true,
+		lavarock_static = true,
+	}
 	hooks.edit_material[#hooks.edit_material+1] = function(elem)
 		local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
 
@@ -329,23 +350,6 @@ if settings.CC then
 			rock_tags = elem.attr.tags
 			elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
 		else
-			local rock_materials = {
-				--vanilla:
-				rock_static_glow = true,
-				rock_static_purple = true,
-				rock_static_noedge = true,
-				rock_static_trip_secret = true,
-				rock_static_trip_secret2 = true,
-				rock_static_intro = true,
-				rock_static_intro_breakable = true,
-				rock_static_grey = true,
-				rock_static_wet = true,
-				snowrock_static = true,
-				rock_box2d_nohit_hard = true,
-				rock_box2d_nohit = true,
-				rock_box2d = true,
-				lavarock_static = true,
-			}
 			if settings.CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
 				elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
 			elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour

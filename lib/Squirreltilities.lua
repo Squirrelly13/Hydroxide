@@ -15,6 +15,17 @@ function stringsplit(inputstr, sep)
 end
 
 
+
+function MatchDateLocal(check_date)
+	local current = {}
+	current.year, current.month, current.day, current.hour, current.minute, current.second, current.jussi, current.mammi = GameGetDateAndTimeLocal()
+	for unit,value in pairs(check_date) do
+		if current[unit] ~= value then return false end
+	end
+	return true
+end
+
+
 ---If `material` parameter is passed, will return the amount of damage taken from that material, or nil if none. Otherwise, returns a table of material damage indexed by material name.
 ---@param entity entity_id
 ---@param material string
