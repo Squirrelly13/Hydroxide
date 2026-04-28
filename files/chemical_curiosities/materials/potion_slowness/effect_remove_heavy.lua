@@ -7,4 +7,4 @@ if not cpc then return end
 
 local grav = ComponentGetValue2(cpc, "pixel_gravity")
 if grav < 0 then return end
-ComponentSetValue2(cpc, "pixel_gravity", grav * .5)
+ComponentSetValue2(cpc, "pixel_gravity", grav / 2.4)

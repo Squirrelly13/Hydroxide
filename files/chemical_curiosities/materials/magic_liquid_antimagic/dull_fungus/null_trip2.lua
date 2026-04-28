@@ -1,6 +1,6 @@
 dofile_once("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift.lua")
 
-local entity_id    = GetUpdatedEntityID()
+local entity_id = GetUpdatedEntityID()
 local pos_x, pos_y = EntityGetTransform( entity_id )
 
 SetRandomSeed(pos_x + GameGetFrameNum(), pos_y)

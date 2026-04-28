@@ -9,9 +9,9 @@
 
 	<InheritTransformComponent/>
 
-	<LuaComponent
+	<!-- <LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_heavy.lua"
-	/>
+	/> disabled cuz i dont think its necessary atm idk-->
 
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/potion_slowness/effect_apply_heavy.lua"

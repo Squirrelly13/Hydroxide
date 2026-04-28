@@ -86,8 +86,6 @@ NullShift_materials = {
 		probability = 0.6,
 		variants = {
 			"magic_liquid_charm",
-			"magic_liquid_invisibility",
-			"cc_veilium",
 			"cc_explode_player",
 		}
 	},
@@ -106,6 +104,12 @@ NullShift_materials = {
 	lava = {
 		probability = 0.5,
 		variants = {}
+	},
+	magic_liquid_teleportation = {
+		probability = 0.1,
+		variants = {
+			"magic_liquid_unstable_teleportation"
+		}
 	}
 }
 
@@ -117,25 +121,25 @@ end
 
 
 
-do_mod_appends("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
-
-for key, value in pairs(NullShift_materials) do --ammends table with necessary data
-	value.probability = value.probability or 1.0
-	value.variants = value.variants or {}
-end
 
 if ModIsEnabled("grahamsperks") then
 	table.insert(NullShift_materials.magic_liquid_polymorph.variants, "graham_creepypoly")
+	table.insert(NullShift_materials.magic_liquid_teleportation.variants, "graham_tele_chaotic")
 end
 
-if ModIsEnabled("apotheosis") then
+if ModIsEnabled("apotheosis") then --rework cursed liquid shift if apoth is enabled
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red_static")
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red")
 	NullShift_materials.cursed_liquid.condition = nil
 	NullShift_materials.cursed_liquid.probability = NullShift_materials.cursed_liquid.probability - 0.2
 end
 
+do_mod_appends("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
+for key, value in pairs(NullShift_materials) do --ammends table with necessary data if missing
+	value.probability = value.probability or 1.0
+	value.variants = value.variants or {}
+end
 
 
 local null_materials = {}

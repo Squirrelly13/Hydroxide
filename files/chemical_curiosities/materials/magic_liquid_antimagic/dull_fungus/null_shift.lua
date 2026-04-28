@@ -19,7 +19,12 @@ NullShiftData = {
 
 local function return_false() return false end
 
-function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT_ALL)
+function NullShift(shifter, x, y, debug)
+	debug = debug or {
+		ignore_cooldown = false,
+		ignore_limit = false,
+		NULLSHIFT_ALL = false,
+	}
 
 	for _, func in ipairs(NullShiftData.custom_functions) do
 		if func(shifter, x, y) then return end
@@ -31,10 +36,10 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 
 	local frame = GameGetFrameNum()
 	local last_shift = tonumber(GlobalsGetValue("fungal_shift_last_frame", "-1000000")) --shares cooldown with fungal shifting
-	if frame < last_shift + 18000 and not ignore_cooldown then return end
+	if frame < last_shift + 18000 and not debug.ignore_cooldown then return end
 
 	local iteration = tonumber(GlobalsGetValue("cc_null_shift_iteration", "0"))
-	if iteration >= NullShiftData.null_shift_limit and not ignore_limit then return end
+	if iteration >= NullShiftData.null_shift_limit and not debug.ignore_limit then return end
 
 
 	SetRandomSeed( 89346, 42345 + iteration )
@@ -59,7 +64,8 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 
 	if held_material then
 		ConvertMaterialEverywhere(CellFactory_GetType(held_material), CellFactory_GetType("cc_air"))
-	elseif not DEBUG_NULLSHIFT_ALL then
+		print(held_material .. " nullified")
+	elseif not debug.NULLSHIFT_ALL then
 		local data = {
 			shifter = shifter,
 			x = x,
@@ -71,13 +77,15 @@ function NullShift(shifter, x, y, ignore_cooldown, ignore_limit, DEBUG_NULLSHIFT
 
 		--target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(CellFactory_GetType(target.name_material or target.materials[1])))
 		ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
+		print("group header " .. target.main_material .. " nullified")
 		for _, material in ipairs(target.variants or {}) do
 			ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
+			print(material .. " nullified")
 		end
 		GameAddFlagRun("cc_null_shifted_" .. target.main_material)
 	end
 
-	if DEBUG_NULLSHIFT_ALL then
+	if debug.NULLSHIFT_ALL then
 		for _, target in ipairs(NullShiftData.materials) do
 			ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
 			for _, material in ipairs(target.variants or {}) do
