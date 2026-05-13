@@ -21,6 +21,10 @@ Clean up Status Effect Icons
 
 Clean up material textures
 
+Potion pool is fucked up and evil, should focus on being more helpful to the player
+
+Potential crash-on-start incompat with Alchemy Globe and a few other mods? (apoth, copith)
+
 # Planned Expansions/Reworks
 Fluent Fluids branch
 - Remaster of Fluid Dynamics (has been approved by creator of Fluid Dynamics)
@@ -28,7 +32,7 @@ Fluent Fluids branch
 - I want the gasses to generally go up, so that's where the "Magic" part of "Magic Vapour" comes in lmao
 - Biome modifier for Hiisi Base which replaces all the canisters with Magic Vapour canisters
 - Powder Variants
-  Dry Water.
+  - Dry Water.
 - Candy Variants
 - Powder Rainbow is "Failed Product" and Candy Rainbow is "Blessed Pebbles"
 
