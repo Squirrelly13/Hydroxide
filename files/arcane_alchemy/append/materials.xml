@@ -64,6 +64,7 @@
 	</StatusEffects>
   </CellData> <!--  Why are you hitting yourself?  -->
 
+  <!--
   <CellData
 	name="aa_shrinkium"
 	ui_name="$mat_aa_shrinkium"
@@ -95,7 +96,7 @@
 		  <StatusEffect type="AA_SHRINK" amount="0.3"/>
 	  </Ingestion>
 	</StatusEffects>
-  </CellData>
+  </CellData> -->
 
 	<CellData
 	name="aa_dark_matter"

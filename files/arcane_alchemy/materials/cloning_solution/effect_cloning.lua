@@ -42,7 +42,10 @@ clones_spawned_num,clones_spawned = check_clone_cap(clones_spawned)
 if EntityHasTag(root, "player_unit") then
 	if clones_spawned_num >= 7 then return end --cap of 7 clones for players
 
-	local clone = CreateClone("data/entities/animals/failed_alchemist.xml", root, x + Random(15, -15), y + Random(5, 10), "player")
+	local clone = CreateClone("data/entities/animals/failed_alchemist.xml", root, x + Random(15, -15), y + Random(5, 10), {
+		genome = "player",
+		no_gold = true
+	})
 	ComponentSetValue2(clone_origin_data, "value_string", clones_spawned .. "," .. clone)
 
 	for _, comp in ipairs(EntityGetComponent(clone, "LuaComponent") or {}) do

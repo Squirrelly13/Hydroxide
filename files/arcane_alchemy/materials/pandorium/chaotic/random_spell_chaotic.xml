@@ -1,7 +1,5 @@
 <Entity name="Chaotic Pandorium">
 
-    <SpriteAnimatorComponent/>
-
     <LifetimeComponent lifetime = "45"/>
 
 	<GenomeDataComponent herd_id = "mage_swapper"/>
@@ -11,6 +9,8 @@
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.lua"
         execute_on_added="1"
     />
+
+    <SpriteAnimatorComponent/>
 
     <CharacterDataComponent/>
 

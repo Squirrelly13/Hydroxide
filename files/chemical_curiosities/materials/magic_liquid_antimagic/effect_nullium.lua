@@ -21,7 +21,7 @@ for _, child in ipairs(children) do
 end
 
 for _, dmc in ipairs(EntityGetComponent(root, "DamageModelComponent") or {}) do
-	if CellFactory_HasTag(ComponentGetValue2(dmc, "blood_material"), "magic_liquid") then
+	if CellFactory_HasTag(CellFactory_GetType(ComponentGetValue2(dmc, "blood_material")), "magic_liquid") then
 
 		if EntityGetDamageFromMaterial(root, "cc_nullium") == 0 then
 			EntitySetDamageFromMaterial(root, "cc_nullium", 0.004)

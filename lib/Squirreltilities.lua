@@ -271,19 +271,21 @@ end
 ---@param origin entity_id|nil Original entity from which the clone was derived (optional)
 ---@param x number
 ---@param y number
----@param genome string? New genome for the clone (optional)
+---@param data table? General data
 ---@return entity_id
 ---@return component_id
-function CreateClone(path, origin, x, y, genome)
+function CreateClone(path, origin, x, y, data)
+	data = data or {}
+
 	local entity = EntityLoad(path, x, y)
-	if genome then
+	if data.genome then
 		for _, comp in ipairs(EntityGetComponent(entity, "GenomeDataComponent") or {}) do
-			ComponentSetValue2(comp, "herd_id", StringToHerdId(genome))
+			ComponentSetValue2(comp, "herd_id", StringToHerdId(data.genome))
 		end
 	end
 
 	local clone_data = EntityAddComponent2(entity, "VariableStorageComponent", {
-		_tags = "no_gold_drop",
+		_tags = data.no_gold and "no_gold_drop" or "",
 		name = "aa_clone_data",
 		value_int = origin
 	})

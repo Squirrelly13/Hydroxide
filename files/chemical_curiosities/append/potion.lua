@@ -23,32 +23,12 @@ local magic = {
 		cost=250,
 	},
 	{
-		material="cc_slicing_liquid",
-		cost=750,
-	},
-	{
 		material="cc_sparkling_liquid",
 		cost=750,
 	},
 	{
 		material="cc_glittering_liquid",
 		cost=750,
-	},
-	{
-		material="cc_ectospasm",
-		cost=500,
-	},
-	{
-		material="cc_deceleratium",
-		cost=200,
-	},
-	{
-		material="cc_heftium",
-		cost=200,
-	},
-	{
-		material="cc_stillium",
-		cost=250,
 	},
 	{
 		material="cc_metamorphine",

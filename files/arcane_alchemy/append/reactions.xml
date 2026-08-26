@@ -104,7 +104,7 @@
 
 	<!-- Pandoria -->
 
-	<Reaction probability = ".7"
+	<Reaction probability = "11"
 		input_cell1="aa_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	>
@@ -123,13 +123,13 @@
 		</ExplosionConfig>
 	</Reaction><!-- Pandorium casts spells -->
 	
-	<Reaction probability = "1.8"
+	<Reaction probability = "30"
 		input_cell1="aa_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	/>
 
 
-	<Reaction probability = "0.9"
+	<Reaction probability = "10"
 		input_cell1="aa_unstable_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	>
@@ -148,13 +148,13 @@
 	</ExplosionConfig>
 	</Reaction><!-- unstable pandorium casts spells -->
 	
-	<Reaction probability = "1.8"
+	<Reaction probability = "22"
 		input_cell1="aa_unstable_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	/>
 
 
-	<Reaction probability = ".3"
+	<Reaction probability = "9"
 		input_cell1="aa_chaotic_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	>
@@ -172,7 +172,7 @@
 	/>
 	</Reaction><!-- chaotic pandorium casts spells -->
 
-	<Reaction probability = "2.7"
+	<Reaction probability = "54"
 		input_cell1="aa_chaotic_pandorium" input_cell2="air"
 		output_cell1="air" output_cell2="air"
 	/><!-- chaotic pandorium does nothing -->

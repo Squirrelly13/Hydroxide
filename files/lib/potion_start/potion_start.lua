@@ -12,7 +12,6 @@ local cc_starterpotions = {
 	{	probability = 3.00,		"cc_sparkling_liquid"},
 	{	probability = 2.50,		"cc_persistine"},
 	{	probability = 2.00,		"cc_dormant_crystal_molten"},
-	{	probability = 1.00,		"cc_frozen_meat"},
 	{	probability = 0.50,		"cc_devouring_moss"},
 	{	probability = 0.35,		"cc_unstable_metamorphine"},
 	{	probability = 0.30,		"cc_health_tonic"},
@@ -39,7 +38,7 @@ local cc_failpotions = {
 
 local cc_functions = {
 	function(outcome, r_value)
-		if (PS.CompareTables({PS.LOCAL.month, PS.LOCAL.day}, {7,4}) and Random(1, 5) == 5) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
+		if (PS.CompareTables({PS.LOCAL.month, PS.LOCAL.day}, {11,5}) and Random(1, 5) == 5) then return "cc_glittering_liquid" -- 20% chance on 4th of July for fireworks material
 		elseif outcome == "acid" and Random(0,1) == 1 then return "cc_hydroxide"
 		end
 	end
@@ -60,17 +59,13 @@ local aa_starterpotions = {
 	{	probability = 0.30, "aa_icy_inferno"},
 	{	probability = 0.20, "aa_arborium"},
 	{	probability = 0.10, "aa_compost"},
-	{	probability = 0.15, "aa_catalyst"},
-	{	probability = 0.01, "aa_unstable_pandorium"},
 }
 
 local aa_magicpotions = {
 	{"aa_base_potion"},
 	{"aa_dark_matter"},
-	{"aa_base_potion"},
-	{"aa_love"},
-	{"aa_pandorium"},
 	{"aa_chaotic_pandorium"},
+	{"aa_unstable_pandorium"},
 	{"aa_cloning_solution"},
 }
 
