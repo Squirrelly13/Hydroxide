@@ -271,12 +271,12 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="2"
-	liquid_sprite_stain_shaken_drop_chance="8"
 	status_effects="CC_BLINDNESS"
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	on_fire_smoke_material="alcohol_gas"
-	liquid_sprite_stains_status_threshold="0.1"
+	liquid_sprite_stains_status_threshold="0.2"
+	liquid_sprite_stain_shaken_drop_chance="8"
 	burnable="1"
 	on_fire_flame_material="spark_green"
 	temperature_of_fire="95"
@@ -474,6 +474,7 @@
 	liquid_sand="0"
 	liquid_stains="1"
 	liquid_sprite_stain_shaken_drop_chance="2"
+	liquid_sprite_stains_status_threshold=".1"
 	status_effects="CC_INGESTION_METHANE"
 	lifetime="-1"
 	generates_flames="20"
@@ -543,6 +544,7 @@
 	liquid_sticks_to_ceiling="40"
 	liquid_slime="1"
 	liquid_stains="2"
+	liquid_sprite_stain_shaken_drop_chance="2"
 	stickyness="0.3"
 	solid_friction="0.5"
 	on_fire="0"
@@ -862,6 +864,7 @@
 	liquid_gravity="2"
 	liquid_sand="0"
 	liquid_stains="2"
+	liquid_sprite_stain_shaken_drop_chance="2"
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
@@ -939,7 +942,7 @@
 	on_fire="0"
 	requires_oxygen="0"
 	liquid_stains="2"
-	liquid_sprite_stain_shaken_drop_chance="5"
+	liquid_sprite_stain_shaken_drop_chance="3"
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
 	>
@@ -971,6 +974,7 @@
 	liquid_stains="2"
 	audio_materialaudio_type="MAGICAL"
 	show_in_creative_mode="1"
+	liquid_sprite_stain_shaken_drop_chance=".8"
 	>
 	<StatusEffects>
 		<Stains>
@@ -1730,7 +1734,7 @@
 		on_fire="0"
 		requires_oxygen="0"
 		liquid_stains="2"
-		liquid_sprite_stain_shaken_drop_chance="10"
+		liquid_sprite_stain_shaken_drop_chance="2"
 		audio_materialaudio_type="MAGICAL"
 		show_in_creative_mode="1"
 		>

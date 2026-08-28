@@ -24,11 +24,8 @@ for k, action in ipairs(actions)do
 
 
 		local enhancement_old_add_projectile = add_projectile
-
 		local enhancement_old_add_projectile_trigger_timer = add_projectile_trigger_timer
-
 		local enhancement_old_add_projectile_trigger_hit_world = add_projectile_trigger_hit_world
-
 		local enhancement_old_add_projectile_trigger_death = add_projectile_trigger_death
 
 		local trigger_count = 0 + #data.timer + #data.hit_world + #data.death

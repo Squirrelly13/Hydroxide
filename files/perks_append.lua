@@ -7,6 +7,7 @@ dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 --nvm not adding perks rn cuz apparently Curse of Greed isnt a real perk mb
 local cc_perks = {
     {
+		_disabled = true,
 		id = "CC_GREATER_MATERIAL_CAPACITY",
 		ui_name = "$cc_perk_greater_capacity",
 		ui_description = "$cc_perkdesc_greater_capacity",
@@ -17,7 +18,16 @@ local cc_perks = {
 		stackable = true,
 		func = function(perk, taker, perk_name, times_taken)
 		end,
-    } or nil
+    },
+	{
+		_disabled = true,
+		id = "CC_CHAOTIC_TRANSFUSION",
+		ui_name = "$perkname_cc_chaotic_transfusion",
+		ui_description = "$perkdesc_cc_chaotic_transfusion",
+		func = function()
+			local material_options = dofile_once("")
+		end
+	},
 }
 
 local aa_perks = {

@@ -201,7 +201,7 @@
 	liquid_flow_speed="0.01"
 	liquid_slime="1"
 	liquid_stains="2"
-	liquid_sprite_stain_shaken_drop_chance="100"
+	liquid_sprite_stain_shaken_drop_chance="12"
 	stickyness="0"
 	solid_friction="1.0"
 	on_fire="0"

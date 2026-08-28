@@ -9,7 +9,7 @@ local spell_table = dofile_once("mods/Hydroxide/files/arcane_alchemy/materials/p
 
 local entity_id = GetUpdatedEntityID()
 local x, y = EntityGetTransform(entity_id)
-SetRandomSeed(GameGetFrameNum() + x, entity_id + y)
+SetRandomSeed(GameGetFrameNum() + x, entity_id - y)
 
 
 ---- get wand entity ----
