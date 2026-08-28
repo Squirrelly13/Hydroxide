@@ -29,8 +29,8 @@ local firework_options = {
 	"mods/Hydroxide/files/chemical_curiosities/materials/glittering_liquid/firework_pink.xml",
 }
 
-if (fireworkCount >= max_projectiles) then EntityKill(GetUpdatedEntityID()) return end
+if (fireworkCount >= max_projectiles) then EntityKill(entity_id) return end
 
 ShootProjectile(nil, firework_options[Random(1,4)], pos_x, pos_y, vel_x, vel_y)
 
-EntityKill(GetUpdatedEntityID())
+EntityKill(entity_id)

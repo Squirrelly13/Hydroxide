@@ -21,4 +21,4 @@ if (radiation_particles <= max_projectiles) then
 	ShootProjectile(entity_id, "mods/Hydroxide/files/chemical_curiosities/materials/uranium/radiation_glow.xml", pos_x, pos_y, vel_x, vel_y)
 end
 
-EntityKill(GetUpdatedEntityID())
+EntityKill(entity_id)

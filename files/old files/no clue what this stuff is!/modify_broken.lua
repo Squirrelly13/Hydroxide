@@ -37,4 +37,4 @@ if(possible_wands ~= nil)then
     end
 end
 
-EntityKill(GetUpdatedEntityID())
+EntityKill(entity_id)

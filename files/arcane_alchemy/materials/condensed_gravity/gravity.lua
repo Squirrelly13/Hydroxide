@@ -27,7 +27,7 @@ function calculate_force_at(body_x, body_y)
 	local fx = math.cos( direction ) * ( gravity_coeff * stainPercent )
 	local fy = -math.sin( direction ) * ( gravity_coeff * stainPercent )
 
-    return fx,fy
+	return fx,fy
 end
 
 -- attract projectiles
@@ -56,7 +56,7 @@ function calculate_force_for_body( entity, body_mass, body_x, body_y, body_vel_x
 	fx = fx * 0.11 * body_mass
 	fy = fy * 0.11 * body_mass
 
-    return body_x,body_y,fx,fy,0 -- forcePosX,forcePosY,forceX,forceY,forceAngular
+	return body_x,body_y,fx,fy,0 -- forcePosX,forcePosY,forceX,forceY,forceAngular
 end
 local size = distance_full * 0.5
 PhysicsApplyForceOnArea( calculate_force_for_body, entity_id, x-size, y-size, x+size, y+size )

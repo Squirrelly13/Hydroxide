@@ -14,34 +14,34 @@
 	durability="14"
 	hp="1000000"
 	wang_curvature="0.5"
-    liquid_sand_never_box2d="1"
+	liquid_sand_never_box2d="1"
 	wang_noise_type="2"
 	audio_physics_material_wall="gravel"
 	audio_physics_material_solid="rock"
 	>
-	    <ParticleEffect
-	    	vel.y="-17.14"
-	    	vel_random.min_x="-11.71"
-	    	vel_random.max_x="11.71"
-	    	vel_random.min_y="-17.18"
-	    	vel_random.max_y="-2.8"
-	    	lifetime.min="0.3"
-	    	lifetime.max="2"
-	    	gravity.y="0"
-	    	render_on_grid="1"
-	    	airflow_force="0.8314"
-	    	airflow_scale="0.1371"
-	    	friction="0.0001"
-	    	probability="1"
-	    	count.min="1"
-	    	count.max="1"
-            color="fffa8f2c"
-	    />
+		<ParticleEffect
+			vel.y="-17.14"
+			vel_random.min_x="-11.71"
+			vel_random.max_x="11.71"
+			vel_random.min_y="-17.18"
+			vel_random.max_y="-2.8"
+			lifetime.min="0.3"
+			lifetime.max="2"
+			gravity.y="0"
+			render_on_grid="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="1"
+			count.min="1"
+			count.max="1"
+			color="fffa8f2c"
+		/>
   	<Graphics
 		texture_file="mods/Hydroxide/files/old files/no clue what this stuff is!/barrier.png"
 		color="ff786C44" 
 		>
-    </Graphics>
+	</Graphics>
   </CellDataChild>
 -->
 
@@ -75,106 +75,106 @@
 		lifetime="1"
 	/>
 
-    <CellData
-        name="cc_hydroxide"
-        ui_name="$mat_cc_hydroxide"
-        tags="[liquid],[hydroxide],[impure],[liquid_common]"
-        density="2.9"
-        cell_type="liquid"
-        wang_color="ff387eff"
-        gfx_glow="100"
-        liquid_gravity="0.6"
+	<CellData
+		name="cc_hydroxide"
+		ui_name="$mat_cc_hydroxide"
+		tags="[liquid],[hydroxide],[impure],[liquid_common]"
+		density="2.9"
+		cell_type="liquid"
+		wang_color="ff387eff"
+		gfx_glow="100"
+		liquid_gravity="0.6"
 		liquid_stains="1"
-	    cold_freezes_to_material="cc_ice_hydroxide_static"
-    >
+		cold_freezes_to_material="cc_ice_hydroxide_static"
+	>
 	<Graphics texture_file="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/hydroxide.png"/>
-        <StatusEffects>
-            <Ingestion>
-                <StatusEffect type="POISONED" amount="0.3"/>
-            </Ingestion>
+		<StatusEffects>
+			<Ingestion>
+				<StatusEffect type="POISONED" amount="0.3"/>
+			</Ingestion>
 			<Stains>
 				<StatusEffect type="CC_HYDROXIDE"/>
 			</Stains>
-        </StatusEffects>
-    </CellData>  <!-- hydroxide. the first material i made. -->
+		</StatusEffects>
+	</CellData>  <!-- hydroxide. the first material i made. -->
 
-    <CellData
-        name="cc_ice_hydroxide_static"
-	    ui_name="$mat_cc_ice_hydroxide"
-	    tags="[static],[corrodible],[frozen],[meltable_to_hydroxide],[alchemy],[solid]"
-	    density="10"
-	    cell_type="liquid"
-	    wang_color="ffBDEBFF"
-	    liquid_gravity="0.5"
-	    liquid_sand="1"
-	    liquid_static="1"
-	    slippery="1"
-	    solid_friction="0.05"
-	    hp="30000"
-	    convert_to_box2d_material="cc_ice_hydroxide_glass"
-	    platform_type="1"
-	    audio_physics_material_wall="ice"
-	    audio_physics_material_solid="ice"
-	    gfx_glow="70"
-	    liquid_stains="1"
-	    status_effects="CC_HYDROXIDE"
+	<CellData
+		name="cc_ice_hydroxide_static"
+		ui_name="$mat_cc_ice_hydroxide"
+		tags="[static],[corrodible],[frozen],[meltable_to_hydroxide],[alchemy],[solid]"
+		density="10"
+		cell_type="liquid"
+		wang_color="ffBDEBFF"
+		liquid_gravity="0.5"
+		liquid_sand="1"
+		liquid_static="1"
+		slippery="1"
+		solid_friction="0.05"
+		hp="30000"
+		convert_to_box2d_material="cc_ice_hydroxide_glass"
+		platform_type="1"
+		audio_physics_material_wall="ice"
+		audio_physics_material_solid="ice"
+		gfx_glow="70"
+		liquid_stains="1"
+		status_effects="CC_HYDROXIDE"
 	>
-        <Graphics
-	        texture_file="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/hydroxide_ice.png"
-	        color="ffBDEBFF"
-        />
-	    <ParticleEffect
-	    	vel.y="-17.14"
-	    	vel_random.min_x="-11.71"
-	    	vel_random.max_x="11.71"
-	    	vel_random.min_y="-17.18"
-	    	vel_random.max_y="-2.8"
-	    	lifetime.min="0.3"
-	    	lifetime.max="0.6"
-	    	gravity.y="0"
-	    	render_on_grid="1"
-	    	airflow_force="0.8314"
-	    	airflow_scale="0.1371"
-	    	friction="0.0001"
-	    	probability="0.004"
-	    	count.min="0"
-	    	count.max="1"
-	    />
-    </CellData>
+		<Graphics
+			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/hydroxide_ice.png"
+			color="ffBDEBFF"
+		/>
+		<ParticleEffect
+			vel.y="-17.14"
+			vel_random.min_x="-11.71"
+			vel_random.max_x="11.71"
+			vel_random.min_y="-17.18"
+			vel_random.max_y="-2.8"
+			lifetime.min="0.3"
+			lifetime.max="0.6"
+			gravity.y="0"
+			render_on_grid="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="0.004"
+			count.min="0"
+			count.max="1"
+		/>
+	</CellData>
 
-    <CellDataChild
-  	    _parent="ice_glass"
-	    tags="[static],[meltable_to_hydroxide],[alchemy],[solid],[cold]"
-  	    _inherit_reactions="1"
-  	    solid_friction="0.05"
-  	    name="cc_ice_hydroxide_glass"
-	    ui_name="$mat_cc_ice_hydroxide"
-	    wang_color="ff4080FF"
-	    audio_physics_material_wall="ice"
-	    audio_physics_material_solid="ice"
-	    solid_break_to_type="cc_ice_hydroxide_static"
-	    gfx_glow="70"
-	    liquid_stains="1"
-	    status_effects="CC_HYDROXIDE"
+	<CellDataChild
+  		_parent="ice_glass"
+		tags="[static],[meltable_to_hydroxide],[alchemy],[solid],[cold]"
+  		_inherit_reactions="1"
+  		solid_friction="0.05"
+  		name="cc_ice_hydroxide_glass"
+		ui_name="$mat_cc_ice_hydroxide"
+		wang_color="ff4080FF"
+		audio_physics_material_wall="ice"
+		audio_physics_material_solid="ice"
+		solid_break_to_type="cc_ice_hydroxide_static"
+		gfx_glow="70"
+		liquid_stains="1"
+		status_effects="CC_HYDROXIDE"
 	>
-	    <ParticleEffect
-	    	vel.y="-17.14"
-	    	vel_random.min_x="-11.71"
-	    	vel_random.max_x="11.71"
-	    	vel_random.min_y="-17.18"
-	    	vel_random.max_y="-2.8"
-	    	lifetime.min="0.3"
-	    	lifetime.max="0.6"
-	    	gravity.y="0"
-	    	render_on_grid="1"
-	    	airflow_force="0.8314"
-	    	airflow_scale="0.1371"
-	    	friction="0.0001"
-	    	probability="0.004"
-	    	count.min="0"
-	    	count.max="1"
-	    />
-    </CellDataChild>
+		<ParticleEffect
+			vel.y="-17.14"
+			vel_random.min_x="-11.71"
+			vel_random.max_x="11.71"
+			vel_random.min_y="-17.18"
+			vel_random.max_y="-2.8"
+			lifetime.min="0.3"
+			lifetime.max="0.6"
+			gravity.y="0"
+			render_on_grid="1"
+			airflow_force="0.8314"
+			airflow_scale="0.1371"
+			friction="0.0001"
+			probability="0.004"
+			count.min="0"
+			count.max="1"
+		/>
+	</CellDataChild>
 
  <CellData
 	name="cc_acidic_water"
@@ -254,7 +254,7 @@
 	<Graphics
 		color="ae7f93c2"
 	>
-    </Graphics>
+	</Graphics>
  </CellData><!--  basically acid's flammable gas, but blue -->
 
  <CellData
@@ -518,7 +518,7 @@
 		>
 	<Graphics
 		color="b3665e55" >
-    </Graphics>
+	</Graphics>
 	</CellData>
 
 	<CellDataChild
@@ -1011,9 +1011,9 @@
 				<StatusEffect type="CC_NULL_TRIP" amount="0.5"/>
 			</Ingestion>
 		</StatusEffects>
-    	<Graphics
+		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_fungus.png" >
-    	</Graphics>
+		</Graphics>
 	</CellDataChild>
 
 	<CellData
@@ -1201,7 +1201,7 @@
 			explosion_sprite="data/particles/explosion_012.xml"
 			load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 			ray_energy="10"
-        >
+		>
 		</ExplosionConfig>
 		<Graphics
 			texture_file="data/materials_gfx/crystal_purple.png"
@@ -1370,7 +1370,7 @@
 		liquid_sand="0"
 		gfx_glow="255"
 		liquid_stains="1"
-	    liquid_sprite_stain_shaken_drop_chance="5"
+		liquid_sprite_stain_shaken_drop_chance="5"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1397,7 +1397,7 @@
 		liquid_sand="0"
 		gfx_glow="255"
 		liquid_stains="1"
-	    liquid_sprite_stain_shaken_drop_chance="5"
+		liquid_sprite_stain_shaken_drop_chance="5"
 		>
 		<Graphics
 			texture_file="mods/Hydroxide/files/chemical_curiosities/materials/antimatter/antimatter.png"
@@ -1472,13 +1472,13 @@
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/cobalt.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	</CellData>
 
-    <CellData
+	<CellData
 	name="cc_cobalt_molten"
 	ui_name="$mat_cc_cobalt_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
@@ -1501,10 +1501,10 @@
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/cobalt.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	<StatusEffects>
 		<Ingestion>
 			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1"/>
@@ -1533,13 +1533,13 @@
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/iron.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	</CellData>
 
-    <CellData
+	<CellData
 	name="cc_iron_molten"
 	ui_name="$mat_cc_iron_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
@@ -1562,10 +1562,10 @@
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/iron.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	<StatusEffects>
 		<Ingestion>
 			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1"/>
@@ -1595,13 +1595,13 @@
 	electrical_conductivity="1"
 	show_in_creative_mode="1"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/preskite.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	</CellData>
 
-    <CellData
+	<CellData
 	name="cc_preskite_molten"
 	ui_name="$mat_cc_preskite_molten"
   	tags="[liquid],[corrodible],[molten],[alchemy],[solid],[liquid_common],[earth]"
@@ -1624,10 +1624,10 @@
 	always_ignites_damagemodel="1"
 	status_effects="ON_FIRE"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/chemical_curiosities/materials/metals/preskite.png"
 	color="ffb89e58" >
-    </Graphics>
+	</Graphics>
 	<StatusEffects>
 		<Ingestion>
 			<StatusEffect type="INGESTION_ON_FIRE" amount="0.1"/>
@@ -1715,7 +1715,7 @@
 			explosion_sprite="data/particles/explosion_012.xml"
 			load_this_entity="mods/Hydroxide/files/chemical_curiosities/materials/volatile_crystal/crystal_explode.xml"
 			ray_energy="10"
-        >
+		>
 		</ExplosionConfig>
 	</CellData>
 

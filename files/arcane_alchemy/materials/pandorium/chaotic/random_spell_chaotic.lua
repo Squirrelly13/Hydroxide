@@ -24,38 +24,38 @@ local gun = EntityGetAllChildren(inventory_comp)[1]
 
 local spell_position = 0
 local function add_spell(spellType)
-    spell_position = spell_position + 1
+	spell_position = spell_position + 1
 
-    local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
-    local spell = EntityCreateNew()
-    EntityAddChild(gun, spell)
+	local spell_id = spell_table[spellType][Random(1,#spell_table[spellType])] --Nathan Seal of Unapproval
+	local spell = EntityCreateNew()
+	EntityAddChild(gun, spell)
 
-    EntityAddComponent2(spell, "ItemActionComponent", {action_id = spell_id})
+	EntityAddComponent2(spell, "ItemActionComponent", {action_id = spell_id})
 
-    local item_comp = EntityAddComponent2(spell, "ItemComponent")
-    ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
+	local item_comp = EntityAddComponent2(spell, "ItemComponent")
+	ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
 
-    --print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
-    --spell_formula = spell_formula .. spell_id .. ","
+	--print(entity_id .. " HAS ADDED [" .. spell_id .. "] TO WAND AS TYPE " .. spellType .. " AT POSITION " .. position)
+	--spell_formula = spell_formula .. spell_id .. ","
 end
 
 local function add_cpand_modifier()
-    spell_position = spell_position + 1
+	spell_position = spell_position + 1
 
-    local spell = EntityCreateNew()
-    EntityAddChild(gun, spell)
+	local spell = EntityCreateNew()
+	EntityAddChild(gun, spell)
 
-    EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
+	EntityAddComponent2(spell, "ItemActionComponent", {action_id = "AA_PANDORIUM_MODIFIER"})
 
-    local item_comp = EntityAddComponent2(spell, "ItemComponent")
-    ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
+	local item_comp = EntityAddComponent2(spell, "ItemComponent")
+	ComponentSetValue2(item_comp, "inventory_slot", spell_position, 1)
 end
 
 local glimmer
 if Random() <= spell_table.data.gimmer_chance then glimmer = true end
 
 for _=1, Random(3, 9) do
-    add_spell("MODIFIERS")
+	add_spell("MODIFIERS")
 end
 
 if glimmer then add_spell("GLIMMERS") end
@@ -63,7 +63,7 @@ add_cpand_modifier()
 add_spell("PROJECTILES")
 
 for _=1, Random(1, 10) do
-    add_spell("MODIFIERS")
+	add_spell("MODIFIERS")
 end
 if glimmer then add_spell("GLIMMERS") end
 add_cpand_modifier()

@@ -12,4 +12,4 @@ local vel_y = 0 - math.sin(angle) * speed
 
 ShootProjectile(nil, "data/entities/projectiles/deck/disc_bullet.xml", pos_x, pos_y, vel_x, vel_y)
 
-EntityKill(GetUpdatedEntityID())
+EntityKill(entity_id)

@@ -235,7 +235,7 @@ function GetHerdID(entity_id)
 end
 
 ---Replacement function for the vanilla `utilities.lua` function `shoot_projectile()`
----@param shooter entity_id
+---@param shooter entity_id?
 ---@param entity_file string filepath to projectile.xml
 ---@param x number
 ---@param y number
@@ -244,6 +244,7 @@ end
 ---@param send_message bool?
 ---@return entity_id
 function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
+	---@type entity_id
 	shooter = shooter or 0
 	local entity_id = EntityLoad(entity_file, x, y)
 	vel_x = vel_x or 0

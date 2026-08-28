@@ -11,9 +11,9 @@ if not component then return end
 local vel_x, vel_y = ComponentGetValue2(component, "mVelocity")
 
 if(Random(0,100) > 50)then
-    vel_x = Random(200, 400)
+	vel_x = Random(200, 400)
 else
-    vel_x = Random(-200, -400)
+	vel_x = Random(-200, -400)
 end
 vel_y = Random( -1500, -3000)
 
