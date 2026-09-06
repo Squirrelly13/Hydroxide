@@ -2,7 +2,8 @@ dofile_once("data/scripts/status_effects/status_list.lua")
 
 local unique_status_effects = {}
 local unique_status_effect_added = {}
-for k,v in pairs(status_effects) do
+---@diagnostic disable-next-line:undefined-global
+for _,v in pairs(status_effects) do
 	if v.id ~= nil and not unique_status_effect_added[v.id] then
 		unique_status_effect_added[v.id] = true
 		table.insert(unique_status_effects, v.id)

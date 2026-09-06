@@ -16,15 +16,8 @@
 	</LuaComponent>
 
 	<VariableStorageComponent
-
-	name="vomit_material"
-	value_string="aa_hungry_slime"
-
-
-
-
-	>
-
-	</VariableStorageComponent>
+		name="vomit_material"
+		value_string="aa_hungry_slime"
+	/>
 
 </Entity>

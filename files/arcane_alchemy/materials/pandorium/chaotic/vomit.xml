@@ -14,9 +14,8 @@
 	/>
 
 	<VariableStorageComponent
-
-	name="vomit_material"
-	value_string="aa_chaotic_pandorium"
+		name="vomit_material"
+		value_string="aa_chaotic_pandorium"
 	/>
 
 

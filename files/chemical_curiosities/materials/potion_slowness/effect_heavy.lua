@@ -1,14 +1,14 @@
 dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 
-local entity = GetUpdatedEntityID()
-local root = EntityGetRootEntity(entity)
+local parent = EntityGetParent(GetUpdatedEntityID())
 
-local cdc = EntityGetFirstComponent(root, "VelocityComponent")
-if not cdc then return end
+local vel_comp = EntityGetFirstComponent(parent, "VelocityComponent")
+if not vel_comp then return end
 
-local vel_x, vel_y = ComponentGetValue2(cdc, "mVelocity") or 0, 0
-print(("(%s, %s)"):format(vel_x, vel_y))
+local vel_x, vel_y = ComponentGetValue2(vel_comp, "mVelocity")
+vel_x = vel_x or 0
+vel_y = vel_y or 0
 
-vel_y = vel_y * 1 + GetStainPercentage(root, "CC_LEVITATION_SLOWER") * 50 + GetIngestionSeconds(entity, "CC_LEVITATION_SLOWER")
+vel_y = vel_y / 1 + GetStatusCombined(parent, "CC_LEVITATION_SLOWER")
 
-ComponentSetValue2(cdc, "mVelocity", vel_x, vel_y)
+ComponentSetValue2(vel_comp, "mVelocity", vel_x, vel_y)
