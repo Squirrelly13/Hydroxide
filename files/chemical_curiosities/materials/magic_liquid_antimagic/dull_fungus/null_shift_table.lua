@@ -127,7 +127,7 @@ if ModIsEnabled("grahamsperks") then
 	table.insert(NullShift_materials.magic_liquid_teleportation.variants, "graham_tele_chaotic")
 end
 
-if ModIsEnabled("apotheosis") then --rework cursed liquid shift if apoth is enabled
+if ModIsEnabled("Apotheosis") then --rework cursed liquid shift if apoth is enabled
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red_static")
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red")
 	NullShift_materials.cursed_liquid.condition = nil

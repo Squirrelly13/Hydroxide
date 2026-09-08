@@ -366,7 +366,7 @@ end
 
 
 --  Apotheosis
-if ModIsEnabled("apotheosis") or ModIsEnabled("Apotheosis") then
+if ModIsEnabled("Apotheosis") then
 	if AA then
 		for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
 			ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
