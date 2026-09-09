@@ -887,6 +887,17 @@
 		output_cell1="cc_frozen_meat"		output_cell2="cc_frozen_meat"
 		blob_radius2="3"
 	/>
+	
+	<Reaction probability="5"
+		input_cell1="cc_frozen_meat"	input_cell2="air"
+		output_cell1="cc_frozen_meat"	output_cell2="cc_methane"
+	/>
+
+	<!--Extra reaction to tune down the methane decay-->
+	<Reaction probability=".5"
+		input_cell1="cc_frozen_meat"	input_cell2="air"
+		output_cell1="air"				output_cell2="air"
+	/>
 
 
 	<!-- glittering liquid -->

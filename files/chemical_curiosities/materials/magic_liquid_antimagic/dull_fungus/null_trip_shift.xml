@@ -1,4 +1,4 @@
-<Entity>
+<Entity name="null_shifting">
 	<ParticleEmitterComponent
 		emitted_material_name="cc_nullium"
 		gravity.y="0.0"
@@ -30,6 +30,7 @@
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_NULL_TRIP"
+		frames="600"
 	/>
 
 	<LuaComponent

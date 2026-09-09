@@ -1,4 +1,7 @@
-<Entity>
+<Entity name="null_tripping">
+
+	<InheritTransformComponent/>
+
 	<ParticleEmitterComponent
 		emitted_material_name="cc_nullium"
 		gravity.y="0.0"
@@ -23,13 +26,10 @@
 		is_emitting="1"
 	/>
 
-	<InheritTransformComponent
-		_enabled="1"
-	/>
-
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_NULL_TRIP"
+		frames="600"
 	/>
 
 	<LuaComponent

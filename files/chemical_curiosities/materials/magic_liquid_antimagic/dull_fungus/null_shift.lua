@@ -50,7 +50,7 @@ function NullShift(shifter, x, y, debug)
 		if children ~= nil then
 			local inventory2_comp = EntityGetFirstComponentIncludingDisabled(shifter, "Inventory2Component" )
 			if inventory2_comp ~= nil then
-				local active_item = tonumber(ComponentGetValue2(inventory2_comp, "mActiveItem"))
+				local active_item = ComponentGetValue2(inventory2_comp, "mActualActiveItem")
 				if active_item ~= nil and (EntityHasTag(active_item, "potion") or EntityHasTag(active_item, "powder_stash")) then
 					local mat = GetMaterialInventoryMainMaterial(active_item)
 					held_material = CellFactory_GetName(mat)
@@ -62,9 +62,27 @@ function NullShift(shifter, x, y, debug)
 		end
 	end
 
+	local function convert_materials(t)
+		for _,material in ipairs(t) do
+			print(material .. " -> cc_air")
+			ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
+		end
+
+		if shifter then
+			local function clear_materials_from_entity(entity_id)
+				for _,material in ipairs(t) do
+					AddMaterialInventoryMaterial(entity_id, material, 0)
+				end
+				for _,child in ipairs(EntityGetAllChildren(entity_id) or {}) do
+					clear_materials_from_entity(child)
+				end
+			end
+			clear_materials_from_entity(shifter)
+		end
+	end
+
 	if held_material then
-		ConvertMaterialEverywhere(CellFactory_GetType(held_material), CellFactory_GetType("cc_air"))
-		print(held_material .. " nullified")
+		convert_materials({held_material})
 	elseif not debug.NULLSHIFT_ALL then
 		local data = {
 			shifter = shifter,
@@ -75,13 +93,10 @@ function NullShift(shifter, x, y, debug)
 		local target = ConditionalRandomFromTable(NullShiftData.materials, data)
 		if target == nil then print_error("final target null shift table is nil, null shift cancelled.") return end
 
+		convert_materials({target.main_material, unpack(target.variants)})
+
 		--target_name = GameTextGetTranslatedOrNot(CellFactory_GetUIName(CellFactory_GetType(target.name_material or target.materials[1])))
-		ConvertMaterialEverywhere(CellFactory_GetType(target.main_material), CellFactory_GetType("cc_air"))
-		print("group header " .. target.main_material .. " nullified")
-		for _, material in ipairs(target.variants or {}) do
-			ConvertMaterialEverywhere(CellFactory_GetType(material), CellFactory_GetType("cc_air"))
-			print(material .. " nullified")
-		end
+
 		GameAddFlagRun("cc_null_shifted_" .. target.main_material)
 	end
 

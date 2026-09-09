@@ -1,10 +1,5 @@
-# Translations
-standard.csv
-turkish.csv
-
-
 # Perks
-perk removal
+perk removal (null altar)
 perk removal (Horscht)
 author
 origin
