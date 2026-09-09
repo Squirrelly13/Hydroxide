@@ -31,8 +31,8 @@ ip.lists = {
 			origin = "vanilla",
 			--(optional) an ideally somewhat-unique identifier that can be used by mods looping over spawnlists to find and modify specific entries (this exists since its not easy to differentiate entries that use functions for spawns)
 			id = "potion",
-			--probability should be the asigned weight
-			probability = 65,
+			--weight should be the asigned weight
+			weight = 65,
 			--(optional) the spawn function will first check for a load_entity value and EntityLoad(load_entity, x + offset_x, y + offset_y) if it exists
 			load_entity = "data/entities/items/pickup/potion.xml",
 			offset_x = nil, --(default: 0) x offset used for the load_entity method
@@ -48,7 +48,7 @@ ip.lists = {
 		{
 			id = "greed_orb",
 			origin = "vanilla",
-			probability = 2,
+			weight = 2,
 			use_self = true,
 			load_entity_func = function (self, x, y)
 				local ox = self.offset_x or 0
@@ -65,49 +65,49 @@ ip.lists = {
 		{
 			id = "broken_wand",
 			origin = "vanilla",
-			probability = 4,
+			weight = 4,
 			load_entity = "data/entities/items/pickup/broken_wand.xml",
 			offset_y = -2,
 		},
 		{
 			id = "thunderstone",
 			origin = "vanilla",
-			probability = 2,
+			weight = 2,
 			load_entity = "data/entities/items/pickup/thunderstone.xml",
 			offset_y = -2,
 		},
 		{
 			id = "brimstone",
 			origin = "vanilla",
-			probability = 4,
+			weight = 4,
 			load_entity = "data/entities/items/pickup/brimstone.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_monster",
 			origin = "vanilla",
-			probability = 2,
+			weight = 2,
 			load_entity = "data/entities/items/pickup/egg_monster.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_slime",
 			origin = "vanilla",
-			probability = 4,
+			weight = 4,
 			load_entity = "data/entities/items/pickup/egg_slime.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_purple",
 			origin = "vanilla",
-			probability = 1,
+			weight = 1,
 			load_entity = "data/entities/items/pickup/egg_purple.xml",
 			offset_y = -2,
 		},
 		{
 			id = "runestone",
 			origin = "vanilla",
-			probability = 1,
+			weight = 1,
 			use_self = true,
 			load_entity_func = function (self, x, y )
 					-- NOTE( Petri ): 6.3.2023 - Changed the SetRandomSeed to be different, so that we might get other runestones than edges
@@ -125,7 +125,7 @@ ip.lists = {
 		{
 			id = "chaos_die",
 			origin = "vanilla",
-			probability = 1,
+			weight = 1,
 			use_self = true,
 			load_entity_func = function (self, x, y)
 					local ox = self.offset_x or 0
@@ -143,7 +143,7 @@ ip.lists = {
 		{
 			id = "powder_stash",
 			origin = "vanilla",
-			probability = 5,
+			weight = 5,
 			load_entity = "data/entities/items/pickup/powder_stash.xml",
 			offset_y = -2,
 		},
@@ -152,63 +152,63 @@ ip.lists = {
 		{
 			id = "broken_wand",
 			origin = "vanilla",
-			probability = 4,
+			weight = 4,
 			load_entity = "data/entities/items/pickup/broken_wand.xml",
 			offset_y = -2,
 		},
 		{
 			id = "moon",
 			origin = "vanilla",
-			probability = 6,
+			weight = 6,
 			load_entity = "data/entities/items/pickup/moon.xml",
 			offset_y = -2,
 		},
 		{
 			id = "thunderstone",
 			origin = "vanilla",
-			probability = 6,
+			weight = 6,
 			load_entity = "data/entities/items/pickup/thunderstone.xml",
 			offset_y = -2,
 		},
 		{
 			id = "brimstone",
 			origin = "vanilla",
-			probability = 6,
+			weight = 6,
 			load_entity = "data/entities/items/pickup/brimstone.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_monster",
 			origin = "vanilla",
-			probability = 6,
+			weight = 6,
 			load_entity = "data/entities/items/pickup/egg_monster.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_slime",
 			origin = "vanilla",
-			probability = 3,
+			weight = 3,
 			load_entity = "data/entities/items/pickup/egg_slime.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_fire",
 			origin = "vanilla",
-			probability = 3,
+			weight = 3,
 			load_entity = "data/entities/items/pickup/egg_fire.xml",
 			offset_y = -2,
 		},
 		{
 			id = "egg_purple",
 			origin = "vanilla",
-			probability = 3,
+			weight = 3,
 			load_entity = "data/entities/items/pickup/egg_purple.xml",
 			offset_y = -2,
 		},
 		{
 			id = "potion",
 			origin = "vanilla",
-			probability = 49,
+			weight = 49,
 			load_entity = "data/entities/items/pickup/potion.xml",
 			offset_y = -2,
 		},
@@ -250,7 +250,7 @@ ip.convert_to_lib = function(old_list, name, targetpath)
 	for index, entry in ipairs(old_list.spawns) do
 		target[#target+1] = {
 			origin = entry.origin or entry.mod or "unknown",
-			probability = (entry.value_max - entry.value_min + 1), --i dont see how anyone could have either of these values be invalid and have it be my fault for not accounting for it
+			weight = (entry.value_max - entry.value_min + 1), --i dont see how anyone could have either of these values be invalid and have it be my fault for not accounting for it
 			load_entity = entry.load_entity,
 			load_entity_func = entry.load_entity_func,
 			load_entity_from_list = entry.load_entity_from_list,
@@ -307,9 +307,10 @@ function spawn_from_list(target_list, x, y)
 
 
 	--RNG
+	print("//////////////////////////////////////////////////////")
 	local temp = {}
 	local total_weight = 0
-	for _, entry in ipairs(spawn_list) do
+	for _,entry in ipairs(spawn_list) do
 		if (entry.spawn_requires_flag and not GameHasFlagRun(entry.spawn_requires_flag))
 		or entry.condition and not entry:condition(x, y) then
 			if ip.spawn_can_fail then
@@ -322,7 +323,8 @@ function spawn_from_list(target_list, x, y)
 		end
 
 		temp[#temp+1] = entry
-		total_weight = total_weight + entry.probability
+		if not entry.weight then print(dump(entry)) end
+		total_weight = total_weight + entry.weight
 		::continue::
 	end
 
@@ -331,10 +333,10 @@ function spawn_from_list(target_list, x, y)
 	local target
 	local rnd = ProceduralRandomf(x,y, 0, total_weight)
 	for _, entry in ipairs(temp) do
-		if rnd <= entry.probability then
+		if rnd <= entry.weight then
 			target = entry
 			break
-		else rnd = rnd - entry.probability end
+		else rnd = rnd - entry.weight end
 	end
 
 	target = target or temp[#temp]

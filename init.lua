@@ -189,7 +189,7 @@ end
 
 
 ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
---ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_random.lua") --override random potion selection
+ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_append.lua")
 ModLuaFileAppend("data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua") --powder pouches
 ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua") --effects
 ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua") --Fungal shifts
@@ -239,7 +239,7 @@ if settings.CC then
 
 	---- Items
 
-	ModLuaFileAppend("data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/chemical_curiosities/append/items.lua") --adds items to pedestals
+	ModLuaFileAppend("data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/items_append.lua") --adds items to pedestals
 
 
 	---- Enemies
@@ -367,8 +367,6 @@ if settings.AA then
 	ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/append/reactions.xml") --reactions
 
 
-
-
 	--		[Bloomium]
 
 	if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true then ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/bloomium/materials.xml")  end
@@ -381,7 +379,6 @@ if settings.AA then
 
 	--		[Items]
 
-	ModLuaFileAppend("data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/arcane_alchemy/append/item_spawnlists.lua") --adds items to pedestals
 	if settings.CC then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/chemical_curiosities/append/vial_append.lua") end
 	if settings.MM then ModLuaFileAppend("mods/Hydroxide/files/arcane_alchemy/items/vials/populate_vial.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/vial_append.lua") end
 
@@ -407,7 +404,6 @@ if settings.MM then
 	dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/generate_content.lua")
 	ModRegisterAudioEventMappings("mods/Hydroxide/files/mystical_mixtures/misc/GUIDs.txt")
 	ModMaterialsFileAdd("mods/Hydroxide/files/mystical_mixtures/materials.xml")
-	ModLuaFileAppend("data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/items.lua") --adds items to pedestals
 
 	ModLuaFileAppend("data/scripts/biomes/mountain/mountain_right.lua", "mods/Hydroxide/files/mystical_mixtures/scripts/mountain_scene.lua") --Spawn Alchemy House
 end
@@ -419,7 +415,6 @@ end
 if settings.FF == true then
 	--ModMaterialsFileAdd("mods/Hydroxide/files/fluent_fluids/materials.lua")
 end
-
 
 
 

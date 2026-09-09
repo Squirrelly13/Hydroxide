@@ -157,19 +157,19 @@ function init( entity_id )
 	local x,y = EntityGetTransform( entity_id )
 	SetRandomSeed( x, y ) -- so that all the potions will be the same in every position with the same seed
 
-	for _, value in ipairs(ps.pre_funcs) do value.func() end --pre-init function hook
+	for _,value in ipairs(ps.pre_funcs) do value.func() end --pre-init function hook
 
-	for _, value in ipairs(materials_magic) do --account for mods not using this lib
+	for _,value in ipairs(materials_magic) do --account for mods not using this lib
 		ps.materials_magic[#ps.materials_magic+1] = value
 	end
-	for _, value in ipairs(materials_standard) do
+	for _,value in ipairs(materials_standard) do
 		ps.materials_standard[#ps.materials_standard+1] = value
 	end
 
-	for index, value in ipairs(ps.materials_magic) do --make sure probability fields are real
+	for _,value in ipairs(ps.materials_magic) do --make sure probability fields are real
 		value.probability = value.probability or 10 --default to 10 probability
 	end
-	for index, value in ipairs(ps.materials_standard) do
+	for _,value in ipairs(ps.materials_standard) do
 		value.probability = value.probability or 10 --default to 10 probability
 	end
 

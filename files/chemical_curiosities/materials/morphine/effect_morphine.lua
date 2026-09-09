@@ -18,7 +18,7 @@ hp = ComponentGetValue2(damagemodel, "hp"	)
 
 
 local function take_damage(dmg)
-	if dmg > 0 then dmg = dmg * .25 end --morphine provides 75% damage resistance (discounted if damage is below 0)
+	if dmg > 0 then dmg = dmg * .5 end --morphine provides 50% damage resistance (discounted if damage is below 0)
 	true_hp = true_hp - dmg
 
 	if true_hp <= 0 then --if the player's true HP is equal to or below 0, trigger kill effect
