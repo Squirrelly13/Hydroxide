@@ -307,7 +307,6 @@ function spawn_from_list(target_list, x, y)
 
 
 	--RNG
-	print("//////////////////////////////////////////////////////")
 	local temp = {}
 	local total_weight = 0
 	for _,entry in ipairs(spawn_list) do
@@ -323,7 +322,6 @@ function spawn_from_list(target_list, x, y)
 		end
 
 		temp[#temp+1] = entry
-		if not entry.weight then print(dump(entry)) end
 		total_weight = total_weight + entry.weight
 		::continue::
 	end
