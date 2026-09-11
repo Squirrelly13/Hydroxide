@@ -23,6 +23,7 @@ local settings = {
 
 	--CC
 	polymorph_gui = ModSettingGet("Hydroxide.POLYMORPH_GUI"),
+	run_translation_debug = true
 }
 
 
@@ -33,6 +34,10 @@ local catastrophicMaterials = {
 	construction_paste = true,
 } --Create Catastrophic Materials list
 
+
+if settings.run_translation_debug then
+	dofile("mods/Hydroxide/translations/debug_split.lua")
+end
 
 dofile("mods/Hydroxide/lib/translations.lua")
 local nxml = dofile_once("mods/Hydroxide/files/lib/nxml.lua")

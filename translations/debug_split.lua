@@ -1,8 +1,4 @@
-local path = "C:/Program Files (x86)/Steam/steamapps/common/Noita/mods/Hydroxide/translations/"
-
-local function lock()
-	--while true do end
-end
+local path = "mods/Hydroxide/translations/"
 
 local translations = {
 	["key"] = {},
@@ -44,9 +40,9 @@ local nonstandard_langs = {
 
 local column_order = {} --core order
 
-local f = io.open(path .. "core.csv", "r")
+local core = ModTextFileGetContent(path .. "core.csv")
 
-local index = f:read("*l")
+local index = core:gmatch("[^\n]+")()
 
 do
 	local start_index = 1
@@ -93,24 +89,26 @@ local function transcribe_line(line)
 	end
 end
 
-f:read("*l") --discard second line
+core = core:sub(#index+1, -1)
+core = core:sub((#core:gmatch("[^\n]+")())+1, -1)
+
 local n = 1
 while true do
-	local line =  f:read("*l")
+	local line = core:gmatch("[^\n]+")()
 	if line == nil then break end
 
 	transcribe_line(line)
+    core = core:sub(#line+1, -1)
 	n = n + 1
 end
-f:close()
 
-for _,value in ipairs(translations["en"]) do
+for index, value in ipairs(translations["en"]) do
 	print(tostring(value))
 end
 
 local standard = ""
 for i, key in ipairs(translations["key"]) do
-	if translations["en"] == nil then print("MISSING EN STRING!") lock() end
+	if translations["en"] == nil then print("MISSING EN STRING!") end
 
 	local line = key
 	for _, value in ipairs(standard_langs_ordered) do
@@ -119,9 +117,7 @@ for i, key in ipairs(translations["key"]) do
 	standard = standard .. line .. ",,,\n"
 end
 
-local standard_file = io.open(path .. "standard.csv","w")
-standard_file:write(standard)
-standard_file:close()
+ModTextFileSetContent(path.."standard.csv",standard)
 
 for lang,name in pairs(nonstandard_langs) do
 	local translation = ""
@@ -133,9 +129,5 @@ for lang,name in pairs(nonstandard_langs) do
 	end
 
 
-	local nonstandard_file = io.open(path .. name .. ".csv","w")
-	nonstandard_file:write(translation)
-	nonstandard_file:close()
+    ModTextFileSetContent(path..name..".csv",translation)
 end
-
-lock()
