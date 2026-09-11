@@ -182,9 +182,8 @@ end
 
 -----//// TESTING!!!
 
-hooks.player_changed[#hooks.player_changed+1] = function()
-	LoadGameEffectEntityTo(player, "data/entities/misc/effect_protection_all.xml")
-end
+
+
 
 
 -----////
@@ -399,7 +398,6 @@ if settings.AA then
 	end
 
 end
-
 
 
 
