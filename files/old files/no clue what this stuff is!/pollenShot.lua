@@ -20,4 +20,4 @@ if (Random(1,7) == 7) then
 end
 
 
-EntityKill(GetUpdatedEntityID())
+EntityKill(entity_id)

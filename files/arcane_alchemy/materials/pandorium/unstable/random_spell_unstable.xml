@@ -1,10 +1,10 @@
 <Entity tags="reaction_entity" >
 
-    <LuaComponent
-        _tags="enabled_in_world"
-        script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell_unstable.lua"
-        execute_on_added="1"
-        call_init_function="1"
-    />
+	<LuaComponent
+		_tags="enabled_in_world"
+		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/random_spell_unstable.lua"
+		execute_on_added="1"
+		call_init_function="1"
+	/>
 
 </Entity>

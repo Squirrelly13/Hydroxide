@@ -66,9 +66,9 @@ NullShift_materials.my_primary_material = {
 	probability = 0.05, --default 1.0
 	condition = function(self, data) --optional (data provides, shifter entity and position (CAN BE NIL!!))
 		if shifter and BiomeMapGetName(data.x, data.y) == "waterworld" then
-            self.probability = 1.2
-            table.remove(self.variants, 1) --remove "my_primary_material_dry" from variants
-        end --you can modify probability and such before the table is rolled like so!
+			self.probability = 1.2
+			table.remove(self.variants, 1) --remove "my_primary_material_dry" from variants
+		end --you can modify probability and such before the table is rolled like so!
 		return true --returning false will mean the entry is not valid, here we return true because we only want to modify the probaility, feel free to do things your way!
 	end
 	variants = { --optional
@@ -87,14 +87,14 @@ ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/materials/magic_liqu
 
 --your append.lua:
 NullShiftData.custom_functions[#NullShiftData.custom_functions+1] = function(shifter, x, y) --SHIFTER AND ITS COORDINATES CAN BE NIL
-    if not (shifter and IsPlayer(shifter)) then return end --nil and player check for shifter
-    local tx = GlobalsGetValue("my_secret_pos.x")
-    local ty = GlobalsGetValue("my_secret_pos.y")
-    if (tx > (x - 100) and tx < (x + 100)) and (ty > (y - 100) and ty < (y + 100)) then --basic 200 pixel bounding box check for of my_secret_pos
-        GamePrintImportant("gotcha!", "player nullified :)")
-        EntityKill(shifter)
-        return true --returning true will cancel the null shift and not change any materials
-    end
+	if not (shifter and IsPlayer(shifter)) then return end --nil and player check for shifter
+	local tx = GlobalsGetValue("my_secret_pos.x")
+	local ty = GlobalsGetValue("my_secret_pos.y")
+	if (tx > (x - 100) and tx < (x + 100)) and (ty > (y - 100) and ty < (y + 100)) then --basic 200 pixel bounding box check for of my_secret_pos
+		GamePrintImportant("gotcha!", "player nullified :)")
+		EntityKill(shifter)
+		return true --returning true will cancel the null shift and not change any materials
+	end
 end
 
 NullShiftData.null_shift_limit = NullShiftData.null_shift_limit + 10 --increases the shift limit by 10

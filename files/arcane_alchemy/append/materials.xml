@@ -64,6 +64,7 @@
 	</StatusEffects>
   </CellData> <!--  Why are you hitting yourself?  -->
 
+  <!--
   <CellData
 	name="aa_shrinkium"
 	ui_name="$mat_aa_shrinkium"
@@ -95,7 +96,7 @@
 		  <StatusEffect type="AA_SHRINK" amount="0.3"/>
 	  </Ingestion>
 	</StatusEffects>
-  </CellData>
+  </CellData> -->
 
 	<CellData
 	name="aa_dark_matter"
@@ -200,7 +201,7 @@
 	liquid_flow_speed="0.01"
 	liquid_slime="1"
 	liquid_stains="2"
-	liquid_sprite_stain_shaken_drop_chance="100"
+	liquid_sprite_stain_shaken_drop_chance="12"
 	stickyness="0"
 	solid_friction="1.0"
 	on_fire="0"

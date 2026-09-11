@@ -22,10 +22,10 @@
 	platform_type="1"
 
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/BLOOM_FLOOR.png"
 	color="ffCF1FC8" >
-    </Graphics>
+	</Graphics>
 
   </CellData><!-- bloomium (floor?) -->
 
@@ -51,15 +51,15 @@
 	hp="30"
 	platform_type="1"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/BLOOM_ROOF.png"
 	is_grass="1"
 	color="ffCF1FC8" >
-    </Graphics>
+	</Graphics>
 
   </CellData><!-- bloomium Ceiling -->
 
-     <CellData
+	 <CellData
 	name="aa_bloom_roof_dead"
 	ui_name="Bloomium"
 	tags="[static],[corrodible],[burnable],[meltable_to_lava],[alchemy],[bloom_solid]"
@@ -81,11 +81,11 @@
 	hp="30"
 	platform_type="1"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/BLOOM_ROOF_DEAD.png"
 	is_grass="1"
 	color="ffCF1FC8" >
-    </Graphics>
+	</Graphics>
 
   </CellData><!-- bloomium ceiling (probably doesnt drip??) -->
 
@@ -114,11 +114,11 @@
 	hp="30"
 	platform_type="0"
 	>
-    <Graphics
+	<Graphics
 	texture_file="mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/BLOOM_ROOF_PLANT.png"
 	is_grass="1"
 	color="ffCF1FC8" >
-    </Graphics>
+	</Graphics>
 
   </CellData><!-- i think this is the roots that hang from bloomium roofs -->
 
@@ -138,10 +138,10 @@
 	requires_oxygen="0"
 	liquid_stains="1"
 	>
-    <Graphics
+	<Graphics
 	is_grass="1"
 	color="336D693E" >
-    </Graphics>
+	</Graphics>
   </CellData><!-- bloomium drip -->
 
 	<CellData
@@ -164,6 +164,6 @@
 	 <Graphics
 
 	color="55678828" >
-    </Graphics>
+	</Graphics>
   </CellData><!-- bloomium gas -->
 </Materials>

@@ -108,8 +108,6 @@ local AA_to = {
 	aa_arborium = 0.3,
 	aa_cloning_solution = 0.2,
 	aa_rice = 0.1,
-	aa_meagre_offering = 0.07,
-	aa_creeping_slime = 0.05,
 }
 
 

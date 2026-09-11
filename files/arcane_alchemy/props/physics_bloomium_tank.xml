@@ -4,8 +4,8 @@
 
 	<Base file="data/entities/base_item_physics2.xml" >
 		<PhysicsBody2Component
-     		kill_entity_after_initialized="0" >
-    	</PhysicsBody2Component>
+	 		kill_entity_after_initialized="0" >
+		</PhysicsBody2Component>
 		<PhysicsImageShapeComponent
 			image_file="mods/Hydroxide/files/arcane_alchemy/props/bloomium_tank.png"
 			material="steel" >
@@ -79,7 +79,7 @@
 			delay.min="1"
 			delay.max="4"
 			explosion_delay_id="1"
-      		audio_event_name="explosions/propane_tank" >
+	  		audio_event_name="explosions/propane_tank" >
 		</config_explosion>
 	</ExplodeOnDamageComponent>
 

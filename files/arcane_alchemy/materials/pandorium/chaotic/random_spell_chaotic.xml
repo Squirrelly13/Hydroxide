@@ -1,39 +1,40 @@
 <Entity name="Chaotic Pandorium">
 
-    <SpriteAnimatorComponent/>
-
-    <LifetimeComponent lifetime = "45"/>
+	<LifetimeComponent lifetime = "45"/>
 
 	<GenomeDataComponent herd_id = "mage_swapper"/>
 
 	<LuaComponent
 		_tags="enabled_in_world"
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/chaotic/random_spell_chaotic.lua"
-        execute_on_added="1"
-    />
+		execute_on_added="1"
+	/>
 
-    <CharacterDataComponent/>
+	<SpriteAnimatorComponent/>
 
-    <CharacterPlatformingComponent/>
+	<CharacterDataComponent/>
 
-    <ControlsComponent/>
+	<CharacterPlatformingComponent/>
 
-    <GunComponent />
+	<ControlsComponent/>
 
-    <Inventory2Component/>
+	<GunComponent />
 
-    <PlatformShooterPlayerComponent/>
+	<Inventory2Component/>
 
-    <Entity name="inventory_quick">
-        <Entity>
-            <AbilityComponent
-                mana="1500"
-                mana_max="1500"
-                use_gun_script="1">
-                <gunaction_config
-                    friendly_fire="1"
-                    spread_degrees="360"/>
-            </AbilityComponent>
-        </Entity>
-    </Entity>
+	<PlatformShooterPlayerComponent/>
+
+	<Entity name="inventory_quick">
+		<Entity>
+			<AbilityComponent
+				mana="1500"
+				mana_max="1500"
+				use_gun_script="1">
+				<gunaction_config
+					friendly_fire="1"
+					spread_degrees="360"
+				/>
+			</AbilityComponent>
+		</Entity>
+	</Entity>
 </Entity>

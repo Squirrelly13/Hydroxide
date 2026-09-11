@@ -105,7 +105,6 @@
 
   <CellDataChild
   	_parent="templerock_static"
-  	_inherit_reactions="0"
   	name="alchemist_stone"
 	ui_name="$mat_wizardstone"
 	wang_color="ff4c484f"

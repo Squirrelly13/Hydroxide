@@ -1,5 +1,5 @@
 <Entity>
-    <PixelSceneComponent
+	<PixelSceneComponent
 		pixel_scene_background=	"mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine_background.png"
 		pixel_scene_visual=		"mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine_visual.png"
 		pixel_scene=			"mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine.png"
@@ -7,7 +7,7 @@
 		offset_y="0"
 		skip_biome_checks="1"
 		>
-    </PixelSceneComponent>
+	</PixelSceneComponent>
 	<LifetimeComponent
 		lifetime="2"
 		>

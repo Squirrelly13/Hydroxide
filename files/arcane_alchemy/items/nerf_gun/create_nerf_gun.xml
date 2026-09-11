@@ -1,11 +1,10 @@
 <Entity tags="reaction_entity" >
-
 	<LuaComponent
 		_tags="enabled_in_world"
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/items/nerf_gun/nerf_gun.lua"
-        execute_on_added="1"
-        execute_times="1"
-    >
-	</LuaComponent>
+		execute_on_added="1"
+		execute_times="1"
+	/>
 
+	<LifetimeComponent lifetime="10"/>
 </Entity>

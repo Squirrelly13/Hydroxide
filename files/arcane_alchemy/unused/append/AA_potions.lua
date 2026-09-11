@@ -1,125 +1,125 @@
 table.insert(materials_magic, {
-    material="aa_dark_matter",
-    cost=500,
+	material="aa_dark_matter",
+	cost=500,
 });
 
 table.insert(materials_magic, {
-    material="aa_hitself",
-    cost=500,
+	material="aa_hitself",
+	cost=500,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="aa_arborium",
-    cost=500,
+	material="aa_arborium",
+	cost=500,
 });
 
 table.insert(materials_magic, {
-    material="aa_hungry_slime",
-    cost=600,
+	material="aa_hungry_slime",
+	cost=600,
 });
 
 table.insert(materials_magic, {
-    material="aa_repultium",
-    cost=400,
+	material="aa_repultium",
+	cost=400,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="aa_cloning_solution",
-    cost=400,
+	material="aa_cloning_solution",
+	cost=400,
 });
 
 table.insert(materials_magic, {
-    material="aa_condensed_gravity",
-    cost=500,
+	material="aa_condensed_gravity",
+	cost=500,
 });
 
 table.insert(materials_magic, {
-    material="aa_icy_inferno",
-    cost=700,
+	material="aa_icy_inferno",
+	cost=700,
 });
 
 table.insert(materials_magic, {
-    material="aa_meagre_offering",
-    cost=1500,
+	material="aa_meagre_offering",
+	cost=1500,
 });
 
 table.insert(materials_magic, {
-    material="aa_love",
-    cost=500,
+	material="aa_love",
+	cost=500,
 });
 
 table.insert(materials_magic, {
-    material="aa_pandorium",
-    cost=500,
-    percentage=0.5
-});
-
-table.insert(materials_magic, {
-    material="aa_unstable_pandorium",
-    cost=1500,
-    percentage=0.2
-});
-
-table.insert(materials_magic, {
-    material="aa_pop_rocks",
-    cost=300,
+	material="aa_pandorium",
+	cost=500,
 	percentage=0.5
 });
 
 table.insert(materials_magic, {
-    material="aa_static_charge",
-    cost=300,
+	material="aa_unstable_pandorium",
+	cost=1500,
+	percentage=0.2
+});
+
+table.insert(materials_magic, {
+	material="aa_pop_rocks",
+	cost=300,
+	percentage=0.5
+});
+
+table.insert(materials_magic, {
+	material="aa_static_charge",
+	cost=300,
 });
 
 local old_init = init
 init = function( entity_id )
-    roll_number = Random(1,100 * 1000) / 1000
-    possible_rolls = {}
-    for k, v in pairs(materials_magic)do
-        if(v.percentage ~= nil)then
-            if(roll_number < v.percentage)then
-                table.insert(possible_rolls, v)
-            end
-        end
-    end
-    if(#possible_rolls == 0)then
-        old_init(entity_id)
-    else
-        potion_material = random_from_array( possible_rolls)
-        potion_material = potion_material.material
+	roll_number = Random(1,100 * 1000) / 1000
+	possible_rolls = {}
+	for k, v in pairs(materials_magic)do
+		if(v.percentage ~= nil)then
+			if(roll_number < v.percentage)then
+				table.insert(possible_rolls, v)
+			end
+		end
+	end
+	if(#possible_rolls == 0)then
+		old_init(entity_id)
+	else
+		potion_material = random_from_array( possible_rolls)
+		potion_material = potion_material.material
 
 		-- debug
 		--potion_material = "aa_unstable_pandorium"
 
-        local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
+		local components = EntityGetComponent( entity_id, "VariableStorageComponent" )
 
-        if( components ~= nil ) then
-            for key,comp_id in pairs(components) do
-                local var_name = ComponentGetValue2( comp_id, "name" )
-                if( var_name == "potion_material") then
-                    potion_material = ComponentGetValue2( comp_id, "value_string" )
-                end
-            end
-        end
+		if( components ~= nil ) then
+			for key,comp_id in pairs(components) do
+				local var_name = ComponentGetValue2( comp_id, "name" )
+				if( var_name == "potion_material") then
+					potion_material = ComponentGetValue2( comp_id, "value_string" )
+				end
+			end
+		end
 
-        local year,month,day = GameGetDateAndTimeLocal()
+		local year,month,day = GameGetDateAndTimeLocal()
 
-        if ((( month == 5 ) and ( day == 1 )) or (( month == 4 ) and ( day == 30 ))) and (Random( 0, 100 ) <= 20) then
-            potion_material = "sima"
-        end
+		if ((( month == 5 ) and ( day == 1 )) or (( month == 4 ) and ( day == 30 ))) and (Random( 0, 100 ) <= 20) then
+			potion_material = "sima"
+		end
 
-        local total_capacity = tonumber( GlobalsGetValue( "EXTRA_POTION_CAPACITY_LEVEL", "1000" ) ) or 1000
-        if ( total_capacity > 1000 ) then
-            local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
+		local total_capacity = tonumber( GlobalsGetValue( "EXTRA_POTION_CAPACITY_LEVEL", "1000" ) ) or 1000
+		if ( total_capacity > 1000 ) then
+			local comp = EntityGetFirstComponentIncludingDisabled( entity_id, "MaterialSuckerComponent" )
 
-            if ( comp ~= nil ) then
-                ComponentSetValue2( comp, "barrel_size", total_capacity )
-            end
+			if ( comp ~= nil ) then
+				ComponentSetValue2( comp, "barrel_size", total_capacity )
+			end
 
-            EntityAddTag( entity_id, "extra_potion_capacity" )
-        end
+			EntityAddTag( entity_id, "extra_potion_capacity" )
+		end
 
 		if(potion_material == "aa_pandorium" or potion_material == "aa_unstable_pandorium")then
 			comp1 = EntityGetFirstComponentIncludingDisabled( entity_id, "DamageModelComponent" )
@@ -148,6 +148,6 @@ init = function( entity_id )
 			end
 		end
 
-        AddMaterialInventoryMaterial( entity_id, potion_material, total_capacity )
-    end
+		AddMaterialInventoryMaterial( entity_id, potion_material, total_capacity )
+	end
 end

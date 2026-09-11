@@ -192,6 +192,39 @@ function dump(o)
 	end
 end
 
+---a version of the `dump()` function but with formatting
+---@param o table
+---@param q bool? should keys be in quotes
+---@return string
+---@diagnostic disable-next-line: lowercase-global
+function dumpf(o, q, r)
+	r = r or 0
+	local _t = ('    '):rep(r)
+	local t = type(o)
+	if t == 'table' then
+		local s = '{\n'
+		local table_is_empty = true
+		for k,v in pairs(o) do
+			table_is_empty = false
+			if type(k) == 'number' then
+				k = '['..k..']'
+			elseif q then
+				k = '["'..k..'"]'
+			end
+			s = s .. _t .. '    '..k..' = ' .. dumpf(v,q,r+1) .. ',\n'
+		end
+		if table_is_empty then
+			return s:sub(1, -2) .. '}'
+		else
+			return s .. _t .. '}'
+		end
+	elseif t == "string" then
+		return '"' .. tostring(o):gsub("\n", "\\n") .. '"'
+	else
+		return tostring(o)
+	end
+end
+
 ---simple func to get herd id, mostly for other funcs in this file to utilise
 ---@param entity_id entity_id
 ---@return int
@@ -202,7 +235,7 @@ function GetHerdID(entity_id)
 end
 
 ---Replacement function for the vanilla `utilities.lua` function `shoot_projectile()`
----@param shooter entity_id
+---@param shooter entity_id?
 ---@param entity_file string filepath to projectile.xml
 ---@param x number
 ---@param y number
@@ -211,6 +244,7 @@ end
 ---@param send_message bool?
 ---@return entity_id
 function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
+	---@type entity_id
 	shooter = shooter or 0
 	local entity_id = EntityLoad(entity_file, x, y)
 	vel_x = vel_x or 0
@@ -238,19 +272,21 @@ end
 ---@param origin entity_id|nil Original entity from which the clone was derived (optional)
 ---@param x number
 ---@param y number
----@param genome string? New genome for the clone (optional)
+---@param data table? General data
 ---@return entity_id
 ---@return component_id
-function CreateClone(path, origin, x, y, genome)
+function CreateClone(path, origin, x, y, data)
+	data = data or {}
+
 	local entity = EntityLoad(path, x, y)
-	if genome then
+	if data.genome then
 		for _, comp in ipairs(EntityGetComponent(entity, "GenomeDataComponent") or {}) do
-			ComponentSetValue2(comp, "herd_id", StringToHerdId(genome))
+			ComponentSetValue2(comp, "herd_id", StringToHerdId(data.genome))
 		end
 	end
 
 	local clone_data = EntityAddComponent2(entity, "VariableStorageComponent", {
-		_tags = "no_gold_drop",
+		_tags = data.no_gold and "no_gold_drop" or "",
 		name = "aa_clone_data",
 		value_int = origin
 	})

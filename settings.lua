@@ -89,7 +89,13 @@ mod_settings =
 				value_display_formatting = " $0%",
 				scope = MOD_SETTING_SCOPE_RUNTIME,
 			},
-
+			{
+				id = "POLYMORPH_GUI",
+				ui_name = "Polymorph GUI",
+				ui_description = "Toggle the UI that shows up when polymorphed.",
+				value_default = true,
+				scope = MOD_SETTING_SCOPE_RUNTIME_RESTART,
+			},
 		}
 	},
 	{
@@ -131,28 +137,28 @@ mod_settings =
 			},
 		}
 	},
-	{
-		category_id = "TERROR_SETTINGS",
-		ui_name = "Terror.",
-		ui_description = "Settings and Options for configuring Terror content!",
-		foldable = true,
-		_folded = true,
-		settings = {
-			{
-				id = "TERROR_ENABLED",
-				ui_name = "Terror Mode (WIP!)",
-				ui_description = "Adds some \"Fun\" things to the game...",
-				value_default = false,
-				scope = MOD_SETTING_SCOPE_NEW_GAME,
-			},
-			{
-				id = "TERROR_MODE_WARNING",
-				ui_name = "Warning! Terror Mode is Terrifying!!",
-				ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis branch is for those who truly understand the philosophy behind this mod.",
-				not_setting = true,
-			},
-		},
-	},
+	--{
+	--	category_id = "TERROR_SETTINGS",
+	--	ui_name = "Terror.",
+	--	ui_description = "Settings and Options for configuring Terror content!",
+	--	foldable = true,
+	--	_folded = true,
+	--	settings = {
+	--		{
+	--			id = "TERROR_ENABLED",
+	--			ui_name = "Terror Mode (WIP!)",
+	--			ui_description = "Adds some \"Fun\" things to the game...",
+	--			value_default = false,
+	--			scope = MOD_SETTING_SCOPE_NEW_GAME,
+	--		},
+	--		{
+	--			id = "TERROR_MODE_WARNING",
+	--			ui_name = "Warning! Terror Mode is Terrifying!!",
+	--			ui_desc = "We do not bear responsibilities born from tragic ends to your run\nThis branch is for those who truly understand the philosophy behind this mod.",
+	--			not_setting = true,
+	--		},
+	--	},
+	--},
 	{
 		category_id = "COMPATIBILITY_SETTINGS",
 		ui_name = "Compelling Compatibility",
@@ -160,7 +166,6 @@ mod_settings =
 		foldable = true,
 		_folded = true,
 		settings = {
-
 			{
 				category_id = "COMPATIBILITY_INTERNAL",
 				ui_name = "Internal",
@@ -176,16 +181,6 @@ mod_settings =
 						scope = MOD_SETTING_SCOPE_RUNTIME_RESTART,
 					},
 				}
-			},
-
-			{
-				category_id = "ALCHEMIST_POTIONS",
-				ui_name = "Alchemist Potions",
-				ui_description = "Configure what potions can be thrown by alchemists.",
-				foldable = true,
-				_folded = true,
-				initialized = false,
-				settings = {}
 			},
 		},
 	},

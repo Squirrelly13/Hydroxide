@@ -45,4 +45,9 @@ local postfx = {
     end
 }
 
+--[[ disable shader effects
+for key, value in pairs(postfx) do
+    postfx[key] = function(...) end
+end--]]
+
 return postfx

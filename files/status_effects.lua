@@ -181,7 +181,7 @@ local CC_effects = {
 		ui_name="$status_cc_null_trip_4",
 		ui_description="$status_desc_cc_null_trip_4",
 		ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip.png",
-		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip.xml",
+		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip_shift.xml",
 		min_threshold_normalized=3.0,
 	}
 }

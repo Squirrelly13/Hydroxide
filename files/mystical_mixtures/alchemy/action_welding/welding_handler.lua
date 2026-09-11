@@ -19,7 +19,7 @@ local function EntitySetVariable(entity, name, type, value)
 	local has_been_set = false
 	if(variable_storages ~= nil)then
 		for k, v in ipairs(variable_storages)do
-			name_out = ComponentGetValue2(v, "name")
+			local name_out = ComponentGetValue2(v, "name")
 			if(name_out == name)then
 				ComponentSetValue2(v, "value_"..type, value)
 				has_been_set = true

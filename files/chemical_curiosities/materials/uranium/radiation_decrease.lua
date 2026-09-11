@@ -4,7 +4,7 @@ local entity_id = GetUpdatedEntityID()
 local owner = EntityGetParent(entity_id)
 local owner_children = EntityGetAllChildren(owner) or {}
 
-local var_comps = EntityGetComponent(GetUpdatedEntityID(), "VariableStorageComponent")
+local var_comps = EntityGetComponent(entity_id, "VariableStorageComponent")
 if var_comps == nil then return end
 local radcount
 local leggytracker

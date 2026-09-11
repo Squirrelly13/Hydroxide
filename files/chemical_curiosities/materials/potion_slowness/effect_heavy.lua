@@ -1,15 +1,14 @@
-local entity = GetUpdatedEntityID()
+dofile_once("mods/Hydroxide/files/lib/status_helper.lua")
 
-local root = EntityGetParent( entity)
+local parent = EntityGetParent(GetUpdatedEntityID())
 
-if(root == entity)then return end
+local vel_comp = EntityGetFirstComponent(parent, "VelocityComponent")
+if not vel_comp then return end
 
+local vel_x, vel_y = ComponentGetValue2(vel_comp, "mVelocity")
+vel_x = vel_x or 0
+vel_y = vel_y or 0
 
-local component = EntityGetFirstComponent(root, "CharacterDataComponent")
-if not component then return end
-local vel_x, vel_y = ComponentGetValue2(component, "mVelocity") or 0, 0
+vel_y = vel_y / 1 + GetStatusCombined(parent, "CC_LEVITATION_SLOWER")
 
-local weight = 10
-vel_y = vel_y + weight
-
-ComponentSetValue2(component, "mVelocity", vel_x, vel_y)
+ComponentSetValue2(vel_comp, "mVelocity", vel_x, vel_y)
