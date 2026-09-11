@@ -68,7 +68,7 @@ mat_aa_bloomium,Bloomium,Блумиум,Brotânio,,,,,,绽放基质,,,,,
 mat_aa_bloomium_gas,Bloomium Spores,Споры Блумиума,Esporos brotânicos,,,,,,绽放基质孢子,,,,,
 mat_aa_divine_slime,Divine Slime,Божественная слизь,Gosma divina,,,,,,神圣史莱姆,,,,,
 mat_aa_divine_magma,Divine Magma,Божественная магма,Magma divina,,,,,,神圣熔岩,,,,,
-mat_aa_shrinkium,Shrinkium,,,,,,,,缩小魔药,,,,,|RU_missing|PTBR_missing
+mat_aa_shrinkium,Shrinkium,,Encólhio,,,,,,缩小魔药,,,,,|RU_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Spells!,
@@ -446,31 +446,31 @@ animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандор�
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,   Glimmers Expanded!,
 ,,,,,,,,,,,,,,
-action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_aa_glimmer_condensed_gravity,Gives a projectile a heavy sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_name_aa_glimmer_dark_matter,Dark Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_aa_glimmer_dark_matter,Gives a projectile a cosmic sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_name_aa_glimmer_static_charge,Static Charge Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_aa_glimmer_static_charge,Gives a projectile a electrifying sparkly trail,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,,,,,,,令投射物留下腐蚀性的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,,,,,,,令投射物留下银色的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,,,,,,,令投射物留下充满光耀的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_explode_player,Agitine Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_explode_player,Gives a projectile an agitating sparkly trail,,,,,,,,令投射物留下激发性的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_nullium,Nullium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,,,,,,,令投射物留下恶化的闪光轨迹,,,,degenerate as in the opposite of regenerate,|RU_missing|PTBR_missing
-action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,,,,,,,令投射物留下易发散的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_uranium,Uranium Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing|PTBR_missing
-action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
-action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing|PTBR_missing
-tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,,,,,,,,,,,,|RU_missing|PTBR_missing|CN_missing
+action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,,Brilho pandório caótico,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,,O projétil produz um rastro brilhante caótico,,,,,,,,,,,|RU_missing|CN_missing
+action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,,Brilho gravidade condensada,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_aa_glimmer_condensed_gravity,Gives a projectile a heavy sparkly trail,,O projétil produz um rastro brilhante pesado,,,,,,,,,,,|RU_missing|CN_missing
+action_name_aa_glimmer_dark_matter,Dark Matter Glimmer,,Brilho matéria escura,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_aa_glimmer_dark_matter,Gives a projectile a cosmic sparkly trail,,O projétil produz um rastro brilhante cósmico,,,,,,,,,,,|RU_missing|CN_missing
+action_name_aa_glimmer_static_charge,Static Charge Glimmer,,Brilho carga estática,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_aa_glimmer_static_charge,Gives a projectile a electrifying sparkly trail,,O projétil produz um rastro brilhante eletrificante,,,,,,,,,,,|RU_missing|CN_missing
+action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,,Brilho hidróxido,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,O projétil produz um rastro brilhante corrosivo,,,,,,令投射物留下腐蚀性的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,,Brilho líquido cortante,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,O projétil produz um rastro brilhante prateado,,,,,,令投射物留下银色的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,,Brilho líquido brilhante,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,O projétil produz um rastro brilhante,,,,,,令投射物留下充满光耀的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_explode_player,Agitine Glimmer,,Brilho agitínio,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_explode_player,Gives a projectile an agitating sparkly trail,,O projétil produz um rastro brilhante agitante,,,,,,令投射物留下激发性的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_nullium,Nullium Glimmer,,Brilho núlio,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,O projétil produz um rastro brilhante degenerativo,,,,,,令投射物留下恶化的闪光轨迹,,,,degenerate as in the opposite of regenerate,|RU_missing
+action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,,Brilho cristal inativo,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,O projétil produz um rastro brilhante volátil,,,,,,令投射物留下易发散的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_uranium,Uranium Glimmer,,Brilho de urânio,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,O projétil produz um rastro brilhante radioativo,,,,,,令投射物留下放射性的闪光轨迹,,,,,|RU_missing
+action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,Brilho antimatéria,,,,,,,,,,,|RU_missing|CN_missing
+action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,O projétil produz um rastro brilhante aniquilativo,,,,,,令投射物留下湮灭的闪光轨迹,,,,,|RU_missing
+tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,Pandório caótico/instável,,,,,,,,,,,|RU_missing|CN_missing
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
