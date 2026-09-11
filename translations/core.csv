@@ -115,14 +115,6 @@ status_aa_vomit_spells_chaotic,Chaotic Meal,Хаотичная трапеза,Re
 status_desc_aa_vomit_spells_chaotic,This was a terrible meal...,Это была ужасная трапеза...,Isso foi uma péssima refeição...,Bu berbat bir öğündü...,真是糟糕的一餐...,,,,,,,
 status_aa_vomit_spells_unstable,Unstable Meal,Нестабильная трапеза,Refeição instável,Dengesiz Öğün,不稳餐点,,,,,,,
 status_desc_aa_vomit_spells_unstable,This was a terrible idea!,Это была ужасная идея!,Isso foi uma péssima ideia!,Bu berbat bir fikirdi!,真是糟糕的主意！,,,,,,,
-status_cc_polymorph,Polymorph,,Polimorfia,,,,,,,,,
-status_desc_cc_polymorph,You have become something fluffy.,,Você se tornou algo fofinho.,,,,,,,,,
-status_cc_unstable_polymorph,Unstable Polymorph,,Polimorfia instável,,,,,,,,,
-status_desc_cc_unstable_polymorph,You have become something unexpected.,,Você se tornou algo inesperado.,,,,,,,,,
-status_cc_chaotic_polymorph,Chaotic Polymorph,,Polimorfia caótica,,,,,,,,,
-status_desc_cc_chaotic_polymorph,You have become something bizarre.,,Você se tornou algo bizarro.,,,,,,,,,
-status_cc_rare_polymorph,Exotic Polymorph,,Polimorfia exótica,,,,,,,,,
-status_desc_cc_rare_polymorph,You have become something exceptionally rare.,,Você se tornou algo extremamente raro.,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Items!
@@ -217,7 +209,7 @@ action_desc_cc_metal_seasoning,Summon a pile of metal powder,Призывает 
 action_cc_cloud_crystal,Crystal Cloud,Кристаллическое облако,Nuvem de cristal,Kristal Bulutu,水晶云,,,,,,,
 action_desc_cc_cloud_crystal,Creates a rain of liquid crystals,Создаёт дождь из жидких кристаллов,Cria uma chuva de cristais líquidos,Sıvı kristal yağmuru oluşturur,创造一片液态水晶云,,,,,,,
 action_cc_cloud_slice,Slicing Cloud,,Núvem cortante,,,,,,,,,
-action_desc_cc_cloud_slice,Creates a rain of a certain silvery serrated solution. Wait what?,,Cria uma chuva de uma certa solução prateada serrada. Espera... O quê?,,,,,,,,,
+action_desc_cc_cloud_slice,"Creates a rain of a certain silvery serrated solution. Wait, what?",,Cria uma chuva de uma certa solução prateada serrada. Espera... O quê?,,,,,,,,,
 action_cc_cloud_sparkling,Sparkling Cloud,Сверкающее облако,Nuvem cintilante,Parıldayan Bulut,闪烁之云,,,,,,,
 action_desc_cc_cloud_sparkling,Rain hell on all of them.,Пролей на них адский дождь.,Faça chover o inferno em todos eles.,Onlara cehennemi yağdır,淋死他们。,,,,,,,
 action_cc_grease_blast,Explosion of Grease,Взрыв смазки,Explosão de graxa,Gres Yağı Patlaması,油脂爆炸,,,,,,,
@@ -312,6 +304,14 @@ statis_cc_radstage_12,Nuclear Overdrive,,Overdrive nuclear,Nükleer Aşırı Yü
 statis_cc_desc_radstage_12,"Every fibre of your being is under attack\nRadcount: You are on the precipice...\nJust, a, little, bit, further...!",,"Toda fibra do seu ser está sob ataque\nRad: Você está no precipício...\nSó, mais, um, pouquinho...!","Varlığının her dokusu saldırı altında\nRadsayacı: Felaketin eşiğindesin...\nYalnızca, çok, az, daha...!",你的每一寸血肉都在被攻击！\n辐射值：就差临门一脚了...\n再，坚持，一下...！,,,,,,,
 statis_cc_radstage_13,Radiant Blessing,,Bênção radiante,Parlaklık Lütfu,光明之佑,,,,,,,this stage is only properly viewable if the player has the radiation immunity perk (not to be confused with toxic immunity perk)
 statis_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
+status_cc_polymorph,Polymorph,,Polimorfia,,,,,,,,,
+status_desc_cc_polymorph,You have become something fluffy.,,Você se tornou algo fofinho.,,,,,,,,,
+status_cc_unstable_polymorph,Unstable Polymorph,,Polimorfia instável,,,,,,,,,
+status_desc_cc_unstable_polymorph,You have become something unexpected.,,Você se tornou algo inesperado.,,,,,,,,,
+status_cc_chaotic_polymorph,Chaotic Polymorph,,Polimorfia caótica,,,,,,,,,
+status_desc_cc_chaotic_polymorph,You have become something bizarre.,,Você se tornou algo bizarro.,,,,,,,,,
+status_cc_rare_polymorph,Exotic Polymorph,,Polimorfia exótica,,,,,,,,,
+status_desc_cc_rare_polymorph,You have become something exceptionally rare.,,Você se tornou algo extremamente raro.,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Items!
@@ -496,12 +496,12 @@ cc_branch_name_mm,Mystical Mixtures,,Misturas Místicas,Gizemli Karışımlar,,,
 cc_branch_name_ff,Fluent Fluids,,Fluidos Fluentes,Büyülü Sıvılar,,,,,,,,up to interpretation
 cc_branch_name_t,Terror.,,Terror.,Kaos,,,,,,,,up to interpretation
 ,,,,,,,,,,,,
-cc_name_evaisa,Evaisa,,,,,,,,,,,
-cc_name_squirrelly,Squirrelly,,,,,,,,,,,
-cc_name_userk,UserK,,,,,,,,,,,
-cc_name_alexgod,Alex(GoD),,,,,,,,,,,
-cc_name_lamia,Lamia,,,,,,,,,,,
-cc_name_absent_friend,Absent Friend,,,,,,,,,,,
-cc_name_dylan_rhodes,Dylan Rhodes Taha,,,,,,,,,,,
-cc_name_singularity_neko,SingularityNeko,,,,,,,,,,,
+cc_name_evaisa,Evaisa,,,,,,,,,,,transliterate
+cc_name_squirrelly,Squirrelly,,,,,,,,,,,transliterate
+cc_name_userk,UserK,,,,,,,,,,,transliterate
+cc_name_alexgod,Alex(GoD),,,,,,,,,,,transliterate
+cc_name_lamia,Lamia,,,,,,,,,,,transliterate
+cc_name_absent_friend,Absent Friend,,,,,,,,,,,transliterate
+cc_name_dylan_rhodes,Dylan Rhodes Taha,,,,,,,,,,,transliterate
+cc_name_singularity_neko,SingularityNeko,,,,,,,,,,,transliterate
 ,,,,,,,,,,,,add yourself here!
