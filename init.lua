@@ -20,10 +20,11 @@ local settings = {
 	MM = ModSettingGet("Hydroxide.MM_ENABLED"),
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
+	run_translation_debug = false,
 
 	--CC
+	oregen = ModSettingGet("Hydroxide.CC_ORES"),
 	polymorph_gui = ModSettingGet("Hydroxide.POLYMORPH_GUI"),
-	run_translation_debug = true
 }
 
 
@@ -173,11 +174,6 @@ function OnWorldPreUpdate()
 		func(frame)
 	end
 end
---function OnWorldPostUpdate()
---	for _,func in ipairs(hooks.post_update) do
---		func(frame)
---	end
---end --this does not seem needed yet
 
 
 -----//// TESTING!!!
@@ -693,7 +689,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	--local x = ProceduralRandom(0,0)
 	--print("===================================== random " .. tostring(x))
 
-	if ModSettingGet("Hydroxide.CC_ORES") then
+	if settings.oregen then
 
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
