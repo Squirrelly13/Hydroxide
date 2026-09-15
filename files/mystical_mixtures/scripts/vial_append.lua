@@ -1,15 +1,15 @@
 local MM_materials = {
     {
         material="mm_bingus",
-        probability=0.3,
+        weight=0.3,
     },
     {
         material="mm_alchemical_solvent",
-        probability=.7,
+        weight=.7,
     },
     {
         material="mm_alchemical_base",
-        probability=1.1,
+        weight=1.1,
     },
 }
 

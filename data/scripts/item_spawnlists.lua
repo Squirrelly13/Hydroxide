@@ -231,15 +231,6 @@ spawnlists =
 	}
 }
 
----@generic T : Weighted
----@param t T[]
----@param context any
----@return T|nil
----Compiles entries from `t` into a new table based on optional `condition` value in the entry and passes it through `RandomFromTable`. `context` is passed into the function as a parameter.
-function ConditionalRandomFromTable(t, context)
-
-end
-
 ip.convert_to_lib = function(old_list, name, targetpath)
 	--convert potion_spawnlist -> default and potion_spawnlist_liquidcave -> liquidcave
 	name = name == "potion_spawnlist" and "default" --default is a more sane name under new system
