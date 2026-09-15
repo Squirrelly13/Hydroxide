@@ -312,6 +312,7 @@ statis_cc_radstage_13,Radiant Blessing,,Bênção radiante,Parlaklık Lütfu,光
 statis_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
 status_cc_polymorph,Polymorph,,Polimorfia,,,,,,,,,
 status_desc_cc_polymorph,You have become something fluffy.,,Você se tornou algo fofinho.,,,,,,,,,
+status_desc_cc_polymorph_trans,Your pronouns are she/ep.,,Você se tornou algo fofinho.,,,,,,,,,Do as you please
 status_cc_unstable_polymorph,Unstable Polymorph,,Polimorfia instável,,,,,,,,,
 status_desc_cc_unstable_polymorph,You have become something unexpected.,,Você se tornou algo inesperado.,,,,,,,,,
 status_cc_chaotic_polymorph,Chaotic Polymorph,,Polimorfia caótica,,,,,,,,,
