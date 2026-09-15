@@ -54,6 +54,14 @@ mod_settings =
 				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
 				scope = MOD_SETTING_SCOPE_RUNTIME,
 			},
+			{
+				id = "EXPERIMENTAL_FEATURES",
+				ui_name = "Experimental Features",
+				ui_description = "Toggles features that are more experimental",
+				value_default = false,
+				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
+			},
 		},
 	},
 	{

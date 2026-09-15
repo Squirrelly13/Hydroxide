@@ -230,6 +230,12 @@ action_cc_gunpowder_cloud,Gunpowder Cloud,Пороховое облако,Nuvem 
 action_desc_cc_gunpowder_cloud,???,???,???,???,???,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
+,,,,,,,,,,,,Perks!
+,,,,,,,,,,,,
+perkname_cc_chaotic_transfusion,Chaotic Transfusion,,,,,,,,,,,
+perkdesc_cc_chaotic_transfusion,fucks up enemy blood lmao,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
 ,,,,,,,,,,,,Status Effects!
 ,,,,,,,,,,,,
 status_cc_ingestion_methane,Methane Poisoning,Отравление метаном,Envenenamento por metano,Methan Zehirlenmesi,甲烷中毒,,,,,,,
