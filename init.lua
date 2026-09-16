@@ -299,7 +299,7 @@ if settings.CC then
 			}
 
 			if MatchDateLocal({month = 3, day = 31}) then
-				polymorphs.POLYMORPH.desc = "$status_desc_cc_polymorph_trans"
+				polymorphs.POLYMORPH.desc = "$status_desc_cc_polymorph_trans_day"
 			end
 
 			local rare_polymorph = {
