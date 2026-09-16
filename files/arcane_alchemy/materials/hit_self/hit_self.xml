@@ -13,8 +13,7 @@
 		>
 	</LuaComponent>
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
 	<IKLimbComponent
 		length="40" >
