@@ -20,7 +20,7 @@ local settings = {
 	MM = ModSettingGet("Hydroxide.MM_ENABLED"),
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
-	run_translation_debug = false,
+	run_translation_debug = true,
 
 	--CC
 	oregen = ModSettingGet("Hydroxide.CC_ORES"),
