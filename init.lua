@@ -249,6 +249,7 @@ if settings.CC then
 	FileSetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
 	FileSetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
+	dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/materials.lua")
 
 	if settings.experimental_features then
 		hooks.new_eid[#hooks.new_eid+1] = function(entity_id, varcomp_tree)
@@ -263,6 +264,8 @@ if settings.CC then
 			local option = RandomFromTable(material_options)
 			ComponentSetValue2(dmc, "blood_material", option.material)
 			ComponentSetValue2(dmc, "blood_spray_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+			ComponentSetValue2(dmc, "blood_multiplier", ComponentGetValue2(dmc, "blood_multiplier") + .5)
 		end
 	end
 

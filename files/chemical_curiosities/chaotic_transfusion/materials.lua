@@ -16,7 +16,7 @@ local materials = {
 	},
 	{
 		material = "slime",
-		weight = 10,
+		weight = 6,
 	},
 	{
 		material = "magic_liquid_movement_faster",
@@ -32,7 +32,7 @@ local materials = {
 	},
 	{
 		material = "magic_liquid_mana_regeneration",
-		weight = 7,
+		weight = 6,
 	},
 	{
 		material = "magic_liquid_teleportation",
@@ -52,15 +52,15 @@ local materials = {
 	},
 	{
 		material = "blood_worm",
-		weight = 10,
+		weight = 7,
 	},
 	{
 		material = "blood_cold",
-		weight = 10,
+		weight = 7,
 	},
 	{
 		material = "gold_molten",
-		weight = .5,
+		weight = 1,
 	},
 	{
 		material = "void_liquid",
@@ -78,10 +78,6 @@ local materials = {
 	{
 		material = "cc_glittering_liquid",
 		weight = 7,
-	},
-	{
-		material = "cc_ectospasm",
-		weight = 4,
 	},
 	{
 		material = "cc_heftium",
@@ -107,18 +103,75 @@ local materials = {
 		material = "cc_dormant_crystal_molten",
 		weight = 10,
 	},
+	{
+		material = "cc_antimatter_liquid",
+		weight = 2,
+	},
+	{
+		material = "cc_persistine",
+		weight = 9,
+	},
 }
+
+
+
+
+
+
+
+
 
 local AA_materials = {
 	{
-		material = "water",
-		weight = 1,
+		material = "aa_dark_matter",
+		weight = 3,
+	},
+	{
+		material = "aa_base_potion",
+		weight = 15,
+	},
+	{
+		material = "aa_arborium",
+		weight = 5,
+	},
+	{
+		material = "aa_icy_inferno",
+		weight = 6,
+	},
+	{
+		material = "aa_pandorium",
+		weight = 6,
+	},
+	{
+		material = "aa_pop_rocks",
+		weight = .5,
+	},
+	{
+		material = "aa_condensed_gravity",
+		weight = 4,
+	},
+	{
+		material = "aa_cloning_solution",
+		weight = 4,
 	},
 }
 
 if AA then
 	for _,entry in ipairs(AA_materials) do
 		materials[#materials+1] = entry
+	end
+end
+
+if true then
+	table.sort(materials, function(a, b)
+		return a.weight > b.weight
+	end)
+	local max_weight = 0
+	for _,entry in ipairs(materials) do
+		max_weight = max_weight + entry.weight
+	end
+	for _,entry in ipairs(materials) do
+		print(("[%s] = %.3f%%"):format(entry.material, 100*entry.weight/max_weight))
 	end
 end
 

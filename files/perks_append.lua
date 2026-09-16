@@ -35,6 +35,8 @@ local cc_perks = {
 				local option = RandomFromTable(material_options)
 				ComponentSetValue2(dmc, "blood_material", option.material)
 				ComponentSetValue2(dmc, "blood_spray_material", option.material)
+				ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+				ComponentSetValue2(dmc, "blood_multiplier", ComponentGetValue2(dmc, "blood_multiplier") + .5)
 				::continue::
 			end
 		end
