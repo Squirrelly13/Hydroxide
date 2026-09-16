@@ -252,7 +252,7 @@ status_desc_cc_nullium,Your mana is being drained.,Ваша мана истощ�
 status_desc_cc_nullium_dying,Your essence is being neutralised!,,Sua essência está sendo neutralizada!,Your essence is being neutralised!,,,,,,,,
 status_cc_edit_wands_everywhere,Tinker Anywhere,Изменение жезлов везде,Altere varinhas em qualquer canto,Her yerde Asaları Kurcala,随时修改魔杖,,,,,,,
 status_desc_cc_edit_wands_everywhere,Were the Gods always singing such a lovely tune?,Боги всегда пели такие прекрасные песни?,Os Deuses sempre cantaram essa linda canção?,Tanrılar hep böyle güzel melodiler söyler miydi?,神明们总是在唱着如此动听的旋律吗？,,,,,,,
-status_cc_increase_hp,Health Generation,Восстановление здоровья,Geração de vida,Can Yenilenmesi,生命值提升,,,,,,,
+status_cc_increase_hp,Health Generation,Восстановление здоровья,Geração de vida,Can Yenilenmesi,生命值提升,,,,,,,"This is a slight play on of 'Health Regeneration' as you are gaining health you did not previously have"
 status_desc_cc_increase_hp,Your maximum health is slowly increasing.,Ваше максимальное здоровье медленно увеличивается.,Seu PV máximo está lentamente aumentando.,Maksimum canın yavaşça artıyor.,你的最大生命值在缓慢提升。,,,,,,,
 status_cc_morphine,Painkillers,Болеутоляющие,Analgésicos,Ağrı Kesiciler,止痛药,,,,,,,
 status_desc_cc_morphine,You feel unstoppable.,Вы чувствуете себя неудержимым.,Você se sente imparável.,Durdurulamaz gibi hissediyorsun.,你感觉自己势不可挡。,,,,,,,it should be clear you 'feel' unstoppable. because you are taking hard drugs. (medical painkiller technically but still addictive)
@@ -278,35 +278,35 @@ status_cc_null_trip_4,Null,,Nulo,Hiçlik,空无,,,,,,,
 status_desc_cc_null_trip_4,The Universe is losing meaning,,O universo está perdendo o sentido,Evren anlamını kaybediyor,宇宙正在失去意义,,,,,,,
 status_cc_nullified_trip,Something is missing,,Algo está faltando,Bir şeyler eksik,某些东西消失了,,,,,,,
 statusdesc_cc_nullified_trip,You feel as though the universe is emptier than it once was,,Você sente como se o universo estivesse mais vazio do que antes,Evren önceden olduğundan daha boşmuş gibi hissediyorsun,你感觉宇宙比之前更加空寂了,,,,,,,
-statis_cc_radstage_1,Radiation Poisoning,,Envenenamento por radiação,Radyasyon Zehirlenmesi,辐射中毒,,,,,,,
-statis_cc_desc_radstage_1,Exposure to radiation is causing problems!\nRadcount: $0,,A exposição à radiação está causando problemas!\Rad: $0,Radyasyona maruz kalmak sorunlar oluşturuyor!\nRadsayacı: $0,暴露在辐射下引发了问题！\n辐射值：$0,,,,,,,Rads' is what Radiation is generally measured in
-statis_cc_radstage_2,Irradiated,,Irradiado,Radyasyon Maruziyeti,受辐射,,,,,,,
-statis_cc_desc_radstage_2,You feel a tingling sensation... you feel vulnerable\nRadcount: $0,,Você sente uma sensação de formigamento... Você se sente vulnerável\nRad: $0,Bir karıncalanma duygusu hissediyorsun... Savunmasız hissediyorsun\nRadsayacı: $0,你感觉刺痛...你觉得自己有些脆弱\n辐射值：$0,,,,,,,indicating that immunities are being disabled
-statis_cc_radstage_3,Radiation Positioning,,Posicionamento radioativo,Radyasyon Zehirlenmesi,辐射定位,,,,,,,
-statis_cc_desc_radstage_3,You're shivering in the warmth.\nRadcount: $0,,Você está se tremendo de calor.\nRad: $0,Sıcaklıkta titriyorsun.\nRadsayacı: $0,温暖使你颤抖。\n辐射值：$0,,,,,,,oxymoron with 'shivering' normally denoting coldness or chills
-statis_cc_radstage_4,Radiation Burns,,Queimaduras por radiação,Radyasyon Yanıkları,辐射烧伤,,,,,,,
-statis_cc_desc_radstage_4,You're flinching from the burns.\nRadcount: $0,,Você está estremecendo por conta das queimaduras.\nRad: $0,Yanıklardan korkuyorsun.\nRadsayacı: $0,烧伤使你畏缩。\n辐射值：$0,,,,,,,
-statis_cc_radstage_5,Mutation,,Mutação,Mutasyon,突变,,,,,,,
-statis_cc_desc_radstage_5,New appendages sprout forth!\nRadcount: $0,,Novos apêndices brotam!\nRad: $0,Yeni uzuvların filizleniyor!\nRadsayacı: $0,新的肢体长出来了！\n辐射值：$0,,,,,,,referring to the leggy limbs
-statis_cc_radstage_6,Radiation gives you Superpowers!,,A radiação te dá Superpoderes!,Radyasyon sana Süper Güçler kazandırdı!,辐射给予了你超能力！,,,,,,,
-statis_cc_desc_radstage_6,"You feel you should turn back now\nRadcount: $0\n\nThis is about as far as I've coded, sorgy :(",,"Você sente que seria melhor voltar atrás, agora.\nRad: $0",Artık geri dönmen gerektiğini düşünüyorsun.\nRadsayacı: $0,你觉得自己应该回头了\n辐射值：$0,,,,,,,
-statis_cc_radstage_7,Internal Burns,,Queimaduras internas,İç Yanıklar,内脏烧伤,,,,,,,
-statis_cc_desc_radstage_7,You feel going further would have dangerous consequences\nRadcount: ???,,Você sente que ir mais longe do que isso poderá ter consequências perigosas\nRad: ???,Daha fazla ileri gitmenin tehlikeli sonuçları olabileceğini hissediyorsun\nRadsayacı: ???,你感觉继续下去的话会有危险的后果\n辐射值：???,,,,,,,radcount reader can no longer interpret the radcount
-statis_cc_radstage_8,RNA Recompiled,,RNA recompilado,RNA Derlemesi,RNA重编译,,,,,,,
-statis_cc_desc_radstage_8,You feel any mutations from now on out are here to stay\nRadcount: Numbers are losing meaning,,Você sente que qualquer mutação a partir desse ponto estaram aqui para ficar\nRad: Números estão perdendo o sentido,Şu andan itibaren mutasyonlar kalıcı olacak gibi hissediyorsun\nRadsayacı: Sayılar anlamını kaybetmeye başlıyor,你感觉今后任何的突变都会一直留下来了\n辐射值：数字已经没什么意义了,,,,,,,radcount reader gives up on conveying your radcount
-statis_cc_radstage_9,Radioactive Wasted,,Radioativamente chapado,Radyoaktif Atık,辐射烂醉,,,,,,,Wasted' as in Radioactive Waste and when you are Wasted
-statis_cc_desc_radstage_9,Your veins flow with toxic radiation\nRadcount: But... what's beyond... ?,,Suas veias fluem com radiação impura\nRad: Mas... o que há além disso?...,Damarların saf olmayan radyasyonla dolup taşıyor\nRadsayacı: Ama... Daha ilerisinde ne var... ?,你的血液中流淌着污浊的辐射\n辐射值：但是...这之后还有什么...?,,,,,,,radcount is beginning to question the limits
-statis_cc_radstage_10,Chaotic Mutations,,Mutações caóticas,Kaotik Mutasyonlar,混沌突变,,,,,,,
-statis_cc_desc_radstage_10,You've lost control of your very being\nRadcount: A small price...,,Você perdeu controle do seu próprio ser\nRad: Um pequeno preço...,Varlığının kontrolünü kaybettin\nRadsayacı: Ufak bir bedel...,你失去了对自身的掌控\n辐射值：一个微不足道的代价...,,,,,,,"at this point, radcount reader is invested and is on this journey with you- curious to a dangerous degree"
-statis_cc_radstage_11,Divine Warning,,Aviso divino,İlahi Uyarı,神圣警告,,,,,,,
-statis_cc_desc_radstage_11,"The heavens command that you cease this folly\nRadcount: They can beg all they like, keep going.",,"Os ceús ordernam que você pare isso\nRad: Eles podem implorar o quanto quiserem, continue.",Tanrılar durmanı emrediyor\nRadsayacı: İstedikleri kadar yalvarabilirler,众神命令你停止\n辐射值：他们爱乞求就乞求吧，继续继续,,,,,,,radcount reader outright blaspheming the Gods in pursuit of reaching the end
-statis_cc_radstage_12,Nuclear Overdrive,,Overdrive nuclear,Nükleer Aşırı Yüklenme,核过载,,,,,,,
-statis_cc_desc_radstage_12,"Every fibre of your being is under attack\nRadcount: You are on the precipice...\nJust, a, little, bit, further...!",,"Toda fibra do seu ser está sob ataque\nRad: Você está no precipício...\nSó, mais, um, pouquinho...!","Varlığının her dokusu saldırı altında\nRadsayacı: Felaketin eşiğindesin...\nYalnızca, çok, az, daha...!",你的每一寸血肉都在被攻击！\n辐射值：就差临门一脚了...\n再，坚持，一下...！,,,,,,,
-statis_cc_radstage_13,Radiant Blessing,,Bênção radiante,Parlaklık Lütfu,光明之佑,,,,,,,this stage is only properly viewable if the player has the radiation immunity perk (not to be confused with toxic immunity perk)
-statis_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
+status_cc_radstage_1,Radiation Poisoning,,Envenenamento por radiação,Radyasyon Zehirlenmesi,辐射中毒,,,,,,,
+status_cc_desc_radstage_1,Exposure to radiation is causing problems!\nRadcount: $0,,A exposição à radiação está causando problemas!\Rad: $0,Radyasyona maruz kalmak sorunlar oluşturuyor!\nRadsayacı: $0,暴露在辐射下引发了问题！\n辐射值：$0,,,,,,,Rads' is what Radiation is generally measured in
+status_cc_radstage_2,Irradiated,,Irradiado,Radyasyon Maruziyeti,受辐射,,,,,,,
+status_cc_desc_radstage_2,You feel a tingling sensation... you feel vulnerable\nRadcount: $0,,Você sente uma sensação de formigamento... Você se sente vulnerável\nRad: $0,Bir karıncalanma duygusu hissediyorsun... Savunmasız hissediyorsun\nRadsayacı: $0,你感觉刺痛...你觉得自己有些脆弱\n辐射值：$0,,,,,,,indicating that immunities are being disabled
+status_cc_radstage_3,Radiation Positioning,,Posicionamento radioativo,Radyasyon Zehirlenmesi,辐射定位,,,,,,,
+status_cc_desc_radstage_3,You're shivering in the warmth.\nRadcount: $0,,Você está se tremendo de calor.\nRad: $0,Sıcaklıkta titriyorsun.\nRadsayacı: $0,温暖使你颤抖。\n辐射值：$0,,,,,,,oxymoron with 'shivering' normally denoting coldness or chills
+status_cc_radstage_4,Radiation Burns,,Queimaduras por radiação,Radyasyon Yanıkları,辐射烧伤,,,,,,,
+status_cc_desc_radstage_4,You're flinching from the burns.\nRadcount: $0,,Você está estremecendo por conta das queimaduras.\nRad: $0,Yanıklardan korkuyorsun.\nRadsayacı: $0,烧伤使你畏缩。\n辐射值：$0,,,,,,,
+status_cc_radstage_5,Mutation,,Mutação,Mutasyon,突变,,,,,,,
+status_cc_desc_radstage_5,New appendages sprout forth!\nRadcount: $0,,Novos apêndices brotam!\nRad: $0,Yeni uzuvların filizleniyor!\nRadsayacı: $0,新的肢体长出来了！\n辐射值：$0,,,,,,,referring to the leggy limbs
+status_cc_radstage_6,Radiation gives you Superpowers!,,A radiação te dá Superpoderes!,Radyasyon sana Süper Güçler kazandırdı!,辐射给予了你超能力！,,,,,,,
+status_cc_desc_radstage_6,"You feel you should turn back now\nRadcount: $0\n\nThis is about as far as I've coded, sorgy :(",,"Você sente que seria melhor voltar atrás, agora.\nRad: $0",Artık geri dönmen gerektiğini düşünüyorsun.\nRadsayacı: $0,你觉得自己应该回头了\n辐射值：$0,,,,,,,
+status_cc_radstage_7,Internal Burns,,Queimaduras internas,İç Yanıklar,内脏烧伤,,,,,,,
+status_cc_desc_radstage_7,You feel going further would have dangerous consequences\nRadcount: ???,,Você sente que ir mais longe do que isso poderá ter consequências perigosas\nRad: ???,Daha fazla ileri gitmenin tehlikeli sonuçları olabileceğini hissediyorsun\nRadsayacı: ???,你感觉继续下去的话会有危险的后果\n辐射值：???,,,,,,,radcount reader can no longer interpret the radcount
+status_cc_radstage_8,RNA Recompiled,,RNA recompilado,RNA Derlemesi,RNA重编译,,,,,,,
+status_cc_desc_radstage_8,You feel any mutations from now on out are here to stay\nRadcount: Numbers are losing meaning,,Você sente que qualquer mutação a partir desse ponto estaram aqui para ficar\nRad: Números estão perdendo o sentido,Şu andan itibaren mutasyonlar kalıcı olacak gibi hissediyorsun\nRadsayacı: Sayılar anlamını kaybetmeye başlıyor,你感觉今后任何的突变都会一直留下来了\n辐射值：数字已经没什么意义了,,,,,,,radcount reader gives up on conveying your radcount
+status_cc_radstage_9,Radioactive Wasted,,Radioativamente chapado,Radyoaktif Atık,辐射烂醉,,,,,,,Wasted' as in Radioactive Waste and when you are Wasted
+status_cc_desc_radstage_9,Your veins flow with toxic radiation\nRadcount: But... what's beyond... ?,,Suas veias fluem com radiação impura\nRad: Mas... o que há além disso?...,Damarların saf olmayan radyasyonla dolup taşıyor\nRadsayacı: Ama... Daha ilerisinde ne var... ?,你的血液中流淌着污浊的辐射\n辐射值：但是...这之后还有什么...?,,,,,,,radcount is beginning to question the limits
+status_cc_radstage_10,Chaotic Mutations,,Mutações caóticas,Kaotik Mutasyonlar,混沌突变,,,,,,,
+status_cc_desc_radstage_10,You've lost control of your very being\nRadcount: A small price...,,Você perdeu controle do seu próprio ser\nRad: Um pequeno preço...,Varlığının kontrolünü kaybettin\nRadsayacı: Ufak bir bedel...,你失去了对自身的掌控\n辐射值：一个微不足道的代价...,,,,,,,"at this point, radcount reader is invested and is on this journey with you- curious to a dangerous degree"
+status_cc_radstage_11,Divine Warning,,Aviso divino,İlahi Uyarı,神圣警告,,,,,,,
+status_cc_desc_radstage_11,"The heavens command that you cease this folly\nRadcount: They can beg all they like, keep going.",,"Os ceús ordernam que você pare isso\nRad: Eles podem implorar o quanto quiserem, continue.",Tanrılar durmanı emrediyor\nRadsayacı: İstedikleri kadar yalvarabilirler,众神命令你停止\n辐射值：他们爱乞求就乞求吧，继续继续,,,,,,,radcount reader outright blaspheming the Gods in pursuit of reaching the end
+status_cc_radstage_12,Nuclear Overdrive,,Overdrive nuclear,Nükleer Aşırı Yüklenme,核过载,,,,,,,
+status_cc_desc_radstage_12,"Every fibre of your being is under attack\nRadcount: You are on the precipice...\nJust, a, little, bit, further...!",,"Toda fibra do seu ser está sob ataque\nRad: Você está no precipício...\nSó, mais, um, pouquinho...!","Varlığının her dokusu saldırı altında\nRadsayacı: Felaketin eşiğindesin...\nYalnızca, çok, az, daha...!",你的每一寸血肉都在被攻击！\n辐射值：就差临门一脚了...\n再，坚持，一下...！,,,,,,,
+status_cc_radstage_13,Radiant Blessing,,Bênção radiante,Parlaklık Lütfu,光明之佑,,,,,,,this stage is only properly viewable if the player has the radiation immunity perk (not to be confused with toxic immunity perk)
+status_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
 status_cc_polymorph,Polymorph,,Polimorfia,,,,,,,,,
 status_desc_cc_polymorph,You have become something fluffy.,,Você se tornou algo fofinho.,,,,,,,,,
-status_desc_cc_polymorph_trans,Your pronouns are she/ep.,,Você se tornou algo fofinho.,,,,,,,,,Do as you please
+status_desc_cc_polymorph_trans_day,Your pronouns are she/ep.,,Você se tornou algo fofinho.,,,,,,,,,"Pun is a play on of 'she/her' and the fact you turn into a sheep, do as you please for this one"
 status_cc_unstable_polymorph,Unstable Polymorph,,Polimorfia instável,,,,,,,,,
 status_desc_cc_unstable_polymorph,You have become something unexpected.,,Você se tornou algo inesperado.,,,,,,,,,
 status_cc_chaotic_polymorph,Chaotic Polymorph,,Polimorfia caótica,,,,,,,,,
@@ -340,6 +340,7 @@ log_cc_paradox_warp,You feel as if you are no longer in the same place...,,Você
 death_cc_morphine,Careful with those painkillers,,Cuidado com esses analgésicos,Ağrı kesicileri ağırdan alsan iyi olur,谨慎服用止痛药,,,,,,,death msg from when you die to something while Morphine is obfuscating your HP
 death_cc_antimatter,Annihilation,,Aniquilação,,,,,,,,,annihilation specifically being the term for when Matter and Anti-Matter neutralise one another
 cc_shield_depleted,Shield Depleted!,,Escudo esgotado!,,,,,,,,,
+log_cc_cloned,Cloned!,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
