@@ -493,6 +493,7 @@ tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,RU_MISSING,Pandório caótico/
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Misc
 ,,,,,,,,,,,,just misc stuff referring to the name of the mod/developers working on it as well as other misc stuff
+,,,,,,,,,,,,"blank translations are automatically converted to “[lang]_MISSING”, just copy paste the en translation over if you wish to keep it the same"
 ,,,,,,,,,,,,
 name_mod_cc_global,Chemical Curiosities,RU_MISSING,Curiosidades Químicas,Kimyevi Arzular,ZH-CN_MISSING,,,,,,,up to interpretation
 cc_branch_name_aa,Arcane Alchemy,RU_MISSING,Alquimia Arcana,Büyülü Kimya,ZH-CN_MISSING,,,,,,,up to interpretation

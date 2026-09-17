@@ -23,6 +23,7 @@ local cc_perks = {
 		ui_description = "$perkdesc_cc_chaotic_transfusion",
 		perk_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/sprite.png",
 		ui_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/icon.png",
+		stackable = false,
 		func = function()
 			GameAddFlagRun("cc_chaotic_transfusion")
 			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
@@ -38,6 +39,9 @@ local cc_perks = {
 				ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
 				::continue::
 			end
+		end,
+		func_remove = function() --idc enough to undo blood transformation on existing enemies
+			GameRemoveFlagRun("cc_chaotic_transfusion")
 		end
 	},
 }
@@ -48,9 +52,13 @@ local aa_perks = {
 
 
 for _, perk in ipairs(CC and cc_perks or {}) do
-	perk_list[#perk_list+1] = perk
+	if not perk._disabled then
+		perk_list[#perk_list+1] = perk
+	end
 end
 
 for _, perk in ipairs(AA and aa_perks or {}) do
-	perk_list[#perk_list+1] = perk
+	if not perk._disabled then
+		perk_list[#perk_list+1] = perk
+	end
 end
