@@ -24,6 +24,13 @@ local translations = {
 	["tr-tr"] = {},
 }
 
+local maintained_languages = {
+	["ru"] = true,
+	["pt-br"] = true,
+	["tr-tr"] = true,
+	["zh-cn"] = true,
+}
+
 local standard_langs_ordered = {
 	"en",
 	"ru",
@@ -66,6 +73,38 @@ do
 	end
 end
 
+local new_core = index .. "\n"
+local function update_core(line)
+
+	if line:sub(1,1) == ',' then new_core = new_core .. line .. "\n" return end
+
+
+	local current_column = 1
+	local start_index = 1
+	local in_quotes = false
+
+	for i = 1, #line do
+		local char = line:sub(i, i)
+
+		if char == '"' then
+			in_quotes = not in_quotes --Handle quoted fields
+		elseif char == "," and not in_quotes then
+
+			local target = column_order[current_column]
+			local str = line:sub(start_index, i - 1)
+			if #str == 0 and maintained_languages[target] then
+				str = column_order[current_column]:upper().."_MISSING"
+			end
+			new_core = new_core..str..","
+
+			current_column = current_column + 1
+			start_index = i + 1
+		end
+	end
+	new_core = new_core..line:sub(start_index, #line).. "\n"
+end
+
+
 local function transcribe_line(line)
 	if line:sub(1,1) == ',' then return end
 
@@ -82,9 +121,10 @@ local function transcribe_line(line)
 		elseif char == "," and not in_quotes then
 			if current_column == #column_order then return end
 
-			local str = line:sub(start_index, i - 1)
-
 			local target = translations[column_order[current_column]]
+			local str = line:sub(start_index, i - 1)
+			if str:sub(1, -9):lower() == target then str = "" end
+
 			if target then target[#target+1] = str end
 
 			current_column = current_column + 1
@@ -93,16 +133,18 @@ local function transcribe_line(line)
 	end
 end
 
-f:read("*l") --discard second line
+new_core = new_core..f:read("*l") --discard second line
 local n = 1
 while true do
 	local line =  f:read("*l")
 	if line == nil then break end
 
+	update_core(line)
 	transcribe_line(line)
 	n = n + 1
 end
 f:close()
+io.open(path.."core.csv", "w"):write(new_core):close() --update core.csv
 
 for _,value in ipairs(translations["en"]) do
 	print(tostring(value))

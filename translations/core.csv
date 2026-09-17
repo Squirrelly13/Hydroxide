@@ -1,7 +1,5 @@
 key,en,ru,pt-br,tr-tr,zh-cn,es-es,de,fr-fr,jp,ko,pl,notes
-lang,English,Русский,Português [Brasil],Türkçe,简体中文,Español (España),Deutsch,Français,日本語,한국어,Polska,
-,,,,,,,,,,,,
-,,,,,,,,,,,,
+lang,English,Русский,Português [Brasil],Türkçe,简体中文,Español (España),Deutsch,Français,日本語,한국어,Polska,,,,,,,,,,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,CREDITS:
 ,,Russian Translations by Alex(GoD),,,,,,,,,,
 ,,,Brazilian Portuguese Translations by Absent Friend (Emília),,,,,,,,,
@@ -40,7 +38,7 @@ mat_aa_hungry_slime_growing,Hungry Slime,Голодная Слизь,Gosma famin
 mat_aa_ash,Ash,Пепел,Cinzas,Kül,灰烬,,,,,,,
 mat_aa_soot,Soot,Сажа,Fuligem,Duman,油烟,,,,,,,
 mat_aa_potion_gas,Potion gas,Газ из зелий,Gás de poção,İksir gazı,药水气体,,,,,,,
-mat_aa_petrified_moss,Petrified Moss,,Musgo petrificado,Taşlaşmış Yosun,石化苔藓,,,,,,,
+mat_aa_petrified_moss,Petrified Moss,RU_MISSING,Musgo petrificado,Taşlaşmış Yosun,石化苔藓,,,,,,,
 mat_aa_solidified_slime,Solidified slime,Затвердевшая слизь,Gosma solidificada,Taşlaşmış balçık,凝固史莱姆,,,,,,,
 mat_aa_base_potion,Base Potion,Базовое зелье,Poção de base,Temel Sıvı İksiri,基底药水,,,,,,,
 mat_aa_arborium,Arborium,Древесиум,Arbório,Dikim,化木基质,,,,,,,derived from 'Arbour'
@@ -70,7 +68,7 @@ mat_aa_bloomium,Bloomium,Блумиум,Brotânio,Filizlenm,绽放基质,,,,,,,
 mat_aa_bloomium_gas,Bloomium Spores,Споры Блумиума,Esporos brotânicos,Filizlenme Spormları,绽放基质孢子,,,,,,,
 mat_aa_divine_slime,Divine Slime,Божественная слизь,Gosma divina,Kutsal Balçık,神圣史莱姆,,,,,,,
 mat_aa_divine_magma,Divine Magma,Божественная магма,Magma divina,Kutsal Magma,神圣熔岩,,,,,,,
-mat_aa_shrinkium,Shrinkium,,Encólhio,,缩小魔药,,,,,,,
+mat_aa_shrinkium,Shrinkium,RU_MISSING,Encólhio,TR-TR_MISSING,缩小魔药,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Spells!
@@ -97,8 +95,8 @@ status_aa_sinking,Sinking,Погружение,Afundando,Batma,沉陷,,,,,,,
 status_desc_aa_sinking,You are being grabbed,Вас что-то хватает,Você está sendo sugado,Aşağı çekiliyorsun,有东西正在拖着你,,,,,,,
 status_aa_repulsion,Repulsion,Отторжение,Repulsão,İtme,排斥,,,,,,,
 status_desc_aa_repulsion,A mysterious force struggling to be rid of you,Таинственная сила пытается избавиться от вас,Uma força misteriosa está tentando se livrar de você,Gizemli bir güç senden kurtulmaya çalışıyor,某种试图排斥你的神秘力量,,,,,,,
-status_aa_hungry_vomit,Slime Vomit,Слизистая рвота,Vômito gosmento,,史莱姆呕吐,,,,,,,
-status_desc_aa_hungry_vomit,You feel something crawling back up,"Вы чувствуете, как что-то ползёт обратно",Você sente algo querendo voltar do seu estômago,,你感觉喉咙里有东西爬出来,,,,,,,crawling back up your throat
+status_aa_hungry_vomit,Slime Vomit,Слизистая рвота,Vômito gosmento,TR-TR_MISSING,史莱姆呕吐,,,,,,,
+status_desc_aa_hungry_vomit,You feel something crawling back up,"Вы чувствуете, как что-то ползёт обратно",Você sente algo querendo voltar do seu estômago,TR-TR_MISSING,你感觉喉咙里有东西爬出来,,,,,,,crawling back up your throat
 status_aa_love_potion,LOVE ME,ЛЮБИ МЕНЯ,ME AME,BENİ SEV,爱我,,,,,,,LOVE ME' and 'PLEASE DON'T GO' should give off a 'needy' or 'desperate' vibe
 status_desc_aa_love_potion,PLEASE DON'T GO,"ПОЖАЛУЙСТА, НЕ УХОДИ","POR FAVOR, NÃO SE VÁ",N'OLUR GİTME,求求你不要走,,,,,,,
 status_aa_path,Infinite wealth?,Бесконечное богатство?,Riqueza infinita?,Sınırsız varlık?,无尽财富？,,,,,,,
@@ -119,11 +117,11 @@ status_desc_aa_vomit_spells_unstable,This was a terrible idea!,Это была �
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Items!
 ,,,,,,,,,,,,
-item_aa_vial,Vial,,Frasco,Şişe,小瓶,,,,,,,
+item_aa_vial,Vial,RU_MISSING,Frasco,Şişe,小瓶,,,,,,,
 item_vial_with_material,Vial of $0,Флакон $0,Frasco de $0,$0 Şişe,$0小瓶,,,,,,,
 itemdesc_vial_with_material,A glass vial containing $0\nUseful for throwing!,"Стеклянный флакон, содержащий $0",Um frasco de vidro contendo $0\nÚtil para arremessar!,İçinde $0 olan cam bir şişe,含有$0的玻璃小瓶\n适合投掷！,,,,,,,
-nerf_wand,Nerf Gun,,Arminha Nerf,Nerf Silahı,Nerf枪,,,,,,,Nerf' as in the brand for toy-guns with foam darts
-nerf_dart,Nerf Dart,,Dardo Nerf,Nerf Dartı,Nerf飞镖,,,,,,,
+nerf_wand,Nerf Gun,RU_MISSING,Arminha Nerf,Nerf Silahı,Nerf枪,,,,,,,Nerf' as in the brand for toy-guns with foam darts
+nerf_dart,Nerf Dart,RU_MISSING,Dardo Nerf,Nerf Dartı,Nerf飞镖,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Misc!
@@ -139,10 +137,10 @@ animal_random spell unstable,Unstable Pandorium,Нестабильный Пан�
 ,,,,,,,,,,,,Materials!
 ,,,,,,,,,,,,
 mat_cc_hydroxide,Hydroxide,Гидроксид,Hidróxido,Hidroksit,氢氧化物,,,,,,,
-mat_cc_ice_hydroxide,Frozen Hydroxide,,Hidróxido congelado,Donmuş Hidroksit,冻结氢氧化物,,,,,,,
+mat_cc_ice_hydroxide,Frozen Hydroxide,RU_MISSING,Hidróxido congelado,Donmuş Hidroksit,冻结氢氧化物,,,,,,,
 mat_cc_acidic_water,Acidic Water,Кислотная вода,Água acídica,Asidik Su,酸性水,,,,,,,
 mat_cc_devouring_moss,Devouring Moss,Пожирающий мох,Musgo devorador,Yok Edici Yosun,吞没苔藓,,,,,,,as in Moss that Devours
-mat_cc_ashen_moss,Ashen Moss,,Musgo cinzento,Solgun Yosun,灰色苔藓,,,,,,,
+mat_cc_ashen_moss,Ashen Moss,RU_MISSING,Musgo cinzento,Solgun Yosun,灰色苔藓,,,,,,,
 mat_cc_hydroxide_gas,Flammable Gas,Горючий газ,Gás inflamável,Yanıcı Gaz,可燃气体,,,,,,,
 mat_cc_veilium,Veilium,Вуалиум,Véulio,Peçelem,遮眼魔药,,,,,,,as in to 'Veil' one's eyes
 mat_cc_sparkling_liquid,Sparkling Liquid,Сверкающая жидкость,Líquido cintilante,Parıldayan Sıvı,闪烁液体,,,,,,,
@@ -169,7 +167,7 @@ mat_cc_grease,Grease,Смазка,Graxa,Gres Yağı,油脂,,,,,,,
 mat_cc_dormant_crystal,Dormant Crystal,Спящий кристалл,Cristal inativo,Pasif Kristal,休眠晶体,,,,,,,
 mat_cc_dormant_crystal_molten,Liquid Crystal,Жидкий кристалл,Cristal líquido,Sıvı Kristal,液态晶体,,,,,,,
 mat_cc_uranium,Uranium,Уран,Urânio,Uranyum,铀,,,,,,,
-mat_cc_uranium_excited,Excited Uranium,,Urânio excitado,Uyarılmış Uranyum,激发态铀,,,,,,,
+mat_cc_uranium_excited,Excited Uranium,RU_MISSING,Urânio excitado,Uyarılmış Uranyum,激发态铀,,,,,,,
 mat_cc_radioactive_waste,Radioactive Waste,Радиоактивные отходы,Lixo radioativo,Radyoaktif Atık,放射性废料,,,,,,,
 mat_cc_morphine,Morphine,Морфий,Morfina,Morfin,吗啡,,,,,,,
 mat_cc_antimatter_gas,Anti-Matter,Антиматерия,Antimatéria,Karşıt Madde,反物质,,,,,,,
@@ -191,9 +189,9 @@ mat_cc_lichtenberg_coal,Burnt Wood,Обожжённая древесина,Madei
 mat_cc_warp_powder,Warp Powder,Искажающий порошок,Pó distorcedor,Çekiş Tozu,跃迁粉末,,,,,,,
 mat_cc_deezium,Deez...,Вот эти...,A minha...,Deez...,阿米诺...,,,,,,,
 mat_cc_warp_sickness,Warp Powder,Искажающий порошок,Pó distorcedor,Çekiş Tozu,跃迁粉末,,,,,,,
-mat_cc_paradox_powder,Paradox Powder,,Pó paradoxal,Paradoks Tozu,悖论粉末,,,,,,,
-mat_cc_dull_fungus,Dull Fungus,,Fungo parado,Donuk Mantar,虚无真菌,,,,,,,Dull having connotations of numbness or emptiness- somewhat contrasting 'Weird' fungus
-mat_cc_glitchium,Glitchium,,Glitchio,Kusurm,故障魔药,,,,,,,like Glitch
+mat_cc_paradox_powder,Paradox Powder,RU_MISSING,Pó paradoxal,Paradoks Tozu,悖论粉末,,,,,,,
+mat_cc_dull_fungus,Dull Fungus,RU_MISSING,Fungo parado,Donuk Mantar,虚无真菌,,,,,,,Dull having connotations of numbness or emptiness- somewhat contrasting 'Weird' fungus
+mat_cc_glitchium,Glitchium,RU_MISSING,Glitchio,Kusurm,故障魔药,,,,,,,like Glitch
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Spells!
@@ -208,8 +206,8 @@ action_cc_metal_seasoning,Chunk of Metal,Кусок металла,Pedaço de me
 action_desc_cc_metal_seasoning,Summon a pile of metal powder,Призывает кучу металлического порошка,Evoque uma pilha de pó de metal,Bir metal tozu kütlesi çağır,召唤一堆金属粉末,,,,,,,
 action_cc_cloud_crystal,Crystal Cloud,Кристаллическое облако,Nuvem de cristal,Kristal Bulutu,水晶云,,,,,,,
 action_desc_cc_cloud_crystal,Creates a rain of liquid crystals,Создаёт дождь из жидких кристаллов,Cria uma chuva de cristais líquidos,Sıvı kristal yağmuru oluşturur,创造一片液态水晶云,,,,,,,
-action_cc_cloud_slice,Slicing Cloud,,Núvem cortante,,,,,,,,,
-action_desc_cc_cloud_slice,"Creates a rain of a certain silvery serrated solution. Wait, what?",,Cria uma chuva de uma certa solução prateada serrada. Espera... O quê?,,,,,,,,,
+action_cc_cloud_slice,Slicing Cloud,RU_MISSING,Núvem cortante,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_cloud_slice,"Creates a rain of a certain silvery serrated solution. Wait, what?",RU_MISSING,Cria uma chuva de uma certa solução prateada serrada. Espera... O quê?,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 action_cc_cloud_sparkling,Sparkling Cloud,Сверкающее облако,Nuvem cintilante,Parıldayan Bulut,闪烁之云,,,,,,,
 action_desc_cc_cloud_sparkling,Rain hell on all of them.,Пролей на них адский дождь.,Faça chover o inferno em todos eles.,Onlara cehennemi yağdır,淋死他们。,,,,,,,
 action_cc_grease_blast,Explosion of Grease,Взрыв смазки,Explosão de graxa,Gres Yağı Patlaması,油脂爆炸,,,,,,,
@@ -243,13 +241,13 @@ status_cc_levitation_slower,Heavy,Тяжесть,Pesado,Ağır,沉重,,,,,,,
 status_desc_cc_levitation_slower,It feels as if your bones are made of lead,"Кажется, ваши кости сделаны из свинца",Você sente como se seus ossos fossem feitos de chumbo,Kemiklerin çok ağır hissettiriyor,你感觉自己的骨头像是铅做的一样,,,,,,,
 status_cc_exploding,Combusting,Самовозгорание,Em combustão,Alevlenme,燃烧,,,,,,,
 status_desc_cc_exploding,Spontaneous combustion.,Самопроизвольное возгорание.,Combustão espontânea.,Anlık alevlenme,自燃。,,,,,,,
-status_cc_exploding_era_nova,The Blazing Sun,,Sol Escaldante,,,,,,,,,
-status_desc_cc_exploding_era_nova,With my flesh as kindling...\nLight the first dawn of the new world.,Пусть моё пылающее тело\nПусть моё пылающее тело,Com meu corpo como sua lenha...\nCom meu corpo como sua lenha...,,焚身作薪......\n为来世破晓...引火吧。,Con mi carne como combustible...\nEnciende las primeras luces del nuevo mundo.,Mit meinem Körper als Feuerholz ...\nErleuchtet die erste Morgendämmerung der neuen Welt.,Avec ma chair comme combustible...\nÉveillez la première aube du nouveau monde.,この身を薪に･･･\n次の輪廻の暁を･･･燃やそう,몸을 불태우는 불쏘시개가 되어......\n내세의 새벽을 위해... 불을 밝혀라,,translations taken directly from Honkai: Star Rail (i just think its neat)
+status_cc_exploding_era_nova,The Blazing Sun,RU_MISSING,Sol Escaldante,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_exploding_era_nova,With my flesh as kindling...\nLight the first dawn of the new world.,Пусть моё пылающее тело\nПусть моё пылающее тело,Com meu corpo como sua lenha...\nCom meu corpo como sua lenha...,TR-TR_MISSING,焚身作薪......\n为来世破晓...引火吧。,Con mi carne como combustible...\nEnciende las primeras luces del nuevo mundo.,Mit meinem Körper als Feuerholz ...\nErleuchtet die erste Morgendämmerung der neuen Welt.,Avec ma chair comme combustible...\nÉveillez la première aube du nouveau monde.,この身を薪に･･･\n次の輪廻の暁を･･･燃やそう,몸을 불태우는 불쏘시개가 되어......\n내세의 새벽을 위해... 불을 밝혀라,,translations taken directly from Honkai: Star Rail (i just think its neat)
 status_cc_metastasizium,Infected,Заражение,Infectado,Enfeksiyon Kapmış,感染,,,,,,,
 status_desc_cc_metastasizium,It wants to spread,Оно хочет распространиться,Ele quer se propagar.,Yayılmak istiyor,它想要扩散,,,,,,,
 status_cc_nullium,Nullified,Обессиливание,Nulificado,Etkisizleşim,法力失效,,,,,,,
 status_desc_cc_nullium,Your mana is being drained.,Ваша мана истощается.,Sua mana está sendo sugada.,Manan azalmaya başladı.,你的法力正在减少。,,,,,,,
-status_desc_cc_nullium_dying,Your essence is being neutralised!,,Sua essência está sendo neutralizada!,Your essence is being neutralised!,,,,,,,,
+status_desc_cc_nullium_dying,Your essence is being neutralised!,RU_MISSING,Sua essência está sendo neutralizada!,Your essence is being neutralised!,ZH-CN_MISSING,,,,,,,
 status_cc_edit_wands_everywhere,Tinker Anywhere,Изменение жезлов везде,Altere varinhas em qualquer canto,Her yerde Asaları Kurcala,随时修改魔杖,,,,,,,
 status_desc_cc_edit_wands_everywhere,Were the Gods always singing such a lovely tune?,Боги всегда пели такие прекрасные песни?,Os Deuses sempre cantaram essa linda canção?,Tanrılar hep böyle güzel melodiler söyler miydi?,神明们总是在唱着如此动听的旋律吗？,,,,,,,
 status_cc_increase_hp,Health Generation,Восстановление здоровья,Geração de vida,Can Yenilenmesi,生命值提升,,,,,,,"This is a slight play on of 'Health Regeneration' as you are gaining health you did not previously have"
@@ -266,53 +264,53 @@ status_cc_warp,Warp,Искажение,Distorção,Çekiş,跃迁,,,,,,,
 status_desc_cc_warp,You feel something pulling you in every direction,"Вы чувствуете, как вас тянет во все стороны",Você sente algo te puxar em todas as direções,Her yönden çekiştiriliyormuş gibi hissediyorsun,你感觉自己被四处拉扯,,,,,,,
 status_cc_warp_sickness,Warp Sickness,Искажающая болезнь,Enjoo da distorção,Çekiş Hastalığı,跃迁眩晕,,,,,,,
 status_desc_cc_warp_sickness,You feel as if your body was just turned inside out,"Кажется, ваше тело только что вывернуло наизнанку",Você sente como se seu corpo foi virado de dentro para fora,Vücudun tersyüz olmuş gibi hissediyorsun,你感觉自己的内脏好像被翻了出来,,,,,,,
-status_cc_paradox,Paradox,,Paradoxo,Paradoks,悖论,,,,,,,
-status_desc_cc_paradox,You feel time slipping.,,Você sente o tempo passar rapidamente.,Zaman bozuluyormuş gibi hissediyorsun.,你感觉时间正在流逝。,,,,,,,
-status_cc_null_trip_1,Numb,,Dormente,Uyuşukluk,麻木,,,,,,,
-status_desc_cc_null_trip_1,You feel hollow,,Você se sente vazio,Boşlukta hissediyorsun,你感觉空虚,,,,,,,
-status_cc_null_trip_2,Bad Trip,,Bad Trip,Kafası Güzel,过激幻觉,,,,,,,referencing the Tripping effect from eating Weird Fungus
-status_desc_cc_null_trip_2,You feel like a corpse reanimated,,Você se sente como um cadaver reanimado,Diriltilmiş bir ceset gibi hissediyorsun,你感觉像一具刚复活的尸体,,,,,,,
-status_cc_null_trip_3,Hollowed,,Oco,Boşlukta,被掏空,,,,,,,
-status_desc_cc_null_trip_3,A pervasive emptiness is flowing through your veins,,Um vazio está fluindo em suas veias,Vücuduna sinen boşluğu damarlarında hissediyorsun,你的血液里流淌着弥漫的虚无,,,,,,,
-status_cc_null_trip_4,Null,,Nulo,Hiçlik,空无,,,,,,,
-status_desc_cc_null_trip_4,The Universe is losing meaning,,O universo está perdendo o sentido,Evren anlamını kaybediyor,宇宙正在失去意义,,,,,,,
-status_cc_nullified_trip,Something is missing,,Algo está faltando,Bir şeyler eksik,某些东西消失了,,,,,,,
-statusdesc_cc_nullified_trip,You feel as though the universe is emptier than it once was,,Você sente como se o universo estivesse mais vazio do que antes,Evren önceden olduğundan daha boşmuş gibi hissediyorsun,你感觉宇宙比之前更加空寂了,,,,,,,
-status_cc_radstage_1,Radiation Poisoning,,Envenenamento por radiação,Radyasyon Zehirlenmesi,辐射中毒,,,,,,,
-status_cc_desc_radstage_1,Exposure to radiation is causing problems!\nRadcount: $0,,A exposição à radiação está causando problemas!\Rad: $0,Radyasyona maruz kalmak sorunlar oluşturuyor!\nRadsayacı: $0,暴露在辐射下引发了问题！\n辐射值：$0,,,,,,,Rads' is what Radiation is generally measured in
-status_cc_radstage_2,Irradiated,,Irradiado,Radyasyon Maruziyeti,受辐射,,,,,,,
-status_cc_desc_radstage_2,You feel a tingling sensation... you feel vulnerable\nRadcount: $0,,Você sente uma sensação de formigamento... Você se sente vulnerável\nRad: $0,Bir karıncalanma duygusu hissediyorsun... Savunmasız hissediyorsun\nRadsayacı: $0,你感觉刺痛...你觉得自己有些脆弱\n辐射值：$0,,,,,,,indicating that immunities are being disabled
-status_cc_radstage_3,Radiation Positioning,,Posicionamento radioativo,Radyasyon Zehirlenmesi,辐射定位,,,,,,,
-status_cc_desc_radstage_3,You're shivering in the warmth.\nRadcount: $0,,Você está se tremendo de calor.\nRad: $0,Sıcaklıkta titriyorsun.\nRadsayacı: $0,温暖使你颤抖。\n辐射值：$0,,,,,,,oxymoron with 'shivering' normally denoting coldness or chills
-status_cc_radstage_4,Radiation Burns,,Queimaduras por radiação,Radyasyon Yanıkları,辐射烧伤,,,,,,,
-status_cc_desc_radstage_4,You're flinching from the burns.\nRadcount: $0,,Você está estremecendo por conta das queimaduras.\nRad: $0,Yanıklardan korkuyorsun.\nRadsayacı: $0,烧伤使你畏缩。\n辐射值：$0,,,,,,,
-status_cc_radstage_5,Mutation,,Mutação,Mutasyon,突变,,,,,,,
-status_cc_desc_radstage_5,New appendages sprout forth!\nRadcount: $0,,Novos apêndices brotam!\nRad: $0,Yeni uzuvların filizleniyor!\nRadsayacı: $0,新的肢体长出来了！\n辐射值：$0,,,,,,,referring to the leggy limbs
-status_cc_radstage_6,Radiation gives you Superpowers!,,A radiação te dá Superpoderes!,Radyasyon sana Süper Güçler kazandırdı!,辐射给予了你超能力！,,,,,,,
-status_cc_desc_radstage_6,"You feel you should turn back now\nRadcount: $0\n\nThis is about as far as I've coded, sorgy :(",,"Você sente que seria melhor voltar atrás, agora.\nRad: $0",Artık geri dönmen gerektiğini düşünüyorsun.\nRadsayacı: $0,你觉得自己应该回头了\n辐射值：$0,,,,,,,
-status_cc_radstage_7,Internal Burns,,Queimaduras internas,İç Yanıklar,内脏烧伤,,,,,,,
-status_cc_desc_radstage_7,You feel going further would have dangerous consequences\nRadcount: ???,,Você sente que ir mais longe do que isso poderá ter consequências perigosas\nRad: ???,Daha fazla ileri gitmenin tehlikeli sonuçları olabileceğini hissediyorsun\nRadsayacı: ???,你感觉继续下去的话会有危险的后果\n辐射值：???,,,,,,,radcount reader can no longer interpret the radcount
-status_cc_radstage_8,RNA Recompiled,,RNA recompilado,RNA Derlemesi,RNA重编译,,,,,,,
-status_cc_desc_radstage_8,You feel any mutations from now on out are here to stay\nRadcount: Numbers are losing meaning,,Você sente que qualquer mutação a partir desse ponto estaram aqui para ficar\nRad: Números estão perdendo o sentido,Şu andan itibaren mutasyonlar kalıcı olacak gibi hissediyorsun\nRadsayacı: Sayılar anlamını kaybetmeye başlıyor,你感觉今后任何的突变都会一直留下来了\n辐射值：数字已经没什么意义了,,,,,,,radcount reader gives up on conveying your radcount
-status_cc_radstage_9,Radioactive Wasted,,Radioativamente chapado,Radyoaktif Atık,辐射烂醉,,,,,,,Wasted' as in Radioactive Waste and when you are Wasted
-status_cc_desc_radstage_9,Your veins flow with toxic radiation\nRadcount: But... what's beyond... ?,,Suas veias fluem com radiação impura\nRad: Mas... o que há além disso?...,Damarların saf olmayan radyasyonla dolup taşıyor\nRadsayacı: Ama... Daha ilerisinde ne var... ?,你的血液中流淌着污浊的辐射\n辐射值：但是...这之后还有什么...?,,,,,,,radcount is beginning to question the limits
-status_cc_radstage_10,Chaotic Mutations,,Mutações caóticas,Kaotik Mutasyonlar,混沌突变,,,,,,,
-status_cc_desc_radstage_10,You've lost control of your very being\nRadcount: A small price...,,Você perdeu controle do seu próprio ser\nRad: Um pequeno preço...,Varlığının kontrolünü kaybettin\nRadsayacı: Ufak bir bedel...,你失去了对自身的掌控\n辐射值：一个微不足道的代价...,,,,,,,"at this point, radcount reader is invested and is on this journey with you- curious to a dangerous degree"
-status_cc_radstage_11,Divine Warning,,Aviso divino,İlahi Uyarı,神圣警告,,,,,,,
-status_cc_desc_radstage_11,"The heavens command that you cease this folly\nRadcount: They can beg all they like, keep going.",,"Os ceús ordernam que você pare isso\nRad: Eles podem implorar o quanto quiserem, continue.",Tanrılar durmanı emrediyor\nRadsayacı: İstedikleri kadar yalvarabilirler,众神命令你停止\n辐射值：他们爱乞求就乞求吧，继续继续,,,,,,,radcount reader outright blaspheming the Gods in pursuit of reaching the end
-status_cc_radstage_12,Nuclear Overdrive,,Overdrive nuclear,Nükleer Aşırı Yüklenme,核过载,,,,,,,
-status_cc_desc_radstage_12,"Every fibre of your being is under attack\nRadcount: You are on the precipice...\nJust, a, little, bit, further...!",,"Toda fibra do seu ser está sob ataque\nRad: Você está no precipício...\nSó, mais, um, pouquinho...!","Varlığının her dokusu saldırı altında\nRadsayacı: Felaketin eşiğindesin...\nYalnızca, çok, az, daha...!",你的每一寸血肉都在被攻击！\n辐射值：就差临门一脚了...\n再，坚持，一下...！,,,,,,,
-status_cc_radstage_13,Radiant Blessing,,Bênção radiante,Parlaklık Lütfu,光明之佑,,,,,,,this stage is only properly viewable if the player has the radiation immunity perk (not to be confused with toxic immunity perk)
-status_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
-status_cc_polymorph,Polymorph,,Polimorfia,,,,,,,,,
-status_desc_cc_polymorph,You have become something fluffy.,,Você se tornou algo fofinho.,,,,,,,,,
-status_desc_cc_polymorph_trans_day,Your pronouns are she/ep.,,Você se tornou algo fofinho.,,,,,,,,,"Pun is a play on of 'she/her' and the fact you turn into a sheep, do as you please for this one"
-status_cc_unstable_polymorph,Unstable Polymorph,,Polimorfia instável,,,,,,,,,
-status_desc_cc_unstable_polymorph,You have become something unexpected.,,Você se tornou algo inesperado.,,,,,,,,,
-status_cc_chaotic_polymorph,Chaotic Polymorph,,Polimorfia caótica,,,,,,,,,
-status_desc_cc_chaotic_polymorph,You have become something bizarre.,,Você se tornou algo bizarro.,,,,,,,,,
-status_cc_rare_polymorph,Exotic Polymorph,,Polimorfia exótica,,,,,,,,,
-status_desc_cc_rare_polymorph,You have become something exceptionally rare.,,Você se tornou algo extremamente raro.,,,,,,,,,
+status_cc_paradox,Paradox,RU_MISSING,Paradoxo,Paradoks,悖论,,,,,,,
+status_desc_cc_paradox,You feel time slipping.,RU_MISSING,Você sente o tempo passar rapidamente.,Zaman bozuluyormuş gibi hissediyorsun.,你感觉时间正在流逝。,,,,,,,
+status_cc_null_trip_1,Numb,RU_MISSING,Dormente,Uyuşukluk,麻木,,,,,,,
+status_desc_cc_null_trip_1,You feel hollow,RU_MISSING,Você se sente vazio,Boşlukta hissediyorsun,你感觉空虚,,,,,,,
+status_cc_null_trip_2,Bad Trip,RU_MISSING,Bad Trip,Kafası Güzel,过激幻觉,,,,,,,referencing the Tripping effect from eating Weird Fungus
+status_desc_cc_null_trip_2,You feel like a corpse reanimated,RU_MISSING,Você se sente como um cadaver reanimado,Diriltilmiş bir ceset gibi hissediyorsun,你感觉像一具刚复活的尸体,,,,,,,
+status_cc_null_trip_3,Hollowed,RU_MISSING,Oco,Boşlukta,被掏空,,,,,,,
+status_desc_cc_null_trip_3,A pervasive emptiness is flowing through your veins,RU_MISSING,Um vazio está fluindo em suas veias,Vücuduna sinen boşluğu damarlarında hissediyorsun,你的血液里流淌着弥漫的虚无,,,,,,,
+status_cc_null_trip_4,Null,RU_MISSING,Nulo,Hiçlik,空无,,,,,,,
+status_desc_cc_null_trip_4,The Universe is losing meaning,RU_MISSING,O universo está perdendo o sentido,Evren anlamını kaybediyor,宇宙正在失去意义,,,,,,,
+status_cc_nullified_trip,Something is missing,RU_MISSING,Algo está faltando,Bir şeyler eksik,某些东西消失了,,,,,,,
+statusdesc_cc_nullified_trip,You feel as though the universe is emptier than it once was,RU_MISSING,Você sente como se o universo estivesse mais vazio do que antes,Evren önceden olduğundan daha boşmuş gibi hissediyorsun,你感觉宇宙比之前更加空寂了,,,,,,,
+status_cc_radstage_1,Radiation Poisoning,RU_MISSING,Envenenamento por radiação,Radyasyon Zehirlenmesi,辐射中毒,,,,,,,
+status_cc_desc_radstage_1,Exposure to radiation is causing problems!\nRadcount: $0,RU_MISSING,A exposição à radiação está causando problemas!\Rad: $0,Radyasyona maruz kalmak sorunlar oluşturuyor!\nRadsayacı: $0,暴露在辐射下引发了问题！\n辐射值：$0,,,,,,,Rads' is what Radiation is generally measured in
+status_cc_radstage_2,Irradiated,RU_MISSING,Irradiado,Radyasyon Maruziyeti,受辐射,,,,,,,
+status_cc_desc_radstage_2,You feel a tingling sensation... you feel vulnerable\nRadcount: $0,RU_MISSING,Você sente uma sensação de formigamento... Você se sente vulnerável\nRad: $0,Bir karıncalanma duygusu hissediyorsun... Savunmasız hissediyorsun\nRadsayacı: $0,你感觉刺痛...你觉得自己有些脆弱\n辐射值：$0,,,,,,,indicating that immunities are being disabled
+status_cc_radstage_3,Radiation Positioning,RU_MISSING,Posicionamento radioativo,Radyasyon Zehirlenmesi,辐射定位,,,,,,,
+status_cc_desc_radstage_3,You're shivering in the warmth.\nRadcount: $0,RU_MISSING,Você está se tremendo de calor.\nRad: $0,Sıcaklıkta titriyorsun.\nRadsayacı: $0,温暖使你颤抖。\n辐射值：$0,,,,,,,oxymoron with 'shivering' normally denoting coldness or chills
+status_cc_radstage_4,Radiation Burns,RU_MISSING,Queimaduras por radiação,Radyasyon Yanıkları,辐射烧伤,,,,,,,
+status_cc_desc_radstage_4,You're flinching from the burns.\nRadcount: $0,RU_MISSING,Você está estremecendo por conta das queimaduras.\nRad: $0,Yanıklardan korkuyorsun.\nRadsayacı: $0,烧伤使你畏缩。\n辐射值：$0,,,,,,,
+status_cc_radstage_5,Mutation,RU_MISSING,Mutação,Mutasyon,突变,,,,,,,
+status_cc_desc_radstage_5,New appendages sprout forth!\nRadcount: $0,RU_MISSING,Novos apêndices brotam!\nRad: $0,Yeni uzuvların filizleniyor!\nRadsayacı: $0,新的肢体长出来了！\n辐射值：$0,,,,,,,referring to the leggy limbs
+status_cc_radstage_6,Radiation gives you Superpowers!,RU_MISSING,A radiação te dá Superpoderes!,Radyasyon sana Süper Güçler kazandırdı!,辐射给予了你超能力！,,,,,,,
+status_cc_desc_radstage_6,"You feel you should turn back now\nRadcount: $0\n\nThis is about as far as I've coded, sorgy :(",RU_MISSING,"Você sente que seria melhor voltar atrás, agora.\nRad: $0",Artık geri dönmen gerektiğini düşünüyorsun.\nRadsayacı: $0,你觉得自己应该回头了\n辐射值：$0,,,,,,,
+status_cc_radstage_7,Internal Burns,RU_MISSING,Queimaduras internas,İç Yanıklar,内脏烧伤,,,,,,,
+status_cc_desc_radstage_7,You feel going further would have dangerous consequences\nRadcount: ???,RU_MISSING,Você sente que ir mais longe do que isso poderá ter consequências perigosas\nRad: ???,Daha fazla ileri gitmenin tehlikeli sonuçları olabileceğini hissediyorsun\nRadsayacı: ???,你感觉继续下去的话会有危险的后果\n辐射值：???,,,,,,,radcount reader can no longer interpret the radcount
+status_cc_radstage_8,RNA Recompiled,RU_MISSING,RNA recompilado,RNA Derlemesi,RNA重编译,,,,,,,
+status_cc_desc_radstage_8,You feel any mutations from now on out are here to stay\nRadcount: Numbers are losing meaning,RU_MISSING,Você sente que qualquer mutação a partir desse ponto estaram aqui para ficar\nRad: Números estão perdendo o sentido,Şu andan itibaren mutasyonlar kalıcı olacak gibi hissediyorsun\nRadsayacı: Sayılar anlamını kaybetmeye başlıyor,你感觉今后任何的突变都会一直留下来了\n辐射值：数字已经没什么意义了,,,,,,,radcount reader gives up on conveying your radcount
+status_cc_radstage_9,Radioactive Wasted,RU_MISSING,Radioativamente chapado,Radyoaktif Atık,辐射烂醉,,,,,,,Wasted' as in Radioactive Waste and when you are Wasted
+status_cc_desc_radstage_9,Your veins flow with toxic radiation\nRadcount: But... what's beyond... ?,RU_MISSING,Suas veias fluem com radiação impura\nRad: Mas... o que há além disso?...,Damarların saf olmayan radyasyonla dolup taşıyor\nRadsayacı: Ama... Daha ilerisinde ne var... ?,你的血液中流淌着污浊的辐射\n辐射值：但是...这之后还有什么...?,,,,,,,radcount is beginning to question the limits
+status_cc_radstage_10,Chaotic Mutations,RU_MISSING,Mutações caóticas,Kaotik Mutasyonlar,混沌突变,,,,,,,
+status_cc_desc_radstage_10,You've lost control of your very being\nRadcount: A small price...,RU_MISSING,Você perdeu controle do seu próprio ser\nRad: Um pequeno preço...,Varlığının kontrolünü kaybettin\nRadsayacı: Ufak bir bedel...,你失去了对自身的掌控\n辐射值：一个微不足道的代价...,,,,,,,"at this point, radcount reader is invested and is on this journey with you- curious to a dangerous degree"
+status_cc_radstage_11,Divine Warning,RU_MISSING,Aviso divino,İlahi Uyarı,神圣警告,,,,,,,
+status_cc_desc_radstage_11,"The heavens command that you cease this folly\nRadcount: They can beg all they like, keep going.",RU_MISSING,"Os ceús ordernam que você pare isso\nRad: Eles podem implorar o quanto quiserem, continue.",Tanrılar durmanı emrediyor\nRadsayacı: İstedikleri kadar yalvarabilirler,众神命令你停止\n辐射值：他们爱乞求就乞求吧，继续继续,,,,,,,radcount reader outright blaspheming the Gods in pursuit of reaching the end
+status_cc_radstage_12,Nuclear Overdrive,RU_MISSING,Overdrive nuclear,Nükleer Aşırı Yüklenme,核过载,,,,,,,
+status_cc_desc_radstage_12,"Every fibre of your being is under attack\nRadcount: You are on the precipice...\nJust, a, little, bit, further...!",RU_MISSING,"Toda fibra do seu ser está sob ataque\nRad: Você está no precipício...\nSó, mais, um, pouquinho...!","Varlığının her dokusu saldırı altında\nRadsayacı: Felaketin eşiğindesin...\nYalnızca, çok, az, daha...!",你的每一寸血肉都在被攻击！\n辐射值：就差临门一脚了...\n再，坚持，一下...！,,,,,,,
+status_cc_radstage_13,Radiant Blessing,RU_MISSING,Bênção radiante,Parlaklık Lütfu,光明之佑,,,,,,,this stage is only properly viewable if the player has the radiation immunity perk (not to be confused with toxic immunity perk)
+status_cc_desc_radstage_13,Beautiful beams radiate forth!\nThe mechanism appears to have burst.,RU_MISSING,Belos raios irradiam!\nO mecanismo parece ter explodido.,Güzel ışınımlar etrafa saçılıyor!\nMekanizma parçalanmış gibi gözüküyor.,灿烂的光芒辐照四处！\n机械好像爆炸了。,,,,,,,radcount reader has been destroyed
+status_cc_polymorph,Polymorph,RU_MISSING,Polimorfia,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_polymorph,You have become something fluffy.,RU_MISSING,Você se tornou algo fofinho.,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_polymorph_trans_day,Your pronouns are she/ep.,RU_MISSING,Você se tornou algo fofinho.,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,"Pun is a play on of 'she/her' and the fact you turn into a sheep, do as you please for this one"
+status_cc_unstable_polymorph,Unstable Polymorph,RU_MISSING,Polimorfia instável,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_unstable_polymorph,You have become something unexpected.,RU_MISSING,Você se tornou algo inesperado.,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_cc_chaotic_polymorph,Chaotic Polymorph,RU_MISSING,Polimorfia caótica,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_chaotic_polymorph,You have become something bizarre.,RU_MISSING,Você se tornou algo bizarro.,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_cc_rare_polymorph,Exotic Polymorph,RU_MISSING,Polimorfia exótica,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+status_desc_cc_rare_polymorph,You have become something exceptionally rare.,RU_MISSING,Você se tornou algo extremamente raro.,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Items!
@@ -320,27 +318,27 @@ status_desc_cc_rare_polymorph,You have become something exceptionally rare.,,Voc
 item_cc_runestone_crystal,Runestone of Crystals,Рунный камень кристаллов,Pedra rúnica de cristais,Kristallerin Runik Taşı,水晶符石,,,,,,,
 itemdesc_runestone_crystal,Converts nearby liquids to a beautiful crystalline liquid,Превращает ближайшие жидкости в красивую кристаллическую жидкость,Converte líquidos ao seu redor em um lindo líquido cristalino,Çevredeki sıvıları güzel bir kristal sıvıya dönüştürür,将附近的液体变为美丽的液态水晶,,,,,,,unused- currently uses default runestone description
 item_runestone_spells,Runestone of Spells,Рунный камень заклинаний,Pedra rúnica de feitiços,Büyülerin Runik Taşı,法术符石,,,,,,,
-itemdesc_runestone_spells,Converts nearby liquids into a flurry of spells,,Converte projéteis ao seu redor em um aglomerado de feitiços,Çevredeki sıvıları kaotik biçimdeki büyülere dönüştürür,将附近的液体变为一阵法术,,,,,,,flurry meaning almost like a blizzard or gust of spells; a large chaotic cloud/collection of them
+itemdesc_runestone_spells,Converts nearby liquids into a flurry of spells,RU_MISSING,Converte projéteis ao seu redor em um aglomerado de feitiços,Çevredeki sıvıları kaotik biçimdeki büyülere dönüştürür,将附近的液体变为一阵法术,,,,,,,flurry meaning almost like a blizzard or gust of spells; a large chaotic cloud/collection of them
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Miscellaneous
 ,,,,,,,,,,,,
-log_cc_tinkersong_secret,The Gods sing along to your song,,Os Deuses cantam juntos com sua canção,Tanrılar şarkına eşlik ediyor,众神与你一同歌唱,,,,,,,
-log_cc_tinkersong_secrect_desc,Can you hear them?,,Você consegue ouvi-los?,Onları duyabiliyor musun?,你能听见他们吗？,,,,,,,
-log_cc_mutagen_superpowers,Mutagen Upgrade,,Upgrade Mutagen,Mutajen Gelişimi,诱变升级,,,,,,,
-log_cc_mutagen_superpowers_desc,Radiation gives you superpowers!,,A radiação te dá superpoderes!,Radyasyon sana süper güçler kazandırıyor!,辐射给予了你超能力！,,,,,,,
-log_cc_nullified_trip_00,Your sense of reality flickers,,O seu sentido da realidade tremula,Gerçeklik algın bozulmaya başlıyor,你对现实的感知变动了,,,,,,,
-log_cc_nullified_trip_01,You sense something is missing,,Você sente que algo está faltando,Bir şey eksikmiş gibi hissediyorsun,你感觉到某物缺失了,,,,,,,
-log_cc_nullified_trip_02,Something has lost meaning,,Algo perdeu o sentido,Bir şey anlamını kaybetti,某物失去了意义,,,,,,,
-log_cc_nullified_trip_03,You feel a void in the cosmos,,Você sente um vazio nos cosmos,Evrende bir boşluk hissediyorsun,你感觉到宇宙出现了虚无,,,,,,,
-log_cc_nullified_trip_04,The universe feels emptier,,O universe parece mais vazio,Evren olduğundan daha boşmuş gibi hissettiriyor,你感觉到宇宙更加空寂了,,,,,,,
-log_cc_nullified_trip_05,You feel a vague sense of loss,,Você sente uma vaga sensação de perda,Belirsiz bir kayıplık algısı hissediyorsun,你感受到了朦胧的丧失感,,,,,,,
-logdesc_cc_nullified_trip,You hear something fade into quiet obscurity,,Você escuta algo desaparecer silenciosamente e obscuramente,Bir şeyin sessiz bir belirsizliğe yavaşça büründüğünü duyuyorsun,你听见某物遁入了虚无,,,,,,,
-log_cc_paradox_warp,You feel as if you are no longer in the same place...,,Você sente que não está mais no mesmo lugar...,Artık aynı yerde değilmişsin gibi hissediyorsun...,你感觉自己不在同一个地方了...,,,,,,,
-death_cc_morphine,Careful with those painkillers,,Cuidado com esses analgésicos,Ağrı kesicileri ağırdan alsan iyi olur,谨慎服用止痛药,,,,,,,death msg from when you die to something while Morphine is obfuscating your HP
-death_cc_antimatter,Annihilation,,Aniquilação,,,,,,,,,annihilation specifically being the term for when Matter and Anti-Matter neutralise one another
-cc_shield_depleted,Shield Depleted!,,Escudo esgotado!,,,,,,,,,
-log_cc_cloned,Cloned!,,,,,,,,,,,
+log_cc_tinkersong_secret,The Gods sing along to your song,RU_MISSING,Os Deuses cantam juntos com sua canção,Tanrılar şarkına eşlik ediyor,众神与你一同歌唱,,,,,,,
+log_cc_tinkersong_secrect_desc,Can you hear them?,RU_MISSING,Você consegue ouvi-los?,Onları duyabiliyor musun?,你能听见他们吗？,,,,,,,
+log_cc_mutagen_superpowers,Mutagen Upgrade,RU_MISSING,Upgrade Mutagen,Mutajen Gelişimi,诱变升级,,,,,,,
+log_cc_mutagen_superpowers_desc,Radiation gives you superpowers!,RU_MISSING,A radiação te dá superpoderes!,Radyasyon sana süper güçler kazandırıyor!,辐射给予了你超能力！,,,,,,,
+log_cc_nullified_trip_00,Your sense of reality flickers,RU_MISSING,O seu sentido da realidade tremula,Gerçeklik algın bozulmaya başlıyor,你对现实的感知变动了,,,,,,,
+log_cc_nullified_trip_01,You sense something is missing,RU_MISSING,Você sente que algo está faltando,Bir şey eksikmiş gibi hissediyorsun,你感觉到某物缺失了,,,,,,,
+log_cc_nullified_trip_02,Something has lost meaning,RU_MISSING,Algo perdeu o sentido,Bir şey anlamını kaybetti,某物失去了意义,,,,,,,
+log_cc_nullified_trip_03,You feel a void in the cosmos,RU_MISSING,Você sente um vazio nos cosmos,Evrende bir boşluk hissediyorsun,你感觉到宇宙出现了虚无,,,,,,,
+log_cc_nullified_trip_04,The universe feels emptier,RU_MISSING,O universe parece mais vazio,Evren olduğundan daha boşmuş gibi hissettiriyor,你感觉到宇宙更加空寂了,,,,,,,
+log_cc_nullified_trip_05,You feel a vague sense of loss,RU_MISSING,Você sente uma vaga sensação de perda,Belirsiz bir kayıplık algısı hissediyorsun,你感受到了朦胧的丧失感,,,,,,,
+logdesc_cc_nullified_trip,You hear something fade into quiet obscurity,RU_MISSING,Você escuta algo desaparecer silenciosamente e obscuramente,Bir şeyin sessiz bir belirsizliğe yavaşça büründüğünü duyuyorsun,你听见某物遁入了虚无,,,,,,,
+log_cc_paradox_warp,You feel as if you are no longer in the same place...,RU_MISSING,Você sente que não está mais no mesmo lugar...,Artık aynı yerde değilmişsin gibi hissediyorsun...,你感觉自己不在同一个地方了...,,,,,,,
+death_cc_morphine,Careful with those painkillers,RU_MISSING,Cuidado com esses analgésicos,Ağrı kesicileri ağırdan alsan iyi olur,谨慎服用止痛药,,,,,,,death msg from when you die to something while Morphine is obfuscating your HP
+death_cc_antimatter,Annihilation,RU_MISSING,Aniquilação,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,annihilation specifically being the term for when Matter and Anti-Matter neutralise one another
+cc_shield_depleted,Shield Depleted!,RU_MISSING,Escudo esgotado!,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+log_cc_cloned,Cloned!,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
@@ -358,7 +356,7 @@ mat_mm_alchemical_base,Alchemical Base,Алхимическая основа,Bas
 desc_mm_alchemical_base,The base of all proper alchemy.,Основа всей правильной алхимии.,A base de toda alquimia adequada.,Bütün simyanın temeli.,所有真正炼金的基础。,,,,,,,
 mat_mm_ephemeral_ether,Ephemeral Ether,Эфемерный эфир,Éter efêmero,Geçici Eter,瞬息以太,,,,,,,
 desc_mm_ephemeral_ether,A volatile substance which evaporates quickly.\nA side product of many alchemical processes.\nUses are yet unknown.,"Летучее вещество, которое быстро испаряется.\nПобочный продукт многих алхимических процессов.\nПрименение пока неизвестно.",Uma substância volátil que evapora rapidamente.\nUm produto secundário de vários processos alquímicos.\nOs usos ainda são desconhecidos.,Çabuk buharlaşan uçucu bir madde.\nBirçok simya üretiminin bir yan ürünü.\nKullanımları henüz bilinmemektedir.,一种快速蒸发的活泼物质。\n许多炼金过程的副产物。\n用途仍不明确。,,,,,,,
-mat_mm_desc_submystery,Substitate Nymphium,,Nínfio substitato,Substitate Nymphium,地之馈赠魔药,,,,,,,please DM @userk on discord if you are translating this
+mat_mm_desc_submystery,Substitate Nymphium,RU_MISSING,Nínfio substitato,Substitate Nymphium,地之馈赠魔药,,,,,,,please DM @userk on discord if you are translating this
 mat_mm_ephemeral_ether_gas,Ephemeral Ether Gas,Газообразный эфемерный эфир,Gás de éter efêmero,Geçici Eter Gazı,瞬息以太气体,,,,,,,
 desc_mm_ephemeral_ether_gas,The evaporated form of Ephemeral Ether.,Испарённая форма эфемерного эфира.,A forma evaporada do éter efêmero.,Geçici Eterin buharlaşmış hâli.,蒸发形态的瞬息以太。,,,,,,,
 mat_mm_gold_solution,Gold Solution,Раствор золота,Solução dourada,Altın Çözeltisi,黄金溶液,,,,,,,
@@ -378,7 +376,7 @@ desc_mm_mystic_alloy,An alloy made from the remnants of a broken wand.\nIt is no
 reac_gold_solution,A Solution of Gold,Раствор золота,Uma solução de ouro,Bir Altın Çözeltisi,黄金的溶液,,,,,,,
 reac_desc_gold_solution,Gold can be dissolved in an Alchemical Solvent to be in a more usable form for future recipes.,"Золото можно растворить в алхимическом растворителе, чтобы получить более удобную форму для будущих рецептов.",O ouro pode ser dissolvido em um solvente alquímico para ficar em uma forma mais utilizável para receitas futuras.,"Altın, gelecek yöntemlerde daha kullanışlı olması için Simyasal bir Çözelti içinde çözünebilir.",黄金可以溶解在炼金溶剂中，以变成一种在未来配方中更有用的形态。,,,,,,,
 reac_mana_dilution,The Dilution of Mana,Разбавление маны,A diluição de mana,Mana Seyreltilmesi,法力的稀释,,,,,,,
-reac_desc_mana_dilution,Concentrated Mana can be diluted in an Alchemical Base to be in a more usable form for future recipes.,"Концентрированную ману можно разбавить в алхимической основе, чтобы получить более удобную форму для будущих рецептов.",,"Derişik Mana, gelecek yöntemlerde daha kullanışlı olması için Simyasal bir Çözelti içinde çözünebilir.",汇聚法力可以在炼金基底中稀释，以变成一种在未来配方中更有用的形态。,,,,,,,
+reac_desc_mana_dilution,Concentrated Mana can be diluted in an Alchemical Base to be in a more usable form for future recipes.,"Концентрированную ману можно разбавить в алхимической основе, чтобы получить более удобную форму для будущих рецептов.",PT-BR_MISSING,"Derişik Mana, gelecek yöntemlerde daha kullanışlı olması için Simyasal bir Çözelti içinde çözünebilir.",汇聚法力可以在炼金基底中稀释，以变成一种在未来配方中更有用的形态。,,,,,,,
 reac_mana_refining,The Refining of Mana,Очищение маны,O refinamento de mana,Mana Arıtılması,法力的精炼,,,,,,,
 reac_desc_mana_refining,"Diluted Mana can be refined by mixing with Hydroxide, refined mana has limited usecases but it can be useful.","Разбавленную ману можно очистить, смешав с гидроксидом; очищенная мана имеет ограниченное применение, но может быть полезна.","Mana diluída pode ser refinada misturando-a com hidróxido.\nO mana refinado tem usos limitados, mas pode ser útil.","Seyreltilmiş Mana, Hidroksitle karıştırılarak arıtılabilir, arıtılmış mana'nın sınırlı kullanım alanları vardır ancak kullanışlı olabilir.",稀释法力可以通过与氢氧化物混合来达成精炼，精炼法力的用途不多，但仍然有用。,,,,,,,
 reac_mystic_alloy,Refining a Mystic Alloy,Очищение мистического сплава,Refinando uma liga mística,Gizemli Alaşımın Arıtılması,神秘合金的精炼,,,,,,,
@@ -393,25 +391,25 @@ reac_mana_charge,Mana regeneration,Восстановление маны,Regener
 reac_desc_mana_charge,Wands refill their mana pool over time by absorbing mana from the surrounding environment.\nA wand can be made more efficient at this by infusing it with Refined Mana.,"Жезлы со временем пополняют свой запас маны, поглощая ману из окружающей среды.\nЖезл можно сделать более эффективным в этом отношении, наполнив его очищенной маной.","As varinhas reabastecem sua reserva de mana ao longo do tempo, absorvendo mana do ambiente ao redor.\nUma varinha pode se tornar mais eficiente nisso ao infundi-la com mana refinado.",Asalar çevredeki manayı içlerine çekerek mana miktarlarını yenilerler.\nBir asa bu durum için Arıtılmış Manayla doyurularak daha verimli hâle getirilebilir.,法杖通过从周围环境吸收法力来逐渐填充自身的法力池。将法杖灌注精炼法力后，其这一过程的效率会提升。,,,,,,,
 reac_flux_welding,Flux Welding,Сварка потоком,União por fluxo arcano,Flaks Birleşimi,流体焊接,,,,,,,
 reac_desc_flux_welding,"Arcane Flux can be used to weld spells together, this however is a very volatile process and results are variable.\nAlso note that the spell will be more expensive to cast based on what you weld to it.","Тайный поток можно использовать для соединения заклинаний, однако это очень нестабильный процесс, и результаты могут быть разными.\nТакже обратите внимание, что стоимость заклинания увеличится в зависимости от того, что вы к нему приварите.","O fluxo arcano pode ser usado para unir feitiços, porém, este é um processo muito volátil e os resultados são variáveis.\nObserve também que o feitiço irá custar mais mana para ser conjurado com base no que você unir a ele.","Büyülü Flaks, büyüleri birleştirmek için kullanılabilir ancak bu süreç çok istikrarsızdır ve sonuçları değişiklik gösterir.\nAyrıca neyle birleştirdiğinize bağlı olarak bu büyüyü yapmanın daha pahalı hâle gelebileceğini aklınızda bulundurun.",奥术流体可以用来将法术焊接到一起，但这个过程非常不稳定，结果也存在不确定性。\n同时要注意，焊接后法术的施放成本会根据用于焊接的法术增加。,,,,,,,
-reac_replicating_agent,Procurement of a Replicating Agent,,Aquisição de um agente de replicação,Yinelenen Maddenin Elde Edinimi,复制剂的制取,,,,,,,
-reac_desc_replicating_agent,"By mixing a base, a solvent, and a byproduct of other alchemical processes, you may come across an agent that is able to replicate various materials.",,"Ao misturar uma base, um solvente e um subproduto de outros processos alquímicos, você pode encontrar um agente capaz de replicar vários materiais.","Bir temel sıvıyı, bir çözeltiyi ve başka simya üretimlerinin yan ürünlerini birleştirerek çeşitli maddeleri kopyalayabilen bir maddeye rastlayabilirsiniz.",通过混合一种基底、一种溶剂和一种其他炼金过程的副产品，你可能会获得一种能够复制多种材料的制剂。,,,,,,,
+reac_replicating_agent,Procurement of a Replicating Agent,RU_MISSING,Aquisição de um agente de replicação,Yinelenen Maddenin Elde Edinimi,复制剂的制取,,,,,,,
+reac_desc_replicating_agent,"By mixing a base, a solvent, and a byproduct of other alchemical processes, you may come across an agent that is able to replicate various materials.",RU_MISSING,"Ao misturar uma base, um solvente e um subproduto de outros processos alquímicos, você pode encontrar um agente capaz de replicar vários materiais.","Bir temel sıvıyı, bir çözeltiyi ve başka simya üretimlerinin yan ürünlerini birleştirerek çeşitli maddeleri kopyalayabilen bir maddeye rastlayabilirsiniz.",通过混合一种基底、一种溶剂和一种其他炼金过程的副产品，你可能会获得一种能够复制多种材料的制剂。,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Items!
 ,,,,,,,,,,,,
-item_mm_bingus,Bingus,,Bingus,Bingus,哈基米,,,,,,,name of aforementioned furless 'bingus' cat
-item_mm_bingus,Some kind of strange critter.,,Um tipo de bichinho estranho...,Tuhaf türdeki bir canlı,某种奇怪的生物。,,,,,,,
-item_mm_can,Can,,Lata,Teneke,罐头,,,,,,,
+item_mm_bingus,Bingus,RU_MISSING,Bingus,Bingus,哈基米,,,,,,,name of aforementioned furless 'bingus' cat
+item_mm_bingus,Some kind of strange critter.,RU_MISSING,Um tipo de bichinho estranho...,Tuhaf türdeki bir canlı,某种奇怪的生物。,,,,,,,
+item_mm_can,Can,RU_MISSING,Lata,Teneke,罐头,,,,,,,
 item_can_with_material,Can of $0,Банка $0,Lata de $0,$0'lık Teneke,$0罐头,,,,,,,
 item_can_with_material_description,A Can containing $0,"Банка, содержащая $0",Uma lata contendo $0,$0 içeren bir Teneke,含有$0的罐头,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Alchemy Journal:
-item_mm_alchemy_journal,Alchemy Journal,,Diário Alquimico,Simya Günlüğü,炼金术日志,,,,,,,
-itemdesc_mm_alchemy_journal,A recipe book of sorts for alchemists.,,Um livro de receitas para alquimistas,Çeşitli türdeki tarifleri simyacılar için anlatan bir kitap.,炼金术士的某种配方书。,,,,,,,
+item_mm_alchemy_journal,Alchemy Journal,RU_MISSING,Diário Alquimico,Simya Günlüğü,炼金术日志,,,,,,,
+itemdesc_mm_alchemy_journal,A recipe book of sorts for alchemists.,RU_MISSING,Um livro de receitas para alquimistas,Çeşitli türdeki tarifleri simyacılar için anlatan bir kitap.,炼金术士的某种配方书。,,,,,,,
 log_mm_lab_note_pickup,A new entry has been added to your Alchemy Journal,В ваш алхимический журнал добавлена новая запись,Um novo registro foi adicionado ao seu Diário Alquimico,Simya Günlüğüne yeni bir not eklendi,你的炼金术日志增加了新的条目,,,,,,,
 note_mm_labnote_entry,Lab Note #$0: $1,Лабораторная запись №$0: $1,Nota laboratorial #$0: $1,Laboratuvar Notu #$0: $1,实验笔记$0：$1,,,,,,,
 title_mm_alchemist_journal,Alchemy Journal,Алхимический журнал,Diário Alquimico,Simya Günlüğü,炼金术日志,,,,,,,
-desc_mm_alchemist_journal,"The journal of an alchemist, who has been studying the arcane arts for a long time. Many pages appear to be torn out..","Журнал алхимика, который долгое время изучал тайные искусства. Многие страницы, кажется, вырваны...",,Uzun süredir gizli zanaatleri araştıran bir simyacının günlüğü. Birçok sayfa koparılmış gibi gözüküyor...,一位炼金术士的日志，他对奥秘之术有许久的研究。许多页好像都被撕掉了...,,,,,,,
+desc_mm_alchemist_journal,"The journal of an alchemist, who has been studying the arcane arts for a long time. Many pages appear to be torn out..","Журнал алхимика, который долгое время изучал тайные искусства. Многие страницы, кажется, вырваны...",PT-BR_MISSING,Uzun süredir gizli zanaatleri araştıran bir simyacının günlüğü. Birçok sayfa koparılmış gibi gözüküyor...,一位炼金术士的日志，他对奥秘之术有许久的研究。许多页好像都被撕掉了...,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
@@ -450,7 +448,7 @@ itemdesc_runestone_terror,You feel as though dropping this would be a terrible i
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Misc!
 ,,,,,,,,,,,,
-animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандориум,Pandório aterrorizante,,惊悚潘多拉魔药,,,,,,,
+animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандориум,Pandório aterrorizante,TR-TR_MISSING,惊悚潘多拉魔药,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
@@ -458,31 +456,31 @@ animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандор�
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,Compatibility
 ,,,,,,,,,,,,
-action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,,Brilho pandório caótico,,,,,,,,,
-action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,,O projétil produz um rastro brilhante caótico,,,,,,,,,
-action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,,Brilho gravidade condensada,,,,,,,,,
-action_desc_aa_glimmer_condensed_gravity,Gives a projectile a heavy sparkly trail,,O projétil produz um rastro brilhante pesado,,,,,,,,,
-action_name_aa_glimmer_dark_matter,Dark Matter Glimmer,,Brilho matéria escura,,,,,,,,,
-action_desc_aa_glimmer_dark_matter,Gives a projectile a cosmic sparkly trail,,O projétil produz um rastro brilhante cósmico,,,,,,,,,
-action_name_aa_glimmer_static_charge,Static Charge Glimmer,,Brilho carga estática,,,,,,,,,
-action_desc_aa_glimmer_static_charge,Gives a projectile a electrifying sparkly trail,,O projétil produz um rastro brilhante eletrizante,,,,,,,,,
-action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,,Brilho hidroxido,,,,,,,,,
-action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,,O projétil produz um rastro brilhante corrosivo,,令投射物留下腐蚀性的闪光轨迹,,,,,,,
-action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,,Brilho líquido cortante,,,,,,,,,
-action_desc_cc_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,,O projétil produz um rastro brilhante prateado,,令投射物留下银色的闪光轨迹,,,,,,,
-action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,,Brilho líquido brilhante,,,,,,,,,
-action_desc_cc_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,,O projétil produz um rastro brilhante,,令投射物留下充满光耀的闪光轨迹,,,,,,,
-action_name_cc_glimmer_explode_player,Agitine Glimmer,,Brilho agitínio,,,,,,,,,
-action_desc_cc_glimmer_explode_player,Gives a projectile an agitating sparkly trail,,O projétil produz um rastro brilhante agitante,,令投射物留下激发性的闪光轨迹,,,,,,,
-action_name_cc_glimmer_nullium,Nullium Glimmer,,Brilho núlio,,,,,,,,,
-action_desc_cc_glimmer_nullium,Gives a projectile a degenerative sparkly trail,,O projétil produz um rastro brilhante degenerativo,,令投射物留下恶化的闪光轨迹,,,,,,,degenerate as in the opposite of regenerate
-action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,,Brilho cristal inativo,,,,,,,,,
-action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,,O projétil produz um rastro brilhante volátil,,令投射物留下易发散的闪光轨迹,,,,,,,
-action_name_cc_glimmer_uranium,Uranium Glimmer,,Brilho de urânio,,,,,,,,,
-action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,,O projétil produz um rastro brilhante radioativo,,令投射物留下放射性的闪光轨迹,,,,,,,
-action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,,Brilho antimatéria,,,,,,,,,
-action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,,O projétil produz um rastro brilhante aniquilante,,令投射物留下湮灭的闪光轨迹,,,,,,,
-tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,Pandório caótico/instável,,,,,,,,,
+action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,RU_MISSING,Brilho pandório caótico,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,RU_MISSING,O projétil produz um rastro brilhante caótico,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,RU_MISSING,Brilho gravidade condensada,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_aa_glimmer_condensed_gravity,Gives a projectile a heavy sparkly trail,RU_MISSING,O projétil produz um rastro brilhante pesado,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_name_aa_glimmer_dark_matter,Dark Matter Glimmer,RU_MISSING,Brilho matéria escura,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_aa_glimmer_dark_matter,Gives a projectile a cosmic sparkly trail,RU_MISSING,O projétil produz um rastro brilhante cósmico,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_name_aa_glimmer_static_charge,Static Charge Glimmer,RU_MISSING,Brilho carga estática,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_aa_glimmer_static_charge,Gives a projectile a electrifying sparkly trail,RU_MISSING,O projétil produz um rastro brilhante eletrizante,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_name_cc_glimmer_hydroxide,Hydroxide Glimmer,RU_MISSING,Brilho hidroxido,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_hydroxide,Gives a projectile a corrosive sparkly trail,RU_MISSING,O projétil produz um rastro brilhante corrosivo,TR-TR_MISSING,令投射物留下腐蚀性的闪光轨迹,,,,,,,
+action_name_cc_glimmer_slicing_liquid,Slicing Liquid Glimmer,RU_MISSING,Brilho líquido cortante,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_slicing_liquid,Gives a projectile a silvery sparkly trail,RU_MISSING,O projétil produz um rastro brilhante prateado,TR-TR_MISSING,令投射物留下银色的闪光轨迹,,,,,,,
+action_name_cc_glimmer_glittering_liquid,Glittering Liquid Glimmer,RU_MISSING,Brilho líquido brilhante,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_glittering_liquid,Gives a projectile a glittering sparkly trail,RU_MISSING,O projétil produz um rastro brilhante,TR-TR_MISSING,令投射物留下充满光耀的闪光轨迹,,,,,,,
+action_name_cc_glimmer_explode_player,Agitine Glimmer,RU_MISSING,Brilho agitínio,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_explode_player,Gives a projectile an agitating sparkly trail,RU_MISSING,O projétil produz um rastro brilhante agitante,TR-TR_MISSING,令投射物留下激发性的闪光轨迹,,,,,,,
+action_name_cc_glimmer_nullium,Nullium Glimmer,RU_MISSING,Brilho núlio,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_nullium,Gives a projectile a degenerative sparkly trail,RU_MISSING,O projétil produz um rastro brilhante degenerativo,TR-TR_MISSING,令投射物留下恶化的闪光轨迹,,,,,,,degenerate as in the opposite of regenerate
+action_name_cc_glimmer_dormant_crystal,Dormant Crystal Glimmer,RU_MISSING,Brilho cristal inativo,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_dormant_crystal,Gives a projectile a volatile sparkly trail,RU_MISSING,O projétil produz um rastro brilhante volátil,TR-TR_MISSING,令投射物留下易发散的闪光轨迹,,,,,,,
+action_name_cc_glimmer_uranium,Uranium Glimmer,RU_MISSING,Brilho de urânio,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_uranium,Gives a projectile a radioactive sparkly trail,RU_MISSING,O projétil produz um rastro brilhante radioativo,TR-TR_MISSING,令投射物留下放射性的闪光轨迹,,,,,,,
+action_name_cc_glimmer_antimatter,Anti-Matter Glimmer,RU_MISSING,Brilho antimatéria,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
+action_desc_cc_glimmer_antimatter,Gives a projectile an annihilative sparkly trail,RU_MISSING,O projétil produz um rastro brilhante aniquilante,TR-TR_MISSING,令投射物留下湮灭的闪光轨迹,,,,,,,
+tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,RU_MISSING,Pandório caótico/instável,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
@@ -491,19 +489,19 @@ tcl_aa_pandorium_scary,Chaotic/Unstable Pandorium,,Pandório caótico/instável,
 ,,,,,,,,,,,,Misc
 ,,,,,,,,,,,,just misc stuff referring to the name of the mod/developers working on it as well as other misc stuff
 ,,,,,,,,,,,,
-name_mod_cc_global,Chemical Curiosities,,Curiosidades Químicas,Kimyevi Arzular,,,,,,,,up to interpretation
-cc_branch_name_aa,Arcane Alchemy,,Alquimia Arcana,Büyülü Kimya,,,,,,,,up to interpretation
-cc_branch_name_cc,Chemical Curiosities,,Curiosidades Químicas,Kimyevi Arzular,,,,,,,,up to interpretation
-cc_branch_name_mm,Mystical Mixtures,,Misturas Místicas,Gizemli Karışımlar,,,,,,,,up to interpretation
-cc_branch_name_ff,Fluent Fluids,,Fluidos Fluentes,Büyülü Sıvılar,,,,,,,,up to interpretation
-cc_branch_name_t,Terror.,,Terror.,Kaos,,,,,,,,up to interpretation
+name_mod_cc_global,Chemical Curiosities,RU_MISSING,Curiosidades Químicas,Kimyevi Arzular,ZH-CN_MISSING,,,,,,,up to interpretation
+cc_branch_name_aa,Arcane Alchemy,RU_MISSING,Alquimia Arcana,Büyülü Kimya,ZH-CN_MISSING,,,,,,,up to interpretation
+cc_branch_name_cc,Chemical Curiosities,RU_MISSING,Curiosidades Químicas,Kimyevi Arzular,ZH-CN_MISSING,,,,,,,up to interpretation
+cc_branch_name_mm,Mystical Mixtures,RU_MISSING,Misturas Místicas,Gizemli Karışımlar,ZH-CN_MISSING,,,,,,,up to interpretation
+cc_branch_name_ff,Fluent Fluids,RU_MISSING,Fluidos Fluentes,Büyülü Sıvılar,ZH-CN_MISSING,,,,,,,up to interpretation
+cc_branch_name_t,Terror.,RU_MISSING,Terror.,Kaos,ZH-CN_MISSING,,,,,,,up to interpretation
 ,,,,,,,,,,,,
-cc_name_evaisa,Evaisa,,,,,,,,,,,transliterate
-cc_name_squirrelly,Squirrelly,,,,,,,,,,,transliterate
-cc_name_userk,UserK,,,,,,,,,,,transliterate
-cc_name_alexgod,Alex(GoD),,,,,,,,,,,transliterate
-cc_name_lamia,Lamia,,,,,,,,,,,transliterate
-cc_name_absent_friend,Absent Friend,,,,,,,,,,,transliterate
-cc_name_dylan_rhodes,Dylan Rhodes Taha,,,,,,,,,,,transliterate
-cc_name_singularity_neko,SingularityNeko,,,,,,,,,,,transliterate
+cc_name_evaisa,Evaisa,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_squirrelly,Squirrelly,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_userk,UserK,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_alexgod,Alex(GoD),RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_lamia,Lamia,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_absent_friend,Absent Friend,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_dylan_rhodes,Dylan Rhodes Taha,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
+cc_name_singularity_neko,SingularityNeko,RU_MISSING,PT-BR_MISSING,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,transliterate
 ,,,,,,,,,,,,add yourself here!
