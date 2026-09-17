@@ -20,6 +20,7 @@ local settings = {
 	MM = ModSettingGet("Hydroxide.MM_ENABLED"),
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
+	experimental_features = ModSettingGet("Hydroxide.EXPERIMENTAL_FEATURES"),
 	run_translation_debug = true,
 
 	--CC
@@ -191,8 +192,9 @@ end
 ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_append.lua")
 ModLuaFileAppend("data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua") --powder pouches
-ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua") --effects
-ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua") --Fungal shifts
+ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua")
+ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua")
+ModLuaFileAppend("data/scripts/perks/perk_list.lua", "mods/Hydroxide/files/perks_append.lua")
 
 
 
@@ -247,6 +249,23 @@ if settings.CC then
 	FileSetBloodMaterial("data/entities/animals/wizard_dark.xml", "cc_veilium")
 	FileSetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
+
+	if settings.experimental_features then
+		hooks.new_eid[#hooks.new_eid+1] = function(entity_id, varcomp_tree)
+			if not GameHasFlagRun("cc_chaotic_transfusion") then return end
+			local x,y = EntityGetTransform(entity_id)
+			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
+
+			if not EntityHasTag(entity_id, "enemy") then return end
+			local dmc = EntityGetFirstComponent(entity_id, "DamageModelComponent")
+			if not dmc then return end
+			SetRandomSeed(x+434,y-1415)
+			local option = RandomFromTable(material_options)
+			ComponentSetValue2(dmc, "blood_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+		end
+	end
 
 	if settings.polymorph_gui then
 		hooks.player_changed[#hooks.player_changed+1] = function()
