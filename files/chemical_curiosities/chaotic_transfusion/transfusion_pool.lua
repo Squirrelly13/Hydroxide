@@ -40,7 +40,7 @@ local materials = {
 	},
 	{
 		material = "magic_liquid_hp_regeneration_unstable",
-		weight = 0.02,
+		weight = .5,
 	},
 	{
 		material = "magic_liquid_berserk",
@@ -66,11 +66,11 @@ local materials = {
 		material = "void_liquid",
 		weight = .1,
 	},
-
 	{
-		material = "cc_veilium",
-		weight = 3,
+		material = "mimic_liquid",
+		weight = 12
 	},
+
 	{
 		material = "cc_slicing_liquid",
 		weight = 3,
@@ -80,20 +80,12 @@ local materials = {
 		weight = 7,
 	},
 	{
-		material = "cc_heftium",
-		weight = 5,
-	},
-	{
-		material = "cc_explode_player",
-		weight = 8,
-	},
-	{
 		material = "cc_nullium",
-		weight = 7,
+		weight = 4,
 	},
 	{
 		material = "cc_health_tonic",
-		weight = 1,
+		weight = 2,
 	},
 	{
 		material = "cc_grease",
@@ -109,23 +101,31 @@ local materials = {
 	},
 	{
 		material = "cc_persistine",
-		weight = 9,
+		weight = 7,
 	},
 }
 
 
-
-
-
+if GameGetWorldStateEntity() ~= 0 then
+	local aplc = dofile_once("mods/Hydroxide/lib/aplc.lua")
+	local mats = aplc:get()
+	if mats then
+		for _,t in ipairs({mats.lc, mats.ap}) do
+			for _,material in ipairs(t.mats) do
+				materials[#materials+1] = {
+					material = CellFactory_GetName(material),
+					weight = 5
+				}
+				print(("Added [%s] ingredient: [%s]"):format(CellFactory_GetName(t.result), CellFactory_GetName(material)))
+			end
+		end
+	end
+end
 
 
 
 
 local AA_materials = {
-	{
-		material = "aa_dark_matter",
-		weight = 3,
-	},
 	{
 		material = "aa_base_potion",
 		weight = 15,
@@ -143,16 +143,8 @@ local AA_materials = {
 		weight = 6,
 	},
 	{
-		material = "aa_pop_rocks",
-		weight = .5,
-	},
-	{
-		material = "aa_condensed_gravity",
-		weight = 4,
-	},
-	{
 		material = "aa_cloning_solution",
-		weight = 4,
+		weight = 7,
 	},
 }
 
@@ -176,7 +168,7 @@ if true then
 end
 
 
-for _,file in ipairs(ModLuaFileGetAppends("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/materials.lua")) do
+for _,file in ipairs(ModLuaFileGetAppends("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")) do
 	materials = dofile(file)()
 end
 

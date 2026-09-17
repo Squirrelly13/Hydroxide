@@ -21,11 +21,11 @@ local cc_perks = {
 		id = "CC_CHAOTIC_TRANSFUSION",
 		ui_name = "$perkname_cc_chaotic_transfusion",
 		ui_description = "$perkdesc_cc_chaotic_transfusion",
-		ui_icon = "data/ui_gfx/perk_icons/extra_hp.png",
-		perk_icon = "data/items_gfx/perks/extra_hp.png",
+		perk_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/sprite.png",
+		ui_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/icon.png",
 		func = function()
 			GameAddFlagRun("cc_chaotic_transfusion")
-			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/materials.lua")
+			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
 			for _,enemy in ipairs(EntityGetWithTag("enemy")) do
 				local dmc = EntityGetFirstComponent(enemy, "DamageModelComponent")
 				if not dmc then goto continue end
@@ -36,7 +36,6 @@ local cc_perks = {
 				ComponentSetValue2(dmc, "blood_material", option.material)
 				ComponentSetValue2(dmc, "blood_spray_material", option.material)
 				ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
-				ComponentSetValue2(dmc, "blood_multiplier", ComponentGetValue2(dmc, "blood_multiplier") + .5)
 				::continue::
 			end
 		end
