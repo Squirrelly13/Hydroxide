@@ -22,4 +22,4 @@ Chemical Curiosities mod and featured content is owned by **Squirrelly** and add
 - Turkish Translations by **Dylan Rhodes (Taha)**
 - Chinese Translations by **SingularityNeko**
 
-***<ins>THIS MOD AND ITS CONTENT IS NOT TO BE USED FOR AI OR AI TRAINING OF ANY SORT WITHOUT EXPLICIT PERMISSION FROM THE CURRENT DEVELOPERS AND/OR OWNER OF THE MOD</ins>***
+***<ins>THIS MOD AND ITS CONTENT IS NOT TO BE USED FOR AI OR AI TRAINING OF ANY SORT</ins>***
