@@ -459,8 +459,9 @@ animal_random_spell_terror,Terrifying Pandorium,Ужасающий пандор�
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
 ,,,,,,,,,,,,
-,,,,,,,,,,,,Compatibility
+,,,,,,,,,,,,Compatibility!
 ,,,,,,,,,,,,
+,,,,,,,,,,,,"I would love to make this semi-procedural so you only have to translate “$0 Glimmer” once, but translations aren't loaded very early, may reinvestigate in the future."
 action_name_aa_glimmer_chaotic_pandorium,Chaotic Pandorium Glimmer,RU_MISSING,Brilho pandório caótico,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 action_desc_aa_glimmer_chaotic_pandorium,Gives a projectile a chaotic sparkly trail,RU_MISSING,O projétil produz um rastro brilhante caótico,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,
 action_name_aa_glimmer_condensed_gravity,Condensed Gravity Glimmer,RU_MISSING,Brilho gravidade condensada,TR-TR_MISSING,ZH-CN_MISSING,,,,,,,

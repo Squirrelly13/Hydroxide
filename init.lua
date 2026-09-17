@@ -2,18 +2,12 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
-dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
-dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
-
-
-ModSettingSet("Hydroxide.CC_ENABLED", true)
-ModSettingSet("Hydroxide.AA_ENABLED", true)
-ModSettingSet("Hydroxide.MM_ENABLED", true)
-ModSettingSet("Hydroxide.FF_ENABLED", true)
-ModSettingSet("Hydroxide.TERROR_ENABLED", true)
-
 
 local settings = {
+	--debug
+	run_translation_debug = true,
+
+
 	--branches
 	CC = ModSettingGet("Hydroxide.CC_ENABLED"),
 	AA = ModSettingGet("Hydroxide.AA_ENABLED"),
@@ -21,12 +15,14 @@ local settings = {
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
 	experimental_features = ModSettingGet("Hydroxide.EXPERIMENTAL_FEATURES"),
-	run_translation_debug = true,
 
 	--CC
 	oregen = ModSettingGet("Hydroxide.CC_ORES"),
 	polymorph_gui = ModSettingGet("Hydroxide.POLYMORPH_GUI"),
 }
+
+dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
 local catastrophicMaterials = {
