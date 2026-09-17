@@ -296,22 +296,22 @@ function AppendBiomeLists(t)
 end
 
 MaterialsTo = { --bandaid fix probabilities cuz i need to push this patch out rq and i dont wanna deal with this rn lmao
-    { probability = 1, "water" },
-    { probability = 1, "oil" },
-    { probability = 1, "blood_cold" },
-    { probability = 1, "blood_worm" },
-    { probability = 1, "rotten_meat" },
-    { probability = 1, "cc_glittering_liquid" },
-    { probability = .001, "gold" },
-    { probability = 1, "silver" },
-    { probability = 1, "copper" },
-    { probability = 1, "acid_gas" },
-    { probability = .5, "acid" },
-    { probability = .5, "cc_hydroxide" },
-    { probability = 1, "alcohol" },
-    { probability = 1, "wood" },
-    { probability = 1, "fungi" },
-    { probability = 1, "rock_static" },
+    { weight = 1, "water" },
+    { weight = 1, "oil" },
+    { weight = 1, "blood_cold" },
+    { weight = 1, "blood_worm" },
+    { weight = 1, "rotten_meat" },
+    { weight = 1, "cc_glittering_liquid" },
+    { weight = .001, "gold" },
+    { weight = 1, "silver" },
+    { weight = 1, "copper" },
+    { weight = 1, "acid_gas" },
+    { weight = .5, "acid" },
+    { weight = .5, "cc_hydroxide" },
+    { weight = 1, "alcohol" },
+    { weight = 1, "wood" },
+    { weight = 1, "fungi" },
+    { weight = 1, "rock_static" },
 }
 
 for _, file in ipairs(ModLuaFileGetAppends("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua")) do dofile_once(file) end
@@ -330,8 +330,8 @@ SetRandomSeed(89346, 42345-frame)
 
 local biome = BiomeMapGetName(x, y)
 local targets = {}
-for group, probability in pairs(BiomeLists[biome] or BiomeLists.default) do
-    targets[#targets+1] = {group, probability = probability}
+for group, weight in pairs(BiomeLists[biome] or BiomeLists.default) do
+    targets[#targets+1] = {group, weight = weight}
 end
 
 local from = MaterialGroups[RandomFromTable(targets)[1]].materials

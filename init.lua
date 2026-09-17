@@ -20,10 +20,12 @@ local settings = {
 	MM = ModSettingGet("Hydroxide.MM_ENABLED"),
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
+	experimental_features = ModSettingGet("Hydroxide.EXPERIMENTAL_FEATURES"),
+	run_translation_debug = true,
 
 	--CC
+	oregen = ModSettingGet("Hydroxide.CC_ORES"),
 	polymorph_gui = ModSettingGet("Hydroxide.POLYMORPH_GUI"),
-	run_translation_debug = true
 }
 
 
@@ -158,7 +160,7 @@ local check_entities = function()
 		end
 		if player ~= nil then
 			for _,func in ipairs(hooks.player_changed) do
-				func(player_poly_identity)
+				func()
 			end
 		end
 	end
@@ -173,11 +175,6 @@ function OnWorldPreUpdate()
 		func(frame)
 	end
 end
---function OnWorldPostUpdate()
---	for _,func in ipairs(hooks.post_update) do
---		func(frame)
---	end
---end --this does not seem needed yet
 
 
 -----//// TESTING!!!
@@ -195,8 +192,9 @@ end
 ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_append.lua")
 ModLuaFileAppend("data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua") --powder pouches
-ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua") --effects
-ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua") --Fungal shifts
+ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua")
+ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua")
+ModLuaFileAppend("data/scripts/perks/perk_list.lua", "mods/Hydroxide/files/perks_append.lua")
 
 
 
@@ -252,9 +250,26 @@ if settings.CC then
 	FileSetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
 
+	if settings.experimental_features then
+		hooks.new_eid[#hooks.new_eid+1] = function(entity_id, varcomp_tree)
+			if not GameHasFlagRun("cc_chaotic_transfusion") then return end
+			local x,y = EntityGetTransform(entity_id)
+			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
+
+			if not EntityHasTag(entity_id, "enemy") then return end
+			local dmc = EntityGetFirstComponent(entity_id, "DamageModelComponent")
+			if not dmc then return end
+			SetRandomSeed(x+434,y-1415)
+			local option = RandomFromTable(material_options)
+			ComponentSetValue2(dmc, "blood_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+		end
+	end
+
 	if settings.polymorph_gui then
-		hooks.player_changed[#hooks.player_changed+1] = function(poly_data)
-			if not poly_data then return end
+		hooks.player_changed[#hooks.player_changed+1] = function()
+			if not player_poly_identity then return end
 
 			if not EntityGetFirstComponentIncludingDisabled(player, "InventoryGuiComponent") then
 				EntityAddComponent2(player, "InventoryGuiComponent")
@@ -281,6 +296,10 @@ if settings.CC then
 				},
 			}
 
+			if MatchDateLocal({month = 3, day = 31}) then
+				polymorphs.POLYMORPH.desc = "$status_desc_cc_polymorph_trans_day"
+			end
+
 			local rare_polymorph = {
 				icon = "mods/Hydroxide/files/chemical_curiosities/polymorph_gui/rare_chaotic_polymorphed.png",
 				name = "$status_cc_rare_polymorph",
@@ -288,10 +307,10 @@ if settings.CC then
 			}
 
 			for _,rare_poly in pairs(PolymorphTableGet(true)) do
-				if poly_data.path == rare_poly then
+				if player_poly_identity.path == rare_poly then
 					local is_rare = true
 					for _,common_poly in pairs(PolymorphTableGet(false)) do
-						if poly_data.path == common_poly then
+						if player_poly_identity.path == common_poly then
 							is_rare = false
 							break
 						end
@@ -326,6 +345,23 @@ if settings.CC then
 		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/userk.xml", 11605, 20501) --me too!
 	end
 
+	local rock_materials = {
+		--vanilla:
+		rock_static_glow = true,
+		rock_static_purple = true,
+		rock_static_noedge = true,
+		rock_static_trip_secret = true,
+		rock_static_trip_secret2 = true,
+		rock_static_intro = true,
+		rock_static_intro_breakable = true,
+		rock_static_grey = true,
+		rock_static_wet = true,
+		snowrock_static = true,
+		rock_box2d_nohit_hard = true,
+		rock_box2d_nohit = true,
+		rock_box2d = true,
+		lavarock_static = true,
+	}
 	hooks.edit_material[#hooks.edit_material+1] = function(elem)
 		local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
 
@@ -333,23 +369,6 @@ if settings.CC then
 			rock_tags = elem.attr.tags
 			elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
 		else
-			local rock_materials = {
-				--vanilla:
-				rock_static_glow = true,
-				rock_static_purple = true,
-				rock_static_noedge = true,
-				rock_static_trip_secret = true,
-				rock_static_trip_secret2 = true,
-				rock_static_intro = true,
-				rock_static_intro_breakable = true,
-				rock_static_grey = true,
-				rock_static_wet = true,
-				snowrock_static = true,
-				rock_box2d_nohit_hard = true,
-				rock_box2d_nohit = true,
-				rock_box2d = true,
-				lavarock_static = true,
-			}
 			if settings.CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
 				elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
 			elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour
@@ -693,7 +712,7 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	--local x = ProceduralRandom(0,0)
 	--print("===================================== random " .. tostring(x))
 
-	if ModSettingGet("Hydroxide.CC_ORES") then
+	if settings.oregen then
 
 		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
 			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")

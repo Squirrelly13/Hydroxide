@@ -13,7 +13,6 @@
 		>
 	</LuaComponent>
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
 </Entity>

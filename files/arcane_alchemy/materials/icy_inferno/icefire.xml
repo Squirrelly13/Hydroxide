@@ -1,5 +1,7 @@
 <Entity name="$projectile_default">
 
+	<InheritTransformComponent/>
+
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="AA_ICEFIRE"

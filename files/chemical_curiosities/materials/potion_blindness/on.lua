@@ -8,13 +8,13 @@ local animal_ai_component = EntityGetFirstComponentIncludingDisabled(owner, "Ani
 
 
 if animal_ai_component then
-  local creature_detection_range_x = ComponentGetValue2(animal_ai_component, "creature_detection_range_x")
-  local creature_detection_range_y = ComponentGetValue2(animal_ai_component, "creature_detection_range_y")
-  ComponentSetValue2(animal_ai_component, "creature_detection_range_x", creature_detection_range_x * 0.01)
-  ComponentSetValue2(animal_ai_component, "creature_detection_range_y", creature_detection_range_y * 0.01)
+	local creature_detection_range_x = ComponentGetValue2(animal_ai_component, "creature_detection_range_x")
+	local creature_detection_range_y = ComponentGetValue2(animal_ai_component, "creature_detection_range_y")
+	ComponentSetValue2(animal_ai_component, "creature_detection_range_x", creature_detection_range_x * 0.01)
+	ComponentSetValue2(animal_ai_component, "creature_detection_range_y", creature_detection_range_y * 0.01)
 --[[ else
-  local comp = EntityGetFirstComponent(owner, "GameEffectComponent")
-  if not comp then return end
-  ComponentSetValue2(comp, "frames", GetStainPercentage(owner, "CC_BLINDNESS") * 10)
-  print(GetStainPercentage(owner, "CC_BLINDNESS") * 10) ]]
+	local comp = EntityGetFirstComponent(owner, "GameEffectComponent")
+	if not comp then return end
+	ComponentSetValue2(comp, "frames", GetStainPercentage(owner, "CC_BLINDNESS") * 10)
+	print(GetStainPercentage(owner, "CC_BLINDNESS") * 10) ]]
 end

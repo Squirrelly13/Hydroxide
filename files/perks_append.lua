@@ -13,19 +13,35 @@ local cc_perks = {
 		ui_description = "$cc_perkdesc_greater_capacity",
 		ui_icon = "data/ui_gfx/perk_icons/extra_hp.png",
 		perk_icon = "data/items_gfx/perks/extra_hp.png",
-		one_off_effect = true,
-		do_not_remove = true,
 		stackable = true,
 		func = function(perk, taker, perk_name, times_taken)
 		end,
 	},
 	{
-		_disabled = true,
 		id = "CC_CHAOTIC_TRANSFUSION",
 		ui_name = "$perkname_cc_chaotic_transfusion",
 		ui_description = "$perkdesc_cc_chaotic_transfusion",
+		perk_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/sprite.png",
+		ui_icon = "mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/icon.png",
+		stackable = false,
 		func = function()
-			local material_options = dofile_once("")
+			GameAddFlagRun("cc_chaotic_transfusion")
+			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
+			for _,enemy in ipairs(EntityGetWithTag("enemy")) do
+				local dmc = EntityGetFirstComponent(enemy, "DamageModelComponent")
+				if not dmc then goto continue end
+				if not ComponentGetValue2(dmc, "blood_material") == "blood" then goto continue end
+				local x,y = EntityGetTransform(enemy)
+				SetRandomSeed(x+434,y-1415)
+				local option = RandomFromTable(material_options)
+				ComponentSetValue2(dmc, "blood_material", option.material)
+				ComponentSetValue2(dmc, "blood_spray_material", option.material)
+				ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+				::continue::
+			end
+		end,
+		func_remove = function() --idc enough to undo blood transformation on existing enemies
+			GameRemoveFlagRun("cc_chaotic_transfusion")
 		end
 	},
 }
@@ -36,9 +52,13 @@ local aa_perks = {
 
 
 for _, perk in ipairs(CC and cc_perks or {}) do
-	perk_list[#perk_list+1] = perk
+	if not perk._disabled then
+		perk_list[#perk_list+1] = perk
+	end
 end
 
 for _, perk in ipairs(AA and aa_perks or {}) do
-	perk_list[#perk_list+1] = perk
+	if not perk._disabled then
+		perk_list[#perk_list+1] = perk
+	end
 end
