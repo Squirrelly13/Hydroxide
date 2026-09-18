@@ -361,7 +361,7 @@ mat_mm_alchemical_base,Alchemical Base,Алхимическая основа,Bas
 desc_mm_alchemical_base,The base of all proper alchemy.,Основа всей правильной алхимии.,A base de toda alquimia adequada.,Bütün simyanın temeli.,所有真正炼金的基础。,,,,,,,
 mat_mm_ephemeral_ether,Ephemeral Ether,Эфемерный эфир,Éter efêmero,Geçici Eter,瞬息以太,,,,,,,
 desc_mm_ephemeral_ether,A volatile substance which evaporates quickly.\nA side product of many alchemical processes.\nUses are yet unknown.,"Летучее вещество, которое быстро испаряется.\nПобочный продукт многих алхимических процессов.\nПрименение пока неизвестно.",Uma substância volátil que evapora rapidamente.\nUm produto secundário de vários processos alquímicos.\nOs usos ainda são desconhecidos.,Çabuk buharlaşan uçucu bir madde.\nBirçok simya üretiminin bir yan ürünü.\nKullanımları henüz bilinmemektedir.,一种快速蒸发的活泼物质。\n许多炼金过程的副产物。\n用途仍不明确。,,,,,,,
-mat_mm_desc_submystery,Substitate Nymphium,RU_MISSING,Nínfio substitato,Substitate Nymphium,地之馈赠魔药,,,,,,,please DM @userk on discord if you are translating this
+mat_mm_desc_submystery,Substitate Nymphium,RU_MISSING,Nínfio substitato,Substitate Nymphium,地之馈赠魔药,,,,,,,
 mat_mm_ephemeral_ether_gas,Ephemeral Ether Gas,Газообразный эфемерный эфир,Gás de éter efêmero,Geçici Eter Gazı,瞬息以太气体,,,,,,,
 desc_mm_ephemeral_ether_gas,The evaporated form of Ephemeral Ether.,Испарённая форма эфемерного эфира.,A forma evaporada do éter efêmero.,Geçici Eterin buharlaşmış hâli.,蒸发形态的瞬息以太。,,,,,,,
 mat_mm_gold_solution,Gold Solution,Раствор золота,Solução dourada,Altın Çözeltisi,黄金溶液,,,,,,,
