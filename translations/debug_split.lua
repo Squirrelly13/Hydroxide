@@ -80,7 +80,7 @@ local function transcribe_line(line)
 
 			local target = translations[column_order[current_column]]
 			local str = line:sub(start_index, i - 1)
-			if str:sub(1, -9):lower() == target then str = "" end
+			if str:sub(1, -9) == target:upper() and str:sub(-9, -1) == "_MISSING" then str = "" end
 
 			if target then target[#target+1] = str end
 
