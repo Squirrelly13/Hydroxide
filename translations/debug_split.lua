@@ -78,9 +78,10 @@ local function transcribe_line(line)
 		elseif char == "," and not in_quotes then
 			if current_column == #column_order then return end
 
-			local target = translations[column_order[current_column]]
+			local lang_key = column_order[current_column]
+			local target = translations[lang_key]
 			local str = line:sub(start_index, i - 1)
-			if str:sub(1, -9):lower() == target then str = "" end
+			if str:sub(1, -9) == lang_key:upper() and str:sub(-9, -1) == "_MISSING" then str = "" end
 
 			if target then target[#target+1] = str end
 
