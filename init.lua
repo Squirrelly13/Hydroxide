@@ -67,6 +67,7 @@ local hooks = {
 	pre_update = {},
 	post_update = {},
 	edit_material = {},
+	magic_numbers_and_seed_initialised = {}
 }
 
 
