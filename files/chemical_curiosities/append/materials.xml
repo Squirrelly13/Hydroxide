@@ -714,8 +714,8 @@
 
   <CellData
 	name="cc_stillium"
-	ui_name="$mat_cc_stillium,[electrum_rewarding]"
-  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
+	ui_name="$mat_cc_stillium"
+  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower],[electrum_rewarding]"
 	burnable="0"
 	density="3.091"
 	cell_type="liquid"
