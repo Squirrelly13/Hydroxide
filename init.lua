@@ -81,12 +81,11 @@ function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where
 	for _, file in ipairs(files) do --add modded materials
 		for xml in nxml.edit_file(file) do
 			for elem in xml:each_child() do
+				if catastrophicMaterials[elem.attr.name] then
+					elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
+					print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+				end
 				for _,func in ipairs(hooks.edit_material) do
-					if catastrophicMaterials[elem.attr.name] then
-						elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
-						print("CC: Added tag [catastrophic] to " .. elem.attr.name)
-					end
-
 					func(elem)
 				end
 			end

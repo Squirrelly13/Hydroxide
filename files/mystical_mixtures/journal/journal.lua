@@ -303,7 +303,6 @@ if(active_entry ~= nil and active_entry_contents ~= nil)then
             GuiColorSetForNextWidget(gui, 0.3, 0.3, 0.3, 1)
             if(parsed_line.color ~= nil)then
                 local r, g, b, a = hex_to_rgba(parsed_line.color)
-                print(tostring(r), tostring(g), tostring(b))
                 GuiColorSetForNextWidget(gui, r, g, b, a)
             end
             GuiText(gui, 0, 0, parsed_line.line)

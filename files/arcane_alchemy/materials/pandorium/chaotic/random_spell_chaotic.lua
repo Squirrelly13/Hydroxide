@@ -39,7 +39,7 @@ local function add_spell(spellType)
 	--spell_formula = spell_formula .. spell_id .. ","
 end
 
-local function add_cpand_modifier()
+local function add_cpand_modifier() --Shelved, bad spell code can actually just cope and seethe about it. Spells relying on mWhoShot should always EntityGetIsAlive(mWhoShot) first.
 	spell_position = spell_position + 1
 
 	local spell = EntityCreateNew()
@@ -59,14 +59,14 @@ for _=1, Random(3, 9) do
 end
 
 if glimmer then add_spell("GLIMMERS") end
-add_cpand_modifier()
+--add_cpand_modifier()
 add_spell("PROJECTILES")
 
 for _=1, Random(1, 10) do
 	add_spell("MODIFIERS")
 end
 if glimmer then add_spell("GLIMMERS") end
-add_cpand_modifier()
+--add_cpand_modifier()
 add_spell("STATIC_PROJECTILES")
 
 
