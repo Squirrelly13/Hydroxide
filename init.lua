@@ -5,7 +5,7 @@ local total_time = 0
 
 local settings = {
 	--debug
-	run_translation_debug = true,
+	run_translation_debug = false,
 
 
 	--branches
