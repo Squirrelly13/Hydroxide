@@ -333,22 +333,22 @@ table.insert( actions, {
 		end,
 	});
 
-	table.insert( actions, {
-		id			= "CC_MAGIC_CIRCLE",
-		name		= "magic circle",
-		origin		= "$cc_branch_name_cc",
-		description	= "spawns a magic circle for testing purposes",
-		sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/spell_icon.png",
-		related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/projectile.xml"},
-		type		= ACTION_TYPE_PROJECTILE,
-		spawn_level					= "",
-		spawn_probability				= "",
-		price = 400,
-		mana = 260,
-		max_uses	= 10,
-		action		= function()
-			add_projectile("mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/projectile.xml")
-			c.fire_rate_wait	= c.fire_rate_wait + 60
-			current_reload_time = current_reload_time + 60
-		end,
-	});
+--table.insert( actions, {
+--	id			= "CC_MAGIC_CIRCLE",
+--	name		= "magic circle",
+--	origin		= "$cc_branch_name_cc",
+--	description	= "spawns a magic circle for testing purposes",
+--	sprite		= "mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/spell_icon.png",
+--	related_projectiles = {"mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/projectile.xml"},
+--	type		= ACTION_TYPE_PROJECTILE,
+--	spawn_level					= "",
+--	spawn_probability				= "",
+--	price = 400,
+--	mana = 260,
+--	max_uses	= 10,
+--	action		= function()
+--		add_projectile("mods/Hydroxide/files/chemical_curiosities/spells/magic_circle/projectile.xml")
+--		c.fire_rate_wait	= c.fire_rate_wait + 60
+--		current_reload_time = current_reload_time + 60
+--	end,
+--});

@@ -1,7 +1,5 @@
 local projectile = GetUpdatedEntityID()
 
-local x, y = EntityGetTransform(projectile)
-
 local valid_whoshot = 0
 local valid_entityThatShot = 0
 

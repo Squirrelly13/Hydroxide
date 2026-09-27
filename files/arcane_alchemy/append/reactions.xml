@@ -198,46 +198,48 @@
 
 	<!-- neutral potion -->
 	<Reaction probability="100"
-	input_cell1="[magic_liquid]"	 input_cell2="lava"
-	output_cell1="aa_potion_gas"	 output_cell2="lava"
-	>
-	</Reaction>
+		input_cell1="[magic_liquid]"	 input_cell2="lava"
+		output_cell1="aa_potion_gas"	 output_cell2="lava"
+	/>
 
 	<Reaction probability="95"
-	input_cell1="aa_potion_gas"	 input_cell2="air"
-	output_cell1="aa_base_potion"	 output_cell2="air"
-	>
-	</Reaction>
+		input_cell1="aa_potion_gas"	 input_cell2="air"
+		output_cell1="aa_base_potion"	 output_cell2="air"
+	/>
 
 	<Reaction probability="76"
-	input_cell1="aa_base_potion"		input_cell2="blood_fungi"
-	output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
-	>
-	</Reaction>
+		input_cell1="aa_base_potion"		input_cell2="blood_fungi"
+		output_cell1="magic_liquid_polymorph"	output_cell2="blood_fungi"
+	/>
 
 	<Reaction probability="15"
-	input_cell1="aa_soot"	 input_cell2="aa_potion_gas"
-	output_cell1="air"	 output_cell2="aa_potion_gas"
+		input_cell1="aa_soot"	 input_cell2="aa_potion_gas"
+		output_cell1="air"	 output_cell2="aa_potion_gas"
 	>
 	</Reaction>
 
 	<Reaction probability="30"
-	input_cell1="moss"	 input_cell2="aa_potion_gas"
-	output_cell1="aa_petrified_moss"	 output_cell2="aa_potion_gas"
+		input_cell1="moss"	 input_cell2="aa_potion_gas"
+		output_cell1="aa_petrified_moss"	 output_cell2="aa_potion_gas"
 	>
 	</Reaction>
 
 	<Reaction probability="60"
-	input_cell1="moss"	 input_cell2="aa_base_potion"
-	output_cell1="aa_petrified_moss"	 output_cell2="aa_base_potion"
+		input_cell1="moss"	 input_cell2="aa_base_potion"
+		output_cell1="aa_petrified_moss"	 output_cell2="aa_base_potion"
 	>
 	</Reaction>
 
 	<Reaction probability="3"
-	input_cell1="aa_base_potion"		input_cell2="[magic_liquid]"
-	output_cell1="[magic_liquid]"	output_cell2="[magic_liquid]"
-	>
-	</Reaction>
+		input_cell1="aa_base_potion"		input_cell2="[magic_liquid]"
+		output_cell1="[magic_liquid]"	output_cell2="[magic_liquid]"
+	/>
+
+	<!--A convenience for alchemy, lava into potion for potion gas potion to create more of other magic liquids-->
+	<Reaction probability="3"
+		input_cell1="aa_potion_gas"		input_cell2="[magic_liquid]"
+		output_cell1="[magic_liquid]"	output_cell2="[magic_liquid]"
+	/>
 
 
 	<!-- magic plastic -->
