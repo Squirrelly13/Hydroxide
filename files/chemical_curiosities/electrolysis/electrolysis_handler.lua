@@ -1,4 +1,4 @@
-dofile("mods/Hydroxide/files/chemical_curiosities/electrolysis/reactions.lua")
+dofile_once("mods/Hydroxide/files/chemical_curiosities/electrolysis/reactions.lua")
 
 function electricity_receiver_switched( is_electrified )
 	-- if pixel is receiving electricity
