@@ -18,6 +18,7 @@ local cc_perks = {
 		end,
 	},
 	{
+		_setting = "Hydroxide.EXPERIMENTAL_FEATURES",
 		id = "CC_CHAOTIC_TRANSFUSION",
 		ui_name = "$perkname_cc_chaotic_transfusion",
 		ui_description = "$perkdesc_cc_chaotic_transfusion",
@@ -46,19 +47,12 @@ local cc_perks = {
 	},
 }
 
-local aa_perks = {
+local aa_perks = {}
 
-}
-
-
-for _, perk in ipairs(CC and cc_perks or {}) do
-	if not perk._disabled then
-		perk_list[#perk_list+1] = perk
-	end
-end
-
-for _, perk in ipairs(AA and aa_perks or {}) do
-	if not perk._disabled then
-		perk_list[#perk_list+1] = perk
+for _,list in ipairs({cc_perks,aa_perks}) do
+	for _,perk in ipairs(list) do
+		if not (perk._disabled or perk._setting and not ModSettingGet(perk._setting)) then
+			perk_list[#perk_list+1] = perk
+		end
 	end
 end
