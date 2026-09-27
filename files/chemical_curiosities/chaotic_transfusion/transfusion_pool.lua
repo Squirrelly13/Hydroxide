@@ -39,7 +39,7 @@ local materials = {
 		weight = 5,
 	},
 	{
-		material = "magic_liquid_hp_regeneration_unstable",
+		material = "magic_liquid_hp_regeneration",
 		weight = .5,
 	},
 	{
@@ -64,7 +64,7 @@ local materials = {
 	},
 	{
 		material = "void_liquid",
-		weight = .1,
+		weight = 1,
 	},
 	{
 		material = "mimic_liquid",
@@ -73,7 +73,7 @@ local materials = {
 
 	{
 		material = "cc_slicing_liquid",
-		weight = 3,
+		weight = 4,
 	},
 	{
 		material = "cc_glittering_liquid",
@@ -81,23 +81,15 @@ local materials = {
 	},
 	{
 		material = "cc_nullium",
-		weight = 4,
+		weight = 3,
 	},
 	{
 		material = "cc_health_tonic",
 		weight = 2,
 	},
 	{
-		material = "cc_grease",
-		weight = 3,
-	},
-	{
 		material = "cc_dormant_crystal_molten",
 		weight = 10,
-	},
-	{
-		material = "cc_antimatter_liquid",
-		weight = 2,
 	},
 	{
 		material = "cc_persistine",
@@ -114,9 +106,9 @@ if GameGetWorldStateEntity() ~= 0 then
 			for _,material in ipairs(t.mats) do
 				materials[#materials+1] = {
 					material = CellFactory_GetName(material),
-					weight = 5
+					weight = 7
 				}
-				print(("Added [%s] ingredient: [%s]"):format(CellFactory_GetName(t.result), CellFactory_GetName(material)))
+				--print(("Added [%s] ingredient: [%s]"):format(CellFactory_GetName(t.result), CellFactory_GetName(material)))
 			end
 		end
 	end
@@ -136,7 +128,7 @@ local AA_materials = {
 	},
 	{
 		material = "aa_icy_inferno",
-		weight = 6,
+		weight = 5,
 	},
 	{
 		material = "aa_pandorium",
@@ -144,7 +136,7 @@ local AA_materials = {
 	},
 	{
 		material = "aa_cloning_solution",
-		weight = 7,
+		weight = 10,
 	},
 }
 
@@ -154,7 +146,7 @@ if AA then
 	end
 end
 
-if true then
+if false then
 	table.sort(materials, function(a, b)
 		return a.weight > b.weight
 	end)
