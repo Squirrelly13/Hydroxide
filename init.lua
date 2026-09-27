@@ -2,29 +2,27 @@ print("////////////// Commencing Hydroxide init //////////////")
 local start_time = GameGetRealWorldTimeSinceStarted()
 local total_time = 0
 
-dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
-dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
-
-
-ModSettingSet("Hydroxide.CC_ENABLED", true)
-ModSettingSet("Hydroxide.AA_ENABLED", true)
-ModSettingSet("Hydroxide.MM_ENABLED", true)
-ModSettingSet("Hydroxide.FF_ENABLED", true)
-ModSettingSet("Hydroxide.TERROR_ENABLED", true)
-
 
 local settings = {
+	--debug
+	run_translation_debug = true,
+
+
 	--branches
 	CC = ModSettingGet("Hydroxide.CC_ENABLED"),
 	AA = ModSettingGet("Hydroxide.AA_ENABLED"),
 	MM = ModSettingGet("Hydroxide.MM_ENABLED"),
 	--FF = ModSettingGet("Hydroxide.FF_ENABLED"), --this shit is not ready, i have like 2 reworks to get through before im ready for this.
 	--Terror = ModSettingGet("Hydroxide.TERROR_ENABLED"),
+	experimental_features = ModSettingGet("Hydroxide.EXPERIMENTAL_FEATURES"),
 
 	--CC
+	oregen = ModSettingGet("Hydroxide.CC_ORES"),
 	polymorph_gui = ModSettingGet("Hydroxide.POLYMORPH_GUI"),
-	run_translation_debug = true
 }
+
+dofile_once("mods/Hydroxide/files/modify_vanilla.lua")
+dofile_once("mods/Hydroxide/lib/Squirreltilities.lua")
 
 
 local catastrophicMaterials = {
@@ -69,7 +67,31 @@ local hooks = {
 	pre_update = {},
 	post_update = {},
 	edit_material = {},
+	magic_numbers_and_seed_initialised = {}
 }
+
+
+function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
+	for _,func in ipairs(hooks.magic_numbers_and_seed_initialised) do
+		func()
+	end
+
+	-- this code adds tags to preexisting materials, its good for compatibility
+	local files = ModMaterialFilesGet()
+	for _, file in ipairs(files) do --add modded materials
+		for xml in nxml.edit_file(file) do
+			for elem in xml:each_child() do
+				if catastrophicMaterials[elem.attr.name] then
+					elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
+					print("CC: Added tag [catastrophic] to " .. elem.attr.name)
+				end
+				for _,func in ipairs(hooks.edit_material) do
+					func(elem)
+				end
+			end
+		end
+	end
+end
 
 local player
 local player_poly_identity
@@ -158,7 +180,7 @@ local check_entities = function()
 		end
 		if player ~= nil then
 			for _,func in ipairs(hooks.player_changed) do
-				func(player_poly_identity)
+				func()
 			end
 		end
 	end
@@ -173,11 +195,6 @@ function OnWorldPreUpdate()
 		func(frame)
 	end
 end
---function OnWorldPostUpdate()
---	for _,func in ipairs(hooks.post_update) do
---		func(frame)
---	end
---end --this does not seem needed yet
 
 
 -----//// TESTING!!!
@@ -191,13 +208,29 @@ end
 
 --		[GLOBAL]
 
+local target = "mods/Hydroxide/translations/standard.csv"
+if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
+	target = "mods/Hydroxide/translations/turkish.csv"
+end
+register_localizations(target)
+
 
 ModLuaFileAppend("data/scripts/items/potion_starting.lua", "mods/Hydroxide/files/lib/potion_start/potion_start.lua")
 ModLuaFileAppend("data/scripts/items/potion.lua", "mods/Hydroxide/files/potion_append.lua")
 ModLuaFileAppend("data/scripts/items/powder_stash.lua", "mods/Hydroxide/files/chemical_curiosities/append/powders.lua") --powder pouches
-ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua") --effects
-ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua") --Fungal shifts
+ModLuaFileAppend("data/scripts/status_effects/status_list.lua", "mods/Hydroxide/files/status_effects.lua")
+ModLuaFileAppend("data/scripts/magic/fungal_shift.lua", "mods/Hydroxide/files/fungal_shift.lua")
+ModLuaFileAppend("data/scripts/perks/perk_list.lua", "mods/Hydroxide/files/perks_append.lua")
+ModMagicNumbersFileAdd("mods/Hydroxide/files/magic_numbers.xml")
 
+
+--More Musical Magic implementation, coded by Y🍵
+if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
+	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
+	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua", data)
+end
+ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
+ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
 
 
 --		[Chemical Curiosities]
@@ -252,9 +285,26 @@ if settings.CC then
 	FileSetBloodMaterial("data/entities/animals/wizard_twitchy.xml", "cc_ectospasm")
 	--todo: add Master of Monochrome
 
+	if settings.experimental_features then
+		hooks.new_eid[#hooks.new_eid+1] = function(entity_id, varcomp_tree)
+			if not GameHasFlagRun("cc_chaotic_transfusion") then return end
+			local x,y = EntityGetTransform(entity_id)
+			local material_options = dofile_once("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua")
+
+			if not EntityHasTag(entity_id, "enemy") then return end
+			local dmc = EntityGetFirstComponent(entity_id, "DamageModelComponent")
+			if not dmc then return end
+			SetRandomSeed(x+434,y-1415)
+			local option = RandomFromTable(material_options)
+			ComponentSetValue2(dmc, "blood_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_material", option.material)
+			ComponentSetValue2(dmc, "blood_spray_create_some_cosmetic", false)
+		end
+	end
+
 	if settings.polymorph_gui then
-		hooks.player_changed[#hooks.player_changed+1] = function(poly_data)
-			if not poly_data then return end
+		hooks.player_changed[#hooks.player_changed+1] = function()
+			if not player_poly_identity then return end
 
 			if not EntityGetFirstComponentIncludingDisabled(player, "InventoryGuiComponent") then
 				EntityAddComponent2(player, "InventoryGuiComponent")
@@ -281,6 +331,10 @@ if settings.CC then
 				},
 			}
 
+			if MatchDateLocal({month = 3, day = 31}) then
+				polymorphs.POLYMORPH.desc = "$status_desc_cc_polymorph_trans_day"
+			end
+
 			local rare_polymorph = {
 				icon = "mods/Hydroxide/files/chemical_curiosities/polymorph_gui/rare_chaotic_polymorphed.png",
 				name = "$status_cc_rare_polymorph",
@@ -288,10 +342,10 @@ if settings.CC then
 			}
 
 			for _,rare_poly in pairs(PolymorphTableGet(true)) do
-				if poly_data.path == rare_poly then
+				if player_poly_identity.path == rare_poly then
 					local is_rare = true
 					for _,common_poly in pairs(PolymorphTableGet(false)) do
-						if poly_data.path == common_poly then
+						if player_poly_identity.path == common_poly then
 							is_rare = false
 							break
 						end
@@ -318,14 +372,33 @@ if settings.CC then
 		end
 	end
 
-	hooks.player_spawned[#hooks.player_spawned+1] = function(first_time)
-		if not first_time then return end
-		EntitySetDamageFromMaterial(player, "cc_hydroxide", 0.005)
-		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
-		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
-		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/userk.xml", 11605, 20501) --me too!
+	
+
+	if settings.oregen then
+		hooks.magic_numbers_and_seed_initialised[#hooks.magic_numbers_and_seed_initialised+1] = function()
+			if GameHasFlagRun("Squirrelly_Ore_generated") then return end
+			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
+			GameAddFlagRun("Squirrelly_Ore_generated")
+		end
 	end
 
+	local rock_materials = {
+		--vanilla:
+		rock_static_glow = true,
+		rock_static_purple = true,
+		rock_static_noedge = true,
+		rock_static_trip_secret = true,
+		rock_static_trip_secret2 = true,
+		rock_static_intro = true,
+		rock_static_intro_breakable = true,
+		rock_static_grey = true,
+		rock_static_wet = true,
+		snowrock_static = true,
+		rock_box2d_nohit_hard = true,
+		rock_box2d_nohit = true,
+		rock_box2d = true,
+		lavarock_static = true,
+	}
 	hooks.edit_material[#hooks.edit_material+1] = function(elem)
 		local rock_tags = "[static],[corrodible],[meltable_to_lava],[alchemy],[solid],[earth]" --default vanilla rock tags
 
@@ -333,29 +406,20 @@ if settings.CC then
 			rock_tags = elem.attr.tags
 			elem.attr.tags = elem.attr.tags .. ",[moss_devour]"
 		else
-			local rock_materials = {
-				--vanilla:
-				rock_static_glow = true,
-				rock_static_purple = true,
-				rock_static_noedge = true,
-				rock_static_trip_secret = true,
-				rock_static_trip_secret2 = true,
-				rock_static_intro = true,
-				rock_static_intro_breakable = true,
-				rock_static_grey = true,
-				rock_static_wet = true,
-				snowrock_static = true,
-				rock_box2d_nohit_hard = true,
-				rock_box2d_nohit = true,
-				rock_box2d = true,
-				lavarock_static = true,
-			}
 			if settings.CC and rock_materials[elem.attr.name] and not (elem.attr.tags or ""):find("[moss_devour]") then
 				elem.attr.tags = (elem.attr.tags or "") .. ",[moss_devour]"
 			elseif elem.attr.name == "coal_static" then --do this cuz coal_static inherits tags from rock_static, and i dont want coal_static to have moss_devour
 				elem.attr.tags = rock_tags
 			end
 		end
+	end
+
+	hooks.player_spawned[#hooks.player_spawned+1] = function(first_time)
+		if not first_time then return end
+		EntitySetDamageFromMaterial(player, "cc_hydroxide", 0.005)
+		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/music_shrine/music_shrine.xml", 6200, 5500)  --load the musical shrine
+		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/signature.xml", -1950, 250)  --load my cute stupid lil signature :)
+		EntityLoad("mods/Hydroxide/files/chemical_curiosities/biomes/other/userk.xml", 11605, 20501) --me too!
 	end
 end
 
@@ -425,55 +489,6 @@ end
 if settings.Terror then
 	ModMaterialsFileAdd("mods/Hydroxide/files/terror/materials.xml")
 end
-
-
-
-
---- bloomium
---ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml")
---ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml")
-
-
-	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
-	-- noooo bloomium ignore-infect tags my beloved :devastated: (might reuse these for a bloomium revamp standalone or smth) -UserK
-
-	--ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
-	--[[
-	ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml")
-	ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_reactions.xml")
-
-		-- this code adds tags to preexisting materials, its good for compatibility--
-
-
-	local bloomableMaterials = {"rock_static","rock_hard","rock_static_fungal","rock_hard_border","rock_vault","coal_static","rock_static_grey","rock_static_wet","lavarock_static","templebrickdark_static","templebrick_moss_static","the_end","steel_static","steelmoss_static","steel_rusted_no_holes","steel_grey_static","steelpipe_static","steel_static_strong","rock_static_glow","snow_static","rock_static_intro_breakable","waterrock","snowrock_static","concrete_static","wood_static","cheese_static","wood_static_wet","root_growth","corruption_static","mud","blood_fading_slow","blood_fungi","blood_worm","porridge","creepy_liquid","cement","concrete_sand","sand_surface","sand_petrify","bone","soil","soil_lush","soil_lush_dark","soil_dead","soil_dark","sandstone","sandstone_surface","fungisoil","vomit","endslime","endslime_blood","explosion_dirt","vine","root","snow","snow_sticky","rotten_meat","meat_slime_sand","meat_slime_green","meat_slime_orange","rotten_meat_radioactive","meat_worm","meat_helples","meat_trippy","meat_cursed","meat_cursed_dry","meat_slime_cursed","meat_teleport","meat_fast","meat_polymorph","meat_polymorph_protection","meat_confusion","sand_herb","silver","grass","grass_dry","fungi","grass_dark","fungi_creeping","spore","moss","moss_rust","plant_materialplant_material_red","ceiling_plant_material","mushroom_seed","mushroom","plant_seed","mushroom_giant_red","mushroom_giant_blue","glowshroom","bush_seed","wood_player","wood_player_b2","wood_prop_durable","nest_box2d","nest_firebug_box2d","cocoon_box2d","rock_loose","brick","concrete_collapsed","meteorite","steel","steel_rust","metal_rust_rust","metal_rust_barrel_rust","aluminium","aluminium_robot","metal_prop","metal_prop_low_restitution","metal_prop_loose","metal","metal_hard","templebrick_box2d_edgetiles","rock_box2d_hard","rock_box2d","metal_wire_nohit","metal_rust","metal_rust_barrel","meat","meat_fruit","meat_pumpkin","meat_warm","meat_hot","meat_done","meat_burned","meat_slime"}
-
-	--local ignoreBloomableMaterials = {"water_static","endslime_static","slime_static","templerock_static","templebrick_static","templebrick_static_broken","templebrick_static_soft","templebrick_noedge_static","templerock_soft","templebrick_thick_static","templebrick_thick_static_noedge","templeslab_static","templeslab_crumbling_static","templebrick_golden_static","glowstone","glowstone_altar","glowstone_altar_hdr","glowstone_potion","snow_static","ice_static","ice_blood_static","ice_slime_static","ice_acid_static","gold_static","gold_static_dark","smoke","smoke_magic","smoke_explosion","steam","acid_gas","acid_gas_static","smoke_static","cloud","cloud_lighter","fungal_gas","poo_gas","magic_gas_hp_regeneration","rainbow_gas","water","water_fading","water_salt","water_temp","water_ice","water_swamp","oil","liquid_fire","liquid_fire_weak","alcohol","sima","alcohol_gas","midas_precursor","midas","magic_liquid","material_confusion","material_rainbow","magic_liquid_movement_faster","magic_liquid_faster_levitation","magic_liquid_faster_levitation_and_movement","magic_liquid_worm_attractor","magic_liquid_teleportation","magic_liquid_hp_regeneration","magic_liquid_hp_regeneration_unstable","magic_liquid_random_polymorph","magic_liquid_unstable_polymorph","magic_liquid_berserk","magic_liquid_charm","magic_liquid_invisibility","swamp","mud","blood","blood_fading","blood_fading_slow","blood_fungi","blood_worm","porridge","gold_molten","steel_static_molten","steelmoss_slanted_molten","steelmoss_static_molten","steelsmoke_static_molten","metal_sand_molten","metal_molten","metal_rust_molten","metal_nohit_molten","aluminium_molten","aluminium_robot_molten","metal_prop_molten","steel_rust_molten","aluminium_oxide_molten","wax_molten","silver_molten","copper_molten","brass_molten","glass_molten","glass_broken_molten","steel_molten","creepy_liquid","sand_blue","sand_surface","bone","soil_lush","honey","glue","slime","slush","slime_green","slime_yellow","pea_soup","vomit","endslime","endslime_blood","rotten_meat","meat_slime_sand","meat_slime_green","meat_slime_orange","rotten_meat_radioactive","meat_worm","meat_helpless","meat_trippy","meat_cursed","meat_cursed_dry","meat_slime_cursed","meat_teleport","meat_fast","meat_polymorph","meat_polymorph_protection","meat_confusion","ice","sand_herb","wax","gold","silver","steel_sand","metal_sand","copper","brass","coal","salt","sodium","gunpowder","gunpowder_explosive","plastic_red","plastic_red_molten","plastic_molten","plastic_prop_molten","grass","grass_dry","fungi","fungi_green","grass_dark","fungi_creeping","spore","moss","gunpowder_tnt","gunpowder_unstable","gunpowder_unstable_big","moss_rust","plant_material","plant_material_red","ceiling_plant_material","mushroom_seed","mushroom","plant_seed","mushroom_giant_red","mushroom_giant_blue","glowshroom","bush_seed","wood_player","wood_player_b2","wood_prop_durable","nest_box2d","nest_firebug_box2d","cocoon_box2d","rock_loose","ice_ceiling","brick","concrete_collapsed","meteorite","plastic","plastic_prop","aluminium","aluminium_robot","metal_prop","metal_prop_low_restitution","metal_prop_loose","metal","metal_hard","templebrick_box2d_edgetiles","rock_box2d_hard","rock_box2d","item_box2d_glass","metal_rust","metal_rust_barrel","meat","meat_fruit","meat_pumpkin","meat_warm","meat_hot","meat_done","meat_burned","meat_slime","glass","glass_broken","blood_thick"}
-
-	local poisonBloomMaterials = {"wizardstone","templebrick_diamond_static","poison_gas","juhannussima","material_darkness","poison","cursed_liquid","diamond","urine"}
-
-	for elem in xml:each_child() do
-
-		print(elem)
-		if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
-
-
-			elem.attr.tags = elem.attr.tags .. ",[bloomable]"
-
-
-
-					elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
-						elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-					elseif (elem.attr.tags ~= nil) then
-
-						if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
-							elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-							--fuck this. Too annoying
-
-		end
-	end
-]]			--experimental bloomium stuff
 
 
 
@@ -571,12 +586,6 @@ if ModIsEnabled("Apotheosis") then
 				:gsub("\"oil\"", "\"oil\", \"aa_oil_splitting\", \"aa_light_oil\", \"aa_heavy_oil\""))
 		end
 	end
-	if settings.CC then
-		for _, filepath in ipairs({"mods/Apotheosis/files/scripts/status_effects/hex_oil_start.lua", "mods/Apotheosis/files/scripts/status_effects/hex_oil_end.lua"}) do
-			ModTextFileSetContent(filepath, ModTextFileGetContent(filepath)
-				:gsub("\"oil\"", "\"oil\", \"cc_grease\""))
-		end
-	end
 end
 
 
@@ -590,177 +599,9 @@ end
 
 
 
-
---this function is used to add random recipes
-function add_random_recipe(file_to_insert, input1, input2, output1, output2, probability, blob_radius)
-	local a1, a2, a3, a4, a5, a6 = GameGetDateAndTimeUTC()
-
-	SetRandomSeed(a1*a2*a3*a4*a5*a6, a1*a2*a3*a4*a5*a6)
-
-	local xml2lua = dofile("mods/Hydroxide/lib/xml2lua/xml2lua.lua")
-	local handler = dofile("mods/Hydroxide/lib/xml2lua/xmlhandler/tree.lua")
-
-	local parser = xml2lua.parser(handler)
-
-	local materials = ModTextFileGetContent(file_to_insert)
-
-	parser:parse(materials)
-
-
-
-
-	local mat1num = Random(0, #input1)
-
-	--[[local has_key = table_get_key(input2, input1[mat1num])
-	if(has_key ~= nil)then
-		input2[has_key] = nil
-	end]]
-
-	for k,v in pairs(input2) do
-		if v == input1[mat1num] then
-			table.remove(input2, k)
-		end
-	end
-
-	local mat2num = Random(0, #input2)
-
-	table.insert(handler.root.Materials.Reaction, { _attr = {
-		probability=tostring(probability),
-		input_cell1=input1[mat1num],
-		input_cell2=input2[mat2num],
-		output_cell1=output1,
-		output_cell2=output2,
-		blob_radius1=tostring(blob_radius),
-		blob_radius2=tostring(blob_radius)
-	}})
-
-	ModTextFileSetContent(file_to_insert, xml2lua.toXml(handler.root, "Materials", 0))
-
-	return input1[mat1num], input2[mat1num], output1, output2
-end
-
-local target = "mods/Hydroxide/translations/standard.csv"
-if GameTextGetTranslatedOrNot("$current_language") == "Türkçe" then
-	target = "mods/Hydroxide/translations/turkish.csv"
-end
-register_localizations(target)
-
-
-
-
--- Magic numbers, using this to increase the max materials the game can handle.
-ModMagicNumbersFileAdd("mods/Hydroxide/files/magic_numbers.xml")
-
-
-
---ModLuaFileAppend("data/scripts/gun/gun_actions.lua", "mods/Hydroxide/files/scripts/append/append_actions.lua") -- new spells (deprecated)
-  --new status effects
-
-
---appends
-
-
---More Musical Magic implementation, coded by Y🍵
-if ModTextFileGetContent("data/moremusicalmagic/musicmagic.lua") == nil then
-	local data = ModTextFileGetContent("data/moremusicalmagic/compatibility/musicmagic.lua")
-	ModTextFileSetContent("data/moremusicalmagic/musicmagic.lua", data)
-end
-ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_default.lua")
-ModLuaFileAppend("data/moremusicalmagic/musicmagic.lua", "data/moremusicalmagic/songs_chemical.lua")
-
-
-function OnMagicNumbersAndWorldSeedInitialized() -- this is the last point where the Mod* API is available. after this materials.xml will be loaded.
-	-- this code adds tags to preexisting materials, its good for compatibility
-	local files = ModMaterialFilesGet()
-	for _, file in ipairs(files) do --add modded materials
-		for xml in nxml.edit_file(file) do
-			for elem in xml:each_child() do
-				for _,func in ipairs(hooks.edit_material) do
-					if catastrophicMaterials[elem.attr.name] then
-						elem.attr.tags = elem.attr.tags .. ",[catastrophic]"
-						print("CC: Added tag [catastrophic] to " .. elem.attr.name)
-					end
-
-					func(elem)
-				end
-			end
-		end
-	end
-
-
-
-
-	--local x = ProceduralRandom(0,0)
-	--print("===================================== random " .. tostring(x))
-
-	if ModSettingGet("Hydroxide.CC_ORES") then
-
-		if GameHasFlagRun("Squirrelly_Ore_generated") == false then
-			dofile_once("mods/Hydroxide/files/chemical_curiosities/ore_gen/inject_ores.lua")
-			print("Chemical Curiosities oreGen complete")
-			GameAddFlagRun("Squirrelly_Ore_generated")
-		end
-
-	end
-end
-
 OnMagicNumbersAndWorldSeedInitialized = make_timed(OnMagicNumbersAndWorldSeedInitialized, "Chemical Curiosities OnMagicNumbersAndWorldSeedInitialized")
 total_time = total_time + GameGetRealWorldTimeSinceStarted() - start_time
 
 print("Chemical Curiosities main init took " .. GameGetRealWorldTimeSinceStarted() - start_time .. " with the following branches: CC_" .. tostring(CC) .. ", AA_"  .. tostring(AA) .. ", MM_"  .. tostring(MM) .. ", FF_"  .. tostring(FF) .. ", Terror_" .. tostring(Terror))
 
 print("////////////// Hydroxide mod init done! //////////////") -- why so many slashes, pleaseeee
-
-
-
-
------ CODE GRAVEYARD -----
-
-
-
---- bloomium
---ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_materials.xml")
---ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/Bloomium/bloom_reactions.xml")
-
-
-	-- Bloomium stuff from userk, sorry I made it obsolete ;-;
-	-- noooo bloomium ignore-infect tags my beloved :devastated: (might reuse these for a bloomium revamp standalone or smth) -UserK
-
-	--ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOM_OLD.xml")
-	--[[
-	ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_materials.xml")
-	ModMaterialsFileAdd("mods/Hydroxide/files/arcane_alchemy/materials/BLOOMIUM/bloom_reactions.xml")
-
-		-- this code adds tags to preexisting materials, its good for compatibility--
-
-
-	local bloomableMaterials = {"rock_static","rock_hard","rock_static_fungal","rock_hard_border","rock_vault","coal_static","rock_static_grey","rock_static_wet","lavarock_static","templebrickdark_static","templebrick_moss_static","the_end","steel_static","steelmoss_static","steel_rusted_no_holes","steel_grey_static","steelpipe_static","steel_static_strong","rock_static_glow","snow_static","rock_static_intro_breakable","waterrock","snowrock_static","concrete_static","wood_static","cheese_static","wood_static_wet","root_growth","corruption_static","mud","blood_fading_slow","blood_fungi","blood_worm","porridge","creepy_liquid","cement","concrete_sand","sand_surface","sand_petrify","bone","soil","soil_lush","soil_lush_dark","soil_dead","soil_dark","sandstone","sandstone_surface","fungisoil","vomit","endslime","endslime_blood","explosion_dirt","vine","root","snow","snow_sticky","rotten_meat","meat_slime_sand","meat_slime_green","meat_slime_orange","rotten_meat_radioactive","meat_worm","meat_helples","meat_trippy","meat_cursed","meat_cursed_dry","meat_slime_cursed","meat_teleport","meat_fast","meat_polymorph","meat_polymorph_protection","meat_confusion","sand_herb","silver","grass","grass_dry","fungi","grass_dark","fungi_creeping","spore","moss","moss_rust","plant_materialplant_material_red","ceiling_plant_material","mushroom_seed","mushroom","plant_seed","mushroom_giant_red","mushroom_giant_blue","glowshroom","bush_seed","wood_player","wood_player_b2","wood_prop_durable","nest_box2d","nest_firebug_box2d","cocoon_box2d","rock_loose","brick","concrete_collapsed","meteorite","steel","steel_rust","metal_rust_rust","metal_rust_barrel_rust","aluminium","aluminium_robot","metal_prop","metal_prop_low_restitution","metal_prop_loose","metal","metal_hard","templebrick_box2d_edgetiles","rock_box2d_hard","rock_box2d","metal_wire_nohit","metal_rust","metal_rust_barrel","meat","meat_fruit","meat_pumpkin","meat_warm","meat_hot","meat_done","meat_burned","meat_slime"}
-
-	--local ignoreBloomableMaterials = {"water_static","endslime_static","slime_static","templerock_static","templebrick_static","templebrick_static_broken","templebrick_static_soft","templebrick_noedge_static","templerock_soft","templebrick_thick_static","templebrick_thick_static_noedge","templeslab_static","templeslab_crumbling_static","templebrick_golden_static","glowstone","glowstone_altar","glowstone_altar_hdr","glowstone_potion","snow_static","ice_static","ice_blood_static","ice_slime_static","ice_acid_static","gold_static","gold_static_dark","smoke","smoke_magic","smoke_explosion","steam","acid_gas","acid_gas_static","smoke_static","cloud","cloud_lighter","fungal_gas","poo_gas","magic_gas_hp_regeneration","rainbow_gas","water","water_fading","water_salt","water_temp","water_ice","water_swamp","oil","liquid_fire","liquid_fire_weak","alcohol","sima","alcohol_gas","midas_precursor","midas","magic_liquid","material_confusion","material_rainbow","magic_liquid_movement_faster","magic_liquid_faster_levitation","magic_liquid_faster_levitation_and_movement","magic_liquid_worm_attractor","magic_liquid_teleportation","magic_liquid_hp_regeneration","magic_liquid_hp_regeneration_unstable","magic_liquid_random_polymorph","magic_liquid_unstable_polymorph","magic_liquid_berserk","magic_liquid_charm","magic_liquid_invisibility","swamp","mud","blood","blood_fading","blood_fading_slow","blood_fungi","blood_worm","porridge","gold_molten","steel_static_molten","steelmoss_slanted_molten","steelmoss_static_molten","steelsmoke_static_molten","metal_sand_molten","metal_molten","metal_rust_molten","metal_nohit_molten","aluminium_molten","aluminium_robot_molten","metal_prop_molten","steel_rust_molten","aluminium_oxide_molten","wax_molten","silver_molten","copper_molten","brass_molten","glass_molten","glass_broken_molten","steel_molten","creepy_liquid","sand_blue","sand_surface","bone","soil_lush","honey","glue","slime","slush","slime_green","slime_yellow","pea_soup","vomit","endslime","endslime_blood","rotten_meat","meat_slime_sand","meat_slime_green","meat_slime_orange","rotten_meat_radioactive","meat_worm","meat_helpless","meat_trippy","meat_cursed","meat_cursed_dry","meat_slime_cursed","meat_teleport","meat_fast","meat_polymorph","meat_polymorph_protection","meat_confusion","ice","sand_herb","wax","gold","silver","steel_sand","metal_sand","copper","brass","coal","salt","sodium","gunpowder","gunpowder_explosive","plastic_red","plastic_red_molten","plastic_molten","plastic_prop_molten","grass","grass_dry","fungi","fungi_green","grass_dark","fungi_creeping","spore","moss","gunpowder_tnt","gunpowder_unstable","gunpowder_unstable_big","moss_rust","plant_material","plant_material_red","ceiling_plant_material","mushroom_seed","mushroom","plant_seed","mushroom_giant_red","mushroom_giant_blue","glowshroom","bush_seed","wood_player","wood_player_b2","wood_prop_durable","nest_box2d","nest_firebug_box2d","cocoon_box2d","rock_loose","ice_ceiling","brick","concrete_collapsed","meteorite","plastic","plastic_prop","aluminium","aluminium_robot","metal_prop","metal_prop_low_restitution","metal_prop_loose","metal","metal_hard","templebrick_box2d_edgetiles","rock_box2d_hard","rock_box2d","item_box2d_glass","metal_rust","metal_rust_barrel","meat","meat_fruit","meat_pumpkin","meat_warm","meat_hot","meat_done","meat_burned","meat_slime","glass","glass_broken","blood_thick"}
-
-	local poisonBloomMaterials = {"wizardstone","templebrick_diamond_static","poison_gas","juhannussima","material_darkness","poison","cursed_liquid","diamond","urine"}
-
-	for elem in xml:each_child() do
-
-		print(elem)
-		if elem.attr.name == "rock_static_glow" or elem.attr.name == "rock_static_purple" or elem.attr.name == "rock_static_noedge" or elem.attr.name == "rock_static_trip_secret" or elem.attr.name == "rock_static_trip_secret2" or elem.attr.name == "rock_static_intro" or elem.attr.name == "rock_static_intro_breakable" then
-
-
-			elem.attr.tags = elem.attr.tags .. ",[bloomable]"
-
-
-
-					elseif elem.attr.name == "rotten_meat" or elem.attr.name == "meat" or elem.attr.name == "meat_slime_sand" or elem.attr.name == "meat_slime" or elem.attr.name == "rotten_meat_radioactive" or elem.attr.name == "meat_worm" or elem.attr.name == "meat_helpless" or elem.attr.name == "meat_trippy" or elem.attr.name == "meat_frog" or elem.attr.name == "meat_cursed" or elem.attr.name == "meat_cursed_dry" or elem.attr.name == "meat_slime_cursed" or elem.attr.name == "meat_teleport" or elem.attr.name == "meat_polymorph" or elem.attr.name == "meat_polymorph_protection" or elem.attr.name == "meat_confusion" or elem.attr.name == "wood_player" or elem.attr.name == "wood_player_b2" or elem.attr.name == "wood" or elem.attr.name == "cactus" or elem.attr.name == "grass_loose" or elem.attr.name == "wood_prop" or elem.attr.name == "wood_prop_durable" or elem.attr.name == "nest_box2d" or elem.attr.name == "nest_firebug_box2d" or elem.attr.name == "cocoon_box2d" or elem.attr.name == "wood_loose" or elem.attr.name == "sand_static_rainforest" or elem.attr.name == "soil_lush" then
-						elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-					elseif (elem.attr.tags ~= nil) then
-
-						if array_has(elem.attr.tags, "[plant]") or array_has(elem.attr.tags, "[fungus]") or array_has(elem.attr.tags, "[plant]") then
-							elem.attr.tags = elem.attr.tags .. ",[organic]"
-
-							--fuck this. Too annoying
-
-		end
-	end
-]]			--experimental bloomium stuff
-

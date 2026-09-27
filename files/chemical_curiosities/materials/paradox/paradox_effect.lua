@@ -58,7 +58,7 @@ if(root == entity_id)then
     return
 end
 
-local percentage = GetIngestionPercentage(root, "CC_PARADOX")
+local percentage = GetIngestionSeconds(root, "CC_PARADOX")
 ticks = tonumber(GlobalsGetValue("paradox_ticks", "0"))
 
 

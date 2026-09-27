@@ -9,7 +9,7 @@ end
 
 local function AddTable2(tableto, tablefrom)
 	for k,v in pairs(tablefrom) do
-		tableto[#tableto+1] = { probability = v, perk = k}
+		tableto[#tableto+1] = { weight = v, perk = k}
 	end
 end
 

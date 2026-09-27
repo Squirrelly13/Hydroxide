@@ -12,6 +12,11 @@ dofile("data/scripts/lib/mod_settings.lua") -- see this file for documentation o
 -- until the player starts a new game.
 -- ModSettingSetNextValue() will set the buffered value, that will later become visible via ModSettingGet(), unless the setting scope is MOD_SETTING_SCOPE_RUNTIME.
 
+local experimental_features = "\n- "..table.concat({
+	"Perk: Chaotic Transfusion"
+}, "\n- ")
+
+
 function mod_setting_bool_custom( mod_id, gui, in_main_menu, im_id, setting )
 	local value = ModSettingGetNextValue( mod_setting_get_id(mod_id,setting) )
 	local text = setting.ui_name .. " - " .. GameTextGet( value and "$option_on" or "$option_off" )
@@ -53,6 +58,14 @@ mod_settings =
 				value_max = 200,
 				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
 				scope = MOD_SETTING_SCOPE_RUNTIME,
+			},
+			{
+				id = "EXPERIMENTAL_FEATURES",
+				ui_name = "Experimental Features",
+				ui_description = "Toggles features that are more experimental"..experimental_features,
+				value_default = false,
+				--value_display_multiplier = 1, --honestly leaving this here to remind myself this part can exist and i can use it elsewhere
+				scope = MOD_SETTING_SCOPE_NEW_GAME,
 			},
 		},
 	},

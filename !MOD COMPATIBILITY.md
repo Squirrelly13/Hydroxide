@@ -2,14 +2,13 @@ There are a few places we support compatibility!!
 also PLEASE let me know via DMing me on discord @UserK or in *some* way if you add compatibility, as things are subject to change and I would like it if I could warn you in advance before changing any of this in some way (eg if a filepath or material name is changed, or the entire compatibility method is reworked)
 
 # VIALS
-append [mods/Hydroxide/files/arcane_alchemy/items/vials/vial_populate.lua] with a script that add your material to the global table `VialMaterials`
+append `mods/Hydroxide/files/arcane_alchemy/items/vials/vial_populate.lua` with a script that add your material to the global table `VialMaterials`
 like so:
 ```lua
 table.insert(VialMaterials, {
 	material = "supercool_modded_material",
 	probability = .8 --we support decimal values for weight!
-	amount = 200 --optional value, 200 is the default (this is unused in vanilla but is also on potions, we may use this value for something in the future)
-	func = function(self, entityid, data)
+	func = function(self, entityid, data) --optional function in case you want to do some funky stuff (don't include if you don't need it)
 		--self is passed, so we can modify the outcome like so:
 		local materials = {"water", "slime", "slime_2"}
 		self.material = materials[Random(1,#materials)]
@@ -64,7 +63,7 @@ ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/materials/magic_liqu
 --your append.lua:
 NullShift_materials.my_primary_material = {
 	probability = 0.05, --default 1.0
-	condition = function(self, data) --optional (data provides, shifter entity and position (CAN BE NIL!!))
+	condition = function(self, data) --optional (data provides shifter entity and position (THESE CAN BE NIL!!))
 		if shifter and BiomeMapGetName(data.x, data.y) == "waterworld" then
 			self.probability = 1.2
 			table.remove(self.variants, 1) --remove "my_primary_material_dry" from variants
@@ -78,7 +77,7 @@ NullShift_materials.my_primary_material = {
 	}
 }
 ```
-Null Shifts also have a 25% chance to pull from held material, add the tag `CC_NULL_SHIFT_IGNORE` if you would like your material to not be possible to Null Shift in this manner
+Null Shifts also have a 25% chance to pull from held material, add the tag `CC_NULL_SHIFT_IGNORE` if you would like your material to not be possible to Null Shift in this manner.
 
 You can also directly append into `/null_shift.lua`'s `NullShiftData` global to alter global information directly or add custom functions under `NullShiftData.custom_functions`!
 ```lua
@@ -91,8 +90,7 @@ NullShiftData.custom_functions[#NullShiftData.custom_functions+1] = function(shi
 	local tx = GlobalsGetValue("my_secret_pos.x")
 	local ty = GlobalsGetValue("my_secret_pos.y")
 	if (tx > (x - 100) and tx < (x + 100)) and (ty > (y - 100) and ty < (y + 100)) then --basic 200 pixel bounding box check for of my_secret_pos
-		GamePrintImportant("gotcha!", "player nullified :)")
-		EntityKill(shifter)
+		GamePrintImportant("gotcha!", "player nullified :)") EntityKill(shifter) --silly code you want to run
 		return true --returning true will cancel the null shift and not change any materials
 	end
 end

@@ -15,6 +15,17 @@ function stringsplit(inputstr, sep)
 end
 
 
+
+function MatchDateLocal(check_date)
+	local current = {}
+	current.year, current.month, current.day, current.hour, current.minute, current.second, current.jussi, current.mammi = GameGetDateAndTimeLocal()
+	for unit,value in pairs(check_date) do
+		if current[unit] ~= value then return false end
+	end
+	return true
+end
+
+
 ---If `material` parameter is passed, will return the amount of damage taken from that material, or nil if none. Otherwise, returns a table of material damage indexed by material name.
 ---@param entity entity_id
 ---@param material string
@@ -113,7 +124,7 @@ end
 
 
 ---@class (exact) Weighted
----@field probability number
+---@field weight number
 
 ---@class (exact) Seed
 ---@field [1] number
@@ -122,18 +133,18 @@ end
 ---@generic T : Weighted
 ---@param t T[]
 ---@return T
----Function for picking a random table entry on `probability` as weight
+---Function for picking a random table entry on `weight` as weight
 function RandomFromTable(t)
 	local total_weight = 0
 	for _, entry in ipairs(t) do
-		total_weight = total_weight + entry.probability
+		total_weight = total_weight + entry.weight
 	end
 
 	local rnd = Randomf(0, total_weight)
 	for _, entry in ipairs(t) do
-		if rnd <= entry.probability then
+		if rnd <= entry.weight then
 			return entry
-		else rnd = rnd - entry.probability end
+		else rnd = rnd - entry.weight end
 	end
 	return t[#t]
 end
@@ -159,18 +170,18 @@ end
 ---@param t T[]
 ---@param seed Seed
 ---@return T
----Function for picking a procedurally random table entry on `probability` as weight based on `seed`
+---Function for picking a procedurally random table entry on `weight` as weight based on `seed`
 function ProceduralRandomFromTable(t, seed)
     local total_weight = 0
     for _, entry in ipairs(t) do
-        total_weight = total_weight + entry.probability
+        total_weight = total_weight + entry.weight
     end
 
     local rnd = ProceduralRandomf(seed[1], seed[2], 0, total_weight)
     for _, entry in ipairs(t) do
-        if rnd <= entry.probability then
+        if rnd <= entry.weight then
             return entry
-        else rnd = rnd - entry.probability end
+        else rnd = rnd - entry.weight end
     end
     return t[#t] --Randomf has a miniscule chance to overflow
 end

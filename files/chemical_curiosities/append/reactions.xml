@@ -1,5 +1,20 @@
 <Materials>
 
+	<!-- Dummy Air Material -->
+
+	<Reaction probability="100"
+		input_cell1="cc_air"	input_cell2="[*]"
+		output_cell1="air"		output_cell2="[*]"
+		fast_reaction="1"
+	/>
+
+	<Reaction probability="100"
+		input_cell1="cc_air"	input_cell2="cc_air"
+		output_cell1="air"		output_cell2="air"
+		fast_reaction="1"
+	/>
+
+
 	<!-- metals -->
 
 	<Reaction probability="50"
@@ -1120,23 +1135,10 @@
 	</Reaction><!-- burning -->
 
 
+	<!-- Warp & Paradox Powder -->
 
-	<!-- moss grows a tiny bit more often -->
-	<Reaction probability="2"
-		input_cell1="rock_static"		input_cell2="air"
-		output_cell1="rock_static"		output_cell2="moss"
-	>
-	</Reaction>
-
-	<Reaction probability="100"
-		input_cell1="cc_air"	input_cell2="[*]"
-		output_cell1="air"		output_cell2="[*]"
-		fast_reaction="1"
-	/>
-
-	<Reaction probability="100"
-		input_cell1="cc_air"	input_cell2="cc_air"
-		output_cell1="air"		output_cell2="air"
-		fast_reaction="1"
+	<Reaction
+		input_cell1="cc_warp_powder"	output_cell1="material_darkness"
+		input_cell2="cc_paradox_powder"	output_cell2="material_darkness"
 	/>
 </Materials>

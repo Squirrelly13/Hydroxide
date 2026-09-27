@@ -1254,64 +1254,61 @@
 <!-- todo: invent a material called "Growth" so I don't look like an idiot in the materials spreadsheet-->
 
 
-<CellData
-	name="aa_strange_matter"
-	ui_name="$mat_aa_strange_matter"
-	  tags="[magic_liquid],[alchemy],[liquid]"
-	burnable="1"
-	density="1"
-	cell_type="gas"
-	wang_color="7fbdab8e"
-	lifetime="200"
-	generates_smoke="0"
-	liquid_gravity="0.5"
-	liquid_sand="0"
-	on_fire="1"
-	fire_hp="100000"
-	requires_oxygen="1"
-	temperature_of_fire="140"
-	autoignition_temperature="1"
-	gfx_glow="200" >
-
-	<ExplosionConfig
-		damage="0"
-		ray_energy="400000"
-		explosion_radius="1000000"
-		cell_explosion_damage_required="1"
-		cell_explosion_radius_min="1000"
-		hole_destroy_liquid="1"
-		explosion_sprite="data/particles/explosion_012.xml"
-		spark_material="void_liquid"
-		material_sparks_real="1"
-		cell_explosion_power="100000"
-		cell_explosion_power_ragdoll_coeff="0.75"
-		cell_explosion_probability="100"
-		cell_explosion_velocity_min="0"
-		create_cell_probability="1"
-		sparks_count_max="5"
-		sparks_count_min="5"
+	<CellData
+		name="aa_strange_matter"
+		ui_name="$mat_aa_strange_matter"
+		  tags="[magic_liquid],[alchemy],[liquid]"
+		burnable="1"
+		density="1"
+		cell_type="gas"
+		wang_color="7fbdab8e"
+		lifetime="200"
+		generates_smoke="0"
+		liquid_gravity="0.5"
+		liquid_sand="0"
+		on_fire="1"
+		fire_hp="100000"
+		requires_oxygen="1"
+		temperature_of_fire="140"
+		autoignition_temperature="1"
+		gfx_glow="200"
 		>
-	</ExplosionConfig>
-  </CellData><!-- Strange Matter -->
+		<ExplosionConfig
+			damage="0"
+			ray_energy="400000"
+			explosion_radius="1000000"
+			cell_explosion_damage_required="1"
+			cell_explosion_radius_min="1000"
+			hole_destroy_liquid="1"
+			explosion_sprite="data/particles/explosion_012.xml"
+			spark_material="void_liquid"
+			material_sparks_real="1"
+			cell_explosion_power="100000"
+			cell_explosion_power_ragdoll_coeff="0.75"
+			cell_explosion_probability="100"
+			cell_explosion_velocity_min="0"
+			create_cell_probability="1"
+			sparks_count_max="5"
+			sparks_count_min="5"
+		/>
+	</CellData><!-- Strange Matter -->
 
-
-  <CellData
-	name="aa_petrified_moss"
-	ui_name="$mat_aa_petrified_moss"
-	tags="[corrodible]"
-	density="7"
-	cell_type="liquid"
-	wang_color="ffbfe2c5"
-	liquid_sand="1"
-	liquid_static="1"
-	solid_static_type="1"
-	hp="800"
-	platform_type="1"
-	audio_physics_material_event="gravel"
-	audio_physics_material_wall="gravel"
-	audio_physics_material_solid="rock"
-	>
-  </CellData>
+	<CellData
+		name="aa_petrified_moss"
+		ui_name="$mat_aa_petrified_moss"
+		tags="[corrodible]"
+		density="7"
+		cell_type="liquid"
+		wang_color="ffbfe2c5"
+		liquid_sand="1"
+		liquid_static="1"
+		solid_static_type="1"
+		hp="800"
+		platform_type="1"
+		audio_physics_material_event="gravel"
+		audio_physics_material_wall="gravel"
+		audio_physics_material_solid="rock"
+	/>
 
 
 

@@ -5,39 +5,39 @@ PrefabVials = {}
 VialMaterials = {
 	{
 		material="aa_base_potion",
-		probability=1,
+		weight=1,
 	},
 	{
 		material="aa_arborium",
-		probability=.7,
+		weight=.7,
 	},
 	{
 		material="aa_catalyst",
-		probability=.5,
+		weight=.5,
 	},
 	{
 		material="aa_hungry_slime",
-		probability=1,
+		weight=1,
 	},
 	{
 		material="aa_creeping_slime",
-		probability=.4,
+		weight=.4,
 	},
 	{
 		material="aa_pandorium",
-		probability=.8,
+		weight=.8,
 	},
 	{
 		material="aa_unstable_pandorium",
-		probability=.3,
+		weight=.3,
 	},
 	{
 		material="aa_chaotic_pandorium",
-		probability=.5,
+		weight=.5,
 	},
 	{
 		material="aa_cloning_solution",
-		probability=.6,
+		weight=.6,
 	},
 }
 

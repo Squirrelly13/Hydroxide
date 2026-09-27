@@ -1,16 +1,16 @@
-local handler = dofile("mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/welding_handler.lua")
+local handler = dofile_once("mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/welding_handler.lua")
 
 for k, action in ipairs(actions)do
 	local old_action = action.action
-	action.action = function(recursion_level, iteration, a, b, c, d, e, f, g, called_from_weld)
+	action.action = function(recursion_level, iteration, a,b,c,d,e,f,g, called_from_weld, ...)
 
 		if(reflecting or called_from_weld or (recursion_level ~= nil and recursion_level > -1))then
-			return old_action(recursion_level, iteration)
+			return old_action(recursion_level, iteration, a,b,c,d,e,f,g, called_from_weld, ...)
 		end
 		local data = handler.hook(action.id, recursion_level, iteration)
 
 		if(data == nil)then
-			return old_action(recursion_level, iteration)
+			return old_action(recursion_level, iteration, a, b, c, d, e, f, g, called_from_weld, ...)
 		end
 
 		if(data.extra_mana > 0)then

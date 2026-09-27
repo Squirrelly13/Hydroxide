@@ -6,7 +6,7 @@ local Terror = ModSettingGet("Hydroxide.TERROR_ENABLED")
 
 NullShift_materials = {
 	water = {
-		probability = 0.8,
+		weight = 0.8,
 		variants = {
 			"water_static",
 			"water_salt",
@@ -17,20 +17,20 @@ NullShift_materials = {
 		},
 	},
 	fungi = {
-		probability = 0.6,
+		weight = 0.6,
 		variants = {
 			"blood_fungi",
 			"fungisoil",
 		},
 	},
 	cc_nullium = {
-		probability = 0.4,
+		weight = 0.4,
 		variants = {
 			"cc_dull_fungus",
 		},
 	},
 	blood = {
-		probability = 1.0,
+		weight = 1.0,
 		variants = {
 			"ice_blood_static",
 			"blood_cold",
@@ -38,21 +38,21 @@ NullShift_materials = {
 		},
 	},
 	acid = {
-		probability = 0.5,
+		weight = 0.5,
 		variants = {
 			"ice_acid_static",
 			"ice_acid_glass",
 		},
 	},
 	cc_hydroxide = {
-		probability = 0.5,
+		weight = 0.5,
 		variants = {
 			"cc_ice_hydroxide_static",
 			"cc_ice_hydroxide_glass",
 		}
 	},
 	acid_gas = {
-		probability = 0.6,
+		weight = 0.6,
 		variants = {
 			"acid_gas_static",
 			"cc_hydroxide_gas",
@@ -60,7 +60,7 @@ NullShift_materials = {
 		},
 	},
 	poison_gas = {
-		probability = 0.6,
+		weight = 0.6,
 		variants = {
 			"fungal_gas",
 			"radioactive_gas",
@@ -68,45 +68,45 @@ NullShift_materials = {
 		},
 	},
 	poison = {
-		probability = 0.9,
+		weight = 0.9,
 		variants = {},
 	},
 	magic_liquid_polymorph = {
-		probability = 0.3,
+		weight = 0.3,
 		variants = {
 			"magic_liquid_unstable_polymorph",
 			"magic_liquid_random_polymorph"
 		},
 	},
 	oil = {
-		probability = 0.6,
+		weight = 0.6,
         variants = {}
 	},
 	magic_liquid_berserk = {
-		probability = 0.6,
+		weight = 0.6,
 		variants = {
 			"magic_liquid_charm",
 			"cc_explode_player",
 		}
 	},
 	gold = {
-		probability = 0.02,
+		weight = 0.02,
 		variants = {}
 	},
 	cursed_liquid = {
-		probability = 0.8,
+		weight = 0.8,
         variants = {},
 		condition = function(self, data)
-			if GameHasFlagRun("greed_curse_gone") then self.probability = self.probability - 0.3 end
+			if GameHasFlagRun("greed_curse_gone") then self.weight = self.weight - 0.3 end
 			if GameHasFlagRun("greed_curse") then return true end
 		end
 	},
 	lava = {
-		probability = 0.5,
+		weight = 0.5,
 		variants = {}
 	},
 	magic_liquid_teleportation = {
-		probability = 0.1,
+		weight = 0.1,
 		variants = {
 			"magic_liquid_unstable_teleportation"
 		}
@@ -131,13 +131,13 @@ if ModIsEnabled("Apotheosis") then --rework cursed liquid shift if apoth is enab
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red_static")
 	table.insert(NullShift_materials.cursed_liquid.variants, "apotheosis_cursed_liquid_red")
 	NullShift_materials.cursed_liquid.condition = nil
-	NullShift_materials.cursed_liquid.probability = NullShift_materials.cursed_liquid.probability - 0.2
+	NullShift_materials.cursed_liquid.weight = NullShift_materials.cursed_liquid.weight - 0.2
 end
 
 do_mod_appends("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
 for key, value in pairs(NullShift_materials) do --ammends table with necessary data if missing
-	value.probability = value.probability or 1.0
+	value.weight = value.weight or 1.0
 	value.variants = value.variants or {}
 end
 

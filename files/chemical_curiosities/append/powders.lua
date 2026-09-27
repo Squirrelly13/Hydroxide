@@ -28,7 +28,6 @@ local powders = {
 				cost = 200,
 				probability = 4,
 			},
-			
 		},
 		materials_magic = {
 			{

@@ -204,28 +204,15 @@ handler.hook = function(action, recursion_level, iteration)
     local shooter_entity = GetUpdatedEntityID()
 
     local wand_entity = GetWand(shooter_entity)
-
-    if(wand_entity == nil)then
-        return
-    end
+    if wand_entity == nil then return end
 
     local card = GetActiveCard(wand_entity)
-
-	--print("Welding: " .. tostring(card))
-
-	if(card == nil)then
-		return
-	end
+	if card == nil then return end
 
     local weld_map = handler.getWeldMap(card)
-
-	--print(table.dump(weld_map))
-
-	local map_empty = true
-	for k, v in pairs(weld_map)do
-		map_empty = false
-		break
-	end
+	local weld_map_is_empty = true
+	for _,_ in pairs(weld_map) do weld_map_is_empty = false break end --dont run welding code nonsense if the spell isn't even welded
+	if weld_map_is_empty then return end
 
 	local enhancement_old_add_projectile = add_projectile
 
@@ -344,14 +331,17 @@ handler.hook = function(action, recursion_level, iteration)
 		c.extra_entities = c.extra_entities .. v .. ","
 	end
 
-	c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/spawn.xml,"
+	local spawn_entity = "mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/spawn.xml,"
+	if not c.extra_entities:find(spawn_entity, nil, true) then
+		c.extra_entities = c.extra_entities .. spawn_entity
+	end
 
 
 
 	c.speed_multiplier = c.speed_multiplier / extra_projectile_count
 
-	local did_fix = false
-	--[[for spell, enhancements in pairs() do
+	--[[local did_fix = false
+	for spell, enhancements in pairs() do
 		for i, enhancement in ipairs(enhancements) do
 			if(black_holes[string.lower(enhancement)] ~= nil and not did_fix)then
 				did_fix = true
@@ -361,8 +351,9 @@ handler.hook = function(action, recursion_level, iteration)
 	end]]
 
 
-	if(is_blackhole)then
-		c.extra_entities = c.extra_entities .. "mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/blackhole_tag.xml,"
+	local blackhole_tag_entity = "mods/Hydroxide/files/mystical_mixtures/alchemy/action_welding/blackhole_tag.xml,"
+	if is_blackhole and not c.extra_entities:find(blackhole_tag_entity, nil, true) then
+		c.extra_entities = c.extra_entities .. blackhole_tag_entity
 	end
 
 

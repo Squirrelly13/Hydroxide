@@ -60,6 +60,7 @@ if EntityHasTag(root, "player_unit") then
 		lifetime = 10800 --3 minute lifespan on player clones
 	})
 
+	GamePrint("$log_cc_cloned")
 	return
 end
 

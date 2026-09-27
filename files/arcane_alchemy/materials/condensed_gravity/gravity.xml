@@ -1,5 +1,7 @@
 <Entity tags="hittable,teleportable_NOT" >
 
+	<InheritTransformComponent/>
+
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="AA_GRAVITY"

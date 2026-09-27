@@ -99,8 +99,8 @@ if stage then
 	local ui_comps = EntityGetComponent(entity_id, "UIIconComponent")
 	if ui_comps ~= nil then
 		local radstatus = ui_comps[1]
-		ComponentSetValue2(radstatus, "name", GameTextGet("$statis_cc_radstage_" .. tostring(stage), radcount))
-		ComponentSetValue2(radstatus, "description", GameTextGet("$statis_cc_desc_radstage_" .. tostring(stage), radcount))
+		ComponentSetValue2(radstatus, "name", GameTextGet("$status_cc_radstage_" .. tostring(stage), radcount))
+		ComponentSetValue2(radstatus, "description", GameTextGet("$status_cc_desc_radstage_" .. tostring(stage), radcount))
 		ComponentSetValue2(radstatus, "icon_sprite_file", "mods/Hydroxide/files/chemical_curiosities/materials/uranium/icons/icon_" .. stage .. ".png")
 	end
 end
