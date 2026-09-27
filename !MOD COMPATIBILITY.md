@@ -2,12 +2,13 @@ There are a few places we support compatibility!!
 also PLEASE let me know via DMing me on discord @UserK or in *some* way if you add compatibility, as things are subject to change and I would like it if I could warn you in advance before changing any of this in some way (eg if a filepath or material name is changed, or the entire compatibility method is reworked)
 
 # VIALS
+Vials are an Arcane Alchemy feature, they are like mini-flasks that have 20% of the capacity (200px). The pool is generally designed around materials that are good to throw at enemies or otherwise valuable enough to be worthwhile in small quantity.
 append `mods/Hydroxide/files/arcane_alchemy/items/vials/vial_populate.lua` with a script that add your material to the global table `VialMaterials`
 like so:
 ```lua
 table.insert(VialMaterials, {
 	material = "supercool_modded_material",
-	probability = .8 --we support decimal values for weight!
+	weight = .8 --we support decimal values for weight!
 	func = function(self, entityid, data) --optional function in case you want to do some funky stuff (don't include if you don't need it)
 		--self is passed, so we can modify the outcome like so:
 		local materials = {"water", "slime", "slime_2"}
@@ -44,12 +45,13 @@ A whitelist mode for Upand and Cpand is eventually planned.
 
 
 
-# LOCAL SHIFT
+# Local Shift
 To append to local shift, simply
 ```lua
 ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/spells/local_shift/local_shift.lua", "mods/modid/file/path/to/your/append.lua")
 ```
-We have provided a couple handy functions for easier altering/adding to existing `MaterialGroups` and `BiomeLists`, example of the former can be found in `"mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua"`
+We have provided a couple handy functions for easier altering/adding to existing `MaterialGroups` and `BiomeLists`, example of the former can be found in `mods/Hydroxide/files/chemical_curiosities/spells/local_shift/append.lua`
+This spell is due for a rework that will directly get materials that are near the player.
 
 
 
@@ -62,12 +64,12 @@ ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/materials/magic_liqu
 
 --your append.lua:
 NullShift_materials.my_primary_material = {
-	probability = 0.05, --default 1.0
+	weight = 0.05, --default 1.0
 	condition = function(self, data) --optional (data provides shifter entity and position (THESE CAN BE NIL!!))
 		if shifter and BiomeMapGetName(data.x, data.y) == "waterworld" then
-			self.probability = 1.2
+			self.weight = 1.2
 			table.remove(self.variants, 1) --remove "my_primary_material_dry" from variants
-		end --you can modify probability and such before the table is rolled like so!
+		end --you can modify weight and such before the table is rolled like so!
 		return true --returning false will mean the entry is not valid, here we return true because we only want to modify the probaility, feel free to do things your way!
 	end
 	variants = { --optional
@@ -97,4 +99,32 @@ end
 
 NullShiftData.null_shift_limit = NullShiftData.null_shift_limit + 10 --increases the shift limit by 10
 table.insert(NullShiftData.log_messages, "$modid_custom_null_shift_log") --add a custom shift message
+```
+
+
+
+# Chaotic Transfusion
+Chaotic Transfusion is a perk locked behind experimental features. It makes all enemies bleed random materials, the material list can be appended like so:
+```lua
+--your init.lua:
+ModLuaFileAppend("mods/Hydroxide/files/chemical_curiosities/chaotic_transfusion/transfusion_pool.lua", "mods/modid/file/path/to/your/append.lua")
+
+--your append.lua:
+local my_materials = {
+	{
+		material = "my_useful_magic_liquid", --ideally should be materials that spice up a run but still make the perk worth taking
+		weight = 10, --weight is a value typically ranging from 1-15
+	},
+	{
+		material = "my_silly_magic_liquid",
+		weight = 6,
+	},
+}
+return function(materials)
+	for _,v in ipairs(my_materials) do
+		materials[#materials+1] = v
+	end
+
+	return materials
+end
 ```

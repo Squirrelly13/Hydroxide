@@ -137,7 +137,7 @@ end
 do_mod_appends("mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_shift_table.lua")
 
 for key, value in pairs(NullShift_materials) do --ammends table with necessary data if missing
-	value.weight = value.weight or 1.0
+	value.weight = value.weight or value.probability or 1.0 --probability backup for backwards compatibility
 	value.variants = value.variants or {}
 end
 
