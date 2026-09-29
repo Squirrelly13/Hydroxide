@@ -3,8 +3,7 @@
 		effect="CUSTOM"
 		custom_effect_id="HITSELF"
 		frames="600"
-	>
-	</GameEffectComponent >
+	/>
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/hit_self/hit_self.lua"
 		execute_on_added="1"

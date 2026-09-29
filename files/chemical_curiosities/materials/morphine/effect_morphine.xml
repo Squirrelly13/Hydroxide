@@ -5,8 +5,7 @@
 		effect="CUSTOM"
 		custom_effect_id="CC_MORPHINE"
 		frames="600"
-		>
-	</GameEffectComponent>
+	/>
 
 	<VariableStorageComponent
 		name="trueHealth"

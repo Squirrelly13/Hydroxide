@@ -3,10 +3,8 @@
 		effect="CUSTOM"
 		custom_effect_id="AA_COLLAPSE"
 		frames="600"
-	>
-	</GameEffectComponent >
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	/>
+	<InheritTransformComponent/>
 	<Base file="data/entities/base_projectile.xml" >
 	<VelocityComponent
 	  air_friction="-0.2"
@@ -160,8 +158,7 @@
 	   chunk_probability="0.03" >
 	</LooseGroundComponent>
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
   </Entity>
 </Entity>

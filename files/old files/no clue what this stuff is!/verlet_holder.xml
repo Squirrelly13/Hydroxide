@@ -1,6 +1,5 @@
 <Entity>
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
     <VariableStorageComponent
         name="verlet_file"

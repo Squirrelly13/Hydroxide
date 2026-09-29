@@ -5,7 +5,7 @@
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CURSE_CLOUD_00"
-		frames="-1"
+		frames="600"
 		>
 	</GameEffectComponent >
 

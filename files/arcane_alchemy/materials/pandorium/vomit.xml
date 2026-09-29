@@ -4,8 +4,7 @@
 		effect="CUSTOM"
 		custom_effect_id="CUSTOM_VOMIT"
 		frames="10"
-	>
-	</GameEffectComponent >
+	/>
 
    <LuaComponent
 		script_source_file="mods/Hydroxide/files/lib/vomit/vomitloaderscript.lua"

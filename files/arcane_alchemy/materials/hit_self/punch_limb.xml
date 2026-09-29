@@ -6,8 +6,7 @@
 		execute_every_n_frame="1"
 		>
 	</LuaComponent>
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
 	<IKLimbAttackerComponent
 		radius="40" >
