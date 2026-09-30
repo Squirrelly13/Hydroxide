@@ -376,8 +376,12 @@
 		draw_as_long="1"
 		friction="-3.429"
 		probability="0.0518"
-	>
-	</ParticleEffect>
+	/>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="CC_SHARP_REFLEXES" amount="0.3"/>
+		</Ingestion>
+	</StatusEffects>
   </CellData><!-- liquid discs -->
 
   <CellData

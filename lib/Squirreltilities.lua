@@ -254,6 +254,7 @@ end
 ---@param vel_y number?
 ---@param send_message bool?
 ---@return entity_id
+---@return component_id[]
 function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
 	---@type entity_id
 	shooter = shooter or 0
@@ -266,7 +267,8 @@ function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
 
 	GameShootProjectile(shooter, x, y, x+vel_x, y+vel_y, entity_id, send_message)
 
-	for _, proj_comp in ipairs(EntityGetComponent(entity_id, "ProjectileComponent") or {}) do
+	local proj_comps = EntityGetComponent(entity_id, "ProjectileComponent") or {}
+	for _, proj_comp in ipairs(proj_comps) do
 		ComponentSetValue2(proj_comp, "mWhoShot", shooter)
 		ComponentSetValue2(proj_comp, "mShooterHerdId", herd_id) --should be fine if nil..?
 	end
@@ -275,7 +277,7 @@ function ShootProjectile(shooter, entity_file, x, y, vel_x, vel_y, send_message)
 		ComponentSetValue2(vel_comp, "mVelocity", vel_x, vel_y)
 	end
 
-	return entity_id
+	return entity_id,proj_comps
 end
 
 ---Creates a clone using `path` as a base
