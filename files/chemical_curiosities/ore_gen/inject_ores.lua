@@ -1,252 +1,237 @@
 dofile_once("data/scripts/lib/utilities.lua")
 
---SetRandomSeed( ({GameGetDateAndTimeLocal()})[5], ({GameGetDateAndTimeLocal()})[6])
 local world_seed = tonumber(StatsGetValue("world_seed")) or 1
 SetRandomSeed( world_seed, world_seed )
 
 function InjectOre(biomefile, orefile)
-    local pattern = "(<[%s]-Materials[%s]-name=\"[^\"]*\"[%s]->)"
-    local biome = ModTextFileGetContent(biomefile)
+	local biome = ModTextFileGetContent(biomefile)
     local ore = ModTextFileGetContent(orefile)
-    biome = string.gsub(biome, pattern, "%1\n" .. ore)
-    ModTextFileSetContent(biomefile, biome)
+	biome=biome:gsub("<MaterialComponent",ore.."\n%1",1)
+	ModTextFileSetContent(biomefile,biome)
 end
 
-function getDigit(num, digit)
-	local n = 10 ^ digit
-	local n1 = 10 ^ (digit - 1)
-	return math.floor((num % n) / n1)
+--mostly to reduce space.
+local ore_root_dir="mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/"
+
+--standard materials that aren't interesting on their own.
+orelist_mundane={
+	ore_root_dir.."ores_metals_brass1.xml",
+	ore_root_dir.."ores_metals_brass2.xml",
+	ore_root_dir.."ores_metals_iron1.xml",
+	ore_root_dir.."ores_metals_iron2.xml",
+}
+
+--metals
+orelist_metals_common={
+	ore_root_dir.."ores_metals_brass1.xml",
+	ore_root_dir.."ores_metals_brass2.xml",
+	ore_root_dir.."ores_metals_cobalt1.xml",
+	ore_root_dir.."ores_metals_cobalt2.xml",
+	ore_root_dir.."ores_metals_iron1.xml",
+	ore_root_dir.."ores_metals_iron2.xml",
+	ore_root_dir.."ores_metals_preskite1.xml",
+	ore_root_dir.."ores_metals_preskite2.xml",
+}
+
+--metals, but rare
+orelist_metals_rare={
+	ore_root_dir.."ores_metals_shock1.xml",
+	ore_root_dir.."ores_metals_shock2.xml",
+	ore_root_dir.."ores_metals_silver1.xml",
+	ore_root_dir.."ores_metals_silver2.xml",
+	ore_root_dir.."ores_metals_gold.xml",
+	--ore_root_dir.."ores_radioactive.xml",
+}
+
+--cold stuff
+orelist_cold={
+	ore_root_dir.."ores_frozen_meat.xml",
+	ore_root_dir.."ores_toxic_ice.xml",
+}
+
+--idk
+orelist_misc={
+	ore_root_dir.."ores_lava.xml",
+	ore_root_dir.."ores_toxic.xml",
+}
+
+--magic stuff
+orelist_magical={
+	ore_root_dir.."ores_antimagic.xml",
+	ore_root_dir.."ores_arborium.xml",
+	ore_root_dir.."ores_crystals.xml",
+}
+
+--stuff that may be harmful.
+orelist_dangerous={
+	ore_root_dir.."ores_crystals.xml",
+	ore_root_dir.."ores_lava.xml",
+	ore_root_dir.."ores_toxic.xml",
+	--ore_root_dir.."ores_radioactive.xml",
+}
+
+--plants. mhm.
+orelist_biological={
+	ore_root_dir.."ores_toxic.xml",
+	ore_root_dir.."ores_arborium.xml",
+	ore_root_dir.."ores_arborium.xml",
+}
+
+if ModSettingGet("Hydroxide.AA_BLOOMIUM") and ModSettingGet("Hydroxide.AA_BLOOMIUM_VEINS") then
+	orelist_magical[#orelist_magical+1]=ore_root_dir.."ores_bloom.xml"
+	orelist_biological[#orelist_biological+1]=ore_root_dir.."ores_bloom.xml"
+	orelist_biological[#orelist_biological+1]=ore_root_dir.."ores_bloom.xml"
 end
 
-ore_types = {
-	{	probability = 0.900, "random_metals",	},
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml",			},
-	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-	{	probability = 0.100, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml",		},
-	{ 	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic_ice.xml",		},
-	{ 	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
-	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
 
-	--{	probability = 0.100, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 			},
+biomelist_coalmines={
+	orelist_metals_common,
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_biological,
+	orelist_dangerous,
+	orelist_mundane,
+	orelist_mundane,
 }
 
-metals_1 = {
-	{	probability = 0.900, "metals_cobalt1"	},
-	{	probability = 1.000, "metals_iron1"		},
-	{	probability = 0.800, "metals_preskite1"	},
-	{	probability = 0.600, "metals_silver1"	},
-	{	probability = 1.000, "metals_brass1"	},
-
-	{	probability = 0.400, "metals_shock1"	},
-
+biomelist_excavationsite={
+	orelist_metals_common,
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_metals_rare,
+	orelist_metals_rare,
+	orelist_misc,
+	orelist_misc,
+	orelist_dangerous,
+	orelist_mundane,
 }
 
-metals_2 = {
-	{	probability = 0.950, "metals_cobalt2"	},
-	{	probability = 1.000, "metals_iron2"		},
-	{	probability = 0.900, "metals_preskite2"	},
-	{	probability = 0.700, "metals_silver2"	},
-	{	probability = 1.000, "metals_brass2"	},
-	{	probability = 0.500, "metals_shock2"	},
-
+biomelist_snowcave={
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_cold,
+	orelist_cold,
+	orelist_cold,
+	ore_root_dir.."ores_crystals.xml",
+	ore_root_dir.."ores_crystals.xml",
 }
 
-ore_coalmines = {
-	{	probability = 1.000, "random_metals",	},
-	{	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml",			},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
+biomelist_snowcastle={
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_cold,
+	orelist_cold,
+	ore_root_dir.."ores_crystals.xml",
+	orelist_magical,
+	orelist_magical,
+	ore_root_dir.."ores_concrete.xml",
+	ore_root_dir.."ores_concrete.xml",
+	ore_root_dir.."ores_concrete.xml",
 }
 
-ore_excavationsite = {
-	{	probability = 1.000, "random_metals",	},
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"	},
-	{	probability = 0.800, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml",		},
-	{	probability = 0.800, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"	},
-	--{	probability = 0.300, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
+biomelist_rainforest={
+	orelist_metals_common,
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_metals_rare,
+	orelist_biological,
+	orelist_biological,
+	orelist_biological,
+	orelist_magical,
+	orelist_magical,
 }
 
-metals_excavationsite = {
-	{	probability = 0.900, "metals_cobalt2",	},
-	{	probability = 1.000, "metals_iron2",		},
-	{	probability = 0.600, "metals_preskite2",	},
-	{	probability = 0.400, "metals_silver2",	},
-	{	probability = 0.800, "metals_brass2",		},
-	{	probability = 0.100, "metals_gold",		},
+biomelist_vault={
+	orelist_metals_common,
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_metals_rare,
+	ore_root_dir.."ores_concrete.xml",
+	ore_root_dir.."ores_concrete.xml",
+	orelist_dangerous,
+	orelist_dangerous,
+	orelist_cold,
+	orelist_magical,
 }
 
-ore_snowcave = {
-	{ 	probability = 0.700, "random_metals",	},
-	{ 	probability = 0.800, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic_ice.xml",		},
-	{ 	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
-
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
+biomelist_fungiforest={
+	orelist_biological,
+	orelist_magical,
 }
 
-ore_snowcastle = {
-	{	probability = 0.900, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml" 		},
-	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
-	{	probability = 0.750, "random_metals"	},
-	{ 	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml",	},
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-	--{	probability = 0.550, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
-
-
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
-
-	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 		},
+biomelist_crypt={
+	orelist_metals_common,
+	orelist_metals_common,
+	orelist_metals_rare,
+	orelist_magical,
+	orelist_magical,
+	orelist_dangerous,
 }
 
-ore_rainforest = {
-	{	probability = 1.000, "random_metals"	},
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-	{	probability = 0.800, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
+biomelist_wizardcave={
+	orelist_magical,
+	orelist_magical,
+	orelist_dangerous,
+	orelist_metals_common,
+	orelist_metals_rare,
 }
 
-ore_vault = {
-	{	probability = 1.000, "random_metals",	},
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_concrete.xml"		},
-	--{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
-	{ 	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic_ice.xml"		},
-	{ 	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_frozen_meat.xml"		},
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_arborium.xml"		},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	--{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml"		},
-
-	{	probability = 1.000, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_lava.xml"			},
-	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 		},
-}
-
-metals_vault_1 = {
-	{	probability = 1.000, "metals_cobalt1"	},
-	{	probability = 1.000, "metals_iron1"		},
-	{	probability = 1.000, "metals_preskite1"	},
-	{	probability = 1.000, "metals_silver1"	},
-	{	probability = 1.000, "metals_brass1"	},
-	{	probability = 1.000, "metals_shock1"	},
-
-}
-
-metals_vault_2 = {
-	{	probability = 1.000, "metals_cobalt2"	},
-	{	probability = 1.000, "metals_iron2"		},
-	{	probability = 1.000, "metals_preskite2"	},
-	{	probability = 1.000, "metals_silver2"	},
-	{	probability = 1.000, "metals_brass2"	},
-	{	probability = 1.000, "metals_gold"		},
-
-	{	probability = 1.000, "metals_shock2"	},
-}
-
-ore_fungiforest = {
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{	probability = 0.600, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
-	{	probability = 0.500, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-}
-
-ore_crypt = {
-	--{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml", 			},
-	{	probability = 0.500, "random_metals"	},
-	--{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_radioactive.xml",	},
-	{	probability = 0.700, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_crystals.xml"		},
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-}
-
-ore_wizardcave = {
-	{	probability = 0.400, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_antimagic.xml"		},
-	{	probability = 0.200, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_toxic.xml"			},
-	{	probability = 0.400, "random_metals"	},
-}
-
-ore_sandcave = {
-	{	probability = 1.000, "random_metals"	},
+biomelist_sandcave={
+	orelist_metals_common,
+	orelist_metals_rare,
 }
 
 
-if ModSettingGet("Hydroxide.AA_BLOOMIUM") == true and ModSettingGet("Hydroxide.AA_BLOOMIUM_VEINS") == true then --this should probs be jungle-only... yeah i cant even think of any external biomes this would fit for, not least cuz having bloomium be able to escape sounds like a dangerous idea lmao
-	table.insert(ore_types, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
-	table.insert(ore_coalmines, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
-	table.insert(ore_snowcastle, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
-	table.insert(ore_vault, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
-	table.insert(ore_crypt, {	probability = 0.1, "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_bloom.xml"})
-end
-
-function addOresToBiome(biome, ore_list, metal_list_1, metal_list_2)
-
-	local rnd = random_create(Random(1,10), Random(1,10) )
-	local oreType = tostring(pick_random_from_table_weighted( rnd, ore_list)[1])
-	--print ("oretype: " .. oreType)
-
-	local ores = ""
-
-	if (oreType == "random_metals") then
-
-		local metal1 = tostring(pick_random_from_table_weighted(rnd, metal_list_1)[1])
-		local metal2 = tostring(pick_random_from_table_weighted(rnd, metal_list_2)[1])
-
-		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal1 .. ".xml"
-		--print("adding " .. ores .. " to " .. biome)
-		InjectOre(biome, ores)
-		ores = "mods/Hydroxide/files/chemical_curiosities/ore_gen/ores/ores_" .. metal2 .. ".xml"
-		--print("adding " .. ores .. " to " .. biome)
-		InjectOre(biome, ores)
-	else
-		ores = oreType
-		--print("adding " .. ores .. " to " .. biome)
-		InjectOre(biome, ores)
+function addOresToBiome(biome, ore_list, num_ores_to_add)
+	local eligable_mats={} --generate a list of all eligable ores.
+	for i=1,#ore_list do
+		local mat=ore_list[i]
+		if type(mat)=="table" then --supports mixed tables/string elements
+			for i=1,#mat do
+				eligable_mats[#eligable_mats+1]=mat[i]
+			end
+		else
+			eligable_mats[#eligable_mats+1]=mat
+		end
+	end
+	--once we have, start random selection.
+	while num_ores_to_add>0 do 
+		if #eligable_mats<1 then return end -- if no mats, exit.
+		num_ores_to_add=num_ores_to_add-1
+		local idx=Random(1,#eligable_mats)
+		InjectOre(biome, eligable_mats[idx] )
+		table.remove(eligable_mats,idx) --remove the index we just added, to promote more ore variety.
 	end
 end
 
-function nextSeed()
+addOresToBiome("data/biome/coalmine.xml",biomelist_coalmines,4)
+addOresToBiome("data/biome/coalmine_alt.xml",biomelist_coalmines,4)
 
-	SetRandomSeed(StatsGetValue("world_seed") - Random(1,10), StatsGetValue("world_seed") + Random(1,10))
+addOresToBiome("data/biome/excavationsite.xml",biomelist_excavationsite,3)
 
-end
+addOresToBiome("data/biome/snowcave.xml",biomelist_snowcave,3)
+addOresToBiome("data/biome/winter.xml",biomelist_snowcave,3)
+addOresToBiome("data/biome/winter_caves.xml",biomelist_snowcave,3)
 
+addOresToBiome("data/biome/snowcastle.xml",biomelist_snowcastle,4)
 
-addOresToBiome("data/biome/coalmine.xml", ore_coalmines, metals_1, metals_2)
-addOresToBiome("data/biome/coalmine_alt.xml", ore_coalmines, metals_1, metals_2)
+addOresToBiome("data/biome/rainforest.xml",biomelist_rainforest,6)
 
-addOresToBiome("data/biome/excavationsite.xml", ore_excavationsite, metals_1, metals_excavationsite)
+addOresToBiome("data/biome/fungicave.xml",biomelist_fungiforest,5)
 
-addOresToBiome("data/biome/snowcave.xml", ore_snowcave, metals_1, metals_2)
-addOresToBiome("data/biome/winter.xml", ore_snowcave, metals_1, metals_2)
-addOresToBiome("data/biome/winter_caves.xml", ore_snowcave, metals_1, metals_2)
+addOresToBiome("data/biome/vault.xml",biomelist_vault,4)
+addOresToBiome("data/biome/vault_frozen.xml",biomelist_vault,4)
+addOresToBiome("data/biome/the_end.xml",biomelist_vault,3)
 
-addOresToBiome("data/biome/snowcastle.xml", ore_snowcastle, metals_1, metals_2)
+addOresToBiome("data/biome/crypt.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid_entrance.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid_hallway.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid_left.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid_right.xml",biomelist_crypt,3)
+addOresToBiome("data/biome/pyramid_top.xml",biomelist_crypt,3)
 
-addOresToBiome("data/biome/rainforest.xml", ore_rainforest, metals_1, metals_2)
+addOresToBiome("data/biome/wizardcave.xml",biomelist_wizardcave,5)
+addOresToBiome("data/biome/wandcave.xml",biomelist_wizardcave,3)
 
-addOresToBiome("data/biome/fungicave.xml", ore_types, metals_1, metals_2)
-
-addOresToBiome("data/biome/vault.xml", ore_vault, metals_vault_1, metals_vault_2)
-
-addOresToBiome("data/biome/crypt.xml", ore_crypt, metals_1, metals_2)
-
-addOresToBiome("data/biome/pyramid.xml", ore_crypt, metals_1, metals_2)
-addOresToBiome("data/biome/pyramid_entrance.xml", ore_crypt, metals_1, metals_2)
-addOresToBiome("data/biome/pyramid_hallway.xml", ore_crypt, metals_1, metals_2)
-addOresToBiome("data/biome/pyramid_left.xml", ore_crypt, metals_1, metals_2)
-addOresToBiome("data/biome/pyramid_right.xml", ore_crypt, metals_1, metals_2)
-addOresToBiome("data/biome/pyramid_top.xml", ore_crypt, metals_1, metals_2)
-
-addOresToBiome("data/biome/wizardcave.xml", ore_wizardcave, metals_1, metals_2)
-addOresToBiome("data/biome/wandcave.xml", ore_wizardcave, metals_1, metals_2)
-
-
-addOresToBiome("data/biome/sandcave.xml", ore_sandcave, metals_vault_1, metals_vault_2)
-
-
-addOresToBiome("data/biome/the_end.xml", ore_vault, metals_vault_1, metals_vault_2)
-
-addOresToBiome("data/biome/fungiforest.xml", ore_fungiforest, metals_1, metals_2)
-
-addOresToBiome("data/biome/vault_frozen.xml", ore_vault, metals_vault_1, metals_vault_2)
+addOresToBiome("data/biome/sandcave.xml", biomelist_sandcave,4)
