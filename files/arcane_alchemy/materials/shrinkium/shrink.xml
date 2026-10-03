@@ -3,8 +3,7 @@
 		effect="CUSTOM"
 		custom_effect_id="AA_SHRINK"
 		frames="600"
-	>
-	</GameEffectComponent >
+	/>
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/scripts/effects/shrink.lua"
 		execute_on_added="1"
@@ -19,7 +18,6 @@
 		>
 	</LuaComponent>
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
 </Entity>

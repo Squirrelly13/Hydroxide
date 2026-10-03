@@ -3,8 +3,7 @@
 		effect="CUSTOM"
 		custom_effect_id="ROCKIMORPH"
 		frames="600"
-	>
-	</GameEffectComponent >
+	/>
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/scripts/effects/polymorph_to.lua"
         execute_times="1"
@@ -25,7 +24,6 @@
 	>
 	</VariableStorageComponent>
 
-	<InheritTransformComponent>
-	</InheritTransformComponent>
+	<InheritTransformComponent/>
 
 </Entity>

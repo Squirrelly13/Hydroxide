@@ -3,8 +3,7 @@
 		effect="CUSTOM"
 		custom_effect_id="AA_COLLAPSE"
 		frames="600"
-	>
-	</GameEffectComponent >
+	/>
 	<LuaComponent
 		script_source_file="mods/Hydroxide/files/arcane_alchemy/materials/dark_matter/dark_matter.lua"
 		execute_on_added="1"

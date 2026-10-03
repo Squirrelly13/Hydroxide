@@ -78,7 +78,7 @@
 	<CellData
 		name="cc_hydroxide"
 		ui_name="$mat_cc_hydroxide"
-		tags="[liquid],[hydroxide],[impure],[liquid_common]"
+		tags="[liquid],[hydroxide],[impure],[liquid_common],[electrum_rewarding]"
 		density="2.9"
 		cell_type="liquid"
 		wang_color="ff387eff"
@@ -260,7 +260,7 @@
  <CellData
 	name="cc_veilium"
 	ui_name="$mat_cc_veilium"
-	tags="[liquid],[water],[magic_liquid],[impure],[corrodible]"
+	tags="[liquid],[water],[magic_liquid],[impure],[corrodible],[electrum_rewarding]"
 	density="4.21"
 	cell_type="liquid"
 	wang_color="80200070"
@@ -313,7 +313,7 @@
   <CellData
 	name="cc_sparkling_liquid"
 	ui_name="$mat_cc_sparkling_liquid"
-	tags="[liquid],[magic_liquid],[impure],[corrodible]"
+	tags="[liquid],[magic_liquid],[impure],[corrodible],[electrum_rewarding]"
 	density="0.7"
 	cell_type="liquid"
 	wang_color="af6a6bfa"
@@ -349,7 +349,7 @@
   <CellData
 	name="cc_slicing_liquid"
 	ui_name="$mat_cc_slicing_liquid"
-	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
+	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible],[electrum_rewarding]"
 	density="2.31"
 	cell_type="liquid"
 	wang_color="afaaaaaf"
@@ -376,14 +376,18 @@
 		draw_as_long="1"
 		friction="-3.429"
 		probability="0.0518"
-	>
-	</ParticleEffect>
+	/>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="CC_SHARP_REFLEXES" amount="0.3"/>
+		</Ingestion>
+	</StatusEffects>
   </CellData><!-- liquid discs -->
 
   <CellData
 	name="cc_glittering_liquid"
 	ui_name="$mat_cc_glittering_liquid"
-	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible]"
+	tags="[liquid],[magic_liquid],[impure],[burnable_fast],[corrodible],[electrum_rewarding]"
 	density="1.1415"
 	cell_type="liquid"
 	wang_color="afff2ace"
@@ -422,7 +426,7 @@
   <CellData
 	name="cc_blasting_powder"
 	ui_name="$mat_cc_blasting_powder"
-	tags="[sand_ground],[burnable],[corrodible],[alchemy]"
+	tags="[sand_ground],[burnable],[corrodible],[alchemy],[electrum_rewarding]"
 	burnable="1"
 	density="7.15"
 	cell_type="liquid"
@@ -635,7 +639,7 @@
   <CellData
 	name="cc_deceleratium"
 	ui_name="$mat_cc_deceleratium"
-	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
+	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower],[electrum_rewarding]"
 	burnable="0"
 	density="4.1"
 	cell_type="liquid"
@@ -674,7 +678,7 @@
   <CellData
 	name="cc_heftium"
 	ui_name="$mat_cc_heftium"
-  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
+  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower],[electrum_rewarding]"
 	burnable="0"
 	density="4.92"
 	cell_type="liquid"
@@ -715,7 +719,7 @@
   <CellData
 	name="cc_stillium"
 	ui_name="$mat_cc_stillium"
-  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower]"
+  	tags="[liquid],[water],[magic_liquid],[impure],[magic_slower],[electrum_rewarding]"
 	burnable="0"
 	density="3.091"
 	cell_type="liquid"
@@ -758,7 +762,7 @@
   <CellData
 	name="cc_metamorphine"
 	ui_name="$mat_cc_metamorphine"
-	tags="[magic_liquid],[metamorphine],[impure]"
+	tags="[magic_liquid],[metamorphine],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="2.45"
 	wang_color="a8efab80"
@@ -804,7 +808,7 @@
   <CellData
 	name="cc_unstable_metamorphine"
 	ui_name="$mat_cc_unstable_metamorphine"
-	tags="[magic_liquid],[metamorphine],[impure]"
+	tags="[magic_liquid],[metamorphine],[impure],[electrum_rewarding],[electrum_ignored]"
 	burnable="0"
 	density="2.56"
 	wang_color="a8df9b70"
@@ -907,7 +911,7 @@
 	<CellData
 	name="cc_alchemy_powder"
 	ui_name="$mat_cc_alchemy_powder"
-	tags="[sand_other],[corrodible],[alchemy]"
+	tags="[sand_other],[corrodible],[alchemy],[electrum_rewarding]"
 	burnable="0"
 	density="4.5"
 	cell_type="liquid"
@@ -932,7 +936,7 @@
 	<CellData
 	name="cc_metastasizium"
 	ui_name="$mat_cc_metastasizium"
-	tags="[liquid],[magic_liquid],[impure],[corrodible]"
+	tags="[liquid],[magic_liquid],[impure],[corrodible],[electrum_rewarding]"
 	density="0.3"
 	cell_type="liquid"
 	wang_color="8a0a7a3f"
@@ -964,7 +968,7 @@
    <CellData
 	name="cc_nullium"
 	ui_name="$mat_cc_nullium"
-	tags="[liquid],[impure],[corrodible]"
+	tags="[liquid],[impure],[corrodible],[electrum_rewarding]"
 	density="4.63"
 	cell_type="liquid"
 	wang_color="80573235"
@@ -1088,7 +1092,7 @@
 	<CellData
 		name="cc_health_tonic"
 		ui_name="$mat_cc_health_tonic"
-		tags="[liquid],[impure],[corrodible]"
+		tags="[liquid],[impure],[corrodible],[electrum_rewarding],[electrum_ignored]"
 		density="2.33"
 		cell_type="liquid"
 		wang_color="80ff2211"
@@ -1113,7 +1117,7 @@
 	<CellData
 		name="cc_grease"
 		ui_name="$mat_cc_grease"
-		tags="[liquid],[impure],[liquid_common]"
+		tags="[liquid],[impure],[liquid_common],[electrum_rewarding]"
 		burnable="1"
 		density="0.8"
 		cell_type="liquid"
@@ -1334,7 +1338,7 @@
 	<CellData
 		name="cc_morphine"
 		ui_name="$mat_cc_morphine"
-		tags="[sand_other],[corrodible],[alchemy]"
+		tags="[sand_other],[corrodible],[alchemy],[electrum_rewarding]"
 		burnable="0"
 		density="5.6"
 		cell_type="liquid"
@@ -1361,7 +1365,7 @@
 	<CellData
 		name="cc_antimatter_gas"
 		ui_name="$mat_cc_antimatter_gas"
-		tags="[antimatter]"
+		tags="[antimatter],[electrum_ignored]"
 		burnable="0"
 		density="0.1"
 		cell_type="gas"
@@ -1388,7 +1392,7 @@
 	<CellData
 		name="cc_antimatter_liquid"
 		ui_name="$mat_cc_antimatter_liquid"
-		tags="[antimatter]"
+		tags="[antimatter],[electrum_ignored]"
 		burnable="0"
 		density="0.1"
 		cell_type="liquid"
@@ -1415,7 +1419,7 @@
 	<CellData
 		name="cc_antimatter_powder"
 		ui_name="$mat_cc_antimatter_powder"
-		tags="[antimatter],[sand_other],[corrodible],[burnable],[alchemy]"
+		tags="[antimatter],[sand_other],[corrodible],[burnable],[alchemy],[electrum_ignored]"
 		burnable="1"
 		requires_oxygen="0"
 		temperature_of_fire="180"
@@ -1454,7 +1458,7 @@
 	<CellData
 	name="cc_cobalt"
 	ui_name="$mat_cc_cobalt"
-  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth],[electrum_rewarding]"
 	burnable="0"
 	density="7"
 	cell_type="liquid"
@@ -1515,7 +1519,7 @@
   <CellData
 	name="cc_iron"
 	ui_name="$mat_cc_iron"
-  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth]"
+  	tags="[sand_metal],[corrodible],[meltable_metal],[alchemy],[solid],[earth],[electrum_rewarding]"
 	burnable="0"
 	density="9"
 	cell_type="liquid"
@@ -1577,7 +1581,7 @@
   <CellData
 	name="cc_preskite"
 	ui_name="$mat_cc_preskite"
-  	tags="[sand_metal],[meltable_metal],[alchemy],[solid],[earth]"
+  	tags="[sand_metal],[meltable_metal],[alchemy],[solid],[earth],[electrum_rewarding]"
 	burnable="0"
 	density="9"
 	cell_type="liquid"
@@ -1638,7 +1642,7 @@
 	<CellData
 		name="cc_ferrine"
 		ui_name="$mat_cc_ferrine"
-		tags="[liquid],[corrodible],[impure],[food]"
+		tags="[liquid],[corrodible],[impure],[food],[electrum_rewarding]"
 		burnable="0"
 		density="5.7"
 		cell_type="liquid"
@@ -1661,7 +1665,7 @@
 	<CellData
 		name="cc_cobaline"
 		ui_name="$mat_cc_cobaline"
-		tags="[liquid],[corrodible],[impure]"
+		tags="[liquid],[corrodible],[impure],[electrum_rewarding]"
 		density="0.5"
 		cell_type="liquid"
 		wang_color="803A7BE3"
@@ -1722,7 +1726,7 @@
 	<CellData
 		name="cc_persistine"
 		ui_name="$mat_cc_persistine"
-		tags="[liquid],[magic_liquid],[impure],[water]"
+		tags="[liquid],[magic_liquid],[impure],[water],[electrum_rewarding]"
 		burnable="0"
 		density="4.83"
 		cell_type="liquid"
@@ -1840,7 +1844,7 @@
 	<CellData
 		name="cc_warp_sickness"
 		ui_name="$mat_cc_warp_sickness"
-		tags="[liquid]"
+		tags="[liquid],[electrum_ignored]"
 		density="0.69"
 		cell_type="liquid"
 		wang_color="803A7BE4"

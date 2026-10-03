@@ -1,0 +1,18 @@
+<Entity name="cc.effect.sharp_reflexes">
+    <GameEffectComponent
+        effect="CUSTOM"
+        custom_effect_id="CC_SHARP_REFLEXES"
+        frames="600"
+    />
+
+    <LuaComponent
+        script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/sharp_reflexes/add.lua"
+        remove_after_executed="1"
+    />
+
+    <LuaComponent
+        script_source_file="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/sharp_reflexes/remove.lua"
+        execute_every_n_frame="-1"
+        execute_on_removed="1"
+    />
+</Entity>

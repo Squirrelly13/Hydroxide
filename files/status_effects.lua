@@ -183,7 +183,14 @@ local CC_effects = {
 		ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip.png",
 		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/magic_liquid_antimagic/dull_fungus/null_trip_shift.xml",
 		min_threshold_normalized=3.0,
-	}
+	},
+	{
+		id="CC_SHARP_REFLEXES",
+		ui_name="$status_cc_sharp_reflexes",
+		ui_description="$status_desc_cc_sharp_reflexes",
+		ui_icon="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/sharp_reflexes/icon.png",
+		effect_entity="mods/Hydroxide/files/chemical_curiosities/materials/slicing_liquid/sharp_reflexes/effect.xml",
+	},
 }
 
 
@@ -312,7 +319,7 @@ local AA_effects = {
 		ui_icon="data/ui_gfx/status_indicators/food_poisoning.png",
 		effect_entity="mods/Hydroxide/files/arcane_alchemy/materials/pandorium/unstable/vomit.xml",
 		is_harmful=true,
-	}
+	},
 
 --[[
 table.insert(status_effects, {

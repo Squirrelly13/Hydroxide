@@ -4,6 +4,7 @@
 	<GameEffectComponent
 		effect="CUSTOM"
 		custom_effect_id="CC_INGESTION_METHANE"
+		frames="600"
 	/>
 
 	<LuaComponent

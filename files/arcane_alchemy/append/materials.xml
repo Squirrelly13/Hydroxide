@@ -101,7 +101,7 @@
 	<CellData
 	name="aa_dark_matter"
 	ui_name="$mat_aa_dark_matter"
-	tags="[liquid],[magic_liquid],[corrodible],[freezable],[water]"
+	tags="[liquid],[magic_liquid],[corrodible],[freezable],[water],[electrum_ignored]"
 	burnable="0"
 	density="4"
 	cell_type="liquid"
@@ -430,7 +430,7 @@
  <CellData
 	name="aa_base_potion"
 	ui_name="$mat_aa_base_potion"
-  	tags="[liquid],[magic_liquid],[water],[impure],"
+  	tags="[liquid],[magic_liquid],[water],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -511,7 +511,7 @@
 	 <CellData
 	name="aa_catalyst"
 	ui_name="$mat_aa_catalyst"
-  	tags="[liquid],[magic_liquid],[water],[impure]"
+  	tags="[liquid],[magic_liquid],[water],[impure],[electrum_rewarding]"
 	density="1.5"
 	cell_type="liquid"
 	wang_color="905a9915"
@@ -737,7 +737,7 @@
   <CellData
 	name="aa_meagre_offering"
 	ui_name="$mat_aa_meagre_offering"
-  	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
+  	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="5"
 	cell_type="liquid"
@@ -838,7 +838,7 @@
   <CellData
 	name="aa_icy_inferno"
 	ui_name="$mat_aa_icy_inferno"
-  	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
+  	tags="[corrodible],[magic_liquid],[meltable_to_lava],[alchemy],[magic_liquid],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="5"
 	cell_type="liquid"
@@ -891,7 +891,7 @@
   <CellData
 	name="aa_pandorium"
 	ui_name="$mat_aa_pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure]"
+  	tags="[liquid],[magic_liquid],[water],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -940,7 +940,7 @@
    <CellData
 	name="aa_unstable_pandorium"
 	ui_name="$mat_aa_unstable_pandorium"
-  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
+  	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic],[electrum_rewarding]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -986,7 +986,7 @@
 <CellData
 	name="aa_chaotic_pandorium"
 	ui_name="$mat_aa_chaotic_pandorium"
-	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic]"
+	tags="[liquid],[magic_liquid],[water],[impure],[catastrophic],[electrum_rewarding]"
 	burnable="0"
 	density="1"
 	cell_type="liquid"
@@ -1129,7 +1129,7 @@
   <CellData
 	name="aa_cloning_solution"
 	ui_name="$mat_aa_cloning_solution"
-  	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure]"
+  	tags="[corrodible],[meltable_to_lava],[alchemy],[magic_liquid],[impure],[electrum_rewarding]"
 	burnable="0"
 	density="0.01"
 	cell_type="liquid"
