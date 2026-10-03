@@ -1,7 +1,7 @@
 local path = "C:/Program Files (x86)/Steam/steamapps/common/Noita/mods/Hydroxide/translations/"
 
 local function lock()
-	--while true do end
+	while true do end
 end
 
 local translations = {
@@ -73,10 +73,10 @@ do
 	end
 end
 
-local new_core = index .. "\n"
+local new_core = index.."\n"
 local function update_core(line)
 
-	if line:sub(1,1) == ',' then new_core = new_core .. line .. "\n" return end
+	if line:sub(1,1) == ',' then new_core = new_core..line.."\n" return end
 
 
 	local current_column = 1
@@ -124,7 +124,7 @@ local function transcribe_line(line)
 			local lang_key = column_order[current_column]
 			local target = translations[lang_key]
 			local str = line:sub(start_index, i - 1)
-			if str:sub(1, -9) == target:upper() and str:sub(-9, -1) == "_MISSING" then str = "" end
+			if str:sub(1, -9) == lang_key:upper() and str:sub(-8, -1) == "_MISSING" then str = "" end
 
 			if target then target[#target+1] = str end
 
@@ -134,7 +134,7 @@ local function transcribe_line(line)
 	end
 end
 
-new_core = new_core..f:read("*l") --discard second line
+new_core = new_core..f:read("*l").."\n" --discard second line
 local n = 1
 while true do
 	local line =  f:read("*l")
@@ -145,7 +145,11 @@ while true do
 	n = n + 1
 end
 f:close()
-io.open(path.."core.csv", "w"):write(new_core):close() --update core.csv
+
+local nc = io.open(path.."core.csv","w") --update core.csv
+nc:write(new_core)
+nc:close()
+--io.open(path.."core.csv", "w"):write(new_core):close()
 
 for _,value in ipairs(translations["en"]) do
 	print(tostring(value))
@@ -181,4 +185,4 @@ for lang,name in pairs(nonstandard_langs) do
 	nonstandard_file:close()
 end
 
-lock()
+--lock()
