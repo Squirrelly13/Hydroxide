@@ -276,8 +276,51 @@ if settings.CC then
 
 	---- Items
 
-	ModLuaFileAppend("data/scripts/item_spawnlists.lua", "mods/Hydroxide/files/items_append.lua") --adds items to pedestals
-
+	local function append_item_to_list(listindex,itemdata)
+		if itemdata.weight<1 then return end
+		local txt=ModTextFileGetContent("data/scripts/item_spawnlists.lua")
+		append=""
+		append=append.."spawnlists[<!INDEX!>].spawns[#spawnlists[<!INDEX!>].spawns+1]={\n"
+		append=append.."value_min= spawnlists[<!INDEX!>].rnd_max+1,\n"
+		append=append.."value_max= spawnlists[<!INDEX!>].rnd_max+<!WEIGHT!>,\n"
+		append=append.."offset_y= "..tostring(itemdata.offset_y or 0)..",\n"
+		if itemdata.spawn_requires_flag then append=append.."spawn_requires_flag= "..itemdata.spawn_requires_flag..",\n" end
+		if not itemdata.load_entity_func then append=append.."load_entity= \""..itemdata.load_entity.."\",\n" end
+		if itemdata.load_entity_from_list then append=append.."load_entity_from_list= "..itemdata.load_entity_from_list..",\n" end
+		if itemdata.load_entity_func then append=append.."load_entity_func= "..itemdata.load_entity_func..",\n" end
+		append=append.."}\n"
+		append=append.."spawnlists[<!INDEX!>].rnd_max=spawnlists[<!INDEX!>].rnd_max+<!WEIGHT!>\n"
+		
+		append=append:gsub("<!INDEX!>", "\""..(listindex or "potion_spawnlist").."\"" )
+		append=append:gsub("<!WEIGHT!>",itemdata.weight)
+		
+		txt=txt:gsub("function spawn_from_list%(",append.." function spawn_from_list%(",1)
+		ModTextFileSetContent("data/scripts/item_spawnlists.lua",txt)
+	end
+	
+	if ModSettingGet("Hydroxide.AA_ENABLED") then
+		append_item_to_list("potion_spawnlist",{
+			load_entity = "mods/Hydroxide/files/arcane_alchemy/items/vials/vial.xml",
+			offset_y = -5,
+			weight = 40,
+		})
+	end
+	
+	if ModSettingGet("Hydroxide.MM_ENABLED") then
+		append_item_to_list("potion_spawnlist",{
+			load_entity = "mods/Hydroxide/files/mystical_mixtures/entities/catfood.xml",
+			offset_y = -5,
+			weight = 0, --disabled for now, more interesting acquisition method should be subbed in, or have a condition attached
+		})
+	end
+	
+	if ModSettingGet("Hydroxide.CC_ENABLED") then
+		--we have to manually add the crystal runestone
+		local txt=ModTextFileGetContent("data/scripts/item_spawnlists.lua")
+		txt:gsub("local rnd = Random( 1, #opts )","opts[#opts+1]=\"cc_crystal\" %1",1)
+		ModTextFileSetContent("data/scripts/item_spawnlists.lua",txt)
+	end
+	
 
 	---- Enemies
 
