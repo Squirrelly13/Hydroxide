@@ -26,7 +26,7 @@ table.insert(ALL_ENTITIES, {
 			name="$item_cc_runestone_crystal",
 			desc="Turns nearby liquids into Molten Crystal",
 			image="mods/Hydroxide/files/compelling_compatibility/conjurer_reborn/entities/runestone_crystal.png",	-- This should be a 16*16px icon
-			path="mods/hydroxide/files/chemical_curiosities/items/runestone_crystal/runestone_crystal.xml",
+			path=path="data/entities/items/pickup/runestones/runestone_cc_crystal.xml",
 		},
 		{
 			name="Pandora Shot",
