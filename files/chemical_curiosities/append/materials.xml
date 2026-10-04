@@ -88,14 +88,14 @@
 		cold_freezes_to_material="cc_ice_hydroxide_static"
 	>
 	<Graphics texture_file="mods/Hydroxide/files/chemical_curiosities/materials/hydroxide/hydroxide.png"/>
-		<StatusEffects>
-			<Ingestion>
-				<StatusEffect type="POISONED" amount="0.3"/>
-			</Ingestion>
-			<Stains>
-				<StatusEffect type="CC_HYDROXIDE"/>
-			</Stains>
-		</StatusEffects>
+	<StatusEffects>
+		<Ingestion>
+			<StatusEffect type="POISONED" amount="0.3"/>
+		</Ingestion>
+		<Stains>
+			<StatusEffect type="CC_HYDROXIDE"/>
+		</Stains>
+	</StatusEffects>
 	</CellData>  <!-- hydroxide. the first material i made. -->
 
 	<CellData

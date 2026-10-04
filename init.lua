@@ -55,7 +55,6 @@ local function make_timed(fn, name)
 
 
 
-
 --   	[Chemical Curiosities]
 
 
@@ -200,7 +199,7 @@ end
 -----//// TESTING!!!
 
 
-
+dofile_once("mods/Hydroxide/files/chemical_curiosities/materials.lua")
 
 
 -----////
